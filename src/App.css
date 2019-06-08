@@ -1,3 +1,8 @@
+
+div {
+  background-color: var(--palette-primary-main, orange);
+}
+
 .App {
   text-align: center;
 }
