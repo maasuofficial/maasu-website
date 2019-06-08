@@ -37,10 +37,12 @@ ThemeProvider.propTypes = {
 
 ThemeProvider.defaultProps = {
     theme: {
+        
+        // palette
+        
         palette: {
 
-            background: '#fff',
-            foreground: '#777',
+           // primary
 
             primary: {
                 light: '#c2d9fd',
@@ -48,7 +50,9 @@ ThemeProvider.defaultProps = {
                 dark: '#4285f4',
                 contrastText: '#000',
             },
-            
+
+            // secondary
+
             secondary: {
                 light: '#fb5d89',
                 main: '#f50057',
@@ -56,7 +60,64 @@ ThemeProvider.defaultProps = {
                 contrastText: '#000',
             },
 
+            // error
+
+            error: {
+                light: '',
+                main: '',
+                dark: '',
+                contrastText: '',
+            },
+
         },
+
+        // typography
+
+        typography: {
+        
+            // font family
+
+            fontFamily: [
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                'Oxygen',
+                'Ubuntu',
+                'Cantarell',
+                'Fira Sans',
+                'Droid Sans',
+                'Helvetica Neue',
+                'sans-serif',
+            ].join(','),
+
+            // font size
+            
+            fontSize: '14px',
+        
+        },
+
+        // spacing
+
+        spacing: '4rem',
+
+        // breakpoints
+
+        breakpoints: {
+            xs: '0px',
+            sm: '600px',
+            md: '960px',
+            lg: '1280px',
+            xl: '1920px',
+        },
+
+        // z-index
+
+        zIndex: {
+            bar: 1100,
+            modal: 1300,
+        },
+
     },
 }
 
