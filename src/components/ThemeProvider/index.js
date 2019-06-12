@@ -12,7 +12,7 @@ class ThemeProvider extends Component {
                 if (typeof obj[key] === 'object') {
                     createVariables(thisPrefix + '-', obj[key]);
                 } else {
-                    console.log(thisPrefix, obj[key]);
+                    // console.log(thisPrefix, obj[key]);
                     document.documentElement.style.setProperty(thisPrefix, obj[key]);
                 }
             
@@ -42,7 +42,7 @@ ThemeProvider.defaultProps = {
         
         palette: {
 
-           // primary
+            // primary
 
             primary: {
                 light: '#c2d9fd',
@@ -63,10 +63,10 @@ ThemeProvider.defaultProps = {
             // error
 
             error: {
-                light: '',
-                main: '',
-                dark: '',
-                contrastText: '',
+                light: '#777',
+                main: '#555',
+                dark: '#333',
+                contrastText: '#fff',
             },
 
         },
