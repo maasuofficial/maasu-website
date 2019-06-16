@@ -1,6 +1,7 @@
+import Page from './Page';
 import ThemeProvider from './ThemeProvider';
 import Typography from './Typography';
 
 export {
-    ThemeProvider, Typography
+    Page, ThemeProvider, Typography
 }

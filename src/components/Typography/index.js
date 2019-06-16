@@ -55,11 +55,11 @@ class Typography extends Component {
             case 'sub3': case 'subtitle3':
                 return <p {...props} className={`sub3 subtitle ${className}`}>{children}</p>;
             case 'sub4': case 'subtitle4':
-                return <p {...props} className={`sub4 subtitle ${props.className}`}>{children}</p>;
+                return <p {...props} className={`sub4 subtitle ${className}`}>{children}</p>;
             case 'sub5': case 'subtitle5':
-                return <p {...props} className={`sub5 subtitle ${props.className}`}>{children}</p>;
+                return <p {...props} className={`sub5 subtitle ${className}`}>{children}</p>;
             case 'sub6': case 'subtitle6':
-                return <p {...props} className={`sub6 subtitle ${props.className}`}>{children}</p>;
+                return <p {...props} className={`sub6 subtitle ${className}`}>{children}</p>;
             
             case 'em': case 'emphasis':
                 return <em {...props} className={className}>{children}</em>;
