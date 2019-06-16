@@ -1,11 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
-import ThemeProvider from './components/ThemeProvider';
-import './index.css';
 import * as serviceWorker from './serviceWorker';
+import App from './App';
+import { ThemeProvider } from './components';
+import theme from './__theme';
+import './index.scss';
 
-ReactDOM.render(<ThemeProvider><App /></ThemeProvider>, document.getElementById('root'));
+const app = (
+    <ThemeProvider theme={theme}>
+        <App />
+    </ThemeProvider>
+)
+
+
+ReactDOM.render(app, document.getElementById('root'));
 
 serviceWorker.unregister();
 

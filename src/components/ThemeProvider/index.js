@@ -42,6 +42,9 @@ ThemeProvider.defaultProps = {
         
         palette: {
 
+            background: '#aaa',
+            contrastText: '#333',
+
             // primary
 
             primary: {

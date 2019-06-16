@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'nevis';
+    src: url('/fonts/nevis/nevis-webfont.woff2') format('woff2'),
+         url('/fonts/nevis/nevis-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body, html {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    // TODO fonts
+    font-family: var(--typography-fontFamily-secondary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--typography-fontSize);
+    
+    color: var(--palette-text-main);
+    background-color: var(--palette-background-main);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}

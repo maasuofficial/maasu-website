@@ -1,8 +1,8 @@
-
-div {
-  background-color: var(--palette-primary-main, orange);
+.app {
+    text-align: center;
 }
 
-p {
-  background-color: var(--palette-secondary-main, #777);
+.page {
+    min-height: 100%;
+    width: 100%;
 }
