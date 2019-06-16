@@ -1,0 +1,63 @@
+
+$numGridCells: 12;
+
+// grid component
+
+.grid {
+    position: relative;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;  
+}
+
+
+.grid-x {
+
+    @mixin calcGridSize($x) {
+        width: 100% / $numGridCells * $x;
+    }
+    
+    @for $i from 1 through $numGridCells {
+        & > .small-#{$i} { @include calcGridSize($i) }
+    }
+
+}
+
+// .grid-y {
+// }
+
+// cell component
+
+.cell {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 0px;
+        -ms-flex: 1 1 0px;
+            flex: 1 1 0px;
+
+    min-height: 0px;
+    min-width: 0px;
+    width: 100%;
+    
+    // -webkit-flex-basis: auto;
+    // -ms-flex-preferred-size: auto;
+    //     flex-basis: auto;
+
+    &.shrink {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+          
+        width: auto; 
+    }
+
+}
