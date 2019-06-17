@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.scss';
 
 import { Cell, Grid, Page, Typography as Type } from './components';
 
@@ -14,11 +13,10 @@ class App extends Component {
                         <Type id='testid' className='test123 hello' variant='sub5'>MAASU landing page subtitle</Type>
                     </header>
 
-                    <Grid style={{border: '1px solid black'}}>
-                        <Cell sm={5} style={{ border: '1px solid red'}}>this is a cell</Cell>
-                        <Cell sm={1} style={{ border: '1px solid red'}}>this is a cell</Cell>
-                        <Cell sm={6} style={{ border: '1px solid red'}}>this is a cell</Cell>
-                        <Cell sm={12} style={{ border: '1px solid red'}}>this is a cell</Cell>
+                    <Grid style={{height: '200px',border: '1px solid black'}}>
+                        <Cell auto>a</Cell>
+                        <Cell auto>b</Cell>
+                        <Cell auto>c</Cell>
                     </Grid>
                     
                 </Page>

@@ -1,8 +1,21 @@
 
 // breakpoints
 
-$breakpoint-xs: 0px;
-$breakpoint-sm: 600px;
-$breakpoint-md: 960px;
-$breakpoint-lg: 1280px;
-$breakpoint-xl: 1920px;
+$breakpoint-xs: 0;
+$breakpoint-sm: 600;
+$breakpoint-md: 960;
+$breakpoint-lg: 1280;
+$breakpoint-xl: 1920;
+
+// media queries
+
+$screen: "only screen";
+
+$sm-up: $screen;
+$sm-only: "#{$screen} and (max-width: #{$breakpoint-sm}px)";
+
+$md-up: "#{screen} and (min-width: #{$breakpoint-sm + 1}px)";
+$md-only: "#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{$breakpoint-md}px)";
+
+$lg-up: "#{screen} and (min-width: #{$breakpoint-md + 1}px)";
+$lg-only: "#{screen} and (min-width: #{$breakpoint-md + 1}px) and (max-width: #{$breakpoint-lg}px)";
