@@ -27,60 +27,6 @@ $numGridCells: 12;
 @function calcGridSize($x) {
     @return 100% / $numGridCells * $x;
 }
-
-.grid-x {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
-
-    @for $i from 1 through $numGridCells {
-        
-        // sm only
-        @media #{$sm-only} {
-            & > .sm-#{$i} { width: calcGridSize($i); }
-        }
-
-        // md only
-        @media #{$md-only} {
-            & > .md-#{$i} { width: calcGridSize($i); }
-        }
-
-        // lg up
-        @media #{$lg-up} {
-            & > .lg-#{$i} { width: calcGridSize($i); }
-        }
-
-    }    
-}
-
-.grid-y {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column nowrap;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
-
-    @for $i from 1 through $numGridCells {
-
-        // sm only
-        @media #{$sm-only} {
-            & > .sm-#{$i} { height: calcGridSize($i); }
-        }
-
-        // md only
-        @media #{$md-only} {
-            & > .md-#{$i} { height: calcGridSize($i); }
-        }
-
-        // lg up
-        @media #{$lg-up} {
-            & > .lg-#{$i} { height: calcGridSize($i); }
-        }
-        
-    }    
-}
     
 // cell component
 
@@ -89,7 +35,7 @@ $numGridCells: 12;
         -webkit-flex: 0 0 auto;
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
-                    
+    
     min-height: 0px;
     min-width: 0px;
     width: 100%;
@@ -112,4 +58,62 @@ $numGridCells: 12;
         width: auto; 
     }
     
+}
+
+// media queries
+
+$map: (
+    sm: $sm-only,
+    md: $md-only,
+    lg: $md-only,
+);
+
+.grid-x {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+
+    @for $i from 1 through $numGridCells {
+        @each $key, $query in $map {
+        
+            @media #{$query} {
+                & > .#{$key}-#{$i} {
+                    width: calcGridSize($i);
+         
+                    -webkit-box-flex: 0;
+                        -webkit-flex: 0 0 auto;
+                            -ms-flex: 0 0 auto;
+                                flex: 0 0 auto;            
+                }
+            }
+        
+        }
+    }    
+}
+
+.grid-y {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column nowrap;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+
+    @for $i from 1 through $numGridCells {
+        @each $key, $query in $map {
+        
+            @media #{$query} {
+                & > .#{$key}-#{$i} {
+                    height: calcGridSize($i);
+         
+                    -webkit-box-flex: 0;
+                        -webkit-flex: 0 0 auto;
+                            -ms-flex: 0 0 auto;
+                                flex: 0 0 auto;            
+                }
+            }
+        
+        }
+    }    
 }

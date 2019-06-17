@@ -14,9 +14,9 @@ class App extends Component {
                     </header>
 
                     <Grid style={{height: '200px',border: '1px solid black'}}>
-                        <Cell auto>a</Cell>
-                        <Cell auto>b</Cell>
-                        <Cell auto>c</Cell>
+                        <Cell auto sm={12}>a</Cell>
+                        <Cell auto sm={12}>b</Cell>
+                        <Cell auto sm={12}>c</Cell>
                     </Grid>
                     
                 </Page>
