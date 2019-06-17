@@ -1,3 +1,15 @@
+// /* Small only */
+// @media screen and (max-width: 39.9375em) {}
+// /* Medium and up */
+// @media screen and (min-width: 40em) {}
+// /* Medium only */
+// @media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+// /* Large and up */
+// @media screen and (min-width: 64em) {}
+// /* Large only */
+// @media screen and (min-width: 64em) and (max-width: 74.9375em) {}
+
+@import 'src/util';
 
 $numGridCells: 12;
 
@@ -5,59 +17,77 @@ $numGridCells: 12;
 
 .grid {
     position: relative;
-
+    
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-
+    
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-
+    
     -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;  
-}
-
-
-.grid-x {
-
-    @mixin calcGridSize($x) {
-        width: 100% / $numGridCells * $x;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    
+    & > .sm {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
     }
     
-    @for $i from 1 through $numGridCells {
-        & > .small-#{$i} { @include calcGridSize($i) }
-    }
+}
 
+.grid-x {
+    
+    @function calcGridSize($x) {
+        @return 100% / $numGridCells * $x;
+    }
+     
+    @for $i from 1 through $numGridCells {
+
+        // sm only
+        @media screen and (max-width: $breakpoint-sm) {
+            & > .sm-#{$i} { width: calcGridSize($i); }
+        }
+
+        // md only
+        @media screen and (max-width: $breakpoint-md) {
+            & > .md-#{$i} { width: calcGridSize($i); }
+        }
+
+        // lg only
+        @media screen and (max-width: $breakpoint-lg) {
+            & > .lg-#{$i} { width: calcGridSize($i); }
+        }
+
+    }
+    
 }
 
 // .grid-y {
 // }
-
+    
 // cell component
 
 .cell {
     -webkit-box-flex: 1;
     -webkit-flex: 1 1 0px;
-        -ms-flex: 1 1 0px;
-            flex: 1 1 0px;
-
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0px;
+    
     min-height: 0px;
     min-width: 0px;
     width: 100%;
     
-    // -webkit-flex-basis: auto;
-    // -ms-flex-preferred-size: auto;
-    //     flex-basis: auto;
-
     &.shrink {
         -webkit-box-flex: 0;
         -webkit-flex: 0 0 auto;
-            -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
-          
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        
         width: auto; 
     }
-
+    
 }

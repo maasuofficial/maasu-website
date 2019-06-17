@@ -7,7 +7,7 @@ import Cell from './Cell';
 class Grid extends Component {
 
     render() {
-        let { children, className, x, y, style, ...props } = this.props;
+        let { children, className, x, y, ...props } = this.props;
 
         if (!className) {
             className = '';

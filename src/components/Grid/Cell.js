@@ -5,14 +5,18 @@ import './Grid.scss';
 class Cell extends Component {
 
     render() {
-        let { children, className, shrink, ...props } = this.props;
+        let { children, className, shrink, sm, ...props } = this.props;
 
         if (!className) {
             className = '';
         }
 
         if (shrink) {
-            className += ' shrink';
+            className += 'shrink ';
+        }
+
+        if (sm > 0) {
+            className += `sm sm-${sm} `;
         }
 
         return (
@@ -23,10 +27,12 @@ class Cell extends Component {
 
 Cell.propTypes = {
     shrink: PropTypes.bool,
+    sm: PropTypes.number,
 }
 
 Cell.defaultProps = {
     shrink: false,
+    sm: 0,
 }
 
 export default Cell;

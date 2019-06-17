@@ -14,10 +14,11 @@ class App extends Component {
                         <Type id='testid' className='test123 hello' variant='sub5'>MAASU landing page subtitle</Type>
                     </header>
 
-                    <Grid>
-                        <Cell className='small-1'>this is a cell</Cell>
-                        <Cell>this is a cell</Cell>
-                        <Cell>this is a cell</Cell>
+                    <Grid style={{border: '1px solid black'}}>
+                        <Cell sm={5} style={{ border: '1px solid red'}}>this is a cell</Cell>
+                        <Cell sm={1} style={{ border: '1px solid red'}}>this is a cell</Cell>
+                        <Cell sm={6} style={{ border: '1px solid red'}}>this is a cell</Cell>
+                        <Cell sm={12} style={{ border: '1px solid red'}}>this is a cell</Cell>
                     </Grid>
                     
                 </Page>
