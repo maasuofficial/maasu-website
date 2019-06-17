@@ -8,9 +8,30 @@ describe('grid component', () => {
     let renderGrid;
 
     beforeEach(() => {
-        renderGrid = (props) => render(<Grid {...props}></Grid>);
+        renderGrid = (props, children) => render(<Grid {...props} data-testid='test-grid'>{children}</Grid>);
     })
 
-    test.todo('these');
+    it('defaults in a horizontal flex layout', () => {
+        const { getByTestId } = renderGrid();
+        let grid = getByTestId('test-grid');
+
+        expect(grid.classList.contains('grid-x')).toBe(true);
+        expect(grid.classList.contains('grid-y')).toBe(false);
+    })
+
+    it('can switch to a vertical flex layout', () => {
+        const { getByTestId } = renderGrid({ y: true });
+        let grid = getByTestId('test-grid');
+
+        expect(grid.classList.contains('grid-x')).toBe(false);
+        expect(grid.classList.contains('grid-y')).toBe(true);
+    })
+
+    it('renders children', () => {
+        let id = 'test-child';
+        const { getByTestId } = renderGrid({}, <div data-testid={id}></div>);
+
+        expect(getByTestId(id)).toBeDefined();
+    })
 
 })

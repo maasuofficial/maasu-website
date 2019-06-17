@@ -13,7 +13,7 @@ class App extends Component {
                         <Type id='testid' className='test123 hello' variant='sub5'>MAASU landing page subtitle</Type>
                     </header>
 
-                    <Grid style={{height: '200px',border: '1px solid black'}}>
+                    <Grid style={{ height: '200px' }}>
                         <Cell auto sm={12}>a</Cell>
                         <Cell auto sm={12}>b</Cell>
                         <Cell auto sm={12}>c</Cell>
