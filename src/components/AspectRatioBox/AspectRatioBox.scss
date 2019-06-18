@@ -1,3 +1,19 @@
 .aspect-ratio-box {
-    background-color: red;
+    position: relative;
+    padding-bottom: 100%;
+    width: 100%;
+}
+
+.aspect-ratio-box-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.aspect-ratio-box-relative {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }

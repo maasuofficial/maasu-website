@@ -20,18 +20,8 @@ class App extends Component {
                     </Grid>
 
 
-                    <ARBox className="testClass clss2">So this is cool.</ARBox>
-
-                    <ARBox style={{backgroundColor: 'indianred'}}>Another box.</ARBox>
-
-                    {/* <div style={{
-                        height: 0,
-                        paddingBottom: '25%',
-                        width: '25%',
-                        backgroundColor: 'red',
-                    }}>
-
-                    </div> */}
+                    <ARBox className='testClass clss2' style={{border: '5px dotted indianred'}}>So this is cool.</ARBox>
+                    <ARBox style={{backgroundColor: 'skyblue'}}>Another box.</ARBox>
                     
                 </Page>
 

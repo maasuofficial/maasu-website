@@ -8,11 +8,15 @@ class AspectRatioBox extends Component {
         const { children, className, ...props } = this.props;
 
         let classes = (typeof className === 'string') ? className.split(' ') : [];
-        classes.push('aspect-ratio-box');
+        classes.push('aspect-ratio-box-relative');
 
         return (
-            <div {...props} className={classes.join(' ')}>
-                {classes.join(' ')}
+            <div className='aspect-ratio-box'>
+                <div className='aspect-ratio-box-absolute'>
+                    <div {...props} className={classes.join(' ')}>
+                        {children}
+                    </div>
+                </div>
             </div>
         );
     }
