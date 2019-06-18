@@ -1,6 +1,3 @@
-
-// TODO theming
-
 export default {
 
     // palette
