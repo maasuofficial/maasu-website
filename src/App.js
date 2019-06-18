@@ -20,13 +20,10 @@ class App extends Component {
                     </Grid>
 
 
-                    <ARBox className='testClass clss2' width='75%' resizeable style={{ border: '10px solid black', fontSize: '5em' }}>
+                    <ARBox className='testClass clss2' width='25%' resizeable style={{ border: '10px solid black', fontSize: '5em' }}>
                         So this is cool.
-                        This is perhaps the coolest idea of all!
-Thierry Koblentz recently wrote this up (Removing link as Thierry's site is dead.), crediting Sérgio Gomes for the idea.
-                        To use it, you set a custom property scoped right to the element you need it on
                     </ARBox>
-                    <ARBox style={{backgroundColor: 'skyblue'}} width='250px'>
+                    <ARBox style={{backgroundColor: 'skyblue'}} width='25%' ar='1'>
                         <div style={{height: '50%', width: '100%', backgroundColor: 'red'}}></div>
                     </ARBox>
                     

@@ -2,8 +2,6 @@
     position: relative;
     width: 100%;
     margin: 0 auto;
-// 
-    border: 5px dashed indianred;
 
     &::before {
         content: "";
@@ -11,7 +9,7 @@
         margin-left: -1px;
         float: left;
         height: 0;
-        padding-top: 100%;
+        padding-top: calc(100% / (var(--aspect-ratio, 1)));
     }
 
     &::after {
@@ -34,47 +32,3 @@
     height: 100%;
     width: 100%;
 }
-
-/*
-<div style="--aspect-ratio:815/419;">
-</div>
-
-<div style="--aspect-ratio:16/9;">
-</div>
-
-<!-- even single value -->
-<div style="--aspect-ratio:1.4;">
-</div>
-
-[style*="--aspect-ratio"] > :first-child {
-    width: 100%;
-  }
-  [style*="--aspect-ratio"] > img {  
-    height: auto;
-  } 
-  @supports (--custom:property) {
-    [style*="--aspect-ratio"] {
-      position: relative;
-    }
-    [style*="--aspect-ratio"]::before {
-      content: "";
-      display: block;
-      padding-bottom: calc(100% / (var(--aspect-ratio)));
-    }  
-    [style*="--aspect-ratio"] > :first-child {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-    }  
-  }
-
-  We use [style*="--aspect-ratio"] as a hook to target the appropriate boxes
-We stretch the inner box regardless of support for custom property
-We make sure the height of images comes from their intrinsic ratio rather than their height attribute
-We style the container as a containing block (so the inner box references that ancestor for its positioning)
-We create a pseudo-element to be used with the “padding hack” (it is that element that creates the aspect ratio)
-We use calc() and var() to calculate padding based on the value of the custom property
-We style the inner box so it matches the dimensions of its containing block
-
-  */

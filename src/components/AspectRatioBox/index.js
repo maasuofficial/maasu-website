@@ -13,10 +13,12 @@ class AspectRatioBox extends Component {
 
         styles.width = width ? width : '100%';
 
-        // TODO aspect ratios
+        let ratio = aspectRatio || ar;
+        styles['--aspect-ratio'] = (ratio.length > 0) ? ratio : '1';
 
         return (
             <div {...props} className={classes.join(' ')} style={styles}>
+               
                 {(resize || resizeable) ? (children) : (
 
                     <div className='aspect-ratio-box-absolute'>
@@ -26,6 +28,7 @@ class AspectRatioBox extends Component {
                     </div>
 
                 )}
+            
             </div>
         );
     }
