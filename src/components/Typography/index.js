@@ -23,49 +23,47 @@ const variants = [
 class Typography extends Component {
 
     createTypography(children) {
-        let { className, cap, capitalized, variant, ...props } = this.props;
+        const { className, cap, capitalized, variant, ...props } = this.props;
 
-        if (!className) {
-            className = '';
-        }
+        let classes = (typeof className === 'string') ? className.split(' ') : [];
 
         if (cap || capitalized) {
-            className += ' capitalized';
+            classes.push('capitalized');
         }
 
         switch (variant) {
 
             case 'h1': case 'heading1':
-                return <h1 {...props} className={className}>{children}</h1>;
+                return <h1 {...props} className={classes.join(' ')}>{children}</h1>;
             case 'h2': case 'heading2':
-                return <h2 {...props} className={className}>{children}</h2>;
+                return <h2 {...props} className={classes.join(' ')}>{children}</h2>;
             case 'h3': case 'heading3':
-                return <h3 {...props} className={className}>{children}</h3>;
+                return <h3 {...props} className={classes.join(' ')}>{children}</h3>;
             case 'h4': case 'heading4':
-                return <h4 {...props} className={className}>{children}</h4>;
+                return <h4 {...props} className={classes.join(' ')}>{children}</h4>;
             case 'h5': case 'heading5':
-                return <h5 {...props} className={className}>{children}</h5>;
+                return <h5 {...props} className={classes.join(' ')}>{children}</h5>;
             case 'h6': case 'heading6':
-                return <h6 {...props} className={className}>{children}</h6>;
+                return <h6 {...props} className={classes.join(' ')}>{children}</h6>;
 
             case 'sub1': case 'subtitle1':
-                return <p {...props} className={`sub1 subtitle ${className}`}>{children}</p>;
+                return <p {...props} className={`sub1 subtitle ${classes.join(' ')}`}>{children}</p>;
             case 'sub2': case 'subtitle2':
-                return <p {...props} className={`sub2 subtitle ${className}`}>{children}</p>;
+                return <p {...props} className={`sub2 subtitle ${classes.join(' ')}`}>{children}</p>;
             case 'sub3': case 'subtitle3':
-                return <p {...props} className={`sub3 subtitle ${className}`}>{children}</p>;
+                return <p {...props} className={`sub3 subtitle ${classes.join(' ')}`}>{children}</p>;
             case 'sub4': case 'subtitle4':
-                return <p {...props} className={`sub4 subtitle ${className}`}>{children}</p>;
+                return <p {...props} className={`sub4 subtitle ${classes.join(' ')}`}>{children}</p>;
             case 'sub5': case 'subtitle5':
-                return <p {...props} className={`sub5 subtitle ${className}`}>{children}</p>;
+                return <p {...props} className={`sub5 subtitle ${classes.join(' ')}`}>{children}</p>;
             case 'sub6': case 'subtitle6':
-                return <p {...props} className={`sub6 subtitle ${className}`}>{children}</p>;
+                return <p {...props} className={`sub6 subtitle ${classes.join(' ')}`}>{children}</p>;
             
             case 'em': case 'emphasis':
-                return <em {...props} className={className}>{children}</em>;
+                return <em {...props} className={classes.join(' ')}>{children}</em>;
 
             default:
-                return <h3 {...props} className={className}>{children}</h3>;
+                return <h3 {...props} className={classes.join(' ')}>{children}</h3>;
         }
     }
 

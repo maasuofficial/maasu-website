@@ -5,24 +5,23 @@ import './Grid.scss';
 class Cell extends Component {
 
     render() {
-        let { auto, children, className, lg, md, shrink, sm, ...props } = this.props;
+        const { auto, children, className, lg, md, shrink, sm, ...props } = this.props;
+
+        let classes = (typeof className === 'string') ? className.split(' ') : [];
+        classes.push('cell');
 
         const addBreakpoint = (k, v) => {
             if (v > 0) {
-                className += `${k} ${k}-${v} `;
+                classes.push(...[k, k + '-' + v]);
             }
         }
 
-        if (!className) {
-            className = '';
-        }
-
         if (auto) {
-            className += 'auto ';
+            classes.push('auto');
         }
 
         if (shrink) {
-            className += 'shrink ';
+            classes.push('shrink');
         }
 
         addBreakpoint('sm', sm);
@@ -30,7 +29,7 @@ class Cell extends Component {
         addBreakpoint('lg', lg);
 
         return (
-            <div {...props} className={`cell ${className}`}>{children}</div>
+            <div {...props} className={classes.join(' ')}>{children}</div>
         );
     }
 }

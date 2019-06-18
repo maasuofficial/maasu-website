@@ -1,19 +1,17 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
 import './Page.scss';
 
 class Page extends Component {
 
     render() {
-        let { children, className, ...props } = this.props;
+        const { children, className, ...props } = this.props;
         
-        if (!className) {
-            className = '';
-        }
+        let classes = (typeof className === 'string') ? className.split(' ') : [];
+        classes.push('page');
 
         return (
-            <section {...props} className={`page ${className}`}>{children}</section>
-        )
+            <section {...props} className={classes.join(' ')}>{children}</section>
+        );
     }
 }
 

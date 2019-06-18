@@ -7,20 +7,19 @@ import Cell from './Cell';
 class Grid extends Component {
 
     render() {
-        let { children, className, x, y, ...props } = this.props;
+        const { children, className, x, y, ...props } = this.props;
 
-        if (!className) {
-            className = '';
-        }
+        let classes = (typeof className === 'string') ? className.split(' ') : [];
+        classes.push('grid');
 
         if (y) {
-            className += 'grid-y ';
+            classes.push('grid-y');
         } else {
-            className += 'grid-x ';
+            classes.push('grid-x');
         }
 
         return (
-            <div {...props} className={`grid ${className}`}>{children}</div>
+            <div {...props} className={classes.join(' ')}>{children}</div>
         );
     }
 }

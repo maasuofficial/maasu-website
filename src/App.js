@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Cell, Grid, Page, Typography as Type } from './components';
+import { AspectRatioBox as ARBox, Cell, Grid, Page, Typography as Type } from './components';
 
 class App extends Component {
     render() {
@@ -18,6 +18,20 @@ class App extends Component {
                         <Cell auto sm={12}>b</Cell>
                         <Cell auto sm={12}>c</Cell>
                     </Grid>
+
+
+                    <ARBox className="testClass clss2">So this is cool.</ARBox>
+
+                    <ARBox style={{backgroundColor: 'indianred'}}>Another box.</ARBox>
+
+                    {/* <div style={{
+                        height: 0,
+                        paddingBottom: '25%',
+                        width: '25%',
+                        backgroundColor: 'red',
+                    }}>
+
+                    </div> */}
                     
                 </Page>
 
