@@ -8,7 +8,7 @@ class AspectRatioBox extends Component {
         const { ar, aspectRatio, children, className, resize, resizeable, style, width, ...props } = this.props;
 
         let classes = (typeof className === 'string') ? className.split(' ') : [];
-        classes.push('aspect-ratio-box');
+        classes.push('aspectRatioBox');
         let styles = { ...style }
 
         styles.width = width ? width : '100%';
@@ -21,8 +21,8 @@ class AspectRatioBox extends Component {
                
                 {(resize || resizeable) ? (children) : (
 
-                    <div className='aspect-ratio-box-absolute'>
-                        <div className='aspect-ratio-box-relative'>
+                    <div className='aspectRatioBoxAbsolute'>
+                        <div className='aspectRatioBoxRelative'>
                             {children}
                         </div>
                     </div>

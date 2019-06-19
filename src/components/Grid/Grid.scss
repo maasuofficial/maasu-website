@@ -5,12 +5,8 @@ $numGridCells: 12;
 // grid component
 
 .grid {
-    position: relative;
-    
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;    
+    position: relative;    
+    display: flex;
 }
 
 @function calcGridSize($x) {
@@ -20,10 +16,7 @@ $numGridCells: 12;
 // cell component
 
 .cell {
-    -webkit-box-flex: 0;
-        -webkit-flex: 0 0 auto;
-            -ms-flex: 0 0 auto;
-                flex: 0 0 auto;
+    flex: 0 0 auto;
     
     min-height: 0px;
     min-width: 0px;
@@ -31,16 +24,10 @@ $numGridCells: 12;
     height: 100%;
 
     &.auto {
-        -webkit-box-flex: 1;
-            -webkit-flex: 1 1 0px;
-                -ms-flex: 1 1 0px;
-                    flex: 1 1 0px;
+        flex: 1 1 0px;
     }
     
     &.shrink {
-        -webkit-box-flex: 0;
-        -webkit-flex: 0 0 auto;
-        -ms-flex: 0 0 auto;
         flex: 0 0 auto;
         
         height: auto; 
@@ -58,23 +45,15 @@ $map: (
 );
 
 .grid-x {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: row wrap;
-        -ms-flex-flow: row wrap;
-            flex-flow: row wrap;
+    flex-direction: row;
 
     @for $i from 1 through $numGridCells {
         @each $key, $query in $map {
         
             @media #{$query} {
                 & > .#{$key}-#{$i} {
-                    width: calcGridSize($i);
-         
-                    -webkit-box-flex: 0;
-                        -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                                flex: 0 0 auto;            
+                    width: calcGridSize($i);     
+                    flex: 0 0 auto;
                 }
             }
         
@@ -83,11 +62,7 @@ $map: (
 }
 
 .grid-y {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-flow: column nowrap;
-        -ms-flex-flow: column nowrap;
-            flex-flow: column nowrap;
+    flex-direction: column;
 
     @for $i from 1 through $numGridCells {
         @each $key, $query in $map {
@@ -95,11 +70,7 @@ $map: (
             @media #{$query} {
                 & > .#{$key}-#{$i} {
                     height: calcGridSize($i);
-         
-                    -webkit-box-flex: 0;
-                        -webkit-flex: 0 0 auto;
-                            -ms-flex: 0 0 auto;
-                                flex: 0 0 auto;            
+                    flex: 0 0 auto;
                 }
             }
         

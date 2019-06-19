@@ -8,7 +8,7 @@ describe('cell component', () => {
     let renderCell;
     const numGridCells = 12;
 
-    const randNumInRange = (min, max) => Math.round( (Math.random() * (max - min)) + min );
+    const randIntInRange = (min, max) => Math.round( (Math.random() * (max - min)) + min );
 
     beforeEach(() => {
         renderCell = (props, children) => render(<Cell {...props} data-testid='test-cell'>{children}</Cell>);
@@ -36,7 +36,7 @@ describe('cell component', () => {
     })
 
     it('supports small breakpoints', () => {
-        let index = randNumInRange(1, numGridCells);
+        let index = randIntInRange(1, numGridCells);
         const { getByTestId } = renderCell({ sm: index });
         let cell = getByTestId('test-cell');
 
@@ -45,7 +45,7 @@ describe('cell component', () => {
     })
 
     it('supports medium breakpoints', () => {
-        let index = randNumInRange(1, numGridCells);
+        let index = randIntInRange(1, numGridCells);
         const { getByTestId } = renderCell({ md: index });
         let cell = getByTestId('test-cell');
 
@@ -54,7 +54,7 @@ describe('cell component', () => {
     })
 
     it('supports large breakpoints', () => {
-        let index = randNumInRange(1, numGridCells);
+        let index = randIntInRange(1, numGridCells);
         const { getByTestId } = renderCell({ lg: index });
         let cell = getByTestId('test-cell');
 

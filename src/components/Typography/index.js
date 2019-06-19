@@ -18,6 +18,8 @@ const variants = [
     'sub6', 'subtitle6',
 
     'em', 'emphasis',
+
+    'styled',
 ]
 
 class Typography extends Component {
@@ -61,6 +63,10 @@ class Typography extends Component {
             
             case 'em': case 'emphasis':
                 return <em {...props} className={classes.join(' ')}>{children}</em>;
+
+            case 'styled':
+                return <span {...props} className={`styled ${classes.join(' ')}`}>{children}</span>;
+
 
             default:
                 return <h3 {...props} className={classes.join(' ')}>{children}</h3>;

@@ -1,4 +1,4 @@
-.aspect-ratio-box {
+.aspectRatioBox {
     position: relative;
     width: 100%;
     margin: 0 auto;
@@ -19,7 +19,7 @@
     }
 }
 
-.aspect-ratio-box-absolute {
+.aspectRatioBoxAbsolute {
     position: absolute;
     top: 0;
     right: 0;
@@ -27,7 +27,7 @@
     left: 0;
 }
 
-.aspect-ratio-box-relative {
+.aspectRatioBoxRelative {
     position: relative;
     height: 100%;
     width: 100%;

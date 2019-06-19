@@ -30,7 +30,8 @@ h6, .sub6 {
     margin-top: 0;
 }
 
-em {
+em, .styled {
+    font-weight: bold;
     font-style: normal;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: currentColor;
