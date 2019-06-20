@@ -5,23 +5,37 @@ $numGridCells: 12;
 // grid component
 
 .grid {
-    position: relative;    
     display: flex;
 }
 
-@function calcGridSize($x) {
-    @return 100% / $numGridCells * $x;
+.grid-x {
+    flex-flow: row wrap;
+    flex-direction: row;
+
+    & > .auto,
+    & > .shrink {
+        width: auto;
+    }
 }
-    
+
+.grid-y {
+    flex-flow: column wrap;
+    flex-direction: column;
+
+    & > .auto,
+    & > .shrink {
+        height: auto;
+    }
+}
+
 // cell component
 
 .cell {
     flex: 0 0 auto;
-    
+
     min-height: 0px;
     min-width: 0px;
     width: 100%;
-    height: 100%;
 
     &.auto {
         flex: 1 1 0px;
@@ -29,9 +43,6 @@ $numGridCells: 12;
     
     &.shrink {
         flex: 0 0 auto;
-        
-        height: auto; 
-        width: auto; 
     }
     
 }
@@ -39,41 +50,34 @@ $numGridCells: 12;
 // media queries
 
 $map: (
-    sm: $sm-only,
+    sm: $sm-down,
     md: $md-only,
-    lg: $md-only,
+    lg: $lg-up,
 );
 
-.grid-x {
-    flex-direction: row;
-
-    @for $i from 1 through $numGridCells {
-        @each $key, $query in $map {
-        
-            @media #{$query} {
-                & > .#{$key}-#{$i} {
-                    width: calcGridSize($i);     
-                    flex: 0 0 auto;
-                }
-            }
-        
-        }
-    }    
+@function calcGridSize($x) {
+    @return 100% / $numGridCells * $x;
 }
 
-.grid-y {
-    flex-direction: column;
-
+@each $key, $query in $map {
+@media #{$query} {
+    
     @for $i from 1 through $numGridCells {
-        @each $key, $query in $map {
-        
-            @media #{$query} {
-                & > .#{$key}-#{$i} {
-                    height: calcGridSize($i);
-                    flex: 0 0 auto;
-                }
-            }
-        
+
+        .grid-x > .#{$key}-#{$i},
+        .grid-y > .#{$key}-#{$i} {
+            flex-basis: auto;
+            flex: 0 0 auto;
         }
-    }    
+
+        .grid-x > .#{$key}-#{$i} {
+            width: calcGridSize($i);     
+        }
+
+        .grid-y > .#{$key}-#{$i} {
+            height: calcGridSize($i);
+        }
+    }
+
+}
 }
