@@ -8,7 +8,7 @@ $numGridCells: 12;
     display: flex;
 }
 
-.grid-x {
+.gridX {
     flex-flow: row wrap;
     flex-direction: row;
 
@@ -18,7 +18,7 @@ $numGridCells: 12;
     }
 }
 
-.grid-y {
+.gridY {
     flex-flow: column wrap;
     flex-direction: column;
 
@@ -64,17 +64,17 @@ $map: (
     
     @for $i from 1 through $numGridCells {
 
-        .grid-x > .#{$key}-#{$i},
-        .grid-y > .#{$key}-#{$i} {
+        .gridX > .#{$key}-#{$i},
+        .gridY > .#{$key}-#{$i} {
             flex-basis: auto;
             flex: 0 0 auto;
         }
 
-        .grid-x > .#{$key}-#{$i} {
+        .gridX > .#{$key}-#{$i} {
             width: calcGridSize($i);     
         }
 
-        .grid-y > .#{$key}-#{$i} {
+        .gridY > .#{$key}-#{$i} {
             height: calcGridSize($i);
         }
     }

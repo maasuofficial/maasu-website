@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Typography.scss';
+import modules from './Typography.module.scss';
 
 const variants = [
     'h1', 'heading1',
@@ -30,7 +30,7 @@ class Typography extends Component {
         let classes = (typeof className === 'string') ? className.split(' ') : [];
 
         if (cap || capitalized) {
-            classes.push('capitalized');
+            classes.push(`${modules.capitalized}`);
         }
 
         switch (variant) {
@@ -49,23 +49,23 @@ class Typography extends Component {
                 return <h6 {...props} className={classes.join(' ')}>{children}</h6>;
 
             case 'sub1': case 'subtitle1':
-                return <p {...props} className={`sub1 subtitle ${classes.join(' ')}`}>{children}</p>;
+                return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
             case 'sub2': case 'subtitle2':
-                return <p {...props} className={`sub2 subtitle ${classes.join(' ')}`}>{children}</p>;
+                return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
             case 'sub3': case 'subtitle3':
-                return <p {...props} className={`sub3 subtitle ${classes.join(' ')}`}>{children}</p>;
+                return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
             case 'sub4': case 'subtitle4':
-                return <p {...props} className={`sub4 subtitle ${classes.join(' ')}`}>{children}</p>;
+                return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
             case 'sub5': case 'subtitle5':
-                return <p {...props} className={`sub5 subtitle ${classes.join(' ')}`}>{children}</p>;
+                return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
             case 'sub6': case 'subtitle6':
-                return <p {...props} className={`sub6 subtitle ${classes.join(' ')}`}>{children}</p>;
+                return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
             
             case 'em': case 'emphasis':
                 return <em {...props} className={classes.join(' ')}>{children}</em>;
 
             case 'styled':
-                return <span {...props} className={`styled ${classes.join(' ')}`}>{children}</span>;
+                return <span {...props} className={`${modules.styled} ${classes.join(' ')}`}>{children}</span>;
 
 
             default:

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './AspectRatioBox.scss';
+import modules from './AspectRatioBox.module.scss';
 
 class AspectRatioBox extends Component {
 
@@ -8,7 +8,7 @@ class AspectRatioBox extends Component {
         const { ar, aspectRatio, children, className, resize, resizeable, style, width, ...props } = this.props;
 
         let classes = (typeof className === 'string') ? className.split(' ') : [];
-        classes.push('aspectRatioBox');
+        classes.push(`${modules.aspectRatioBox}`);
         let styles = { ...style }
 
         styles.width = width ? width : '100%';
@@ -21,8 +21,8 @@ class AspectRatioBox extends Component {
                
                 {(resize || resizeable) ? (children) : (
 
-                    <div className='aspectRatioBoxAbsolute'>
-                        <div className='aspectRatioBoxRelative'>
+                    <div className={`${modules.aspectRatioBoxAbsolute}`}>
+                        <div className={`${modules.aspectRatioBoxRelative}`}>
                             {children}
                         </div>
                     </div>

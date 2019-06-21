@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Grid.scss';
+import modules from './Grid.module.scss';
 
 import Cell from './Cell';
 
@@ -10,12 +10,12 @@ class Grid extends Component {
         const { children, className, x, y, ...props } = this.props;
 
         let classes = (typeof className === 'string') ? className.split(' ') : [];
-        classes.push('grid');
+        classes.push(`${modules.grid}`);
 
         if (y) {
-            classes.push('grid-y');
+            classes.push(`${modules.gridY}`);
         } else {
-            classes.push('grid-x');
+            classes.push(`${modules.gridX}`);
         }
 
         return (

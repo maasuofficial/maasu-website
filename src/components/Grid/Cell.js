@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import './Grid.scss';
+import modules from './Grid.module.scss';
 
 class Cell extends Component {
 
@@ -8,20 +8,20 @@ class Cell extends Component {
         const { auto, children, className, lg, md, shrink, sm, ...props } = this.props;
 
         let classes = (typeof className === 'string') ? className.split(' ') : [];
-        classes.push('cell');
+        classes.push(`${modules.cell}`);
 
         const addBreakpoint = (k, v) => {
             if (v > 0) {
-                classes.push(...[k, k + '-' + v]);
+                classes.push(`${modules[k + '-' + v]}`);
             }
         }
 
         if (auto) {
-            classes.push('auto');
+            classes.push(`${modules.auto}`);
         }
 
         if (shrink) {
-            classes.push('shrink');
+            classes.push(`${modules.shrink}`);
         }
 
         addBreakpoint('sm', sm);
