@@ -1,13 +1,24 @@
 import React, { Component } from 'react';
-
-import { Home, OurTeam } from './site';
+import { About, Alumni, Contact, Conferences, History, Home, Mission, Team } from './site';
 
 class App extends Component {
     render() {
         return (
             <div className='app'>
+
                 <Home />
-                <OurTeam />
+
+                <About />
+                <Mission />
+                <Team />
+                <History />
+
+                <Conferences />
+
+                <Alumni />
+
+                <Contact />
+
             </div>
         );
     }

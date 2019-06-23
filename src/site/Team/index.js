@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { AspectRatioBox as ARBox, Cell, Grid, Page, Typography as Type } from '../../components';
-import './OurTeam.scss';
+import './Team.scss';
 
-class OurTeam extends Component {
+class Team extends Component {
     render() {
         return (
             <Page>
@@ -74,4 +74,4 @@ const Profile = (props) => {
     );
 }
 
-export default OurTeam;
+export default Team;
