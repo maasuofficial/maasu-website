@@ -5,17 +5,17 @@ import Page from '../';
 afterEach(cleanup);
 
 describe('page component', () => {
-    let renderPage;
+  let renderPage;
 
-    beforeEach(() => {
-        renderPage = (props, children) => render(<Page {...props}>{children}</Page>)
-    })
+  beforeEach(() => {
+    renderPage = (props, children) => render(<Page {...props}>{children}</Page>);
+  })
 
-    it('displays nested children', () => {
-        let id = 'test-child-id';
-        const { getByTestId } = renderPage({}, <div data-testid={id}></div>);
-        
-        expect(getByTestId(id)).toBeDefined();
-    })
+  it('displays nested children', () => {
+    let id = 'test-child-id';
+    const { getByTestId } = renderPage({}, <div data-testid={id}></div>);
+      
+    expect(getByTestId(id)).toBeDefined();
+  })
 
 })

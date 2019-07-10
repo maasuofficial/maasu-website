@@ -1,27 +1,19 @@
 import React, { Component } from 'react';
-import { About, Alumni, Contact, Conferences, History, Home, Mission, Team } from './site';
+import { About, Alumni, Conferences, Home, Programs, Resources } from './site';
 
 class App extends Component {
-    render() {
-        return (
-            <div className='app'>
-
-                <Home />
-
-                <About />
-                <Mission />
-                <Team />
-                <History />
-
-                <Conferences />
-
-                <Alumni />
-
-                <Contact />
-
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div className='app'>
+        <Home />
+        <About />
+        <Conferences />
+        <Programs />
+        <Resources />
+        <Alumni />
+      </div>
+    );
+  }
 }
 
 export default App;

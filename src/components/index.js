@@ -5,5 +5,5 @@ import ThemeProvider from './ThemeProvider';
 import Typography from './Typography';
 
 export {
-    AspectRatioBox, Cell, Grid, Page, ThemeProvider, Typography
+  AspectRatioBox, Cell, Grid, Page, ThemeProvider, Typography
 }

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
-import './Conferences.scss';
+import { Page } from '../../components';
 
 class Conferences extends Component {
-    render() {
-        return (
-            <div></div>
-        );
-    }
+  render() {
+    return (
+      <Page>
+                
+      </Page>
+    );
+  }
 }
 
 // Conferences.propTypes = {

@@ -8,12 +8,12 @@ import theme from './_theme';
 import './index.scss';
 
 const app = (
-    <Provider>
-        <ThemeProvider theme={theme}>
-            <App />
-        </ThemeProvider>
-    </Provider>
-)
+  <Provider>
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+  </Provider>
+);
 
 ReactDOM.render(app, document.getElementById('root'));
 
