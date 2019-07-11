@@ -40,7 +40,6 @@ describe('cell component', () => {
     const { getByTestId } = renderCell({ sm: index });
     let cell = getByTestId('test-cell');
 
-    expect(cell.classList.contains('sm')).toBe(true);
     expect(cell.classList.contains('sm-'+index)).toBe(true);
   })
 
@@ -49,7 +48,6 @@ describe('cell component', () => {
     const { getByTestId } = renderCell({ md: index });
     let cell = getByTestId('test-cell');
 
-    expect(cell.classList.contains('md')).toBe(true);
     expect(cell.classList.contains('md-'+index)).toBe(true);
   })
 
@@ -58,7 +56,6 @@ describe('cell component', () => {
     const { getByTestId } = renderCell({ lg: index });
     let cell = getByTestId('test-cell');
 
-    expect(cell.classList.contains('lg')).toBe(true);
     expect(cell.classList.contains('lg-'+index)).toBe(true);
   })
 

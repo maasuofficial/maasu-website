@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../App';
+import About from '../';
 
-describe('app component', () => {
+describe('about component', () => {
 
   describe('render', () => {
 
     it('renders without crashing', () => {
       const div = document.createElement('div');
-      ReactDOM.render(<App />, div);
+      ReactDOM.render(<About />, div);
       ReactDOM.unmountComponentAtNode(div);
     })
   
   })
-
+    
 })

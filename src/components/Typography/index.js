@@ -49,17 +49,17 @@ class Typography extends Component {
         return <h6 {...props} className={classes.join(' ')}>{children}</h6>;
 
       case 'sub1': case 'subtitle1':
-        return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
+        return <p {...props} className={`${modules.sub1} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       case 'sub2': case 'subtitle2':
-        return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
+        return <p {...props} className={`${modules.sub2} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       case 'sub3': case 'subtitle3':
-        return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
+        return <p {...props} className={`${modules.sub3} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       case 'sub4': case 'subtitle4':
-        return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
+        return <p {...props} className={`${modules.sub4} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       case 'sub5': case 'subtitle5':
-        return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
+        return <p {...props} className={`${modules.sub5} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       case 'sub6': case 'subtitle6':
-        return <p {...props} className={`${modules.sub} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
+        return <p {...props} className={`${modules.sub6} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       
       case 'em': case 'emphasis':
         return <em {...props} className={classes.join(' ')}>{children}</em>;

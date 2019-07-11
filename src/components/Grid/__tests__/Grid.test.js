@@ -15,16 +15,16 @@ describe('grid component', () => {
     const { getByTestId } = renderGrid();
     let grid = getByTestId('test-grid');
 
-    expect(grid.classList.contains('grid-x')).toBe(true);
-    expect(grid.classList.contains('grid-y')).toBe(false);
+    expect(grid.classList.contains('gridX')).toBe(true);
+    expect(grid.classList.contains('gridY')).toBe(false);
   })
 
   it('can switch to a vertical flex layout', () => {
     const { getByTestId } = renderGrid({ y: true });
     let grid = getByTestId('test-grid');
 
-    expect(grid.classList.contains('grid-x')).toBe(false);
-    expect(grid.classList.contains('grid-y')).toBe(true);
+    expect(grid.classList.contains('gridX')).toBe(false);
+    expect(grid.classList.contains('gridY')).toBe(true);
   })
 
   it('renders children', () => {
