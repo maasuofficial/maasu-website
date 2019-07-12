@@ -9,8 +9,8 @@
 1. Home
     - upcoming conference details
     - social media feed(s)
-    - alumni corner
-    - social media plugs/contact
+    - feedback/alumni corner
+    - social media plugs
 2. About Us
     - Purpose and Mission
       - purpose
@@ -30,8 +30,8 @@
       - register
     - Host a Conference
       - bid packet details
+    - past conferences
 4. Programs
-    - Newsletter
     - MAASUx
 5. Resources
     - Scholarships and Awards
@@ -39,15 +39,20 @@
       - Charles Chang Leadership Award
       - Midwestern Star Award
       - Board Of Advisors Award
-      - past recipients
     - APIA Organizations and Conferences
 6. Alumni
     - logo
     - Purpose
     - Initiatives
     - Membership
+7. Archives
+    - Newsletter
+    - Annual Report
+    - past scholarship/award recipients
+8. Contact
 
 ### Roadmap
 
 - connect repository to Firebase project
 - connect with content provider such as Gatsby or Contentful
+- maasu.org placeholder
