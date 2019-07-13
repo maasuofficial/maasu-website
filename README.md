@@ -12,7 +12,7 @@
     - feedback/alumni corner
     - social media plugs
 2. About Us
-    - Purpose and Mission
+    - Mission
       - purpose
       - mission
     - Board
@@ -30,7 +30,6 @@
       - register
     - Host a Conference
       - bid packet details
-    - past conferences
 4. Programs
     - MAASUx
 5. Resources
@@ -48,6 +47,7 @@
 7. Archives
     - Newsletter
     - Annual Report
+    - past conferences
     - past scholarship/award recipients
 8. Contact
 

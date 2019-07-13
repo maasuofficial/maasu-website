@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './About.scss';
 import { Page } from '../../components';
-import { Board, History, Members, PurposeAndMission } from '../';
+import { Board, History, Members, Mission } from '../';
 
 class About extends Component {
   render() {
     return (
       <Page>
-        <PurposeAndMission />
+        <Mission />
         <Board />
         <Members />
         <History />

@@ -7,8 +7,8 @@ import History from './History';
 import Home from './Home';
 import Members from './Members';
 import Menu from './Menu';
+import Mission from './Mission';
 import Programs from './Programs';
-import PurposeAndMission from './PurposeAndMission';
 import Resources from './Resources';
 
 export {
@@ -21,7 +21,7 @@ export {
   Home,
   Members,
   Menu,
+  Mission,
   Programs,
-  PurposeAndMission,
   Resources
 }
