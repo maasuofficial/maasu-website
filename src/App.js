@@ -3,28 +3,7 @@ import React, { Component } from 'react';
 import { Cell, Grid, Page, Type } from './components';
 // import Icon from 'react-fontawesome';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
-
-const styles = {
-  title: {
-    margin: 0,
-    padding: '2em 0 1em 0',
-  },
-  subtitle: {
-    margin: 0,
-  },
-  grid: {
-    fontSize: '3em',
-    padding: '1em 0',
-  },
-  a: {
-    padding: '0 0.2em',
-    color: 'inherit',
-  },
-  mail: {
-    color: 'inherit',
-    textDecoration: 'underline',
-  }
-}
+import './App.scss';
 
 class App extends Component {
   render() {
@@ -33,17 +12,17 @@ class App extends Component {
 
         <Page>
           <header>
-            <Type variant='h1' style={styles.title}>Oh no!</Type>
-            <Type variant='h2' style={styles.subtitle}>Our website is under construction!</Type>
+            <Type variant='h1' className='title'><span>Oh no!</span></Type>
+            <Type variant='h2' className='subtitle'>Our website is under construction!</Type>
           </header>
           <Type variant='sub6'>You can see any updates or conference information from our social media links:</Type>
-          <Grid style={styles.grid}>
+          <Grid className='gridz'>
             <Cell auto>
-              <a style={styles.a} aria-label='facebook' href='https://www.facebook.com/MAASUForChange/'><FaFacebookSquare /></a>
-              <a style={styles.a} aria-label='instagram' href='https://www.instagram.com/maasuofficial/'><FaInstagram /></a>
+              <a className='link' aria-label='facebook' href='https://www.facebook.com/MAASUForChange/'><FaFacebookSquare /></a>
+              <a className='link' aria-label='instagram' href='https://www.instagram.com/maasuofficial/'><FaInstagram /></a>
             </Cell>
           </Grid>
-          <Type variant='sub6'>For more information, please contact <a style={styles.mail} href='mailto:technet@maasu.org'>technet@maasu.org</a>.</Type>
+          <Type variant='sub6'>For more information, please contact <a className='mail' href='mailto:technet@maasu.org'>technet@maasu.org</a>.</Type>
         </Page>
         
         {/* <Home />
