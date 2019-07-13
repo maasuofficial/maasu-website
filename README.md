@@ -4,7 +4,7 @@
 
 ---
 
-### Table of Contents
+## Website Table of Contents
 
 1. Home
     - upcoming conference details
@@ -51,7 +51,7 @@
     - past scholarship/award recipients
 8. Contact
 
-### Roadmap
+## Roadmap
 
 - construct outline with React Router
 - connect with content provider such as Gatsby or Contentful
