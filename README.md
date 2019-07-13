@@ -53,6 +53,5 @@
 
 ### Roadmap
 
-- connect repository to Firebase project
+- construct outline with React Router
 - connect with content provider such as Gatsby or Contentful
-- maasu.org placeholder

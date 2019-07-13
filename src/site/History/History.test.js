@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { cleanup, render } from '@testing-library/react';
+import History from '.';
+
+afterEach(cleanup);
 
 describe('render', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<App />, div);
+    ReactDOM.render(<History />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 
