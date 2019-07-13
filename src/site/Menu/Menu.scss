@@ -1,0 +1,41 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: var(--zIndex-bar);
+  background-color: var(--palette-background-main);
+
+  // TODO fix menu height
+  opacity: 0.8;
+}
+
+nav {
+  border: 3px dashed salmon;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline;
+
+  li {
+    display: block;
+  }
+}
+
+.menu a {
+  color: inherit;
+  text-decoration: none;
+  
+  &.active {
+    font-weight: 700;
+    color: var(--palette-secondary-dark);
+  }
+
+}

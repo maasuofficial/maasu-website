@@ -2,10 +2,14 @@ import React from 'react';
 import { Page } from '../../components';
 
 class Host extends React.Component {
+  componentDidMount() {
+    document.title = 'Host a Conference - The Midwest Asian American Students Union';
+  }
+
   render() {
     return (
       <Page>
-        host a conference
+        TODO host a conference
       </Page>
     );
   }

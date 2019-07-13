@@ -1,23 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import modules from './Menu.module.scss';
+import './Menu.scss';
 import { NavLink } from 'react-router-dom'; 
 
 class Menu extends React.Component {
   render() {
     return (
-      <header>
-        <nav className={`${modules.menu}`}>
-          {/* logo */}
+      <header className='menu'>
+        <nav>
+          {/* TODO logo */}
 
-          <ul style={{textAlign: 'left'}}>
+          <ul>
             <ListLink to='/' name='Home' />
 
             <li>About Us
               <ul>
                 <ListLink to='/mission' name='Our Mission' />
-                <ListLink to='/board' name='The Board' />
-                <ListLink to='/members' name='Members' />
+                <ListLink to='/board' name='Executive Board' />
+                <ListLink to='/members' name='Member Schools' />
                 <ListLink to='/history' name='History' />
               </ul>
             </li>
@@ -53,7 +53,7 @@ class Menu extends React.Component {
               </ul>
             </li>
 
-            <ListLink to='/contact' name='Contact' />
+            <ListLink to='/contact' name='Contact Us' />
 
           </ul>
 
@@ -66,7 +66,7 @@ class Menu extends React.Component {
 const ListLink = (props) => {
   return (
     <li>
-      <NavLink to={props.to}>
+      <NavLink exact to={props.to}>
         {props.name}
       </NavLink>
     </li>

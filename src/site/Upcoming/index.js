@@ -2,10 +2,14 @@ import React from 'react';
 import { Page } from '../../components';
 
 class Upcoming extends React.Component {
+  componentDidMount() {
+    document.title = 'Upcoming Conferences - The Midwest Asian American Students Union';
+  }
+
   render() {
     return (
       <Page>
-        upcoming
+        TODO upcoming ls and sc
       </Page>
     );
   }
