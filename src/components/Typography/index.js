@@ -83,7 +83,10 @@ Typography.propTypes = {
   capitalized: PropTypes.bool,
   className: PropTypes.string,
   id: PropTypes.string,
-  style: PropTypes.string,
+  style: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.object,
+  ]),
   variant: PropTypes.oneOf(variants).isRequired,
 }
 

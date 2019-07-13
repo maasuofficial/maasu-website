@@ -1,3 +1,4 @@
+@import 'src/util';
 
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
@@ -46,4 +47,10 @@ body {
     padding: 0 var(--spacing);
     
     text-align: center;
+}
+
+@media #{$sm-down} {
+    .app {
+        padding: 0 calc(var(--spacing) / 2);
+    }
 }
