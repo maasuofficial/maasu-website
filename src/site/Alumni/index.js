@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
-import './Alumni.scss';
+import React from 'react';
 import { Page } from '../../components';
 
-class Alumni extends Component {
+class Alumni extends React.Component {
   render() {
     return (
       <Page>
-
+        alumni
       </Page>
     );
   }
 }
-
-// Alumni.propTypes = {
-// }
-
-// Alumni.defaultProps = {
-// }
 
 export default Alumni;

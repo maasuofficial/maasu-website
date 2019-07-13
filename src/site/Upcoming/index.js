@@ -1,14 +1,14 @@
 import React from 'react';
 import { Page } from '../../components';
 
-class Mission extends React.Component {
+class Upcoming extends React.Component {
   render() {
     return (
       <Page>
-          purpose and mission
+        upcoming
       </Page>
     );
   }
 }
 
-export default Mission;
+export default Upcoming;

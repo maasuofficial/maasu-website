@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Alumni from './';
+import Upcoming from './';
 
 describe('render', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Alumni />, div);
+    ReactDOM.render(<Upcoming />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 

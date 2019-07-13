@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Alumni from './';
+import Host from './';
 
 describe('render', () => {
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Alumni />, div);
+    ReactDOM.render(<Host />, div);
     ReactDOM.unmountComponentAtNode(div);
   })
 

@@ -1,21 +1,14 @@
-import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import React from 'react';
 import { Page } from '../../components';
 
-class Contact extends Component {
+class Contact extends React.Component {
   render() {
     return (
       <Page>
-                
+        contact                
       </Page>
     );
   }
 }
-
-// Contact.propTypes = {
-// }
-
-// Contact.defaultProps = {
-// }
 
 export default Contact;

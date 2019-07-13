@@ -1,14 +1,14 @@
 import React from 'react';
 import { Page } from '../../components';
 
-class Mission extends React.Component {
+class Host extends React.Component {
   render() {
     return (
       <Page>
-          purpose and mission
+        host a conference
       </Page>
     );
   }
 }
 
-export default Mission;
+export default Host;

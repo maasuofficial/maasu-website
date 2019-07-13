@@ -12,22 +12,22 @@ export default {
       main: '#222',
       dark: '#000',
     },
-    primary: {
-      light: '#FE823C',
-      main: '#F35C07',
-      dark: '#BE4500',
+    primary: { // orange
+      light: '#ffb051',
+      main: '#ea801f',
+      dark: '#b25200',
+      contrastText: '#000',
+    },
+    secondary: { // green
+      light: '#61e2a7',
+      main: '#20af78',
+      dark: '#007e4c',
       contrastText: '#fbfbfb',
     },
-    secondary: {
-      light: '#28A683',
-      main: '#059F74',
-      dark: '#007D5A',
-      contrastText: '#fbfbfb',
-    },
-    error: {
-      light: '#F52419',
-      main: '#c90a02',
-      dark: '#A40800',
+    tertiary: { // red
+      light: '#ff5e53',
+      main: '#d12329',
+      dark: '#980000',
       contrastText: '#fbfbfb',
     },
   },

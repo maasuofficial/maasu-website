@@ -1,14 +1,14 @@
 import React from 'react';
 import { Page } from '../../components';
 
-class Mission extends React.Component {
+class PastConf extends React.Component {
   render() {
     return (
       <Page>
-          purpose and mission
+        past conferences
       </Page>
     );
   }
 }
 
-export default Mission;
+export default PastConf;
