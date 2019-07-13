@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Alumni from '../';
+import Conferences from './';
 
-describe('alumni component', () => {
+describe('conferences component', () => {
 
   describe('render', () => {
 
     it('renders without crashing', () => {
       const div = document.createElement('div');
-      ReactDOM.render(<Alumni />, div);
+      ReactDOM.render(<Conferences />, div);
       ReactDOM.unmountComponentAtNode(div);
     })
   

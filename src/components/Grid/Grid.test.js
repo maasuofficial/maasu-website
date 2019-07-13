@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
-import Grid from '../';
+import Grid from '.';
 
 afterEach(cleanup);
 

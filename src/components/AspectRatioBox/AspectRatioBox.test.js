@@ -1,7 +1,7 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
 import 'jest-dom/extend-expect';
-import ARBox from '../';
+import ARBox from './';
 
 afterEach(cleanup);
 

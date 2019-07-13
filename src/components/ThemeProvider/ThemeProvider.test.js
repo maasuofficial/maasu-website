@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
-import ThemeProvider from '../';
+import ThemeProvider from './';
 
 afterEach(cleanup);
 

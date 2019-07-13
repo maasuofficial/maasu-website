@@ -1,6 +1,6 @@
 import React from 'react';
 import { cleanup, render } from '@testing-library/react';
-import Cell from '../Cell';
+import Cell from './Cell';
 
 afterEach(cleanup);
 
