@@ -18,6 +18,7 @@ import {
   Report,
   StaticFooter,
   Upcoming,
+  WhereAreYouFrom,
 } from './site';
 import { BrowserRouter, Route } from 'react-router-dom';
 
@@ -39,16 +40,17 @@ class App extends Component {
           <Route path='/host' component={Host} />
 
           <Route path='/maasux' component={MaasuX} />
+          <Route path='/whereareyoufrom' component={WhereAreYouFrom} />
 
           <Route path='/awards' component={Awards} />
-          <Route path='/apia-orgs' component={ApiaOrgs} />
+          <Route path='/apiaorgs' component={ApiaOrgs} />
 
           <Route path='/alumni' component={Alumni} />
 
           <Route path='/newsletter' component={NewsLetter} />
           <Route path='/report' component={Report} />
-          <Route path='/past-conf' component={PastConf} />
-          <Route path='/past-awards' component={PastAwards} />
+          <Route path='/pastconferences' component={PastConf} />
+          <Route path='/pastawards' component={PastAwards} />
 
           <Route path='/contact' component={Contact} />
 

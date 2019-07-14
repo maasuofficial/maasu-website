@@ -16,6 +16,7 @@ import PastConf from './PastConf';
 import Report from './Report';
 import StaticFooter from './StaticFooter';
 import Upcoming from './Upcoming';
+import WhereAreYouFrom from './WhereAreYouFrom';
 
 export {
   Alumni,
@@ -36,4 +37,5 @@ export {
   Report,
   StaticFooter,
   Upcoming,
+  WhereAreYouFrom,
 }

@@ -32,13 +32,14 @@ class Menu extends React.Component {
             <li>Programs
               <ul>
                 <ListLink to='/maasux' name='MAASUx' />
+                <ListLink to='/whereareyoufrom' name='#WhereAreYouFrom' />
               </ul>
             </li>
 
             <li>Resources
               <ul>
                 <ListLink to='/awards' name='Awards and Scholarships' />
-                <ListLink to='/apia-orgs' name='APIA Organizations' />
+                <ListLink to='/apiaorgs' name='APIA Organizations' />
               </ul>
             </li>
 
@@ -48,8 +49,8 @@ class Menu extends React.Component {
               <ul>
                 <ListLink to='/newsletter' name='Newsletter' />
                 <ListLink to='/report' name='Annual Report' />
-                <ListLink to='/past-conf' name='Past Conferences' />
-                <ListLink to='/past-awards' name='Past Award Recipients' />
+                <ListLink to='/pastconferences' name='Past Conferences' />
+                <ListLink to='/pastawards' name='Past Award Recipients' />
               </ul>
             </li>
 

@@ -9,7 +9,11 @@ class Upcoming extends React.Component {
   render() {
     return (
       <Page>
-        TODO upcoming ls and sc
+        2019 Leadership Summit (LS)
+        Hosted by Wichita State University in Wichita, Kansas
+
+        2019 Spring Conference (SC)
+        Hosted by University of Minnesota - Twin Cities in Minneapolis, Minnesota
       </Page>
     );
   }
