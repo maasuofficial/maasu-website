@@ -10,33 +10,38 @@ class Menu extends React.Component {
         <nav>
           {/* TODO logo */}
 
+          {/* TODO WCAG 2.0 standards */}
           <ul>
             <ListLink to='/' name='Home' />
 
-            <li>About Us
+            <li>
+              <span>About Us</span>
               <ul>
                 <ListLink to='/mission' name='Our Mission' />
                 <ListLink to='/board' name='Executive Board' />
                 <ListLink to='/members' name='Member Schools' />
-                <ListLink to='/history' name='History' />
+                <ListLink to='/history' name='Our History' />
               </ul>
             </li>
 
-            <li>Conferences
+            <li>
+              <span>Conferences</span>
               <ul>
                 <ListLink to='/upcoming' name='Upcoming' />
                 <ListLink to='/host' name='Host a Conference' />
               </ul>
             </li>
 
-            <li>Programs
+            <li>
+              <span>Programs</span>
               <ul>
                 <ListLink to='/maasux' name='MAASUx' />
                 <ListLink to='/whereareyoufrom' name='#WhereAreYouFrom' />
               </ul>
             </li>
 
-            <li>Resources
+            <li>
+              <span>Resources</span>
               <ul>
                 <ListLink to='/awards' name='Awards and Scholarships' />
                 <ListLink to='/apiaorgs' name='APIA Organizations' />
@@ -45,7 +50,8 @@ class Menu extends React.Component {
 
             <ListLink to='/alumni' name='Alumni' />
 
-            <li>Archives
+            <li>
+              <span>Archives</span>
               <ul>
                 <ListLink to='/newsletter' name='Newsletter' />
                 <ListLink to='/report' name='Annual Report' />
@@ -68,7 +74,7 @@ const ListLink = (props) => {
   return (
     <li>
       <NavLink exact to={props.to}>
-        {props.name}
+        <span>{props.name}</span>
       </NavLink>
     </li>
   );

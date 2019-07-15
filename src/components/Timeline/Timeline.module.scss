@@ -1,0 +1,42 @@
+$stringWidth: 3px;
+$stringColor: var(--palette-secondary-dark);
+
+.container {
+  padding: 0 var(--spacing);
+}
+
+.timeContainer {
+  position: relative;
+  display: flex;
+
+  // left
+  flex-direction: row;
+}
+
+// right
+.timeContainer:nth-child(2n) { 
+  flex-direction: row-reverse;
+}
+
+.timeContainer:not(:first-child)::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: $stringWidth;
+  background-color: $stringColor;
+}
+
+.labelContainer {
+  position: relative;
+}
+
+.labelContainer::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: $stringWidth;
+  height: 100%;
+  background-color: $stringColor;
+
+  transform: translateX(-50%);
+}

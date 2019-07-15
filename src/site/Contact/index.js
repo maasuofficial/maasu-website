@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page } from '../../components';
+import { Page, Type } from '../../components';
 
 class Contact extends React.Component {
   componentDidMount() {
@@ -9,7 +9,16 @@ class Contact extends React.Component {
   render() {
     return (
       <Page>
-        contact                
+        <Type variant='sub2'>Contact Us</Type>
+        <Type variant='sub6'>Contact us! We'd love to get in touch.</Type>
+        <form>
+          <input type='text' />
+          <input type='text' />
+          <textarea>
+
+          </textarea>
+          <button type='submit'>Send</button>
+        </form>
       </Page>
     );
   }
