@@ -34,7 +34,7 @@ export default {
   typography: {
     fontFamily: {
       primary: [
-        'nevis',
+        'hind',
         'Roboto',
         'arial',
         'sans-serif',

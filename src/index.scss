@@ -1,14 +1,12 @@
-@import 'src/util';
-
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }  
 
 @font-face {
-    font-family: 'nevis';
-    src: url('/fonts/nevis/nevis-webfont.woff2') format('woff2'),
-         url('/fonts/nevis/nevis-webfont.woff') format('woff');
+    font-family: 'hind';
+    src: url('/fonts/hind-bold-modified/hind-bold-modified-webfont.woff2') format('woff2'),
+         url('/fonts/hind-bold-modified/hind-bold-modified.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,43 +41,6 @@ body {
     position: relative;
     height: 100%;
     min-height: 100%;
-
-    padding: 0 var(--spacing);
     
     text-align: center;
-
-    background: linear-gradient(0deg, var(--palette-primary-main), #fbfbfb, #fbfbfb);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 18s ease infinite;
-    -moz-animation: AnimationName 18s ease infinite;
-    -o-animation: AnimationName 18s ease infinite;
-    animation: AnimationName 18s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@-o-keyframes AnimationName {
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-@keyframes AnimationName { 
-    0%{background-position:51% 0%}
-    50%{background-position:50% 100%}
-    100%{background-position:51% 0%}
-}
-
-@media #{$sm-down} {
-    .app {
-        padding: 0 calc(var(--spacing) / 2);
-    }
 }
