@@ -33,13 +33,13 @@ export default {
   },
   typography: {
     fontFamily: {
-      // TODO font families
       primary: [
-        'nevis',
+        'hindi',
         'Roboto',
         'arial',
         'sans-serif',
       ].join(','),
+      // TODO secondary font family
       secondary: [
         '-apple-system',
         'BlinkMacSystemFont',

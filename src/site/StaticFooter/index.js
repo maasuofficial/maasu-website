@@ -5,6 +5,8 @@ class StaticFooter extends React.Component {
     return (
       <footer>
         footer
+
+        {/* TODO credit craig for all his hard work */}
       </footer>
     );
   }

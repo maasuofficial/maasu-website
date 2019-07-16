@@ -47,66 +47,89 @@ class History extends React.Component {
             </TDesc>
           </Time>
           <Time label={1991}>
-            <TTitle>MAASU Conference</TTitle>
+            <TTitle>Spring Conference</TTitle>
             <TSub>April | University of Michigan, Ann Arbor, MI</TSub>
             <TDesc>
               ECC meets to discuss plans for the upcoming year. 
             </TDesc>
-            <TTitle>MAASU ECC Retreat</TTitle>
+            <TTitle>ECC Retreat</TTitle>
             <TSub>September | University of Illinoise at Urbana-Champaign</TSub>
             <TDesc>
               During this retreat, a Constitution is established.
             </TDesc>
-            <TTitle>MAASU Leadership Retreat</TTitle>
+            <TTitle>Leadership Retreat</TTitle>
             <TSub>October | Purdue University, West Lafayette, IN</TSub>
             <TDesc>
               During the first-ever LR, the first roll call is completed. 11 schools attended.
             </TDesc>
           </Time>
+          <Time label={1992}>
+            <TTitle>MAASU granted tax-exempt status</TTitle>
+            <TSub>April</TSub>
+            <TDesc>MAASU is granted conditional tax-exempt status. Papers are filed with the IRS in Cincinnati, OH.</TDesc>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April | University of Illinoise at Urbana-Champaign</TSub>
+            <TDesc>
+              This is the first conference that MAASU had equal partnership in creating an agenda for the conference.
+              The ECC met with the Asian American Association of UIUC in January to plan for the event. The first
+              election and transition of the ECC and Director occurs.
+            </TDesc>
+            <TTitle>Board of Advisors Meeting</TTitle>
+            <TSub>October | Chicago, IL</TSub>
+            <TDesc>
+              Five board members, the Directors, and the ECC Chair attend the first BOA meeting.
+            </TDesc>
+          </Time>
+          <Time label={1993}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April | The Ohio State University, Columbus, OH</TSub>
+            <TDesc>The 2nd generation of ECC is elected</TDesc>
+            <TTitle>MAASU Leadership Retreat</TTitle>
+            <TSub>October 29-31 | Northern Illinois University, DeKalb, IL</TSub>
+          </Time>
+          <Time label={1994}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 8-10 | University of Michigan, Ann Arbor, MI</TSub>
+            <TDesc>The 3rd generation of ECC is elected </TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>October 28-30 | Northwestern University, Evanston, IL</TSub>
+          </Time>
+          <Time label={1995}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>March 23-25 | University of Illinois at Urbana-Champaign</TSub>
+            <TDesc>The 4th generation of ECC is elected</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>Novermber 17-19 | Notre Dame, South Bend, IN</TSub>
+          </Time>
+          <Time label={1996}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 4-7 | Indiana University, Bloomington, IN</TSub>
+            <TDesc>The 5th generation fo ECC is elected</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 8-10 | Washington University, St. Louis, MO</TSub>
+          </Time>
+          <Time label={1997}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 10-13 | Northwestern University, Evanston, IL</TSub>
+            <TDesc>The 6th generation of ECC is elected</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>October 31 | The Ohio State University, Columbus, OH</TSub>
+          </Time>
+          <Time label={1998}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 2-5 | University of Michigan, Ann Arbor, MI</TSub>
+            <TDesc>The 7th generation of ECC is elected</TDesc>
+          </Time>
+          <Time label={1999}>
+            
+          </Time>
         </Timeline>
+ 
 
-        {/*
-        <Time label={}>
-          <TTitle>
-          </TTitle>
-          <TSub>
-          </TSub>
-          <TDesc>
-          </TDesc>
-        </Time>
-        */} 
- 
-MAASU granted tax-exempt status | April 1992  
-MAASU is granted conditional tax-exempt status. Papers are filed with the IRS in Cincinnati, OH.  
- 
-MAASU Conference | April 1992 | University of Illinois at Urbana-Champaign  
-This is the first conference that MAASU had equal partnership in creating an agenda for the conference. The ECC met with the Asian American Association of UIUC in January to plan for the event. The first election and transition of the ECC and Director occurs.  
- 
-MAASU Board of Advisors Meeting | October 1992 | Chicago, IL  
-Five board members, the Directors, and the ECC Chair attend the first BOA meeting   
-
-MAASU Conference | April 1993 | The Ohio State University, Columbus, OH  
- 
-The 2nd generation of ECC is elected  
-MAASU Leadership Retreat | October 29-31, 1993 | Northern Illinois University, DeKalb, IL  MAASU Spring Conference | April 8-10, 1994 | University of Michigan, Ann Arbor, MI  
- 
-The 3rd generation of ECC is elected 
-MAASU Leadership Retreat | October 28-30, 1994 | Northwestern University, Evanston, IL  
-MAASU Spring Conference | March 23-25, 1995 | University of Illinois at Urbana-Champaign  
- 
-The 4th generation of ECC is elected 
-MAASU Leadership Retreat | November 17-19, 1995 | Notre Dame, South Bend, IN  MAASU Spring Conference | April 4-7, 1996 | Indiana University, Bloomington, IN  
- 
-The 5th generation of ECC is elected 
-MAASU Leadership Retreat | November 8-10, 1996 | Washington University, St. Louis, MO  MAASU Spring Conference | April 10-13, 1997 | Northwestern University, Evanston, IL  
- 
-The 6th generation of ECC is elected 
-MAASU Leadership Retreat | October 31 1997 | The Ohio State University, Columbus, OH  MAASU Spring Conference | April 2-5, 1996 | University of Michigan, Ann Arbor, MI  
- 
-The 7th generation of ECC is elected 
 MAASU Organizational Meeting | April 10, 1999 | The Ohio State University, Columbus, OH  
  
 The 8th generation of ECC is elected 
+
 MAASU Spring Conference | April 6-8, 2000 | University of Minnesota-Twin Cities  
  
 The 9th generation of ECC is elected 

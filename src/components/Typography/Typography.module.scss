@@ -27,7 +27,10 @@ h6, .sub6 {
 }
 
 .subtitle {
+    font-family: var(--typography-fontFamily-primary);
     margin-top: 0;
+
+    font-weight: 400;
 }
 
 em, .styled {
