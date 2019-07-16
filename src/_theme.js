@@ -12,22 +12,22 @@ export default {
       main: '#222',
       dark: '#000',
     },
-    primary: {
+    primary: { // red
+      light: '#ff5e53',
+      main: '#d12329',
+      dark: '#980000',
+      contrastText: '#fbfbfb',
+    },
+    secondary: { // orange
       light: '#ffb051',
       main: '#ea801f',
       dark: '#b25200',
       contrastText: '#000',
     },
-    secondary: {
+    tertiary: { // green
       light: '#61e2a7',
       main: '#20af78',
       dark: '#007e4c',
-      contrastText: '#fbfbfb',
-    },
-    tertiary: {
-      light: '#ff5e53',
-      main: '#d12329',
-      dark: '#980000',
       contrastText: '#fbfbfb',
     },
   },

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Cell, Grid, Page, Type } from './components';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import './App.scss';
 
@@ -9,8 +9,10 @@ class App extends Component {
     return (
       <div className='app'>
         <BrowserRouter>
-          <Route exact path='/' component={Construction} />
-          <Route path='/payment' component={Payment} />            
+          <Switch>
+            <Route path='/payment' component={Payment} />            
+            <Route path='/' component={Construction} />
+          </Switch>
         </BrowserRouter>
       </div>
     );
