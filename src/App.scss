@@ -5,10 +5,6 @@
   padding: 1.2em 0 0.5em 0;
 
   span {
-    // color: var(--palette-background-main);
-    // background-color: var(--palette-primary-main);
-    // background-color: var(--palette-background-main);
-    // color: var(--palette-primary-main);
     color: var(--palette-foreground-main);
     font-size: 1.5em;
 
@@ -50,7 +46,6 @@ header {
 .construction {
   padding: 0 var(--spacing);
 
-  // background: linear-gradient(0deg, var(--palette-secondary-main), #fbfbfb, #fbfbfb);
   background: linear-gradient(0deg, var(--palette-primary-light), #fbfbfb, #fbfbfb);
   background-size: 600% 600%;
 
@@ -102,6 +97,15 @@ header {
   background-color: var(--palette-background-main);
 
   transform: translateX(-50%) translateY(-50%);
+}
+
+@media #{$sm-down} {
+  .payment .title {
+    font-size: 2em;
+  }
+  .paymentInner {
+    padding-top: 2.5em;
+  }
 }
 
 table {
