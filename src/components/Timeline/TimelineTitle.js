@@ -1,11 +1,10 @@
 import React from 'react';
+import { Type } from '../';
 
 class TimelineTitle extends React.Component {
   render() {
     return (
-      <h4>
-        {this.props.children}
-      </h4>
+      <Type variant='h4'>{this.props.children}</Type>
     );
   }
 }

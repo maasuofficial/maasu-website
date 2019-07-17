@@ -83,134 +83,195 @@ class History extends React.Component {
           <Time label={1993}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April | The Ohio State University, Columbus, OH</TSub>
-            <TDesc>The 2nd generation of ECC is elected</TDesc>
+            <TDesc>The 2nd generation of ECC is elected.</TDesc>
             <TTitle>MAASU Leadership Retreat</TTitle>
             <TSub>October 29-31 | Northern Illinois University, DeKalb, IL</TSub>
           </Time>
           <Time label={1994}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April 8-10 | University of Michigan, Ann Arbor, MI</TSub>
-            <TDesc>The 3rd generation of ECC is elected </TDesc>
+            <TDesc>The 3rd generation of ECC is elected.</TDesc>
             <TTitle>Leadership Retreat</TTitle>
             <TSub>October 28-30 | Northwestern University, Evanston, IL</TSub>
           </Time>
           <Time label={1995}>
             <TTitle>Spring Conference</TTitle>
             <TSub>March 23-25 | University of Illinois at Urbana-Champaign</TSub>
-            <TDesc>The 4th generation of ECC is elected</TDesc>
+            <TDesc>The 4th generation of ECC is elected.</TDesc>
             <TTitle>Leadership Retreat</TTitle>
             <TSub>Novermber 17-19 | Notre Dame, South Bend, IN</TSub>
           </Time>
           <Time label={1996}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April 4-7 | Indiana University, Bloomington, IN</TSub>
-            <TDesc>The 5th generation fo ECC is elected</TDesc>
+            <TDesc>The 5th generation fo ECC is elected.</TDesc>
             <TTitle>Leadership Retreat</TTitle>
             <TSub>November 8-10 | Washington University, St. Louis, MO</TSub>
           </Time>
           <Time label={1997}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April 10-13 | Northwestern University, Evanston, IL</TSub>
-            <TDesc>The 6th generation of ECC is elected</TDesc>
+            <TDesc>The 6th generation of ECC is elected.</TDesc>
             <TTitle>Leadership Retreat</TTitle>
             <TSub>October 31 | The Ohio State University, Columbus, OH</TSub>
           </Time>
           <Time label={1998}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April 2-5 | University of Michigan, Ann Arbor, MI</TSub>
-            <TDesc>The 7th generation of ECC is elected</TDesc>
+            <TDesc>The 7th generation of ECC is elected.</TDesc>
           </Time>
           <Time label={1999}>
-            
+            <TTitle>Organizational Meeting</TTitle>
+            <TSub>April 10 | The Ohio State University, Columbus, OH</TSub>
+            <TDesc>The 8th generation fo ECC is elected.</TDesc>
+          </Time>
+          <Time label={2000}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 6-8 | University of Minnesota-Twin Cities</TSub>
+            <TDesc>The 9th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>October 20-22 | Grand Valley State University, Allendale, MI</TSub>
+          </Time>
+          <Time label={2001}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>March 22-25 | University of Michigan, Ann Arbor, MI</TSub>
+            <TDesc>The 10th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>October 10-19 | Loyola University, Chicago, IL</TSub>
+          </Time>
+          <Time label={2002}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>February 15-17 | University of Illinois, Urbana-Champaign, IL</TSub>
+            <TDesc>The 11th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>Novermber 8-10 | Ball State University, Muncie, IN</TSub>
+          </Time>
+          <Time label={2003}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 3-6 | Indiana University, Bloomington, IN</TSub>
+            <TDesc>The 12th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 7-9 | Northern Illinois University, DeKalb, IL</TSub>
+          </Time>
+          <Time label={2004}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 1-3 | University of Wisconsin, Madison, WI</TSub>
+            <TDesc>The 13th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 5-6 | University of Missouri, Colombia, MO</TSub>
+          </Time>
+          <Time label={2005}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 1-3 | Universiy of Michigan, Ann Arbor, MI</TSub>
+            <TDesc>The 14th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 4-5 | Michigan State University, East Lansing, MI</TSub>
+          </Time>
+          <Time label={2006}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 1-3 | The Ohio State University, Columbus, OH</TSub>
+            <TDesc>The 15th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 10-12 | Eastern Illinois University, Charleston, IL</TSub>
+          </Time>
+          <Time label={2007}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>March 9-11 | University of Illinois, Urbana-Champaign, IL</TSub>
+            <TDesc>The 16th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 2-4 | Denison University, Granville, OH</TSub>
+          </Time>
+          <Time label={2008}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>March 28-30 | University of Kansas, Lawrence, KS</TSub>
+            <TDesc>The 17th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 14-16 | University if Missouri, Colombia, MO</TSub>
+          </Time>
+          <Time label={2009}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 3-5 | University of Michigan, Ann Arbor, MI</TSub>
+            <TDesc>The 18th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 6-7 | University of Wisconsin, Whitewater, WI</TSub>
+          </Time>
+          <Time label={2010}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 9-10 | The Ohio State University, Columbus, OH</TSub>
+            <TDesc>The 19th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>October 29-30 | Augsburg College, Minneapolis, MN</TSub>
+          </Time>
+          <Time label={2011}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 8-9 | University of Minnesota-Twin Cities, MN</TSub>
+            <TDesc>The 20th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>November 4-5 | University of Illinois, Chicago, IL</TSub>
+          </Time>
+          <Time label={2012}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 6-7 | University of Illinois, Urbana-Champaign, IL</TSub>
+            <TDesc>The 21st generation of ECC is elected.</TDesc>
+          </Time>
+          <Time label={2013}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 5-6 | University of Michigan, Ann Arbor, MI</TSub>
+            <TDesc>The 22nd generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat</TTitle>
+            <TSub>October 25-26 | Miami University, Oxford, OH</TSub>
+          </Time>
+          <Time label={2014}>
+            <TTitle>Spring Conference <i>"Reimagine"</i></TTitle>
+            <TSub>March 28-29 | The Ohio State University, Columbus, OH</TSub>
+            <TDesc>The 23rd generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Retreat <i>“Sail to New Horizons: Discover, Explore, Dream”</i></TTitle>
+            <TSub>November 14-15 | University of Missouri, Columbia, MO</TSub>
+          </Time>
+          <Time label={2015}>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>April 10-11 | University of Wisconsin, Madison, WI</TSub>
+            <TDesc>The 24th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Summit <i>“Footsteps: What's Your Imprint”</i></TTitle>
+            <TSub>November 20-21 | Purdue University, West Lafayette, IN</TSub>
+          </Time>
+          <Time label={2016}>
+            <TTitle>Spring Conference <i>"Generation A"</i></TTitle>
+            <TSub>April 15-16 | University of Minnesota-Twin Cities, MN</TSub>
+            <TDesc>The 25th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Summit <i>“Journey to the Center”</i></TTitle>
+            <TSub>November 11-16 | Northwestern University, Evanston, IL</TSub>
+          </Time>
+          <Time label={2017}>
+            <TTitle>Spring Conference <i>“#UnitedWeStand"</i></TTitle>
+            <TSub>April 7-8 | University of Michigan, MI</TSub>
+            <TDesc>The 26th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Summit <i>“Timeless”</i></TTitle>
+            <TSub>October 27-28 | University of Missouri, Columbia, MO</TSub>
+          </Time>
+          <Time label={2018}>
+            <TTitle>MAASU is incorporated in the state of Illinois</TTitle>
+            <TSub>April</TSub>
+            <TDesc>Articles of incorporation are submitted and approved in 2018.</TDesc>
+            <TTitle>Spring Conference <i>“Overcome"</i></TTitle>
+            <TSub>April 23-24 | The Ohio State University, Columbus, OH</TSub>
+            <TDesc>The 27th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Summit <i>"Impact"</i></TTitle>
+            <TSub>November 16-17 | Michigan State University, East Lansing, MI</TSub>
+          </Time>
+          <Time label={2019}>
+            <TTitle>MAASU granted federal tax-exempt status</TTitle>
+            <TSub>January</TSub>
+            <TDesc>MAASU is granted federal 501c3 tax-exempt status.</TDesc>
+            <TTitle>Spring Conference <i>"Be Bolder"</i></TTitle>
+            <TSub>March 8-9 | University of Colorado - Boulder, Boulder, CO</TSub>
+            <TDesc>The 28th generation of ECC is elected.</TDesc>
+            <TTitle>Leadership Summit</TTitle>
+            <TSub>TBD | Wichita State University, Wichita, KS</TSub>
+            <TTitle>Spring Conference</TTitle>
+            <TSub>TBD | University of Minnesota-Twin Cities, MN</TSub>
           </Time>
         </Timeline>
- 
-
-MAASU Organizational Meeting | April 10, 1999 | The Ohio State University, Columbus, OH  
- 
-The 8th generation of ECC is elected 
-
-MAASU Spring Conference | April 6-8, 2000 | University of Minnesota-Twin Cities  
- 
-The 9th generation of ECC is elected 
-MAASU Leadership Retreat | October 20-22, 2000 | Grand Valley State University, Allendale, MI  MAASU Spring Conference | March 22-25, 2001 | University of Michigan, Ann Arbor, MI  
- 
-The 10th generation of ECC is elected  
-MAASU Leadership Retreat | October 10-19, 2001 | Loyola University, Chicago, IL  
-MAASU Spring Conference | February 15-17, 2002 | University of Illinois, Urbana-Champaign, IL  
- 
-The 11th generation of ECC is elected  
-MAASU Leadership Retreat | November 8-10, 2002 | Ball State University, Muncie, Indiana  MAASU Spring Conference | April 3-6, 2003 | Indiana University, Bloomington, IN 15  
- 
-The 12th generation of ECC is elected  
-MAASU Leadership Retreat | November 7-9, 2003 | Northern Illinois University, DeKalb, IL  MAASU Spring Conference | April 1-3, 2004 | University of Wisconsin, Madison, WI  
- 
-The 13th generation of ECC is elected  
-MAASU Leadership Retreat | November 5-6, 2004 | University of Missouri, Columbia, MO  MAASU Spring Conference | April 1-3, 2005 | University of Michigan, Ann Arbor, MI  
- 
-The 14th generation of ECC is elected  
-MAASU Leadership Retreat | November 4-5, 2005 | Michigan State University, East Lansing, MI  MAASU Spring Conference | April 1-3, 2006 | The Ohio State University, Columbus, OH  
- 
-The 15th generation of ECC is elected  
-MAASU Leadership Retreat | November 10-12, 2006 | Eastern Illinois University, Charleston, IL  MAASU Spring Conference | March 9-11, 2007 | University of Illinois, Urbana-Champaign, IL  
- 
-The 16th generation of ECC is elected  
-MAASU Leadership Retreat | November 2-4, 2007 | Denison University, Granville, OH  
-MAASU Spring Conference | March 28-30, 2008| University of Kansas, Lawrence, KS  
- 
-The 17th generation of ECC is elected  
-MAASU Leadership Retreat | November 14-16, 2008 | University of Missouri, Columbia, MO  
-MAASU Spring Conference | April 3-5, 2009 |University of Michigan, Ann Arbor, MI  
- 
-The 18th generation of ECC is elected  
-MAASU Leadership Retreat | November 6-7, 2009 | University of Wisconsin, Whitewater, WI  
-MAASU Spring Conference | April 9-10, 2010 | Ohio State University, Columbus, OH  
- 
-The 19th generation of ECC is elected  
-MAASU Leadership Retreat | October 29-30, 2010 | Augsburg College, Minneapolis MN  
-MAASU Spring Conference | April 8-9, 2011 | University of Minnesota-Twin Cities, MN 
- 
-The 20th generation of ECC is elected  
-MAASU Leadership Retreat | November 4-5, 2011 | University of Illinois, Chicago, IL  
-MAASU Spring Conference | April 6-7, 2012 | University of Illinois, Urbana-Champaign, IL  
- 
-The 21st generation of ECC is elected  
-MAASU Spring Conference | April 5-6, 2013 | University of Michigan, Ann Arbor, MI 
- 
-The 22nd generation of ECC is elected 
-MAASU Leadership Retreat l October 25-26, 2013 l Miami University, Oxford, OH 
-MAASU Spring Conference “Reimagine” l March 28-29, 2014 l The Ohio State University, Columbus, OH 
- 
-The 23rd generation of ECC is elected 
-MAASU Leadership Retreat “Sail to New Horizons: Discover, Explore, Dream” l November 14-15, 2014 l University of Missouri, Columbia, MO 
-MAASU Spring Conference l April 10-11, 2015 l University of Wisconsin, Madison, WI 
-
-The 24th generation of ECC is elected 
-MAASU Leadership Summit “Footsteps: What’s Your Imprint” l November 20-21, 2015 l Purdue University, West Lafayette, IN 
-MAASU Spring Conference “Generation A” l April 15-16, 2016 l University of Minnesota-Twin Cities, MN
-
-The 25th generation of ECC is elected (2016-2017) 
-MAASU Leadership Summit “Journey to the Center” l November 11-16, 2016 l Northwestern University, Evanston, IL
-MAASU Spring Conference “#UnitedWeStand" l April 7-8, 2017 l University of Michigan, MI
-
-The 26th generation of ECC is elected (2017-2018) 
-MAASU Leadership Summit “Timeless” l October 27-28, 2017 l University of Missouri, Columbia, MO
-MAASU Spring Conference “Overcome” l April 23-24, 2018 l The Ohio State University, Columbus, OH
-
-The 27th generation of ECC is elected (2018-2019) 
-MAASU Leadership Summit “Impact” l November 16-17, 2018 l Michigan State University, East Lansing, MI
-MAASU Spring Conference “Be Bolder” l March 8-9, 2019 l University of Colorado - Boulder, Boulder, CO
-
-MAASU is incorporated in the state of Illinois| April 2018
-Articles of incorporation are submitted and approved in 2018. 
-
-MAASU granted federal tax-exempt status | January 2019 
-MAASU is granted federal 501c3 tax-exempt status. 
-
-The 28th generation of ECC is elected (2019-2020) 
-MAASU Leadership Summit l Date TBD l Wichita State University, Wichita, KS
-MAASU Spring Conference l Date TBD l University of Minnesota-Twin Cities, MN
-
       </Page>
     );
   }

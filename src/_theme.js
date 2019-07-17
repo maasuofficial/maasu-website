@@ -12,11 +12,11 @@ export default {
       main: '#222',
       dark: '#000',
     },
-    primary: { // orange
-      light: '#ffb051',
-      main: '#ea801f',
-      dark: '#b25200',
-      contrastText: '#000',
+    primary: { // red
+      light: '#ff5e53',
+      main: '#d12329',
+      dark: '#980000',
+      contrastText: '#fbfbfb',
     },
     secondary: { // green
       light: '#61e2a7',
@@ -24,11 +24,11 @@ export default {
       dark: '#007e4c',
       contrastText: '#fbfbfb',
     },
-    tertiary: { // red
-      light: '#ff5e53',
-      main: '#d12329',
-      dark: '#980000',
-      contrastText: '#fbfbfb',
+    tertiary: { // orange
+      light: '#ffb051',
+      main: '#ea801f',
+      dark: '#b25200',
+      contrastText: '#000',
     },
   },
   typography: {

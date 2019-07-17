@@ -1,8 +1,22 @@
-$stringWidth: 3px;
-$stringColor: var(--palette-secondary-dark);
+@import 'src/util';
+
+$stringWidth: 5px;
+$stringColor: var(--palette-primary-main);
 
 .container {
-  padding: 0 var(--spacing);
+  padding: 0 calc(var(--spacing));
+}
+
+@media #{$lg-up} {
+  .container {
+    padding: 0 calc(var(--spacing) * 2);
+  }  
+}
+
+@media #{$sm-down} {
+  .container {
+    padding: 0 calc(var(--spacing) / 2);
+  }
 }
 
 .timeContainer {
@@ -11,19 +25,24 @@ $stringColor: var(--palette-secondary-dark);
 
   // left
   flex-direction: row;
+  text-align: left;
 }
 
 // right
 .timeContainer:nth-child(2n) { 
   flex-direction: row-reverse;
+  text-align: right;
 }
 
 .timeContainer:not(:first-child)::after {
   content: '';
   position: absolute;
-  width: 100%;
+  left: 50%;
+  width: calc(100% + #{$stringWidth});
   height: $stringWidth;
   background-color: $stringColor;
+
+  transform: translate(-50%);
 }
 
 .labelContainer {
@@ -40,3 +59,44 @@ $stringColor: var(--palette-secondary-dark);
 
   transform: translateX(-50%);
 }
+
+.timeContainer:first-child .labelContainer::after {
+  top: 50%;
+  height: 50%;
+}
+
+.timeContainer:last-child .labelContainer::after {
+  height: 50%;
+}
+
+.labelContainer > div {
+  position: absolute;
+  top: 50%;
+  padding: calc(var(--spacing) / 8);
+
+  color: var(--palette-background-main);
+  background-color: $stringColor;
+  border-radius: 2px;
+
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  & > span {
+    position: relative;
+  }
+
+}
+
+.contentContainer {
+  padding: calc(var(--spacing) / 2) var(--spacing);
+
+  h4 {
+    margin: 0.5em 0;  
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+}
+

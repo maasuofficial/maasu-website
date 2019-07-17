@@ -8,9 +8,11 @@ class Time extends React.Component {
     return (
       <Cell className={`${modules.timeContainer}`}>
         <div className={`${modules.labelContainer}`}>
-          {this.props.label}
+          <div>
+            <span>{this.props.label}</span>
+          </div>
         </div>
-        <div>{this.props.children}</div>
+        <div className={`${modules.contentContainer}`}>{this.props.children}</div>
       </Cell>
     );
   }
