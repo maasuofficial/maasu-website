@@ -4,18 +4,71 @@ import './Menu.scss';
 import { NavLink } from 'react-router-dom'; 
 
 class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+
+    // this.handleMouseOver = this.handleMouseOver.bind(this);
+
+    this.timer = setTimeout(() => {});
+  }
+
+  // handleMouseOver(e) {
+  //   console.log(e);
+  //   this.classList.add('open');
+  //   this.setAttribute('aria-expanded', 'true');
+  //   clearTimeout(this.timer);
+  // }
+
+  componentDidMount() {
+    /*    
+    let timer;
+    let submenus = document.querySelectorAll('li.submenu');
+    
+    for (let submenu of submenus) {
+      submenu.addEventListener('mouseover', function (e) {
+        this.classList.add('open');
+        this.setAttribute('aria-expanded', 'true');
+        clearTimeout(timer);
+      })
+      submenu.addEventListener('mouseout', function (e) {
+        timer = setTimeout(() => {
+          this.classList.remove('open');
+          this.setAttribute('aria-expanded', 'false');
+        }, 1000);
+      })
+      submenu.addEventListener('blur', function (e) {
+        if (!this.contains(e.relatedTarget)) {
+          this.classList.remove('open');
+          this.setAttribute('aria-expanded', 'false');
+        }
+      }, true)
+      submenu.querySelector('a').addEventListener('click', function (e) {
+        if (!submenu.classList.contains('open')) {
+          submenu.classList.add('open');
+          this.setAttribute('aria-expanded', 'true');
+        } else {
+          submenu.classList.remove('open');
+          this.setAttribute('aria-expanded', 'false');  
+        }
+        e.preventDefault();
+        return false;
+      })
+    }
+    */
+  }
+
   render() {
     return (
       <header className='menu'>
-        <nav>
+        <nav aria-label='main menu'>
           {/* TODO logo */}
 
           {/* TODO WCAG 2.0 standards */}
           <ul>
             <ListLink to='/' name='Home' />
 
-            <li>
-              <span>About Us</span>
+            <li className='submenu'>
+              <button aria-haspopup='true' aria-expanded='false'><span>About Us</span></button>
               <ul>
                 <ListLink to='/mission' name='Our Mission' />
                 <ListLink to='/board' name='Executive Board' />
@@ -24,24 +77,24 @@ class Menu extends React.Component {
               </ul>
             </li>
 
-            <li>
-              <span>Conferences</span>
+            <li className='submenu'>
+              <button aria-haspopup='true' aria-expanded='false'><span>Conferences</span></button>
               <ul>
                 <ListLink to='/upcoming' name='Upcoming' />
                 <ListLink to='/host' name='Host a Conference' />
               </ul>
             </li>
 
-            <li>
-              <span>Programs</span>
+            <li className='submenu'>
+              <button aria-haspopup='true' aria-expanded='false'><span>Programs</span></button>
               <ul>
                 <ListLink to='/maasux' name='MAASUx' />
                 <ListLink to='/whereareyoufrom' name='#WhereAreYouFrom' />
               </ul>
             </li>
 
-            <li>
-              <span>Resources</span>
+            <li className='submenu'>
+              <button aria-haspopup='true' aria-expanded='false'><span>Resources</span></button>
               <ul>
                 <ListLink to='/awards' name='Awards and Scholarships' />
                 <ListLink to='/apiaorgs' name='APIA Organizations' />
@@ -50,8 +103,8 @@ class Menu extends React.Component {
 
             <ListLink to='/alumni' name='Alumni' />
 
-            <li>
-              <span>Archives</span>
+            <li className='submenu'>
+              <button aria-haspopup='true' aria-expanded='false'><span>Archives</span></button>
               <ul>
                 <ListLink to='/newsletter' name='Newsletter' />
                 <ListLink to='/report' name='Annual Report' />

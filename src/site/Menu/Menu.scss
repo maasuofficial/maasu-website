@@ -22,6 +22,19 @@ nav {
   padding: 0;
 }
 
+.menu button {
+  background-color: inherit;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+  font-family: inherit;
+  font-size: 100%;
+}
+
 .menu span {
   text-transform: uppercase;
 }
@@ -55,6 +68,10 @@ nav {
 
   // trigger
   &:hover ul {
+    display: block;
+  }
+
+  &.open ul {
     display: block;
   }
 }
