@@ -45,8 +45,6 @@ class History extends React.Component {
               MAASU held an informational session during which structure and officer positions were discussed.
               Elections were held and an interim ECC was elected.
             </TDesc>
-          </Time>
-          <Time label={1991}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April | University of Michigan, Ann Arbor, MI</TSub>
             <TDesc>

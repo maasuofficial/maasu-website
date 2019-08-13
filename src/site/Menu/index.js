@@ -1,141 +1,63 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import './Menu.scss';
 import { NavLink } from 'react-router-dom'; 
+import { Menu as MenuUtil } from 'react-utility-components';
+
+const { Link: LinkUtil, SubMenu } = MenuUtil;
 
 class Menu extends React.Component {
-  constructor(props) {
-    super(props);
-
-    // this.handleMouseOver = this.handleMouseOver.bind(this);
-
-    this.timer = setTimeout(() => {});
-  }
-
-  // handleMouseOver(e) {
-  //   console.log(e);
-  //   this.classList.add('open');
-  //   this.setAttribute('aria-expanded', 'true');
-  //   clearTimeout(this.timer);
-  // }
-
-  componentDidMount() {
-    /*    
-    let timer;
-    let submenus = document.querySelectorAll('li.submenu');
-    
-    for (let submenu of submenus) {
-      submenu.addEventListener('mouseover', function (e) {
-        this.classList.add('open');
-        this.setAttribute('aria-expanded', 'true');
-        clearTimeout(timer);
-      })
-      submenu.addEventListener('mouseout', function (e) {
-        timer = setTimeout(() => {
-          this.classList.remove('open');
-          this.setAttribute('aria-expanded', 'false');
-        }, 1000);
-      })
-      submenu.addEventListener('blur', function (e) {
-        if (!this.contains(e.relatedTarget)) {
-          this.classList.remove('open');
-          this.setAttribute('aria-expanded', 'false');
-        }
-      }, true)
-      submenu.querySelector('a').addEventListener('click', function (e) {
-        if (!submenu.classList.contains('open')) {
-          submenu.classList.add('open');
-          this.setAttribute('aria-expanded', 'true');
-        } else {
-          submenu.classList.remove('open');
-          this.setAttribute('aria-expanded', 'false');  
-        }
-        e.preventDefault();
-        return false;
-      })
-    }
-    */
-  }
-
   render() {
     return (
       <header className='menu'>
-        <nav aria-label='main menu'>
-          {/* TODO logo */}
+        <MenuUtil
+          dropdown
+          linkWrapper={(href, children) => <NavLink to={href}>{children}</NavLink>}
+        >
 
-          {/* TODO WCAG 2.0 standards */}
-          <ul>
-            <ListLink to='/' name='Home' />
+          <LinkUtil href='/'>Home</LinkUtil>
 
-            <li className='submenu'>
-              <button aria-haspopup='true' aria-expanded='false'><span>About Us</span></button>
-              <ul>
-                <ListLink to='/mission' name='Our Mission' />
-                <ListLink to='/board' name='Executive Board' />
-                <ListLink to='/members' name='Member Schools' />
-                <ListLink to='/history' name='Our History' />
-              </ul>
-            </li>
+          <SubMenu>
+            <LinkUtil>About Us</LinkUtil>
+            <LinkUtil href='/mission'>Our Mission</LinkUtil>
+            <LinkUtil href='/board'>Executive Board</LinkUtil>
+            <LinkUtil href='/members'>Member Schools</LinkUtil>
+            <LinkUtil href='/history'>Our History</LinkUtil>
+          </SubMenu>
 
-            <li className='submenu'>
-              <button aria-haspopup='true' aria-expanded='false'><span>Conferences</span></button>
-              <ul>
-                <ListLink to='/upcoming' name='Upcoming' />
-                <ListLink to='/host' name='Host a Conference' />
-              </ul>
-            </li>
+          <SubMenu>
+            <LinkUtil>Conferences</LinkUtil>
+            <LinkUtil href='/upcoming'>Upcoming</LinkUtil>
+            <LinkUtil href='/host'>Host a Conference</LinkUtil>
+          </SubMenu>
 
-            <li className='submenu'>
-              <button aria-haspopup='true' aria-expanded='false'><span>Programs</span></button>
-              <ul>
-                <ListLink to='/maasux' name='MAASUx' />
-                <ListLink to='/whereareyoufrom' name='#WhereAreYouFrom' />
-              </ul>
-            </li>
+          <SubMenu>
+            <LinkUtil>Programs</LinkUtil>
+            <LinkUtil href='/maasux'>MAASUx</LinkUtil>
+            <LinkUtil href='/whereareyoufrom'>#whereareyoufrom</LinkUtil>
+          </SubMenu>
 
-            <li className='submenu'>
-              <button aria-haspopup='true' aria-expanded='false'><span>Resources</span></button>
-              <ul>
-                <ListLink to='/awards' name='Awards and Scholarships' />
-                <ListLink to='/apiaorgs' name='APIA Organizations' />
-              </ul>
-            </li>
+          <SubMenu>
+            <LinkUtil>Resources</LinkUtil>
+            <LinkUtil href='/awards'>Awards and Scholarships</LinkUtil>
+            <LinkUtil href='/apiaorgs'>APIA Organizations</LinkUtil>
+          </SubMenu>
 
-            <ListLink to='/alumni' name='Alumni' />
+          <LinkUtil href='/alumni'>Alumni</LinkUtil>
 
-            <li className='submenu'>
-              <button aria-haspopup='true' aria-expanded='false'><span>Archives</span></button>
-              <ul>
-                <ListLink to='/newsletter' name='Newsletter' />
-                <ListLink to='/report' name='Annual Report' />
-                <ListLink to='/pastconferences' name='Past Conferences' />
-                <ListLink to='/pastawards' name='Past Award Recipients' />
-              </ul>
-            </li>
+          <SubMenu>
+            <LinkUtil>Archives</LinkUtil>
+            <LinkUtil href='/newsletter'>Newsletter</LinkUtil>
+            <LinkUtil href='/report'>Annual Report</LinkUtil>
+            <LinkUtil href='/pastconferences'>Past Conferences</LinkUtil>
+            <LinkUtil href='/pastawards'>Past Award Recipients</LinkUtil>
+          </SubMenu>
 
-            <ListLink to='/contact' name='Contact Us' />
+          <LinkUtil href='/contact'>Contact Us</LinkUtil>
 
-          </ul>
-
-        </nav>
+        </MenuUtil>
       </header>
     )
   }
-}
-
-const ListLink = (props) => {
-  return (
-    <li>
-      <NavLink exact to={props.to}>
-        <span>{props.name}</span>
-      </NavLink>
-    </li>
-  );
-}
-
-ListLink.propTypes = {
-  to: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
 }
 
 export default Menu;
