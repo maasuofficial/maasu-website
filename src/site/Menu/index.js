@@ -1,63 +1,76 @@
 import React from 'react';
 import './Menu.scss';
-import { NavLink } from 'react-router-dom'; 
-import { Menu as MenuUtil } from 'react-utility-components';
+import { Link as RouterLink, withRouter } from 'react-router-dom'; 
+import { Menu as UtilityMenu } from 'react-utility-components';
 
-const { Link: LinkUtil, SubMenu } = MenuUtil;
+const { Link, SubMenu } = UtilityMenu;
 
 class Menu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.getNavLinkClass = this.getNavLinkClass.bind(this);
+  }  
+  getNavLinkClass(path) {
+    return this.props.location.pathname === path ? 'active' : '';
+  }
+  
   render() {
     return (
       <header className='menu'>
-        <MenuUtil
+        <UtilityMenu
+          // active
           dropdown
-          linkWrapper={(href, children) => <NavLink to={href}>{children}</NavLink>}
+          // horizontal
+          // TODO
+          linkWrapper={(href, children) => <RouterLink to={href}>{children}</RouterLink>}
         >
 
-          <LinkUtil href='/'>Home</LinkUtil>
+          <Link href='/'>Home</Link>
 
           <SubMenu>
-            <LinkUtil>About Us</LinkUtil>
-            <LinkUtil href='/mission'>Our Mission</LinkUtil>
-            <LinkUtil href='/board'>Executive Board</LinkUtil>
-            <LinkUtil href='/members'>Member Schools</LinkUtil>
-            <LinkUtil href='/history'>Our History</LinkUtil>
+            <Link>About Us</Link>
+            <Link href='/mission'>Our Mission</Link>
+            <Link href='/board'>Executive Board</Link>
+            <Link href='/members'>Member Schools</Link>
+            <Link href='/history'>Our History</Link>
           </SubMenu>
 
           <SubMenu>
-            <LinkUtil>Conferences</LinkUtil>
-            <LinkUtil href='/upcoming'>Upcoming</LinkUtil>
-            <LinkUtil href='/host'>Host a Conference</LinkUtil>
+            <Link>Conferences</Link>
+            <Link href='/upcoming'>Upcoming</Link>
+            <Link 
+              className={this.getNavLinkClass('/host')}
+              href='/host'>Host a Conference</Link>
           </SubMenu>
 
           <SubMenu>
-            <LinkUtil>Programs</LinkUtil>
-            <LinkUtil href='/maasux'>MAASUx</LinkUtil>
-            <LinkUtil href='/whereareyoufrom'>#whereareyoufrom</LinkUtil>
+            <Link>Programs</Link>
+            <Link href='/maasux'>MAASUx</Link>
+            <Link href='/whereareyoufrom'>#whereareyoufrom</Link>
           </SubMenu>
 
           <SubMenu>
-            <LinkUtil>Resources</LinkUtil>
-            <LinkUtil href='/awards'>Awards and Scholarships</LinkUtil>
-            <LinkUtil href='/apiaorgs'>APIA Organizations</LinkUtil>
+            <Link>Resources</Link>
+            <Link href='/awards'>Awards and Scholarships</Link>
+            <Link href='/apiaorgs'>APIA Organizations</Link>
           </SubMenu>
 
-          <LinkUtil href='/alumni'>Alumni</LinkUtil>
+          <Link href='/alumni'>Alumni</Link>
 
           <SubMenu>
-            <LinkUtil>Archives</LinkUtil>
-            <LinkUtil href='/newsletter'>Newsletter</LinkUtil>
-            <LinkUtil href='/report'>Annual Report</LinkUtil>
-            <LinkUtil href='/pastconferences'>Past Conferences</LinkUtil>
-            <LinkUtil href='/pastawards'>Past Award Recipients</LinkUtil>
+            <Link>Archives</Link>
+            <Link href='/newsletter'>Newsletter</Link>
+            <Link href='/report'>Annual Report</Link>
+            <Link href='/pastconferences'>Past Conferences</Link>
+            <Link href='/pastawards'>Past Award Recipients</Link>
           </SubMenu>
 
-          <LinkUtil href='/contact'>Contact Us</LinkUtil>
+          <Link href='/contact'>Contact Us</Link>
 
-        </MenuUtil>
+        </UtilityMenu>
       </header>
     )
   }
 }
 
-export default Menu;
+export default withRouter(Menu);
