@@ -18,23 +18,23 @@ export default {
       dark: '#980000',
       contrastText: '#fbfbfb',
     },
-    secondary: { // green
-      light: '#61e2a7',
-      main: '#20af78',
-      dark: '#007e4c',
-      contrastText: '#fbfbfb',
-    },
-    tertiary: { // orange
+    secondary: { // orange
       light: '#ffb051',
       main: '#ea801f',
       dark: '#b25200',
       contrastText: '#000',
     },
+    tertiary: { // green
+      light: '#61e2a7',
+      main: '#20af78',
+      dark: '#007e4c',
+      contrastText: '#fbfbfb',
+    },
   },
   typography: {
     fontFamily: {
       primary: [
-        'hindi',
+        'hind',
         'Roboto',
         'arial',
         'sans-serif',

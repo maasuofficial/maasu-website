@@ -1,20 +1,19 @@
-@import 'src/util';
-
 *, *::before, *::after {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
 
-*:focus {
-    outline-color: var(--palette-primary-main);
-    outline-style: solid;
-    outline-width: medium;
-}
+// TODO focus
+// *:focus {
+//     outline-color: var(--palette-primary-main);
+//     outline-style: solid;
+//     outline-width: medium;
+// }
 
 @font-face {
-    font-family: 'hindi';
+    font-family: 'hind';
     src: url('/fonts/hind-bold-modified/hind-bold-modified-webfont.woff2') format('woff2'),
-         url('/fonts/hind-bold-modified/hind-bold-modified-webfont.woff') format('woff');
+         url('/fonts/hind-bold-modified/hind-bold-modified.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
