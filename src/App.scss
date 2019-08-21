@@ -46,13 +46,13 @@ header {
 .construction {
   padding: 0 var(--spacing);
 
-  background: linear-gradient(0deg, var(--palette-primary-light), #fbfbfb, #fbfbfb);
-  background-size: 600% 600%;
+  // background: linear-gradient(0deg, var(--palette-primary-light), #fbfbfb, #fbfbfb);
+  // background-size: 600% 600%;
 
-  -webkit-animation: AnimationName 18s ease infinite;
-  -moz-animation: AnimationName 18s ease infinite;
-  -o-animation: AnimationName 18s ease infinite;
-  animation: AnimationName 18s ease infinite;
+  // -webkit-animation: AnimationName 18s ease infinite;
+  // -moz-animation: AnimationName 18s ease infinite;
+  // -o-animation: AnimationName 18s ease infinite;
+  // animation: AnimationName 18s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
@@ -123,4 +123,108 @@ table select {
   .construction {
     padding: 0 calc(var(--spacing) / 2);
   }  
+}
+
+// home (leadership summit)
+
+.sky {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  height: 100%;
+  width: 200%;
+
+  animation: SkyMove 120s linear infinite;
+
+  div {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+
+    background-size: 100%;
+    background-position: center center;
+  }
+
+}
+
+@keyframes SkyMove {
+  from { transform: translate(0) }
+  to { transform: translate(-50%) }
+}
+
+.leadershipSummit {
+  
+  background-color: rgba(255, 255, 255, 0.5);
+  color: var(--palette-text-main);
+
+  header {
+    padding: 3em 0;
+
+    img {
+      width: 50%;
+    }
+
+    
+    h1 {
+      margin-top: 0;
+    }
+    
+    a {
+      text-decoration: none;
+      color: white;
+    }
+
+    $dist: 0.3em;
+
+    .buttonOutline {
+      position: relative;
+      padding: $dist;
+      text-transform: capitalize;
+      background-color: var(--palette-primary-main);
+      z-index: 0;
+      transition: all 0.2s;
+
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 100%;
+        width: 100%;
+        top: $dist;
+        left: 0;
+        background-color: var(--palette-primary-dark);
+        z-index: -1;
+      }
+
+      &:hover::before {
+        top: 0;
+      }
+  
+      &:hover {
+        top: $dist;
+      }
+
+    }
+
+
+    @media #{$sm-down} {
+      img {
+        width: 100%;
+      }  
+      h1 {
+        font-size: 2em;
+      }
+    }
+
+  }
+
 }

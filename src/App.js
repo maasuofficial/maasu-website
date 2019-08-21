@@ -20,9 +20,8 @@ import {
   Upcoming,
   WhereAreYouFrom,
 } from './site';
-import { Cell, Grid, Page, Type } from './components';
+import { Page, Type } from './components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
 import './App.scss';
 
 class App extends Component {
@@ -32,7 +31,7 @@ class App extends Component {
         <div className='app'>
           <Switch>
             <Route path='/payment' component={Payment} />            
-            <Route path='/' component={Construction} />
+            <Route path='/' component={Home} />
           </Switch>
 
           {/* <Menu />
@@ -60,32 +59,13 @@ class App extends Component {
           <Route path='/pastconferences' component={PastConf} />
           <Route path='/pastawards' component={PastAwards} />
 
-          <Route path='/contact' component={Contact} /> */}
+          <Route path='/contact' component={Contact} />
 
-          <StaticFooter />
+          <StaticFooter /> */}
         </div>
       </BrowserRouter>
     );
   }
-}
-
-const Construction = (props) => {
-  return (
-    <Page className='construction'>
-      <header>
-        <Type variant='h1' className='title'><span>Oh no!</span></Type>
-        <Type variant='h2' className='subtitle'>Our website is under construction!</Type>
-      </header>
-      <Type variant='sub6'>You can see any updates or conference information from our social media links:</Type>
-      <Grid className='gridz'>
-        <Cell auto>
-          <a className='link' aria-label='facebook' href='https://www.facebook.com/MAASUForChange/'><FaFacebookSquare /></a>
-          <a className='link' aria-label='instagram' href='https://www.instagram.com/maasuofficial/'><FaInstagram /></a>
-        </Cell>
-      </Grid>
-      <Type variant='sub6'>For more information, please contact <a className='mail' href='mailto:technet@maasu.org'>technet@maasu.org</a>.</Type>
-    </Page>
-  );
 }
 
 const Payment = (props) => {
