@@ -21,7 +21,7 @@
 
 .gridz {
   font-size: 3em;
-  padding: 1em 0;
+  // padding: 1em 0;
 }
 
 .link {
@@ -182,7 +182,7 @@ table select {
       color: white;
     }
 
-    $dist: 0.3em;
+    $dist: 0.2em;
 
     .buttonOutline {
       position: relative;
@@ -227,4 +227,11 @@ table select {
 
   }
 
+}
+
+.contact-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
