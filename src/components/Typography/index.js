@@ -17,6 +17,13 @@ const variants = [
   'sub5', 'subtitle5',
   'sub6', 'subtitle6',
 
+  'text1',
+  'text2',
+  'text3',
+  'text4',
+  'text5',
+  'text6',
+
   'em', 'emphasis',
 
   'styled',
@@ -61,6 +68,19 @@ class Typography extends Component {
       case 'sub6': case 'subtitle6':
         return <p {...props} className={`${modules.sub6} ${modules.subtitle} ${classes.join(' ')}`}>{children}</p>;
       
+      case 'text1':
+        return <span {...props} className={`${modules.text1} ${modules.text} ${classes.join(' ')}`}>{children}</span>;
+      case 'text2':
+        return <span {...props} className={`${modules.text2} ${modules.text} ${classes.join(' ')}`}>{children}</span>;
+      case 'text3':
+        return <span {...props} className={`${modules.text3} ${modules.text} ${classes.join(' ')}`}>{children}</span>;
+      case 'text4':
+        return <span {...props} className={`${modules.text4} ${modules.text} ${classes.join(' ')}`}>{children}</span>;
+      case 'text5':
+        return <span {...props} className={`${modules.text5} ${modules.text} ${classes.join(' ')}`}>{children}</span>;
+      case 'text6':
+        return <span {...props} className={`${modules.text6} ${modules.text} ${classes.join(' ')}`}>{children}</span>;
+
       case 'em': case 'emphasis':
         return <em {...props} className={classes.join(' ')}>{children}</em>;
 

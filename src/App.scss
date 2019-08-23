@@ -19,41 +19,21 @@
   text-align: center;
 }
 
-.gridz {
-  font-size: 3em;
-  // padding: 1em 0;
-}
+.gridz { font-size: 3em }
 
 .link {
   padding: 0 0.2em;
   color: inherit;
-  transition: color 0.2s;
 }
 
-.link:hover {
-  color: var(--palette-primary-main);
-}
+.link:hover { color: var(--palette-primary-main) }
 
 .mail {
   color: inherit;
   text-decoration: underline;
 }
 
-header {
-  margin-bottom: 2em;
-}
-
-.construction {
-  padding: 0 var(--spacing);
-
-  // background: linear-gradient(0deg, var(--palette-primary-light), #fbfbfb, #fbfbfb);
-  // background-size: 600% 600%;
-
-  // -webkit-animation: AnimationName 18s ease infinite;
-  // -moz-animation: AnimationName 18s ease infinite;
-  // -o-animation: AnimationName 18s ease infinite;
-  // animation: AnimationName 18s ease infinite;
-}
+.construction { padding: 0 var(--spacing) }
 
 @-webkit-keyframes AnimationName {
   0%{background-position:51% 0%}
@@ -76,17 +56,11 @@ header {
   100%{background-position:51% 0%}
 }
 
-.payment {
-  padding: var(--spacing);
-}
+.payment { padding: var(--spacing) }
 
-.paymentInner {
-  border: 5px solid var(--palette-primary-main);
-}
+.paymentInner { border: 5px solid var(--palette-primary-main) }
 
-.paymentInner {
-  padding-top: 2em;
-}
+.paymentInner { padding-top: 2em }
 
 .payment .title {
   position: absolute;
@@ -100,32 +74,20 @@ header {
 }
 
 @media #{$sm-down} {
-  .payment .title {
-    font-size: 2em;
-  }
-  .paymentInner {
-    padding-top: 2.5em;
-  }
+  .payment .title { font-size: 2em }
+  .paymentInner { padding-top: 2.5em }
 }
 
-table {
-  margin: 0 auto;
-}
+table { margin: 0 auto }
 
-table select {
-  padding: 0.2em 1em;
-}
+table select { padding: 0.2em 1em }
 
 @media #{$sm-down} {
-  .title span {
-    font-size: 1em;
-  }
-  .construction {
-    padding: 0 calc(var(--spacing) / 2);
-  }  
+  .title span { font-size: 1em }
+  .construction { padding: 0 calc(var(--spacing) / 2) }
 }
 
-// home (leadership summit)
+// leadership summit
 
 .sky {
   position: absolute;
@@ -168,70 +130,29 @@ table select {
   header {
     padding: 3em 0;
 
-    img {
-      width: 50%;
-    }
+    img { width: 50% }
 
-    
-    h1 {
-      margin-top: 0;
-    }
-    
-    a {
-      text-decoration: none;
-      color: white;
-    }
+    h1 { margin-top: 0 }
 
-    $dist: 0.2em;
-
-    .buttonOutline {
-      position: relative;
-      padding: $dist;
-      text-transform: capitalize;
-      background-color: var(--palette-primary-main);
-      z-index: 0;
-      transition: all 0.2s;
-
-
-      &::before {
-        content: '';
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: 100%;
-        top: $dist;
-        left: 0;
-        background-color: var(--palette-primary-dark);
-        z-index: -1;
-      }
-
-      &:hover::before {
-        top: 0;
-      }
-  
-      &:hover {
-        top: $dist;
-      }
-
-    }
-
+    .conferenceName { font-size: 1.5em }
 
     @media #{$sm-down} {
-      img {
-        width: 100%;
-      }  
+      img { width: 100% }
+      
+      $padding: calc(var(--spacing) / 4);
+
       h1 {
         font-size: 2em;
+        padding: 0 $padding;
       }
+
+      .register {
+        margin: 0 $padding;
+        width: calc(100% - calc(#{$padding} * 2));
+      }
+
     }
 
   }
 
-}
-
-.contact-info {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
 }

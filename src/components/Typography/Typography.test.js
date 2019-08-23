@@ -204,9 +204,44 @@ describe('typography component', () => {
 
   // routine
   it('renders subtitle6', () => {
-    renderType({ variant: 'subtitle6' });
-    
+    renderType({ variant: 'subtitle6' });    
     expect(document.querySelector('.subtitle.sub6')).not.toBeNull();
+  })
+
+  // routine
+  it('renders text1', () => {
+    renderType({ variant: 'text1' });
+    expect(document.querySelector('.text.text1')).not.toBeNull();
+  })
+
+  // routine
+  it('renders text2', () => {
+    renderType({ variant: 'text2' });
+    expect(document.querySelector('.text.text2')).not.toBeNull();
+  })
+
+  // routine
+  it('renders text3', () => {
+    renderType({ variant: 'text3' });
+    expect(document.querySelector('.text.text3')).not.toBeNull();
+  })
+
+  // routine
+  it('renders text4', () => {
+    renderType({ variant: 'text4' });
+    expect(document.querySelector('.text.text4')).not.toBeNull();
+  })
+
+  // routine
+  it('renders text5', () => {
+    renderType({ variant: 'text5' });
+    expect(document.querySelector('.text.text5')).not.toBeNull();
+  })
+
+  // routine
+  it('renders text6', () => {
+    renderType({ variant: 'text6' });
+    expect(document.querySelector('.text.text6')).not.toBeNull();
   })
 
   // routine
