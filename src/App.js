@@ -1,24 +1,24 @@
 import React, { Component } from 'react';
 import {
-  // Alumni,
-  // ApiaOrgs,
-  // Awards,
-  // Board,
-  // Contact,
-  // History,
+  Alumni,
+  ApiaOrgs,
+  Awards,
+  Board,
+  Contact,
+  History,
   Home,
-  // Host,
-  // MaasuX,
-  // Members,
-  // Menu,
-  // Mission,
-  // NewsLetter,
-  // PastAwards,
-  // PastConf,
-  // Report,
-  // StaticFooter,
-  // Upcoming,
-  // WhereAreYouFrom,
+  Host,
+  MaasuX,
+  Members,
+  Menu,
+  Mission,
+  NewsLetter,
+  PastAwards,
+  PastConf,
+  Report,
+  StaticFooter,
+  Upcoming,
+  WhereAreYouFrom,
 } from './site';
 import { Page, Type } from './components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
@@ -62,6 +62,7 @@ class App extends Component {
           <Route path='/contact' component={Contact} />
 
           <StaticFooter /> */}
+
         </div>
       </BrowserRouter>
     );
