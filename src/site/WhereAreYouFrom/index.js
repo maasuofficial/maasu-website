@@ -24,7 +24,7 @@ class WhereAreYouFrom extends React.Component {
         </p>
         <p>For more information on this project, you can contact our Advocacy Co-Chair: advocacy2@maasu.org.</p>
         <p>Fall 2015 MAASU Kick-Off Video</p>
-        <iframe title='maasu kick-off video' width="640" height="360" src="https://www.youtube.com/embed/3ndhclLwEV4?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+        <iframe title='maasu kick-off video' width="640" height="360" src="https://www.youtube.com/embed/3ndhclLwEV4?feature=oembed" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen=""></iframe>
       </Page>
     );
   }
