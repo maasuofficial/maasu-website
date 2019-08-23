@@ -16,29 +16,11 @@ nav {
   border: 3px dashed salmon;
 }
 
-// .blueTest {
-//   background-color: blue;
-// }
-
-// TODO
 .menu ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-
-// .menu button {
-//   background-color: inherit;
-//   color: inherit;
-//   border: none;
-//   padding: 0;
-//   margin: 0;
-//   cursor: pointer;
-//   -webkit-appearance: none;
-//      -moz-appearance: none;
-//   font-family: inherit;
-//   font-size: 100%;
-// }
 
 .menu span {
   text-transform: uppercase;
@@ -46,11 +28,6 @@ nav {
 
 .menu li {
   padding: 0.4em;
-
-  &.active {
-    color: var(--palette-background-main) !important;
-    background-color: var(--palette-secondary-dark) !important;
-  }
 }
 
 .menu a {
@@ -59,35 +36,11 @@ nav {
 
   &.active {
     font-weight: 700;
-    background-color: red;
+    text-decoration: underline;
   }
 
   &:hover {
-    background-color: var(--palette-secondary-main);
-    color: var(--palette-background-main);
+    font-weight: 700;
   }
 
-}
-
-// dropdown container
-.menu nav > ul > li {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-
-  // trigger
-  &:hover ul {
-    display: block;
-  }
-
-  &.open ul {
-    display: block;
-  }
-}
-
-// dropdown content
-.menu li ul {
-  display: none;
-  position: absolute;
-  z-index: 1;
 }
