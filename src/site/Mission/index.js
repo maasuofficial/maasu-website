@@ -3,7 +3,7 @@ import { Page, Type } from '../../components';
 
 class Mission extends React.Component {
   componentDidMount() {
-    document.title = 'Mission - The Midwest Asian American Students Union';
+    document.title = 'Our Mission - The Midwest Asian American Students Union';
   }
 
   render() {
