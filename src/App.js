@@ -29,42 +29,43 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className='app'>
-          {/* <Switch>
-            <Route path='/payment' component={Payment} />            
-            <Route path='/' component={Home} />
-          </Switch> */}
-
+          
           <Menu />
 
           <div className='appInner'>
+            
+            <Switch>
 
-            <Route exact path='/' component={Home} />
+              <Route path='/mission' component={Mission} />
+              <Route path='/board' component={Board} />
+              <Route path='/members' component={Members} />
+              <Route path='/history' component={History} />
+            
+              <Route path='/upcoming' component={Upcoming} />
+              <Route path='/host' component={Host} />
 
-            <Route path='/mission' component={Mission} />
-            <Route path='/board' component={Board} />
-            <Route path='/members' component={Members} />
-            <Route path='/history' component={History} />
-          
-            <Route path='/upcoming' component={Upcoming} />
-            <Route path='/host' component={Host} />
+              <Route path='/maasux' component={MaasuX} />
+              <Route path='/whereareyoufrom' component={WhereAreYouFrom} />
 
-            <Route path='/maasux' component={MaasuX} />
-            <Route path='/whereareyoufrom' component={WhereAreYouFrom} />
+              <Route path='/awards' component={Awards} />
+              <Route path='/apiaorgs' component={ApiaOrgs} />
 
-            <Route path='/awards' component={Awards} />
-            <Route path='/apiaorgs' component={ApiaOrgs} />
+              <Route path='/alumni' component={Alumni} />
 
-            <Route path='/alumni' component={Alumni} />
+              <Route path='/newsletter' component={NewsLetter} />
+              <Route path='/report' component={Report} />
+              <Route path='/pastconferences' component={PastConf} />
+              <Route path='/pastawards' component={PastAwards} />
 
-            <Route path='/newsletter' component={NewsLetter} />
-            <Route path='/report' component={Report} />
-            <Route path='/pastconferences' component={PastConf} />
-            <Route path='/pastawards' component={PastAwards} />
+              <Route path='/contact' component={Contact} />
 
-            <Route path='/contact' component={Contact} />
+              {/* <Route path='/payment' component={Payment} /> */}
 
+              <Route component={Home} />
+
+            </Switch>
             <StaticFooter />
-
+            
           </div>
 
         </div>

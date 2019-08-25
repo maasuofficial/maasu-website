@@ -1,0 +1,25 @@
+@import 'src/util';
+
+footer.staticFooter {
+  background-color: var(--palette-background-main);
+}
+
+.logo {
+  padding-bottom: 1em;
+
+  & img {
+    width: 50%;
+  }
+}
+
+.copyright {
+  font-size: 0.9em;
+}
+
+@media #{$md-up} {
+
+  .logo img {
+    width: 25%;
+  }
+
+}

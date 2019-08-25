@@ -90,12 +90,13 @@ table select { padding: 0.2em 1em }
 // leadership summit
 
 .sky {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
 
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -128,7 +129,7 @@ table select { padding: 0.2em 1em }
   color: var(--palette-text-main);
 
   header {
-    padding: 3em 0;
+    padding: 1em 0;
 
     img { width: 50% }
 

@@ -17,13 +17,13 @@ class Menu extends React.Component {
       <React.Fragment>
         <header className='menu'>
           <Grid className='bar'>
-            <Cell md={2} auto>
+            <Cell lg={2} md={2} auto>
               <a href='/'>
                 <img src={`${process.env.PUBLIC_URL}/assets/branding/Logo-wSymbol.svg`} alt='Midwest Asian American Students Union' />
               </a>
             </Cell>
 
-            <Cell md={10} auto>
+            <Cell lg={10} md={10} sm={12} auto>
               <UtilityMenu
                 className='utilMenu'
                 dropdown

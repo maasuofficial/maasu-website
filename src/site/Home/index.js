@@ -48,7 +48,7 @@ const LeadershipSummit = (props) => {
   return (
     <Page className='leadershipSummit'>
       <header>
-        <img src={`${process.env.PUBLIC_URL}/assets/branding/Logo-wSymbol.svg`} alt='Midwest Asian American Students Union' />
+        <img src={`${process.env.PUBLIC_URL}/assets/branding/Logo-wSymbol.svg`} alt='The Midwest Asian American Students Union' />
         <Type cap variant='h1'>
           <span>Leadership Summit 2019:</span>
           <br />
@@ -66,7 +66,6 @@ const LeadershipSummit = (props) => {
         </Cell>
       </Grid>
 
-      <span>For additional information or questions please contact <a className='mail' target='_blank' rel='noopener noreferrer' href='https://mail.google.com/mail/?view=cm&fs=1&to=technet@maasu.org'>technet@maasu.org</a>.</span>
     </Page>
   )
 }
