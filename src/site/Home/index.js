@@ -53,6 +53,8 @@ const LeadershipSummit = (props) => {
           <span>Leadership Summit 2019:</span>
           <br />
           <i className='conferenceName'>Take Flight</i>
+          <br />
+          <i className='conferenceDate'>October 18-19th</i>
         </Type>
         <Pressable className='register' href='https://docs.google.com/forms/d/e/1FAIpQLSeMjvyZph0ZH5V6Wj1rNxdC-SYGvW2dEE5qTojb-jkM3W-X7A/viewform?fbclid=IwAR0TQoNVBSShC-sXRnb96rZMFZSX3tAzNxV-NnrXeSsFEfdcKYFP5HZUwSo'>
           <Type cap variant='text3'>Register Now!</Type>

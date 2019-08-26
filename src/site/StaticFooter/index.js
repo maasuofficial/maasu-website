@@ -12,7 +12,7 @@ class StaticFooter extends React.Component {
         <span className={`${modules.copyright}`}>Special thanks to Craig Bossley for all his hard work.</span>
 
         <div>
-          <span className={`${modules.copyright}`}>&copy;MAASU 2019. For additional information or questions regarding the website, please contact <a className='mail' target='_blank' rel='noopener noreferrer' href='MAILTO:technet@maasu.org'>technet@maasu.org</a>.</span>
+          <span className={`${modules.copyright}`}>&copy; MAASU 2019. For additional information or questions regarding the website please contact <a className='mail' href='MAILTO:technet@maasu.org'>technet@maasu.org</a>.</span>
         </div>
         <br />
       </footer>
