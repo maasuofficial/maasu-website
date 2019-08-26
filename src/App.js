@@ -16,7 +16,6 @@ import {
   PastAwards,
   PastConf,
   Report,
-  StaticFooter,
   Upcoming,
   WhereAreYouFrom,
 } from './site';
@@ -64,7 +63,6 @@ class App extends Component {
               <Route component={Home} />
 
             </Switch>
-            <StaticFooter />
             
           </div>
 

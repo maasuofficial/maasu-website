@@ -14,7 +14,6 @@ import NewsLetter from './NewsLetter';
 import PastAwards from './PastAwards';
 import PastConf from './PastConf';
 import Report from './Report';
-import StaticFooter from './StaticFooter';
 import Upcoming from './Upcoming';
 import WhereAreYouFrom from './WhereAreYouFrom';
 
@@ -35,7 +34,6 @@ export {
   PastAwards,
   PastConf,
   Report,
-  StaticFooter,
   Upcoming,
   WhereAreYouFrom,
 }

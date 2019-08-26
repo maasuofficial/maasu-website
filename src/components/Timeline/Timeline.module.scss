@@ -31,7 +31,7 @@ $stringColor: var(--palette-primary-main);
 // right
 .timeContainer:nth-child(2n) { 
   flex-direction: row-reverse;
-  text-align: right;
+  // text-align: right;
 }
 
 .timeContainer:not(:first-child)::after {

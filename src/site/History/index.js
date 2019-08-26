@@ -220,48 +220,48 @@ class History extends React.Component {
             <TSub>October 25-26 | Miami University, Oxford, OH</TSub>
           </Time>
           <Time label={2014}>
-            <TTitle>Spring Conference <i>"Reimagine"</i></TTitle>
+            <TTitle>Spring Conference <i>Reimagine</i></TTitle>
             <TSub>March 28-29 | The Ohio State University, Columbus, OH</TSub>
             <TDesc>The 23rd generation of ECC is elected.</TDesc>
-            <TTitle>Leadership Retreat <i>“Sail to New Horizons: Discover, Explore, Dream”</i></TTitle>
+            <TTitle>Leadership Retreat <i>Sail to New Horizons: Discover, Explore, Dream</i></TTitle>
             <TSub>November 14-15 | University of Missouri, Columbia, MO</TSub>
           </Time>
           <Time label={2015}>
             <TTitle>Spring Conference</TTitle>
             <TSub>April 10-11 | University of Wisconsin, Madison, WI</TSub>
             <TDesc>The 24th generation of ECC is elected.</TDesc>
-            <TTitle>Leadership Summit <i>“Footsteps: What's Your Imprint”</i></TTitle>
+            <TTitle>Leadership Summit <i>Footsteps: What's Your Imprint</i></TTitle>
             <TSub>November 20-21 | Purdue University, West Lafayette, IN</TSub>
           </Time>
           <Time label={2016}>
-            <TTitle>Spring Conference <i>"Generation A"</i></TTitle>
+            <TTitle>Spring Conference <i>Generation A</i></TTitle>
             <TSub>April 15-16 | University of Minnesota-Twin Cities, MN</TSub>
             <TDesc>The 25th generation of ECC is elected.</TDesc>
-            <TTitle>Leadership Summit <i>“Journey to the Center”</i></TTitle>
+            <TTitle>Leadership Summit <i>Journey to the Center</i></TTitle>
             <TSub>November 11-16 | Northwestern University, Evanston, IL</TSub>
           </Time>
           <Time label={2017}>
-            <TTitle>Spring Conference <i>“#UnitedWeStand"</i></TTitle>
+            <TTitle>Spring Conference <i>#UnitedWeStand</i></TTitle>
             <TSub>April 7-8 | University of Michigan, MI</TSub>
             <TDesc>The 26th generation of ECC is elected.</TDesc>
-            <TTitle>Leadership Summit <i>“Timeless”</i></TTitle>
+            <TTitle>Leadership Summit <i>Timeless</i></TTitle>
             <TSub>October 27-28 | University of Missouri, Columbia, MO</TSub>
           </Time>
           <Time label={2018}>
             <TTitle>MAASU is incorporated in the state of Illinois</TTitle>
             <TSub>April</TSub>
             <TDesc>Articles of incorporation are submitted and approved in 2018.</TDesc>
-            <TTitle>Spring Conference <i>“Overcome"</i></TTitle>
+            <TTitle>Spring Conference <i>Overcome</i></TTitle>
             <TSub>April 23-24 | The Ohio State University, Columbus, OH</TSub>
             <TDesc>The 27th generation of ECC is elected.</TDesc>
-            <TTitle>Leadership Summit <i>"Impact"</i></TTitle>
+            <TTitle>Leadership Summit <i>Impact</i></TTitle>
             <TSub>November 16-17 | Michigan State University, East Lansing, MI</TSub>
           </Time>
           <Time label={2019}>
             <TTitle>MAASU granted federal tax-exempt status</TTitle>
             <TSub>January</TSub>
             <TDesc>MAASU is granted federal 501c3 tax-exempt status.</TDesc>
-            <TTitle>Spring Conference <i>"Be Bolder"</i></TTitle>
+            <TTitle>Spring Conference <i>Be Bolder</i></TTitle>
             <TSub>March 8-9 | University of Colorado - Boulder, Boulder, CO</TSub>
             <TDesc>The 28th generation of ECC is elected.</TDesc>
             <TTitle>Leadership Summit</TTitle>

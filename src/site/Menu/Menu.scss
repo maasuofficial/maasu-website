@@ -1,3 +1,5 @@
+@import 'src/util';
+
 .menu {
   position: fixed;
   top: 0;
@@ -29,12 +31,21 @@ nav {
   transform: translateY(-50%);
 }
 
+@media #{$md-up} {
+
+  .bar {
+    position: relative;
+    margin: 0 var(--spacing);
+  }
+
+}
+
 .bar, .barSpace {
   height: var(--spacing);
 }
 
 .bar img {
-  $height: 80%;
+  $height: 90%;
   position: absolute;
   height: $height;
   top: calc(calc(100% - #{$height}) / 2);
