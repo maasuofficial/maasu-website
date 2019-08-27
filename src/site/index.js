@@ -8,7 +8,7 @@ import Home from './Home';
 import Host from './Host';
 import MaasuX from './MaasuX';
 import Members from './Members';
-import Menu from './Menu';
+import WrapperMenu from './WrapperMenu';
 import Mission from './Mission';
 import NewsLetter from './NewsLetter';
 import PastAwards from './PastAwards';
@@ -28,7 +28,7 @@ export {
   Host,
   MaasuX,
   Members,
-  Menu,
+  WrapperMenu,
   Mission,
   NewsLetter,
   PastAwards,

@@ -1,0 +1,111 @@
+@import 'src/util';
+
+$menu-y-sm: var(--spacing);
+$menu-x-sm: 80%;
+// $transition: transform 0.3s;
+$transition: all 0.3s;
+
+$menu-y-md: var(--spacing);
+$menu-x-md: 50%;
+
+$menu-y-lg: var(--spacing);
+$menu-x-lg: 30%;
+
+.wrapper {
+  position: relative;
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--palette-text-main);
+
+  overflow: hidden;
+}
+
+.trigger {
+  position: absolute;
+  margin: calc(var(--spacing) / 4);
+
+  background-color: initial;
+  border: none;
+  color: initial;
+  font-size: calc(var(--spacing) / 2);
+  line-height: calc(var(--spacing) / 2);
+  
+  cursor: pointer;
+  z-index: var(--zIndex-trigger);
+
+  .menuIcon { transform: rotate(180deg) }
+
+}
+
+.wrapperMenu {
+  position: absolute;
+  width: $menu-x-sm;
+  top: var(--spacing);
+  bottom: 0;
+  left: 0;
+
+  .menuContainer {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    color: var(--palette-background-main);
+  }
+}
+
+.wrapperContent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+
+  transition: $transition;
+
+  .content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: var(--palette-background-main);
+
+    overflow-y: scroll;
+    transition: $transition;
+  }
+
+}
+
+.menuOpen {
+
+  .trigger { color: var(--palette-background-main) }
+
+  .wrapperContent {
+    transform: translate3d($menu-x-sm, $menu-y-sm, 0);
+
+    .content { opacity: 0.8 }
+  }
+
+
+}
+
+@media #{$md-only} {
+  .wrapperMenu { width: $menu-x-md }
+
+  .menuOpen {
+    .wrapperContent {
+      transform: translate3d($menu-x-md, $menu-y-md, 0);
+    }
+  }
+
+}
+
+@media #{$lg-up} {
+  .wrapperMenu { width: $menu-x-lg }  
+
+  .menuOpen {
+    .wrapperContent {
+      transform: translate3d($menu-x-lg, $menu-y-lg, 0);
+    }
+  }
+
+}

@@ -10,7 +10,7 @@ import {
   Host,
   MaasuX,
   Members,
-  Menu,
+  WrapperMenu,
   Mission,
   NewsLetter,
   PastAwards,
@@ -21,50 +21,52 @@ import {
 } from './site';
 import { Page, Type } from './components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import './App.scss';
+// import './App.scss';
 
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <div className='app'>
+
+          <WrapperMenu>
           
-          <Menu />
+            <div className='appInner'>
 
-          <div className='appInner'>
-            
-            <Switch>
+              <Switch>
 
-              <Route path='/mission' component={Mission} />
-              <Route path='/board' component={Board} />
-              <Route path='/members' component={Members} />
-              <Route path='/history' component={History} />
-            
-              <Route path='/upcoming' component={Upcoming} />
-              <Route path='/host' component={Host} />
+                <Route path='/mission' component={Mission} />
+                <Route path='/board' component={Board} />
+                <Route path='/members' component={Members} />
+                <Route path='/history' component={History} />
+              
+                <Route path='/upcoming' component={Upcoming} />
+                <Route path='/host' component={Host} />
 
-              <Route path='/maasux' component={MaasuX} />
-              <Route path='/whereareyoufrom' component={WhereAreYouFrom} />
+                <Route path='/maasux' component={MaasuX} />
+                <Route path='/whereareyoufrom' component={WhereAreYouFrom} />
 
-              <Route path='/awards' component={Awards} />
-              <Route path='/apiaorgs' component={ApiaOrgs} />
+                <Route path='/awards' component={Awards} />
+                <Route path='/apiaorgs' component={ApiaOrgs} />
 
-              <Route path='/alumni' component={Alumni} />
+                <Route path='/alumni' component={Alumni} />
 
-              <Route path='/newsletter' component={NewsLetter} />
-              <Route path='/report' component={Report} />
-              <Route path='/pastconferences' component={PastConf} />
-              <Route path='/pastawards' component={PastAwards} />
+                <Route path='/newsletter' component={NewsLetter} />
+                <Route path='/report' component={Report} />
+                <Route path='/pastconferences' component={PastConf} />
+                <Route path='/pastawards' component={PastAwards} />
 
-              <Route path='/contact' component={Contact} />
+                <Route path='/contact' component={Contact} />
 
-              {/* <Route path='/payment' component={Payment} /> */}
+                <Route component={Home} />
 
-              <Route component={Home} />
+              </Switch>
 
-            </Switch>
-            
-          </div>
+            </div>
+          
+          </WrapperMenu>
+
+          {/* <Route path='/payment' component={Payment} /> */}
 
         </div>
       </BrowserRouter>

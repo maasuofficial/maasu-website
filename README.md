@@ -53,5 +53,4 @@
 
 ## Roadmap
 
-- construct outline with React Router
 - connect with content provider such as Gatsby or Contentful
