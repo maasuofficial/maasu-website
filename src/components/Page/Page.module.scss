@@ -1,5 +1,12 @@
-section.page {
-    position: relative;
-    min-height: 100%;
-    width: 100%;
+@import 'src/util';
+
+.page {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+  padding: 0 calc(var(--spacing) / 4);
+}
+
+@media #{md-up} {
+  .page { padding: 0 var(--spacing) }
 }

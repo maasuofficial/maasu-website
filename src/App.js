@@ -21,7 +21,6 @@ import {
 } from './site';
 import { Page, Type } from './components';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import './App.scss';
 
 class App extends Component {
   render() {

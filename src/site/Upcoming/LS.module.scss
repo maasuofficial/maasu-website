@@ -1,0 +1,93 @@
+@import 'src/util';
+
+// background
+
+.sky {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  z-index: 0;
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+.background {
+  position: relative;
+  height: 100%;
+  width: 200%;
+  animation: SkyMove 60s linear infinite;
+
+  div {
+    display: inline-block;
+    height: 100%;
+    width: 50%;
+
+    background-size: 100%;
+    background-position: center center;
+  }
+
+}
+
+@media #{$md-up} {
+  .background { animation: SkyMove 100s linear infinite }
+}
+
+@keyframes SkyMove {
+  from { transform: translate(0) }
+  to { transform: translate(-50%) }
+}
+
+// content
+
+.content { text-align: center }
+
+.content img {
+  width: 100%;
+  margin-top: calc(var(--spacing) / 2);
+}
+
+.content header {
+  margin-bottom: 1em;
+
+  p, h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+
+  .conferenceName { font-size: 1.5em }
+}
+
+.register {
+  margin: 1em 0;
+  width: auto;
+  font-size: 0.8em;
+}
+
+@media #{$md-up} {
+  .content img {
+    width: 60%;
+    margin-top: var(--spacing);
+  }
+  .content header {
+    p, h1 { font-size: 3em }
+  }
+  .register { font-size: 1.2em }
+}
+
+@media #{$lg-up} {
+  .content img { width: 50% }
+}
+
+.link {
+  font-size: 3em;
+  padding: 0 0.2em;
+  color: var(--palette-text-main);
+
+  &:hover {
+    color: var(--palette-primary-main);
+  }
+
+}
