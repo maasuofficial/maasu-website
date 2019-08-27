@@ -3,8 +3,6 @@ import React from 'react';
 import { Page } from '../../components';
 import { Type, Grid, Cell, Pressable } from '../../components';
 import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
-import { FaStream, FaAlignRight, FaRegMap } from 'react-icons/fa';
-import { MdMenu, MdEqualizer } from 'react-icons/md';
 
 // import '../../App.scss';
 
@@ -68,16 +66,6 @@ const LeadershipSummit = (props) => {
         <Cell auto>
           <a className='link' aria-label='facebook' href='https://www.facebook.com/MAASUForChange/'><FaFacebookSquare /></a>
           <a className='link' aria-label='instagram' href='https://www.instagram.com/maasuofficial/'><FaInstagram /></a>
-        </Cell>
-      </Grid>
-      
-      <Grid className='gridz'>
-        <Cell auto>
-          <FaStream />
-          <MdMenu />
-          <MdEqualizer />
-          <FaAlignRight />
-          <FaRegMap />
         </Cell>
       </Grid>
 

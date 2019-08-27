@@ -2,7 +2,6 @@
 
 $menu-y-sm: var(--spacing);
 $menu-x-sm: 80%;
-// $transition: transform 0.3s;
 $transition: all 0.3s;
 
 $menu-y-md: var(--spacing);
@@ -17,7 +16,6 @@ $menu-x-lg: 30%;
   width: 100%;
 
   background-color: var(--palette-text-main);
-
   overflow: hidden;
 }
 
@@ -35,12 +33,10 @@ $menu-x-lg: 30%;
   z-index: var(--zIndex-trigger);
 
   .menuIcon { transform: rotate(180deg) }
-
 }
 
 .wrapperMenu {
   position: absolute;
-  width: $menu-x-sm;
   top: var(--spacing);
   bottom: 0;
   left: 0;
@@ -49,7 +45,6 @@ $menu-x-lg: 30%;
     position: relative;
     height: 100%;
     width: 100%;
-
     color: var(--palette-background-main);
   }
 }
@@ -72,40 +67,42 @@ $menu-x-lg: 30%;
     overflow-y: scroll;
     transition: $transition;
   }
-
 }
 
 .menuOpen {
-
-  .trigger { color: var(--palette-background-main) }
-
-  .wrapperContent {
-    transform: translate3d($menu-x-sm, $menu-y-sm, 0);
-
-    .content { opacity: 0.8 }
-  }
-
-
+  .trigger { color: var(--palette-background-main) }  
+  .content { opacity: 0.8 }
 }
+
+.wrapperMenu { width: $menu-x-sm }
+.menuOpen .wrapperContent { transform: translate3d($menu-x-sm, $menu-y-sm, 0) }
 
 @media #{$md-only} {
   .wrapperMenu { width: $menu-x-md }
-
-  .menuOpen {
-    .wrapperContent {
-      transform: translate3d($menu-x-md, $menu-y-md, 0);
-    }
-  }
-
+  .menuOpen .wrapperContent { transform: translate3d($menu-x-md, $menu-y-md, 0) }
 }
 
 @media #{$lg-up} {
-  .wrapperMenu { width: $menu-x-lg }  
+  .wrapperMenu { width: $menu-x-lg }
+  .menuOpen .wrapperContent { transform: translate3d($menu-x-lg, $menu-y-lg, 0) }
+}
 
-  .menuOpen {
-    .wrapperContent {
-      transform: translate3d($menu-x-lg, $menu-y-lg, 0);
-    }
+.utilityMenu ul {
+  list-style-type: none;
+  color: var(--palette-background-main);
+
+  
+}
+
+.utilityMenu {
+  color: var(--palette-background-main);
+  text-transform: uppercase;
+  
+  a {
+    color: var(--palette-background-main);
+    text-decoration: none;
   }
+
+  a:hover { text-decoration: underline }
 
 }

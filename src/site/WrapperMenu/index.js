@@ -1,9 +1,9 @@
 import React from 'react';
-import modules from './WrapperMenu.module.scss';
 import { NavLink as RouterLink } from 'react-router-dom';
 import { Menu as UtilityMenu } from 'react-utility-components';
-import { Grid, Cell } from '../../components';
 import { FaAlignRight } from 'react-icons/fa';
+import modules from './WrapperMenu.module.scss';
+import './WrapperMenu.scss';
 
 const { Link, SubMenu } = UtilityMenu;
 
@@ -43,7 +43,6 @@ class WrapperMenu extends React.Component {
           onClick={this.handleClick}
           aria-expanded={this.state.open}
           role='button'
-          // tabIndex='0'
         >
           <FaAlignRight className={`${modules.menuIcon}`} />
         </a>
@@ -52,17 +51,14 @@ class WrapperMenu extends React.Component {
 
         <div className={`${modules.wrapperMenu}`}>
           <div className={`${modules.menuContainer}`}>
-            {/* TODO fix tab navigation and aria labels */}
-            <UtilityMenu
+            <UtilityMenu className={`${modules.utilityMenu}`}
               linkWrapper={(href, children) => {
-                return (
-                  <RouterLink
-                    to={href}
-                    isActive={checkActive(href)}
-                    onClick={this.handleMenuClose}
-                    tabIndex={this.state.open ? 0 : -1}
-                  >{children}</RouterLink>
-                )
+                return <RouterLink
+                  to={href}
+                  isActive={checkActive(href)}
+                  onClick={this.handleMenuClose}
+                  tabIndex={this.state.open ? 0 : -1}
+                >{children}</RouterLink>
               }}
             >
 
