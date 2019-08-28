@@ -3,20 +3,10 @@
 $stringWidth: 5px;
 $stringColor: var(--palette-primary-main);
 
-.container {
-  padding: 0 calc(var(--spacing));
-}
+.container { padding: 0 calc(var(--spacing) / 2) }
 
-@media #{$lg-up} {
-  .container {
-    padding: 0 calc(var(--spacing) * 2);
-  }  
-}
-
-@media #{$sm-down} {
-  .container {
-    padding: 0 calc(var(--spacing) / 2);
-  }
+@media #{$md-up} {
+  .container { padding: 0 calc(var(--spacing) / 2) }
 }
 
 .timeContainer {

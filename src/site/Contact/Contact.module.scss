@@ -1,25 +1,12 @@
 @import 'src/util';
 
-footer.staticFooter {
-  background-color: var(--palette-background-main);
-}
+.contact footer { text-align: center }
 
 .logo {
-  padding-bottom: 1em;
-
-  & img {
-    width: 50%;
-  }
-}
-
-.copyright {
-  font-size: 0.9em;
+  margin-top: var(--spacing);
+  width: 70%;
 }
 
 @media #{$md-up} {
-
-  .logo img {
-    width: 25%;
-  }
-
+  .logo { width: 25% }
 }

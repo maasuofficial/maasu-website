@@ -39,7 +39,6 @@ export default {
         'arial',
         'sans-serif',
       ].join(','),
-      // TODO secondary font family
       secondary: [
         '-apple-system',
         'BlinkMacSystemFont',

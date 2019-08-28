@@ -46,7 +46,6 @@
 
 .content img {
   width: 100%;
-  margin-top: calc(var(--spacing) / 2);
 }
 
 .content header {
@@ -69,7 +68,6 @@
 @media #{$md-up} {
   .content img {
     width: 60%;
-    margin-top: var(--spacing);
   }
   .content header {
     p, h1 { font-size: 3em }
@@ -78,7 +76,7 @@
 }
 
 @media #{$lg-up} {
-  .content img { width: 50% }
+  .content img { width: 60% }
 }
 
 .link {

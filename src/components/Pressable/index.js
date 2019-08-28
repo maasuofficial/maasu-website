@@ -10,7 +10,7 @@ class Pressable extends Component {
     classes.push(modules.pressableContainer);
 
     return (
-      <a href={href} className={`${modules.link}`}>
+      <a href={href} role='button' className={`${modules.link}`}>
         <div className={classes.join(' ')}>{children}</div>
       </a>
     );

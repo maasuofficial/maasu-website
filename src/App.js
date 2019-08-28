@@ -38,7 +38,7 @@ class App extends Component {
                 <Route path='/board' component={Board} />
                 <Route path='/members' component={Members} />
                 <Route path='/history' component={History} />
-              
+
                 <Route path='/upcoming' component={Upcoming} />
                 <Route path='/host' component={Host} />
 
@@ -57,6 +57,8 @@ class App extends Component {
 
                 <Route path='/contact' component={Contact} />
 
+                {/* <Route path='/payment' component={Payment} /> */}
+
                 <Route component={Home} />
 
               </Switch>
@@ -64,8 +66,6 @@ class App extends Component {
             </div>
           
           </WrapperMenu>
-
-          {/* <Route path='/payment' component={Payment} /> */}
 
         </div>
       </BrowserRouter>

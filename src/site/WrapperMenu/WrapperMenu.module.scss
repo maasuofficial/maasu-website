@@ -41,11 +41,12 @@ $menu-x-lg: 30%;
   bottom: 0;
   left: 0;
 
-  .menuContainer {
+  .menuContainer {    
     position: relative;
     height: 100%;
     width: 100%;
     color: var(--palette-background-main);
+    overflow-y: auto;
   }
 }
 
@@ -55,6 +56,8 @@ $menu-x-lg: 30%;
   left: 0;
   height: 100%;
   width: 100%;
+
+  background-color: var(--palette-text-main);
 
   transition: $transition;
 
@@ -71,7 +74,7 @@ $menu-x-lg: 30%;
 
 .menuOpen {
   .trigger { color: var(--palette-background-main) }  
-  .content { opacity: 0.8 }
+  .content { opacity: 0.5 }
 }
 
 .wrapperMenu { width: $menu-x-sm }
@@ -87,16 +90,20 @@ $menu-x-lg: 30%;
   .menuOpen .wrapperContent { transform: translate3d($menu-x-lg, $menu-y-lg, 0) }
 }
 
-.utilityMenu ul {
-  list-style-type: none;
-  color: var(--palette-background-main);
-
-  
-}
-
 .utilityMenu {
+  padding: var(--spacing) 0;
   color: var(--palette-background-main);
-  text-transform: uppercase;
+
+  ul {
+    list-style-type: none;
+    color: var(--palette-background-main); 
+    margin: 0;
+    padding-left: calc(var(--spacing) / 4);
+  }
+
+  li { padding: 0.2em 0 }
+
+  span { color: var(--palette-background-dark) }
   
   a {
     color: var(--palette-background-main);
@@ -104,5 +111,4 @@ $menu-x-lg: 30%;
   }
 
   a:hover { text-decoration: underline }
-
 }
