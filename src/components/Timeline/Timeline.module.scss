@@ -1,6 +1,6 @@
 @import 'src/util';
 
-$stringWidth: 10px;
+$stringWidth: calc(var(--spacing) / 8);
 $stringColor: var(--palette-primary-main);
 
 .container { padding: 0 calc(var(--spacing) / 2) }
@@ -59,7 +59,7 @@ $stringColor: var(--palette-primary-main);
 .labelContainer > div {
   position: absolute;
   top: 50%;
-  padding: calc(var(--spacing) / 8);
+  padding: $stringWidth;
 
   color: var(--palette-background-main);
   background-color: $stringColor;

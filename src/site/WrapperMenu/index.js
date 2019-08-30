@@ -100,6 +100,8 @@ class WrapperMenu extends React.Component {
                 <Link href='/pastawards'>Past Award Recipients</Link>
               </SubMenu>
 
+              {/* <Link href='/payment'>Membership Payment</Link> */}
+
               <Link href='/contact'>Contact Us</Link>
 
             </UtilityMenu>

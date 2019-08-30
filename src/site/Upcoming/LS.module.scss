@@ -59,9 +59,7 @@
 .conferenceContent p span { font-size: 0.8em }
 
 @media #{$md-up} {
-  .conferenceContent {
-    padding: calc(var(--spacing) / 4);
-  }
+  .conferenceContent { padding: calc(var(--spacing) / 4) }
 }
 
 .content header {
@@ -101,8 +99,5 @@
   padding: 0 0.2em;
   color: var(--palette-text-main);
 
-  &:hover {
-    color: var(--palette-primary-main);
-  }
-
+  &:hover { color: var(--palette-primary-main) }
 }

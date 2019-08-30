@@ -1,5 +1,6 @@
 import React from 'react';
 import { Page, Type } from '../../components';
+import modules from './Members.module.scss';
 
 class Members extends React.Component {
   componentDidMount() {
@@ -10,13 +11,13 @@ class Members extends React.Component {
     return (
       <React.Fragment>
         <Page>
-          <Type variant='sub2'>Membership</Type>
+          <Type variant='h2'>Membership</Type>
           <p>
             The Midwest Asian American Students Union provides resources and support to the Asian Pacific Islander 
             American community and youth. The opportunities for networking, leadership, and personal development 
             through our involvement is invaluable.
           </p>
-          <Type variant='sub2'>Benefits</Type>
+          <Type variant='h2'>Benefits</Type>
           <ul>
             <li>
               Leadership Summit and Spring Conference registration rates will be discounted
@@ -25,15 +26,14 @@ class Members extends React.Component {
               Gain support from MAASU’s experienced network of leaders in the APIA community about activism and student organization growth.
             </li>
             <li>
-              Network with students and alumni from the 30+ membership schools of MAASU, as well as various professionals and figures from the APIA community.
+              Network with students and alumni from the member schools of MAASU, as well as various professionals and prominent figures from the APIA community. 
             </li>
           </ul>
           <p>
             For more information on eligibility and benefits, contact <a href='mailto:memoutreach@maasu.org'>memoutreach@maasu.org</a>.
           </p>
-          <Type variant='sub2'>Member Schools</Type>
+          <Type variant='h2'>Member Schools</Type>
           {/* last updated 01/14/19 */}
-          {/* TODO add links */}
           <ul>
             <li><a href='https://www.augsburg.edu/panasian/augsburg-asian-student-association/'>Augsburg University</a></li>
             <li><a href='https://bsu.edu/aasa'>Ball State University</a></li>
@@ -72,35 +72,94 @@ class Members extends React.Component {
           </ul>
         </Page>
         <Page>
-
-        For all members schools, they get to select a MAASU Representative. M-Reps, for short,  are the official liaison between member schools and the MAASU Executive Coordinating Committee (ECC). As stated in the MAASU Constitution, each school may only have one M-Rep.
-The roles, duties, and responsibilities of the M-Rep consists of the following:
-Respond to emails and messages from MAASU Communications chairs or other members of the ECC when necessary
-Update his/her/their school’s APIA organization on MAASU information regarding campaigns, conferences, and fundraisers
-Has the power to submit one vote for conference bids, ECC elections, and constitutional changes
-During the Spring Conference, the M-Rep votes for schools bidding to host Leadership Summit and Spring Conference for the upcoming year
-The M-Reps elect the ECC for the upcoming year
-If amendments are made to the constitution, the M-Rep has the power to accept or decline the changes
-Voting requires a two-thirds attendance in order to reach quorum
-M-Reps will miss at least one workshop and possibly one small group meeting during Spring Conference for voting
-Connect with fellow M-Rep peers and Communications Chairs
-M-Reps will serve a full academic year in conjunction with the Communications Chairs. Should any M-Rep need to step down for any reasons, please have the institution replace the M-Rep and connect them immediately to the Communications Chairs for updates.
+          <Type variant='h2'>Representatives</Type>
+          <p>
+            All members schools will select a MAASU Representative. MReps, for short, are the official liaison 
+            between member schools and the MAASU Executive Coordinating Committee (ECC). As stated in the MAASU 
+            constitution, each school may only have one MRep. The roles, duties, and responsibilities of the 
+            MRep consists of the following:
+          </p>
+          <ul>
+            <li>
+              Respond to emails and messages from MAASU Communications chairs or other members of the ECC when 
+              necessary
+            </li>
+            <li>
+              Update his/her/their school’s APIA organizations on MAASU information regarding campaigns, 
+              conferences, and fundraisers
+            </li>
+            <li>
+              Has the power to submit one vote for conference bids, ECC elections, and constitutional changes
+            </li>
+            <li>
+              Help elect the ECC for the upcoming year
+            </li>
+            <li>
+              Has the power to accept or decline amendments made to the constitution
+            </li>
+          </ul>
+          <p>
+            Voting requires a two-thirds attendance in order to reach quorum.
+            MReps will serve a full academic year in conjunction with the Communications Chairs. Should any 
+            MRep need to step down for any reasons, the institution must replace the MRep and connect them 
+            immediately with the Communications Chairs for updates.
+          </p>
+          <p>
+            Any school or national organization falling within the Midwest region is eligible to join MAASU 
+            as set forth in the bylaws. All authority of MAASU shall ultimately rest in the member schools 
+            in conjuncture with the Executive Coordinating Committee.
+          </p>
+          <p>
+            For additional questions regarding membership please contact our membership outreach chairs 
+            at <a href='mailto:memoutreach@maasu.org'>memoutreach@maasu.org</a>.
+          </p>
         </Page>
         <Page>
-        Any school or national organization falling within the Midwest region is eligible to join MAASU as set forth in the bylaws. All authority of MAASU shall ultimately rest in the member schools in conjuncture with the Executive Coordinating Committee.
-For any questions about membership please contact our Membership Outreach Chairs at: ecc@maasu.org
-Eligibility
-MAASU will recognize three forms of membership as outlined:
-Campus Organizations: Hereinafter referred to as “member schools.” Membership shall be open to any formally recognized Asian American student organization at an institution of Higher Education. Has voting privileges.
-Affiliate Organization Membership: Hereinafter referred to as “affiliates.” Membership shall also be open to any nationally recognized Asian American organization. Must have college student representative in order to have voting privileges.
-Prices
-1 year membership: $75.00
-2 year membership: $140.00
-3 year membership: $200.00
-Choose for how long you want to be a member below!
-MAASU Membership
-          {/* TODO paypal for listed membership prices */}
+          <Type variant='h2'>Eligibility</Type>
+          <p>
+            MAASU recognizes the forms of membership as outlined:
+          </p>
+          <ul>
+            <li>
+              Campus Organizations: Hereinafter referred to as “member schools.” Membership shall be open to 
+              any formally recognized Asian American student organization at an institution of Higher 
+              Education. Has voting privileges.
+            </li>
+            <li>
+              Affiliate Organization Membership: Hereinafter referred to as “affiliates.” Membership shall 
+              also be open to any nationally recognized Asian American organization. Must have college student 
+              representative in order to have voting privileges.
+            </li>
+          </ul>
+          <Type variant='h2'>Join</Type>
+
+          <Type variant='sub6'>(you will be redirected to Paypal for secure payment confirmation)</Type>
+          <form className={`${modules.payment}`} action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+            <input name="cmd" type="hidden" value="_s-xclick"/>
+            <input name="hosted_button_id" type="hidden" value="PAC57KL3CTH2A"/>
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <p>MAASU offers three plans for membership:</p>
+                    <select name="os0">
+                      <option value="1 Year">1 Year $75.00 USD</option>
+                      <option value="2 Years">2 Years $140.00 USD</option>
+                      <option value="3 Years">3 Years $200.00 USD</option>
+                    </select>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <p>
+              <input name="currency_code" type="hidden" value="USD"/><br/>
+              <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" type="image"/><br/>
+              <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0"/>
+            </p>
+          </form>
+
         </Page>
+        <div className='footerSpace'></div>
       </React.Fragment>
     );
   }
