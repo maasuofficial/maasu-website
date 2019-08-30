@@ -1,5 +1,6 @@
 import React from 'react';
-import { Upcoming } from '../';
+// import { Upcoming } from '../';
+import LS from '../Upcoming/LS';
 
 class Home extends React.Component {
   componentDidMount() {
@@ -23,8 +24,9 @@ class Home extends React.Component {
           TODO hear what they have to say
         </Page> */}
 
-        <Upcoming />
-
+        {/* <Upcoming /> */}
+        <LS />
+        
       </React.Fragment>
     );
   }
