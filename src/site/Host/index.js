@@ -50,10 +50,10 @@ class Host extends React.Component {
               <Type variant='sub5'>Example bid packets for Leadership Summits:</Type>
               <ul>
                 <li>
-                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/Bid-2016-LS-Northwestern-University.pdf`}>2016</a>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2016-LS-Northwestern-University.pdf`}>2016</a>
                 </li>
                 <li>
-                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/Bid-2017-LS-University-of-Missouri.pdf`}>2017</a>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2017-LS-University-of-Missouri.pdf`}>2017</a>
                 </li>
               </ul>
             </div>
@@ -63,10 +63,10 @@ class Host extends React.Component {
               <Type variant='sub5'>Example bid packets for Spring Conferences:</Type>
               <ul>
                 <li>
-                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/Bid-2018-SC-The-Ohio-State-University.pdf`}>2018</a>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2018-SC-The-Ohio-State-University.pdf`}>2018</a>
                 </li>
                 <li>
-                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/Bid-2019-SC-University-of-Colorado-Boulder.pdf`}>2019</a>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2019-SC-University-of-Colorado-Boulder.pdf`}>2019</a>
                 </li>
               </ul>
             </div>
