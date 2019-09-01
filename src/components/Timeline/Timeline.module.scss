@@ -1,6 +1,6 @@
 @import 'src/util';
 
-$stringWidth: 5px;
+$stringWidth: calc(var(--spacing) / 8);
 $stringColor: var(--palette-primary-main);
 
 .container { padding: 0 calc(var(--spacing) / 2) }
@@ -19,9 +19,8 @@ $stringColor: var(--palette-primary-main);
 }
 
 // right
-.timeContainer:nth-child(2n) { 
+.timeContainer:nth-child(2n) {
   flex-direction: row-reverse;
-  // text-align: right;
 }
 
 .timeContainer:not(:first-child)::after {
@@ -35,9 +34,7 @@ $stringColor: var(--palette-primary-main);
   transform: translate(-50%);
 }
 
-.labelContainer {
-  position: relative;
-}
+.labelContainer { position: relative }
 
 .labelContainer::after {
   content: '';
@@ -56,13 +53,13 @@ $stringColor: var(--palette-primary-main);
 }
 
 .timeContainer:last-child .labelContainer::after {
-  height: 50%;
+  height: 100%;
 }
 
 .labelContainer > div {
   position: absolute;
   top: 50%;
-  padding: calc(var(--spacing) / 8);
+  padding: $stringWidth;
 
   color: var(--palette-background-main);
   background-color: $stringColor;
@@ -71,22 +68,19 @@ $stringColor: var(--palette-primary-main);
   transform: translate(-50%, -50%);
   z-index: 1;
 
-  & > span {
-    position: relative;
-  }
-
+  & > span { position: relative }
 }
 
 .contentContainer {
-  padding: calc(var(--spacing) / 2) var(--spacing);
+  padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
 
-  h4 {
-    margin: 0.5em 0;  
-  }
-  
-  p {
-    margin: 0;
-  }
-  
+  h4 { margin: calc(var(--spacing) / 8) 0 }
+  p { margin: 0 }
 }
 
+@media #{$md-up} {
+  .contentContainer {
+    padding: calc(var(--spacing) / 2) var(--spacing);
+    h4 { margin: calc(var(--spacing) / 4) 0 }
+  }
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Page, Type } from '../../components';
+import modules from './Mission.module.scss';
 
 class Mission extends React.Component {
   componentDidMount() {
@@ -10,12 +11,15 @@ class Mission extends React.Component {
     return (
       <React.Fragment>
         <Page>
-          <Type variant='subtitle2'>Purpose</Type>
+          <Type variant='sub2'>Our Purpose</Type>
+          <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/Logo-wSymbol.svg`} alt='The Midwest Asian American Students Union' />
           <p>
             The Midwest Asian American Students Union (MAASU) is an organization that began in response
             to a need for political unity among Asian American students in the Midwest. By 1990, there
             were more than 20 universities in the Midwest that had formed Asian Pacific Islander American
             (APIA) organizations. Some had been around for years, while others were still in their infancy.
+          </p>
+          <p>
             Students felt a need for an organization that would support the growth of their groups and organize
             Midwestern Asian American students for political activism. MAASU works to recognize the needs of
             the Asian American community by assisting schools with the establishment of Asian American student
@@ -25,7 +29,7 @@ class Mission extends React.Component {
           </p>
         </Page>
         <Page>
-          <Type variant='subtitle2'>Mission</Type>
+          <Type variant='sub2'>Our Mission</Type>
           <p>
             The Midwest Asian American Students Union strives to recognize the needs of the Asian Pacific
             Islanders American (APIA) Community. The following list contains the objectives of MAASU:</p>
@@ -43,6 +47,7 @@ class Mission extends React.Component {
             <li>Unite and strengthen the APIA community‘s stance against all forms of oppression</li>
           </ul>
         </Page>
+        <div className='footerSpace'></div>
       </React.Fragment>
     );
   }

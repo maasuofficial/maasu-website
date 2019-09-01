@@ -1,6 +1,25 @@
 @import 'src/util';
 
+.contact p,
+.contact .linkContainer,
+.contact .linkGrid,
 .contact footer { text-align: center }
+
+.contact .linkContainer {
+  padding: var(--spacing) 0;
+}
+
+.linkGrid { display: inline-flex }
+
+.linkGrid a {
+  font-size: calc(var(--typography-fontSize) * 3);
+  padding: 0 calc(var(--spacing) / 2);
+  color: var(--palette-text-light);
+
+  &:hover {
+    color: var(--palette-primary-main);
+  }
+}
 
 .logo {
   margin-top: var(--spacing);

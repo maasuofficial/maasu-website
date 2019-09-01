@@ -1,0 +1,44 @@
+@import 'src/util';
+
+.content {
+  height: 100%;
+  text-align: center;
+}
+.content img { width: 100% }
+
+.conferenceContent {
+  display: inline-block;
+  padding: calc(var(--spacing) / 8);
+}
+
+.conferenceContent p {
+  display: inline-block;
+  margin-bottom: calc(var(--spacing) / 8);
+}
+
+.conferenceContent p span { font-size: 0.8em }
+
+@media #{$md-up} {
+  .conferenceContent { padding: calc(var(--spacing) / 4) }
+}
+
+.content header {
+  margin-bottom: calc(var(--spacing) / 8);
+  display: inline-block;
+
+  p, h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+}
+
+@media #{$md-up} {
+  .content img { width: 80% }
+  .content header {
+    p, h1 { font-size: 3em }
+  }
+}
+
+@media #{$lg-up} {
+  .content img { width: 60% }
+}

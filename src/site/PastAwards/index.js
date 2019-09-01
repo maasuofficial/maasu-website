@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page } from '../../components';
+import { Page, Type } from '../../components';
 
 class PastAwards extends React.Component {
   componentDidMount() {
@@ -9,20 +9,71 @@ class PastAwards extends React.Component {
   render() {
     return (
       <Page>
-        past award recipients:
+        <Type variant='h2'>Past Award Recipients</Type>
 
-        Past Board of Advisors Award Winners:
-2007-2008: University of Missouri – Asian American Association
-2009-2010: University of Minnesota – Asian-American Student Union
-2010-2011: University of Missouri – Asian American Association
-2011-2012: Oklahoma State University – Asian American Student Association
-2012-2013: Loyola University of Chicago – Project Voice
-2013-2014: Northwestern University – Asian Pacific American Coalition
-2014-2015: University of Missouri – Asian American Association
-2015-2016: St. Louis University – Asian American Association
-2016-2017: University of Minnesota- Duluth
-2018-2019: Michigan State University - Chinese Student Coalition
-
+        <Type variant='sub4'>Past Board of Advisors Award Winners</Type>
+        <table>
+          <thead>
+            <tr>
+              <td>Organization</td>
+              <td>School</td>
+              <td>Year</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Chinese Student Coalition</td>
+              <td>Michigan State University</td>
+              <td>2019</td>
+            </tr>
+            <tr>
+              <td>Asian American Association</td>
+              <td>University of Minnesota-Duluth</td>
+              <td>2017</td>
+            </tr>
+            <tr>
+              <td>Asian American Association</td>
+              <td>St. Louis University</td>
+              <td>2016</td>
+            </tr>
+            <tr>
+              <td>Asian American Association</td>
+              <td>University of Missouri</td>
+              <td>2015</td>
+            </tr>
+            <tr>
+              <td>Asian Pacific American Coalition</td>
+              <td>Northwestern University</td>
+              <td>2014</td>
+            </tr>
+            <tr>
+              <td>Project Voice</td>
+              <td>Loyola University of Chicago</td>
+              <td>2013</td>
+            </tr>
+            <tr>
+              <td>Asian American Student Association</td>
+              <td>Oklahoma State University</td>
+              <td>2012</td>
+            </tr>
+            <tr>
+              <td>Asian American Association</td>
+              <td>University of Missouri</td>
+              <td>2011</td>
+            </tr>
+            <tr>
+              <td>Asian American Student Union</td>
+              <td>University of Minnesota</td>
+              <td>2010</td>
+            </tr>
+            <tr>
+              <td>Asian American Association</td>
+              <td>University of Missouri</td>
+              <td>2008</td>
+            </tr>
+          </tbody>
+        </table>
+        <div className='footerSpace'></div>
       </Page>
     );
   }

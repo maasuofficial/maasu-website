@@ -264,7 +264,7 @@ class History extends React.Component {
             <TTitle>Spring Conference <i>Be Bolder</i></TTitle>
             <TSub>March 8-9 | University of Colorado - Boulder, Boulder, CO</TSub>
             <TDesc>The 28th generation of ECC is elected.</TDesc>
-            <TTitle>Leadership Summit</TTitle>
+            <TTitle>Leadership Summit <i>Take Flight</i></TTitle>
             <TSub>October 18-19 | Wichita State University, Wichita, KS</TSub>
             <TTitle>Spring Conference</TTitle>
             <TSub>TBD | University of Minnesota-Twin Cities, MN</TSub>

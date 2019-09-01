@@ -1,14 +1,14 @@
 @import 'src/util';
 
 $menu-y-sm: var(--spacing);
-$menu-x-sm: 80%;
+$menu-x-sm: 75%;
 $transition: all 0.3s;
 
 $menu-y-md: var(--spacing);
-$menu-x-md: 50%;
+$menu-x-md: 40%;
 
 $menu-y-lg: var(--spacing);
-$menu-x-lg: 30%;
+$menu-x-lg: 25%;
 
 .wrapper {
   position: relative;
