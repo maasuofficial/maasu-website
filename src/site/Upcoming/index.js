@@ -1,6 +1,5 @@
 import React from 'react';
-import { Page } from '../../components';
-import modules from './Upcoming.module.scss';
+// import modules from './Upcoming.module.scss';
 import LS from './LS';
 import SC from './SC';
 
@@ -12,12 +11,8 @@ class Upcoming extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Page className={`${modules.conference}`}>
-          <LS />
-        </Page>
-        <Page className={`${modules.conference}`}>
-          <SC />
-        </Page>
+        <LS />
+        <SC />
       </React.Fragment>
     );
   }

@@ -1,0 +1,22 @@
+.profile {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: calc(var(--spacing) / 8);
+
+  text-align: center;
+  overflow-wrap: break-word;
+  background-color: var(--palette-background-main);
+
+  // box-shadow: 0 0 0 var(--palette-text-main);
+  // transform: scale(1);
+  // transition: all 0.2s;
+
+  img { width: 100% }
+
+  // &:hover {
+  //   z-index: 1;
+  //   transform: scale(1.1);
+  //   box-shadow: 0 0 5px var(--palette-text-light);
+  // }
+}

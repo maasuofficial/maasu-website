@@ -1,6 +1,9 @@
 @import 'src/util';
 
-.content { text-align: center }
+.content {
+  height: 100%;
+  text-align: center;
+}
 .content img { width: 100% }
 
 .conferenceContent {
