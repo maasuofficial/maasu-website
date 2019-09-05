@@ -11,22 +11,21 @@ class Home extends React.Component {
     return (
       <React.Fragment>
         {/* <Page>
-          TODO title page
+          title page
         </Page>
         <Upcoming />
         <Page>
-          TODO facebook feed
+          facebook feed
         </Page>
         <Page>
-          TODO instagram feed
+          instagram feed
         </Page>
         <Page>
-          TODO hear what they have to say
+          hear what they have to say
         </Page> */}
 
-        {/* <Upcoming /> */}
         <LS />
-        
+
       </React.Fragment>
     );
   }

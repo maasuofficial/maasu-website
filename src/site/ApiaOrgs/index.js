@@ -12,7 +12,6 @@ class ApiaOrgs extends React.Component {
         <Type variant='h2'>APIA Organizations and Conferences</Type>
         <p>*Denotes student organization</p>
         <ul>
-          {/* TODO add hrefs */}
           <li><a href='http://www.aalead.org/'>Asian American Leadership, Empowerment, and Development for Youth and Families (AALEAD)</a></li>
           <li><a href='https://www.aaldef.org/'>Asian American Legal Defense and Education Fund (AALDEF)</a></li>
           <li><a href='https://ross.campusgroups.com/aaba/home/'>Asian American Business Association (AABA)</a></li>
