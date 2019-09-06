@@ -36,16 +36,20 @@ class WrapperMenu extends React.Component {
     return (
       <div className={`${modules.wrapper} ${this.state.open ? modules.menuOpen : ''}`}>
         
-        {/* trigger */}
+        {/* trigger menu */}
 
-        <a href='/'
-          className={`${modules.trigger}`}
-          onClick={this.handleClick}
-          aria-expanded={this.state.open}
-          role='button'
-        >
-          <FaAlignRight className={`${modules.menuIcon}`} />
-        </a>
+        <div className={`${modules.horizontalMenu}`}>
+
+          <a href='/'
+            className={`${modules.trigger}`}
+            onClick={this.handleClick}
+            aria-expanded={this.state.open}
+            role='button'
+          >
+            <FaAlignRight className={`${modules.menuIcon}`} />
+          </a>
+
+        </div>
 
         {/* menu */}
 

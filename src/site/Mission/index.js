@@ -41,7 +41,7 @@ class Mission extends React.Component {
             <li>Address educational needs and rights of the APIA community and provide scholarship
               information for all APIA students</li>
             <li>Develop and maintain a channel of communication for APIA student organizations in
-              the Midwest through emails, bi-weekly newsletter and networking</li>
+              the Midwest through emails, newsletters and networking</li>
             <li>Support and encourage all APIA students to work toward social change by providing a
               forum for social consciousness</li>
             <li>Unite and strengthen the APIA community‘s stance against all forms of oppression</li>

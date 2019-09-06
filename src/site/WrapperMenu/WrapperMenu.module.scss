@@ -19,6 +19,19 @@ $menu-x-lg: 25%;
   overflow: hidden;
 }
 
+// .horizontalMenu {
+//   position: absolute;
+//   height: var(--spacing);
+//   width: 100%;
+
+//   background-color: var(--palette-background-main);
+//   z-index: var(--zIndex-bar);
+// }
+
+// .menuOpen .horizontalMenu {
+//   background-color: transparent;
+// }
+
 .trigger {
   position: absolute;
   margin: calc(var(--spacing) / 4);
@@ -99,6 +112,10 @@ $menu-x-lg: 25%;
     color: var(--palette-background-main); 
     margin: 0;
     padding-left: calc(var(--spacing) / 4);
+    
+    a, span {
+      font-size: 1.2em;
+    }
   }
 
   li { padding: 0.2em 0 }
