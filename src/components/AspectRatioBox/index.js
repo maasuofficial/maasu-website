@@ -8,22 +8,24 @@ class AspectRatioBox extends Component {
 
     let classes = (typeof className === 'string') ? className.split(' ') : [];
     classes.push(`${modules.aspectRatioBox}`);
-    let styles = { ...style }
+    let styles = { ...style };
 
-    styles.width = width ? width : '100%';
+    styles.width = width || '100%';
 
     let ratio = aspectRatio || ar;
-    styles['--aspect-ratio'] = (ratio.length > 0) ? ratio : '1';
+    styles['--aspect-ratio'] = ratio || '1';
 
     return (
       <div {...props} className={classes.join(' ')} style={styles}>
-        {(resize || resizeable) ? (children) : (
-          <div className={`${modules.aspectRatioBoxAbsolute}`}>
-            <div className={`${modules.aspectRatioBoxRelative}`}>
-              {children}
+        {(resize || resizeable) 
+          ? (children) 
+          : (
+            <div className={`${modules.aspectRatioBoxAbsolute}`}>
+              <div className={`${modules.aspectRatioBoxRelative}`}>
+                {children}
+              </div>
             </div>
-          </div>
-        )}
+          )}
       </div>
     );
   }
@@ -38,10 +40,6 @@ AspectRatioBox.propTypes = {
 }
 
 AspectRatioBox.defaultProps = {
-  ar: '',
-  aspectRatio: '',
-  resize: false,
-  resizeable: false,
   width: '100%',
 }
 

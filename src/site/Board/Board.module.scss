@@ -8,15 +8,12 @@
   overflow-wrap: break-word;
   background-color: var(--palette-background-main);
 
-  // box-shadow: 0 0 0 var(--palette-text-main);
-  // transform: scale(1);
-  // transition: all 0.2s;
+  cursor: pointer;
 
   img { width: 100% }
 
-  // &:hover {
-  //   z-index: 1;
-  //   transform: scale(1.1);
-  //   box-shadow: 0 0 5px var(--palette-text-light);
-  // }
+  &:hover {
+    z-index: 1;
+    box-shadow: 0 0 5px var(--palette-text-light);
+  }
 }

@@ -1,11 +1,17 @@
 @import 'src/util';
 
-.logo {
+.purpose img, .mission img {
   width: 100%;
   display: block;
   margin: 0 auto;
+  border-radius: calc(var(--spacing) / 8);
+}
+
+.mission ul li {
+  padding: calc(var(--spacing) / 8) 0;
 }
 
 @media #{$md-up} {
-  .logo { width: 50% }
+  .purpose img, .mission img { width: 75% }
+  .logo { width: 50% !important }
 }

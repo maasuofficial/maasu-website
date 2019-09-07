@@ -18,6 +18,14 @@ describe('typography component', () => {
   })
 
   // routine
+  it('passes classes to appropriate children', () => {
+    let ref1 = 'testClass1', ref2 = 'testClass2';
+    renderType({ className: `${ref1} ${ref2}`});
+    let result = document.querySelector(`.${ref1}.${ref2}`)
+    expect(result).not.toBeNull();  
+  })
+
+  // routine
   it('renders children text properly', () => {
     let test = 'test text here';
     const { getByText } = renderType({}, <b>{test}</b>);

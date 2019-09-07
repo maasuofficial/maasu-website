@@ -1,24 +1,41 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { cleanup, render } from '@testing-library/react';
 import 'jest-dom/extend-expect';
 import ARBox from './';
 
 afterEach(cleanup);
 
-describe('aspect ratio box component', () => {
-  let renderARBox;
-
+describe('render', () => {
+  let renderARBox = (props, children) => render(<ARBox {...props}>{children}</ARBox>);
   const randIntInRange = (min, max) => Math.round( (Math.random() * (max - min)) + min );
 
-  beforeEach(() => {
-    renderARBox = (props, children) => render(<ARBox {...props}>{children}</ARBox>);
+  // routine
+  it('renders without crashing', () => {
+    const div = document.createElement('div');
+    ReactDOM.render(<ARBox />, div);
+    ReactDOM.unmountComponentAtNode(div);
   })
 
   it('renders children', () => {
-    let id = 'child-test-id';
-    const { getByTestId } = renderARBox({}, <div data-testid={id}></div>);
+    renderARBox({}, <span>child</span>);
+    let result = document.querySelector('span');
+    expect(result).not.toBeNull();
+  })
 
-    expect(getByTestId(id)).toBeDefined();
+  // routine
+  it('adds ARBox classes to appropriate children', () => {
+    renderARBox();
+    let result = document.querySelector('.aspectRatioBox');
+    expect(result).not.toBeNull();
+  })
+
+  // routine
+  it('passes classNames to appropriate children', () => {
+    let ref1 = 'helloTest', ref2 = 'testClass32';
+    renderARBox({ className: `${ref1} ${ref2}`});
+    let result = document.querySelector(`.aspectRatioBox.${ref1}.${ref2}`);
+    expect(result).not.toBeNull();  
   })
 
   it('matches the specified width', () => {
@@ -27,6 +44,12 @@ describe('aspect ratio box component', () => {
     const { getByTestId } = renderARBox({ 'data-testid': id, width });
 
     expect(getByTestId(id)).toHaveStyle(`width: ${width}`);
+  })
+
+  it('uses a default width of 100%', () => {
+    let id = 'test-container-width';
+    const { getByTestId } = renderARBox({ 'data-testid': id, width: null });
+    expect(getByTestId(id)).toHaveStyle('width: 100%');
   })
 
   it('does not allow resizing by default', () => {
@@ -60,3 +83,16 @@ describe('aspect ratio box component', () => {
   })
 
 })
+/*
+describe('aspect ratio box component', () => {
+
+  it('renders children', () => {
+    let id = 'child-test-id';
+    const { getByTestId } = renderARBox({}, <div data-testid={id}></div>);
+
+    expect(getByTestId(id)).toBeDefined();
+  })
+
+
+})
+*/

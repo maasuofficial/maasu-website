@@ -1,10 +1,15 @@
 import React from 'react';
-import { ARBox, Cell, Grid, Page, Type } from '../../components';
+import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components';
 import modules from './Board.module.scss';
 
 class Board extends React.Component {
   componentDidMount() {
     document.title = 'Executive Board - The Midwest Asian American Students Union';
+  }
+
+  expandProfile(e) {
+    // TODO
+    console.log(e.currentTarget);
   }
 
   render() {
@@ -15,11 +20,13 @@ class Board extends React.Component {
           
           <Grid>
 
-            {/* {[...Array(10)].map((i, index) => 
+            {[...Array(10)].map((i, index) => 
 
               <Cell key={index} auto sm={6} md={4} lg={3}><ARBox resizeable>
-                <div className={`${modules.profile}`}>
-                  <img src={`${process.env.PUBLIC_URL}/assets/img/profiles/ElaineChen.jpg`} alt='Elaine Chen' />
+                <div className={`${modules.profile}`} onClick={this.expandProfile}>
+                  {/* <BImg src='' alt='Elaine Chen' /> */}
+                  <BImg src={`${process.env.PUBLIC_URL}/assets/img/profiles/ElaineChen.jpg`} alt='Elaine Chen' />
+                  
                   <Type variant='text4'>Elaine Chen</Type>
                   <br />
                   <span>Chair</span>
@@ -28,7 +35,7 @@ class Board extends React.Component {
                 </div>
               </ARBox></Cell>
 
-            )} */}
+            )}
 
             <Cell auto sm={6} md={4} lg={3}><ARBox resizeable>
               <div className={`${modules.profile}`}>
@@ -152,7 +159,7 @@ class Board extends React.Component {
           <Grid>
 
             <Cell auto sm={6} md={4} lg={3}><ARBox resizeable>
-              <div className={`${modules.profile}`}>
+              <div className={`${modules.profile}`} >
                 <img src={`${process.env.PUBLIC_URL}/assets/img/profiles/VictoriaYu.jpg`} alt='Victoria Yu' />
                 <Type variant='text4'>Victoria Yu</Type>
                 <br />
@@ -233,7 +240,7 @@ class Board extends React.Component {
           <p>
             Applications for the Board of Advisors are currently closed. 
           </p>
-          </Page>
+        </Page>
         <div className='footerSpace'></div>
       </React.Fragment>
     );
