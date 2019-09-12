@@ -1,19 +1,67 @@
-.profile {
+$transition: 0.5s;
+
+.pageContainer {
   position: relative;
+  background-color: var(--palette-background-main);
+  left: 0;
+  transition: all $transition;
+
+  &.expanded { left: -100% }
+}
+
+.profileContainer { position: inherit }
+
+.profileTrigger {
+  color: inherit;
+  text-decoration: none;
+}
+
+.profile {
   height: 100%;
   width: 100%;
   padding: calc(var(--spacing) / 8);
-
   text-align: center;
-  overflow-wrap: break-word;
-  background-color: var(--palette-background-main);
 
-  cursor: pointer;
+  border-style: solid;
+  border-color: transparent;
+  border-width: 0px;
 
+  transition: border-width 0.1s;
+
+  &:hover { border-width: calc(var(--spacing) / 4) }
   img { width: 100% }
+  p { margin: 0 }
+}
 
-  &:hover {
-    z-index: 1;
-    box-shadow: 0 0 5px var(--palette-text-light);
-  }
+.profileInfo {
+  position: fixed;
+  top: 0;
+  left: 100%;
+  height: 100%;
+  width: 100%;
+
+  transition: left $transition, opacity $transition;
+  z-index: 1;
+  
+  &.priority { z-index: 1; opacity: 1; }
+  &:not(.priority) { z-index: 0; opacity: 0; }
+
+  &.expanded { left: 0 }
+}
+
+.close {
+  position: absolute;
+
+  // extra right margin accounting for scroll bar
+  right: calc(var(--spacing) / 4);
+  margin: calc(var(--spacing) / 4);
+
+  background-color: initial;
+  border: none;
+  color: var(--palette-text-main);
+  font-size: calc(var(--spacing) / 2);
+  line-height: calc(var(--spacing) / 2);
+  
+  cursor: pointer;
+  z-index: var(--zIndex-trigger);
 }

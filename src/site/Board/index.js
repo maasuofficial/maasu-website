@@ -1,40 +1,73 @@
 import React from 'react';
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components';
+import { FaChevronLeft } from 'react-icons/fa';
 import modules from './Board.module.scss';
 
 class Board extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleExpansion = this.toggleExpansion.bind(this);
+    this.toggleContraction = this.toggleContraction.bind(this);
+
+    this.state = { expanded: false };
+  }
   componentDidMount() {
     document.title = 'Executive Board - The Midwest Asian American Students Union';
   }
 
-  expandProfile(e) {
-    // TODO
-    console.log(e.currentTarget);
+  toggleExpansion(e) {
+    e.preventDefault();
+    const profileInfo = e.currentTarget.nextSibling;
+
+    // add class in callback or else rerender will overwrite added classes
+    this.setState({ expanded: true }, 
+      () => profileInfo.classList.add(modules.priority));
+  }
+
+  toggleContraction(e) {
+    e.preventDefault();
+    const profileInfo = e.currentTarget.parentNode;
+
+    this.setState({ expanded: false }, 
+      () => profileInfo.classList.remove(modules.priority));
   }
 
   render() {
+    const { expanded } = this.state;
+
     return (
-      <React.Fragment>
+      <div className={`${modules.pageContainer} ${expanded ? modules.expanded : ''}`}>
         <Page>
           <Type variant='h2'>Executive Coordinating Committee</Type>
           
           <Grid>
 
             {[...Array(10)].map((i, index) => 
+              <Cell key={index} auto sm={6} md={4} lg={3}><ARBox className={`${modules.profileContainer}`} resizeable>              
+                <a href='/'
+                  className={`${modules.profileTrigger}`}
+                  onClick={this.toggleExpansion}
+                  aria-label='profile link'
+                  aria-expanded={expanded}
+                >
+                  <div className={`${modules.profile}`}>
+                    <BImg src={`${process.env.PUBLIC_URL}/assets/img/profiles/ElaineChen.jpg`} alt='Elaine Chen' />
+                    <Type variant='sub5'>Elaine Chen</Type>
+                    <span>Chair</span>
+                  </div>
+                </a>
+  
+                <div className={`${modules.profileInfo} ${expanded ? modules.expanded : ''}`}>
+                  <a href='/' className={`${modules.close}`} onClick={this.toggleContraction}>
+                    <FaChevronLeft />
+                  </a>
 
-              <Cell key={index} auto sm={6} md={4} lg={3}><ARBox resizeable>
-                <div className={`${modules.profile}`} onClick={this.expandProfile}>
-                  {/* <BImg src='' alt='Elaine Chen' /> */}
-                  <BImg src={`${process.env.PUBLIC_URL}/assets/img/profiles/ElaineChen.jpg`} alt='Elaine Chen' />
-                  
-                  <Type variant='text4'>Elaine Chen</Type>
-                  <br />
-                  <span>Chair</span>
-                  <br />
-                  <a href='mailto:chair@maasu.org'>chair@maasu.org</a>
+                  <Type variant='h1'>index {index}</Type>
+
                 </div>
+  
               </ARBox></Cell>
-
             )}
 
             <Cell auto sm={6} md={4} lg={3}><ARBox resizeable>
@@ -150,14 +183,13 @@ class Board extends React.Component {
           </Grid>
 
           <p>
-            ECC Applications for the 2019-2020 academic year will be open in Spring 2019.
+            Executive Coordinating Committee Applications for the 2019-2020 academic year will be open in Spring 2019.
           </p>
         </Page>
         <Page>
-          <Type variant='h2'>Directors Council</Type>
+          <Type variant='h2'>Executive Director</Type>
 
           <Grid>
-
             <Cell auto sm={6} md={4} lg={3}><ARBox resizeable>
               <div className={`${modules.profile}`} >
                 <img src={`${process.env.PUBLIC_URL}/assets/img/profiles/VictoriaYu.jpg`} alt='Victoria Yu' />
@@ -168,6 +200,12 @@ class Board extends React.Component {
                 <a href='mailto:execdirector@maasu.org'>execdirector@maasu.org</a>
               </div>
             </ARBox></Cell>
+          </Grid>
+        </Page>
+        <Page>
+          <Type variant='h2'>Directors Council</Type>
+
+          <Grid>
 
             <Cell auto sm={6} md={4} lg={3}><ARBox resizeable>
               <div className={`${modules.profile}`}>
@@ -206,7 +244,7 @@ class Board extends React.Component {
 
           <p>
             Applications for the Directors Council are currently closed. 
-            The next application cycle will be Spring 2021.
+            The next application cycle will be in Spring of 2021.
           </p>
 
         </Page>
@@ -242,7 +280,7 @@ class Board extends React.Component {
           </p>
         </Page>
         <div className='footerSpace'></div>
-      </React.Fragment>
+      </div>
     );
   }
 }

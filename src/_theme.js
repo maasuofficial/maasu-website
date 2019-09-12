@@ -57,6 +57,7 @@ export default {
   },
   spacing: '4rem',
   zIndex: {
+    page: 1000,
     bar: 1100,
     trigger: 1200,
     modal: 1300,

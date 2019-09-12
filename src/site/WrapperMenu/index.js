@@ -44,6 +44,7 @@ class WrapperMenu extends React.Component {
           className={`${modules.trigger}`}
           onClick={this.handleClick}
           aria-expanded={this.state.open}
+          aria-label='menu button'
           role='button'
         >
           <FaAlignRight className={`${modules.menuIcon}`} />
