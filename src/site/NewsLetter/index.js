@@ -28,6 +28,14 @@ class NewsLetter extends React.Component {
             <tr>
               <td>
                 <a target='_blank' rel='noopener noreferrer'
+                  href={'https://issuu.com/aliceyu23/docs/1._maasu_september_newsletter'}
+                >September 2019</a>
+              </td>
+              <td>4</td><td>1</td>
+            </tr>
+            <tr>
+              <td>
+                <a target='_blank' rel='noopener noreferrer'
                   href={`${process.env.PUBLIC_URL}/assets/files/newsletters/Newsletter-3-1.pdf`}
                 >August 2016</a>
               </td>

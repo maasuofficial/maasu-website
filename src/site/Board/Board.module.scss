@@ -1,12 +1,17 @@
-$transition: 0.5s;
+@import 'src/util';
+$transition: 0.3s;
 
 .pageContainer {
   position: relative;
   background-color: var(--palette-background-main);
   left: 0;
   transition: all $transition;
-
+  
   &.expanded { left: -100% }
+}
+
+.groupPage:not(:first-child) {
+  border-top: calc(var(--spacing) / 16) solid var(--palette-background-dark);
 }
 
 .profileContainer { position: inherit }
@@ -21,16 +26,22 @@ $transition: 0.5s;
   width: 100%;
   padding: calc(var(--spacing) / 8);
   text-align: center;
-
+  
   border-style: solid;
   border-color: transparent;
   border-width: 0px;
-
+  
   transition: border-width 0.1s;
-
-  &:hover { border-width: calc(var(--spacing) / 4) }
-  img { width: 100% }
+  
+  img {
+    width: 100%;
+    border-radius: calc(var(--spacing) / 16);
+  }
   p { margin: 0 }
+}
+
+@media #{$md-up} {
+  .profile:hover { border-width: calc(var(--spacing) / 4) }
 }
 
 .profileInfo {
@@ -40,28 +51,54 @@ $transition: 0.5s;
   height: 100%;
   width: 100%;
 
-  transition: left $transition, opacity $transition;
+  background-color: var(--palette-background-main);
+  text-align: center;
   z-index: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: left $transition;
   
-  &.priority { z-index: 1; opacity: 1; }
-  &:not(.priority) { z-index: 0; opacity: 0; }
+  &.priority { z-index: 1 }
+  &:not(.priority) { z-index: 0 }
 
   &.expanded { left: 0 }
 }
 
 .close {
   position: absolute;
-
-  // extra right margin accounting for scroll bar
-  right: calc(var(--spacing) / 4);
+  top: 0;
+  right: 0;
   margin: calc(var(--spacing) / 4);
 
   background-color: initial;
   border: none;
-  color: var(--palette-text-main);
+  color: var(--palette-primary-dark);
   font-size: calc(var(--spacing) / 2);
   line-height: calc(var(--spacing) / 2);
   
   cursor: pointer;
   z-index: var(--zIndex-trigger);
+}
+
+.profileInfo {
+
+  img { width: calc(100% - var(--spacing)) }
+  a { color: inherit }
+
+}
+
+@media #{$md-up} {
+
+  .profileInfo {
+    img { width: 70% }
+  }
+
+}
+
+@media #{$lg-up} {
+
+  .profileInfo {
+    img { width: 50% }
+  }
+
 }

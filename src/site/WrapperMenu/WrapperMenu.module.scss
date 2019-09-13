@@ -19,19 +19,6 @@ $menu-x-lg: 25%;
   overflow: hidden;
 }
 
-// .horizontalMenu {
-//   position: absolute;
-//   height: var(--spacing);
-//   width: 100%;
-
-//   background-color: var(--palette-background-main);
-//   z-index: var(--zIndex-bar);
-// }
-
-// .menuOpen .horizontalMenu {
-//   background-color: transparent;
-// }
-
 .trigger {
   position: absolute;
   margin: calc(var(--spacing) / 4);
@@ -46,6 +33,41 @@ $menu-x-lg: 25%;
   z-index: var(--zIndex-trigger);
 
   .menuIcon { transform: rotate(180deg) }
+}
+
+$radius: calc(var(--spacing) * 2);
+
+.trigger.attention::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
+
+  border-radius: 50%;
+  opacity: 0.4;
+  background-color: var(--palette-primary-main);
+  transform: translate(-50%, -50%);
+  z-index: -1;
+
+  -webkit-animation: Pop 5s ease-in-out infinite;
+  animation: Pop 5s ease-in-out infinite;
+}
+
+@-webkit-keyframes Pop {
+  0% { height: 0; width: 0; }
+  10% { height: $radius; width: $radius; }
+  30% { height: $radius; width: $radius; }
+  40% { height: 0; width: 0; }
+  100% { height: 0; width: 0; }
+}
+@keyframes Pop {
+  0% { height: 0; width: 0; }
+  10% { height: $radius; width: $radius; }
+  30% { height: $radius; width: $radius; }
+  40% { height: 0; width: 0; }
+  100% { height: 0; width: 0; }
 }
 
 .wrapperMenu {

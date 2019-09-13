@@ -18,10 +18,17 @@ class WrapperMenu extends React.Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleMenuClose = this.handleMenuClose.bind(this);
     this.state = { open: false };
+
+    this.clickedMenu = false;
   }
 
   handleClick(e) {
     e.preventDefault();
+    this.clickedMenu = true;
+
+    let trigger = document.querySelector(`.${modules.trigger}`);
+    trigger.classList.remove(modules.attention);
+    
     let open = !this.state.open;
     this.setState({ open });
   }
@@ -32,25 +39,31 @@ class WrapperMenu extends React.Component {
     }
   }
 
+  componentDidMount() {
+    let time = 7; // seconds
+    setTimeout(() => {
+      if (!this.clickedMenu) {
+        let trigger = document.querySelector(`.${modules.trigger}`);
+        trigger.classList.add(modules.attention);
+      }
+    }, time * 1000);
+  }
+
   render() {
     return (
       <div className={`${modules.wrapper} ${this.state.open ? modules.menuOpen : ''}`}>
         
         {/* trigger menu */}
 
-        {/* <div className={`${modules.horizontalMenu}`}> */}
-
         <a href='/'
           className={`${modules.trigger}`}
           onClick={this.handleClick}
           aria-expanded={this.state.open}
-          aria-label='menu button'
+          aria-label='menu toggle button'
           role='button'
         >
           <FaAlignRight className={`${modules.menuIcon}`} />
         </a>
-
-        {/* </div> */}
 
         {/* menu */}
 
@@ -101,7 +114,6 @@ class WrapperMenu extends React.Component {
                 <Link>Archives</Link>
                 <Link href='/newsletter'>Newsletter</Link>
                 {/* <Link href='/report'>Annual Report</Link> */}
-                {/* <Link href='/pastconferences'>Past Conferences</Link> */}
                 <Link href='/pastawards'>Past Award Recipients</Link>
               </SubMenu>
 
