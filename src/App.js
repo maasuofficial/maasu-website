@@ -52,7 +52,6 @@ class App extends Component {
 
                 <Route path='/newsletter' component={NewsLetter} />
                 {/* <Route path='/report' component={Report} /> */}
-                {/* <Route path='/pastconferences' component={PastConf} /> */}
                 <Route path='/pastawards' component={PastAwards} />
 
                 <Route path='/contact' component={Contact} />

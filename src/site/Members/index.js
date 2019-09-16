@@ -33,42 +33,45 @@ class Members extends React.Component {
             For more information on eligibility and benefits, contact <a href='mailto:memoutreach@maasu.org'>memoutreach@maasu.org</a>.
           </p>
           <Type variant='h2'>Member Schools</Type>
-          {/* last updated 01/14/19 */}
+          {/* last updated 09/16/19 */}
           <ul>
-            <li><a href='https://www.augsburg.edu/panasian/augsburg-asian-student-association/'>Augsburg University</a></li>
+            {/* <li><a href='https://www.augsburg.edu/panasian/augsburg-asian-student-association/'>Augsburg University</a></li> */}
             <li><a href='https://bsu.edu/aasa'>Ball State University</a></li>
-            <li><a href='https://community.case.edu/aaa/home/'>Case Western Reserve University</a></li>
-            <li><a href='https://www.stritch.edu/Get-Involved/Clubs-Organizations'>Cardinal Stritch University</a></li>
-            <li><a href='https://cmich.campuslabs.com/engage/organization/asian-cultural-organization'>Central Michigan University</a></li>
+            {/* <li><a href='https://community.case.edu/aaa/home/'>Case Western Reserve University</a></li> */}
+            {/* <li><a href='https://www.stritch.edu/Get-Involved/Clubs-Organizations'>Cardinal Stritch University</a></li> */}
+            {/* <li><a href='https://cmich.campuslabs.com/engage/organization/asian-cultural-organization'>Central Michigan University</a></li> */}
             <li><a href='https://denison.edu/campus/diversity/student-organizations'>Denison University</a></li>
-            <li><a href='http://www.iupui.edu/~asunited/'>Indiana University-Purdue University Indianapolis (IUPUI)</a></li>
-            <li><a href='https://kzoo.presence.io/organization/asian-pacific-islander-student-association'>Kalamazoo College</a></li>
+            <li><a href='https://www.facebook.com/apacILSTU/'>Illinois State University</a></li>
+            {/* <li><a href='http://www.iupui.edu/~asunited/'>Indiana University-Purdue University Indianapolis (IUPUI)</a></li> */}
+            {/* <li><a href='https://kzoo.presence.io/organization/asian-pacific-islander-student-association'>Kalamazoo College</a></li> */}
             <li><a href='https://www.k-state.edu/aasu/AsianAmericaStudentUnion/Welcome.html'>Kansas State University</a></li>
-            <li><a href='https://msu.edu/~apaso/about.html'>Michigan State University</a></li>
-            <li><a href='https://www.asianamerican.northwestern.edu/'>Northwestern University</a></li>
-            <li><a href='https://www.nwtc.edu/student-experience/student-involvement/clubs-and-organizations/multicultural/asian-american-student-association'>Northeast Wisconsin Technical College</a></li>
-            <li><a href='https://www3.nd.edu/~aaa/'>Notre Dame University</a></li>
-            <li><a href='https://webstu.onu.edu/aasu/'>Ohio Northern University</a></li>
+            {/* <li><a href='https://msu.edu/~apaso/about.html'>Michigan State University</a></li> */}
+            {/* <li><a href='https://www.asianamerican.northwestern.edu/'>Northwestern University</a></li> */}
+            {/* <li><a href='https://www.nwtc.edu/student-experience/student-involvement/clubs-and-organizations/multicultural/asian-american-student-association'>Northeast Wisconsin Technical College</a></li> */}
+            {/* <li><a href='https://www3.nd.edu/~aaa/'>Notre Dame University</a></li> */}
+            {/* <li><a href='https://webstu.onu.edu/aasu/'>Ohio Northern University</a></li> */}
             <li><a href='https://www.facebook.com/aaaohiostate/?fref=ts'>The Ohio State University</a></li>
-            <li><a href='https://campuslink.okstate.edu/organization/asianamerican-student-association'>Oklahoma State University</a></li>
+            {/* <li><a href='https://campuslink.okstate.edu/organization/asianamerican-student-association'>Oklahoma State University</a></li> */}
             <li><a href='https://boilerlink.purdue.edu/organization/purdueaaa'>Purdue University at West Lafayette</a></li>
-            <li><a href='https://www.facebook.com/awa.st.catherine/'>St. Catherine’s University</a></li>
-            <li><a href='https://www.facebook.com/SLUAAA/'>St. Louis University</a></li>
+            {/* <li><a href='https://www.facebook.com/awa.st.catherine/'>St. Catherine’s University</a></li> */}
+            {/* <li><a href='https://www.facebook.com/SLUAAA/'>St. Louis University</a></li> */}
             <li><a href='https://www.facebook.com/groups/174617512566504/'>University of Colorado Boulder</a></li>
             <li><a href='https://www.facebook.com/AASIAUIC/'>University of Illinois at Chicago</a></li>
             <li><a href='https://www.facebook.com/AsianAmericanAssociationUIUC/'>University of Illinois at Urbana Champaign</a></li>
+            <li><a href='https://www.facebook.com/UIAPACC/'>University of Iowa</a></li>
             <li><a href='https://rockchalkcentral.ku.edu/organization/aasu'>University of Kansas</a></li>
             <li><a href='https://maizepages.umich.edu/organization/aaa'>University of Michigan – Ann Arbor</a></li>
-            <li><a href='https://bulldoglink.d.umn.edu/organization/apaa'>University of Minnesota – Duluth</a></li>
+            {/* <li><a href='https://bulldoglink.d.umn.edu/organization/apaa'>University of Minnesota – Duluth</a></li> */}
             <li><a href='https://www.asu-umn.org/'>University of Minnesota Twin Cities</a></li>
             <li><a href='https://www.facebook.com/mizzouaaa'>University of Missouri</a></li>
             <li><a href='https://www.facebook.com/UNLASU'>University of Nebraska Lincoln</a></li>
-            <li><a href='https://www.facebook.com/groups/uwpasiaclub/'>University of Wisconsin – Platteville</a></li>
+            {/* <li><a href='https://www.facebook.com/groups/uwpasiaclub/'>University of Wisconsin – Platteville</a></li> */}
             <li><a href='https://win.wisc.edu/organization/aasu'>University of Wisconsin – Madison</a></li>
-            <li><a href='https://www.vandyaasa.com/'>Vanderbilt University</a></li>
+            {/* <li><a href='https://www.vandyaasa.com/'>Vanderbilt University</a></li> */}
             <li><a href='https://www.valpo.edu/multicultural/student-organizations/asian-american-pacific-island-coalition-aapic/'>Valparaiso University</a></li>
-            <li><a href='https://www.facebook.com/aaa.wustl/'>Washington University – St Louis</a></li>
+            {/* <li><a href='https://www.facebook.com/aaa.wustl/'>Washington University – St Louis</a></li> */}
             <li><a href='https://www.facebook.com/ASCWSU/'>Wichita State University</a></li>
+            <li><a href='https://www.winona.edu/inclusion-diversity/clubs.asp'>Winona State University</a></li>
           </ul>
         </Page>
         <Page>

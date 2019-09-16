@@ -38,6 +38,22 @@ class WrapperMenu extends React.Component {
       this.setState({ open: false });
     }
   }
+  
+  retrieveCookie(cname) {
+    let cookies = decodeURIComponent(document.cookie);
+    
+    let start = cookies.indexOf(cname + '=') + (cname.length + 1);
+    let end = cookies.indexOf(';', start);
+
+    return (end < 0) ? cookies.substring(start) : cookies.substring(start, end);
+  }
+
+  storeCookie(cname, cvalue, exdays) {
+    let d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = d.toUTCString();
+    document.cookie = `${cname}=${cvalue}; expires=${expires}`;
+  }
 
   componentDidMount() {
     let time = 7; // seconds
@@ -47,6 +63,17 @@ class WrapperMenu extends React.Component {
         trigger.classList.add(modules.attention);
       }
     }, time * 1000);
+  
+    let cookie = this.retrieveCookie('openedMenuBefore');
+    
+    if (cookie.length === 0) {
+      this.storeCookie('openedMenuBefore', 'true', 30);
+    } else {
+      if (cookie === 'true') {
+        this.clickedMenu = true;
+      }
+    }
+
   }
 
   render() {

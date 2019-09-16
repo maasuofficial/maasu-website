@@ -55,7 +55,7 @@ class Board extends React.Component {
           {p.positionRole && <p>{p.positionRole}</p>}
           
           {p.personalGoal && <span>
-            <b>What is your personal goal for MAASU this year?</b>
+            <b>What is your personal goal this year?</b>
             <p>{p.personalGoal}</p>
           </span>}
 

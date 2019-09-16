@@ -46,7 +46,11 @@
   height: 100%;
   text-align: center;
 }
-.content img { width: 100% }
+.content img {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
 
 .conferenceContent {
   display: inline-block;
