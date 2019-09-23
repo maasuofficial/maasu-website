@@ -44,22 +44,25 @@ class Alumni extends React.Component {
               Fill out the MAASU Alumni Directory 
               Form <a href='https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1'>here</a>.
             </li>
-            <li>Provide a one-time membership payment of $30.00 USD via PayPal below.</li>
+            {/* <li>Provide a one-time membership payment of $30.00 USD via PayPal below.</li> */}
+            <li>Provide a one-time membership payment of $25.00 USD via PayPal below.</li>
             <li>
               After completing steps 1 and 2, access to the Alumni Directory will be granted and a MAA 
               wine glass will be mailed to you.
             </li>
           </ol>
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+          <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_s-xclick"/>
+            <input type="hidden" name="hosted_button_id" value="NXTRNY49H77YQ"/>
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
+            <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
+          </form>
+          {/* <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
             <input name="cmd" type="hidden" value="_s-xclick" /><br/>
             <input name="hosted_button_id" type="hidden" value="NXTRNY49H77YQ" /><br/>
             <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" type="image" /><br/>
             <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0" />
-          </form>
-          {/* <p>
-            If you would like more information or have any questions, please contact the Graduate 
-            Advisory Council gac@maasu.org
-          </p> */}
+          </form> */}
         </Page>
         <div className='footerSpace'></div>
       </React.Fragment>

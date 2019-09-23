@@ -49,6 +49,7 @@ class App extends Component {
                 <Route path='/apiaorgs' component={ApiaOrgs} />
 
                 <Route path='/alumni' component={Alumni} />
+                <Route path='/maa' component={Alumni} />
 
                 <Route path='/newsletter' component={NewsLetter} />
                 {/* <Route path='/report' component={Report} /> */}
