@@ -5,11 +5,14 @@ import { FaAlignRight } from 'react-icons/fa';
 import modules from './WrapperMenu.module.scss';
 import './WrapperMenu.scss';
 
+let menuOverride = false;
+
 const { Link, SubMenu } = UtilityMenu;
 
 const checkActive = function (href) {
-  return (match, location) => 
-    location ? (location.pathname === href) : false;
+  return (match, location) => location 
+    ? (location.pathname === href) 
+    : false;
 }
 
 class WrapperMenu extends React.Component {
@@ -77,6 +80,9 @@ class WrapperMenu extends React.Component {
   }
 
   render() {
+    // TEMP menuOverride for sc 2020 promo menu icon
+    menuOverride = (window.location.pathname === '/');
+
     return (
       <div className={`${modules.wrapper} ${this.state.open ? modules.menuOpen : ''}`}>
         
@@ -89,7 +95,8 @@ class WrapperMenu extends React.Component {
           aria-label='menu toggle button'
           role='button'
         >
-          <FaAlignRight className={`${modules.menuIcon}`} />
+          {/* TEMP for sc 2020 promo menu icon */}
+          <FaAlignRight className={`${modules.menuIcon} menuIconOverride`} style={{ color: menuOverride ? 'white' : 'inherit' }} />
         </a>
 
         {/* menu */}

@@ -1,5 +1,51 @@
 @import 'src/util';
 
+.container {
+  overflow: hidden;
+  background: var(--palette-text-main);
+  height: 100%;
+}
+
+.logo {
+  position: absolute;
+  top: calc(var(--spacing) / 7);
+  left: 0;
+  right: calc(var(--spacing) / 8);
+  height: calc(var(--spacing) / 1.4);
+  z-index: 1;
+
+  img {
+    display: block;
+    float: right;
+    height: 100%;
+  }
+
+}
+
+.promo {
+  position: absolute;
+  $offset: 60px;
+  top: calc(-1 * #{$offset});
+  left: calc(-1 * #{$offset});
+  height: calc(100% + calc(#{$offset} * 2));
+  width: calc(100% + calc(#{$offset} * 2));
+  overflow: hidden,
+}
+
+.promoOverlay {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  // background-color: red;
+  // z-index: 1;
+}
+
+/*
 .content {
   height: 100%;
   text-align: center;
@@ -42,3 +88,4 @@
 @media #{$lg-up} {
   .content img { width: 60% }
 }
+*/

@@ -1,6 +1,5 @@
 import React from 'react';
-// import { Upcoming } from '../';
-import LS from '../Upcoming/LS';
+import SC from '../Upcoming/SC';
 
 class Home extends React.Component {
   componentDidMount() {
@@ -24,7 +23,7 @@ class Home extends React.Component {
           hear what they have to say
         </Page> */}
 
-        <LS />
+        <SC />
 
       </React.Fragment>
     );
