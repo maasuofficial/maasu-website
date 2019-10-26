@@ -19,17 +19,6 @@
     float: right;
     height: 100%;
   }
-
-}
-
-.promo {
-  position: absolute;
-  $offset: 60px;
-  top: calc(-1 * #{$offset});
-  left: calc(-1 * #{$offset});
-  height: calc(100% + calc(#{$offset} * 2));
-  width: calc(100% + calc(#{$offset} * 2));
-  overflow: hidden,
 }
 
 .promoOverlay {
@@ -41,33 +30,74 @@
   right: 0;
   bottom: 0;
   left: 0;
-  // background-color: red;
-  // z-index: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.promoContent {
+  margin: var(--spacing);
+  height: calc(100% - calc(var(--spacing) * 2));
+  width: calc(100% - calc(var(--spacing) * 2));
+
+  h2 {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: var(--palette-background-main);
+
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  p, em {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  p { font-size: 0.6em }
+
+  a { color: inherit }
+
+  .note {
+    text-transform: unset;
+    font-size: 0.4em;
+    font-family: var(--typography-fontFamily-secondary);
+  }
+
+}
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
+
+em.golden {
+  font-size: 0.9em;
+  font-family: 'Libre Baskerville', serif;
+  -webkit-text-stroke: initial;
+  -webkit-text-fill-color: initial;  
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: #bf9b30;
+  $url: '/assets/img/gold.gif';
+  background: center / 300% url($url) no-repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+@media #{$md-up} {
+  .promoContent p { font-size: 0.9em }
+  em.golden { font-size: 1.5em }
+}
+
+@media #{$lg-up} {
+  em.golden { font-size: 2em }
 }
 
 /*
-.content {
-  height: 100%;
-  text-align: center;
-}
-.content img { width: 100% }
-
-.conferenceContent {
-  display: inline-block;
-  padding: calc(var(--spacing) / 8);
-}
-
-.conferenceContent p {
-  display: inline-block;
-  margin-bottom: calc(var(--spacing) / 8);
-}
-
-.conferenceContent p span { font-size: 0.8em }
-
-@media #{$md-up} {
-  .conferenceContent { padding: calc(var(--spacing) / 4) }
-}
-
 .content header {
   margin-bottom: calc(var(--spacing) / 8);
   display: inline-block;

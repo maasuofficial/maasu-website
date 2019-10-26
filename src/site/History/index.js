@@ -266,8 +266,8 @@ class History extends React.Component {
             <TDesc>The 28th generation of ECC is elected.</TDesc>
             <TTitle>Leadership Summit <i>Take Flight</i></TTitle>
             <TSub>October 18-19 | Wichita State University, Wichita, KS</TSub>
-            <TTitle>Spring Conference</TTitle>
-            <TSub>TBD | University of Minnesota-Twin Cities, MN</TSub>
+            <TTitle>Spring Conference <i>Unwritten</i></TTitle>
+            <TSub>March 20-22 | University of Minnesota-Twin Cities, MN</TSub>
           </Time>
         </Timeline>
       </Page>
