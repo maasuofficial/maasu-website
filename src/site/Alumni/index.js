@@ -57,6 +57,14 @@ class Alumni extends React.Component {
             <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"/>
             <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"/>
           </form>
+          <Type variant='h2'>Donation</Type>
+          <p>If you would like to support the MAASU Alumni Association, consider donating below:</p>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick" />
+            <input type="hidden" name="hosted_button_id" value="DTCJJ8EKEBWDQ" />
+            <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
+            <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+          </form>
           {/* <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
             <input name="cmd" type="hidden" value="_s-xclick" /><br/>
             <input name="hosted_button_id" type="hidden" value="NXTRNY49H77YQ" /><br/>
