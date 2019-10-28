@@ -12,7 +12,14 @@ class Board extends React.Component {
     this.toggleExpansion = this.toggleExpansion.bind(this);
     this.toggleContraction = this.toggleContraction.bind(this);
 
-    this.state = { expanded: false };
+    let profile = this.props.location.pathname.replace('/board', '').replace('/', '');
+    let names = Object.values(data).map((i) => i.nameConcatenated);
+
+    this.state = {
+      expanded: names.indexOf(profile) !== -1,
+      profile,
+    };
+
   }
   componentDidMount() {
     document.title = 'Executive Board - The Midwest Asian American Students Union';
@@ -21,59 +28,65 @@ class Board extends React.Component {
   generateProfiles(arr) {
     const { expanded } = this.state;
 
-    return arr.map((p, index) => 
-      <Cell key={index} auto sm={6} md={4} lg={3}><ARBox className={`${modules.profileContainer}`} resizeable>
-        <a href='/'
-          tabIndex={expanded ? -1 : 0}
-          className={`${modules.profileTrigger}`}
-          onClick={this.toggleExpansion}
-          aria-label='profile link'
-          aria-expanded={expanded}
-        >
-          <div className={`${modules.profile}`}>
+    return arr.map((p, index) => {
+      let isExpProfile = p.nameConcatenated === this.state.profile;
+      let expTabIndex = isExpProfile ? 0 : -1;
+      let expClasses = isExpProfile ? `${modules.priority} ${modules.expanded}` : '';
+
+      return (
+        <Cell key={index} auto sm={6} md={4} lg={3}><ARBox className={`${modules.profileContainer}`} resizeable>
+          <a href='/'
+            tabIndex={expanded ? -1 : 0}
+            className={`${modules.profileTrigger}`}
+            onClick={this.toggleExpansion}
+            aria-label='profile link'
+            aria-expanded={expanded}
+            >
+            <div className={`${modules.profile}`}>
+              <BImg src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`} alt={p.name} />
+              <Type variant='sub5'>{p.name}</Type>
+              <span>{p.position}</span>
+            </div>
+          </a>
+
+          <Page className={`${modules.profileInfo} ${expClasses}`}>
+            <Type variant='h2'>{p.name}</Type>
+
+            <a href='/' 
+              tabIndex={expTabIndex}
+              className={`${modules.close}`} 
+              onClick={this.toggleContraction}
+              ><FaArrowLeft /></a>
+
             <BImg src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`} alt={p.name} />
-            <Type variant='sub5'>{p.name}</Type>
-            <span>{p.position}</span>
-          </div>
-        </a>
+            <Type variant='text3'>{p.position}</Type>
+            <br />
 
-        <Page className={`${modules.profileInfo}`}>
-          <Type variant='h2'>{p.name}</Type>
-          
-          <a href='/' 
-            tabIndex='-1'
-            className={`${modules.close}`} 
-            onClick={this.toggleContraction}
-          ><FaArrowLeft /></a>
+            {p.email && <a tabIndex={expTabIndex} href={`mailto:${p.email}`}>{p.email}</a>}
 
-          <BImg src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`} alt={p.name} />
-          <Type variant='text3'>{p.position}</Type>
-          <br />
+            {p.positionRole && <p>{p.positionRole}</p>}
 
-          {p.email && <a tabIndex='-1' href={`mailto:${p.email}`}>{p.email}</a>}
+            {p.personalGoal && <span>
+              <b>What is your personal goal this year?</b>
+              <p>{p.personalGoal}</p>
+            </span>}
 
-          {p.positionRole && <p>{p.positionRole}</p>}
-          
-          {p.personalGoal && <span>
-            <b>What is your personal goal this year?</b>
-            <p>{p.personalGoal}</p>
-          </span>}
+            {p.favoriteSong && <span>
+              <b>Favorite song?</b>
+              <p>{p.favoriteSong}</p>
+            </span>}
 
-          {p.favoriteSong && <span>
-            <b>Favorite song?</b>
-            <p>{p.favoriteSong}</p>
-          </span>}
+            {p.favoriteMeme && <span>
+              <b>Favorite meme?</b>
+              <p>{p.favoriteMeme}</p>
+            </span>}
 
-          {p.favoriteMeme && <span>
-            <b>Favorite meme?</b>
-            <p>{p.favoriteMeme}</p>
-          </span>}
+            <div className='footerSpace'></div>
+          </Page>
 
-          <div className='footerSpace'></div>
-        </Page>
-
-      </ARBox></Cell>
-    );
+        </ARBox></Cell>
+      )
+    });
   }
 
   toggleExpansion(e) {
@@ -100,7 +113,6 @@ class Board extends React.Component {
   }
 
   render() {
-
     let groups = data.reduce((acc, val) => {
       const key = val.type;
 
