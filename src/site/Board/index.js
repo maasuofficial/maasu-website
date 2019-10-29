@@ -49,7 +49,7 @@ class Board extends React.Component {
             </div>
           </a>
 
-          <Page className={`${modules.profileInfo} ${expClasses}`}>
+          <Page className={`${modules.profileInfo} ${expClasses}`} name={p.nameConcatenated}>
             <Type variant='h2'>{p.name}</Type>
 
             <a href='/' 
@@ -92,12 +92,14 @@ class Board extends React.Component {
   toggleExpansion(e) {
     e.preventDefault();
     const profileInfo = e.currentTarget.nextSibling;
+    const name = profileInfo.getAttribute('name');
 
     // add class in callback or else rerender will overwrite added classes
     this.setState({ expanded: true }, () => {
       profileInfo.classList.add(modules.priority, modules.expanded);
       let unfocusedElems = profileInfo.querySelectorAll('[tabIndex="-1"]');
       unfocusedElems.forEach((el) => el.setAttribute('tabIndex', '0'));
+      this.props.history.replace(`/board/${name}`);
     });
   }
 
@@ -109,6 +111,7 @@ class Board extends React.Component {
       profileInfo.classList.remove(modules.priority, modules.expanded)
       let unfocusedElems = profileInfo.querySelectorAll('[tabIndex="0"]');
       unfocusedElems.forEach((el) => el.setAttribute('tabIndex', '-1'));
+      this.props.history.replace('/board');
     });
   }
 
