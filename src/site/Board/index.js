@@ -29,7 +29,7 @@ class Board extends React.Component {
     const { expanded } = this.state;
 
     return arr.map((p, index) => {
-      let isExpProfile = p.nameConcatenated === this.state.profile;
+      let isExpProfile = p.nameConcatenated.toLowerCase() === this.state.profile.toLowerCase();
       let expTabIndex = isExpProfile ? 0 : -1;
       let expClasses = isExpProfile ? `${modules.priority} ${modules.expanded}` : '';
 

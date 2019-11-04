@@ -64,7 +64,7 @@ class Contact extends React.Component {
           <div className={`${modules.linkContainer}`}>
             <Grid className={`${modules.linkGrid}`}>
               <Cell auto>
-                <a href='https://facebook.com/maasuforchange'><FaFacebookF /></a>
+                <a href='https://facebook.com/maasuofficial'><FaFacebookF /></a>
               </Cell>
               <Cell auto>
                 <a href='https://twitter.com/MAASUOfficial'><FaTwitter /></a>

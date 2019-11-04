@@ -142,8 +142,12 @@ $radius: calc(var(--spacing) * 2);
 
   li { padding: 0.2em 0 }
 
-  span { color: var(--palette-background-dark) }
-  
+  span {
+    color: var(--palette-background-dark);
+    font-weight: bold;
+    font-weight: 700;
+  }
+
   a {
     color: var(--palette-background-main);
     text-decoration: none;

@@ -41,7 +41,9 @@ class SC extends React.Component {
                 <em className={`${modules.golden}`}>Unwritten</em>
                 <p>March 20-22nd</p>
                 <p className={`${modules.note}`}>
-                  See the promotional video <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/watch?v=-MILXrpn7fY'>here</a>.
+                  <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/watch?v=-MILXrpn7fY'>
+                    See the promotional video
+                  </a>
                 </p>
               </h2>
             </div>

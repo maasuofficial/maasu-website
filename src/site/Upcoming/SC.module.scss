@@ -64,7 +64,7 @@
 
   .note {
     text-transform: unset;
-    font-size: 0.4em;
+    font-size: 0.6em;
     font-family: var(--typography-fontFamily-secondary);
   }
 
@@ -96,26 +96,3 @@ em.golden {
 @media #{$lg-up} {
   em.golden { font-size: 2em }
 }
-
-/*
-.content header {
-  margin-bottom: calc(var(--spacing) / 8);
-  display: inline-block;
-
-  p, h1 {
-    margin: 0;
-    font-size: 2em;
-  }
-}
-
-@media #{$md-up} {
-  .content img { width: 80% }
-  .content header {
-    p, h1 { font-size: 3em }
-  }
-}
-
-@media #{$lg-up} {
-  .content img { width: 60% }
-}
-*/
