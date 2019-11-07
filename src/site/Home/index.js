@@ -23,7 +23,6 @@ class Home extends React.Component {
           hear what they have to say
         </Page> */}
 
-
       </React.Fragment>
     );
   }

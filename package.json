@@ -6,6 +6,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "deploy": "react-scripts build && firebase deploy",
+    "deploy-dev": "react-scripts build && firebase deploy",
+    "deploy-prod": "firebase use prod && react-scripts build && firebase deploy && firebase use dev",
     "test": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject"
   },
