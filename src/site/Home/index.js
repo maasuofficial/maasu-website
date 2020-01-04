@@ -1,6 +1,6 @@
 import React from 'react';
 import SC from '../Upcoming/SC';
-import { Page, Type } from '../../components';
+// import { Page, Type } from '../../components';
 
 class Home extends React.Component {
   componentDidMount() {
