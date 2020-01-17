@@ -14,7 +14,7 @@ import {
   Mission,
   NewsLetter,
   PastAwards,
-  // PastConf,
+  PastConf,
   // Report,
   Upcoming,
   WhereAreYouFrom,
@@ -54,6 +54,7 @@ class App extends Component {
                 <Route path='/newsletter' component={NewsLetter} />
                 {/* <Route path='/report' component={Report} /> */}
                 <Route path='/pastawards' component={PastAwards} />
+                <Route path='/pastconferences' component={PastConf} />
 
                 <Route path='/contact' component={Contact} />
 

@@ -41,8 +41,13 @@ class MaasuX extends React.Component {
             <tbody>
               <tr>
                 <td>November 2019</td>
+                <td>University of Wisconsin Madison, WI</td>
+                <td>Bamboo Among the Oaks</td>
+              </tr>
+              <tr>
+                <td>November 2019</td>
                 <td>University of Missouri, MO</td>
-                <td>TBA</td>
+                <td>Crossroads and Columns</td>
               </tr>
               <tr>
                 <td>October 2018</td>

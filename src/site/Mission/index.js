@@ -48,6 +48,12 @@ class Mission extends React.Component {
             <li>Unite and strengthen the APIA community‘s stance against all forms of oppression</li>
           </ul>
         </Page>
+        <Page className={`${modules.mission}`}>
+          <Type variant='sub2'>Our Strategic Mission</Type>
+          <p>
+            MAASU strives to recognize the needs of its community by developing a strategic plan for the next few years. See our strategic plan for 2020-2024 <a href={`${process.env.PUBLIC_URL}/assets/files/MAASU_Strategic_Plan_2020-2024.pdf`}>here</a>.
+          </p>
+        </Page>
         <div className='footerSpace'></div>
       </React.Fragment>
     );

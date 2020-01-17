@@ -17,13 +17,13 @@ class SC extends React.Component {
     return (
       <React.Fragment>
         <Page className={`${modules.container}`}>
-
           <div className={`${modules.logo}`}>
             <img src={`${process.env.PUBLIC_URL}/assets/branding/Logo-AltDark.svg`} alt='The Midwest Asian American Students Union' />
           </div>
 
           <div className='promoContainer'>
             <Player
+              disablePictureInPicture
               muted
               playsInline
               autoPlay
@@ -40,10 +40,13 @@ class SC extends React.Component {
                 <p>2020 MAASU Spring Conference</p>
                 <em className={`${modules.golden}`}>Unwritten</em>
                 <p>March 20-22nd</p>
+                {/* <p className={`${modules.note}`}> */}
+                {/*   <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/watch?v=-MILXrpn7fY'> */}
+                {/*     See the promotional video */}
+                {/*   </a> */}
+                {/* </p> */}
                 <p className={`${modules.note}`}>
-                  <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/watch?v=-MILXrpn7fY'>
-                    See the promotional video
-                  </a>
+                  <a href='https://maasu2020.org/register'>Registration is now open!</a>
                 </p>
               </h2>
             </div>

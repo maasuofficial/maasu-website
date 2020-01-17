@@ -28,6 +28,30 @@ class NewsLetter extends React.Component {
             <tr>
               <td>
                 <a target='_blank' rel='noopener noreferrer'
+                  href={'https://drive.google.com/file/d/1QcsgkoEUQhze08m9_-CEV8Nc1gbo1P38/view?fbclid=IwAR0ibJu0Quf4edxatZJPps351x3G39kAGFulOCf7QbA-AXbBXQSlFyUuN5A'}
+                >December 2019</a>
+              </td>
+              <td>4</td><td>4</td>
+            </tr>
+            <tr>
+              <td>
+                <a target='_blank' rel='noopener noreferrer'
+                  href={'https://drive.google.com/file/d/18f2kiGm21fl-OvrBQB-ozcrm73YNfFl6/view'}
+                >November 2019</a>
+              </td>
+              <td>4</td><td>3</td>
+            </tr>
+            <tr>
+              <td>
+                <a target='_blank' rel='noopener noreferrer'
+                  href={'https://drive.google.com/file/d/16TPG4UfV1cuBI6WGylQq8pP114YKe3En/view'}
+                >October 2019</a>
+              </td>
+              <td>4</td><td>2</td>
+            </tr>
+            <tr>
+              <td>
+                <a target='_blank' rel='noopener noreferrer'
                   href={'https://issuu.com/aliceyu23/docs/1._maasu_september_newsletter'}
                 >September 2019</a>
               </td>

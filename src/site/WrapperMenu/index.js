@@ -149,6 +149,7 @@ class WrapperMenu extends React.Component {
                 <Link href='/newsletter'>Newsletter</Link>
                 {/* <Link href='/report'>Annual Report</Link> */}
                 <Link href='/pastawards'>Past Award Recipients</Link>
+                <Link href='/pastconferences'>Past Conferences</Link>
               </SubMenu>
 
               <Link href='/contact'>Contact Us</Link>

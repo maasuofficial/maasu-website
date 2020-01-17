@@ -65,6 +65,7 @@ class Members extends React.Component {
             {/* <li><a href='https://bulldoglink.d.umn.edu/organization/apaa'>University of Minnesota – Duluth</a></li> */}
             <li><a href='https://www.asu-umn.org/'>University of Minnesota Twin Cities</a></li>
             <li><a href='https://www.facebook.com/mizzouaaa'>University of Missouri</a></li>
+            <li><a href='https://info.umkc.edu/unews/umkcs-asia-organization-has-arrived/'>University of Missouri Kansas City</a></li>
             <li><a href='https://www.facebook.com/UNLASU'>University of Nebraska Lincoln</a></li>
             {/* <li><a href='https://www.facebook.com/groups/uwpasiaclub/'>University of Wisconsin – Platteville</a></li> */}
             {/* <li><a href='https://win.wisc.edu/organization/aasu'>University of Wisconsin – Madison</a></li> */}
