@@ -60,6 +60,7 @@ class Members extends React.Component {
             <li><a href='https://www.facebook.com/AASIAUIC/'>University of Illinois at Chicago</a></li>
             <li><a href='https://www.facebook.com/AsianAmericanAssociationUIUC/'>University of Illinois at Urbana Champaign</a></li>
             <li><a href='https://www.facebook.com/UIAPACC/'>University of Iowa</a></li>
+            <li><a href='https://www.stuorg.iastate.edu/site/asu'>Iowa State University</a></li>
             <li><a href='https://rockchalkcentral.ku.edu/organization/aasu'>University of Kansas</a></li>
             <li><a href='https://maizepages.umich.edu/organization/aaa'>University of Michigan – Ann Arbor</a></li>
             {/* <li><a href='https://bulldoglink.d.umn.edu/organization/apaa'>University of Minnesota – Duluth</a></li> */}
