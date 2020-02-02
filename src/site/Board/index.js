@@ -131,12 +131,15 @@ class Board extends React.Component {
           <Type variant='h2'>Executive Coordinating Committee</Type>
           <Grid>{this.generateProfiles(groups['ECC'])}</Grid>
           <p>
-            Executive Coordinating Committee Applications for the 2019-2020 academic year will be open in Spring 2019.
+            Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Contact <a href="mailto:ecc@maasu.org">ecc@maasu.org</a> for more information.
           </p>
         </Page>
         <Page className={`${modules.groupPage}`}>
           <Type variant='h2'>Executive Director</Type>
           <Grid>{this.generateProfiles(groups['ED'])}</Grid>
+          <p>
+            Applications for the Executive Director are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022.docx`}>here</a>. Applications close February 29th.
+          </p>
         </Page>
         <Page className={`${modules.groupPage}`}>
           <Type variant='h2'>Directors Council</Type>
@@ -150,7 +153,7 @@ class Board extends React.Component {
           <Type variant='h2'>Board of Advisors</Type>
           <Grid>{this.generateProfiles(groups['BOA'])}</Grid>
           <p>
-            Applications for the Board of Advisors are currently closed. 
+            Applications for the Board of Advisors are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/BOA-Application.docx`}>here</a>.
           </p>
         </Page>
         <div className='footerSpace'></div>

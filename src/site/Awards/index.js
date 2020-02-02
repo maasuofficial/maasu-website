@@ -21,8 +21,11 @@ class Awards extends React.Component {
             <p>
               The Charles Chang Leadership Award was created in 1993 in honor of the MAASU’s founder Charles 
               Chang. Each academic year, the award is presented to a student who demonstrates leadership and 
-              dedication to the Asian Pacific Islander American (APIA) community, along with a $100 
+              dedication to the Asian Pacific Islander American (APIA) community, along with a $250 
               scholarship and plaque.
+            </p>
+            <p>
+              Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLScmeDUt54Wf_P_CFAfE1T6JZ80AtMtGZ82UHqa9pOR9915wcg/viewform">here</a>. The deadline is February 29th.
             </p>
           </li>
           <li>
@@ -40,6 +43,9 @@ class Awards extends React.Component {
               organizations that have accomplished greatness on their campus and in the Midwest community. 
               The BOA Award and $100 prize is presented annually at the MAASU Spring Conference banquet to 
               one organization or school.
+            </p>
+            <p>
+              Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_NV-M0QYTe31Ecx4dAjbag155xWM6c5m6ZnYgDNi7XyxPQw/viewform">here</a>. The deadline is February 29th.
             </p>
           </li>
         </ul>
