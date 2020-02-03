@@ -131,7 +131,7 @@ class Board extends React.Component {
           <Type variant='h2'>Executive Coordinating Committee</Type>
           <Grid>{this.generateProfiles(groups['ECC'])}</Grid>
           <p>
-            Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Contact <a href="mailto:ecc@maasu.org">ecc@maasu.org</a> for more information.
+            Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLScEnc2J5D-Yjqw7L-EWiDESrOTrppV1eEHjHH49Nf1JrCfx8w/viewform">here</a>. Applications close February 29th.
           </p>
         </Page>
         <Page className={`${modules.groupPage}`}>

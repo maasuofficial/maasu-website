@@ -35,6 +35,9 @@ class Awards extends React.Component {
               APIA community through contributions of advisement, programming, leadership, or other means 
               that have uplifted a community higher than what has been previously.
             </p>
+            <p>
+              Apply with <a download href={`${process.env.PUBLIC_URL}/assets/files/2020_Midwestern_Star_Award_Application.pdf`}>this application</a>. The deadline is February 29th.
+            </p>
           </li>
           <li>
             <Type variant='sub4'>BOA (Board of Advisors) Award</Type>
