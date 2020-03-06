@@ -138,7 +138,7 @@ class Board extends React.Component {
           <Type variant='h2'>Executive Director</Type>
           <Grid>{this.generateProfiles(groups['ED'])}</Grid>
           <p>
-            Applications for the Executive Director are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022.docx`}>here</a>. Applications close February 29th.
+            Applications for the Executive Director are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022-new.docx`}>here</a>. Applications close <b>Friday, March 27th</b>.
           </p>
         </Page>
         <Page className={`${modules.groupPage}`}>
