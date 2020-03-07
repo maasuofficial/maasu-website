@@ -45,9 +45,9 @@ class SC extends React.Component {
                 {/*     See the promotional video */}
                 {/*   </a> */}
                 {/* </p> */}
-                <p className={`${modules.note}`}>
-                  <a href='https://maasu2020.org/register'>Registration is now open!</a>
-                </p>
+                {/* <p className={`${modules.note}`}> */}
+                {/*   <a href='https://maasu2020.org/register'>Registration is now open!</a> */}
+                {/* </p> */}
               </h2>
             </div>
           </div>
