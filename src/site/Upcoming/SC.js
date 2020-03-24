@@ -2,7 +2,6 @@ import React from 'react';
 import { Page } from '../../components';
 import './SC.scss';
 import modules from './SC.module.scss';
-import { ControlBar, Player } from 'video-react';
 
 class SC extends React.Component {
   render() {
