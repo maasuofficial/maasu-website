@@ -116,35 +116,35 @@ class PastConf extends React.Component {
             <tr>
               <td>October 25-26, 2013</td>
               <td>Leadership Retreat</td>
-              <td></td>
+              <td>Creating Waves: Initiating Ripples of Change</td>
               <td>Miami University, OH</td>
             </tr>
 
             <tr>
               <td>April 5-6, 2013</td>
               <td>Spring Conference</td>
-              <td></td>
+              <td>Magnify: Explore Yourself/Amplify: Inspire Others</td>
               <td>University of Michigan, MI</td>
             </tr>
 
             <tr>
               <td>April 6-7, 2012</td>
               <td>Spring Conference</td>
-              <td></td>
+              <td>Breaking H.A.B.I.T.S.: Overcoming hostility, adversity, boundaries, ignorance, tension, and stereotypes</td>
               <td>University of Illinois at Urbana-Champaign, IL</td>
             </tr>
 
             <tr>
               <td>November 4-5, 2011</td>
               <td>Leadership Retreat</td>
-              <td></td>
+              <td>From the Grassroots</td>
               <td>University of Illinois, IL</td>
             </tr>
 
             <tr>
               <td>April 8-9, 2011</td>
               <td>Spring Conference</td>
-              <td></td>
+              <td>Love: Empower Ourselves Empower Others</td>
               <td>University of Minnesota Twin Cities, MN</td>
             </tr>
 

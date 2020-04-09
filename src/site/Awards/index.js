@@ -25,7 +25,7 @@ class Awards extends React.Component {
               scholarship and plaque.
             </p>
             <p>
-              Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLScmeDUt54Wf_P_CFAfE1T6JZ80AtMtGZ82UHqa9pOR9915wcg/viewform">here</a>. The deadline is February 29th.
+              The Application is now closed.
             </p>
           </li>
           <li>
@@ -36,7 +36,7 @@ class Awards extends React.Component {
               that have uplifted a community higher than what has been previously.
             </p>
             <p>
-              Apply with <a download href={`${process.env.PUBLIC_URL}/assets/files/2020_Midwestern_Star_Award_Application.pdf`}>this application</a>. The deadline is February 29th.
+              The Application is now closed.
             </p>
           </li>
           <li>
@@ -48,7 +48,7 @@ class Awards extends React.Component {
               one organization or school.
             </p>
             <p>
-              Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_NV-M0QYTe31Ecx4dAjbag155xWM6c5m6ZnYgDNi7XyxPQw/viewform">here</a>. The deadline is February 29th.
+              The Application is now closed.
             </p>
           </li>
         </ul>

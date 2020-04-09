@@ -22,6 +22,11 @@ class PastAwards extends React.Component {
           </thead>
           <tbody>
             <tr>
+              <td>Asian American Student Union</td>
+              <td>University of Iowa</td>
+              <td>2020</td>
+            </tr>
+            <tr>
               <td>Chinese Student Coalition</td>
               <td>Michigan State University</td>
               <td>2019</td>
