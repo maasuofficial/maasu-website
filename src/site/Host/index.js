@@ -25,24 +25,75 @@ class Host extends React.Component {
               the following sections below:
             </p>
             <ol>
-              <li>
-                Title page (school name, theme, logo and whether it is to host a Spring Conference 
-                or a Fall Leadership Summit)
+              
+              <li>Title page
+                <ol type='a'>
+                  <li>school name, theme, logo, and Fall Leadership Summit or Spring Conference</li>
+                </ol>
               </li>
+
               <li>Table of contents</li>
-              <li>
-                Information about the school (background, APIA presence, location)
+              <li>Information about the school 
+                <ol type='a'>    
+                  <li>Background and location</li>
+                  <li>APIDA presence</li>
+                  <li>Land acknowledgement</li>
+                </ol>
               </li>
-              <li>Theme Explaination</li>
-              <li>Planning Committee</li>
-              <li>Conference Facilities</li>
-              <li>Lodging</li>
-              <li>Restaurants</li>
+
+              <li>Theme
+                <ol type='a'>
+                  <li>Proposed theme, reasoning, explanation</li>
+                </ol>
+              </li>
+              <li>Potential Dates (at least 3)</li>
+              <li>Planning Committee
+                <ol type='a'>
+                  <li>Advisor (staff or faculty)</li>
+                  <li>Chair/MAASU Liaison (co-chairs are no longer permitted)</li>
+                  <li>Committees</li>
+                </ol>
+              </li>
+              <li>Conference Venues + Fees
+                <ol type='a'>
+                  <li>Friday Evening Programming, Registration, Opening Ceremony, Workshops, Banquet</li>
+                  <li>Include capacity and any rental fees</li>
+                </ol>
+              </li>
               <li>Conference Schedule Overview</li>
-              <li>Keynote Speaker and Entertainment</li>
-              <li>Workshop Ideas</li>
-              <li>Proposed Budget</li>
-              <li>Estimated Revenue </li>
+              <li>Keynote Speaker and Entertainment
+                <ol type='a'>
+                <li>At least 3 potential for each along with quotes for honorarium/cost</li>
+                </ol>
+              </li>
+              <li>Workshop Ideas/Tracks
+                <ol type='a'>
+                  <li>Topics</li>
+                </ol>
+              </li>
+              <li>Proposed Budget
+                <ol type='a'>
+                  <li>Example budget</li>
+                  <li>Estimated revenue for break-even, max capacity, and expected attendance</li>
+                  <li>Potential funding sources- school, local organizations, corporate groups</li>
+                </ol>
+              </li>
+              <li>Lodging Options
+                <ol type='a'>
+                  <li>Include 3-4 options and list how far these are from the conference site/banquet venue</li>
+                </ol>
+              </li>
+              <li>Nearby Restaurants</li>
+              <li>Letter of Support
+                <ol type='a'>
+                  <li>2 letters of support on university letterhead with a handwritten or digital signature 
+                    <ol type='i'>
+                      <li>1 letter of support from a student affairs department/office</li>
+                      <li>1 letter of support from the planning committee advisor (staff or faculty)</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
             </ol>
 
             <br />
@@ -50,10 +101,16 @@ class Host extends React.Component {
               <Type variant='sub5'>Example bid packets for Leadership Summits:</Type>
               <ul>
                 <li>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2017-LS-University-of-Missouri.pdf`}>2017</a>
+                </li>
+                <li>
                   <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2016-LS-Northwestern-University.pdf`}>2016</a>
                 </li>
                 <li>
-                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2017-LS-University-of-Missouri.pdf`}>2017</a>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2015-LS-Purdue-University.pdf`}>2015</a>
+                </li>
+                <li>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2014-LS-University-of-Missouri.pdf`}>2014</a>
                 </li>
               </ul>
             </div>
@@ -63,10 +120,16 @@ class Host extends React.Component {
               <Type variant='sub5'>Example bid packets for Spring Conferences:</Type>
               <ul>
                 <li>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2019-SC-University-of-Colorado-Boulder.pdf`}>2019</a>
+                </li>
+                <li>
                   <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2018-SC-The-Ohio-State-University.pdf`}>2018</a>
                 </li>
                 <li>
-                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2019-SC-University-of-Colorado-Boulder.pdf`}>2019</a>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2015-SC-University-of-Minnesota.pdf`}>2015</a>
+                </li>
+                <li>
+                  <a download rel='noopener noreferrer' target='_blank' href={`${process.env.PUBLIC_URL}/assets/files/bids/Bid-2013-SC-University-of-Michigan.pdf`}>2013</a>
                 </li>
               </ul>
             </div>
@@ -84,8 +147,8 @@ class Host extends React.Component {
               during the Spring Conference Banquet.
             </p>
             <p>
-              For more information on the bidding process, please fill out 
-              the <a href='https://docs.google.com/forms/d/e/1FAIpQLSf_S4QMjW3hVjSVZWZxg7n1L6l4hZPzS5jJQMu92CDx7_7ikw/viewform'>following form</a>.
+              To apply for the bidding process, please fill out 
+              the <a href='https://docs.google.com/forms/d/e/1FAIpQLSdUWscQ_czYXQVE73fxSstNAR3SnEchK3_0nDyHFVbxRFpMxQ/viewform'>following form</a>.
             </p>
             <p>
               In order to be considered, the following form must be filled out at least a week before the 

@@ -121,6 +121,7 @@ class WrapperMenu extends React.Component {
                 <Link href='/mission'>Our Mission</Link> 
                 <Link href='/board'>Executive Board</Link>
                 <Link href='/members'>Member Schools</Link>
+                <Link href='/directorscouncil'>Directors Council</Link>
                 <Link href='/history'>Our History</Link>
               </SubMenu>
 
@@ -152,6 +153,7 @@ class WrapperMenu extends React.Component {
                 <Link href='/pastconferences'>Past Conferences</Link>
               </SubMenu>
 
+              <Link href='/donate'>Donate</Link>
               <Link href='/contact'>Contact Us</Link>
 
             </UtilityMenu>

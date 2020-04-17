@@ -2,17 +2,8 @@ import React from 'react';
 import { Page } from '../../components';
 import './SC.scss';
 import modules from './SC.module.scss';
-import { ControlBar, Player } from 'video-react';
 
 class SC extends React.Component {
-  componentDidMount() {
-    this.player.subscribeToStateChange(this.handlePlayerStateChange.bind(this));
-  }
-
-  handlePlayerStateChange(state, prevState) {
-    if (state.ended) this.player.play();
-  }
-
   render() {
     return (
       <React.Fragment>
@@ -21,34 +12,11 @@ class SC extends React.Component {
             <img src={`${process.env.PUBLIC_URL}/assets/branding/Logo-AltDark.svg`} alt='The Midwest Asian American Students Union' />
           </div>
 
-          <div className='promoContainer'>
-            <Player
-              disablePictureInPicture
-              muted
-              playsInline
-              autoPlay
-              src={`${process.env.PUBLIC_URL}/assets/vid/sc2020promo.mp4`}
-              ref={(player) => this.player = player }
-            >
-              <ControlBar disableCompletely={true} disableDefaultControls={true} autoHideTime={0} autoHide={true} />
-            </Player>
-          </div>
-
           <div className={`${modules.promoOverlay}`}>
             <div className={`${modules.promoContent}`}>
-              <h2>
-                <p>2020 MAASU Spring Conference</p>
-                <em className={`${modules.golden}`}>Unwritten</em>
-                <p>March 20-22nd</p>
-                {/* <p className={`${modules.note}`}> */}
-                {/*   <a target='_blank' rel='noopener noreferrer' href='https://www.youtube.com/watch?v=-MILXrpn7fY'> */}
-                {/*     See the promotional video */}
-                {/*   </a> */}
-                {/* </p> */}
-                <p className={`${modules.note}`}>
-                  <a href='https://maasu2020.org/register'>Registration is now open!</a>
-                </p>
-              </h2>
+              <p>Dear Attendees and the MAASU Community,</p>
+              <p>Due to the recent events surrounding the COVID-19 outbreak, we have decided as a team to <span>postpone the MAASU Spring Conference 2020 and move it to Fall 2020.</span></p>
+              <p>We strongely urge everyone to begin requesting refunds for your lodging and transportation for MAASU. For more news and updates, check out our <a href="https://facebook.com/maasuofficial">Facebook page</a>.</p>
             </div>
           </div>
 

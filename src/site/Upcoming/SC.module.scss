@@ -34,41 +34,19 @@
 }
 
 .promoContent {
-  margin: var(--spacing);
+  margin: calc(var(--spacing) * 2);
   height: calc(100% - calc(var(--spacing) * 2));
   width: calc(100% - calc(var(--spacing) * 2));
+  color: var(--palette-background-main);
+  font-size: calc(var(--typography-fontSize) * 1.5);
 
-  h2 {
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: var(--palette-background-main);
-
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    transform: translateY(-50%);
+  p span {
+    text-decoration: underline;
   }
 
-  p, em {
-    margin: 0;
-    text-transform: uppercase;
-  }
-
-  p { font-size: 0.6em }
-
-  a { color: inherit }
-
-  .note {
-    text-transform: unset;
-    font-size: 1.3em;
+  a {
     color: var(--palette-primary-main);
-    font-family: var(--typography-fontFamily-secondary);
   }
-
 }
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');

@@ -5,6 +5,8 @@ import {
   Awards,
   Board,
   Contact,
+  Donate,
+  DC,
   History,
   Home,
   Host,
@@ -37,6 +39,7 @@ class App extends Component {
                 <Route path='/board' component={Board} />
                 <Route path='/members' component={Members} />
                 <Route path='/membership' component={Members} />
+                <Route path='/directorscouncil' component={DC} />
                 <Route path='/history' component={History} />
 
                 <Route path='/upcoming' component={Upcoming} />
@@ -56,6 +59,7 @@ class App extends Component {
                 <Route path='/pastawards' component={PastAwards} />
                 <Route path='/pastconferences' component={PastConf} />
 
+                <Route path='/donate' component={Donate} />
                 <Route path='/contact' component={Contact} />
 
                 <Route component={Home} />

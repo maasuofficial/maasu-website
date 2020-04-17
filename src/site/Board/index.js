@@ -131,14 +131,15 @@ class Board extends React.Component {
           <Type variant='h2'>Executive Coordinating Committee</Type>
           <Grid>{this.generateProfiles(groups['ECC'])}</Grid>
           <p>
-            Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLScEnc2J5D-Yjqw7L-EWiDESrOTrppV1eEHjHH49Nf1JrCfx8w/viewform">here</a>. Applications close February 29th.
+            Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLScEnc2J5D-Yjqw7L-EWiDESrOTrppV1eEHjHH49Nf1JrCfx8w/viewform">here</a>. Applications close <b>Friday, April 10th</b>.
           </p>
         </Page>
         <Page className={`${modules.groupPage}`}>
           <Type variant='h2'>Executive Director</Type>
           <Grid>{this.generateProfiles(groups['ED'])}</Grid>
           <p>
-            Applications for the Executive Director are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022.docx`}>here</a>. Applications close February 29th.
+            {/* Applications for the Executive Director are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022-new.docx`}>here</a>. Applications close <b>Friday, March 27th</b>. */}
+            Applications for the Executive Director are currently closed.
           </p>
         </Page>
         <Page className={`${modules.groupPage}`}>
