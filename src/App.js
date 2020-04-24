@@ -6,6 +6,7 @@ import {
   Board,
   Contact,
   Donate,
+  DonateComp,
   DC,
   History,
   Home,
@@ -60,6 +61,7 @@ class App extends Component {
                 <Route path='/pastconferences' component={PastConf} />
 
                 <Route path='/donate' component={Donate} />
+                <Route path='/donate-complete' component={DonateComp} />
                 <Route path='/contact' component={Contact} />
 
                 <Route component={Home} />

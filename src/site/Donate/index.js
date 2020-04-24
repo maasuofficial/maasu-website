@@ -1,5 +1,6 @@
 import React from 'react';
 import { Page, Type } from '../../components';
+import modules from './Donate.module.scss';
 
 class Donate extends React.Component {
   componentDidMount() {
@@ -16,9 +17,6 @@ class Donate extends React.Component {
           We rely on community support to continue to aide, educate 
           and connect students across midwest campuses in leadership 
           development and Asian American advocacy. 
-        </p>
-
-        <p>
           It is with your financial support that we are able to provide 
           students with resources and events that connect our shared identity. 
         </p>
@@ -27,20 +25,18 @@ class Donate extends React.Component {
           MAASU believes in empowering students and cultivating strong leaders 
           within our local communities. Your donation would ensure the continuation 
           of these programs, such as the Leadership Summit and Spring Conference. 
-        </p>
-
-        <p>
           Please join us in supporting young Asian American Student Leaders 
           by making a tax deductible deduction today. 
+          Engagement of young people is more important than ever, and we 
+          hope you join us in cultivating the next generation of leaders.
         </p>
 
         <p>
           If you have any questions, please reach out to the <a href='mailto:directorscouncil@maasu.org'>Directorscouncil@maasu.org</a>.
         </p>
 
-        <p>
-          Engagement of young people is more important than ever, and we 
-          hope you join us in cultivating the next generation of leaders.
+        <p className={`${modules.donateButtonWrapper}`}>
+          <a className={`${modules.donateButton}`} href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YGFETJJH99BR4&source=url">change your community</a>
         </p>
 
         <div className='footerSpace'></div>
@@ -49,4 +45,23 @@ class Donate extends React.Component {
   }
 }
 
-export default Donate;
+const DonateComp = (props) => {
+  return (
+    <Page className={`${modules.complete}`}>
+      <div className='footerSpace'></div>
+      <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/LogoSymbol.svg`} alt="thank you for donating!" />
+
+      <Type variant='h2'>Thank you for donating.</Type>
+      <Type variant='h4'>
+        Your donation means the world to us.
+      </Type>
+
+      <div className='footerSpace'></div>
+    </Page>
+  );
+}
+
+export {
+  Donate,
+  DonateComp
+}

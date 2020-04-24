@@ -3,7 +3,7 @@ import ApiaOrgs from './ApiaOrgs';
 import Awards from './Awards';
 import Board from './Board';
 import Contact from './Contact';
-import Donate from './Donate';
+import { Donate, DonateComp } from './Donate';
 import DC from './DC';
 import History from './History';
 import Home from './Home';
@@ -26,6 +26,7 @@ export {
   Board,
   Contact,
   Donate,
+  DonateComp,
   DC,
   History,
   Home,
