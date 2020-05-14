@@ -1,24 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react'
+import './App.css'
+
+import firestore from './firestore';
+
+function useSchools() {
+  const [schools, setSchools] = useState<{ name: string }[]>([]);
+
+  useEffect(() => {
+    firestore.collection('schools')
+      .onSnapshot((snapshot) => {
+        const schoolArr = snapshot.docs
+        .map((doc) => {
+          return {
+            name: doc.data().name,
+          }
+        });
+        setSchools(schoolArr);
+      });
+  }, []);
+
+  return schools;
+}
 
 function App() {
+  const schools = useSchools();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>hello!</h1>
+
+      {schools.map((s, index) => {
+        return <p key={index}>{s.name}</p>
+      })}
+      
     </div>
   );
 }
