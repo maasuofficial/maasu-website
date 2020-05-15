@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Router, RouteComponentProps } from '@reach/router'
+import { Link, Router, RouteComponentProps } from '@reach/router'
 import firebase from './firebase'
 import './App.css'
 
@@ -22,7 +22,7 @@ function useSchools() {
   return schools;
 }
 
-const Home = (props: RouteComponentProps) => <div>This is the home page</div>;
+const Home = (props: RouteComponentProps) => <div>This is the home page and <Link to='/alumni'>here is the alumni page</Link>.</div>;
 
 const History = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
 const Mission = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
@@ -53,16 +53,87 @@ const Organizations = (props: RouteComponentProps) => <div>This is a generic rea
 const PastAwards = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
 
 const Alumni = (props: RouteComponentProps) => {
+  const [signIn, setSignIn] = useState<{ username: string, password: string }>({ username: '', password: '' });
   const [signUp, setSignUp] = useState<{ username: string, password: string }>({ username: '', password: '' });
 
-  function onSubmit(e: React.FormEvent<HTMLFormElement>): void {
-    e.preventDefault();
-    console.log(JSON.stringify(signUp, null, 2));
+  const useUser = () => {
+    const [user, setUser] = useState<{ uid: string }>({ uid: '' });
 
+    useEffect(() => {
+      let uid = '';
+      firebase.auth().onAuthStateChanged(function(authuser) {
+        if (authuser) {
+          uid = authuser.uid;
+        } else {
+          uid = '';
+        }
+        setUser({ uid });
+        console.log('auth state changed.');
+      });
+    }, []);
+
+    return user;
+  }
+
+  const useAlumni = () => {
+    const [alumni, setAlumni] = useState<{ uid: string }[]>([]);
+    
+    // useEffect
+    useEffect(() => {
+      firebase.firestore().collection('alumni')
+        .onSnapshot((snapshot) => {
+          const alumniArr = snapshot.docs
+          .map((doc) => {
+            return {
+              uid: doc.data().uid,
+            }
+          });
+          setAlumni(alumniArr);
+        });
+    }, []);
+
+    return alumni;
+  }
+
+  const user = useUser();
+  const alumni = useAlumni();
+
+  function onSubmitSignIn(e: React.FormEvent<HTMLFormElement>): void {
+    e.preventDefault();
+    const { username, password } = signIn;
+
+    firebase.auth()
+    .signInWithEmailAndPassword(username, password)
+    .catch(function(error) {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+
+  }
+
+  function onSubmitSignUp(e: React.FormEvent<HTMLFormElement>): void {
+    e.preventDefault();
     const { username, password } = signUp;
     
     firebase.auth()
     .createUserWithEmailAndPassword(username, password)
+    .then(() => {
+      return firebase.auth().currentUser
+    })
+    .then((user) => {
+      if (user && user.uid) {
+
+        console.log(user.uid);
+        firebase.firestore()
+        .collection('alumni').doc(user.uid).set({
+          uid: user.uid,
+        })
+        .catch((e) => {
+          console.log(e);
+        })
+      }
+    })
     .catch(function(error) {
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -70,29 +141,69 @@ const Alumni = (props: RouteComponentProps) => {
     });
   }
 
-  const onChangeUsername = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangeUsernameSignIn = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSignIn({
+      ...signIn,
+      username: e.target.value,
+    });
+  }
+
+  const onChangePasswordSignIn = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setSignIn({
+      ...signIn,
+      password: e.target.value,
+    });
+  }
+
+  const onChangeUsernameSignUp = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSignUp({
       ...signUp,
       username: e.target.value,
     });
   }
 
-  const onChangePassword = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangePasswordSignUp = (e: React.ChangeEvent<HTMLInputElement>): void => {
     setSignUp({
       ...signUp,
       password: e.target.value,
     });
   }
 
+  const onClickSignOut = (e: React.MouseEvent<HTMLButtonElement>): void => {
+    firebase.auth().signOut().then(function() {
+      console.log('signed out.');
+    }).catch(function(error) {
+      console.log(error);
+    });
+  }
+
   return (
     <div>
-      <h1>hello!</h1>
+      {user.uid ? <p>user {user.uid}</p> : <p>You are not signed in</p>}
 
-      <form onSubmit={onSubmit}>
-        <input onChange={onChangeUsername} />
-        <input onChange={onChangePassword} />
+      <h1>sign in</h1>
+      <form onSubmit={onSubmitSignIn}>
+        <input onChange={onChangeUsernameSignIn} />
+        <input onChange={onChangePasswordSignIn} />
+        <button>sign in</button>
+      </form>
+
+      <h1>sign up</h1>
+      <form onSubmit={onSubmitSignUp}>
+        <input onChange={onChangeUsernameSignUp} />
+        <input onChange={onChangePasswordSignUp} />
         <button>sign up</button>
       </form>
+
+      <button onClick={onClickSignOut}>Sign out</button>
+
+      <div>
+        <h2>directory</h2>
+
+        <ul>
+          {alumni.map((a, index) => <li key={index}>{a.uid}</li>)}
+        </ul>
+      </div>
     </div>
   );
 }
