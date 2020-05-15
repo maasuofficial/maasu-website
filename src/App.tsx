@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css'
 
 import firebase from './firebase';
@@ -57,20 +58,25 @@ function App() {
 
 
   return (
-    <div className="App">
-      <h1>hello!</h1>
+    <BrowserRouter>
+      <div className="App">
+        <h1>hello!</h1>
 
-      {schools.map((s, index) => {
-        return <p key={index}>{s.name}</p>
-      })}
+        {schools.map((s, index) => {
+          return <p key={index}>{s.name}</p>
+        })}
 
-      <form onSubmit={onSubmit}>
-        <input onChange={onChangeUsername} />
-        <input onChange={onChangePassword} />
-        <button>sign up</button>
-      </form>
-    </div>
-  );
+        <form onSubmit={onSubmit}>
+          <input onChange={onChangeUsername} />
+          <input onChange={onChangePassword} />
+          <button>sign up</button>
+        </form>
+
+        <Switch>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  )
 }
 
-export default App;
+export default App
