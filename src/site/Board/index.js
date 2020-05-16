@@ -131,7 +131,7 @@ class Board extends React.Component {
           <Type variant='h2'>Executive Coordinating Committee</Type>
           <Grid>{this.generateProfiles(groups['ECC'])}</Grid>
           <p>
-            Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Apply <a href="https://docs.google.com/forms/d/e/1FAIpQLScEnc2J5D-Yjqw7L-EWiDESrOTrppV1eEHjHH49Nf1JrCfx8w/viewform">here</a>. Applications close <b>Friday, April 10th</b>.
+            <b>Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Apply <a href="https://forms.gle/CxV8qK2S3QKAMAN59">here</a>. Applications close Sunday, May 24th</b>.
           </p>
         </Page>
         <Page className={`${modules.groupPage}`}>

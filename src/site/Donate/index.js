@@ -36,7 +36,7 @@ class Donate extends React.Component {
         </p>
 
         <p className={`${modules.donateButtonWrapper}`}>
-          <a className={`${modules.donateButton}`} href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=YGFETJJH99BR4&source=url">change your community</a>
+          <a className={`${modules.donateButton}`} href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4RPT285DWDCKN&source=url">donate here</a>
         </p>
 
         <div className='footerSpace'></div>

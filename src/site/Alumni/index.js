@@ -45,7 +45,7 @@ class Alumni extends React.Component {
               Form <a href='https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1'>here</a>.
             </li>
             {/* <li>Provide a one-time membership payment of $30.00 USD via PayPal below.</li> */}
-            <li>Provide a one-time membership payment of $25.00 USD via PayPal below.</li>
+            <li>Provide a one-time membership payment of $30.00 USD via PayPal below.</li>
             <li>
               After completing steps 1 and 2, access to the Alumni Directory will be granted and a MAA 
               wine glass will be mailed to you.
