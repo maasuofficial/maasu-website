@@ -4,32 +4,43 @@ import firebase from './firebase'
 import './App.css'
 
 function useSchools() {
-  const [schools, setSchools] = useState<{ name: string }[]>([]);
+  const [schools, setSchools] = useState<{ name: string }[]>([])
 
   useEffect(() => {
-    firebase.firestore().collection('schools')
+    firebase
+      .firestore()
+      .collection('schools')
       .onSnapshot((snapshot) => {
-        const schoolArr = snapshot.docs
-        .map((doc) => {
+        const schoolArr = snapshot.docs.map((doc) => {
           return {
             name: doc.data().name,
           }
-        });
-        setSchools(schoolArr);
-      });
-  }, []);
+        })
+        setSchools(schoolArr)
+      })
+  }, [])
 
-  return schools;
+  return schools
 }
 
-const Home = (props: RouteComponentProps) => <div>This is the home page and <Link to='/alumni'>here is the alumni page</Link>.</div>;
+const Home = (props: RouteComponentProps) => (
+  <div>
+    This is the home page and <Link to="/alumni">here is the alumni page</Link>.
+  </div>
+)
 
-const History = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const Mission = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const Board = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const History = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const Mission = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const Board = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
 const Members = (props: RouteComponentProps) => {
-  const schools = useSchools();
+  const schools = useSchools()
   return (
     <div>
       <h1>Members</h1>
@@ -42,139 +53,174 @@ const Members = (props: RouteComponentProps) => {
   )
 }
 
-const Upcoming = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const Host = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const PastConferences = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Upcoming = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const Host = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const PastConferences = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
-const Programs = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Programs = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
-const Awards = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const Organizations = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const PastAwards = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Awards = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const Organizations = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const PastAwards = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
 const Alumni = (props: RouteComponentProps) => {
-  const [signIn, setSignIn] = useState<{ username: string, password: string }>({ username: '', password: '' });
-  const [signUp, setSignUp] = useState<{ username: string, password: string }>({ username: '', password: '' });
+  const [signIn, setSignIn] = useState<{ username: string; password: string }>({
+    username: '',
+    password: '',
+  })
+  const [signUp, setSignUp] = useState<{ username: string; password: string }>({
+    username: '',
+    password: '',
+  })
 
   const useUser = () => {
-    const [user, setUser] = useState<{ uid: string }>({ uid: '' });
+    const [user, setUser] = useState<{ uid: string }>({ uid: '' })
 
     useEffect(() => {
-      let uid = '';
-      firebase.auth().onAuthStateChanged(function(authuser) {
+      let uid = ''
+      firebase.auth().onAuthStateChanged(function (authuser) {
         if (authuser) {
-          uid = authuser.uid;
+          uid = authuser.uid
         } else {
-          uid = '';
+          uid = ''
         }
-        setUser({ uid });
-        console.log('auth state changed.');
-      });
-    }, []);
+        setUser({ uid })
+        console.log('auth state changed.')
+      })
+    }, [])
 
-    return user;
+    return user
   }
 
   const useAlumni = () => {
-    const [alumni, setAlumni] = useState<{ uid: string }[]>([]);
-    
+    const [alumni, setAlumni] = useState<{ uid: string }[]>([])
+
     // useEffect
     useEffect(() => {
-      firebase.firestore().collection('alumni')
+      firebase
+        .firestore()
+        .collection('alumni')
         .onSnapshot((snapshot) => {
-          const alumniArr = snapshot.docs
-          .map((doc) => {
+          const alumniArr = snapshot.docs.map((doc) => {
             return {
               uid: doc.data().uid,
             }
-          });
-          setAlumni(alumniArr);
-        });
-    }, []);
+          })
+          setAlumni(alumniArr)
+        })
+    }, [])
 
-    return alumni;
+    return alumni
   }
 
-  const user = useUser();
-  const alumni = useAlumni();
+  const user = useUser()
+  const alumni = useAlumni()
 
   function onSubmitSignIn(e: React.FormEvent<HTMLFormElement>): void {
-    e.preventDefault();
-    const { username, password } = signIn;
+    e.preventDefault()
+    const { username, password } = signIn
 
-    firebase.auth()
-    .signInWithEmailAndPassword(username, password)
-    .catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode, errorMessage);
-    });
-
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(username, password)
+      .catch(function (error) {
+        var errorCode = error.code
+        var errorMessage = error.message
+        console.log(errorCode, errorMessage)
+      })
   }
 
   function onSubmitSignUp(e: React.FormEvent<HTMLFormElement>): void {
-    e.preventDefault();
-    const { username, password } = signUp;
-    
-    firebase.auth()
-    .createUserWithEmailAndPassword(username, password)
-    .then(() => {
-      return firebase.auth().currentUser
-    })
-    .then((user) => {
-      if (user && user.uid) {
+    e.preventDefault()
+    const { username, password } = signUp
 
-        console.log(user.uid);
-        firebase.firestore()
-        .collection('alumni').doc(user.uid).set({
-          uid: user.uid,
-        })
-        .catch((e) => {
-          console.log(e);
-        })
-      }
-    })
-    .catch(function(error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      console.log(errorCode, errorMessage);
-    });
+    firebase
+      .auth()
+      .createUserWithEmailAndPassword(username, password)
+      .then(() => {
+        return firebase.auth().currentUser
+      })
+      .then((user) => {
+        if (user && user.uid) {
+          console.log(user.uid)
+          firebase
+            .firestore()
+            .collection('alumni')
+            .doc(user.uid)
+            .set({
+              uid: user.uid,
+            })
+            .catch((e) => {
+              console.log(e)
+            })
+        }
+      })
+      .catch(function (error) {
+        var errorCode = error.code
+        var errorMessage = error.message
+        console.log(errorCode, errorMessage)
+      })
   }
 
-  const onChangeUsernameSignIn = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangeUsernameSignIn = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     setSignIn({
       ...signIn,
       username: e.target.value,
-    });
+    })
   }
 
-  const onChangePasswordSignIn = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangePasswordSignIn = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     setSignIn({
       ...signIn,
       password: e.target.value,
-    });
+    })
   }
-
-  const onChangeUsernameSignUp = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangeUsernameSignUp = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     setSignUp({
       ...signUp,
       username: e.target.value,
-    });
+    })
   }
 
-  const onChangePasswordSignUp = (e: React.ChangeEvent<HTMLInputElement>): void => {
+  const onChangePasswordSignUp = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ): void => {
     setSignUp({
       ...signUp,
       password: e.target.value,
-    });
+    })
   }
 
   const onClickSignOut = (e: React.MouseEvent<HTMLButtonElement>): void => {
-    firebase.auth().signOut().then(function() {
-      console.log('signed out.');
-    }).catch(function(error) {
-      console.log(error);
-    });
+    firebase
+      .auth()
+      .signOut()
+      .then(function () {
+        console.log('signed out.')
+      })
+      .catch(function (error) {
+        console.log(error)
+      })
   }
 
   return (
@@ -201,85 +247,105 @@ const Alumni = (props: RouteComponentProps) => {
         <h2>directory</h2>
 
         <ul>
-          {alumni.map((a, index) => <li key={index}>{a.uid}</li>)}
+          {alumni.map((a, index) => (
+            <li key={index}>{a.uid}</li>
+          ))}
         </ul>
       </div>
     </div>
-  );
+  )
 }
 
-const Statements = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const Newsletter = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Statements = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const Newsletter = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
-const Join = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const ECC = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const DC = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const BOA = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
-const ED = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Join = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const ECC = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const DC = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const BOA = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
+const ED = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
-const Contact = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Contact = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
-const Donate = (props: RouteComponentProps) => <div>This is a generic reach router page</div>;
+const Donate = (props: RouteComponentProps) => (
+  <div>This is a generic reach router page</div>
+)
 
-const Error = (props: RouteComponentProps) => <div>404 Error.</div>;
+const Error = (props: RouteComponentProps) => <div>404 Error.</div>
 
 function App() {
   return (
-      <Router>
-        <Home path='/' />
+    <Router>
+      <Home path="/" />
 
-        {/* about */}
+      {/* about */}
 
-        <History path='/history' />
-        <Mission path='/mission' />
-        <Board path='/board' />
-        <Members path='/members' />
+      <History path="/history" />
+      <Mission path="/mission" />
+      <Board path="/board" />
+      <Members path="/members" />
 
-        {/* conferences */}
+      {/* conferences */}
 
-        <Upcoming path='/upcoming' />
-        <Host path='/host' />
-        <PastConferences path='/past-conferences' />
+      <Upcoming path="/upcoming" />
+      <Host path="/host" />
+      <PastConferences path="/past-conferences" />
 
-        {/* programs */}
+      {/* programs */}
 
-        <Programs path='/programs' />
+      <Programs path="/programs" />
 
-        {/* resources */}
+      {/* resources */}
 
-        <Awards path='/awards' />
-        <Organizations path='/organizations' />
-        <PastAwards path='/past-awards' />
+      <Awards path="/awards" />
+      <Organizations path="/organizations" />
+      <PastAwards path="/past-awards" />
 
-        {/* alumni */}
+      {/* alumni */}
 
-        <Alumni path='/alumni' />
+      <Alumni path="/alumni" />
 
-        {/* news */}
+      {/* news */}
 
-        <Statements path='/statements' />
-        <Newsletter path='/newsletter' />
+      <Statements path="/statements" />
+      <Newsletter path="/newsletter" />
 
-        {/* get involved */}
+      {/* get involved */}
 
-        <Join path='/join' />
-        <ECC path='/ECC' />
-        <DC path='/DC' />
-        <BOA path='/BOA' />
-        <ED path='/ED' />
+      <Join path="/join" />
+      <ECC path="/ECC" />
+      <DC path="/DC" />
+      <BOA path="/BOA" />
+      <ED path="/ED" />
 
-        {/* contact */}
+      {/* contact */}
 
-        <Contact path='/contact' />
+      <Contact path="/contact" />
 
-        {/* donate */}
+      {/* donate */}
 
-        <Donate path='/donate' />
+      <Donate path="/donate" />
 
-        {/* 404 */}
+      {/* 404 */}
 
-        <Error default />
-      </Router>
+      <Error default />
+    </Router>
   )
 }
 
