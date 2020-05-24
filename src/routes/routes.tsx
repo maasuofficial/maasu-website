@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Router, RouteComponentProps } from '@reach/router'
 import firebase from '../firebase'
-import Heading from 'components/Header'
+import Heading from 'components/header'
 
 function useSchools() {
   const [schools, setSchools] = useState<{ name: string }[]>([])
