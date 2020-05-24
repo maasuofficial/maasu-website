@@ -186,6 +186,24 @@ Jest is a fantastic Javascript/Typescript/Babel testing library that can be exte
 tasks such as test watching, coverage, and DOM environment testing. It is easy to write tests and mocks, and even simpler
 to structure tests or run certain subsets of tests.
 
+These tests become especially important with the introduction of components in React's framework, and it becomes extremely
+important to test each component used in coordination with other components.
+
+### End-to-End (e2e) Tests: [Cypress](https://www.cypress.io/)
+
+Cypress is an end-to-end testing framework which comes built with assertion libraries, mocks, stubs, and more. It is very
+user-friendly and can be used to test browser-specific features. The syntax is very clean and easy to use and get started.
+
+### Static Tests: Typescript/Eslint
+
+Typescript automatically tests data and variables types at compile time, preventing bugs. Eslint also contributes by 
+checking styling and formatting to catch any overlooked errors introduced through poor code styling.
+
+### A/B Tests: Board Members
+
+This project is built and pushed to a staging server before the code is finally put into production, allowing current MAASU
+ECC board members to monitor and test any new additions or features.
+
 ## Notes <a name="notes"></a>
 
 - [Absolute Imports](#absolute-imports)

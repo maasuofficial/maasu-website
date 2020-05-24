@@ -23,7 +23,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll",
-    "eject": "react-scripts eject"
+    "e2e": "yarn cypress open"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -43,6 +43,7 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
+    "cypress": "^4.6.0",
     "eslint": "^7.1.0",
     "eslint-config-react-app": "^5.2.1",
     "eslint-config-standard": "^14.1.1",
