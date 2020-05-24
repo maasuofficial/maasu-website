@@ -52,6 +52,12 @@ such as CSS modules. I've built projects using only raw Javascript, React, and W
 to begin with a lightweight boilerplate including everything you will ever need rather than beginning from
 scratch.
 
+The reason most web developers are moving from older systems such as `Django` and `Rails` is that with tools
+such as `Create React App` and `Webpack` is for its static-site generation capabilities. Instead of running
+an interpreter or a Python cgi-bin script on some web server, tools like `Create React App` make it possible
+to build sites in Typescript and compile all sources files into pure HTML, CSS, and Javascript. This makes
+the final production code [lightweight, minified, and fast](https://github.com/facebook/create-react-app#npm-run-build-or-yarn-build).
+
 ## Typescript <a name="typescript"></a>
 
 This project uses [Typescript](https://www.typescriptlang.org/) as its primary language for development.
