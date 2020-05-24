@@ -1,44 +1,59 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# MAASU
 
-## Available Scripts
+The website for the Midwest Asian Pacific Islander Desi American Students Union
 
-In the project directory, you can run:
+# Table of Contents <a name="table-of-contents"></a>
 
-### `yarn start`
++ [Overview](#overview)
++ [Linting](#linting)
++ [React Framework](#react-framework)
++ [Project Structure](#project-structure)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Overview <a name="overview"></a>
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+This document summarizes a design process of the MAASU website, what softwares and tools were used, 
+and any executive descisions made in regards to project structure.
+The [Table of Contents](#table-of-contents) provides a summary of all relevant categories.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Linting <a name="linting"></a>
 
-### `yarn build`
+[Eslint](https://eslint.org/docs/user-guide/getting-started) is a tool used to detect bugs before 
+they have the possibility to occur in production. It does so by adhering the codebase to a specific 
+set of styles. If the codebase does not follow the guidelines, it will provide warnings and errors, 
+as well as instructions on how to fix such errors. It is an indirect form of static testing, and 
+helps prevent code bugs before they happen.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Prettier](https://prettier.io/) Is also a tool used for code formatting. Prettier changes code 
+formatting to match a set of styling guidelines, usually on buffer save. These changes will 
+usually be spacing issues and indentation.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Although these tools may seem similar in nature, they both have different purposes and are used in 
+coordination to maintain a proper codebase. In essence, Prettier helps maintain formatting and code 
+readability, while Eslint enforces a strict adherance to code quality and syntax decisions. 
+[This summary](https://prettier.io/docs/en/comparison.html) provides a condensed description of how 
+the two tools are different, and how they can be used in conjunction to improve productivity and
+prevent bugs before they happen.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# React Framework <a name="react-framework"></a>
 
-### `yarn eject`
+This website is built using [React.js](https://reactjs.org/), a Javascript component-based web devleopment
+framework. React was chosen as a framework for this website as opposed to any other framework because
+of its component-based philosophy. Breaking down any software into smaller reusable components, or 
+modules, allows for [greater flexibility](https://softwareengineering.stackexchange.com/questions/154228/why-is-it-good-to-split-a-program-into-multiple-classes).
+It allows developers to focus on a specific piece of a project rather than understanding all pieces at once.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Project Structure <a name="project-structure"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The `src` file is organized as follows:
+```
+src/
+  api/ - any and all api calls
+  components/ - all functional, or pure, components
+  containers/ - components dealing with data or store
+  routes/
+    routes.tsx - manages all routes
+  utils/ - any and all utility functions
+  index.tsx - main source file which initializes store and renders DOM
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
