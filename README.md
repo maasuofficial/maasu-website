@@ -11,6 +11,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Linting](#linting)
 + [Project Structure](#project-structure)
 + [Styling and CSS](#styling-and-css)
++ [Testing](#testing)
 + [Notes](#notes)
 
 ## Overview <a name="overview"></a>
@@ -113,6 +114,7 @@ src/
   api/              - any and all api calls
   components/       - all functional, or pure, components
   containers/       - components dealing with data or store
+  css/              - any and all styling
   routes/
     routes.tsx      - manages all routes
   utils/            - any and all utility functions
@@ -172,6 +174,17 @@ lower level HTML components, which then are used and reused throughout the proje
 convoluted class names or large css files because **once you code a css class, you never have to change it ever again.**
 
 [Goodbye, old CSS. Hello, functional CSS.](https://www.youtube.com/watch?reload=9&v=uHVqbCPnOwU)
+
+## Testing <a name="testing"></a>
+
+Testing is one of the most important aspects of software development. It ensures confidence that the software you run
+will not produce any issues or errors in production. This project focuses on a few different types of testing strategies:
+
+### Unit/Integration Tests: [Jest](https://jestjs.io/en/)
+
+Jest is a fantastic Javascript/Typescript/Babel testing library that can be extended to perform a number of different
+tasks such as test watching, coverage, and DOM environment testing. It is easy to write tests and mocks, and even simpler
+to structure tests or run certain subsets of tests.
 
 ## Notes <a name="notes"></a>
 

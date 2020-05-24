@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import Routes from 'routes/routes'
-import 'styles.scss'
+import 'css/functional.scss'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(

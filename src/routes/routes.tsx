@@ -290,7 +290,7 @@ const Donate = (props: RouteComponentProps) => (
 
 const Error = (props: RouteComponentProps) => <div>404 Error.</div>
 
-function App() {
+const Routes = () => {
   return (
     <Router>
       <Home path="/" />
@@ -350,4 +350,4 @@ function App() {
   )
 }
 
-export default App
+export default Routes
