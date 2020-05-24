@@ -43,7 +43,7 @@ of its component-based philosophy. Breaking down any software into smaller reusa
 modules, allows for [greater flexibility](https://softwareengineering.stackexchange.com/questions/154228/why-is-it-good-to-split-a-program-into-multiple-classes).
 It allows developers to focus on a specific piece of a project rather than understanding all pieces at once.
 
-#### Create React App
+### Create React App
 
 This app in particular was created using [Create React App](https://github.com/facebook/create-react-app)
 because of its ease of use. With Create React App, it's easy to quicky create a simple project with
@@ -58,7 +58,7 @@ This project uses [Typescript](https://www.typescriptlang.org/) as its primary l
 Typescript is essentially a strongly-typed javscript language which transpiles into Javascript on
 compile.
 
-##### Motivation
+### Motivation
 When I first tried to learn Typescript over a year ago, I gave it up and decided it was not for me.
 After all, Typescript seemed to take away the very thing that made Javascript so powerful - the ability
 to change types. Why would we regress in functionality? So here's the reasoning.
@@ -122,7 +122,7 @@ variables, mathematical calculations, and loops.
 I simply chose [SCSS over SASS](https://stackoverflow.com/questions/5654447/whats-the-difference-between-scss-and-sass)
 because I prefer its style.
 
-#### Motivation
+### Motivation
 
 With the arrival of React and other modular frontend frameworks, the concept of CSS styling is becoming 
 obsolete. Now, there is no longer a need for massive CSS files containing convoluted class names and
@@ -171,7 +171,7 @@ convoluted class names or large css files because **once you code a css class, y
 
 - [Absolute Imports](#absolute-imports)
 
-#### Absolute Imports <a name="absolute-imports"></a>
+### Absolute Imports <a name="absolute-imports"></a>
 
 One of the most frustrating aspects of component importing is trying to determine the correct relative
 path. By using Typescript, import becomes much easier by altering the `tsconfig.json` to read directly
