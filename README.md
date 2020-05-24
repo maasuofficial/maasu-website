@@ -8,6 +8,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Linting](#linting)
 + [React Framework](#react-framework)
 + [Project Structure](#project-structure)
++ [Notes](#notes)
 
 # Overview <a name="overview"></a>
 
@@ -57,3 +58,30 @@ src/
   index.tsx - main source file which initializes store and renders DOM
 ```
 
+# Notes <a name="notes"></a>
+
+- [Absolute Imports](#absolute-imports)
+
+### Absolute Imports <a name="absolute-imports"></a>
+
+One of the most frustrating aspects of component importing is trying to determine the correct relative
+path. By using Typescript, import becomes much easier by altering the `tsconfig.json` to read directly
+from the `src/` folder.
+```json
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": [
+    "src"
+  ]
+}
+```
+This makes import much easier, from:
+```ts
+import Header from '../../../components/header'
+```
+To:
+```ts
+import Header from 'components/header'
+```

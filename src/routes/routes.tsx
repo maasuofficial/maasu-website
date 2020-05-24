@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, Router, RouteComponentProps } from '@reach/router'
 import firebase from '../firebase'
+import Heading from 'components/Header'
 
 function useSchools() {
   const [schools, setSchools] = useState<{ name: string }[]>([])
@@ -224,6 +225,7 @@ const Alumni = (props: RouteComponentProps) => {
 
   return (
     <div>
+      <Heading />
       {user.uid ? <p>user {user.uid}</p> : <p>You are not signed in</p>}
 
       <h1>sign in</h1>
