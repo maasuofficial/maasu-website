@@ -21,7 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "functions": "tsc -p functions",
+    "build": "react-scripts build && yarn functions",
     "test": "react-scripts test --watchAll",
     "e2e": "yarn cypress open"
   },
