@@ -2,6 +2,20 @@ import React, { useEffect, useState } from 'react'
 import { Link, Router, RouteComponentProps } from '@reach/router'
 import firebase from '../firebase'
 import Heading from 'components/header'
+import ApolloClient, { gql } from 'apollo-boost'
+const client = new ApolloClient({
+  uri: '/.netlify/functions/graphql',
+})
+
+client
+  .query({
+    query: gql`
+      {
+        hello
+      }
+    `,
+  })
+  .then((res: any) => console.log(res))
 
 function useSchools() {
   const [schools, setSchools] = useState<{ name: string }[]>([])
