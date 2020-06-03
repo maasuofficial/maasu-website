@@ -14,9 +14,13 @@ class SC extends React.Component {
 
           <div className={`${modules.promoOverlay}`}>
             <div className={`${modules.promoContent}`}>
-              <p>Dear Attendees and the MAASU Community,</p>
-              <p>Due to the recent events surrounding the COVID-19 outbreak, we have decided as a team to <span>postpone the MAASU Spring Conference 2020 and move it to Fall 2020.</span></p>
-              <p>We strongely urge everyone to begin requesting refunds for your lodging and transportation for MAASU. For more news and updates, check out our <a href="https://facebook.com/maasuofficial">Facebook page</a>.</p>
+              <h2>
+                <p>2020 MAASU Fall Conference</p>
+                <a target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/maasuofficial'>
+                  <em className={`${modules.golden}`}>Unwritten</em>
+                </a>
+                <p>October 30 - November 1</p>
+              </h2>
             </div>
           </div>
 
