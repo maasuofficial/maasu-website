@@ -107,6 +107,7 @@ git push origin --delete my-feature-name
 git checkout production
 git pull origin master
 git push
+git checkout master
 ```
 
 For a basic idea of workflow:
