@@ -2,10 +2,19 @@
 
 The website for the Midwest Asian Pacific Islander Desi American Students Union
 
+**Production** 
+
+[![Netlify Production Status](https://api.netlify.com/api/v1/badges/97f4cbd7-bf40-4abc-af37-6ffd64a9d99f/deploy-status)](https://app.netlify.com/sites/maasu-production/deploys)
+
+**Staging** 
+
+[![Netlify Staging Status](https://api.netlify.com/api/v1/badges/04501a98-4092-4e51-8024-6181df043a0b/deploy-status)](https://app.netlify.com/sites/maasu-master-staging/deploys)
+
 ## Table of Contents <a name="table-of-contents"></a>
 
 + [Overview](#overview)
 + [Installation](#installation)
++ [Workflow](#workflow)
 + [React Framework](#react-framework)
 + [Typescript](#typescript)
 + [Linting](#linting)
@@ -57,6 +66,48 @@ comparison of commonly used commands where `yarn` makes things easier.
 | testing | `yarn test` | `npm run test` |
 | build | `yarn build` | `npm run build` |
 | custom {script} | `yarn script` | `npm run script` |
+
+## Workflow <a name="workflow"></a>
+
+In this repository, there are two main branches: `master` and `production`, corresponding to the `staging` and `production` environments, respectively. With the integration of [Netlify](https://www.netlify.com/) as a hosting service, any pushed commits to these branches will immediately trigger builds in production. For this reason, I have chosen the `master` branch to only push to the `staging` environment for safety and security measures.
+
+All other branches are `feature` branches, where each branch will contain some type of feature or bugfix. These changes are then merged into `master`. To put these changes into production, create a pull request to merge a feature branch into `master`. While there are many ways to merge branches, this is the safest way because creating a Github pull request makes an explicit statement regarding the changes to be made on the public website. These can also be detailed and labeled for future reference. After the changes have been merged into `master`, it is simple to merge `master` into `production`.
+
+Pull requests should be labeled with the labels provided and a list of significant changes should be detailed in the request body. Once approved, the requested commits will be squash merged into `master` to reduce the amount of commits.
+
+Utilizing `git` and `github`:
+
+1. Make sure you are in a unique feature branch.
+```
+git checkout -b my-feature-name
+
+or if the branch already exists:
+
+git checkout my-feature-name
+```
+2. Make any file changes you wish to make.
+3. Commit and push those changes.
+```
+git commit -m "commit title"
+git push --set-upstream origin my-feature-name
+```
+4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
+```
+git pull origin master
+git push
+```
+5. Create a PR to merge into `master`.
+6. Merge changes into `master`.
+7. Update `production` with changes from `master` and push those changes.
+```
+git checkout production
+git pull origin master
+git push
+```
+
+For a basic idea of workflow:
+
+`feature branch` &rightarrow; `pull request` &rightarrow; `master` &rightarrow; `production`
 
 ## React Framework <a name="react-framework"></a>
 
