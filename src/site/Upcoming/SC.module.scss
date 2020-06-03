@@ -34,17 +34,23 @@
 }
 
 .promoContent {
-  margin: calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * 3) var(--spacing);
   height: calc(100% - calc(var(--spacing) * 2));
   width: calc(100% - calc(var(--spacing) * 2));
   color: var(--palette-background-main);
   font-size: calc(var(--typography-fontSize) * 1.5);
 
-  p span {
-    text-decoration: underline;
+  h2 {
+    padding-top: var(--spacing);
+    text-align: center;
+  }
+
+  p {
+    margin: calc(var(--spacing) * 0.1) 0;
   }
 
   a {
+    text-decoration: none;
     color: var(--palette-primary-main);
   }
 }
