@@ -69,27 +69,23 @@ comparison of commonly used commands where `yarn` makes things easier.
 
 ## Workflow <a name="workflow"></a>
 
-In this repository, there are two main branches: `master` and `production`, corresponding to the `staging` and `production` environments, respectively. With the integration of [Netlify](https://www.netlify.com/) as a hosting service, any pushed commits to these branches will immediately trigger builds in production. For this reason, I have chosen the `master` branch to only push to the `staging` environment for safety and security measures.
+In this repository, there are two main branches: `staging` and `master`, corresponding to the `staging` and `production` environments, respectively. With the integration of [Netlify](https://www.netlify.com/) as a hosting service, any pushed commits to these branches will immediately trigger builds in production. For this reason, I have made the `master` branch to not allow unsigned commits to be pushed for safety and security measures.
 
-All other branches are `feature` branches, where each branch will contain some type of feature or bugfix. These changes are then merged into `master`. To put these changes into production, create a pull request to merge a feature branch into `master`. While there are many ways to merge branches, this is the safest way because creating a Github pull request makes an explicit statement regarding the changes to be made on the public website. These can also be detailed and labeled for future reference. After the changes have been merged into `master`, it is simple to merge `master` into `production`.
+All other branches are `feature` branches, where each branch will contain some type of feature or bugfix. These changes are then merged into `staging. To put these changes into production, create a pull request to merge the staging branch into `master`. While there are many ways to merge branches, this is the safest way because creating a Github pull request makes an explicit statement regarding the changes to be made on the public website. These can also be detailed and labeled for future reference. After the changes have been merged into `master`, they will automatically be deployed into production.
 
 Pull requests should be labeled with the labels provided and a list of significant changes should be detailed in the request body. Once approved, the requested commits will be squash merged into `master` to reduce the amount of commits.
 
 Utilizing `git` and `github`:
 
-1. Make sure you are in a unique feature branch.
+1. Check out the staging branch, and verify it is up to date with the latest changes in production. 
 ```
-git checkout -b my-feature-name
-
-or if the branch already exists:
-
-git checkout my-feature-name
+g checkout staging
+g pull origin master
 ```
-2. Make any file changes you wish to make.
-3. Commit and push those changes.
+2. Make your changes to the `staging` branch, whether through a feature branch or manually.
+3. Commit those changes.
 ```
 git commit -m "commit title"
-git push --set-upstream origin my-feature-name
 ```
 4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
 ```
@@ -98,21 +94,14 @@ git push
 ```
 5. Create a PR to merge into `master`.
 6. Merge changes into `master`.
-7. Delete your feature branch.
+7. Delete any feature branches created.
 ```
 git push origin --delete my-feature-name
-```
-8. Update `production` with changes from `master` and push those changes.
-```
-git checkout production
-git pull origin master
-git push
-git checkout master
 ```
 
 For a basic idea of workflow:
 
-`feature branch` &rightarrow; `pull request` &rightarrow; `master` &rightarrow; `production`
+`feature branch`/`staging` &rightarrow; `pull request` &rightarrow; `master`
 
 ## React Framework <a name="react-framework"></a>
 
