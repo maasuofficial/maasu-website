@@ -98,7 +98,11 @@ git push
 ```
 5. Create a PR to merge into `master`.
 6. Merge changes into `master`.
-7. Update `production` with changes from `master` and push those changes.
+7. Delete your feature branch.
+```
+git push origin --delete my-feature-name
+```
+8. Update `production` with changes from `master` and push those changes.
 ```
 git checkout production
 git pull origin master
