@@ -134,7 +134,8 @@ The `src` file is organized as follows:
 ```
 src/
   api/              - any and all api calls
-  components/       - all functional, or pure, components
+  components/       - all functional, or pure, components concerned with UI
+  constants/        - all constants, strings, etc
   containers/       - components dealing with data or store
   css/              - any and all styling
   routes/
