@@ -1,10 +1,10 @@
-import React from 'react';
-import { Page, Type } from '../../components';
-import modules from './Donate.module.scss';
+import React from 'react'
+import { Page, Type } from '../../components'
+import modules from './Donate.module.scss'
 
 class Donate extends React.Component {
   componentDidMount() {
-    document.title = 'Donate - The Midwest Asian American Students Union';
+    document.title = 'Donate - The Midwest Asian American Students Union'
   }
 
   render() {
@@ -13,21 +13,21 @@ class Donate extends React.Component {
         <Type variant='h2'>Donate</Type>
 
         <p>
-          MAASU is a 501c3 nonprofit student run organization. 
-          We rely on community support to continue to aide, educate 
-          and connect students across midwest campuses in leadership 
-          development and Asian American advocacy. 
-          It is with your financial support that we are able to provide 
-          students with resources and events that connect our shared identity. 
+          MAASU is a 501c3 nonprofit student run organization.
+          We rely on community support to continue to aide, educate
+          and connect students across midwest campuses in leadership
+          development and Asian American advocacy.
+          It is with your financial support that we are able to provide
+          students with resources and events that connect our shared identity.
         </p>
 
         <p>
-          MAASU believes in empowering students and cultivating strong leaders 
-          within our local communities. Your donation would ensure the continuation 
-          of these programs, such as the Leadership Summit and Spring Conference. 
-          Please join us in supporting young Asian American Student Leaders 
-          by making a tax deductible deduction today. 
-          Engagement of young people is more important than ever, and we 
+          MAASU believes in empowering students and cultivating strong leaders
+          within our local communities. Your donation would ensure the continuation
+          of these programs, such as the Leadership Summit and Spring Conference.
+          Please join us in supporting young Asian American Student Leaders
+          by making a tax deductible deduction today.
+          Engagement of young people is more important than ever, and we
           hope you join us in cultivating the next generation of leaders.
         </p>
 
@@ -41,7 +41,7 @@ class Donate extends React.Component {
 
         <div className='footerSpace'></div>
       </Page>
-    );
+    )
   }
 }
 
@@ -49,7 +49,7 @@ const DonateComp = (props) => {
   return (
     <Page className={`${modules.complete}`}>
       <div className='footerSpace'></div>
-      <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/LogoSymbol.svg`} alt="thank you for donating!" />
+      <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`} alt="thank you for donating!" />
 
       <Type variant='h2'>Thank you for donating.</Type>
       <Type variant='h4'>
@@ -58,7 +58,7 @@ const DonateComp = (props) => {
 
       <div className='footerSpace'></div>
     </Page>
-  );
+  )
 }
 
 export {

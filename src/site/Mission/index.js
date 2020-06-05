@@ -1,10 +1,10 @@
-import React from 'react';
-import { BImg, Page, Type } from '../../components';
-import modules from './Mission.module.scss';
+import React from 'react'
+import { BImg, Page, Type } from '../../components'
+import modules from './Mission.module.scss'
 
 class Mission extends React.Component {
   componentDidMount() {
-    document.title = 'Our Mission - The Midwest Asian American Students Union';
+    document.title = 'Our Mission - The Midwest Asian American Students Union'
   }
 
   render() {
@@ -12,7 +12,7 @@ class Mission extends React.Component {
       <React.Fragment>
         <Page className={`${modules.purpose}`}>
           <Type variant='sub2'>Our Purpose</Type>
-          <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/Logo-wSymbol.svg`} alt='The Midwest Asian American Students Union' />
+          <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`} alt='The Midwest Asian American Students Union' />
           <p>
             <b>The Midwest Asian American Students Union</b> (MAASU) is an organization that began in response
             to a need for political unity among Asian American students in the Midwest. By 1990, there
@@ -56,8 +56,8 @@ class Mission extends React.Component {
         </Page>
         <div className='footerSpace'></div>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Mission;
+export default Mission

@@ -1,10 +1,10 @@
-import React from 'react';
-import { Page, Type } from '../../components';
-import modules from './Alumni.module.scss';
+import React from 'react'
+import { Page, Type } from '../../components'
+import modules from './Alumni.module.scss'
 
 class Alumni extends React.Component {
   componentDidMount() {
-    document.title = 'Alumni - The Midwest Asian American Students Union';
+    document.title = 'Alumni - The Midwest Asian American Students Union'
   }
 
   render() {
@@ -13,15 +13,15 @@ class Alumni extends React.Component {
         <Page>
           <Type variant='h2'>Alumni</Type>
           <div className={`${modules.logoContainer}`}>
-            <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/Logo.svg`} alt='The Midwest Asian American Students Union' />
+            <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`} alt='The Midwest Asian American Students Union' />
             <Type cap variant='sub2'>Alumni Association</Type>
           </div>
         </Page>
         <Page>
           <Type variant='h4'>Purpose</Type>
           <p>
-            The MAASU Alumni Association (MAA) is a group for all MAASU alumni. MAA’s purpose is to continue 
-            building and sustaining lifelong relationships between MAASU and its alumni through the 
+            The MAASU Alumni Association (MAA) is a group for all MAASU alumni. MAA’s purpose is to continue
+            building and sustaining lifelong relationships between MAASU and its alumni through the
             following ways:
           </p>
           <ul>
@@ -35,19 +35,19 @@ class Alumni extends React.Component {
         <Page>
           <Type variant='h2'>MAA Membership</Type>
           <p>
-            To become a MAA member, there is a one-time membership fee of $30. MAA members will then be 
-            mailed a MAASU Alumni Association wine glass. If you are interested in becoming a member 
+            To become a MAA member, there is a one-time membership fee of $30. MAA members will then be
+            mailed a MAASU Alumni Association wine glass. If you are interested in becoming a member
             of the MAASU Alumni Association, please follow these steps:
           </p>
           <ol>
             <li>
-              Fill out the MAASU Alumni Directory 
+              Fill out the MAASU Alumni Directory
               Form <a href='https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1'>here</a>.
             </li>
             {/* <li>Provide a one-time membership payment of $30.00 USD via PayPal below.</li> */}
             <li>Provide a one-time membership payment of $30.00 USD via PayPal below.</li>
             <li>
-              After completing steps 1 and 2, access to the Alumni Directory will be granted and a MAA 
+              After completing steps 1 and 2, access to the Alumni Directory will be granted and a MAA
               wine glass will be mailed to you.
             </li>
           </ol>
@@ -74,8 +74,8 @@ class Alumni extends React.Component {
         </Page>
         <div className='footerSpace'></div>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default Alumni;
+export default Alumni

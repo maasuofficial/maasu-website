@@ -11,7 +11,7 @@ class SC extends React.Component {
         <Page className={`${modules.container}`}>
           <div className={`${modules.logo}`}>
             <img
-              src={`${process.env.PUBLIC_URL}/assets/branding/Logo-AltDark.svg`}
+              src={`${process.env.PUBLIC_URL}/assets/branding/dark/text.svg`}
               alt={CORE.NAME_LONG}
             />
           </div>
