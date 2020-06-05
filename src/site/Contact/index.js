@@ -1,14 +1,14 @@
-import React from 'react';
-import { Cell, Grid, Page, Type } from '../../components';
-import querystring from 'querystring';
-import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa';
-import modules from './Contact.module.scss';
+import React from 'react'
+import { Cell, Grid, Page, Type } from '../../components'
+import querystring from 'querystring'
+import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'
+import modules from './Contact.module.scss'
 
 class Contact extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this)
 
     this.state = {
       submission: null,
@@ -17,41 +17,41 @@ class Contact extends React.Component {
   }
 
   componentDidMount() {
-    document.title = 'Contact - The Midwest Asian American Students Union';
+    document.title = 'Contact - The Midwest Asian American Students Union'
   }
 
   async handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
 
-    const { name, email, message } = e.target;
+    const { name, email, message } = e.target
 
-    let response = {
+    const response = {
       'entry.1059489069': 'ecc@maasu.org',
       'entry.366340186': name.value,
       'entry.1066764004': email.value,
       'entry.1137712670': message.value
-    };
+    }
 
-    let formData = querystring.stringify(response);
+    const formData = querystring.stringify(response)
 
-    let url = `https://docs.google.com/forms/d/e/1FAIpQLScR8VrdLO9dHOs_PIabASBPkSIjinUQklxh_rncEDygrikeNQ/formResponse?${formData}`;
+    const url = `https://docs.google.com/forms/d/e/1FAIpQLScR8VrdLO9dHOs_PIabASBPkSIjinUQklxh_rncEDygrikeNQ/formResponse?${formData}`
 
-    let options = {
+    const options = {
       method: 'POST',
       mode: 'no-cors',
-    };
+    }
 
     try {
-      await fetch(url, options);
+      await fetch(url, options)
       this.setState({
         submission: 'success',
         submissionMessage: 'Your message was sent.'
-      });
-    } catch(e) {
+      })
+    } catch (e) {
       this.setState({
         submission: 'error',
         submissionMessage: 'Unable to send message: ' + e,
-      });
+      })
     }
   }
 
@@ -88,16 +88,16 @@ class Contact extends React.Component {
           </form>
 
           <footer>
-            <span>Special thanks to Craig Bossley for logo design.</span>
+            <span style={{ display: 'none' }}>Special thanks to Craig Bossley for logo design.</span>
             <br />
-            <span>&copy;MAASU 2019. For additional information or questions regarding the website please contact <a className='mail' href='MAILTO:technet@maasu.org'>technet@maasu.org</a>.</span>
+            <span>&copy;MAASU 2020. For additional information or questions regarding the website please contact <a className='mail' href='MAILTO:technet@maasu.org'>technet@maasu.org</a>.</span>
             <br />
-            <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/Logo.svg`} alt='The Midwest Asian American Students Union' />
+            <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`} alt='The Midwest Asian American Students Union' />
           </footer>
         </div>
       </Page>
-    );
+    )
   }
 }
 
-export default Contact;
+export default Contact

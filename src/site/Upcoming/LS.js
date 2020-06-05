@@ -1,8 +1,8 @@
-import React from 'react';
-import { Type, Grid, Cell, Page, Pressable } from '../../components';
-import { FaFacebookSquare, FaInstagram } from 'react-icons/fa';
+import React from 'react'
+import { Type, Grid, Cell, Page, Pressable } from '../../components'
+import { FaFacebookSquare, FaInstagram } from 'react-icons/fa'
 
-import modules from './LS.module.scss';
+import modules from './LS.module.scss'
 
 const LS = (props) => {
   return (
@@ -15,7 +15,7 @@ const LS = (props) => {
       </div>
 
       <Page className={`${modules.content}`}>
-        <img src={`${process.env.PUBLIC_URL}/assets/branding/Logo-wSymbol.svg`} alt='The Midwest Asian American Students Union' />
+        <img src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`} alt='The Midwest Asian American Students Union' />
 
         <div className={`${modules.conferenceContent}`}>
           <header>
@@ -45,4 +45,4 @@ const LS = (props) => {
   )
 }
 
-export default LS;
+export default LS
