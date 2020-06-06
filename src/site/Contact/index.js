@@ -62,7 +62,7 @@ class Contact extends React.Component {
 
         <div className={`${modules.content}`}>
           <div className={`${modules.linkContainer}`}>
-            <Grid className={`${modules.linkGrid}`}>
+            <Grid className={`${modules.linkGrid} disp-in-flex`}>
               <Cell auto>
                 <a href='https://facebook.com/maasuofficial'><FaFacebookF /></a>
               </Cell>

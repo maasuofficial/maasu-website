@@ -18,7 +18,7 @@ class SC extends React.Component {
 
           <div className={`${modules.promoOverlay}`}>
             <div className={`${modules.promoContent}`}>
-              <h2>
+              <h2 className='h2-sc'>
                 <p className={`${modules.title}`}>
                   {UPCOMING.CONFERENCE_YEAR} {CORE.NAME}{' '}
                   {UPCOMING.CONFERENCE_TYPE}
@@ -28,7 +28,7 @@ class SC extends React.Component {
                   rel="noopener noreferrer"
                   href="https://www.facebook.com/maasuofficial"
                 >
-                  <em className={`${modules.golden}`}>
+                  <em className={`${modules.golden} em-sc`}>
                     {UPCOMING.CONFERENCE_NAME}
                   </em>
                 </a>

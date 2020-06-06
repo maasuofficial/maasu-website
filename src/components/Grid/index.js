@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import modules from './Grid.module.scss';
 
 import Cell from './Cell';
 
@@ -9,12 +8,12 @@ class Grid extends Component {
     const { children, className, x, y, ...props } = this.props;
 
     let classes = (typeof className === 'string') ? className.split(' ') : [];
-    classes.push(`${modules.grid}`);
+    classes.push('grid');
 
     if (y) {
-      classes.push(`${modules.gridY}`);
+      classes.push('gridY');
     } else {
-      classes.push(`${modules.gridX}`);
+      classes.push('gridX');
     }
 
     return <div {...props} className={classes.join(' ')}>{children}</div>;

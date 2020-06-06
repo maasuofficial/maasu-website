@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Cell } from '../';
-import modules from './Timeline.module.scss';
 
 class Time extends React.Component {
   render() {
     return (
-      <Cell className={`${modules.timeContainer}`}>
-        <div className={`${modules.labelContainer}`}>
+      <Cell className={'timeContainer'}>
+        <div className={'labelContainer'}>
           <div>
             <span>{this.props.label}</span>
           </div>
         </div>
-        <div className={`${modules.contentContainer}`}>{this.props.children}</div>
+        <div className={'contentContainer'}>{this.props.children}</div>
       </Cell>
     );
   }
