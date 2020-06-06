@@ -32,6 +32,10 @@ This document summarizes a design process of the MAASU website, what softwares a
 and any executive descisions made in regards to project structure.
 The [Table of Contents](#table-of-contents) provides a summary of all relevant categories.
 
+To view a directory of previous board members, see [board members](docs/board.md).
+
+New to MAASU, or the MAASU Technical Networking position? Read the [introduction first](docs/intro.md).
+
 ## Installation <a name="installation"></a>
 
 To install all dependencies, use the [Yarn Package Manager](https://yarnpkg.com/):
@@ -229,10 +233,11 @@ src/
   constants/        - all constants, strings, etc
   containers/       - components dealing with data or store
   css/              - any and all styling
+    _def.scss       - all css global variables and utility functions
+    app.scss        - all functional CSS classes
   routes/
     routes.tsx      - manages all routes
   utils/            - any and all utility functions
-  styles.scss       - all functional CSS classes, as well as theme variables
   index.tsx         - main source file which initializes store and renders DOM
 ```
 
