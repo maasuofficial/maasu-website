@@ -2,7 +2,6 @@ import React from 'react'
 import { Cell, Grid, Page, Type } from '../../components'
 import querystring from 'querystring'
 import { FaFacebookF, FaTwitter, FaInstagram } from 'react-icons/fa'
-import modules from './Contact.module.scss'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -57,12 +56,12 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Page className={`${modules.contact}`}>
+      <Page className={'contact-contact'}>
         <Type variant='h2'>Contact Us</Type>
 
-        <div className={`${modules.content}`}>
-          <div className={`${modules.linkContainer}`}>
-            <Grid className={`${modules.linkGrid} disp-in-flex`}>
+        <div className={'content-contact'}>
+          <div className={'linkContainer-contact'}>
+            <Grid className={'linkGrid-contact disp-in-flex'}>
               <Cell auto>
                 <a href='https://facebook.com/maasuofficial'><FaFacebookF /></a>
               </Cell>
@@ -77,11 +76,11 @@ class Contact extends React.Component {
 
           <p>Any questions? Send us a message and we'll get back to you as soon as possible!</p>
 
-          <form className={`${modules.contactForm}`} onSubmit={this.handleSubmit}>
+          <form className={'contactForm-contact'} onSubmit={this.handleSubmit}>
             <input type='text' required name='name' placeholder='First and last name' />
             <input type='email' required name='email' placeholder='Email' />
             <textarea required name='message' placeholder='Message'></textarea>
-            <div className={`${modules.contactResponse} ${this.state.submission ? modules[`contact-${this.state.submission}`] : ''}`}>
+            <div className={`contactResponse-contact ${this.state.submission ? [`contact-${this.state.submission}-contact`] : ''}`}>
               <span>{this.state.submissionMessage}</span>
             </div>
             <button type='submit'>Submit</button>
@@ -92,7 +91,7 @@ class Contact extends React.Component {
             <br />
             <span>&copy;MAASU 2020. For additional information or questions regarding the website please contact <a className='mail' href='MAILTO:technet@maasu.org'>technet@maasu.org</a>.</span>
             <br />
-            <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`} alt='The Midwest Asian American Students Union' />
+            <img className={'logo-contact'} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`} alt='The Midwest Asian American Students Union' />
           </footer>
         </div>
       </Page>

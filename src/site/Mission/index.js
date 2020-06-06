@@ -1,6 +1,5 @@
 import React from 'react'
 import { BImg, Page, Type } from '../../components'
-import modules from './Mission.module.scss'
 
 class Mission extends React.Component {
   componentDidMount() {
@@ -10,9 +9,9 @@ class Mission extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Page className={`${modules.purpose}`}>
+        <Page className={'purpose-mission'}>
           <Type variant='sub2'>Our Purpose</Type>
-          <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`} alt='The Midwest Asian American Students Union' />
+          <img className={'logo-mission'} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`} alt='The Midwest Asian American Students Union' />
           <p>
             <b>The Midwest Asian American Students Union</b> (MAASU) is an organization that began in response
             to a need for political unity among Asian American students in the Midwest. By 1990, there
@@ -29,7 +28,7 @@ class Mission extends React.Component {
             student organizations in the Midwest.
           </p>
         </Page>
-        <Page className={`${modules.mission}`}>
+        <Page className={'mission-mission'}>
           <Type variant='sub2'>Our Mission</Type>
           <p>
             The Midwest Asian American Students Union strives to recognize the needs of the Asian Pacific
@@ -48,7 +47,7 @@ class Mission extends React.Component {
             <li>Unite and strengthen the APIA community‘s stance against all forms of oppression</li>
           </ul>
         </Page>
-        <Page className={`${modules.mission}`}>
+        <Page className={'mission-mission'}>
           <Type variant='sub2'>Our Strategic Mission</Type>
           <p>
             MAASU strives to recognize the needs of its community by developing a strategic plan for the next few years. See our strategic plan for 2020-2024 <a href={`${process.env.PUBLIC_URL}/assets/files/MAASU_Strategic_Plan_2020-2024.pdf`}>here</a>.

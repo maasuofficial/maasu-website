@@ -1,6 +1,5 @@
 import React from 'react'
 import { Page, Type } from '../../components'
-import modules from './Donate.module.scss'
 
 class Donate extends React.Component {
   componentDidMount() {
@@ -35,8 +34,8 @@ class Donate extends React.Component {
           If you have any questions, please reach out to the <a href='mailto:directorscouncil@maasu.org'>Directorscouncil@maasu.org</a>.
         </p>
 
-        <p className={`${modules.donateButtonWrapper}`}>
-          <a className={`${modules.donateButton}`} href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4RPT285DWDCKN&source=url">donate here</a>
+        <p className={'donateButtonWrapper-donate'}>
+          <a className={'donateButton-donate'} href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4RPT285DWDCKN&source=url">donate here</a>
         </p>
 
         <div className='footerSpace'></div>
@@ -47,9 +46,9 @@ class Donate extends React.Component {
 
 const DonateComp = (props) => {
   return (
-    <Page className={`${modules.complete}`}>
+    <Page className={'complete-donate'}>
       <div className='footerSpace'></div>
-      <img className={`${modules.logo}`} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`} alt="thank you for donating!" />
+      <img className={'logo-donate'} src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`} alt="thank you for donating!" />
 
       <Type variant='h2'>Thank you for donating.</Type>
       <Type variant='h4'>

@@ -1,25 +1,23 @@
 import React from 'react'
 import { Page } from '../../components'
-import './SC.scss'
-import modules from './SC.module.scss'
 import { CORE, UPCOMING } from '../../constants/strings'
 
 class SC extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Page className={`${modules.container}`}>
-          <div className={`${modules.logo}`}>
+        <Page className={'container-sc'}>
+          <div className={'logo-sc'}>
             <img
               src={`${process.env.PUBLIC_URL}/assets/branding/dark/text.svg`}
               alt={CORE.NAME_LONG}
             />
           </div>
 
-          <div className={`${modules.promoOverlay}`}>
-            <div className={`${modules.promoContent}`}>
+          <div className={'promoOverlay-sc'}>
+            <div className={'promoContent-sc'}>
               <h2 className='h2-sc'>
-                <p className={`${modules.title}`}>
+                <p className={'title-sc'}>
                   {UPCOMING.CONFERENCE_YEAR} {CORE.NAME}{' '}
                   {UPCOMING.CONFERENCE_TYPE}
                 </p>
@@ -28,11 +26,11 @@ class SC extends React.Component {
                   rel="noopener noreferrer"
                   href="https://www.facebook.com/maasuofficial"
                 >
-                  <em className={`${modules.golden} em-sc`}>
+                  <em className={'golden-sc em-sc'}>
                     {UPCOMING.CONFERENCE_NAME}
                   </em>
                 </a>
-                <p className={`${modules.date}`}>
+                <p className={'date-sc'}>
                   {UPCOMING.CONFERENCE_DATE_RANGE}
                 </p>
               </h2>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Page, Type } from '../../components';
-import modules from './PastConf.module.scss';
 
 class PastConf extends React.Component {
   componentDidMount() {
@@ -11,7 +10,7 @@ class PastConf extends React.Component {
     return (
       <Page>
         <Type variant='h2'>Past Conferences</Type>
-        <table className={`${modules.conferences}`}>
+        <table className={'conferences'}>
           <thead>
             <tr>
               <th>Date</th>

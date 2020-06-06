@@ -1,7 +1,6 @@
 import React from 'react'
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components'
 import { FaArrowLeft } from 'react-icons/fa'
-import modules from './Board.module.scss'
 import data from './data.json'
 
 class Board extends React.Component {
@@ -39,21 +38,21 @@ class Board extends React.Component {
         p.nameConcatenated.toLowerCase() === this.state.profile.toLowerCase()
       const expTabIndex = isExpProfile ? 0 : -1
       const expClasses = isExpProfile
-        ? `${modules.priority} ${modules.expanded}`
+        ? 'priority-board expanded-board'
         : ''
 
       return (
         <Cell key={index} auto sm={6} md={4} lg={3}>
-          <ARBox className={`${modules.profileContainer}`} resizeable>
+          <ARBox className={'profileContainer-board'} resizeable>
             <a
               href="/"
               tabIndex={expanded ? -1 : 0}
-              className={`${modules.profileTrigger}`}
+              className={'profileTrigger-board'}
               onClick={this.toggleExpansion}
               aria-label="profile link"
               aria-expanded={expanded}
             >
-              <div className={`${modules.profile}`}>
+              <div className={'profile-board'}>
                 <BImg
                   src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`}
                   alt={p.name}
@@ -64,7 +63,7 @@ class Board extends React.Component {
             </a>
 
             <Page
-              className={`${modules.profileInfo} ${expClasses}`}
+              className={`profileInfo-board ${expClasses}`}
               name={p.nameConcatenated}
             >
               <Type variant="h2">{p.name}</Type>
@@ -72,7 +71,7 @@ class Board extends React.Component {
               <a
                 href="/"
                 tabIndex={expTabIndex}
-                className={`${modules.close}`}
+                className={'close-board'}
                 onClick={this.toggleContraction}
               >
                 <FaArrowLeft />
@@ -129,7 +128,7 @@ class Board extends React.Component {
 
     // add class in callback or else rerender will overwrite added classes
     this.setState({ expanded: true }, () => {
-      profileInfo.classList.add(modules.priority, modules.expanded)
+      profileInfo.classList.add('priority-board', 'expanded-board')
       const unfocusedElems = profileInfo.querySelectorAll('[tabIndex="-1"]')
       unfocusedElems.forEach((el) => el.setAttribute('tabIndex', '0'))
       this.props.history.replace(`/board/${name}`)
@@ -141,7 +140,7 @@ class Board extends React.Component {
     const profileInfo = e.currentTarget.parentNode
 
     this.setState({ expanded: false }, () => {
-      profileInfo.classList.remove(modules.priority, modules.expanded)
+      profileInfo.classList.remove('priority-board', 'expanded-board')
       const unfocusedElems = profileInfo.querySelectorAll('[tabIndex="0"]')
       unfocusedElems.forEach((el) => el.setAttribute('tabIndex', '-1'))
       this.props.history.replace('/board')
@@ -160,11 +159,11 @@ class Board extends React.Component {
 
     return (
       <div
-        className={`${modules.pageContainer} ${
-          this.state.expanded ? modules.expanded : ''
+        className={`pageContainer-board ${
+          this.state.expanded ? 'expanded-board' : ''
         }`}
       >
-        <Page className={`${modules.groupPage}`}>
+        <Page className={'groupPage-board'}>
           <Type variant="h2">Executive Coordinating Committee</Type>
           <Grid>{this.generateProfiles(groups.ECC)}</Grid>
           <p>
@@ -175,7 +174,7 @@ class Board extends React.Component {
             closed.
           </p>
         </Page>
-        <Page className={`${modules.groupPage}`}>
+        <Page className={'groupPage-board'}>
           <Type variant="h2">Executive Director</Type>
           <Grid>{this.generateProfiles(groups.ED)}</Grid>
           <p>
@@ -183,7 +182,7 @@ class Board extends React.Component {
             Applications for the Executive Director are currently closed.
           </p>
         </Page>
-        <Page className={`${modules.groupPage}`}>
+        <Page className={'groupPage-board'}>
           <Type variant="h2">Directors Council</Type>
           <Grid>{this.generateProfiles(groups.DC)}</Grid>
           <p>
@@ -191,7 +190,7 @@ class Board extends React.Component {
             next application cycle will be in Spring of 2021.
           </p>
         </Page>
-        <Page className={`${modules.groupPage}`}>
+        <Page className={'groupPage-board'}>
           <Type variant="h2">Board of Advisors</Type>
           <Grid>{this.generateProfiles(groups.BOA)}</Grid>
           <p>
