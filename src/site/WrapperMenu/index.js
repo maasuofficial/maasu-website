@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink as RouterLink } from 'react-router-dom'
+import { Link as RouterLink } from '@reach/router'
 import { Menu as UtilityMenu } from 'react-utility-components'
 import { FaAlignRight } from 'react-icons/fa'
 
@@ -7,9 +7,9 @@ let menuOverride = false
 
 const { Link, SubMenu } = UtilityMenu
 
-const checkActive = function (href) {
-  return (match, location) => (location ? location.pathname === href : false)
-}
+// const checkActive = function (href) {
+//   return (match, location) => (location ? location.pathname === href : false)
+// }
 
 class WrapperMenu extends React.Component {
   constructor(props) {
@@ -25,10 +25,10 @@ class WrapperMenu extends React.Component {
     e.preventDefault()
     this.clickedMenu = true
 
-    let trigger = document.querySelector('.triggerWM')
+    const trigger = document.querySelector('.triggerWM')
     trigger.classList.remove('attentionWM')
 
-    let open = !this.state.open
+    const open = !this.state.open
     this.setState({ open })
   }
 
@@ -39,31 +39,31 @@ class WrapperMenu extends React.Component {
   }
 
   retrieveCookie(cname) {
-    let cookies = decodeURIComponent(document.cookie)
+    const cookies = decodeURIComponent(document.cookie)
 
-    let start = cookies.indexOf(cname + '=') + (cname.length + 1)
-    let end = cookies.indexOf(';', start)
+    const start = cookies.indexOf(cname + '=') + (cname.length + 1)
+    const end = cookies.indexOf(';', start)
 
     return end < 0 ? cookies.substring(start) : cookies.substring(start, end)
   }
 
   storeCookie(cname, cvalue, exdays) {
-    let d = new Date()
+    const d = new Date()
     d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
-    let expires = d.toUTCString()
+    const expires = d.toUTCString()
     document.cookie = `${cname}=${cvalue}; expires=${expires}`
   }
 
   componentDidMount() {
-    let time = 7 // seconds
+    const time = 7 // seconds
     setTimeout(() => {
       if (!this.clickedMenu) {
-        let trigger = document.querySelector('.triggerWM')
+        const trigger = document.querySelector('.triggerWM')
         trigger.classList.add('attentionWM')
       }
     }, time * 1000)
 
-    let cookie = this.retrieveCookie('openedMenuBefore')
+    const cookie = this.retrieveCookie('openedMenuBefore')
 
     if (cookie.length === 0) {
       this.storeCookie('openedMenuBefore', 'true', 30)
@@ -104,10 +104,13 @@ class WrapperMenu extends React.Component {
             <UtilityMenu
               className={'utilityMenuWM'}
               linkWrapper={(href, children) => {
+                // const checkActive = function (href) {
+                //   return (match, location) => (location ? location.pathname === href : false)
+                // }
                 return (
                   <RouterLink
                     to={href}
-                    isActive={checkActive(href)}
+                    // isActive={checkActive(href)}
                     onClick={this.handleMenuClose}
                     tabIndex={this.state.open ? 0 : -1}
                   >
@@ -152,7 +155,6 @@ class WrapperMenu extends React.Component {
               <SubMenu>
                 <Link>Archives</Link>
                 <Link href="/newsletter">Newsletter</Link>
-                {/* <Link href='/report'>Annual Report</Link> */}
                 <Link href="/pastawards">Past Award Recipients</Link>
                 <Link href="/pastconferences">Past Conferences</Link>
               </SubMenu>

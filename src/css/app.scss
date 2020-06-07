@@ -1,4 +1,4 @@
-@import 'src/util';
+@import './def';
 
 *, *::before, *::after {
   -webkit-box-sizing: border-box;
@@ -731,7 +731,7 @@ $transition: 0.3s;
 }
 
 .container-sc {
-  overflow: hidden;
+  // overflow: hidden;
   background: var(--palette-text-main);
   height: 100%;
 }
@@ -760,18 +760,16 @@ $transition: 0.3s;
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: #222632;
 }
 
 .promoContent-sc {
-  margin: calc(var(--spacing) * 3) var(--spacing);
-  height: calc(100% - calc(var(--spacing) * 2));
-  width: calc(100% - calc(var(--spacing) * 2));
-  color: var(--palette-background-main);
+  width: 100%;
+  color: #beb481;
   font-size: calc(var(--typography-fontSize) * 1.5);
 
   h2 {
-    padding-top: var(--spacing);
+    padding-top: calc(var(--spacing) * 2);
     text-align: center;
   }
 
@@ -803,12 +801,7 @@ em.golden-sc {
 }
 
 @media #{$sm-down} {
-  .promoContent-sc {
-    margin: calc(var(--spacing) * 3) calc(var(--spacing) * 0.25);
-    height: calc(100% - calc(var(--spacing) * 2));
-    width: calc(100% - calc(var(--spacing) * 0.5));
-  }
-  .promoContent-sc h2 { padding-top: calc(var(--spacing) * 0.1); }
+  .promoContent-sc h2 { padding-top: calc(var(--spacing) * 3); }
   .promoContent-sc p { font-size: 0.6em }
   .title-sc { font-size: 0.4em !important }
   em.golden-sc { font-size: 0.9em }
@@ -980,4 +973,14 @@ $radius: calc(var(--spacing) * 2);
   }
 
   a:hover { text-decoration: underline }
+}
+
+.reach-router-style {
+  position: absolute;
+  height: 100%;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display: block;
 }

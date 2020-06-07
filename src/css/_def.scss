@@ -9,7 +9,6 @@ $breakpoint-lg: 1280;
 
 $screen: "only screen";
 
-
 $sm-down: "#{$screen} and (max-width: #{$breakpoint-sm}px)";
 $md-down: "#{screen} and (max-width: #{$breakpoint-md}px)";
 $md-only: "#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{$breakpoint-md}px)";
