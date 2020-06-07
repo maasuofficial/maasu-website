@@ -16,6 +16,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Overview](#overview)
 + [Installation](#installation)
 + [Workflow](#workflow)
++ [Netlify Hosting](#netlify-hosting)
 + [React Framework](#react-framework)
 + [Typescript](#typescript)
 + [Linting](#linting)
@@ -23,6 +24,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Styling and CSS](#styling-and-css)
 + [Testing](#testing)
 + [Notes](#notes)
++ [Roadmap](#roadmap)
 
 ## Overview <a name="overview"></a>
 
@@ -70,7 +72,7 @@ comparison of commonly used commands where `yarn` makes things easier.
 
 ## Workflow <a name="workflow"></a>
 
-In this repository, there are two main branches: `staging` and `master`, corresponding to the `staging` and `production` environments, respectively. With the integration of [Netlify](https://www.netlify.com/) as a hosting service, any pushed commits to these branches will immediately trigger builds in production. For this reason, I have made the `master` branch to not allow unsigned commits to be pushed for safety and security measures.
+In this repository, there are two main branches: `staging` and `master`, corresponding to the `staging` and `production` environments, respectively. With the integration of [Netlify](https://www.netlify.com/) as a hosting service, any pushed commits to these branches will immediately trigger builds in production.
 
 All other branches are `feature` branches, where each branch will contain some type of feature or bugfix. These changes are then merged into `staging. To put these changes into production, create a pull request to merge the staging branch into `master`. While there are many ways to merge branches, this is the safest way because creating a Github pull request makes an explicit statement regarding the changes to be made on the public website. These can also be detailed and labeled for future reference. After the changes have been merged into `master`, they will automatically be deployed into production.
 
@@ -103,6 +105,49 @@ git push origin --delete my-feature-name
 For a basic idea of workflow:
 
 `feature branch`/`staging` &rightarrow; `pull request` &rightarrow; `master`
+
+### Motivation
+
+As mentioned before, it's dangerous to have ready access to production without some form of checks. 
+The staging environment is instituted to be able to view and changes as a preview, and allow other 
+members of the eboard to approve any incoming changes (if necessary).
+
+Pull requests allow a second layer of checking, well as a fantastic form of documentation. The only content
+pushed to `master` should be squashed commits. This is so that:
+
+1. `master` stays clean of small, unnecessary commits.
+2. The commits are organized into categories of work through pull requests.
+
+The pull requests are labeled to make it easier for future developers to find where a specific bug was solved,
+or a feature was introduced. The template PR makes it clear which year and/or conference for which the 
+commit was intended to be contributed towards. This makes it much easier to backtrack and find old issues or
+reference old materials.
+
+### Releases
+
+Since MAASU is a conference-based organization, it is best practice to tag a release for every significant 
+change to the site, i.e promo of upcoming conference, conference registration, and other significant website
+updates. This will result in around four or five releases in a given year, depending on the circumstances.
+
+## Netlify Hosting <a name="netlify-hosting"></a>
+
+[Netlify](https://www.netlify.com/) was chosen as a website host due to its continuous integration 
+capabilities. It integrates with Github hooks to be able to deploy new revisions to the web application
+at any time. It also records logs, allows custom environment variables, functions, and more. It also
+provides free SSL certificates with any domain, which is a massive positive. I remember the days when
+SSL certificates had to manually be added to sites, and it was quite a pain to configure.
+
+I originally used to use [Firebase Hosting](https://firebase.google.com/docs/hosting), but the service
+is not as polished as Netlify. It requires cli tools to deploy and integrates heavily with Google, adding
+a lot of unecessary strain and bloat (especially with DNS management). Firebase Hosting may one day 
+overtake Netlify, but until then, it will still be considered a beta service.
+
+Netlify also provides more than Firebase Hosting in the free (or "spark") plan(s). Firebase forces a hard
+limit of `10GB` of stored data, while Netlify allows unlimited file sizes. Nelify additionally provides a 
+`100GB` bandwidth/month as opposed to Firebase's `10GB` bandwidth. In Firebase's defense, Netlify places a hard
+limit of `300` build minutes/month, but it is unlikely that build minutes will ever exceed that limit.
+
+Source: [Netlify pricing](https://www.netlify.com/pricing) [Firebase Pricing](https://firebase.google.com/pricing/)
 
 ## React Framework <a name="react-framework"></a>
 
@@ -276,6 +321,7 @@ ECC board members to monitor and test any new additions or features.
 ## Notes <a name="notes"></a>
 
 - [Absolute Imports](#absolute-imports)
+- [Netlify Redirects](#netlify-redirects)
 
 ### Absolute Imports <a name="absolute-imports"></a>
 
@@ -301,3 +347,17 @@ To:
 import Header from 'components/header'
 ```
 
+### Netlify Redirects <a name="netlify-redirects"></a>
+
+Netlify makes hosting much easier than other hosting services, but there are some caveats. For single page sites like those made
+with React, Netlify doesn't redirect other urls to the site by default. This will make any routing with `react-router` or `reach-router`
+return a 404 page, which can be scary (and I happened to discover this _while in production_). To allow Netlify to redirect all urls
+to React, add a `_redirects` file to the `public` folder containing the following line:
+```
+/* /index.html 200
+```
+
+## Roadmap <a name="roadmap"></a>
+
+- "New to Technical Networking" doc
+- Previous board members doc

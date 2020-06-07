@@ -1,6 +1,5 @@
 import React from 'react';
 import { Page, Type } from '../../components';
-import modules from './Members.module.scss';
 
 class Members extends React.Component {
   componentDidMount() {
@@ -141,7 +140,7 @@ class Members extends React.Component {
           <Type variant='h2'>Join</Type>
 
           <Type variant='sub6'>(you will be redirected to Paypal for secure payment confirmation)</Type>
-          <form className={`${modules.payment}`} action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
+          <form className={'payment-members'} action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
             <input name="cmd" type="hidden" value="_s-xclick"/>
             <input name="hosted_button_id" type="hidden" value="PAC57KL3CTH2A"/>
             <table>

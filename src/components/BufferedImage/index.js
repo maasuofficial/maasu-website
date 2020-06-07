@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import modules from './BufferedImage.module.scss';
 
 class BufferedImage extends React.Component {
   constructor(props) {
@@ -23,10 +22,10 @@ class BufferedImage extends React.Component {
   render() {
     const { className, src, alt, ...props } = this.props;
     let classes = (typeof className === 'string') ? className.split(' ') : [];
-    classes.push(modules.bufferedImage);
+    classes.push('bufferedImage');
 
     if (this.state.buffering) {
-      classes.push(modules.buffering);
+      classes.push('buffering');
     }
 
     return (

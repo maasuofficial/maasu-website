@@ -1,6 +1,5 @@
 import React from 'react';
 import { Page, Type } from '../../components';
-import modules from './Newsletter.module.scss';
 
 class NewsLetter extends React.Component {
   componentDidMount() {
@@ -16,7 +15,7 @@ class NewsLetter extends React.Component {
           community, current projects, member schools, upcoming conferences, and more!
         </p>
 
-        <table className={`${modules.directory}`}>
+        <table className={'directory'}>
           <thead>
             <tr>
               <th>Date</th>

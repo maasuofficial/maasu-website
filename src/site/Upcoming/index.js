@@ -1,6 +1,4 @@
 import React from 'react';
-// import modules from './Upcoming.module.scss';
-// import LS from './LS';
 import SC from './SC';
 
 class Upcoming extends React.Component {
@@ -11,7 +9,6 @@ class Upcoming extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {/* <LS /> */}
         <SC />
       </React.Fragment>
     );

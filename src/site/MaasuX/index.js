@@ -1,6 +1,5 @@
 import React from 'react';
 import { Page, Type } from '../../components';
-import modules from './MaasuX.module.scss';
 
 class MaasuX extends React.Component {
   componentDidMount() {
@@ -30,7 +29,7 @@ class MaasuX extends React.Component {
         </Page>
         <Page>
           <Type variant='h2'>Past Host Schools</Type>
-          <table className={`${modules.pastSchools}`}>
+          <table className={'pastSchools'}>
             <thead>
               <tr>
                 <th>Date</th>
