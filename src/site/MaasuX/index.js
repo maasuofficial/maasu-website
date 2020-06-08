@@ -1,34 +1,38 @@
-import React from 'react';
-import { Page, Type } from '../../components';
+import React from 'react'
+import { Page, Type } from '../../components'
 
 class MaasuX extends React.Component {
   componentDidMount() {
-    document.title = 'MAASUx - The Midwest Asian American Students Union';
+    document.title = 'MAASUx - The Midwest Asian American Students Union'
   }
 
   render() {
     return (
       <React.Fragment>
         <Page>
-          <Type variant='h2'>MAASUx</Type>
+          <Type variant="h2">MAASUx</Type>
           <p>
-            MAASUx is designed to create additional opportunities to engage in community building
-            and promote accessibility to educational resources by bringing the MAASU experience to
-            you. MAASUx is coordinated with a hosting organization on campus, creating leadership
-            opportunities to engage students on the campus to create an interactive curriculum.
-            MAASUx is a free event for participants, designed to attract college students from
-            surrounding campuses to participate in a series of short, carefully tailored workshops
-            and social activities. Through the more intimate setting of MAASUx events, students can
-            engage in creating high-quality connections with their peers and have the opportunity
-            to reflect on their intersecting identities and experiences.
+            MAASUx is designed to create additional opportunities to engage in
+            community building and promote accessibility to educational
+            resources by bringing the MAASU experience to you. MAASUx is
+            coordinated with a hosting organization on campus, creating
+            leadership opportunities to engage students on the campus to create
+            an interactive curriculum. MAASUx is a free event for participants,
+            designed to attract college students from surrounding campuses to
+            participate in a series of short, carefully tailored workshops and
+            social activities. Through the more intimate setting of MAASUx
+            events, students can engage in creating high-quality connections
+            with their peers and have the opportunity to reflect on their
+            intersecting identities and experiences.
           </p>
           <p>
-            If your school is interested in hosting a MAASUx, please contact our programming chairs
-            for more information at <a href='mailto:programming@maasu.org'>programming@maasu.org</a>.
+            If your school is interested in hosting a MAASUx, please contact our
+            programming chairs for more information at{' '}
+            <a href="mailto:programming@maasu.org">programming@maasu.org</a>.
           </p>
         </Page>
         <Page>
-          <Type variant='h2'>Past Host Schools</Type>
+          <Type variant="h2">Past Host Schools</Type>
           <table className={'pastSchools'}>
             <thead>
               <tr>
@@ -68,7 +72,7 @@ class MaasuX extends React.Component {
               </tr>
               <tr>
                 <td>October 2015</td>
-                <td>Univeristy of Illinoise at Ubrana-Champaign, IL</td>
+                <td>Univeristy of Illinois at Ubrana-Champaign, IL</td>
               </tr>
               <tr>
                 <td>October 2015</td>
@@ -88,7 +92,7 @@ class MaasuX extends React.Component {
               </tr>
               <tr>
                 <td>February 2013</td>
-                <td>University of Illinoise at Urbana-Champaign, IL</td>
+                <td>University of Illinois at Urbana-Champaign, IL</td>
               </tr>
               <tr>
                 <td>February 2012</td>
@@ -109,10 +113,10 @@ class MaasuX extends React.Component {
             </tbody>
           </table>
         </Page>
-        <div className='footerSpace'></div>
+        <div className="footerSpace"></div>
       </React.Fragment>
-    );
+    )
   }
 }
 
-export default MaasuX;
+export default MaasuX
