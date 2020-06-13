@@ -21,7 +21,7 @@ import {
   PastConf,
   Upcoming,
   WhereAreYouFrom,
-} from '../site'
+} from '../containers'
 
 export const Routes = () => {
   return (
