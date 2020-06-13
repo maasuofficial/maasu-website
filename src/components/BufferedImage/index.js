@@ -1,31 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 class BufferedImage extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.handleLoad = this.handleLoad.bind(this);
-    this.handleError = this.handleError.bind(this);
+    this.handleLoad = this.handleLoad.bind(this)
+    this.handleError = this.handleError.bind(this)
 
     this.state = { buffering: true }
   }
 
   handleLoad(e) {
-    this.setState({ buffering: false });
+    this.setState({ buffering: false })
   }
 
   handleError(e) {
-    this.setState({ buffering: false });
+    this.setState({ buffering: false })
   }
 
   render() {
-    const { className, src, alt, ...props } = this.props;
-    let classes = (typeof className === 'string') ? className.split(' ') : [];
-    classes.push('bufferedImage');
+    const { className, src, alt, ...props } = this.props
+    const classes = typeof className === 'string' ? className.split(' ') : []
+    classes.push('posr h-a w-a')
 
     if (this.state.buffering) {
-      classes.push('buffering');
+      classes.push('buffering')
     }
 
     return (
@@ -33,11 +33,12 @@ class BufferedImage extends React.Component {
         <img
           onLoad={this.handleLoad}
           onError={this.handleError}
-          src={src} alt={alt}
+          src={src}
+          alt={alt}
           {...props}
         />
       </div>
-    );
+    )
   }
 }
 
@@ -46,4 +47,4 @@ BufferedImage.propTypes = {
   alt: PropTypes.string.isRequired,
 }
 
-export default BufferedImage;
+export default BufferedImage
