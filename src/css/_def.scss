@@ -11,6 +11,9 @@
 $bkpt-mobile-to-tablet: 48em; // 768px
 $bkpt-tablet-to-desktop: 80em; // 1280px
 
+// content width
+$containerWidth: 78em;
+
 @mixin mobile-only {
   @media ("max-width: #{$bkpt-mobile-to-tablet}") {
     @content;
