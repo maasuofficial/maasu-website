@@ -1,31 +1,39 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 class AspectRatioBox extends Component {
   render() {
-    const { ar, aspectRatio, children, className, resize, resizeable, style, width, ...props } = this.props;
+    const {
+      ar,
+      aspectRatio,
+      children,
+      className,
+      resize,
+      resizeable,
+      style,
+      width,
+      ...props
+    } = this.props
 
-    let classes = (typeof className === 'string') ? className.split(' ') : [];
-    classes.push('aspectRatioBox');
-    let styles = { ...style };
+    const classes = typeof className === 'string' ? className.split(' ') : []
+    classes.push('posr w-100 aspectRatioBox')
+    const styles = { ...style }
 
-    styles.width = width || '100%';
+    styles.width = width || '100%'
 
-    let ratio = aspectRatio || ar;
-    styles['--aspect-ratio'] = ratio || '1';
+    const ratio = aspectRatio || ar
+    styles['--aspect-ratio'] = ratio || '1'
 
     return (
       <div {...props} className={classes.join(' ')} style={styles}>
-        {(resize || resizeable) 
-          ? (children) 
-          : (
-            <div className={'aspectRatioBoxAbsolute'}>
-              <div className={'aspectRatioBoxRelative'}>
-                {children}
-              </div>
-            </div>
-          )}
+        {resize || resizeable ? (
+          children
+        ) : (
+          <div className={'posa aspectRatioBoxAbsolute'}>
+            <div className="posa h-100 w-100">{children}</div>
+          </div>
+        )}
       </div>
-    );
+    )
   }
 }
 
@@ -41,4 +49,4 @@ AspectRatioBox.defaultProps = {
   width: '100%',
 }
 
-export default AspectRatioBox;
+export default AspectRatioBox
