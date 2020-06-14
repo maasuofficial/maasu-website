@@ -8,23 +8,27 @@
  * l - large
  */
 
-$s:   '-s';
-$ns:  '-ns';
-$nl:  '-nl';
-$l:   '-l';
+$s: '-s';
+$ns: '-ns';
+$nl: '-nl';
+$l: '-l';
 
 @include mobile-only {
   @include typography($s);
+  @include spacing($s);
 }
 
 @include not-mobile {
   @include typography($ns);
+  @include spacing($ns);
 }
 
 @include not-desktop {
   @include typography($nl);
+  @include spacing($nl);
 }
 
 @include desktop-only {
   @include typography($l);
+  @include spacing($l);
 }
