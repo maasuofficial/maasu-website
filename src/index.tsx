@@ -4,7 +4,7 @@ import * as serviceWorker from './serviceWorker'
 import { Routes } from './routes/routes'
 import { ThemeProvider } from './components'
 import theme from './_theme'
-import './css/app.scss'
+import './css/styles.scss'
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>

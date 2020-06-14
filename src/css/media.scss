@@ -1,0 +1,62 @@
+@import './functional';
+
+/**
+ * Media queries are as follows:
+ * s - small
+ * ns - not small
+ * nl - not large
+ * l - large
+ */
+
+$s: '-s';
+$ns: '-ns';
+$nl: '-nl';
+$l: '-l';
+
+@include mobile-only {
+  @include typography($s);
+  @include spacing($s);
+  @include position($s);
+  @include display($s);
+  @include sizing($s);
+  @include boxShadow($s);
+  @include z($s);
+  @include text($s);
+  @include placement($s);
+}
+
+@include not-mobile {
+  @include typography($ns);
+  @include spacing($ns);
+  @include position($ns);
+  @include display($ns);
+  @include sizing($ns);
+  @include boxShadow($ns);
+  @include z($ns);
+  @include text($ns);
+  @include placement($ns);
+}
+
+@include not-desktop {
+  @include typography($nl);
+  @include spacing($nl);
+  @include position($nl);
+  @include display($nl);
+  @include sizing($nl);
+  @include boxShadow($nl);
+  @include z($nl);
+  @include text($nl);
+  @include placement($nl);
+}
+
+@include desktop-only {
+  @include typography($l);
+  @include spacing($l);
+  @include position($l);
+  @include display($l);
+  @include sizing($l);
+  @include boxShadow($l);
+  @include z($l);
+  @include text($l);
+  @include placement($l);
+}

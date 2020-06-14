@@ -21,11 +21,11 @@ import {
   PastConf,
   Upcoming,
   WhereAreYouFrom,
-} from '../site'
+} from '../containers'
 
 export const Routes = () => {
   return (
-    <Router className="reach-router-style">
+    <Router className="posa h-100 t-0 r-0 b-0 l-0">
       <WrapperMenu path="/">
         <Home path="/" />
 
@@ -54,7 +54,7 @@ export const Routes = () => {
         <PastConf path="/pastconferences" />
 
         <Donate path="/donate" />
-        <DonateComp path="/donate-complete" />
+        <DonateComp path="/donate-complete" test={true} />
         <Contact path="/contact" />
 
         <Home default />

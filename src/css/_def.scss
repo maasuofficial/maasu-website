@@ -1,29 +1,153 @@
+/**
+ * -----------------------------------------------------
+ * Breakpoints
+ * 
+ * Breakpoints chosen using common standards. Only
+ * two breakpoints were chosen to minimize styling to
+ * three large groups - small, medium, and large.
+ * -----------------------------------------------------
+ */
 
-// breakpoints
+$bkpt-mobile-to-tablet: 48em; // 768px
+$bkpt-tablet-to-desktop: 80em; // 1280px
 
-$breakpoint-sm: 600;
-$breakpoint-md: 960;
-$breakpoint-lg: 1280;
+@mixin mobile-only {
+  @media ("max-width: #{$bkpt-mobile-to-tablet}") {
+    @content;
+  }
+}
+@mixin not-mobile {
+  @media ("min-width: #{$bkpt-mobile-to-tablet}") {
+    @content;
+  }
+}
+@mixin not-desktop {
+  @media ("max-width: #{$bkpt-tablet-to-desktop}") {
+    @content;
+  }
+}
+@mixin desktop-only {
+  @media ("min-width: #{$bkpt-tablet-to-desktop}") {
+    @content;
+  }
+}
 
-@mixin mobile-only { @media ("max-width: #{$breakpoint-sm - 1}px") { @content; } }
+/**
+ * -----------------------------------------------------
+ * Typography
+ * 
+ * Scale created with https://type-scale.com, using
+ * base size 1em=16px, scale 1.5 and font Hind weight 
+ * 700.
+ * -----------------------------------------------------
+ */
 
-@mixin tablet-portrait-down { @media ("max-width: #{$breakpoint-md - 1}px") { @content; } }
-@mixin tablet-landscape-down { @media ("max-width: #{$breakpoint-lg - 1}px") { @content; } }
+$typographyMap: (
+  '0': 1rem,
+  '1': 1.5rem,
+  '2': 2.25rem,
+  '3': 3.375rem,
+  '4': 5.063rem,
+  '5': 7.594rem,
+  // beyond "safe" sizes!
+    '6': 11.391rem,
+  '7': 17.086rem,
+);
 
-@mixin tablet-portrait-up { @media ("min-width: #{$breakpoint-sm}px") { @content; } }
-@mixin tablet-landscape-up { @media ("min-width: #{$breakpoint-md}px") { @content; } }
+/**
+ * -----------------------------------------------------
+ * Spacing
+ * 
+ * Spacing is broken into factors of 4 and 8 in terms of 
+ * pixel density, as per Material design principles.
+ * https://material.io/design/layout/spacing-methods.html
+ * -----------------------------------------------------
+ */
 
-@mixin desktop-only { @media ("min-width: #{$breakpoint-lg}px") { @content; } }
+$spacingMap: (
+  '0': 0,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 1rem,
+  '4': 1.5rem,
+  '5': 2rem,
+  '6': 3rem,
+  '7': 4rem,
+  '8': 6rem,
+  '9': 8rem,
+);
 
-//   @include desktop-up {
-//     ...styles
-//   }
+/**
+ * -----------------------------------------------------
+ * Box Shadow
+ * 
+ * Box shadow is chosen in incrementing pixel values and
+ * is intended to tie with z-index values.
+ * -----------------------------------------------------
+ */
 
-// legacy
-$screen: "only screen";
-$sm-down: "#{$screen} and (max-width: #{$breakpoint-sm}px)";
-$md-down: "#{screen} and (max-width: #{$breakpoint-md}px)";
-$md-only: "#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{$breakpoint-md}px)";
-$md-up: "#{screen} and (min-width: #{$breakpoint-sm + 1}px)";
-$lg-up: "#{screen} and (min-width: #{$breakpoint-md + 1}px)";
+$boxShadowMap: (
+  '0': 0px,
+  '1': 1px,
+  '2': 2px,
+  '3': 3px,
+  '4': 4px,
+  '5': 5px,
+  '6': 6px,
+  '7': 7px,
+  '8': 8px,
+  '9': 9px,
+);
 
+/**
+ * -----------------------------------------------------
+ * Z Index
+ * 
+ * Z-index increments are chosen in increments of 1 since
+ * most "over-powered" styles tend to choose large values
+ * such as 999 or -999, making it impossible to correct.
+ * Negative values are included, since it is a potential
+ * to need an index slightly below the norm, 0.
+ * -----------------------------------------------------
+ */
+
+$zMap: (
+  's3': -3,
+  's2': -2,
+  's1': -1,
+  '0': 0,
+  '1': 1,
+  '2': 2,
+  '3': 3,
+  '4': 4,
+  '5': 5,
+);
+
+/**
+ * -----------------------------------------------------
+ * Text Alignment
+ * 
+ * Text alignment determines horizontal alignment within
+ * an element.
+ * -----------------------------------------------------
+ */
+
+$textMap: (
+  'l': left,
+  'c': center,
+  'r': right,
+);
+
+/**
+ * -----------------------------------------------------
+ * Numerical Values
+ * 
+ * Numerical values between 1-100 are recorded in
+ * specific intervals. This is to reduce the amount of
+ * variation in styling. Larger increments are better and
+ * more effective at maintaining consistent styling in
+ * this way.
+ * -----------------------------------------------------
+ */
+
+$step-inc: 10;

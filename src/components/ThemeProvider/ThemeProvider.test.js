@@ -1,19 +1,23 @@
-import React from 'react';
-import { cleanup, render } from '@testing-library/react';
-import ThemeProvider from './';
+import React from 'react'
+import { cleanup, render } from '@testing-library/react'
+import ThemeProvider from './'
 
-afterEach(cleanup);
+afterEach(cleanup)
 
 describe('theme provider component', () => {
-  let renderThemeProvider;
+  let renderThemeProvider
 
   beforeEach(() => {
-    renderThemeProvider = (props) => render(<ThemeProvider {...props}><div></div></ThemeProvider>);
+    renderThemeProvider = (props) =>
+      render(
+        <ThemeProvider {...props}>
+          <div></div>
+        </ThemeProvider>
+      )
   })
 
   it('is defined', () => {
-    let container = renderThemeProvider();
-    expect(container).toBeDefined();
+    const container = renderThemeProvider()
+    expect(container).toBeDefined()
   })
-
 })

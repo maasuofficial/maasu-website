@@ -11,18 +11,18 @@ class BufferedImage extends React.Component {
     this.state = { buffering: true }
   }
 
-  handleLoad(e) {
+  handleLoad() {
     this.setState({ buffering: false })
   }
 
-  handleError(e) {
+  handleError() {
     this.setState({ buffering: false })
   }
 
   render() {
     const { className, src, alt, ...props } = this.props
     const classes = typeof className === 'string' ? className.split(' ') : []
-    classes.push('posr h-a w-a')
+    classes.push('h-a w-a')
 
     if (this.state.buffering) {
       classes.push('buffering')
@@ -33,6 +33,7 @@ class BufferedImage extends React.Component {
         <img
           onLoad={this.handleLoad}
           onError={this.handleError}
+          className="w-100"
           src={src}
           alt={alt}
           {...props}

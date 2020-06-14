@@ -1,0 +1,259 @@
+@import './def';
+
+/**
+ * Functional CSS
+ *
+ * Classes are named with the following format, where
+ * the items in brackets are variables. Some may be 
+ * optional, or may not even apply.
+ *
+ * {property}{style/scale}-{media query}
+ */
+
+/**
+ * -----------------------------------------------------
+ * Typography
+ * -----------------------------------------------------
+ */
+
+@mixin typography($media: '') {
+  @each $scale, $value in $typographyMap {
+    .fs#{$scale}#{$media} {
+      font-size: $value !important;
+    }
+  }
+
+  .fw400#{$media} {
+    font-weight: 400 !important;
+  }
+  .fw500#{$media} {
+    font-weight: 500 !important;
+  }
+  .fw700#{$media} {
+    font-weight: 700 !important;
+  }
+
+  .fsn#{$media} {
+    font-style: normal !important;
+  }
+  .fsi#{$media} {
+    font-style: italic !important;
+  }
+
+  .tdn#{$media} {
+    text-decoration: none !important;
+  }
+  .tdu#{$media} {
+    text-decoration: underline !important;
+  }
+
+  .hover-tdu#{$media}:hover {
+    @extend .tdu#{$media};
+  }
+}
+@include typography();
+
+/**
+ * -----------------------------------------------------
+ * Spacing
+ * -----------------------------------------------------
+ */
+
+@mixin spacing($media: '') {
+  @each $scale, $value in $spacingMap {
+    .pa#{$scale}#{$media} {
+      padding: $value !important;
+    }
+    .pt#{$scale}#{$media} {
+      padding-top: $value !important;
+    }
+    .pr#{$scale}#{$media} {
+      padding-right: $value !important;
+    }
+    .pb#{$scale}#{$media} {
+      padding-bottom: $value !important;
+    }
+    .pl#{$scale}#{$media} {
+      padding-left: $value !important;
+    }
+    .px#{$scale}#{$media} {
+      padding-right: $value !important;
+      padding-left: $value !important;
+    }
+    .py#{$scale}#{$media} {
+      padding-top: $value !important;
+      padding-bottom: $value !important;
+    }
+
+    .ma#{$scale}#{$media} {
+      margin: $value !important;
+    }
+    .mt#{$scale}#{$media} {
+      margin-top: $value !important;
+    }
+    .mr#{$scale}#{$media} {
+      margin-right: $value !important;
+    }
+    .mb#{$scale}#{$media} {
+      margin-bottom: $value !important;
+    }
+    .ml#{$scale}#{$media} {
+      margin-left: $value !important;
+    }
+    .mx#{$scale}#{$media} {
+      margin-right: $value !important;
+      margin-left: $value !important;
+    }
+    .my#{$scale}#{$media} {
+      margin-top: $value !important;
+      margin-bottom: $value !important;
+    }
+  }
+  .mxa#{$media} {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+}
+@include spacing();
+
+/**
+ * -----------------------------------------------------
+ * Positioning
+ * -----------------------------------------------------
+ */
+
+@mixin position($media: '') {
+  .posa#{$media} {
+    position: absolute !important;
+  }
+  .posr#{$media} {
+    position: relative !important;
+  }
+  .posf#{$media} {
+    position: fixed !important;
+  }
+}
+@include position();
+
+/**
+ * -----------------------------------------------------
+ * Display
+ * -----------------------------------------------------
+ */
+
+@mixin display($media: '') {
+  .dispb#{$media} {
+    display: block !important;
+  }
+  .dispn#{$media} {
+    display: none !important;
+  }
+  .dispi#{$media} {
+    display: inline !important;
+  }
+  .dispf#{$media} {
+    display: flex !important;
+  }
+}
+@include display();
+
+/**
+ * -----------------------------------------------------
+ * Sizing
+ * -----------------------------------------------------
+ */
+
+@mixin sizing($media: '') {
+  @for $i from 0 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .h-#{$val}#{$media} {
+      height: #{$val * 1%} !important;
+    }
+    .mh-#{$val}#{$media} {
+      min-height: #{$val * 1%} !important;
+    }
+    .w-#{$val}#{$media} {
+      width: #{$val * 1%} !important;
+    }
+    .wh-#{$val}#{$media} {
+      min-width: #{$val * 1%} !important;
+    }
+  }
+  .m-a#{$media} {
+    height: auto !important;
+  }
+  .w-a#{$media} {
+    width: auto !important;
+  }
+}
+@include sizing();
+
+/**
+ * -----------------------------------------------------
+ * Box Shadow
+ * -----------------------------------------------------
+ */
+
+@mixin boxShadow($media: '') {
+  @each $scale, $value in $boxShadowMap {
+    .bs#{$scale}#{$media} {
+      box-shadow: 0 0 $value #555 !important;
+    }
+  }
+}
+@include boxShadow();
+
+/**
+ * -----------------------------------------------------
+ * Z Index
+ * -----------------------------------------------------
+ */
+
+@mixin z($media: '') {
+  @each $scale, $value in $zMap {
+    .z#{$scale}#{$media} {
+      z-index: $value !important;
+    }
+  }
+}
+@include z();
+
+/**
+ * -----------------------------------------------------
+ * Text Alignment
+ * -----------------------------------------------------
+ */
+
+@mixin text($media: '') {
+  @each $scale, $value in $textMap {
+    .t#{$scale}#{$media} {
+      text-align: $value !important;
+    }
+  }
+}
+@include text();
+
+/**
+ * -----------------------------------------------------
+ * Placement
+ * -----------------------------------------------------
+ */
+
+@mixin placement($media: '') {
+  @for $i from 0 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .t-#{$val}#{$media} {
+      top: #{$val * 1%} !important;
+    }
+    .r-#{$val}#{$media} {
+      right: #{$val * 1%} !important;
+    }
+    .b-#{$val}#{$media} {
+      bottom: #{$val * 1%} !important;
+    }
+    .l-#{$val}#{$media} {
+      left: #{$val * 1%} !important;
+    }
+  }
+}
+@include placement();

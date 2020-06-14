@@ -4,11 +4,11 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 
 **Production** 
 
-[![Netlify Production Status](https://api.netlify.com/api/v1/badges/97f4cbd7-bf40-4abc-af37-6ffd64a9d99f/deploy-status)](https://app.netlify.com/sites/maasu-production/deploys)
+[![Netlify Production Status](https://api.netlify.com/api/v1/badges/97f4cbd7-bf40-4abc-af37-6ffd64a9d99f/deploy-status)](https://maasu.org)
 
 **Staging** 
 
-[![Netlify Staging Status](https://api.netlify.com/api/v1/badges/04501a98-4092-4e51-8024-6181df043a0b/deploy-status)](https://app.netlify.com/sites/maasu-master-staging/deploys)
+[![Netlify Staging Status](https://api.netlify.com/api/v1/badges/04501a98-4092-4e51-8024-6181df043a0b/deploy-status)](https://staging.maasu.org)
 [![Build Status](https://travis-ci.com/maasu-org/maasu.svg?branch=staging)](https://travis-ci.com/maasu-org/maasu)
 
 ## Table of Contents <a name="table-of-contents"></a>
@@ -22,9 +22,9 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Linting](#linting)
 + [Project Structure](#project-structure)
 + [Styling and CSS](#styling-and-css)
++ [Branding](#branding)
 + [Testing](#testing)
 + [Notes](#notes)
-+ [Roadmap](#roadmap)
 
 ## Overview <a name="overview"></a>
 
@@ -87,7 +87,7 @@ Utilizing `git` and `github`:
 1. Check out the staging branch, and verify it is up to date with the latest changes in production. 
 ```
 g checkout staging
-g pull origin master
+g pull --rebase origin master
 ```
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
@@ -96,7 +96,7 @@ git commit -m "commit title"
 ```
 4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
 ```
-git pull origin master
+git pull --rebase origin master
 git push
 ```
 5. Create a PR to merge into `master`.
@@ -228,17 +228,15 @@ prevent bugs before they happen.
 The `src` file is organized as follows:
 ```
 src/
-  api/              - any and all api calls
-  components/       - all functional, or pure, components concerned with UI
-  constants/        - all constants, strings, etc
-  containers/       - components dealing with data or store
-  css/              - any and all styling
-    _def.scss       - all css global variables and utility functions
-    app.scss        - all functional CSS classes
-  routes/
-    routes.tsx      - manages all routes
-  utils/            - any and all utility functions
-  index.tsx         - main source file which initializes store and renders DOM
+  api/                - Any and all api calls.
+  components/         - All functional, or pure, components concerned with UI.
+  constants/          - All constants, strings, and other hard values.
+  containers/         - Components dealing with data or store. This folder also contains 
+                        components which represent entire pages.
+  css/                - Any and all styling.
+  routes/             - Manages all routes.
+  utils/              - Any and all utility functions.
+  index.tsx           - Main source file which initializes react, store, and renders DOM.
 ```
 
 ## Styling and CSS <a name="styling-and-css"></a>
@@ -293,6 +291,10 @@ lower level HTML components, which then are used and reused throughout the proje
 convoluted class names or large css files because **once you code a css class, you never have to change it ever again.**
 
 [Goodbye, old CSS. Hello, functional CSS.](https://www.youtube.com/watch?reload=9&v=uHVqbCPnOwU)
+
+## Branding <a name="branding"></a>
+
+Branding for MAASU is still being determined!
 
 ## Testing <a name="testing"></a>
 
@@ -361,8 +363,3 @@ to React, add a `_redirects` file to the `public` folder containing the followin
 ```
 /* /index.html 200
 ```
-
-## Roadmap <a name="roadmap"></a>
-
-- "New to Technical Networking" doc
-- Previous board members doc

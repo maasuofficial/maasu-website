@@ -1,22 +1,26 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
-import Cell from './Cell';
+import Cell from './Cell'
 
 class Grid extends Component {
   render() {
-    const { children, className, x, y, ...props } = this.props;
+    const { children, className, x, y, ...props } = this.props
 
-    let classes = (typeof className === 'string') ? className.split(' ') : [];
-    classes.push('grid');
+    const classes = typeof className === 'string' ? className.split(' ') : []
+    classes.push('grid')
 
     if (y) {
-      classes.push('gridY');
+      classes.push('gridY')
     } else {
-      classes.push('gridX');
+      classes.push('gridX')
     }
 
-    return <div {...props} className={classes.join(' ')}>{children}</div>;
+    return (
+      <div {...props} className={classes.join(' ')}>
+        {children}
+      </div>
+    )
   }
 }
 
@@ -31,4 +35,4 @@ Grid.defaultProps = {
 }
 
 export { Grid, Cell }
-export default Grid;
+export default Grid

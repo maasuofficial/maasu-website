@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Cell } from '../';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Cell } from '../'
 
 class Time extends React.Component {
   render() {
@@ -13,7 +13,7 @@ class Time extends React.Component {
         </div>
         <div className={'contentContainer'}>{this.props.children}</div>
       </Cell>
-    );
+    )
   }
 }
 
@@ -22,4 +22,4 @@ Time.propTypes = {
   children: PropTypes.node.isRequired,
 }
 
-export default Time;
+export default Time
