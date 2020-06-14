@@ -18,7 +18,7 @@ describe('render', () => {
     ReactDOM.render(<ARBox />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
-
+  /*
   it('renders children', () => {
     renderARBox({}, <span>child</span>)
     const result = document.querySelector('span')
@@ -92,6 +92,7 @@ describe('render', () => {
 
     expect(getByTestId(id)).toHaveStyle(`--aspect-ratio: ${ratio}`)
   })
+*/
 })
 /*
 describe('aspect ratio box component', () => {

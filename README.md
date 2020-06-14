@@ -84,14 +84,14 @@ Pull requests should be labeled with the labels provided and a list of significa
 
 Utilizing `git` and `github`:
 
-1. Check out the staging branch, and verify it is up to date with the latest changes in production. 
+1. Check out the staging branch to verify it is up to date with the latest changes in production. 
 ```
 g checkout staging
-g pull --rebase origin master
 ```
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
 ```
+git add *
 git commit -m "commit title"
 ```
 4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
@@ -105,6 +105,7 @@ git push
 ```
 git push origin --delete my-feature-name
 ```
+8. Repeast steps 2-7.
 
 For a basic idea of workflow:
 
