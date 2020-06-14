@@ -54,8 +54,6 @@ body {
 }
 
 .aspectRatioBox {
-  margin: 0 auto;
-
   &::before {
     content: '';
     width: 1px;
@@ -70,13 +68,6 @@ body {
     display: table;
     clear: both;
   }
-}
-
-.aspectRatioBoxAbsolute {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .buffering::after {
@@ -138,10 +129,6 @@ body {
 $numGridCells: 12;
 
 // grid component
-
-.grid {
-  display: flex;
-}
 
 .gridX {
   flex-flow: row wrap;
@@ -377,10 +364,6 @@ $stringColor: var(--palette-primary-main);
   }
 }
 
-.disp-in-flex {
-  display: inline-flex;
-}
-
 h1.typography,
 h2.typography,
 h3.typography,
@@ -445,12 +428,6 @@ em.typography,
 
 .capitalized-typography {
   text-transform: uppercase;
-}
-
-// SC page
-
-.em-sc {
-  font-style: normal;
 }
 
 .h2-sc {
@@ -659,17 +636,6 @@ a.active {
   color: var(--palette-primary-light) !important;
 }
 
-.promoContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-
-  text-align: center;
-  transform: scale(1.2);
-}
-
 $transition: 0.3s;
 
 .pageContainer-board {
@@ -724,15 +690,10 @@ $transition: 0.3s;
 }
 
 .profileInfo-board {
-  // position: fixed !important;
   top: 0;
   left: 100%;
-  // height: 100%;
-  // width: 100%;
 
   background-color: var(--palette-background-main);
-  // text-align: center;
-  // z-index: 1;
   overflow-y: auto;
   overflow-x: hidden;
   transition: left $transition;
@@ -765,10 +726,8 @@ $transition: 0.3s;
   z-index: var(--zIndex-trigger);
 }
 
-.profileInfo-board {
-  a {
-    color: inherit;
-  }
+.c-inherit {
+  color: inherit;
 }
 
 .container-sc {
@@ -776,89 +735,26 @@ $transition: 0.3s;
   height: 100%;
 }
 
-.logo-sc {
-  position: absolute;
-  top: calc(var(--spacing) / 7);
-  left: 0;
-  right: calc(var(--spacing) / 8);
-  height: calc(var(--spacing) / 1.4);
-  z-index: 1;
-
-  img {
-    display: block;
-    float: right;
-    height: 100%;
-  }
+.bgblue {
+  background-color: #222632;
 }
 
-.promoOverlay-sc {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #222632;
-}
-
-.promoContent-sc {
-  width: 100%;
+.fggold {
   color: #beb481;
-  font-size: calc(var(--typography-fontSize) * 1.5);
-
-  h2 {
-    padding-top: calc(var(--spacing) * 2);
-    text-align: center;
-  }
-
-  p {
-    margin: calc(var(--spacing) * 0.1) 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--palette-primary-main);
-  }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
+$url: '/assets/img/gold.gif';
 
-em.golden-sc {
+.scgolden {
   font-family: 'Libre Baskerville', serif;
   -webkit-text-stroke: initial;
   -webkit-text-fill-color: initial;
-  font-weight: 400;
   letter-spacing: 0.1em;
-  color: #bf9b30;
-  $url: '/assets/img/gold.gif';
   background: center / 300% url($url) no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-@media #{$sm-down} {
-  .promoContent-sc h2 {
-    padding-top: calc(var(--spacing) * 3);
-  }
-  .promoContent-sc p {
-    font-size: 0.6em;
-  }
-  .date-sc {
-    font-size: 0.5em !important;
-  }
-}
-
-@media #{$md-up} {
-  .promoContent-sc p {
-    font-size: 0.9em;
-  }
-}
-
-.conference-upcoming {
-  height: 100%;
 }
 
 $menu-y-sm: var(--spacing);

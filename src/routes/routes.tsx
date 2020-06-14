@@ -19,7 +19,7 @@ import {
   NewsLetter,
   PastAwards,
   PastConf,
-  Upcoming,
+  // Upcoming,
   WhereAreYouFrom,
 } from '../containers'
 
@@ -37,7 +37,7 @@ export const Routes = () => {
         <DC path="/directorscouncil" />
         <History path="/history" />
 
-        <Upcoming path="/upcoming" />
+        {/* <Upcoming path="/upcoming" /> */}
         <Host path="/host" />
 
         <MaasuX path="/maasux" />
