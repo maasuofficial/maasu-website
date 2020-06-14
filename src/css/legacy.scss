@@ -18,31 +18,13 @@ $md-only: '#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{
 $md-up: '#{screen} and (min-width: #{$breakpoint-sm + 1}px)';
 $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 @font-face {
-  font-family: 'hind';
+  font-family: 'hindmod';
   src: url('/fonts/hind-bold-modified/hind-bold-modified-webfont.woff2')
       format('woff2'),
     url('/fonts/hind-bold-modified/hind-bold-modified.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
-
-body {
-  margin: 0;
-  font-family: var(--typography-fontFamily-secondary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: var(--typography-fontSize);
-
-  color: var(--palette-text-main);
-  background-color: var(--palette-background-main);
 }
 
 [hidden] {
@@ -268,15 +250,15 @@ $hoverUp: 0.75; // desktop hover height
 $stringWidth: calc(var(--spacing) / 8);
 $stringColor: var(--palette-primary-main);
 
-.container {
-  padding: 0 calc(var(--spacing) / 2);
-}
+// .container {
+// padding: 0 calc(var(--spacing) / 2);
+// }
 
-@media #{$md-up} {
-  .container {
-    padding: 0 calc(var(--spacing) / 2);
-  }
-}
+// @media #{$md-up} {
+//   .container {
+//     padding: 0 calc(var(--spacing) / 2);
+//   }
+// }
 
 .timeContainer {
   position: relative;
@@ -730,11 +712,6 @@ $transition: 0.3s;
   color: inherit;
 }
 
-.container-sc {
-  background: var(--palette-text-main);
-  height: 100%;
-}
-
 .bgblue {
   background-color: #222632;
 }
@@ -992,4 +969,10 @@ li.horizontal-ruc {
   &.open-ruc ul {
     display: block;
   }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap');
+
+.ftemp {
+  font-family: 'Hind', sans-serif;
 }

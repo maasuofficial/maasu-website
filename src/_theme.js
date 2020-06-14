@@ -36,7 +36,7 @@ export default {
   },
   typography: {
     fontFamily: {
-      primary: ['hind', 'Roboto', 'arial', 'sans-serif'].join(','),
+      primary: ['hindmod', 'Roboto', 'arial', 'sans-serif'].join(','),
       secondary: [
         '-apple-system',
         'BlinkMacSystemFont',

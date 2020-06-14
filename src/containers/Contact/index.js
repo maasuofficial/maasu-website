@@ -6,6 +6,7 @@ import {
   APP_NAME_LONG,
   SOCIAL_FACEBOOK,
   SOCIAL_INSTAGRAM,
+  YEAR,
 } from 'constants/strings'
 
 class Contact extends React.Component {
@@ -114,7 +115,7 @@ class Contact extends React.Component {
           <footer>
             <br />
             <span>
-              &copy;MAASU 2020. For additional information or questions
+              &copy; {YEAR} MAASU. For additional information or questions
               regarding the website please contact{' '}
               <a className="mail" href="MAILTO:technet@maasu.org">
                 technet@maasu.org
