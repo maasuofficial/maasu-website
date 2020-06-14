@@ -7,13 +7,17 @@
  * the items in brackets are variables. Some may be 
  * optional, or may not even apply.
  *
- * {property}{style}-{numerical value(s)}-{media query}
- * where media queries are as follows:
- * ns - not small
- * s - small
- * nl - not large
- * l - large
+ * {property}{style/scale}-{media query}
  */
+
+// typography
+
+@mixin typography($media: '') {
+  @each $scale, $value in $typographyMap {
+    .fs#{$scale}#{$media} { font-size: $value !important }
+  }
+}
+@include typography();
 
 .posr {
   position: relative !important;

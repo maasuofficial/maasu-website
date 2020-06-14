@@ -235,9 +235,11 @@ src/
                         components which represent entire pages.
   css/                - Any and all styling.
     _def.scss         - All css global variables and utility functions.
-    functional.scss   - All functional CSS classes.
     app.scss          - All CSS and variables compiled with breakpoints. This is what 
                         should be included in the index file.
+    functional.scss   - All functional CSS classes.
+    media.scss        - All media queries.
+
   routes/
     routes.tsx        - Manages all routes.
   utils/              - Any and all utility functions.

@@ -1,26 +1,53 @@
 
-// breakpoints
+/**
+ * -----------------------------------------------------
+ * Breakpoints
+ * 
+ * Breakpoints chosen using common standards. Only
+ * two breakpoints were chosen to minimize styling to
+ * three large groups - small, medium, and large.
+ * -----------------------------------------------------
+ */
 
-$bkpt-mobile-to-tablet: 48em; // 768px
-$bkpt-tablet-to-desktop: 80em; // 1280px
+$bkpt-mobile-to-tablet: 48em;   // 768px
+$bkpt-tablet-to-desktop: 80em;  // 1280px
 
-// small
 @mixin mobile-only { @media ("max-width: #{$bkpt-mobile-to-tablet}") { @content; } }
-
-// not small
 @mixin not-mobile { @media ("min-width: #{$bkpt-mobile-to-tablet}") { @content; } }
-
-// not-large
 @mixin not-desktop { @media ("max-width: #{$bkpt-tablet-to-desktop}") { @content; } }
-
-// large
 @mixin desktop-only { @media ("min-width: #{$bkpt-tablet-to-desktop}") { @content; } }
 
-//   @include not-desktop {
-//     ...styles
-//   }
+/**
+ * -----------------------------------------------------
+ * Typography
+ * 
+ * Scale created with https://type-scale.com, using
+ * base size 1em=16px, scale 1.5 and font Hind weight 
+ * 700.
+ * -----------------------------------------------------
+ */
 
-// legacy
+$typographyMap: (
+  '0': 1em,
+  '1': 1.5em,
+  '2': 2.25em,
+  '3': 3.375em,
+  '4': 5.063em,
+  '5': 7.594em,
+  // beyond "safe" sizes!
+  '6': 11.391em,
+  '7': 17.086em,
+);
+
+/**
+ * -----------------------------------------------------
+ * Legacy
+ * 
+ * Any old styles or definitions that have yet to be
+ * removed.
+ * -----------------------------------------------------
+ */
+
 $breakpoint-sm: 600;
 $breakpoint-md: 960;
 $breakpoint-lg: 1280;
