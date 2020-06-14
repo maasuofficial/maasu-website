@@ -19,6 +19,9 @@ $l: '-l';
   @include position($s);
   @include display($s);
   @include sizing($s);
+  @include boxShadow($s);
+  @include z($s);
+  @include text($s);
 }
 
 @include not-mobile {
@@ -27,6 +30,9 @@ $l: '-l';
   @include position($ns);
   @include display($ns);
   @include sizing($ns);
+  @include boxShadow($ns);
+  @include z($ns);
+  @include text($ns);
 }
 
 @include not-desktop {
@@ -35,6 +41,9 @@ $l: '-l';
   @include position($nl);
   @include display($nl);
   @include sizing($nl);
+  @include boxShadow($nl);
+  @include z($nl);
+  @include text($nl);
 }
 
 @include desktop-only {
@@ -43,4 +52,7 @@ $l: '-l';
   @include position($l);
   @include display($l);
   @include sizing($l);
+  @include boxShadow($l);
+  @include z($l);
+  @include text($l);
 }

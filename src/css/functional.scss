@@ -22,6 +22,12 @@
       font-size: $value !important;
     }
   }
+  .fsn#{$media} {
+    font-style: normal !important;
+  }
+  .fsi#{$media} {
+    font-style: italic !important;
+  }
 }
 @include typography();
 
@@ -119,6 +125,9 @@
   .dispi#{$media} {
     display: inline !important;
   }
+  .dispf#{$media} {
+    display: flex !important;
+  }
 }
 @include display();
 
@@ -154,3 +163,48 @@ $step-inc: 5; // intervals
   }
 }
 @include sizing();
+
+/**
+ * -----------------------------------------------------
+ * Box Shadow
+ * -----------------------------------------------------
+ */
+
+@mixin boxShadow($media: '') {
+  @each $scale, $value in $boxShadowMap {
+    .bs#{$scale}#{$media} {
+      box-shadow: 0 0 $value #555 !important;
+    }
+  }
+}
+@include boxShadow();
+
+/**
+ * -----------------------------------------------------
+ * Z Index
+ * -----------------------------------------------------
+ */
+
+@mixin z($media: '') {
+  @each $scale, $value in $zMap {
+    .z#{$scale}#{$media} {
+      z-index: $value !important;
+    }
+  }
+}
+@include z();
+
+/**
+ * -----------------------------------------------------
+ * Text Alignment
+ * -----------------------------------------------------
+ */
+
+@mixin text($media: '') {
+  @each $scale, $value in $textMap {
+    .t#{$scale}#{$media} {
+      text-align: $value !important;
+    }
+  }
+}
+@include text();

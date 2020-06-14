@@ -868,7 +868,7 @@ $transition: 0.3s;
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
 
 em.golden-sc {
-  font-size: 0.9em;
+  // font-size: 0.9em;
   font-family: 'Libre Baskerville', serif;
   -webkit-text-stroke: initial;
   -webkit-text-fill-color: initial;
@@ -889,12 +889,6 @@ em.golden-sc {
   .promoContent-sc p {
     font-size: 0.6em;
   }
-  .title-sc {
-    font-size: 0.4em !important;
-  }
-  em.golden-sc {
-    font-size: 0.9em;
-  }
   .date-sc {
     font-size: 0.5em !important;
   }
@@ -903,15 +897,6 @@ em.golden-sc {
 @media #{$md-up} {
   .promoContent-sc p {
     font-size: 0.9em;
-  }
-  em.golden-sc {
-    font-size: 1.5em;
-  }
-}
-
-@media #{$lg-up} {
-  em.golden-sc {
-    font-size: 2em;
   }
 }
 

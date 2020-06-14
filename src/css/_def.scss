@@ -76,3 +76,64 @@ $spacingMap: (
   '8': 6rem,
   '9': 8rem,
 );
+
+/**
+ * -----------------------------------------------------
+ * Box Shadow
+ * 
+ * Box shadow is chosen in incrementing pixel values and
+ * is intended to tie with z-index values.
+ * -----------------------------------------------------
+ */
+
+$boxShadowMap: (
+  '0': 0px,
+  '1': 1px,
+  '2': 2px,
+  '3': 3px,
+  '4': 4px,
+  '5': 5px,
+  '6': 6px,
+  '7': 7px,
+  '8': 8px,
+  '9': 9px,
+);
+
+/**
+ * -----------------------------------------------------
+ * Z Index
+ * 
+ * Z-index increments are chosen in increments of 1 since
+ * most "over-powered" styles tend to choose large values
+ * such as 999 or -999, making it impossible to correct.
+ * Negative values are included, since it is a potential
+ * to need an index slightly below the norm, 0.
+ * -----------------------------------------------------
+ */
+
+$zMap: (
+  's3': -3,
+  's2': -2,
+  's1': -1,
+  '0': 0,
+  '1': 1,
+  '2': 2,
+  '3': 3,
+  '4': 4,
+  '5': 5,
+);
+
+/**
+ * -----------------------------------------------------
+ * Text Alignment
+ * 
+ * Text alignment determines horizontal alignment within
+ * an element.
+ * -----------------------------------------------------
+ */
+
+$textMap: (
+  'l': left,
+  'c': center,
+  'r': right,
+);

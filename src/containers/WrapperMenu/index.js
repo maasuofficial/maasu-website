@@ -23,10 +23,10 @@ class WrapperMenu extends React.Component {
 
   handleClick(e) {
     e.preventDefault()
-    this.clickedMenu = true
+    // this.clickedMenu = true
 
-    const trigger = document.querySelector('.triggerWM')
-    trigger.classList.remove('attentionWM')
+    // const trigger = document.querySelector('.triggerWM')
+    // trigger.classList.remove('attentionWM')
 
     const open = !this.state.open
     this.setState({ open })
@@ -55,23 +55,21 @@ class WrapperMenu extends React.Component {
   }
 
   componentDidMount() {
-    const time = 7 // seconds
-    setTimeout(() => {
-      if (!this.clickedMenu) {
-        const trigger = document.querySelector('.triggerWM')
-        trigger.classList.add('attentionWM')
-      }
-    }, time * 1000)
-
-    const cookie = this.retrieveCookie('openedMenuBefore')
-
-    if (cookie.length === 0) {
-      this.storeCookie('openedMenuBefore', 'true', 30)
-    } else {
-      if (cookie === 'true') {
-        this.clickedMenu = true
-      }
-    }
+    // const time = 7 // seconds
+    // setTimeout(() => {
+    //   if (!this.clickedMenu) {
+    //     const trigger = document.querySelector('.triggerWM')
+    //     trigger.classList.add('attentionWM')
+    //   }
+    // }, time * 1000)
+    // const cookie = this.retrieveCookie('openedMenuBefore')
+    // if (cookie.length === 0) {
+    //   this.storeCookie('openedMenuBefore', 'true', 30)
+    // } else {
+    //   if (cookie === 'true') {
+    //     this.clickedMenu = true
+    //   }
+    // }
   }
 
   render() {

@@ -15,7 +15,8 @@ class SC extends React.Component {
         <div className={'promoOverlay-sc'}>
           <div className={'promoContent-sc'}>
             <h2 className="h2-sc">
-              <p className={'title-sc'}>
+              <p className={''}>
+                {/* <p className={'title-sc'}> */}
                 {UPCOMING.CONFERENCE_YEAR} {CORE.NAME}{' '}
                 {UPCOMING.CONFERENCE_TYPE}
               </p>
@@ -24,7 +25,8 @@ class SC extends React.Component {
                 rel="noopener noreferrer"
                 href="https://www.facebook.com/maasuofficial"
               >
-                <em className={'golden-sc em-sc'}>
+                <em className={'fsn fs5 fs3-s golden-sc'}>
+                  {/* <em className={'golden-sc em-sc'}> */}
                   {UPCOMING.CONFERENCE_NAME}
                 </em>
               </a>
