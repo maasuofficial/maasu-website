@@ -1,23 +1,5 @@
 @import './functional';
 
-/**
- * Media queries are as follows:
- * s - small
- * ns - not small
- * nl - not large
- * l - large
- */
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 263ff70... Add spacing functional css classes
-$s: '-s';
-$ns: '-ns';
-$nl: '-nl';
-$l: '-l';
-<<<<<<< HEAD
-
 @include mobile-only {
   @include typography($s);
   @include spacing($s);
@@ -28,27 +10,10 @@ $l: '-l';
   @include z($s);
   @include text($s);
   @include placement($s);
-=======
-$s:   '-s';
-$ns:  '-ns';
-$nl:  '-nl';
-$l:   '-l';
-
-@include mobile-only {
-  @include typography($s);
->>>>>>> 7be959c... Newly defined styling system
-=======
-
-@include mobile-only {
-  @include typography($s);
-  @include spacing($s);
->>>>>>> 263ff70... Add spacing functional css classes
 }
 
 @include not-mobile {
   @include typography($ns);
-<<<<<<< HEAD
-<<<<<<< HEAD
   @include spacing($ns);
   @include position($ns);
   @include display($ns);
@@ -57,17 +22,10 @@ $l:   '-l';
   @include z($ns);
   @include text($ns);
   @include placement($ns);
-=======
->>>>>>> 7be959c... Newly defined styling system
-=======
-  @include spacing($ns);
->>>>>>> 263ff70... Add spacing functional css classes
 }
 
 @include not-desktop {
   @include typography($nl);
-<<<<<<< HEAD
-<<<<<<< HEAD
   @include spacing($nl);
   @include position($nl);
   @include display($nl);
@@ -76,17 +34,10 @@ $l:   '-l';
   @include z($nl);
   @include text($nl);
   @include placement($nl);
-=======
->>>>>>> 7be959c... Newly defined styling system
-=======
-  @include spacing($nl);
->>>>>>> 263ff70... Add spacing functional css classes
 }
 
 @include desktop-only {
   @include typography($l);
-<<<<<<< HEAD
-<<<<<<< HEAD
   @include spacing($l);
   @include position($l);
   @include display($l);
@@ -95,9 +46,4 @@ $l:   '-l';
   @include z($l);
   @include text($l);
   @include placement($l);
-=======
->>>>>>> 7be959c... Newly defined styling system
-=======
-  @include spacing($l);
->>>>>>> 263ff70... Add spacing functional css classes
 }
