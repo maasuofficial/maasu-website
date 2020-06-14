@@ -165,8 +165,13 @@ class WrapperMenu extends React.Component {
 
         {/* content */}
 
-        <div className={'wrapperContentWM'} onClick={this.handleMenuClose}>
-          <div className={'contentWM'}>{this.props.children}</div>
+        <div
+          className={'posa h-100 w-100 wrapperContentWM'}
+          onClick={this.handleMenuClose}
+        >
+          <div className={'posr h-100 w-100 contentWM'}>
+            {this.props.children}
+          </div>
         </div>
       </div>
     )

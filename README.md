@@ -234,14 +234,7 @@ src/
   containers/         - Components dealing with data or store. This folder also contains 
                         components which represent entire pages.
   css/                - Any and all styling.
-    _def.scss         - All css global variables and utility functions.
-    app.scss          - All CSS and variables compiled with breakpoints. This is what 
-                        should be included in the index file.
-    functional.scss   - All functional CSS classes.
-    media.scss        - All media queries.
-
-  routes/
-    routes.tsx        - Manages all routes.
+  routes/             - Manages all routes.
   utils/              - Any and all utility functions.
   index.tsx           - Main source file which initializes react, store, and renders DOM.
 ```

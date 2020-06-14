@@ -1,14 +1,22 @@
 import React from 'react'
-import { CORE, UPCOMING } from '../../constants/strings'
+import {
+  APP_NAME,
+  APP_NAME_LONG,
+  CONFERENCE_NAME,
+  CONFERENCE_YEAR,
+  CONFERENCE_TYPE,
+  CONFERENCE_DATE_RANGE,
+  SOCIAL_FACEBOOK,
+} from '../../constants/strings'
 
 class SC extends React.Component {
   render() {
     return (
-      <div className="reach-router-style">
+      <div className="posa h-100 reach-router-style">
         <div className={'logo-sc'}>
           <img
             src={`${process.env.PUBLIC_URL}/assets/branding/dark/text.svg`}
-            alt={CORE.NAME_LONG}
+            alt={APP_NAME_LONG}
           />
         </div>
 
@@ -16,21 +24,16 @@ class SC extends React.Component {
           <div className={'promoContent-sc'}>
             <h2 className="h2-sc">
               <p className={''}>
-                {/* <p className={'title-sc'}> */}
-                {UPCOMING.CONFERENCE_YEAR} {CORE.NAME}{' '}
-                {UPCOMING.CONFERENCE_TYPE}
+                {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
               </p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/maasuofficial"
+                href={SOCIAL_FACEBOOK}
               >
-                <em className={'fsn fs5 fs3-s golden-sc'}>
-                  {/* <em className={'golden-sc em-sc'}> */}
-                  {UPCOMING.CONFERENCE_NAME}
-                </em>
+                <em className={'fsn fs5 fs3-s golden-sc'}>{CONFERENCE_NAME}</em>
               </a>
-              <p className={'date-sc'}>{UPCOMING.CONFERENCE_DATE_RANGE}</p>
+              <p className={'date-sc'}>{CONFERENCE_DATE_RANGE}</p>
             </h2>
           </div>
         </div>
