@@ -1,15 +1,16 @@
-import React from 'react';
-import { Page, Type } from '../../components';
+import React from 'react'
+import { Page, Type } from '../../components'
 
 class PastConf extends React.Component {
   componentDidMount() {
-    document.title = 'Past Conferences - The Midwest Asian American Students Union';
+    document.title =
+      'Past Conferences - The Midwest Asian American Students Union'
   }
 
   render() {
     return (
       <Page>
-        <Type variant='h2'>Past Conferences</Type>
+        <Type variant="h2">Past Conferences</Type>
         <table className={'conferences'}>
           <thead>
             <tr>
@@ -20,7 +21,6 @@ class PastConf extends React.Component {
             </tr>
           </thead>
           <tbody>
-
             <tr>
               <td>March 20-22, 2020</td>
               <td>Spring Conference</td>
@@ -129,7 +129,10 @@ class PastConf extends React.Component {
             <tr>
               <td>April 6-7, 2012</td>
               <td>Spring Conference</td>
-              <td>Breaking H.A.B.I.T.S.: Overcoming hostility, adversity, boundaries, ignorance, tension, and stereotypes</td>
+              <td>
+                Breaking H.A.B.I.T.S.: Overcoming hostility, adversity,
+                boundaries, ignorance, tension, and stereotypes
+              </td>
               <td>University of Illinois at Urbana-Champaign, IL</td>
             </tr>
 
@@ -397,13 +400,12 @@ class PastConf extends React.Component {
               <td></td>
               <td>University of Michigan, MI</td>
             </tr>
-
           </tbody>
         </table>
-        <div className='footerSpace'></div>
+        <div className="footerSpace"></div>
       </Page>
-    );
+    )
   }
 }
 
-export default PastConf;
+export default PastConf

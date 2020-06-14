@@ -12,19 +12,22 @@ export default {
       main: '#222',
       dark: '#000',
     },
-    primary: { // red
+    primary: {
+      // red
       light: '#ff5e53',
       main: '#d12329',
       dark: '#980000',
       contrastText: '#fbfbfb',
     },
-    secondary: { // orange
+    secondary: {
+      // orange
       light: '#ffb051',
       main: '#ea801f',
       dark: '#b25200',
       contrastText: '#000',
     },
-    tertiary: { // green
+    tertiary: {
+      // green
       light: '#61e2a7',
       main: '#20af78',
       dark: '#007e4c',
@@ -33,12 +36,7 @@ export default {
   },
   typography: {
     fontFamily: {
-      primary: [
-        'hind',
-        'Roboto',
-        'arial',
-        'sans-serif',
-      ].join(','),
+      primary: ['hind', 'Roboto', 'arial', 'sans-serif'].join(','),
       secondary: [
         '-apple-system',
         'BlinkMacSystemFont',

@@ -1,32 +1,27 @@
-import { Component } from 'react';
-import PropTypes from 'prop-types';
+import { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class ThemeProvider extends Component {
-
   setThemeVariables(theme) {
-
     const createVariables = (prefix, obj) => {
-      for (let key in obj) {
-        let thisPrefix = prefix + key;
-        
+      for (const key in obj) {
+        const thisPrefix = prefix + key
+
         if (typeof obj[key] === 'object') {
-          createVariables(thisPrefix + '-', obj[key]);
+          createVariables(thisPrefix + '-', obj[key])
         } else {
-          document.documentElement.style.setProperty(thisPrefix, obj[key]);
+          document.documentElement.style.setProperty(thisPrefix, obj[key])
         }
-      
       }
     }
 
-    createVariables('--', theme);
-
+    createVariables('--', theme)
   }
 
   render() {
-    this.setThemeVariables(this.props.theme);
-    return this.props.children;
+    this.setThemeVariables(this.props.theme)
+    return this.props.children
   }
-
 }
 
 ThemeProvider.propTypes = {
@@ -36,11 +31,9 @@ ThemeProvider.propTypes = {
 
 ThemeProvider.defaultProps = {
   theme: {
-    
     // palette
-    
-    palette: {
 
+    palette: {
       background: '#aaa',
       contrastText: '#333',
 
@@ -70,13 +63,11 @@ ThemeProvider.defaultProps = {
         dark: '#333',
         contrastText: '#fff',
       },
-
     },
 
     // typography
 
     typography: {
-    
       // font family
 
       fontFamily: [
@@ -94,9 +85,8 @@ ThemeProvider.defaultProps = {
       ].join(','),
 
       // font size
-          
+
       fontSize: '14px',
-      
     },
 
     // spacing
@@ -119,8 +109,7 @@ ThemeProvider.defaultProps = {
       bar: 1100,
       modal: 1300,
     },
-
   },
 }
 
-export default ThemeProvider;
+export default ThemeProvider

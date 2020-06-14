@@ -1,32 +1,45 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 
 class Cell extends Component {
   render() {
-    const { auto, children, className, lg, md, shrink, sm, ...props } = this.props;
+    const {
+      auto,
+      children,
+      className,
+      lg,
+      md,
+      shrink,
+      sm,
+      ...props
+    } = this.props
 
-    let classes = (typeof className === 'string') ? className.split(' ') : [];
-    classes.push('cell');
+    const classes = typeof className === 'string' ? className.split(' ') : []
+    classes.push('cell')
 
     const addBreakpoint = (k, v) => {
       if (v > 0) {
-        classes.push(`${[k + '-' + v]}`);
+        classes.push(`${[k + '-' + v]}`)
       }
     }
 
     if (auto) {
-      classes.push('auto');
+      classes.push('auto')
     }
 
     if (shrink) {
-      classes.push('shrink');
+      classes.push('shrink')
     }
 
-    addBreakpoint('sm', sm);
-    addBreakpoint('md', md);
-    addBreakpoint('lg', lg);
+    addBreakpoint('sm', sm)
+    addBreakpoint('md', md)
+    addBreakpoint('lg', lg)
 
-    return <div {...props} className={classes.join(' ')}>{children}</div>;
+    return (
+      <div {...props} className={classes.join(' ')}>
+        {children}
+      </div>
+    )
   }
 }
 
@@ -46,4 +59,4 @@ Cell.defaultProps = {
   sm: 0,
 }
 
-export default Cell;
+export default Cell

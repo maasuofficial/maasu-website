@@ -53,7 +53,7 @@ class Donate extends React.Component {
   }
 }
 
-const DonateComp = (props) => {
+const DonateComp = () => {
   return (
     <Page className={'complete-donate'}>
       <div className="footerSpace"></div>

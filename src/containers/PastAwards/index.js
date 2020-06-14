@@ -1,17 +1,18 @@
-import React from 'react';
-import { Page, Type } from '../../components';
+import React from 'react'
+import { Page, Type } from '../../components'
 
 class PastAwards extends React.Component {
   componentDidMount() {
-    document.title = 'Past Awards Recipients - The Midwest Asian American Students Union';
+    document.title =
+      'Past Awards Recipients - The Midwest Asian American Students Union'
   }
 
   render() {
     return (
       <Page>
-        <Type variant='h2'>Past Award Recipients</Type>
+        <Type variant="h2">Past Award Recipients</Type>
 
-        <Type variant='sub4'>Past Board of Advisors Award Winners</Type>
+        <Type variant="sub4">Past Board of Advisors Award Winners</Type>
         <table>
           <thead>
             <tr>
@@ -78,10 +79,10 @@ class PastAwards extends React.Component {
             </tr>
           </tbody>
         </table>
-        <div className='footerSpace'></div>
+        <div className="footerSpace"></div>
       </Page>
-    );
+    )
   }
 }
 
-export default PastAwards;
+export default PastAwards
