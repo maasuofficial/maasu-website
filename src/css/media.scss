@@ -8,6 +8,7 @@
  * l - large
  */
 
+<<<<<<< HEAD
 $s: '-s';
 $ns: '-ns';
 $nl: '-nl';
@@ -23,10 +24,20 @@ $l: '-l';
   @include z($s);
   @include text($s);
   @include placement($s);
+=======
+$s:   '-s';
+$ns:  '-ns';
+$nl:  '-nl';
+$l:   '-l';
+
+@include mobile-only {
+  @include typography($s);
+>>>>>>> 7be959c... Newly defined styling system
 }
 
 @include not-mobile {
   @include typography($ns);
+<<<<<<< HEAD
   @include spacing($ns);
   @include position($ns);
   @include display($ns);
@@ -35,10 +46,13 @@ $l: '-l';
   @include z($ns);
   @include text($ns);
   @include placement($ns);
+=======
+>>>>>>> 7be959c... Newly defined styling system
 }
 
 @include not-desktop {
   @include typography($nl);
+<<<<<<< HEAD
   @include spacing($nl);
   @include position($nl);
   @include display($nl);
@@ -47,10 +61,13 @@ $l: '-l';
   @include z($nl);
   @include text($nl);
   @include placement($nl);
+=======
+>>>>>>> 7be959c... Newly defined styling system
 }
 
 @include desktop-only {
   @include typography($l);
+<<<<<<< HEAD
   @include spacing($l);
   @include position($l);
   @include display($l);
@@ -59,4 +76,6 @@ $l: '-l';
   @include z($l);
   @include text($l);
   @include placement($l);
+=======
+>>>>>>> 7be959c... Newly defined styling system
 }
