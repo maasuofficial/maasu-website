@@ -230,10 +230,12 @@ The `src` file is organized as follows:
 ```
 src/
   api/                - Any and all api calls.
-  components/         - All functional, or pure, components concerned with UI.
+  components/         - All functional, or pure, components concerned with UI. Generally,
+                        these components should be small modular units.
   constants/          - All constants, strings, and other hard values.
   containers/         - Components dealing with data or store. This folder also contains 
-                        components which represent entire pages.
+                        components which represent entire pages. Simply put, a container
+                        "contains" other components.
   css/                - Any and all styling.
   routes/             - Manages all routes.
   utils/              - Any and all utility functions.

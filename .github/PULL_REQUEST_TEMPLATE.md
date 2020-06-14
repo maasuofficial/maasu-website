@@ -1,6 +1,6 @@
-| Conference Year | Conference Name |  
+| Conference Year | Conference Name |
 | --- | --- |
 | year | conference |
 
-### Changes
+### Major Changes
 -
