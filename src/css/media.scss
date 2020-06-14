@@ -16,19 +16,31 @@ $l: '-l';
 @include mobile-only {
   @include typography($s);
   @include spacing($s);
+  @include position($s);
+  @include display($s);
+  @include sizing($s);
 }
 
 @include not-mobile {
   @include typography($ns);
   @include spacing($ns);
+  @include position($ns);
+  @include display($ns);
+  @include sizing($ns);
 }
 
 @include not-desktop {
   @include typography($nl);
   @include spacing($nl);
+  @include position($nl);
+  @include display($nl);
+  @include sizing($nl);
 }
 
 @include desktop-only {
   @include typography($l);
   @include spacing($l);
+  @include position($l);
+  @include display($l);
+  @include sizing($l);
 }

@@ -83,3 +83,74 @@
   }
 }
 @include spacing();
+
+/**
+ * -----------------------------------------------------
+ * Positioning
+ * -----------------------------------------------------
+ */
+
+@mixin position($media: '') {
+  .posa#{$media} {
+    position: absolute !important;
+  }
+  .posr#{$media} {
+    position: relative !important;
+  }
+  .posf#{$media} {
+    position: fixed !important;
+  }
+}
+@include position();
+
+/**
+ * -----------------------------------------------------
+ * Display
+ * -----------------------------------------------------
+ */
+
+@mixin display($media: '') {
+  .dispb#{$media} {
+    display: block !important;
+  }
+  .dispn#{$media} {
+    display: none !important;
+  }
+  .dispi#{$media} {
+    display: inline !important;
+  }
+}
+@include display();
+
+/**
+ * -----------------------------------------------------
+ * Sizing
+ * -----------------------------------------------------
+ */
+
+$step-inc: 5; // intervals
+
+@mixin sizing($media: '') {
+  @for $i from 1 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .h-#{$val}#{$media} {
+      height: #{$val * 1%} !important;
+    }
+    .mh-#{$val}#{$media} {
+      min-height: #{$val * 1%} !important;
+    }
+    .w-#{$val}#{$media} {
+      width: #{$val * 1%} !important;
+    }
+    .wh-#{$val}#{$media} {
+      min-width: #{$val * 1%} !important;
+    }
+  }
+  .m-a#{$media} {
+    height: auto !important;
+  }
+  .w-a#{$media} {
+    width: auto !important;
+  }
+}
+@include sizing();

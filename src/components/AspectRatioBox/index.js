@@ -15,7 +15,7 @@ class AspectRatioBox extends Component {
     } = this.props
 
     const classes = typeof className === 'string' ? className.split(' ') : []
-    classes.push('posr w-100 aspectRatioBox')
+    classes.push('w-100 aspectRatioBox')
     const styles = { ...style }
 
     styles.width = width || '100%'
@@ -28,8 +28,8 @@ class AspectRatioBox extends Component {
         {resize || resizeable ? (
           children
         ) : (
-          <div className={'posa aspectRatioBoxAbsolute'}>
-            <div className="posa h-100 w-100">{children}</div>
+          <div className={'aspectRatioBoxAbsolute'}>
+            <div className="h-100 w-100">{children}</div>
           </div>
         )}
       </div>
