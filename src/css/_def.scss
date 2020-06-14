@@ -137,3 +137,17 @@ $textMap: (
   'c': center,
   'r': right,
 );
+
+/**
+ * -----------------------------------------------------
+ * Numerical Values
+ * 
+ * Numerical values between 1-100 are recorded in
+ * specific intervals. This is to reduce the amount of
+ * variation in styling. Larger increments are better and
+ * more effective at maintaining consistent styling in
+ * this way.
+ * -----------------------------------------------------
+ */
+
+$step-inc: 10;

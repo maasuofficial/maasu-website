@@ -22,6 +22,7 @@ $l: '-l';
   @include boxShadow($s);
   @include z($s);
   @include text($s);
+  @include placement($s);
 }
 
 @include not-mobile {
@@ -33,6 +34,7 @@ $l: '-l';
   @include boxShadow($ns);
   @include z($ns);
   @include text($ns);
+  @include placement($ns);
 }
 
 @include not-desktop {
@@ -44,6 +46,7 @@ $l: '-l';
   @include boxShadow($nl);
   @include z($nl);
   @include text($nl);
+  @include placement($nl);
 }
 
 @include desktop-only {
@@ -55,4 +58,5 @@ $l: '-l';
   @include boxShadow($l);
   @include z($l);
   @include text($l);
+  @include placement($l);
 }

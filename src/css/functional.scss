@@ -22,11 +22,33 @@
       font-size: $value !important;
     }
   }
+
+  .fw400#{$media} {
+    font-weight: 400 !important;
+  }
+  .fw500#{$media} {
+    font-weight: 500 !important;
+  }
+  .fw700#{$media} {
+    font-weight: 700 !important;
+  }
+
   .fsn#{$media} {
     font-style: normal !important;
   }
   .fsi#{$media} {
     font-style: italic !important;
+  }
+
+  .tdn#{$media} {
+    text-decoration: none !important;
+  }
+  .tdu#{$media} {
+    text-decoration: underline !important;
+  }
+
+  .hover-tdu#{$media}:hover {
+    @extend .tdu#{$media};
   }
 }
 @include typography();
@@ -87,6 +109,10 @@
       margin-bottom: $value !important;
     }
   }
+  .mxa#{$media} {
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
 }
 @include spacing();
 
@@ -137,10 +163,8 @@
  * -----------------------------------------------------
  */
 
-$step-inc: 5; // intervals
-
 @mixin sizing($media: '') {
-  @for $i from 1 through 100 / $step-inc {
+  @for $i from 0 through 100 / $step-inc {
     $val: $i * $step-inc;
     .h-#{$val}#{$media} {
       height: #{$val * 1%} !important;
@@ -208,3 +232,28 @@ $step-inc: 5; // intervals
   }
 }
 @include text();
+
+/**
+ * -----------------------------------------------------
+ * Placement
+ * -----------------------------------------------------
+ */
+
+@mixin placement($media: '') {
+  @for $i from 0 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .t-#{$val}#{$media} {
+      top: #{$val * 1%} !important;
+    }
+    .r-#{$val}#{$media} {
+      right: #{$val * 1%} !important;
+    }
+    .b-#{$val}#{$media} {
+      bottom: #{$val * 1%} !important;
+    }
+    .l-#{$val}#{$media} {
+      left: #{$val * 1%} !important;
+    }
+  }
+}
+@include placement();

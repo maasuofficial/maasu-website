@@ -25,7 +25,7 @@ import {
 
 export const Routes = () => {
   return (
-    <Router className="posa h-100 reach-router-style">
+    <Router className="posa h-100 t-0 r-0 b-0 l-0">
       <WrapperMenu path="/">
         <Home path="/" />
 

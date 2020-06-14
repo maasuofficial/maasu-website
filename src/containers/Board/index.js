@@ -46,7 +46,7 @@ export const Board = (props) => {
             </a>
 
             <Page
-              className={`profileInfo-board ${expClasses}`}
+              className={`posf h-100 w-100 tc z1 profileInfo-board ${expClasses}`}
               name={p.nameConcatenated}
             >
               <Type variant="h2">{p.name}</Type>
@@ -62,6 +62,7 @@ export const Board = (props) => {
 
               <BImg
                 src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`}
+                className="w-100-s w-50-ns mxa"
                 alt={p.name}
               />
               <Type variant="text3">{p.position}</Type>

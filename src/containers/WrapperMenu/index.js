@@ -7,10 +7,6 @@ let menuOverride = false
 
 const { Link, SubMenu } = UtilityMenu
 
-// const checkActive = function (href) {
-//   return (match, location) => (location ? location.pathname === href : false)
-// }
-
 class WrapperMenu extends React.Component {
   constructor(props) {
     super(props)
@@ -97,18 +93,14 @@ class WrapperMenu extends React.Component {
 
         {/* menu */}
 
-        <div className={'wrapperMenuWM'}>
-          <div className={'menuContainerWM'}>
+        <div className={'posa wrapperMenuWM'}>
+          <div className={'h-100 w-100 menuContainerWM'}>
             <UtilityMenu
               className={'utilityMenuWM'}
               linkWrapper={(href, children) => {
-                // const checkActive = function (href) {
-                //   return (match, location) => (location ? location.pathname === href : false)
-                // }
                 return (
                   <RouterLink
                     to={href}
-                    // isActive={checkActive(href)}
                     onClick={this.handleMenuClose}
                     tabIndex={this.state.open ? 0 : -1}
                   >

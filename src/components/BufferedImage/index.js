@@ -33,6 +33,7 @@ class BufferedImage extends React.Component {
         <img
           onLoad={this.handleLoad}
           onError={this.handleError}
+          className="w-100"
           src={src}
           alt={alt}
           {...props}

@@ -7,12 +7,12 @@ import {
   CONFERENCE_TYPE,
   CONFERENCE_DATE_RANGE,
   SOCIAL_FACEBOOK,
-} from '../../constants/strings'
+} from 'constants/strings'
 
 class SC extends React.Component {
   render() {
     return (
-      <div className="posa h-100 reach-router-style">
+      <div className="posa h-100 t-0 r-0 b-0 l-0">
         <div className={'logo-sc'}>
           <img
             src={`${process.env.PUBLIC_URL}/assets/branding/dark/text.svg`}
