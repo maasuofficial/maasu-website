@@ -54,7 +54,7 @@ export const Routes = () => {
         <PastConf path="/pastconferences" />
 
         <Donate path="/donate" />
-        <DonateComp path="/donate-complete" />
+        <DonateComp path="/donate-complete" test={true} />
         <Contact path="/contact" />
 
         <Home default />

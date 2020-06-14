@@ -53,21 +53,24 @@ class Donate extends React.Component {
   }
 }
 
-const DonateComp = () => {
+const DonateComp = (props) => {
+  const { test } = props
   return (
-    <Page className={'complete-donate'}>
-      <div className="footerSpace"></div>
-      <img
-        className={'logo-donate'}
-        src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`}
-        alt="thank you for donating!"
-      />
+    test && (
+      <Page className={'complete-donate'}>
+        <div className="footerSpace"></div>
+        <img
+          className={'logo-donate'}
+          src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`}
+          alt="thank you for donating!"
+        />
 
-      <Type variant="h2">Thank you for donating.</Type>
-      <Type variant="h4">Your donation means the world to us.</Type>
+        <Type variant="h2">Thank you for donating.</Type>
+        <Type variant="h4">Your donation means the world to us.</Type>
 
-      <div className="footerSpace"></div>
-    </Page>
+        <div className="footerSpace"></div>
+      </Page>
+    )
   )
 }
 
