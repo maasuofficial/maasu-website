@@ -724,6 +724,14 @@ $transition: 0.3s;
   color: #beb481;
 }
 
+.bgorange {
+  background-color: #c2604d !important;
+}
+
+.fgorange {
+  color: #c2604d;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
 $url: '/assets/img/gold.gif';
 
@@ -976,6 +984,14 @@ li.horizontal-ruc {
   font-family: 'Hind', sans-serif;
 }
 
+.fhind {
+  @extend .ftemp;
+}
+
 .ofh {
   overflow: hidden !important;
+}
+
+.ttu {
+  text-transform: uppercase;
 }

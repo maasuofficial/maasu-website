@@ -91,7 +91,7 @@ class WrapperMenu extends React.Component {
           {/* TEMP for sc 2020 promo menu icon */}
           <FaAlignRight
             className={'menuIconWM menuIconOverride'}
-            style={{ color: menuOverride ? 'white' : 'inherit' }}
+            // style={{ color: menuOverride ? 'white' : 'inherit' }}
           />
         </a>
 
@@ -165,7 +165,11 @@ class WrapperMenu extends React.Component {
           className={'posa h-100 w-100 wrapperContentWM'}
           onClick={this.handleMenuClose}
         >
-          <div className={'posr h-100 w-100 contentWM'}>
+          <div
+            className={`posr h-100 w-100 contentWM ${
+              menuOverride ? 'bgorange' : ''
+            }`}
+          >
             {this.props.children}
           </div>
         </div>
