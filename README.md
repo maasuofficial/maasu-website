@@ -87,6 +87,7 @@ Utilizing `git` and `github`:
 1. Check out the staging branch to verify it is up to date with the latest changes in production. 
 ```
 g checkout staging
+g pull origin master
 ```
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
@@ -96,7 +97,7 @@ git commit -m "commit title"
 ```
 4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
 ```
-git pull --rebase origin master
+git pull origin master
 git push
 ```
 5. Create a PR to merge into `master`.
