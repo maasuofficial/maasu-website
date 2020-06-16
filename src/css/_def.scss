@@ -19,31 +19,12 @@ $bkpt-tablet-to-desktop: 80em; // 1280px
 // content width
 $containerWidth: 78em;
 
-$s: '-s';
-$ns: '-ns';
-$nl: '-nl';
-$l: '-l';
-
-@mixin mobile-only {
-  @media ("max-width: #{$bkpt-mobile-to-tablet}") {
-    @content;
-  }
-}
-@mixin not-mobile {
-  @media ("min-width: #{$bkpt-mobile-to-tablet}") {
-    @content;
-  }
-}
-@mixin not-desktop {
-  @media ("max-width: #{$bkpt-tablet-to-desktop}") {
-    @content;
-  }
-}
-@mixin desktop-only {
-  @media ("min-width: #{$bkpt-tablet-to-desktop}") {
-    @content;
-  }
-}
+$queryMap: (
+  'max-width: #{$bkpt-mobile-to-tablet}': '-s',
+  'min-width: #{$bkpt-mobile-to-tablet}': '-ns',
+  'max-width: #{$bkpt-tablet-to-desktop}': '-nl',
+  'min-width: #{$bkpt-tablet-to-desktop}': '-l',
+);
 
 /**
  * -----------------------------------------------------
@@ -135,7 +116,7 @@ $zMap: (
   '4': 4,
   '5': 5,
   '6': 6,
-    '7': 7,
+  '7': 7,
   '8': 8,
   '9': 9,
 );
