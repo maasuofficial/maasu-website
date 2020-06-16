@@ -63,7 +63,9 @@ class Contact extends React.Component {
   render() {
     return (
       <Page className={'contact-contact'}>
-        <Type variant="h2">Contact Us</Type>
+        <Type variant="h2">
+          <span className="tc dispb">Contact Us</span>
+        </Type>
 
         <div className={'content-contact'}>
           <div className={'linkContainer-contact'}>

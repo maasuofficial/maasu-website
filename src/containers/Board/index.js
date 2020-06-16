@@ -54,7 +54,7 @@ export const Board = (props) => {
               <a
                 href="/"
                 tabIndex={expTabIndex}
-                className={'close-board'}
+                className={'posa t-0 r-0 close-board'}
                 onClick={toggleContraction}
               >
                 <FaArrowLeft />
@@ -78,7 +78,7 @@ export const Board = (props) => {
                 </a>
               )}
 
-              {p.positionRole && <p>{p.positionRole}</p>}
+              {p.positionRole && <p className="tl">{p.positionRole}</p>}
               {/*
               {p.personalGoal && (
                 <span>

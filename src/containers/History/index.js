@@ -18,7 +18,9 @@ class History extends React.Component {
   render() {
     return (
       <Page>
-        <Type variant="sub2">Our History</Type>
+        <Type variant="sub2">
+          <span className="tc dispb">Our History</span>
+        </Type>
 
         <Timeline>
           {Object.keys(HISTORY)

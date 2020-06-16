@@ -1,3 +1,5 @@
+@import './functional';
+
 /**
  * -----------------------------------------------------
  * Legacy
@@ -27,12 +29,16 @@ $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
   font-style: normal;
 }
 
+.ffprimary {
+  font-family: 'hindmod', 'Roboto', 'arial', 'sans-serif';
+}
+
 [hidden] {
   display: none;
 }
 
 .footerSpace {
-  height: var(--spacing);
+  height: 4rem;
 }
 
 .aspectRatioBox {
@@ -183,8 +189,8 @@ $map: (
 }
 
 .page {
-  padding: 0 calc(var(--spacing) / 4);
-  padding-top: var(--spacing);
+  padding: 0 1rem;
+  padding-top: 4rem;
 }
 
 .page h1:first-child,
@@ -193,13 +199,14 @@ $map: (
 .page h4:first-child,
 .page h5:first-child,
 .page h6:first-child {
+  // @extend .tc !optional;
   margin-top: 0;
 }
 
 @media #{$md-up} {
   .page {
-    padding: 0 var(--spacing);
-    padding-top: calc(var(--spacing) / 4);
+    padding: 0 4rem;
+    padding-top: calc(4rem / 4);
   }
 }
 
@@ -207,12 +214,12 @@ $map: (
   text-decoration: none;
 }
 
-$dist: calc(var(--spacing) / 8);
+$dist: calc(4rem / 8);
 
 .pressableContainer {
   position: relative;
   display: inline-block;
-  padding: calc(var(--spacing) / 4);
+  padding: calc(4rem / 4);
 
   top: calc(-1 * #{$dist});
   box-shadow: 0 $dist var(--palette-primary-dark);
@@ -220,7 +227,7 @@ $dist: calc(var(--spacing) / 8);
   text-decoration: none;
   color: var(--palette-white);
   background-color: var(--palette-primary-main);
-  border-radius: calc(var(--spacing) / 16);
+  border-radius: calc(4rem / 16);
 
   &:active {
     box-shadow: 0 0 var(--palette-primary-dark);
@@ -247,16 +254,16 @@ $hoverUp: 0.75; // desktop hover height
   }
 }
 
-$stringWidth: calc(var(--spacing) / 8);
+$stringWidth: calc(4rem / 8);
 $stringColor: var(--palette-primary-main);
 
 // .container {
-// padding: 0 calc(var(--spacing) / 2);
+// padding: 0 calc(4rem / 2);
 // }
 
 // @media #{$md-up} {
 //   .container {
-//     padding: 0 calc(var(--spacing) / 2);
+//     padding: 0 calc(4rem / 2);
 //   }
 // }
 
@@ -327,10 +334,10 @@ $stringColor: var(--palette-primary-main);
 }
 
 .contentContainer {
-  padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
+  padding: calc(4rem / 4) calc(4rem / 2);
 
   h4 {
-    margin: calc(var(--spacing) / 8) 0;
+    margin: calc(4rem / 8) 0;
   }
   p {
     margin: 0;
@@ -339,9 +346,9 @@ $stringColor: var(--palette-primary-main);
 
 @media #{$md-up} {
   .contentContainer {
-    padding: calc(var(--spacing) / 2) var(--spacing);
+    padding: calc(4rem / 2) 4rem;
     h4 {
-      margin: calc(var(--spacing) / 4) 0;
+      margin: calc(4rem / 4) 0;
     }
   }
 }
@@ -353,7 +360,7 @@ h4.typography,
 h5.typography,
 h6.typography,
 em.typography {
-  font-family: var(--typography-fontFamily-primary);
+  @extend .ffprimary;
 }
 
 h1.typography,
@@ -394,7 +401,7 @@ h6.typography,
 
 .subtitle-typography,
 .text-typography {
-  font-family: var(--typography-fontFamily-primary);
+  @extend .ffprimary;
   margin-top: 0;
   font-weight: 400;
 }
@@ -416,7 +423,7 @@ em.typography,
   font-size: 2.441em;
 
   p {
-    font-family: var(--typography-fontFamily-primary);
+    @extend .ffprimary;
   }
 }
 
@@ -425,7 +432,7 @@ em.typography,
 }
 
 .logoContainer-alumni p {
-  transform: translateY(calc(-1 * var(--spacing) / 4));
+  transform: translateY(calc(-1 * 4rem / 4));
 }
 
 .logo-alumni {
@@ -451,13 +458,13 @@ em.typography,
 
 @media #{$md-up} {
   .content-contact {
-    width: calc(100% - var(--spacing));
+    width: calc(100% - 4rem);
   }
 }
 
 @media #{$lg-up} {
   .content-contact {
-    width: calc(100% - calc(var(--spacing) * 2));
+    width: calc(100% - calc(4rem * 2));
   }
 }
 
@@ -480,7 +487,7 @@ em.typography,
 }
 
 .linkGrid-contact a {
-  font-size: calc(var(--typography-fontSize) * 3);
+  font-size: calc(1rem * 3);
   color: var(--palette-text-light);
 
   &:hover {
@@ -518,8 +525,8 @@ em.typography,
   textarea,
   button {
     font-family: inherit;
-    margin: calc(var(--spacing) / 2) auto;
-    padding: calc(var(--spacing) / 4);
+    margin: calc(4rem / 2) auto;
+    padding: calc(4rem / 4);
     background: initial;
     border: 2px solid var(--palette-text-main);
   }
@@ -527,7 +534,7 @@ em.typography,
 
 .contactResponse-contact {
   margin: 0 auto;
-  padding: calc(var(--spacing) / 8);
+  padding: calc(4rem / 8);
   display: none;
 }
 
@@ -544,12 +551,12 @@ em.typography,
 
 @media #{$lg-up} {
   .contactForm-contact {
-    width: calc(100% - calc(var(--spacing) * 2));
+    width: calc(100% - calc(4rem * 2));
   }
 }
 
 .logo-contact {
-  margin-top: var(--spacing);
+  margin-top: 4rem;
   width: 70%;
 }
 
@@ -568,18 +575,17 @@ em.typography,
 }
 
 .donateButtonWrapper-donate {
-  margin: calc(var(--spacing)) 0;
+  margin: calc(4rem) 0;
 }
 
 .donateButton-donate {
   text-decoration: none;
   background-color: var(--palette-background-main);
   color: var(--palette-primary-main);
-  font-family: var(--typography-fontFamily-primary);
-  //text-transform: uppercase;
-  font-size: calc(var(--typography-fontSize) * 1.5);
-  padding: calc(var(--spacing) / 4);
-  border: calc(var(--spacing) / 16) solid var(--palette-primary-main);
+  @extend .ffprimary;
+  font-size: calc(1rem * 1.5);
+  padding: calc(4rem / 4);
+  border: calc(4rem / 16) solid var(--palette-primary-main);
   transition: all 0.2s;
 
   &:hover {
@@ -632,7 +638,7 @@ $transition: 0.3s;
 }
 
 .groupPage-board:not(:first-child) {
-  border-top: calc(var(--spacing) / 16) solid var(--palette-background-dark);
+  border-top: calc(4rem / 16) solid var(--palette-background-dark);
 }
 
 .profileContainer-board {
@@ -647,7 +653,7 @@ $transition: 0.3s;
 .profile-board {
   height: 100%;
   width: 100%;
-  padding: calc(var(--spacing) / 8);
+  padding: calc(4rem / 8);
   text-align: center;
 
   border-style: solid;
@@ -658,7 +664,7 @@ $transition: 0.3s;
 
   img {
     width: 100%;
-    border-radius: calc(var(--spacing) / 16);
+    border-radius: calc(4rem / 16);
   }
   p {
     margin: 0;
@@ -667,7 +673,7 @@ $transition: 0.3s;
 
 @media #{$md-up} {
   .profile-board:hover {
-    border-width: calc(var(--spacing) / 4);
+    border-width: calc(4rem / 4);
   }
 }
 
@@ -688,24 +694,22 @@ $transition: 0.3s;
   }
 
   &.expanded-board {
-    left: 0;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
 .close-board {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: calc(var(--spacing) / 4);
+  margin: calc(4rem / 4);
 
   background-color: initial;
   border: none;
   color: var(--palette-primary-dark);
-  font-size: calc(var(--spacing) / 2);
-  line-height: calc(var(--spacing) / 2);
+  font-size: calc(4rem / 2);
+  line-height: calc(4rem / 2);
 
   cursor: pointer;
-  z-index: var(--zIndex-trigger);
+  @extend .z5 !optional;
 }
 
 .c-inherit {
@@ -734,14 +738,14 @@ $url: '/assets/img/gold.gif';
   -webkit-text-fill-color: transparent;
 }
 
-$menu-y-sm: var(--spacing);
+$menu-y-sm: 4rem;
 $menu-x-sm: 75%;
 $transition: all 0.3s;
 
-$menu-y-md: var(--spacing);
+$menu-y-md: 4rem;
 $menu-x-md: 40%;
 
-$menu-y-lg: var(--spacing);
+$menu-y-lg: 4rem;
 $menu-x-lg: 25%;
 
 .wrapperWM {
@@ -755,23 +759,23 @@ $menu-x-lg: 25%;
 
 .triggerWM {
   position: absolute;
-  margin: calc(var(--spacing) / 4);
+  margin: calc(4rem / 4);
 
   background-color: initial;
   border: none;
   color: var(--palette-text-main);
-  font-size: calc(var(--spacing) / 2);
-  line-height: calc(var(--spacing) / 2);
+  font-size: calc(4rem / 2);
+  line-height: calc(4rem / 2);
 
   cursor: pointer;
-  z-index: var(--zIndex-trigger);
+  @extend .z5 !optional;
 
   .menuIconWM {
     transform: rotate(180deg);
   }
 }
 
-$radius: calc(var(--spacing) * 2);
+$radius: calc(4rem * 2);
 
 .triggerWM.attentionWM::after {
   content: '';
@@ -837,7 +841,7 @@ $radius: calc(var(--spacing) * 2);
 }
 
 .wrapperMenuWM {
-  top: var(--spacing);
+  top: 4rem;
   bottom: 0;
   left: 0;
 
@@ -898,14 +902,14 @@ $radius: calc(var(--spacing) * 2);
 }
 
 .utilityMenuWM {
-  padding: var(--spacing) 0;
+  padding: 4rem 0;
   color: var(--palette-background-main);
 
   ul {
     list-style-type: none;
     color: var(--palette-background-main);
     margin: 0;
-    padding-left: calc(var(--spacing) / 4);
+    padding-left: calc(4rem / 4);
 
     a,
     span {
