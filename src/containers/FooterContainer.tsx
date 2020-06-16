@@ -7,7 +7,7 @@ export const FooterContainer: FC<Props> = () => {
   return (
     <footer>
       <div className="container">
-        <span className="fs0 ftemp">
+        <span className="fs0 ffhind">
           &copy; {YEAR} {APP_NAME}. All Rights Reserved.
         </span>
       </div>

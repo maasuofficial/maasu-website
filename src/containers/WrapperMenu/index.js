@@ -31,7 +31,7 @@ class WrapperMenu extends React.Component {
   }
 
   render() {
-    // TEMP menuOverride for sc 2020 promo menu icon
+    // TEMP menuOverride for sc 2020 promo bg color
     menuOverride = window.location.pathname === '/'
 
     return (
@@ -51,10 +51,7 @@ class WrapperMenu extends React.Component {
           role="button"
         >
           {/* TEMP for sc 2020 promo menu icon */}
-          <FaAlignRight
-            className={'menuIconWM menuIconOverride'}
-            // style={{ color: menuOverride ? 'white' : 'inherit' }}
-          />
+          <FaAlignRight className={'menuIconWM menuIconOverride'} />
         </a>
 
         {/* menu */}

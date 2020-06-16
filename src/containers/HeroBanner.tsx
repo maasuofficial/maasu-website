@@ -12,14 +12,14 @@ import {
 export const HeroBanner: FC = () => {
   return (
     <div className="posr h-100 w-100">
-      <div className="ttu fhind fw700">
+      <div className="ttu ffhind fw700">
         <h2 className="mt9 tc">
           <span className="fs3-ns fs2-s">
             {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
           </span>
           <br />
           <a className="tdn" href={SOCIAL_FACEBOOK}>
-            <em className="fsn fs4 fs2-s scgolden fggold golden-sc">
+            <em className="fsn fs4 fs2-s ls1 fflibre fggold">
               {CONFERENCE_NAME}
             </em>
           </a>

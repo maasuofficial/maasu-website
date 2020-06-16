@@ -723,20 +723,6 @@ $transition: 0.3s;
   color: #c2604d;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
-$url: '/assets/img/gold.gif';
-
-.scgolden {
-  font-family: 'Libre Baskerville', serif;
-  -webkit-text-stroke: initial;
-  -webkit-text-fill-color: initial;
-  letter-spacing: 0.1em;
-  background: center / 300% url($url) no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 $menu-y-sm: 4rem;
 $menu-x-sm: 75%;
 $transition: all 0.3s;
@@ -970,13 +956,8 @@ li.horizontal-ruc {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap');
-
-.ftemp {
+.ffhind {
   font-family: 'Hind', sans-serif;
-}
-
-.fhind {
-  @extend .ftemp;
 }
 
 .ofh {
@@ -985,4 +966,13 @@ li.horizontal-ruc {
 
 .ttu {
   text-transform: uppercase;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
+.fflibre {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.ls1 {
+  letter-spacing: 0.1em;
 }
