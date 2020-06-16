@@ -261,7 +261,6 @@ class Host extends React.Component {
             </p>
           </li>
         </ol>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

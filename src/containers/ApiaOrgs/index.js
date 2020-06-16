@@ -246,7 +246,6 @@ class ApiaOrgs extends React.Component {
             </a>
           </li>
         </ul>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

@@ -99,7 +99,6 @@ class Mission extends React.Component {
             .
           </p>
         </Page>
-        <div className="footerSpace"></div>
       </Fragment>
     )
   }

@@ -33,7 +33,7 @@ class MaasuX extends React.Component {
         </Page>
         <Page>
           <Type variant="h2">Past Host Schools</Type>
-          <table className={'pastSchools'}>
+          <table>
             <thead>
               <tr>
                 <th>Date</th>
@@ -113,7 +113,6 @@ class MaasuX extends React.Component {
             </tbody>
           </table>
         </Page>
-        <div className="footerSpace"></div>
       </React.Fragment>
     )
   }

@@ -129,7 +129,6 @@ class Alumni extends React.Component {
             <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0" />
           </form> */}
         </Page>
-        <div className="footerSpace"></div>
       </React.Fragment>
     )
   }

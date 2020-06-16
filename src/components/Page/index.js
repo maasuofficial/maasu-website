@@ -5,8 +5,7 @@ class Page extends Component {
     const { children, className, ...props } = this.props
 
     const classes = typeof className === 'string' ? className.split(' ') : []
-    // classes.push('w-100 page')
-    classes.push('w-100 page container')
+    classes.push('w-100 pt7 pt3-ns px3-nl pb3 container')
 
     return (
       <section {...props} className={classes.join(' ')}>

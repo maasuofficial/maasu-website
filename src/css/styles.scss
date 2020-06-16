@@ -20,6 +20,13 @@ body {
   background-color: var(--palette-background-main);
 }
 
+table,
+tr,
+td {
+  border: 1px solid var(--palette-text-main);
+  border-collapse: collapse;
+}
+
 .container {
   @extend .mxa;
   max-width: $containerWidth;

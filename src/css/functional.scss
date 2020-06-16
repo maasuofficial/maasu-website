@@ -50,6 +50,10 @@
   .hover-tdu#{$media}:hover {
     @extend .tdu#{$media};
   }
+
+  .ttu {
+    text-transform: uppercase;
+  }
 }
 @include typography();
 

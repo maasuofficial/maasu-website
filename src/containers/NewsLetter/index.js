@@ -16,7 +16,7 @@ class NewsLetter extends React.Component {
           schools, upcoming conferences, and more!
         </p>
 
-        <table className={'directory'}>
+        <table>
           <thead>
             <tr>
               <th>Date</th>
@@ -178,7 +178,6 @@ class NewsLetter extends React.Component {
             </tr>
           </tbody>
         </table>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

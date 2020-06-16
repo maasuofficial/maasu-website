@@ -40,8 +40,6 @@ class DC extends React.Component {
           </a>
           .
         </p>
-
-        <div className="footerSpace"></div>
       </Page>
     )
   }

@@ -79,8 +79,6 @@ export const Board = (props) => {
               )}
 
               {p.positionRole && <p className="tl">{p.positionRole}</p>}
-
-              <div className="footerSpace"></div>
             </Page>
           </ARBox>
         </Cell>
@@ -168,7 +166,6 @@ export const Board = (props) => {
           .
         </p>
       </Page>
-      <div className="footerSpace"></div>
     </div>
   )
 }
