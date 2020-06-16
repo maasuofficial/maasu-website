@@ -10,11 +10,13 @@ class Mission extends React.Component {
   render() {
     return (
       <Fragment>
-        <Page className={''}>
-          <Type variant="sub2">Our Purpose</Type>
-          <div className={'w-100 w-50-ns mxa'}>
+        <Page>
+          <Type variant="sub2">
+            <span className="tc dispb">Our Purpose</span>
+          </Type>
+          <div className="w-100 w-50-ns mxa">
             <img
-              src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`}
+              src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
               alt={APP_NAME_LONG}
             />
           </div>
@@ -44,7 +46,9 @@ class Mission extends React.Component {
           </p>
         </Page>
         <Page>
-          <Type variant="sub2">Our Mission</Type>
+          <Type variant="sub2">
+            <span className="tc dispb">Our Mission</span>
+          </Type>
           <p>
             The Midwest Asian American Students Union strives to recognize the
             needs of the Asian Pacific Islanders American (APIA) Community. The
@@ -80,7 +84,9 @@ class Mission extends React.Component {
           </ul>
         </Page>
         <Page>
-          <Type variant="sub2">Our Strategic Mission</Type>
+          <Type variant="sub2">
+            <span className="tc dispb">Stategic Mission</span>
+          </Type>
           <p>
             MAASU strives to recognize the needs of its community by developing
             a strategic plan for the next few years. See our strategic plan for

@@ -19,45 +19,48 @@ import {
   NewsLetter,
   PastAwards,
   PastConf,
-  Upcoming,
+  // Upcoming,
   WhereAreYouFrom,
 } from '../containers'
+import { HomepageContainer } from 'containers/HomepageContainer'
 
 export const Routes = () => {
   return (
     <Router className="posa h-100 t-0 r-0 b-0 l-0">
       <WrapperMenu path="/">
-        <Home path="/" />
+        <HomepageContainer path="/">
+          <Home path="/" />
 
-        <Mission path="/mission" />
-        <Board path="/board/:name" />
-        <Board path="/board" />
-        <Members path="/members" />
-        <Members path="/membership" />
-        <DC path="/directorscouncil" />
-        <History path="/history" />
+          <Mission path="/mission" />
+          <Board path="/board/:name" />
+          <Board path="/board" />
+          <Members path="/members" />
+          <Members path="/membership" />
+          <DC path="/directorscouncil" />
+          <History path="/history" />
 
-        <Upcoming path="/upcoming" />
-        <Host path="/host" />
+          {/* <Upcoming path="/upcoming" /> */}
+          <Host path="/host" />
 
-        <MaasuX path="/maasux" />
-        <WhereAreYouFrom path="/whereareyoufrom" />
+          <MaasuX path="/maasux" />
+          <WhereAreYouFrom path="/whereareyoufrom" />
 
-        <Awards path="/awards" />
-        <ApiaOrgs path="/apiaorgs" />
+          <Awards path="/awards" />
+          <ApiaOrgs path="/apiaorgs" />
 
-        <Alumni path="/alumni" />
-        <Alumni path="/maa" />
+          <Alumni path="/alumni" />
+          <Alumni path="/maa" />
 
-        <NewsLetter path="/newsletter" />
-        <PastAwards path="/pastawards" />
-        <PastConf path="/pastconferences" />
+          <NewsLetter path="/newsletter" />
+          <PastAwards path="/pastawards" />
+          <PastConf path="/pastconferences" />
 
-        <Donate path="/donate" />
-        <DonateComp path="/donate-complete" test={true} />
-        <Contact path="/contact" />
+          <Donate path="/donate" />
+          <DonateComp path="/donate-complete" test={true} />
+          <Contact path="/contact" />
 
-        <Home default />
+          <Home default />
+        </HomepageContainer>
       </WrapperMenu>
     </Router>
   )

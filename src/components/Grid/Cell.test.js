@@ -5,7 +5,7 @@ import Cell from './Cell'
 afterEach(cleanup)
 
 describe('cell component', () => {
-  const renderCell
+  let renderCell = ''
   const numGridCells = 12
 
   const randIntInRange = (min, max) =>

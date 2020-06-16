@@ -54,7 +54,7 @@ export const Board = (props) => {
               <a
                 href="/"
                 tabIndex={expTabIndex}
-                className={'close-board'}
+                className={'posa t-0 r-0 close-board'}
                 onClick={toggleContraction}
               >
                 <FaArrowLeft />
@@ -69,13 +69,17 @@ export const Board = (props) => {
               <br />
 
               {p.email && (
-                <a tabIndex={expTabIndex} href={`mailto:${p.email}`}>
+                <a
+                  className="c-inherit"
+                  tabIndex={expTabIndex}
+                  href={`mailto:${p.email}`}
+                >
                   {p.email}
                 </a>
               )}
 
-              {p.positionRole && <p>{p.positionRole}</p>}
-
+              {p.positionRole && <p className="tl">{p.positionRole}</p>}
+              {/*
               {p.personalGoal && (
                 <span>
                   <b>What is your personal goal this year?</b>
@@ -96,6 +100,7 @@ export const Board = (props) => {
                   <p>{p.favoriteMeme}</p>
                 </span>
               )}
+              */}
 
               <div className="footerSpace"></div>
             </Page>

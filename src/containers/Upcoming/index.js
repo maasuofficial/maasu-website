@@ -1,5 +1,4 @@
 import React from 'react'
-import SC from './SC'
 
 class Upcoming extends React.Component {
   componentDidMount() {
@@ -8,11 +7,7 @@ class Upcoming extends React.Component {
   }
 
   render() {
-    return (
-      <React.Fragment>
-        <SC />
-      </React.Fragment>
-    )
+    return <React.Fragment></React.Fragment>
   }
 }
 

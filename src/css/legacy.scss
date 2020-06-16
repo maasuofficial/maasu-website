@@ -1,3 +1,5 @@
+@import './functional';
+
 /**
  * -----------------------------------------------------
  * Legacy
@@ -18,15 +20,8 @@ $md-only: '#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{
 $md-up: '#{screen} and (min-width: #{$breakpoint-sm + 1}px)';
 $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
 
-*,
-*::before,
-*::after {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
 @font-face {
-  font-family: 'hind';
+  font-family: 'hindmod';
   src: url('/fonts/hind-bold-modified/hind-bold-modified-webfont.woff2')
       format('woff2'),
     url('/fonts/hind-bold-modified/hind-bold-modified.woff') format('woff');
@@ -34,15 +29,8 @@ $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
   font-style: normal;
 }
 
-body {
-  margin: 0;
-  font-family: var(--typography-fontFamily-secondary);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: var(--typography-fontSize);
-
-  color: var(--palette-text-main);
-  background-color: var(--palette-background-main);
+.ffprimary {
+  font-family: 'hindmod', 'Roboto', 'arial', 'sans-serif';
 }
 
 [hidden] {
@@ -50,12 +38,10 @@ body {
 }
 
 .footerSpace {
-  height: var(--spacing);
+  height: 4rem;
 }
 
 .aspectRatioBox {
-  margin: 0 auto;
-
   &::before {
     content: '';
     width: 1px;
@@ -70,13 +56,6 @@ body {
     display: table;
     clear: both;
   }
-}
-
-.aspectRatioBoxAbsolute {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
 }
 
 .buffering::after {
@@ -138,10 +117,6 @@ body {
 $numGridCells: 12;
 
 // grid component
-
-.grid {
-  display: flex;
-}
 
 .gridX {
   flex-flow: row wrap;
@@ -214,8 +189,8 @@ $map: (
 }
 
 .page {
-  padding: 0 calc(var(--spacing) / 4);
-  padding-top: var(--spacing);
+  padding: 0 1rem;
+  padding-top: 4rem;
 }
 
 .page h1:first-child,
@@ -224,13 +199,14 @@ $map: (
 .page h4:first-child,
 .page h5:first-child,
 .page h6:first-child {
+  // @extend .tc !optional;
   margin-top: 0;
 }
 
 @media #{$md-up} {
   .page {
-    padding: 0 var(--spacing);
-    padding-top: calc(var(--spacing) / 4);
+    padding: 0 4rem;
+    padding-top: calc(4rem / 4);
   }
 }
 
@@ -238,12 +214,12 @@ $map: (
   text-decoration: none;
 }
 
-$dist: calc(var(--spacing) / 8);
+$dist: calc(4rem / 8);
 
 .pressableContainer {
   position: relative;
   display: inline-block;
-  padding: calc(var(--spacing) / 4);
+  padding: calc(4rem / 4);
 
   top: calc(-1 * #{$dist});
   box-shadow: 0 $dist var(--palette-primary-dark);
@@ -251,7 +227,7 @@ $dist: calc(var(--spacing) / 8);
   text-decoration: none;
   color: var(--palette-white);
   background-color: var(--palette-primary-main);
-  border-radius: calc(var(--spacing) / 16);
+  border-radius: calc(4rem / 16);
 
   &:active {
     box-shadow: 0 0 var(--palette-primary-dark);
@@ -278,18 +254,18 @@ $hoverUp: 0.75; // desktop hover height
   }
 }
 
-$stringWidth: calc(var(--spacing) / 8);
+$stringWidth: calc(4rem / 8);
 $stringColor: var(--palette-primary-main);
 
-.container {
-  padding: 0 calc(var(--spacing) / 2);
-}
+// .container {
+// padding: 0 calc(4rem / 2);
+// }
 
-@media #{$md-up} {
-  .container {
-    padding: 0 calc(var(--spacing) / 2);
-  }
-}
+// @media #{$md-up} {
+//   .container {
+//     padding: 0 calc(4rem / 2);
+//   }
+// }
 
 .timeContainer {
   position: relative;
@@ -358,10 +334,10 @@ $stringColor: var(--palette-primary-main);
 }
 
 .contentContainer {
-  padding: calc(var(--spacing) / 4) calc(var(--spacing) / 2);
+  padding: calc(4rem / 4) calc(4rem / 2);
 
   h4 {
-    margin: calc(var(--spacing) / 8) 0;
+    margin: calc(4rem / 8) 0;
   }
   p {
     margin: 0;
@@ -370,15 +346,11 @@ $stringColor: var(--palette-primary-main);
 
 @media #{$md-up} {
   .contentContainer {
-    padding: calc(var(--spacing) / 2) var(--spacing);
+    padding: calc(4rem / 2) 4rem;
     h4 {
-      margin: calc(var(--spacing) / 4) 0;
+      margin: calc(4rem / 4) 0;
     }
   }
-}
-
-.disp-in-flex {
-  display: inline-flex;
 }
 
 h1.typography,
@@ -388,7 +360,7 @@ h4.typography,
 h5.typography,
 h6.typography,
 em.typography {
-  font-family: var(--typography-fontFamily-primary);
+  @extend .ffprimary;
 }
 
 h1.typography,
@@ -429,7 +401,7 @@ h6.typography,
 
 .subtitle-typography,
 .text-typography {
-  font-family: var(--typography-fontFamily-primary);
+  @extend .ffprimary;
   margin-top: 0;
   font-weight: 400;
 }
@@ -447,17 +419,11 @@ em.typography,
   text-transform: uppercase;
 }
 
-// SC page
-
-.em-sc {
-  font-style: normal;
-}
-
 .h2-sc {
   font-size: 2.441em;
 
   p {
-    font-family: var(--typography-fontFamily-primary);
+    @extend .ffprimary;
   }
 }
 
@@ -466,7 +432,7 @@ em.typography,
 }
 
 .logoContainer-alumni p {
-  transform: translateY(calc(-1 * var(--spacing) / 4));
+  transform: translateY(calc(-1 * 4rem / 4));
 }
 
 .logo-alumni {
@@ -492,13 +458,13 @@ em.typography,
 
 @media #{$md-up} {
   .content-contact {
-    width: calc(100% - var(--spacing));
+    width: calc(100% - 4rem);
   }
 }
 
 @media #{$lg-up} {
   .content-contact {
-    width: calc(100% - calc(var(--spacing) * 2));
+    width: calc(100% - calc(4rem * 2));
   }
 }
 
@@ -521,7 +487,7 @@ em.typography,
 }
 
 .linkGrid-contact a {
-  font-size: calc(var(--typography-fontSize) * 3);
+  font-size: calc(1rem * 3);
   color: var(--palette-text-light);
 
   &:hover {
@@ -559,8 +525,8 @@ em.typography,
   textarea,
   button {
     font-family: inherit;
-    margin: calc(var(--spacing) / 2) auto;
-    padding: calc(var(--spacing) / 4);
+    margin: calc(4rem / 2) auto;
+    padding: calc(4rem / 4);
     background: initial;
     border: 2px solid var(--palette-text-main);
   }
@@ -568,7 +534,7 @@ em.typography,
 
 .contactResponse-contact {
   margin: 0 auto;
-  padding: calc(var(--spacing) / 8);
+  padding: calc(4rem / 8);
   display: none;
 }
 
@@ -585,12 +551,12 @@ em.typography,
 
 @media #{$lg-up} {
   .contactForm-contact {
-    width: calc(100% - calc(var(--spacing) * 2));
+    width: calc(100% - calc(4rem * 2));
   }
 }
 
 .logo-contact {
-  margin-top: var(--spacing);
+  margin-top: 4rem;
   width: 70%;
 }
 
@@ -609,18 +575,17 @@ em.typography,
 }
 
 .donateButtonWrapper-donate {
-  margin: calc(var(--spacing)) 0;
+  margin: calc(4rem) 0;
 }
 
 .donateButton-donate {
   text-decoration: none;
   background-color: var(--palette-background-main);
   color: var(--palette-primary-main);
-  font-family: var(--typography-fontFamily-primary);
-  //text-transform: uppercase;
-  font-size: calc(var(--typography-fontSize) * 1.5);
-  padding: calc(var(--spacing) / 4);
-  border: calc(var(--spacing) / 16) solid var(--palette-primary-main);
+  @extend .ffprimary;
+  font-size: calc(1rem * 1.5);
+  padding: calc(4rem / 4);
+  border: calc(4rem / 16) solid var(--palette-primary-main);
   transition: all 0.2s;
 
   &:hover {
@@ -659,17 +624,6 @@ a.active {
   color: var(--palette-primary-light) !important;
 }
 
-.promoContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-
-  text-align: center;
-  transform: scale(1.2);
-}
-
 $transition: 0.3s;
 
 .pageContainer-board {
@@ -684,7 +638,7 @@ $transition: 0.3s;
 }
 
 .groupPage-board:not(:first-child) {
-  border-top: calc(var(--spacing) / 16) solid var(--palette-background-dark);
+  border-top: calc(4rem / 16) solid var(--palette-background-dark);
 }
 
 .profileContainer-board {
@@ -699,7 +653,7 @@ $transition: 0.3s;
 .profile-board {
   height: 100%;
   width: 100%;
-  padding: calc(var(--spacing) / 8);
+  padding: calc(4rem / 8);
   text-align: center;
 
   border-style: solid;
@@ -710,7 +664,7 @@ $transition: 0.3s;
 
   img {
     width: 100%;
-    border-radius: calc(var(--spacing) / 16);
+    border-radius: calc(4rem / 16);
   }
   p {
     margin: 0;
@@ -719,20 +673,15 @@ $transition: 0.3s;
 
 @media #{$md-up} {
   .profile-board:hover {
-    border-width: calc(var(--spacing) / 4);
+    border-width: calc(4rem / 4);
   }
 }
 
 .profileInfo-board {
-  // position: fixed !important;
   top: 0;
   left: 100%;
-  // height: 100%;
-  // width: 100%;
 
   background-color: var(--palette-background-main);
-  // text-align: center;
-  // z-index: 1;
   overflow-y: auto;
   overflow-x: hidden;
   transition: left $transition;
@@ -745,160 +694,83 @@ $transition: 0.3s;
   }
 
   &.expanded-board {
-    left: 0;
+    left: 50%;
+    transform: translate(-50%);
   }
 }
 
 .close-board {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: calc(var(--spacing) / 4);
+  margin: calc(4rem / 4);
 
   background-color: initial;
   border: none;
   color: var(--palette-primary-dark);
-  font-size: calc(var(--spacing) / 2);
-  line-height: calc(var(--spacing) / 2);
+  font-size: calc(4rem / 2);
+  line-height: calc(4rem / 2);
 
   cursor: pointer;
-  z-index: var(--zIndex-trigger);
+  @extend .z5 !optional;
 }
 
-.profileInfo-board {
-  a {
-    color: inherit;
-  }
+.c-inherit {
+  color: inherit;
 }
 
-.container-sc {
-  background: var(--palette-text-main);
-  height: 100%;
+.bgblue {
+  background-color: #222632;
 }
 
-.logo-sc {
-  position: absolute;
-  top: calc(var(--spacing) / 7);
-  left: 0;
-  right: calc(var(--spacing) / 8);
-  height: calc(var(--spacing) / 1.4);
-  z-index: 1;
-
-  img {
-    display: block;
-    float: right;
-    height: 100%;
-  }
-}
-
-.promoOverlay-sc {
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #222632;
-}
-
-.promoContent-sc {
-  width: 100%;
+.fggold {
   color: #beb481;
-  font-size: calc(var(--typography-fontSize) * 1.5);
-
-  h2 {
-    padding-top: calc(var(--spacing) * 2);
-    text-align: center;
-  }
-
-  p {
-    margin: calc(var(--spacing) * 0.1) 0;
-  }
-
-  a {
-    text-decoration: none;
-    color: var(--palette-primary-main);
-  }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
+$url: '/assets/img/gold.gif';
 
-em.golden-sc {
+.scgolden {
   font-family: 'Libre Baskerville', serif;
   -webkit-text-stroke: initial;
   -webkit-text-fill-color: initial;
-  font-weight: 400;
   letter-spacing: 0.1em;
-  color: #bf9b30;
-  $url: '/assets/img/gold.gif';
   background: center / 300% url($url) no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-@media #{$sm-down} {
-  .promoContent-sc h2 {
-    padding-top: calc(var(--spacing) * 3);
-  }
-  .promoContent-sc p {
-    font-size: 0.6em;
-  }
-  .date-sc {
-    font-size: 0.5em !important;
-  }
-}
-
-@media #{$md-up} {
-  .promoContent-sc p {
-    font-size: 0.9em;
-  }
-}
-
-.conference-upcoming {
-  height: 100%;
-}
-
-$menu-y-sm: var(--spacing);
+$menu-y-sm: 4rem;
 $menu-x-sm: 75%;
 $transition: all 0.3s;
 
-$menu-y-md: var(--spacing);
+$menu-y-md: 4rem;
 $menu-x-md: 40%;
 
-$menu-y-lg: var(--spacing);
+$menu-y-lg: 4rem;
 $menu-x-lg: 25%;
 
 .wrapperWM {
-  position: relative;
-  height: 100%;
-  width: 100%;
-
-  background-color: var(--palette-text-main);
-  overflow: hidden;
+  background-color: var(--palette-text-dark);
 }
 
 .triggerWM {
   position: absolute;
-  margin: calc(var(--spacing) / 4);
+  margin: calc(4rem / 4);
 
   background-color: initial;
   border: none;
   color: var(--palette-text-main);
-  font-size: calc(var(--spacing) / 2);
-  line-height: calc(var(--spacing) / 2);
+  font-size: calc(4rem / 2);
+  line-height: calc(4rem / 2);
 
   cursor: pointer;
-  z-index: var(--zIndex-trigger);
+  @extend .z5 !optional;
 
   .menuIconWM {
     transform: rotate(180deg);
   }
 }
 
-$radius: calc(var(--spacing) * 2);
+$radius: calc(4rem * 2);
 
 .triggerWM.attentionWM::after {
   content: '';
@@ -964,7 +836,7 @@ $radius: calc(var(--spacing) * 2);
 }
 
 .wrapperMenuWM {
-  top: var(--spacing);
+  top: 4rem;
   bottom: 0;
   left: 0;
 
@@ -1025,14 +897,14 @@ $radius: calc(var(--spacing) * 2);
 }
 
 .utilityMenuWM {
-  padding: var(--spacing) 0;
+  padding: 4rem 0;
   color: var(--palette-background-main);
 
   ul {
     list-style-type: none;
     color: var(--palette-background-main);
     margin: 0;
-    padding-left: calc(var(--spacing) / 4);
+    padding-left: calc(4rem / 4);
 
     a,
     span {
@@ -1058,4 +930,52 @@ $radius: calc(var(--spacing) * 2);
   a:hover {
     text-decoration: underline;
   }
+}
+
+.submenu-ruc.dropdown-ruc ul {
+  display: none;
+}
+
+.submenu-ruc.dropdown-ruc:hover ul,
+.submenu-ruc.dropdown-ruc.open-ruc ul {
+  display: block;
+}
+
+nav ul li button {
+  background-color: inherit;
+  color: inherit;
+  border: initial;
+  padding: 0;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+li.horizontal-ruc {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+  }
+
+  &:hover ul,
+  &.open-ruc ul {
+    display: block;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap');
+
+.ftemp {
+  font-family: 'Hind', sans-serif;
+}
+
+.ofh {
+  overflow: hidden !important;
 }

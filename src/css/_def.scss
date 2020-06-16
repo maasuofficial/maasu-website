@@ -5,11 +5,24 @@
  * Breakpoints chosen using common standards. Only
  * two breakpoints were chosen to minimize styling to
  * three large groups - small, medium, and large.
+ * Media queries are as follows:
+ * s - small
+ * ns - not small
+ * nl - not large
+ * l - large
  * -----------------------------------------------------
  */
 
 $bkpt-mobile-to-tablet: 48em; // 768px
 $bkpt-tablet-to-desktop: 80em; // 1280px
+
+// content width
+$containerWidth: 78em;
+
+$s: '-s';
+$ns: '-ns';
+$nl: '-nl';
+$l: '-l';
 
 @mixin mobile-only {
   @media ("max-width: #{$bkpt-mobile-to-tablet}") {
@@ -121,6 +134,10 @@ $zMap: (
   '3': 3,
   '4': 4,
   '5': 5,
+  '6': 6,
+    '7': 7,
+  '8': 8,
+  '9': 9,
 );
 
 /**

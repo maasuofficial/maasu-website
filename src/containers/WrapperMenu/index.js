@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link as RouterLink } from '@reach/router'
-import { Menu as UtilityMenu } from 'react-utility-components'
+import { Menu as UtilityMenu } from 'components/react-utility-components'
 import { FaAlignRight } from 'react-icons/fa'
 
 let menuOverride = false
@@ -73,7 +73,11 @@ class WrapperMenu extends React.Component {
     menuOverride = window.location.pathname === '/'
 
     return (
-      <div className={`wrapperWM ${this.state.open ? 'menuOpenWM' : ''}`}>
+      <div
+        className={`posr h-100 w-100 ofh wrapperWM ${
+          this.state.open ? 'menuOpenWM' : ''
+        }`}
+      >
         {/* trigger menu */}
 
         <a

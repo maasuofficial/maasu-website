@@ -1,18 +1,5 @@
 @import './functional';
 
-/**
- * Media queries are as follows:
- * s - small
- * ns - not small
- * nl - not large
- * l - large
- */
-
-$s: '-s';
-$ns: '-ns';
-$nl: '-nl';
-$l: '-l';
-
 @include mobile-only {
   @include typography($s);
   @include spacing($s);

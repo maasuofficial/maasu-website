@@ -9,8 +9,8 @@ export default {
     },
     text: {
       light: '#464646',
-      main: '#222',
-      dark: '#000',
+      main: '#404040',
+      dark: '#222',
     },
     primary: {
       // red
@@ -33,31 +33,5 @@ export default {
       dark: '#007e4c',
       contrastText: '#fbfbfb',
     },
-  },
-  typography: {
-    fontFamily: {
-      primary: ['hind', 'Roboto', 'arial', 'sans-serif'].join(','),
-      secondary: [
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        'Oxygen',
-        'Ubuntu',
-        'Cantarell',
-        'Fira Sans',
-        'Droid Sans',
-        'Helvetica Neue',
-        'sans-serif',
-      ].join(','),
-    },
-    fontSize: '16px',
-  },
-  spacing: '4rem',
-  zIndex: {
-    page: 1000,
-    bar: 1100,
-    trigger: 1200,
-    modal: 1300,
   },
 }

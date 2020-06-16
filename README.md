@@ -84,14 +84,14 @@ Pull requests should be labeled with the labels provided and a list of significa
 
 Utilizing `git` and `github`:
 
-1. Check out the staging branch, and verify it is up to date with the latest changes in production. 
+1. Check out the staging branch to verify it is up to date with the latest changes in production. 
 ```
 g checkout staging
-g pull --rebase origin master
 ```
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
 ```
+git add *
 git commit -m "commit title"
 ```
 4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
@@ -105,6 +105,7 @@ git push
 ```
 git push origin --delete my-feature-name
 ```
+8. Repeast steps 2-7.
 
 For a basic idea of workflow:
 
@@ -151,7 +152,7 @@ limit of `10GB` of stored data, while Netlify allows unlimited file sizes. Nelif
 `100GB` bandwidth/month as opposed to Firebase's `10GB` bandwidth. In Firebase's defense, Netlify places a hard
 limit of `300` build minutes/month, but it is unlikely that build minutes will ever exceed that limit.
 
-Source: [Netlify pricing](https://www.netlify.com/pricing) [Firebase Pricing](https://firebase.google.com/pricing/)
+Source: [Netlify pricing](https://www.netlify.com/pricing) vs [Firebase Pricing](https://firebase.google.com/pricing/)
 
 ## React Framework <a name="react-framework"></a>
 
@@ -229,10 +230,12 @@ The `src` file is organized as follows:
 ```
 src/
   api/                - Any and all api calls.
-  components/         - All functional, or pure, components concerned with UI.
+  components/         - All functional, or pure, components concerned with UI. Generally,
+                        these components should be small modular units.
   constants/          - All constants, strings, and other hard values.
   containers/         - Components dealing with data or store. This folder also contains 
-                        components which represent entire pages.
+                        components which represent entire pages. Simply put, a container
+                        "contains" other components.
   css/                - Any and all styling.
   routes/             - Manages all routes.
   utils/              - Any and all utility functions.
@@ -324,6 +327,10 @@ checking styling and formatting to catch any overlooked errors introduced throug
 
 This project is built and pushed to a staging server before the code is finally put into production, allowing current MAASU
 ECC board members to monitor and test any new additions or features.
+
+The motivation behind this decision is to allow greater transparency within the organization. The technical
+networking role is such a mysterious position to outsiders, and it provides (to some degree) clarity of
+progression and improvements made to the other members of the board.
 
 ## Notes <a name="notes"></a>
 

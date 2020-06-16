@@ -5,7 +5,7 @@ import { Grid } from '../'
 class Timeline extends React.Component {
   render() {
     return (
-      <Grid y className={'container'}>
+      <Grid y className={'container px4-s'}>
         {this.props.children}
       </Grid>
     )
