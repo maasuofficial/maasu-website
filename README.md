@@ -152,7 +152,7 @@ limit of `10GB` of stored data, while Netlify allows unlimited file sizes. Nelif
 `100GB` bandwidth/month as opposed to Firebase's `10GB` bandwidth. In Firebase's defense, Netlify places a hard
 limit of `300` build minutes/month, but it is unlikely that build minutes will ever exceed that limit.
 
-Source: [Netlify pricing](https://www.netlify.com/pricing) [Firebase Pricing](https://firebase.google.com/pricing/)
+Source: [Netlify pricing](https://www.netlify.com/pricing) vs [Firebase Pricing](https://firebase.google.com/pricing/)
 
 ## React Framework <a name="react-framework"></a>
 
@@ -327,6 +327,10 @@ checking styling and formatting to catch any overlooked errors introduced throug
 
 This project is built and pushed to a staging server before the code is finally put into production, allowing current MAASU
 ECC board members to monitor and test any new additions or features.
+
+The motivation behind this decision is to allow greater transparency within the organization. The technical
+networking role is such a mysterious position to outsiders, and it provides (to some degree) clarity of
+progression and improvements made to the other members of the board.
 
 ## Notes <a name="notes"></a>
 

@@ -9,8 +9,8 @@ export default {
     },
     text: {
       light: '#464646',
-      main: '#222',
-      dark: '#000',
+      main: '#404040',
+      dark: '#222',
     },
     primary: {
       // red

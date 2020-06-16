@@ -73,7 +73,11 @@ class WrapperMenu extends React.Component {
     menuOverride = window.location.pathname === '/'
 
     return (
-      <div className={`wrapperWM ${this.state.open ? 'menuOpenWM' : ''}`}>
+      <div
+        className={`posr h-100 w-100 ofh wrapperWM ${
+          this.state.open ? 'menuOpenWM' : ''
+        }`}
+      >
         {/* trigger menu */}
 
         <a

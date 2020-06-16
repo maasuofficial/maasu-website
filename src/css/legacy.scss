@@ -749,12 +749,7 @@ $menu-y-lg: 4rem;
 $menu-x-lg: 25%;
 
 .wrapperWM {
-  position: relative;
-  height: 100%;
-  width: 100%;
-
-  background-color: var(--palette-text-main);
-  overflow: hidden;
+  background-color: var(--palette-text-dark);
 }
 
 .triggerWM {
@@ -979,4 +974,8 @@ li.horizontal-ruc {
 
 .ftemp {
   font-family: 'Hind', sans-serif;
+}
+
+.ofh {
+  overflow: hidden !important;
 }
