@@ -54,7 +54,7 @@ export const Board = (props) => {
               <a
                 href="/"
                 tabIndex={expTabIndex}
-                className={'posa t-0 r-0 close-board'}
+                className={'posa t-0 r-0 ma3 fs2 z5 c-text-main'}
                 onClick={toggleContraction}
               >
                 <FaArrowLeft />
@@ -79,28 +79,6 @@ export const Board = (props) => {
               )}
 
               {p.positionRole && <p className="tl">{p.positionRole}</p>}
-              {/*
-              {p.personalGoal && (
-                <span>
-                  <b>What is your personal goal this year?</b>
-                  <p>{p.personalGoal}</p>
-                </span>
-              )}
-
-              {p.favoriteSong && (
-                <span>
-                  <b>Favorite song?</b>
-                  <p>{p.favoriteSong}</p>
-                </span>
-              )}
-
-              {p.favoriteMeme && (
-                <span>
-                  <b>Favorite meme?</b>
-                  <p>{p.favoriteMeme}</p>
-                </span>
-              )}
-              */}
 
               <div className="footerSpace"></div>
             </Page>

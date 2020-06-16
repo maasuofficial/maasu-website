@@ -699,17 +699,8 @@ $transition: 0.3s;
   }
 }
 
-.close-board {
-  margin: calc(4rem / 4);
-
-  background-color: initial;
-  border: none;
-  color: var(--palette-primary-dark);
-  font-size: calc(4rem / 2);
-  line-height: calc(4rem / 2);
-
-  cursor: pointer;
-  @extend .z5 !optional;
+.c-text-main {
+  color: var(--palette-text-main);
 }
 
 .c-inherit {
