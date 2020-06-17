@@ -21,6 +21,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Typescript](#typescript)
 + [Linting](#linting)
 + [Project Structure](#project-structure)
++ [Module Organization](#module-organization)
 + [Styling and CSS](#styling-and-css)
 + [Branding](#branding)
 + [Testing](#testing)
@@ -79,7 +80,7 @@ comparison of commonly used commands where `yarn` makes things easier.
 
 In this repository, there are two main branches: `staging` and `master`, corresponding to the `staging` and `production` environments, respectively. With the integration of [Netlify](https://www.netlify.com/) as a hosting service, any pushed commits to these branches will immediately trigger builds in production.
 
-All other branches are `feature` branches, where each branch will contain some type of feature or bugfix. These changes are then merged into `staging. To put these changes into production, create a pull request to merge the staging branch into `master`. While there are many ways to merge branches, this is the safest way because creating a Github pull request makes an explicit statement regarding the changes to be made on the public website. These can also be detailed and labeled for future reference. After the changes have been merged into `master`, they will automatically be deployed into production.
+All other branches are `feature` branches, where each branch will contain some type of feature or bugfix. These changes are then merged into `staging`. To put these changes into production, create a pull request to merge the staging branch into `master`. While there are many ways to merge branches, this is the safest way because creating a Github pull request makes an explicit statement regarding the changes to be made on the public website. These can also be detailed and labeled for future reference. After the changes have been merged into `master`, they will automatically be deployed into production.
 
 Pull requests should be labeled with the labels provided and a list of significant changes should be detailed in the request body. Once approved, the requested commits will be squash merged into `master` to reduce the amount of commits.
 
@@ -249,6 +250,43 @@ src/
   utils/              - Any and all utility functions.
   index.tsx           - Main source file which initializes react, store, and renders DOM.
 ```
+
+## Module Organization <a name="module-organization"></a>
+
+While it may be a common standard to export a folder full of modules using an `index.js` or `index.ts` 
+file, this methodology of module exporting and importing actually slows down development and can make 
+codebases confusing for a number of reasons. First, it makes development slightly more tedious when 
+creating new modules. Now, in addition to creating a new module, a developer needs to make sure the 
+module is imported and exported properly in an `index` file. Depending on the folder and the project, 
+this file can grow exponentially with hundreds of unnecessary import and export statements.
+
+It also adds diffculty to finding files. When trying to find a module or code file in question, it is 
+complicated to search through files that all use the same name. Personally, I use a fuzzy file finder 
+to locate all my files, and it makes things much more complicated when searching for a file and the 
+results are all named `index.js`.
+
+Finally, newer software development tools are beginning to recognize this anti-pattern and move away 
+from it. [Deno](https://deno.land/) is a prime example, removing the ability to "auto-import" `index`
+files. It's a good idea to avoid this pattern to reduce confusion and stay up to date with rising
+technologies.
+
+Exporting a default export can also be considered an anti-pattern. The reason for this is simple - the
+name of the module can be changed when imported. This can cause many headaches when trying to debug 
+modules in the future. for example, using default exports,
+```js
+export default MyComponent;
+...
+import HelloRandomlyNamedComponent from './MyComponent';
+```
+The same module was renamed to something completely different. In the case of using standard exports,
+```js
+export const MyComponent;
+...
+import { MyComponent } from './MyComponent';
+```
+The module cannot be renamed. This makes it easier to track down a bug in a deeply-nested module, and
+prevents multiple modules being given the same name. For these reasons, standard exports are preferred
+to default exports.
 
 ## Styling and CSS <a name="styling-and-css"></a>
 
