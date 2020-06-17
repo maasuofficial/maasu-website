@@ -24,6 +24,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Styling and CSS](#styling-and-css)
 + [Branding](#branding)
 + [Testing](#testing)
++ [Responsive Web Design](#responsive-web-design)
 + [Notes](#notes)
 
 ## Overview <a name="overview"></a>
@@ -87,7 +88,7 @@ Utilizing `git` and `github`:
 1. Check out the staging branch to verify it is up to date with the latest changes in production. 
 ```
 g checkout staging
-g pull origin master
+git pull --rebase origin master
 ```
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
@@ -97,16 +98,22 @@ git commit -m "commit title"
 ```
 4. Pull the latest updates from `master`, fixing any conflicts, then push to Github.
 ```
-git pull origin master
-git push
+git pull --rebase origin master
+git push origin +staging
 ```
+> The last command will force push to the staging branch. Be cautious when doing so,
+> as it may overwrite any changes you originally had in staging.
+
+> Note: To avoid conflicts, try not to drastically change too many files at once.
+> It's a better strategy to create short and quick fixes and merge those commits
+> together.
 5. Create a PR to merge into `master`.
 6. Merge changes into `master`.
-7. Delete any feature branches created.
+7. Delete any feature branches that may have been created.
 ```
 git push origin --delete my-feature-name
 ```
-8. Repeast steps 2-7.
+8. Repeast steps 1-7.
 
 For a basic idea of workflow:
 
@@ -332,6 +339,34 @@ ECC board members to monitor and test any new additions or features.
 The motivation behind this decision is to allow greater transparency within the organization. The technical
 networking role is such a mysterious position to outsiders, and it provides (to some degree) clarity of
 progression and improvements made to the other members of the board.
+
+## Responsive Web Design <a name="responsive-web-design"></a>
+
+Two breakpoints were chosen to separate web flows into three different sections, designated for 
+mobile-tablet and tablet-desktop borders respectively.
+
+The styling consists of four media queries:
+1. `small (mobile only)`
+2. `not small (tablet and desktop)`
+3. `not large (mobile and tablet)`
+4. `large (desktop only)`
+
+### Motivation
+
+Responsive web design is a key in serving consistent content to both desktop devices and mobile
+devices. While [Google recommends five breakpoints](https://material-ui.com/customization/breakpoints/),
+their philosophy is designed for large teams of developers seeking fine-tuned control over each 
+and every device's layout. While more device-specific layouts are pleasant, they
+1. Create edge cases for each specific device
+2. make it harder for developers to change overall layout
+3. Disorient users familiar with a different layout
+
+As such, we have opted to provide only two breakpoints. Having a consistent layout among three 
+device targets makes it much easier and more familiar for users to switch between devices.
+Additionally, we have not chosen any queries such as `medium only` is because it reduces the 
+urge to build a third and separate layout from `small` and `large`, and encourages a similar
+layout of all three screen sizes. This ensures that switching between desktop and mobile will
+more or less provide a similar experience to users.
 
 ## Notes <a name="notes"></a>
 
