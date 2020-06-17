@@ -246,6 +246,7 @@ src/
                         components which represent entire pages. Simply put, a container
                         "contains" other components.
   css/                - Any and all styling.
+  hooks/              - Reuseable React hooks.
   routes/             - Manages all routes.
   utils/              - Any and all utility functions.
   index.tsx           - Main source file which initializes react, store, and renders DOM.

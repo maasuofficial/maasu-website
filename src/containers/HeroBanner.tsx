@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, Fragment } from 'react'
 import {
   APP_NAME,
   APP_NAME_LONG,
@@ -11,7 +11,7 @@ import {
 
 export const HeroBanner: FC = () => {
   return (
-    <div className="posr h-100 w-100">
+    <Fragment>
       <div className="ttu ffhind fw700">
         <h2 className="mt9 tc">
           <span className="fs3-ns fs2-s">
@@ -34,6 +34,6 @@ export const HeroBanner: FC = () => {
           alt={APP_NAME_LONG}
         />
       </div>
-    </div>
+    </Fragment>
   )
 }

@@ -1,6 +1,7 @@
-import React, { FC, Fragment, useEffect } from 'react'
+import React, { FC, Fragment } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { BImg, Page } from 'components'
+import { useDocumentTitle } from 'hooks/meta'
 import {
   APP_NAME_LONG,
   MISSION_PRELUDE,
@@ -19,9 +20,7 @@ import {
 interface Props {}
 
 export const MissionContainer: FC<RouteComponentProps & Props> = () => {
-  useEffect(() => {
-    document.title = 'Our Mission - The Midwest Asian American Students Union'
-  }, [])
+  useDocumentTitle('Our Mission')
 
   return (
     <Fragment>
