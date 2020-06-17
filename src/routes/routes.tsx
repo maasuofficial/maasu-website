@@ -22,6 +22,7 @@ import {
   WhereAreYouFrom,
 } from '../containers'
 import { HomepageContainer } from 'containers/HomepageContainer'
+import { InvalidRouteContainer } from 'containers/InvalidRouteContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 
 export const Routes = () => {
@@ -59,7 +60,7 @@ export const Routes = () => {
           <DonateComp path="/donate-complete" test={true} />
           <Contact path="/contact" />
 
-          <Home default />
+          <InvalidRouteContainer default />
         </HomepageContainer>
       </WrapperMenu>
     </Router>
