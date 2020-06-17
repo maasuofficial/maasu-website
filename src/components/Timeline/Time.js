@@ -11,7 +11,9 @@ class Time extends React.Component {
             <span>{this.props.label}</span>
           </div>
         </div>
-        <div className={'contentContainer'}>{this.props.children}</div>
+        <div className="py3-s px5-s py5 px7 contentContainer">
+          {this.props.children}
+        </div>
       </Cell>
     )
   }

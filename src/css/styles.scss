@@ -31,3 +31,14 @@ td {
   @extend .mxa;
   max-width: $containerWidth;
 }
+
+button,
+input,
+textarea {
+  @extend .dispb;
+  @extend .mxa;
+}
+
+button {
+  cursor: pointer;
+}

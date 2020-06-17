@@ -62,59 +62,75 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Page className={'contact-contact'}>
+      <Page>
         <Type variant="h2">
           <span className="tc dispb">Contact Us</span>
         </Type>
 
-        <div className={'content-contact'}>
-          <div className={'linkContainer-contact'}>
-            <Grid className="linkGrid-contact mxa">
+        <div>
+          <div className="tc w-100">
+            <Grid className="w-50-ns fs3 mxa">
               <Cell auto>
-                <a href={SOCIAL_FACEBOOK}>
+                <a className="fgc-text-main" href={SOCIAL_FACEBOOK}>
                   <FaFacebookF />
                 </a>
               </Cell>
-              {/* <Cell auto> */}
-              {/*   <a href="https://twitter.com/MAASUOfficial"> */}
-              {/*     <FaTwitter /> */}
-              {/*   </a> */}
-              {/* </Cell> */}
+              {/*
               <Cell auto>
-                <a href={SOCIAL_INSTAGRAM}>
+                 <a href="https://twitter.com/MAASUOfficial">
+                   <FaTwitter />
+                 </a>
+               </Cell>
+              */}
+              <Cell auto>
+                <a className="fgc-text-main" href={SOCIAL_INSTAGRAM}>
                   <FaInstagram />
                 </a>
               </Cell>
             </Grid>
           </div>
 
-          <p>
+          <p className="tc">
             Any questions? Send us a message and we'll get back to you as soon
             as possible!
           </p>
 
-          <form className={'contactForm-contact'} onSubmit={this.handleSubmit}>
+          <form className="mxa w-70-ns w-100-s" onSubmit={this.handleSubmit}>
             <input
+              className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
               type="text"
               required
               name="name"
               placeholder="First and last name"
             />
-            <input type="email" required name="email" placeholder="Email" />
-            <textarea required name="message" placeholder="Message"></textarea>
-            <div
-              className={`contactResponse-contact ${
-                this.state.submission
-                  ? [`contact-${this.state.submission}-contact`]
-                  : ''
-              }`}
-            >
-              <span>{this.state.submissionMessage}</span>
-            </div>
-            <button type="submit">Submit</button>
+            <input
+              className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
+              type="email"
+              required
+              name="email"
+              placeholder="Email"
+            />
+            <textarea
+              className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
+              required
+              name="message"
+              placeholder="Message"
+            ></textarea>
+            {this.state.submission ? (
+              <div>
+                <span>{this.state.submissionMessage}</span>
+              </div>
+            ) : (
+              <button
+                className="w-100 fs0 ffhind my3 fw700 pa3 tr2 fgc-text-main hover-fgc-bg-main bgc-bg-main hover-bgc-text-main br2"
+                type="submit"
+              >
+                Submit
+              </button>
+            )}
           </form>
 
-          <footer>
+          <footer className="tc">
             <br />
             <span>
               &copy; {YEAR} MAASU. For additional information or questions
@@ -126,7 +142,7 @@ class Contact extends React.Component {
             </span>
             <br />
             <img
-              className={'logo-contact'}
+              className="w-20-ns w-70 mt7"
               src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`}
               alt={APP_NAME_LONG}
             />
