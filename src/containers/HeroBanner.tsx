@@ -1,4 +1,5 @@
 import React, { FC, Fragment } from 'react'
+import { findAsset } from 'utils/files'
 import {
   APP_NAME,
   APP_NAME_LONG,
@@ -27,10 +28,10 @@ export const HeroBanner: FC = () => {
           <span className="fs3-ns fs2-s">{CONFERENCE_DATE_RANGE}</span>
         </h2>
       </div>
-      <div className="posr tc">
+      <div className="tc">
         <img
           className="w-20-ns w-30-s"
-          src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
+          src={findAsset('branding/light/text.svg')}
           alt={APP_NAME_LONG}
         />
       </div>
