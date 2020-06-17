@@ -36,7 +36,7 @@ class PastConf extends React.Component {
             </tr>
 
             <tr>
-              <td>MArch 8-9, 2019</td>
+              <td>March 8-9, 2019</td>
               <td>Spring Conference</td>
               <td>Be Boulder</td>
               <td>University of Colorado Boulder, CO</td>

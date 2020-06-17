@@ -11,7 +11,6 @@ import Host from './Host'
 import MaasuX from './MaasuX'
 import Members from './Members'
 import WrapperMenu from './WrapperMenu'
-import Mission from './Mission'
 import NewsLetter from './NewsLetter'
 import PastAwards from './PastAwards'
 import PastConf from './PastConf'
@@ -34,7 +33,6 @@ export {
   MaasuX,
   Members,
   WrapperMenu,
-  Mission,
   NewsLetter,
   PastAwards,
   PastConf,
