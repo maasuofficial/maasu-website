@@ -21,12 +21,13 @@ class Mission extends React.Component {
             />
           </div>
           <p>
-            <b>The Midwest Asian American Students Union</b> (MAASU) is an
-            organization that began in response to a need for political unity
-            among Asian American students in the Midwest. By 1990, there were
-            more than 20 universities in the Midwest that had formed Asian
-            Pacific Islander American (APIA) organizations. Some had been around
-            for years, while others were still in their infancy.
+            The Midwest Asian Pacific Islander Desi American Students Union
+            (MAASU) is a 501(c)(3) nonprofit organization that began in response
+            to a need for political unity among Asian American students in the
+            Midwest. By 1990, there were more than 20 universities in the
+            Midwest that had formed Asian Pacific Islander American (APIA)
+            organizations. Some had been around for years, while others were
+            still in their infancy.
           </p>
           <BImg
             className="w-100-s w-70-ns mxa"
@@ -41,7 +42,7 @@ class Mission extends React.Component {
             establishment of Asian American student organizations, promoting
             leadership among students, addressing educational needs and rights
             of the Asian American community, and developing a channel of
-            communication among Asian American student organizations in the
+            communication among Asian American student organizations across the
             Midwest.
           </p>
         </Page>
@@ -50,42 +51,52 @@ class Mission extends React.Component {
             <span className="tc dispb">Our Mission</span>
           </Type>
           <p>
-            The Midwest Asian American Students Union strives to recognize the
-            needs of the Asian Pacific Islanders American (APIA) Community. The
-            following list contains the objectives of MAASU:
+            MAASU strives to recognize the needs of the Asian Pacific Islander
+            Desi American (APIDA) community by:
           </p>
           <ul>
             <li>
-              Assist schools with the establishment of APIA student
-              organizations, APIA cultural centers and Asian American Studies
-              Programs
+              Promoting leadership among APIDA students through programs
+              including, but not limited to, the Leadership Retreat, Spring
+              Conference, and other various programming
             </li>
             <li>
-              Promote leadership among APIA students through programs including,
-              but not limited to, the Leadership Retreat and Spring Conference
+              Assisting schools with the establishment of APIDA student
+              organizations, an APIDA cultural center and an Asian American
+              Studies program
             </li>
             <li>
-              Address educational needs and rights of the APIA community and
-              provide scholarship information for all APIA students
+              Supporting and encouraging all APIDA students to work toward
+              social change by providing a forum for social consciousness
             </li>
             <li>
-              Develop and maintain a channel of communication for APIA student
-              organizations in the Midwest through emails, newsletters and
-              networking
+              Developing and maintaining a channel of communication for APIDA
+              student organizations in the Midwest through emails, newsletters
+              and networking
             </li>
             <li>
-              Support and encourage all APIA students to work toward social
-              change by providing a forum for social consciousness
-            </li>
-            <li>
-              Unite and strengthen the APIA community‘s stance against all forms
-              of oppression
+              Uniting and strengthening the APIDA community stance against all
+              forms of oppression
             </li>
           </ul>
         </Page>
         <Page>
+          <p className="mt0 tc fs2 ffhind fw700">Who We Serve</p>
+          <p>
+            Our primary outreach is to undergraduate college students located in
+            the Midwest region. We are broadening our scope to include high
+            school students and graduate students.
+          </p>
+          <p>
+            On average, around 20 colleges and universities are engaged with
+            MAASU annually spanning the following states: Colorado, Illinois,
+            Indiana, Iowa, Kansas, Michigan, Minnesota, Missouri, Nebraska,
+            Tennessee, Oklahoma, Ohio, and Wisconsin.
+          </p>
+        </Page>
+        <Page>
           <Type variant="sub2">
-            <span className="tc dispb">Stategic Mission</span>
+            <span className="tc dispb">Stategic Plan</span>
           </Type>
           <p>
             MAASU strives to recognize the needs of its community by developing
