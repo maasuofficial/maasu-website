@@ -2,7 +2,6 @@ import React from 'react'
 import { Router } from '@reach/router'
 import {
   Home,
-  Mission,
   WrapperMenu,
   Alumni,
   ApiaOrgs,
@@ -23,6 +22,7 @@ import {
   WhereAreYouFrom,
 } from '../containers'
 import { HomepageContainer } from 'containers/HomepageContainer'
+import { MissionContainer } from 'containers/MissionContainer'
 
 export const Routes = () => {
   return (
@@ -31,7 +31,7 @@ export const Routes = () => {
         <HomepageContainer path="/">
           <Home path="/" />
 
-          <Mission path="/mission" />
+          <MissionContainer path="/mission" />
           <Board path="/board/:name" />
           <Board path="/board" />
           <Members path="/members" />
