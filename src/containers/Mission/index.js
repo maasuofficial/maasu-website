@@ -14,7 +14,7 @@ class Mission extends React.Component {
           <Type variant="sub2">
             <span className="tc dispb">Our Purpose</span>
           </Type>
-          <div className="w-100 w-50-ns mxa">
+          <div className="w-70 w-30-ns mxa">
             <img
               src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
               alt={APP_NAME_LONG}
@@ -99,7 +99,6 @@ class Mission extends React.Component {
             .
           </p>
         </Page>
-        <div className="footerSpace"></div>
       </Fragment>
     )
   }

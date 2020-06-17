@@ -19,10 +19,6 @@ class WrapperMenu extends React.Component {
 
   handleClick(e) {
     e.preventDefault()
-    // this.clickedMenu = true
-
-    // const trigger = document.querySelector('.triggerWM')
-    // trigger.classList.remove('attentionWM')
 
     const open = !this.state.open
     this.setState({ open })
@@ -34,42 +30,8 @@ class WrapperMenu extends React.Component {
     }
   }
 
-  retrieveCookie(cname) {
-    const cookies = decodeURIComponent(document.cookie)
-
-    const start = cookies.indexOf(cname + '=') + (cname.length + 1)
-    const end = cookies.indexOf(';', start)
-
-    return end < 0 ? cookies.substring(start) : cookies.substring(start, end)
-  }
-
-  storeCookie(cname, cvalue, exdays) {
-    const d = new Date()
-    d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
-    const expires = d.toUTCString()
-    document.cookie = `${cname}=${cvalue}; expires=${expires}`
-  }
-
-  componentDidMount() {
-    // const time = 7 // seconds
-    // setTimeout(() => {
-    //   if (!this.clickedMenu) {
-    //     const trigger = document.querySelector('.triggerWM')
-    //     trigger.classList.add('attentionWM')
-    //   }
-    // }, time * 1000)
-    // const cookie = this.retrieveCookie('openedMenuBefore')
-    // if (cookie.length === 0) {
-    //   this.storeCookie('openedMenuBefore', 'true', 30)
-    // } else {
-    //   if (cookie === 'true') {
-    //     this.clickedMenu = true
-    //   }
-    // }
-  }
-
   render() {
-    // TEMP menuOverride for sc 2020 promo menu icon
+    // TEMP menuOverride for sc 2020 promo bg color
     menuOverride = window.location.pathname === '/'
 
     return (
@@ -89,10 +51,7 @@ class WrapperMenu extends React.Component {
           role="button"
         >
           {/* TEMP for sc 2020 promo menu icon */}
-          <FaAlignRight
-            className={'menuIconWM menuIconOverride'}
-            style={{ color: menuOverride ? 'white' : 'inherit' }}
-          />
+          <FaAlignRight className={'menuIconWM menuIconOverride'} />
         </a>
 
         {/* menu */}
@@ -165,7 +124,11 @@ class WrapperMenu extends React.Component {
           className={'posa h-100 w-100 wrapperContentWM'}
           onClick={this.handleMenuClose}
         >
-          <div className={'posr h-100 w-100 contentWM'}>
+          <div
+            className={`posr h-100 w-100 contentWM ${
+              menuOverride ? 'bgorange' : ''
+            }`}
+          >
             {this.props.children}
           </div>
         </div>

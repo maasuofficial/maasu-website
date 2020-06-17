@@ -7,9 +7,11 @@ export const FooterContainer: FC<Props> = () => {
   return (
     <footer>
       <div className="container">
-        <span className="fs0 ftemp">
-          &copy; {YEAR} {APP_NAME}. All Rights Reserved.
-        </span>
+        <div className="tr">
+          <span className="fs0 ffhind">
+            &copy; {YEAR} {APP_NAME}. All Rights Reserved.
+          </span>
+        </div>
       </div>
     </footer>
   )

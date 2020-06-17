@@ -36,7 +36,6 @@ class WhereAreYouFrom extends React.Component {
           For more information on this project, contact our advocacy chair at{' '}
           <a href="mailto:advocacy@maasu.org">advocacy@maasu.org</a>.
         </p>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

@@ -46,8 +46,6 @@ class Donate extends React.Component {
             donate here
           </a>
         </p>
-
-        <div className="footerSpace"></div>
       </Page>
     )
   }
@@ -58,7 +56,6 @@ const DonateComp = (props) => {
   return (
     test && (
       <Page className={'complete-donate'}>
-        <div className="footerSpace"></div>
         <img
           className={'logo-donate'}
           src={`${process.env.PUBLIC_URL}/assets/branding/light/logo.svg`}
@@ -67,8 +64,6 @@ const DonateComp = (props) => {
 
         <Type variant="h2">Thank you for donating.</Type>
         <Type variant="h4">Your donation means the world to us.</Type>
-
-        <div className="footerSpace"></div>
       </Page>
     )
   )

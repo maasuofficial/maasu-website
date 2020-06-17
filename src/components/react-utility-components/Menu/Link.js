@@ -16,7 +16,6 @@ class Link extends React.Component {
     } = this.props
 
     const classes = typeof className === 'string' ? className.split(' ') : []
-    // classes.push(modules.link)
 
     if (horizontal) {
       classes.push('horizontal-ruc')

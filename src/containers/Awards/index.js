@@ -54,7 +54,6 @@ class Awards extends React.Component {
         <p>
           See previous awards <Link to="/pastawards">here</Link>.
         </p>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

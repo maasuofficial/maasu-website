@@ -269,20 +269,12 @@ class Members extends React.Component {
               type="hidden"
               value="PAC57KL3CTH2A"
             />
-            <table>
-              <tbody>
-                <tr>
-                  <td>
-                    <p>MAASU offers three plans for membership:</p>
-                    <select name="os0">
-                      <option value="1 Year">1 Year $75.00 USD</option>
-                      <option value="2 Years">2 Years $140.00 USD</option>
-                      <option value="3 Years">3 Years $200.00 USD</option>
-                    </select>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <p>MAASU offers three plans for membership:</p>
+            <select name="os0">
+              <option value="1 Year">1 Year $75.00 USD</option>
+              <option value="2 Years">2 Years $140.00 USD</option>
+              <option value="3 Years">3 Years $200.00 USD</option>
+            </select>
             <p>
               <input name="currency_code" type="hidden" value="USD" />
               <br />
@@ -303,7 +295,6 @@ class Members extends React.Component {
             </p>
           </form>
         </Page>
-        <div className="footerSpace"></div>
       </React.Fragment>
     )
   }

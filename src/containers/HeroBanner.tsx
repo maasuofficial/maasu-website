@@ -11,26 +11,26 @@ import {
 
 export const HeroBanner: FC = () => {
   return (
-    <div className="posa h-100 t-0 r-0 b-0 l-0 bgblue">
-      <div className="fggold">
+    <div className="posr h-100 w-100">
+      <div className="ttu ffhind fw700">
         <h2 className="mt9 tc">
-          <span className="fs3-ns">
+          <span className="fs3-ns fs2-s">
             {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
           </span>
           <br />
           <a className="tdn" href={SOCIAL_FACEBOOK}>
-            <em className="fsn fs5 fs3-s scgolden fggold golden-sc">
+            <em className="fsn fs4 fs2-s ls1 fflibre fggold">
               {CONFERENCE_NAME}
             </em>
           </a>
           <br />
-          <span className="fs3-ns">{CONFERENCE_DATE_RANGE}</span>
+          <span className="fs3-ns fs2-s">{CONFERENCE_DATE_RANGE}</span>
         </h2>
       </div>
-      <div className="posa r-0 b-0 l-0 tc">
+      <div className="posr tc">
         <img
           className="w-20-ns w-30-s"
-          src={`${process.env.PUBLIC_URL}/assets/branding/dark/text.svg`}
+          src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
           alt={APP_NAME_LONG}
         />
       </div>

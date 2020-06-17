@@ -1,5 +1,6 @@
 import React from 'react'
 import { Page, Type } from '../../components'
+import { APP_NAME_LONG } from 'constants/strings'
 
 class Alumni extends React.Component {
   componentDidMount() {
@@ -10,12 +11,11 @@ class Alumni extends React.Component {
     return (
       <React.Fragment>
         <Page>
-          <Type variant="h2">Alumni</Type>
-          <div className={'logoContainer-alumni'}>
+          <div className="tc">
             <img
-              className={'logo-alumni'}
+              className="w-50 w-100-s"
               src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
-              alt="The Midwest Asian American Students Union"
+              alt={APP_NAME_LONG}
             />
             <Type cap variant="sub2">
               Alumni Association
@@ -122,14 +122,7 @@ class Alumni extends React.Component {
               height="1"
             />
           </form>
-          {/* <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="paypal">
-            <input name="cmd" type="hidden" value="_s-xclick" /><br/>
-            <input name="hosted_button_id" type="hidden" value="NXTRNY49H77YQ" /><br/>
-            <input alt="PayPal - The safer, easier way to pay online!" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" type="image" /><br/>
-            <img src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" alt="" width="1" height="1" border="0" />
-          </form> */}
         </Page>
-        <div className="footerSpace"></div>
       </React.Fragment>
     )
   }

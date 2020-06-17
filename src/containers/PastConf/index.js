@@ -11,7 +11,7 @@ class PastConf extends React.Component {
     return (
       <Page>
         <Type variant="h2">Past Conferences</Type>
-        <table className={'conferences'}>
+        <table>
           <thead>
             <tr>
               <th>Date</th>
@@ -402,7 +402,6 @@ class PastConf extends React.Component {
             </tr>
           </tbody>
         </table>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

@@ -79,7 +79,6 @@ class PastAwards extends React.Component {
             </tr>
           </tbody>
         </table>
-        <div className="footerSpace"></div>
       </Page>
     )
   }

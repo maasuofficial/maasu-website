@@ -52,7 +52,7 @@ class Typography extends Component {
     })
 
     if (cap || capitalized) {
-      classes.push('capitalized-typography')
+      classes.push('ttu')
     }
 
     classes.push('typography')
