@@ -40,7 +40,9 @@ export const Board = (props) => {
                   src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`}
                   alt={p.name}
                 />
-                <Type variant="sub5">{p.name}</Type>
+                <Type variant="sub5">
+                  <span className="fw700">{p.name}</span>
+                </Type>
                 <span>{p.position}</span>
               </div>
             </a>
@@ -65,7 +67,10 @@ export const Board = (props) => {
                 className="w-100-s w-50-ns mxa"
                 alt={p.name}
               />
-              <Type variant="text3">{p.position}</Type>
+              <br />
+              <Type variant="text3">
+                <span className="fw700">{p.position}</span>
+              </Type>
               <br />
 
               {p.email && (

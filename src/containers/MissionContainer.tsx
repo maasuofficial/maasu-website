@@ -32,7 +32,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         </div>
         <p>{PURPOSE_STMT_1}</p>
         <BImg
-          className="w-100-s w-70-ns mxa"
+          className="w-100 mxa"
           src={findAsset('img/old-ecc.png')}
           alt="The first Executive Coordinating Committee"
         />

@@ -19,7 +19,7 @@ class History extends React.Component {
     return (
       <Page>
         <Type variant="sub2">
-          <span className="tc dispb">Our History</span>
+          <span className="tc dispb fw700">Our History</span>
         </Type>
 
         <Timeline>

@@ -36,6 +36,24 @@ $queryMap: (
  * -----------------------------------------------------
  */
 
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+.ffhind {
+  font-family: 'Hind', sans-serif !important;
+}
+
 $typographyMap: (
   '0': 1rem,
   '1': 1.5rem,
@@ -46,6 +64,19 @@ $typographyMap: (
   // beyond "safe" sizes!
     '6': 11.391rem,
   '7': 17.086rem,
+);
+
+$letterSpacingMap: (
+  '0': 0rem,
+  '1': 0.1rem,
+  '2': 0.2rem,
+  '3': 0.3rem,
+  '4': 0.4rem,
+  '5': 0.5rem,
+  '6': 0.6rem,
+  '7': 0.7rem,
+  '8': 0.8rem,
+  '9': 0.9rem,
 );
 
 /**

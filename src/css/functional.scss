@@ -23,6 +23,12 @@
     }
   }
 
+  @each $scale, $value in $letterSpacingMap {
+    .ls#{$scale}#{$media} {
+      letter-spacing: $value !important;
+    }
+  }
+
   .fw400#{$media} {
     font-weight: 400 !important;
   }

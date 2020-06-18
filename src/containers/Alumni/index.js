@@ -18,7 +18,7 @@ class Alumni extends React.Component {
               alt={APP_NAME_LONG}
             />
             <Type cap variant="sub2">
-              Alumni Association
+              <span className="fw700">Alumni Association</span>
             </Type>
           </div>
         </Page>

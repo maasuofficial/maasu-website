@@ -10,7 +10,9 @@ class Awards extends React.Component {
   render() {
     return (
       <Page>
-        <Type variant="h2">Awards</Type>
+        <Type variant="h2">
+          <span className="fw700">Awards</span>
+        </Type>
         <p>
           MAASU gives out three types of awards at the annual Spring Conference:
           the Charles Chang Leadership Award, the Midwestern Star Leadership
@@ -19,7 +21,9 @@ class Awards extends React.Component {
         </p>
         <ul>
           <li>
-            <Type variant="sub4">Charles Chang Leadership Award</Type>
+            <Type variant="sub4">
+              <span className="fw700">Charles Chang Leadership Award</span>
+            </Type>
             <p>
               The Charles Chang Leadership Award was created in 1993 in honor of
               the MAASU’s founder Charles Chang. Each academic year, the award
@@ -30,7 +34,9 @@ class Awards extends React.Component {
             <p>The Application is now closed.</p>
           </li>
           <li>
-            <Type variant="sub4">Midwestern Star Award</Type>
+            <Type variant="sub4">
+              <span className="fw700">Midwestern Star Award</span>
+            </Type>
             <p>
               Students nominated for the Midwestern Stars can be anyone who has
               made a great impact on their APIA community through contributions
@@ -40,7 +46,9 @@ class Awards extends React.Component {
             <p>The Application is now closed.</p>
           </li>
           <li>
-            <Type variant="sub4">BOA (Board of Advisors) Award</Type>
+            <Type variant="sub4">
+              <span className="fw700">BOA (Board of Advisors) Award</span>
+            </Type>
             <p>
               The MAASU BOA Award is an award that recognizes Asian Pacific
               Islander American student organizations that have accomplished

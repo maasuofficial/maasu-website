@@ -9,12 +9,11 @@
 }
 
 body {
-  font-family: '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    'sans-serif';
+  font-size: 16px;
+  font-family: 'Hind', sans-serif;
+  line-height: 1.2; // no units for multiplier
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
 
   color: var(--palette-text-main);
   background-color: var(--palette-background-main);

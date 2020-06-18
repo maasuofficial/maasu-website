@@ -20,19 +20,6 @@ $md-only: '#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{
 $md-up: '#{screen} and (min-width: #{$breakpoint-sm + 1}px)';
 $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
 
-@font-face {
-  font-family: 'hindmod';
-  src: url('/fonts/hind-bold-modified/hind-bold-modified-webfont.woff2')
-      format('woff2'),
-    url('/fonts/hind-bold-modified/hind-bold-modified.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.ffprimary {
-  font-family: 'hindmod', 'Roboto', 'arial', 'sans-serif';
-}
-
 [hidden] {
   display: none;
 }
@@ -277,7 +264,7 @@ h4.typography,
 h5.typography,
 h6.typography,
 em.typography {
-  @extend .ffprimary;
+  @extend .ffhind;
 }
 
 h1.typography,
@@ -318,7 +305,7 @@ h6.typography,
 
 .subtitle-typography,
 .text-typography {
-  @extend .ffprimary;
+  @extend .ffhind;
   margin-top: 0;
   font-weight: 400;
 }
@@ -348,7 +335,7 @@ em.typography,
   text-decoration: none;
   background-color: var(--palette-background-main);
   color: var(--palette-primary-main);
-  @extend .ffprimary;
+  @extend .ffhind;
   font-size: calc(1rem * 1.5);
   padding: calc(4rem / 4);
   border: calc(4rem / 16) solid var(--palette-primary-main);
@@ -691,11 +678,6 @@ li.horizontal-ruc {
   }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;700&display=swap');
-.ffhind {
-  font-family: 'Hind', sans-serif !important;
-}
-
 .ofh {
   overflow: hidden !important;
 }
@@ -703,10 +685,6 @@ li.horizontal-ruc {
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
 .fflibre {
   font-family: 'Libre Baskerville', serif !important;
-}
-
-.ls1 {
-  letter-spacing: 0.1em !important;
 }
 
 .tr2 {
