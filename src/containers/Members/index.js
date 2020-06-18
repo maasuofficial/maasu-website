@@ -1,5 +1,22 @@
 import React from 'react'
 import { Page, Type } from '../../components'
+import {
+  MEMBERSHIP_BENEFITS_1,
+  MEMBERSHIP_BENEFITS_2,
+  MEMBERSHIP_BENEFITS_3,
+  MEMBERSHIP_ELIGIBILITY_PRELUDE,
+  MEMBERSHIP_ELIGIBILITY_STMT_1,
+  MEMBERSHIP_ELIGIBILITY_STMT_2,
+  MEMBERSHIP_PRELUDE,
+  MREP_PRELUDE,
+  MREP_DUTIES_1,
+  MREP_DUTIES_2,
+  MREP_DUTIES_3,
+  MREP_DUTIES_4,
+  MREP_DUTIES_5,
+  MREP_STMT_1,
+  MREP_STMT_2,
+} from 'constants/strings'
 
 class Members extends React.Component {
   componentDidMount() {
@@ -12,31 +29,16 @@ class Members extends React.Component {
       <React.Fragment>
         <Page>
           <Type variant="h2">Membership</Type>
-          <p>
-            The Midwest Asian American Students Union provides resources and
-            support to the Asian Pacific Islander American community and youth.
-            The opportunities for networking, leadership, and personal
-            development through our involvement is invaluable.
-          </p>
+          <p>{MEMBERSHIP_PRELUDE}</p>
           <Type variant="h2">Benefits</Type>
           <ul>
-            <li>
-              Leadership Summit and Spring Conference registration rates will be
-              discounted
-            </li>
-            <li>
-              Gain support from MAASU’s experienced network of leaders in the
-              APIA community about activism and student organization growth.
-            </li>
-            <li>
-              Network with students and alumni from the member schools of MAASU,
-              as well as various professionals and prominent figures from the
-              APIA community.
-            </li>
+            <li>{MEMBERSHIP_BENEFITS_1}</li>
+            <li>{MEMBERSHIP_BENEFITS_2}</li>
+            <li>{MEMBERSHIP_BENEFITS_3}</li>
           </ul>
           <p>
             For more information on eligibility and benefits, contact{' '}
-            <a href="mailto:memoutreach@maasu.org">memoutreach@maasu.org</a>.
+            <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
           </p>
           <Type variant="h2">Member Schools</Type>
           {/* last updated 09/16/19 */}
@@ -190,67 +192,27 @@ class Members extends React.Component {
         </Page>
         <Page>
           <Type variant="h2">Representatives</Type>
-          <p>
-            All members schools will select a MAASU Representative. MReps, for
-            short, are the official liaison between member schools and the MAASU
-            Executive Coordinating Committee (ECC). As stated in the MAASU
-            constitution, each school may only have one MRep. The roles, duties,
-            and responsibilities of the MRep consists of the following:
-          </p>
+          <p>{MREP_PRELUDE}</p>
           <ul>
-            <li>
-              Respond to emails and messages from MAASU Communications chairs or
-              other members of the ECC when necessary
-            </li>
-            <li>
-              Update his/her/their school’s APIA organizations on MAASU
-              information regarding campaigns, conferences, and fundraisers
-            </li>
-            <li>
-              Has the power to submit one vote for conference bids, ECC
-              elections, and constitutional changes
-            </li>
-            <li>Help elect the ECC for the upcoming year</li>
-            <li>
-              Has the power to accept or decline amendments made to the
-              constitution
-            </li>
+            <li>{MREP_DUTIES_1}</li>
+            <li>{MREP_DUTIES_2}</li>
+            <li>{MREP_DUTIES_3}</li>
+            <li>{MREP_DUTIES_4}</li>
+            <li>{MREP_DUTIES_5}</li>
           </ul>
+          <p>{MREP_STMT_1}</p>
+          <p>{MREP_STMT_2}</p>
           <p>
-            Voting requires a two-thirds attendance in order to reach quorum.
-            MReps will serve a full academic year in conjunction with the
-            Communications Chairs. Should any MRep need to step down for any
-            reasons, the institution must replace the MRep and connect them
-            immediately with the Communications Chairs for updates.
-          </p>
-          <p>
-            Any school or national organization falling within the Midwest
-            region is eligible to join MAASU as set forth in the bylaws. All
-            authority of MAASU shall ultimately rest in the member schools in
-            conjuncture with the Executive Coordinating Committee.
-          </p>
-          <p>
-            For additional questions regarding membership please contact our
-            membership outreach chairs at{' '}
-            <a href="mailto:memoutreach@maasu.org">memoutreach@maasu.org</a>.
+            For additional questions regarding membership please contact{' '}
+            <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
           </p>
         </Page>
         <Page>
           <Type variant="h2">Eligibility</Type>
-          <p>MAASU recognizes the forms of membership as outlined:</p>
+          <p>{MEMBERSHIP_ELIGIBILITY_PRELUDE}</p>
           <ul>
-            <li>
-              Campus Organizations: Hereinafter referred to as “member schools.”
-              Membership shall be open to any formally recognized Asian American
-              student organization at an institution of Higher Education. Has
-              voting privileges.
-            </li>
-            <li>
-              Affiliate Organization Membership: Hereinafter referred to as
-              “affiliates.” Membership shall also be open to any nationally
-              recognized Asian American organization. Must have college student
-              representative in order to have voting privileges.
-            </li>
+            <li>{MEMBERSHIP_ELIGIBILITY_STMT_1}</li>
+            <li>{MEMBERSHIP_ELIGIBILITY_STMT_2}</li>
           </ul>
           <Type variant="h2">Join</Type>
 

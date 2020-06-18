@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components'
 import { FaArrowLeft } from 'react-icons/fa'
-import data from './data.json'
+import data from 'constants/board.json'
 import {
   BOA_APP_LINK,
   BOA_APP_ISOPEN,
