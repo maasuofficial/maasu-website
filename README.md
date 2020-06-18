@@ -88,9 +88,11 @@ Utilizing `git` and `github`:
 
 1. Check out the staging branch to verify it is up to date with the latest changes in production. 
 ```
-g checkout staging
-git pull --rebase origin master
+git checkout master && git pull
+git branch -D staging
+git checkout -b staging
 ```
+> This deletes the local staging branch and syncs it with master.
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
 ```
@@ -104,6 +106,7 @@ git push origin +staging
 ```
 > The last command will force push to the staging branch. Be cautious when doing so,
 > as it may overwrite any changes you originally had in staging.
+> Make sure you have no changes in staging you may not want to overwrite.
 
 > Note: To avoid conflicts, try not to drastically change too many files at once.
 > It's a better strategy to create short and quick fixes and merge those commits
@@ -114,7 +117,7 @@ git push origin +staging
 ```
 git push origin --delete my-feature-name
 ```
-8. Repeast steps 1-7.
+8. Repeat steps 1-7.
 
 For a basic idea of workflow:
 
