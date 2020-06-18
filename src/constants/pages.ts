@@ -222,3 +222,50 @@ Affiliate Organization Membership: Hereinafter referred to as
 recognized Asian American organization. Must have college student
 representative in order to have voting privileges.
 `
+
+// -----------------------------------------------------
+// Awards
+// -----------------------------------------------------
+
+export const AWARDS_STMT = `
+MAASU gives out three types of awards at the annual Spring Conference:
+the Charles Chang Leadership Award, the Midwestern Star Leadership
+Award, and the MAASU Board of Advisors Award. Winners for all awards
+are announced annually at the MAASU Spring Conference.
+`
+
+export const AWARDS_CC_STMT = `
+The Charles Chang Leadership Award was created in 1993 in honor of
+the MAASU’s founder Charles Chang. Each academic year, the award
+is presented to a student who demonstrates leadership and
+dedication to the APIDA community, along with a $250 scholarship 
+and plaque.
+`
+
+export const AWARDS_CC_STATUS = `
+The application is now closed.
+`
+
+export const AWARDS_MS_STMT = `
+Students nominated for the Midwestern Stars can be anyone who has
+made a great impact on their surrounding APIDA community through 
+contributions of advisement, programming, leadership, or other 
+means that have uplifted a community higher than what has been 
+done previously.
+`
+
+export const AWARDS_MS_STATUS = `
+The application is now closed.
+`
+
+export const AWARDS_BOA_STMT = `
+The BOA Award is an award that recognizes Asian American student 
+organizations that have accomplished greatness on their campus 
+and in the Midwest community. The BOA Award and $100 prize is 
+presented annually at the MAASU Spring Conference banquet to 
+one organization or school.
+`
+
+export const AWARDS_BOA_STATUS = `
+The application is now closed.
+`
