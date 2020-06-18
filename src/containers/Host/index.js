@@ -19,7 +19,9 @@ class Host extends React.Component {
 
         <ol>
           <li>
-            <Type variant="sub4">Bid Packet</Type>
+            <Type variant="sub4">
+              <span className="fw700">Bid Packet</span>
+            </Type>
             <p>
               All interested schools are required to create a bid packet. The
               purpose of this bid packet is to showcase why the school should
@@ -236,7 +238,9 @@ class Host extends React.Component {
             <br />
           </li>
           <li>
-            <Type variant="sub4">Bid Presentation</Type>
+            <Type variant="sub4">
+              <span className="fw700">Bid Presentation</span>
+            </Type>
             <p>
               Bid presentations for both the Leadership Summit and Spring
               Conference will occur during the annual MAASU Spring Conference in

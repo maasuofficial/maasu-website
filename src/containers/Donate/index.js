@@ -1,5 +1,6 @@
 import React from 'react'
 import { Page, Type } from '../../components'
+import { DONATE_MAASU_URL } from 'constants/strings'
 
 class Donate extends React.Component {
   componentDidMount() {
@@ -39,10 +40,7 @@ class Donate extends React.Component {
         </p>
 
         <p className={'donateButtonWrapper-donate'}>
-          <a
-            className={'donateButton-donate'}
-            href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7MEQUT6NUGA9E&source=url"
-          >
+          <a className={'donateButton-donate'} href={DONATE_MAASU_URL}>
             donate here
           </a>
         </p>

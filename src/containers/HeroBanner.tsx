@@ -20,7 +20,7 @@ export const HeroBanner: FC = () => {
           </span>
           <br />
           <a className="tdn" href={SOCIAL_FACEBOOK}>
-            <em className="fsn fs4 fs2-s ls1 fflibre fggold">
+            <em className="fsn fs4 fs2-s ls2 fflibre fggold">
               {CONFERENCE_NAME}
             </em>
           </a>
