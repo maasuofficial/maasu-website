@@ -31,7 +31,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 ## Overview <a name="overview"></a>
 
 This document summarizes a design process of the MAASU website, what softwares and tools were used, 
-and any executive descisions made in regards to project structure.
+and any executive decisions made in regards to project structure.
 The [Table of Contents](#table-of-contents) provides a summary of all relevant categories.
 
 To view a directory of previous board members, see [board members](docs/board.md).

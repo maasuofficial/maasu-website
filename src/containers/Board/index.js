@@ -2,6 +2,20 @@ import React, { useState, useEffect } from 'react'
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components'
 import { FaArrowLeft } from 'react-icons/fa'
 import data from './data.json'
+import {
+  BOA_APP_LINK,
+  BOA_APP_ISOPEN,
+  BOA_APP_STATUS,
+  DC_APP_LINK,
+  DC_APP_ISOPEN,
+  DC_APP_STATUS,
+  ECC_APP_LINK,
+  ECC_APP_ISOPEN,
+  ECC_APP_STATUS,
+  ED_APP_LINK,
+  ED_APP_ISOPEN,
+  ED_APP_STATUS,
+} from 'constants/strings'
 
 export const Board = (props) => {
   const names = Object.values(data).map((i) => i.nameConcatenated)
@@ -134,41 +148,32 @@ export const Board = (props) => {
         <Type variant="h2">Executive Coordinating Committee</Type>
         <Grid>{generateProfiles(groups.ECC)}</Grid>
         <p>
-          {/*
-            <b>Executive Coordinating Committee Applications for the 2020-2021 academic year are now open! Apply <a href="https://forms.gle/CxV8qK2S3QKAMAN59">here</a>. Applications close Sunday, May 24th</b>.
-            */}
-          Applications for the Executive Coordinating Committee are currently
-          closed.
+          {ECC_APP_STATUS}
+          {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
         </p>
       </Page>
       <Page className={'groupPage-board'}>
         <Type variant="h2">Executive Director</Type>
         <Grid>{generateProfiles(groups.ED)}</Grid>
         <p>
-          {/* Applications for the Executive Director are currently open! Apply <a download href={`${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022-new.docx`}>here</a>. Applications close <b>Friday, March 27th</b>. */}
-          Applications for the Executive Director are currently closed.
+          {ED_APP_STATUS}
+          {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
         </p>
       </Page>
       <Page className={'groupPage-board'}>
         <Type variant="h2">Directors Council</Type>
         <Grid>{generateProfiles(groups.DC)}</Grid>
         <p>
-          Applications for the Directors Council are currently closed. The next
-          application cycle will be in Spring of 2021.
+          {DC_APP_STATUS}
+          {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
         </p>
       </Page>
       <Page className={'groupPage-board'}>
         <Type variant="h2">Board of Advisors</Type>
         <Grid>{generateProfiles(groups.BOA)}</Grid>
         <p>
-          Applications for the Board of Advisors are currently open! Apply{' '}
-          <a
-            download
-            href={`${process.env.PUBLIC_URL}/assets/files/BOA-Application.docx`}
-          >
-            here
-          </a>
-          .
+          {BOA_APP_STATUS}
+          {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
         </p>
       </Page>
     </div>

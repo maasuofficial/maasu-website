@@ -1,6 +1,6 @@
 import React from 'react'
 import { Page, Type } from '../../components'
-import { APP_NAME_LONG } from 'constants/strings'
+import { APP_NAME_LONG, DONATE_MAA_URL } from 'constants/strings'
 
 class Alumni extends React.Component {
   componentDidMount() {
@@ -93,35 +93,8 @@ class Alumni extends React.Component {
           <Type variant="h2">Donation</Type>
           <p>
             If you would like to support the MAASU Alumni Association, consider
-            donating below:
+            donating <a href={DONATE_MAA_URL}>here</a>.
           </p>
-          <form
-            action="https://www.paypal.com/cgi-bin/webscr"
-            method="post"
-            target="_top"
-          >
-            <input type="hidden" name="cmd" value="_s-xclick" />
-            <input
-              type="hidden"
-              name="hosted_button_id"
-              value="DTCJJ8EKEBWDQ"
-            />
-            <input
-              type="image"
-              src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
-              border="0"
-              name="submit"
-              title="PayPal - The safer, easier way to pay online!"
-              alt="Donate with PayPal button"
-            />
-            <img
-              alt=""
-              border="0"
-              src="https://www.paypal.com/en_US/i/scr/pixel.gif"
-              width="1"
-              height="1"
-            />
-          </form>
         </Page>
       </React.Fragment>
     )
