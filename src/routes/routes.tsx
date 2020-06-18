@@ -22,8 +22,10 @@ import {
   WhereAreYouFrom,
 } from '../containers'
 import { HomepageContainer } from 'containers/HomepageContainer'
-import { InvalidRouteContainer } from 'containers/InvalidRouteContainer'
+import { InvalidRoute } from 'routes/InvalidRoute'
+import { MAAContainer } from 'containers/MAAContainer'
 import { MissionContainer } from 'containers/MissionContainer'
+import { PrivateRoute } from 'routes/PrivateRoute'
 
 export const Routes = () => {
   return (
@@ -50,7 +52,12 @@ export const Routes = () => {
           <ApiaOrgs path="/apiaorgs" />
 
           <Alumni path="/alumni" />
-          <Alumni path="/maa" />
+
+          <PrivateRoute
+            isAuthorized={false}
+            path="/maa"
+            component={MAAContainer}
+          />
 
           <NewsLetter path="/newsletter" />
           <PastAwards path="/pastawards" />
@@ -60,7 +67,7 @@ export const Routes = () => {
           <DonateComp path="/donate-complete" test={true} />
           <Contact path="/contact" />
 
-          <InvalidRouteContainer default />
+          <InvalidRoute code={404} default />
         </HomepageContainer>
       </WrapperMenu>
     </Router>
