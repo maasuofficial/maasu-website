@@ -1,6 +1,8 @@
-import React, { FC, Fragment, useEffect } from 'react'
+import React, { FC, Fragment } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { BImg, Page } from 'components'
+import { useDocumentTitle } from 'hooks/meta'
+import { findAsset } from 'utils/files'
 import {
   APP_NAME_LONG,
   MISSION_PRELUDE,
@@ -19,24 +21,19 @@ import {
 interface Props {}
 
 export const MissionContainer: FC<RouteComponentProps & Props> = () => {
-  useEffect(() => {
-    document.title = 'Our Mission - The Midwest Asian American Students Union'
-  }, [])
+  useDocumentTitle('Our Mission')
 
   return (
     <Fragment>
       <Page>
         <h3 className="mt0 tc fs2 ffhind fw700">Our Purpose</h3>
         <div className="w-70 w-30-ns mxa">
-          <img
-            src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
-            alt={APP_NAME_LONG}
-          />
+          <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
         </div>
         <p>{PURPOSE_STMT_1}</p>
         <BImg
           className="w-100-s w-70-ns mxa"
-          src={`${process.env.PUBLIC_URL}/assets/img/old-ecc.png`}
+          src={findAsset('img/old-ecc.png')}
           alt="The first Executive Coordinating Committee"
         />
         <p>{PURPOSE_STMT_2}</p>
@@ -62,7 +59,9 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         <p>
           {STRATEGIC_PLAN}
           <a
-            href={`${process.env.PUBLIC_URL}/assets/files/MAASU_Strategic_Plan_2020-2024.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={findAsset('files/MAASU_Strategic_Plan_2020-2024.pdf')}
           >
             here
           </a>
