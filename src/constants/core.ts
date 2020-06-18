@@ -1,6 +1,6 @@
 export const APP_NAME = 'MAASU'
 export const APP_NAME_LONG =
-  'The Midwest Asian Pacific Islander Desi American Students Union'
+  'Midwest Asian Pacific Islander Desi American Students Union'
 export const YEAR = '2020'
 
 export const SOCIAL_FACEBOOK = 'https://www.facebook.com/maasuofficial'

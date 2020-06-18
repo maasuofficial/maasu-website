@@ -1,12 +1,14 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 
-interface Props {}
+interface Props {
+  code: number
+}
 
-export const InvalidRouteContainer: FC<RouteComponentProps & Props> = () => {
+export const InvalidRoute: FC<RouteComponentProps & Props> = ({ code }) => {
   return (
     <div className="container">
-      <h1 className="tc">404</h1>
+      <h1 className="tc">{code}</h1>
       <p className="tc">
         Oops, we can't seem to find the page you're looking for.
       </p>
