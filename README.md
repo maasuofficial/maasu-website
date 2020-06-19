@@ -251,6 +251,7 @@ src/
   css/                - Any and all styling.
   hooks/              - Reuseable React hooks.
   routes/             - Manages all routes.
+  store/              - All store management and types are contained within this folder.
   utils/              - Any and all utility functions.
   index.tsx           - Main source file which initializes react, store, and renders DOM.
 ```
