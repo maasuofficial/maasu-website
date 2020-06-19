@@ -9,7 +9,6 @@ import History from './History'
 import Home from './Home'
 import Host from './Host'
 import MaasuX from './MaasuX'
-import Members from './Members'
 import WrapperMenu from './WrapperMenu'
 import NewsLetter from './NewsLetter'
 import PastAwards from './PastAwards'
@@ -31,7 +30,6 @@ export {
   Home,
   Host,
   MaasuX,
-  Members,
   WrapperMenu,
   NewsLetter,
   PastAwards,

@@ -3,19 +3,20 @@
 // -----------------------------------------------------
 
 export enum EMemberStatus {
-  active = 1,
-  expired = 0,
-  inactive = -1,
+  Active = 1,
+  Expired = 0,
+  Inactive = -1,
 }
 
 export type Member = {
-  // nameAbv
+  // nameAbv or main name identifier
   id: string
   name: string
-  nameAbv: string
+  nameAbv?: string
   status: EMemberStatus
-  orgName: string
-  orgUrl: string
+  orgName?: string
+  orgNameAbv?: string
+  orgUrl?: string
   city: string
   state: string
 }

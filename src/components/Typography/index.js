@@ -68,7 +68,7 @@ class Typography extends Component {
       case 'h2':
       case 'heading2':
         return (
-          <h2 {...props} className={classes.join(' ')}>
+          <h2 {...props} className={`fs2 ${classes.join(' ')}`}>
             {children}
           </h2>
         )
@@ -82,7 +82,7 @@ class Typography extends Component {
       case 'h4':
       case 'heading4':
         return (
-          <h4 {...props} className={classes.join(' ')}>
+          <h4 {...props} className={`fs1 ${classes.join(' ')}`}>
             {children}
           </h4>
         )
