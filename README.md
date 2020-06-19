@@ -17,6 +17,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Installation](#installation)
 + [Workflow](#workflow)
 + [Netlify Hosting](#netlify-hosting)
++ [REST Functions](#rest-functions)
 + [React Framework](#react-framework)
 + [Typescript](#typescript)
 + [Linting](#linting)
@@ -166,6 +167,33 @@ limit of `300` build minutes/month, but it is unlikely that build minutes will e
 
 Source: [Netlify pricing](https://www.netlify.com/pricing) vs [Firebase Pricing](https://firebase.google.com/pricing/)
 
+## REST Functions <a name="rest-functions"></a>
+
+[Netlify Functions](https://www.netlify.com/products/functions/) was chosen for its functions capability over 
+[Firebase Functions](https://firebase.google.com/docs/functions/) and [AWS Lambda](https://aws.amazon.com/lambda/)
+largely due to its pricing tiers. Netlify Function's free tier provides more than either alternate service, and
+AWS Lambda does not even provide a free tier. While AWS Lambda may be the most scalable in terms of pricing,
+Netlify Functions provides the simplest integration for smaller organizations, nonprofits, and startups.
+
+Netlify Functions does not monitor RAM or CPU usage, and instead measures usage based on time, which is slightly
+better than Firebase Functions. This provides a slight edge to Netlify.
+
+| Service | Requests/Mo | Runtime/Mo | GB-Sec/Mo | CPU-Sec/Mo |
+| --- | --- | --- | --- | --- |
+| Netlify Functions | 125k | 100hr | | |
+| Firebase Functions | 125k | | 40k | 40k |
+
+The solidifying deal-breaker comes down to this - **Firebase Functions restricts outbound networking to Google
+services only**. While Google is used as our primary form of organization and communication, this creates too
+much of a sole dependency on Google. As a result, Netlify Functions was chosen for serverless function hosting.
+
+Luckily, since Netlify is also coincidentally used for its website hosting service, it easily integrates with Github
+in terms of deployment and analytics.
+
+Source: [Netlify Functions](https://www.netlify.com/products/functions/)
+vs [Firebase Functions](https://firebase.google.com/pricing)
+vs [AWS Lambda](https://aws.amazon.com/lambda/pricing/)
+
 ## React Framework <a name="react-framework"></a>
 
 This website is built using [React.js](https://reactjs.org/), a Javascript component-based web devleopment
@@ -249,6 +277,8 @@ src/
                         components which represent entire pages. Simply put, a container
                         "contains" other components.
   css/                - Any and all styling.
+  functions/          - All REST API functions and handlers are contained within this 
+                        folder. All deploy to a separate service.
   hooks/              - Reuseable React hooks.
   routes/             - Manages all routes.
   store/              - All store management and types are contained within this folder.
