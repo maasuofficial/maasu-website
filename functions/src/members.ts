@@ -26,6 +26,11 @@ export async function handler(event: any, context: any) {
   return {
     context,
     event,
+    headers: {
+      'content-type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT',
+    },
     statusCode: 200,
     body: JSON.stringify(body),
   }

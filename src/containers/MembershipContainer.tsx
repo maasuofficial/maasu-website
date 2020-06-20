@@ -1,8 +1,10 @@
-import React, { FC } from 'react'
+import React, { FC, useEffect, useState } from 'react'
+import fetch from 'isomorphic-fetch'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { EMemberStatus, Member } from 'store/types'
 import { Page, Type } from 'components'
+import { BASE_URL } from 'api/urls'
 import {
   MEMBERSHIP_BENEFITS_1,
   MEMBERSHIP_BENEFITS_2,
@@ -20,12 +22,26 @@ import {
   MREP_STMT_1,
   MREP_STMT_2,
 } from 'constants/strings'
-import { members } from 'constants/data/members'
 
 interface Props {}
 
 export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('Membership')
+
+  const [members, setMembers] = useState<Member[]>([])
+
+  useEffect(() => {
+    fetch(`${BASE_URL}/members`)
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.error) {
+          console.error(res.error)
+        } else {
+          setMembers(res.data as Member[])
+        }
+      })
+      .catch((e) => console.error(e))
+  }, [])
 
   const dictionarySort = (a: Member, b: Member): number => {
     const articles = ['a', 'an', 'the']
@@ -65,114 +81,22 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
 
       <h4 className="tc pt5">Members</h4>
       <ul>
-        {members
-          .sort(dictionarySort)
-          .filter((m: Member) => m.status === EMemberStatus.Active)
-          .map((member, index) => (
-            <li key={index}>
-              {member.orgUrl ? (
-                <a href={member.orgUrl}>{member.name}</a>
-              ) : (
-                <span>{member.name}</span>
-              )}
-            </li>
-          ))}
-
-        {/* <li><a href='https://www.asianamerican.northwestern.edu/'>Northwestern University</a></li> */}
-        {/* <li><a href='https://www.nwtc.edu/student-experience/student-involvement/clubs-and-organizations/multicultural/asian-american-student-association'>Northeast Wisconsin Technical College</a></li> */}
-        {/* <li><a href='https://www3.nd.edu/~aaa/'>Notre Dame University</a></li> */}
-        {/* <li><a href='https://webstu.onu.edu/aasu/'>Ohio Northern University</a></li> */}
-        <li>
-          <a href="https://campuslink.okstate.edu/organization/asianamerican-student-association">
-            Oklahoma State University
-          </a>
-        </li>
-        <li>
-          <a href="https://boilerlink.purdue.edu/organization/purdueaaa">
-            Purdue University at West Lafayette
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/aaaohiostate/?fref=ts">
-            The Ohio State University
-          </a>
-        </li>
-        {/* <li><a href='https://www.facebook.com/awa.st.catherine/'>St. Catherine’s University</a></li> */}
-        {/* <li><a href='https://www.facebook.com/SLUAAA/'>St. Louis University</a></li> */}
-        {/* <li><a href='https://www.facebook.com/groups/174617512566504/'>University of Colorado Boulder</a></li> */}
-        <li>
-          <a href="https://www.facebook.com/AASIAUIC/">
-            University of Illinois at Chicago
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/AsianAmericanAssociationUIUC/">
-            University of Illinois at Urbana Champaign
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/UIAPACC/">University of Iowa</a>
-        </li>
-        <li>
-          <a href="https://www.stuorg.iastate.edu/site/asu">
-            Iowa State University
-          </a>
-        </li>
-        <li>
-          <a href="https://rockchalkcentral.ku.edu/organization/aasu">
-            University of Kansas
-          </a>
-        </li>
-        <li>
-          <a href="https://maizepages.umich.edu/organization/aaa">
-            University of Michigan – Ann Arbor
-          </a>
-        </li>
-        {/* <li><a href='https://bulldoglink.d.umn.edu/organization/apaa'>University of Minnesota – Duluth</a></li> */}
-        <li>
-          <a href="https://www.asu-umn.org/">
-            University of Minnesota Twin Cities
-          </a>
-        </li>
-        <li>
-          <a href="https://mnsumankato.campuslabs.com/engage/organization/asia">
-            Minnesota State University - Mankato
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/mizzouaaa">
-            University of Missouri
-          </a>
-        </li>
-        <li>
-          <a href="https://info.umkc.edu/unews/umkcs-asia-organization-has-arrived/">
-            University of Missouri Kansas City
-          </a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/UNLASU">
-            University of Nebraska Lincoln
-          </a>
-        </li>
-        {/* <li><a href='https://www.facebook.com/groups/uwpasiaclub/'>University of Wisconsin – Platteville</a></li> */}
-        {/* <li><a href='https://win.wisc.edu/organization/aasu'>University of Wisconsin – Madison</a></li> */}
-        {/* <li><a href='https://www.vandyaasa.com/'>Vanderbilt University</a></li> */}
-        <li>
-          <a href="https://www.valpo.edu/multicultural/student-organizations/asian-american-pacific-island-coalition-aapic/">
-            Valparaiso University
-          </a>
-        </li>
-        {/* <li><a href='https://www.facebook.com/aaa.wustl/'>Washington University – St Louis</a></li> */}
-        <li>
-          <a href="https://www.facebook.com/ASCWSU/">
-            Wichita State University
-          </a>
-        </li>
-        <li>
-          <a href="https://www.winona.edu/inclusion-diversity/clubs.asp">
-            Winona State University
-          </a>
-        </li>
+        {members && members.length ? (
+          members
+            .sort(dictionarySort)
+            .filter((m: Member) => Number(m.status) === EMemberStatus.Active)
+            .map((member, index) => (
+              <li key={index}>
+                {member.orgUrl ? (
+                  <a href={member.orgUrl}>{member.name}</a>
+                ) : (
+                  <span>{member.name}</span>
+                )}
+              </li>
+            ))
+        ) : (
+          <span>loading...</span>
+        )}
       </ul>
       <React.Fragment>
         <Page>

@@ -19,6 +19,9 @@ export type Member = {
   orgUrl?: string
   city: string
   state: string
+  expDate: string
+  mrepName: string
+  mrepEmail: string
 }
 
 // -----------------------------------------------------
