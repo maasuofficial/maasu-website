@@ -28,6 +28,7 @@ export async function handler(event: any, context: any) {
     event,
     headers: {
       'content-type': 'application/json',
+      // enable CORS
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT',
     },

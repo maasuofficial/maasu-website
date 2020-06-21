@@ -319,9 +319,9 @@ export const MyComponent;
 ...
 import { MyComponent } from './MyComponent';
 ```
-The module cannot be renamed. This makes it easier to track down a bug in a deeply-nested module, and
-prevents multiple modules being given the same name. For these reasons, standard exports are preferred
-to default exports.
+The module cannot be renamed as easily. This makes it easier to track down a bug in a deeply-nested
+module, and prevents multiple modules being given the same name. For these reasons, standard exports 
+are preferred to default exports.
 
 ## Styling and CSS <a name="styling-and-css"></a>
 

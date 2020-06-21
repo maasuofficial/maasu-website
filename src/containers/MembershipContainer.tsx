@@ -30,24 +30,11 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
 
   const [members, setMembers] = useState<Member[]>([])
 
-  useEffect(() => {
-    fetch(`${BASE_URL}/members`)
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.error) {
-          console.error(res.error)
-        } else {
-          setMembers(res.data as Member[])
-        }
-      })
-      .catch((e) => console.error(e))
-  }, [])
-
-  const dictionarySort = (a: Member, b: Member): number => {
+  const dictionarySort = (
+    { name: nameA }: Member,
+    { name: nameB }: Member
+  ): number => {
     const articles = ['a', 'an', 'the']
-
-    const { name: nameA } = a
-    const { name: nameB } = b
 
     let nameAArr = nameA.toLocaleLowerCase().split(' ')
     let nameBArr = nameB.toLocaleLowerCase().split(' ')
@@ -63,7 +50,9 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
     return nameAArr[0].localeCompare(nameBArr[0])
   }
 
-  const isValidMember = (m: Member): boolean =>
+  const isValidActiveMember = (m: Member): boolean =>
+    m.id != null &&
+    m.id.length > 0 &&
     m.name != null &&
     m.name.length > 0 &&
     m.expDate != null &&
@@ -71,6 +60,21 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
     new Date(new Date().toDateString()) <= new Date(m.expDate)
 
   const membersExist: boolean = members && members.length > 0
+
+  useEffect(() => {
+    fetch(`${BASE_URL}/members`)
+      .then((res) => res.json())
+      .then((res) => {
+        if (res.error) throw res.error
+
+        const filteredMembers: Member[] = (res.data as Member[])
+          .filter(isValidActiveMember)
+          .sort(dictionarySort)
+
+        setMembers(filteredMembers)
+      })
+      .catch((e) => console.error(e))
+  }, [])
 
   return (
     <div className="container">
@@ -91,20 +95,15 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
       <h4 className="tc pt5">Members</h4>
       <ul>
         {membersExist ? (
-          members
-            .filter(isValidMember)
-            .sort(dictionarySort)
-            .map((member, index) => {
-              return (
-                <li key={index}>
-                  {member.orgUrl ? (
-                    <a href={member.orgUrl}>{member.name}</a>
-                  ) : (
-                    <span>{member.name}</span>
-                  )}
-                </li>
-              )
-            })
+          members.map((member, index) => (
+            <li key={index}>
+              {member.orgUrl ? (
+                <a href={member.orgUrl}>{member.name}</a>
+              ) : (
+                <span>{member.name}</span>
+              )}
+            </li>
+          ))
         ) : (
           <span>loading...</span>
         )}
