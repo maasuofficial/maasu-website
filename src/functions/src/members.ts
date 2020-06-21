@@ -1,5 +1,5 @@
 import fetch from 'isomorphic-fetch'
-import { CSV_TO_JSON, MEMBERS_ID, ResBody, ResData, ResError } from './utils'
+import { CSVtoObject, MEMBERS_ID, ResBody, ResData, ResError } from './utils'
 
 export async function handler(event: any, context: any) {
   let data: ResData = null
@@ -19,7 +19,7 @@ export async function handler(event: any, context: any) {
   }
 
   if (res) {
-    data = CSV_TO_JSON(res as string)
+    data = CSVtoObject(res as string)
   }
 
   const body: ResBody = { data, error }

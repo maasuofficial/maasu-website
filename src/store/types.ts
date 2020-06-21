@@ -2,18 +2,11 @@
 // Member
 // -----------------------------------------------------
 
-export enum EMemberStatus {
-  Active = 1,
-  Expired = 0,
-  Inactive = -1,
-}
-
 export type Member = {
   // nameAbv or main name identifier
   id: string
   name: string
   nameAbv?: string
-  status: EMemberStatus
   orgName?: string
   orgNameAbv?: string
   orgUrl?: string

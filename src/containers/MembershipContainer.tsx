@@ -2,7 +2,7 @@ import React, { FC, useEffect, useState } from 'react'
 import fetch from 'isomorphic-fetch'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
-import { EMemberStatus, Member } from 'store/types'
+import { Member } from 'store/types'
 import { Page, Type } from 'components'
 import { BASE_URL } from 'api/urls'
 import {
@@ -63,6 +63,15 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
     return nameAArr[0].localeCompare(nameBArr[0])
   }
 
+  const isValidMember = (m: Member): boolean =>
+    m.name != null &&
+    m.name.length > 0 &&
+    m.expDate != null &&
+    m.name.length > 0 &&
+    new Date(new Date().toDateString()) <= new Date(m.expDate)
+
+  const membersExist: boolean = members && members.length > 0
+
   return (
     <div className="container">
       <h3 className="tc pt5">Membership</h3>
@@ -81,19 +90,21 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
 
       <h4 className="tc pt5">Members</h4>
       <ul>
-        {members && members.length ? (
+        {membersExist ? (
           members
+            .filter(isValidMember)
             .sort(dictionarySort)
-            .filter((m: Member) => Number(m.status) === EMemberStatus.Active)
-            .map((member, index) => (
-              <li key={index}>
-                {member.orgUrl ? (
-                  <a href={member.orgUrl}>{member.name}</a>
-                ) : (
-                  <span>{member.name}</span>
-                )}
-              </li>
-            ))
+            .map((member, index) => {
+              return (
+                <li key={index}>
+                  {member.orgUrl ? (
+                    <a href={member.orgUrl}>{member.name}</a>
+                  ) : (
+                    <span>{member.name}</span>
+                  )}
+                </li>
+              )
+            })
         ) : (
           <span>loading...</span>
         )}

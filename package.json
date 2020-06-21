@@ -4,9 +4,9 @@
   "private": false,
   "scripts": {
     "start": "react-scripts start",
-    "build:functions": "tsc -p functions",
+    "build:functions": "tsc -p src/functions",
     "build": "react-scripts build && yarn build:functions",
-    "test:function": "yarn build:functions && node functions/testHandler.js",
+    "test:function": "yarn build:functions && node src/functions/testHandler.js",
     "test": "react-scripts test",
     "test:ci": "yarn test --coverage --watchAll=false"
   },
