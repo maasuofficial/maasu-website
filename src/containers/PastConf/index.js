@@ -22,8 +22,8 @@ class PastConf extends React.Component {
           </thead>
           <tbody>
             <tr>
-              <td>March 20-22, 2020</td>
-              <td>Spring Conference</td>
+              <td>October 31 - November 1, 2020</td>
+              <td>Fall Conference</td>
               <td>Unwritten</td>
               <td>University of Minnesota Twin Cities, MN</td>
             </tr>

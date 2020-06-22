@@ -1,3 +1,12 @@
+import {
+  LEADERSHIP_SUMMIT,
+  SPRING_CONFERENCE,
+  FALL_CONFERENCE,
+  MAASUX,
+  SEASON_SPRING,
+  SEASON_FALL,
+} from 'constants/strings'
+
 // -----------------------------------------------------
 // Member
 // -----------------------------------------------------
@@ -53,25 +62,30 @@ export type BoardMember = {
 // Conference
 // -----------------------------------------------------
 
-export enum ESeason {
-  SP = 0,
-  AU = 1,
-}
+export type SeasonType = typeof SEASON_SPRING | typeof SEASON_FALL
+
+export type ConferenceType =
+  | typeof LEADERSHIP_SUMMIT
+  | typeof SPRING_CONFERENCE
+  | typeof FALL_CONFERENCE
+  | typeof MAASUX
 
 export type Conference = {
   // season, year abbreviation
   id: string
   title: string
   desc: string
-  season: ESeason
-  startDate: Date
-  endDate?: Date
+  season: SeasonType
+  type: ConferenceType
+  date: string
+  // date: Date
   bid?: string
   logo?: string
   banner?: string
   city: string
   state: string
-  host: Member
+  // host: Member
+  host: string
 }
 
 // -----------------------------------------------------

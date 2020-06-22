@@ -5,6 +5,7 @@ import { useDocumentTitle } from 'hooks/meta'
 import { Member } from 'store/types'
 import { Page, Type } from 'components'
 import { BASE_URL } from 'api/urls'
+import membersCache from 'constants/cache/members.json'
 import {
   MEMBERSHIP_BENEFITS_1,
   MEMBERSHIP_BENEFITS_2,
@@ -73,7 +74,16 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
 
         setMembers(filteredMembers)
       })
-      .catch((e) => console.error(e))
+      .catch((e) => {
+        console.error(e)
+
+        // TODO temporary cache fallback
+        const filteredMembers: Member[] = ((membersCache.data as unknown) as Member[])
+          .filter(isValidActiveMember)
+          .sort(dictionarySort)
+
+        setMembers(filteredMembers)
+      })
   }, [])
 
   return (

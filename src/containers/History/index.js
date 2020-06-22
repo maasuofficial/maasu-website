@@ -31,7 +31,17 @@ class History extends React.Component {
               return (
                 <Time key={index} label={k}>
                   {HISTORY[k].map(function (item, index) {
-                    return (
+                    return item.id === 'maa' ? (
+                      <React.Fragment key={index}>
+                        <TTitle>{item.title}</TTitle>
+                        <TSub>{item.sub}</TSub>
+                        <TDesc>{item.desc}</TDesc>
+                        <span>
+                          Learn more about MAA{' '}
+                          <a href="https://maasu.org/alumni">here</a>.
+                        </span>
+                      </React.Fragment>
+                    ) : (
                       <React.Fragment key={index}>
                         <TTitle>{item.title}</TTitle>
                         <TSub>{item.sub}</TSub>

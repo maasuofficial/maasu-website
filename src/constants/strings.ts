@@ -1,3 +1,4 @@
+export * from './conferences'
 export * from './core'
 export * from './external'
 export * from './pages'
