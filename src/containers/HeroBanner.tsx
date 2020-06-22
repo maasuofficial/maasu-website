@@ -15,17 +15,15 @@ export const HeroBanner: FC = () => {
     <Fragment>
       <div className="ttu ffhind fw700">
         <h2 className="mt9 tc">
-          <span className="fs3-ns fs2-s">
+          <span className="fs3-ns fs2-s dispb">
             {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
           </span>
-          <br />
           <a className="tdn" href={SOCIAL_FACEBOOK}>
-            <em className="fsn fs4 fs2-s ls2 fflibre fggold">
+            <em className="fsn fs4 fs2-s ls2 fflibre fggold dispb">
               {CONFERENCE_NAME}
             </em>
           </a>
-          <br />
-          <span className="fs3-ns fs2-s">{CONFERENCE_DATE_RANGE}</span>
+          <span className="fs3-ns fs2-s dispb">{CONFERENCE_DATE_RANGE}</span>
         </h2>
       </div>
       <div className="tc">

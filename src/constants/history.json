@@ -305,6 +305,12 @@
       "desc": "The 25th generation of ECC is elected."
     },
     {
+      "id": "maa",
+      "title": "MAASU Alumni Association Created",
+      "sub": "September",
+      "desc": "The MAASU Alumni Association (MAA) started in Fall 2016 to bring together past MAASU conference attendees. MAA’s purpose is to continue building and sustaining relationships between MAASU and its alumni."
+    },
+    {
       "title": "Leadership Summit - Journey to the Center",
       "sub": "November 11-16 | Northwestern University, Evanston, IL"
     }
@@ -325,6 +331,11 @@
       "title": "MAASU is incorporated in the state of Illinois",
       "sub": "April",
       "desc": "Articles of incorporation are submitted and approved in 2018."
+    },
+    {
+      "title": "MAASU changes its official title",
+      "sub": "April",
+      "desc": "MAASU changes its official name to Midwest Asian Pacific Islander Desi American Students Union for inclusivity. The acronym, MAASU, remains the same, and represents the entire APIDA community."
     },
     {
       "title": "Spring Conference - Overcome",
@@ -354,8 +365,8 @@
   ],
   "2020": [
     {
-      "title": "Spring Conference - Unwritten",
-      "sub": "March 20-22 | University of Minnesota-Twin Cities, MN"
+      "title": "Fall Conference - Unwritten",
+      "sub": "October 31 - November 1 | University of Minnesota-Twin Cities, MN"
     }
   ]
 }

@@ -19,16 +19,30 @@ body {
   background-color: var(--palette-background-main);
 }
 
+h1 {
+  @extend .fs5;
+}
+h2 {
+  @extend .fs4;
+}
+h3 {
+  @extend .fs3;
+}
+h4 {
+  @extend .fs2;
+}
+h5 {
+  @extend .fs1;
+}
+h6 {
+  @extend .fs0;
+}
+
 table,
 tr,
 td {
   border: 1px solid var(--palette-text-main);
   border-collapse: collapse;
-}
-
-.container {
-  @extend .mxa;
-  max-width: $containerWidth;
 }
 
 button,
@@ -40,4 +54,10 @@ textarea {
 
 button {
   cursor: pointer;
+}
+
+.container {
+  @extend .mxa;
+  @extend .mx2-s;
+  max-width: $containerWidth;
 }

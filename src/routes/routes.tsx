@@ -14,7 +14,6 @@ import {
   History,
   Host,
   MaasuX,
-  Members,
   NewsLetter,
   PastAwards,
   PastConf,
@@ -24,6 +23,7 @@ import {
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
+import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { PrivateRoute } from 'routes/PrivateRoute'
 
@@ -37,8 +37,7 @@ export const Routes = () => {
           <MissionContainer path="/mission" />
           <Board path="/board/:name" />
           <Board path="/board" />
-          <Members path="/members" />
-          <Members path="/membership" />
+          <MembershipContainer path="/membership" />
           <DC path="/directorscouncil" />
           <History path="/history" />
 
