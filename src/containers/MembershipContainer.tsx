@@ -1,7 +1,11 @@
 import React, { FC, useEffect } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
 import { fetchMembers } from 'store/Members/actions'
-import { getIsFetchingMembers, getMembers } from 'store/Members/selectors'
+import {
+  getIsFetchingMembers,
+  getMembers,
+  getMembersError,
+} from 'store/Members/selectors'
 import { AppState } from 'store/types'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
@@ -29,9 +33,10 @@ import {
 type Props = RouteComponentProps & ReduxProps & {}
 
 const Membership: FC<Props> = ({
-  isFetchingMembers,
   fetchMembers,
+  isFetchingMembers,
   members,
+  membersError,
 }) => {
   useDocumentTitle('Membership')
 
@@ -64,10 +69,6 @@ const Membership: FC<Props> = ({
     m.name.length > 0 &&
     new Date(new Date().toDateString()) <= new Date(m.expDate)
 
-  useEffect(() => {
-    fetchMembers()
-  }, [fetchMembers])
-
   const getMembersOrFallback = (): Member[] => {
     return members && members.length
       ? members
@@ -77,6 +78,12 @@ const Membership: FC<Props> = ({
   const filteredMembers: Member[] = getMembersOrFallback()
     .filter(isValidActiveMember)
     .sort(dictionarySort)
+
+  useEffect(() => {
+    if (!members.length && !membersError.length) {
+      fetchMembers()
+    }
+  }, [fetchMembers, members, membersError])
 
   return (
     <div className="container">
@@ -185,6 +192,7 @@ const Membership: FC<Props> = ({
 const mapStateToProps = (state: AppState) => ({
   isFetchingMembers: getIsFetchingMembers(state),
   members: getMembers(state),
+  membersError: getMembersError(state),
 })
 
 const mapDispatchToProps = {
