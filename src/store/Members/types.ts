@@ -28,3 +28,8 @@ export type MemberActionTypes =
   | { type: typeof MEMBERS_FETCH }
   | { type: typeof MEMBERS_SUCCESS; payload: Member[] }
   | { type: typeof MEMBERS_ERROR; payload: string }
+
+export type MemberAPIResponse = {
+  data: Member[]
+  error: object
+}

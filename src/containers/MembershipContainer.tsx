@@ -11,7 +11,6 @@ import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { Member } from 'store/Members/types'
 import { Page, Type } from 'components'
-import membersCache from 'constants/cache/members.json'
 import {
   MEMBERSHIP_BENEFITS_1,
   MEMBERSHIP_BENEFITS_2,
@@ -69,13 +68,7 @@ const Membership: FC<Props> = ({
     m.name.length > 0 &&
     new Date(new Date().toDateString()) <= new Date(m.expDate)
 
-  const getMembersOrFallback = (): Member[] => {
-    return members && members.length
-      ? members
-      : ((membersCache.data as unknown) as Member[])
-  }
-
-  const filteredMembers: Member[] = getMembersOrFallback()
+  const filteredMembers: Member[] = members
     .filter(isValidActiveMember)
     .sort(dictionarySort)
 
@@ -103,7 +96,7 @@ const Membership: FC<Props> = ({
 
       <h4 className="tc pt5">Members</h4>
       <ul>
-        {!isFetchingMembers ? (
+        {!isFetchingMembers && !membersError ? (
           filteredMembers.map((member, index) => (
             <li key={index}>
               {member.orgUrl ? (

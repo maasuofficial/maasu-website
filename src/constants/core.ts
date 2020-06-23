@@ -6,3 +6,6 @@ export const YEAR = '2020'
 export const SOCIAL_FACEBOOK = 'https://www.facebook.com/maasuofficial'
 export const SOCIAL_INSTAGRAM = 'https://www.instagram.com/maasuofficial'
 export const SOCIAL_TWITTER = ''
+
+export const IS_DEV_ENV =
+  !process.env.NODE_ENV || process.env.NODE_ENV === 'development'

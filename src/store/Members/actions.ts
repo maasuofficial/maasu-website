@@ -1,12 +1,11 @@
-import fetch from 'isomorphic-fetch'
-import { BASE_URL } from 'api/urls'
+import { api, BASE_URL } from 'store/api'
 import {
   MEMBERS_FETCH,
   MEMBERS_SUCCESS,
   MEMBERS_ERROR,
 } from 'constants/actions'
 import { Dispatch } from 'redux'
-import { Member } from './types'
+import { Member, MemberAPIResponse } from './types'
 
 export const membersRequest = () => ({
   type: MEMBERS_FETCH,
@@ -22,21 +21,11 @@ export const membersError = (error: string) => ({
   payload: error,
 })
 
-// TODO move to api/
-async function api<T>(url: string): Promise<T> {
-  return fetch(url).then((response) => {
-    if (!response.ok) {
-      throw new Error(response.statusText)
-    }
-    return response.json() as Promise<T>
-  })
-}
-
 export const fetchMembers = () => {
   return async (dispatch: Dispatch) => {
     dispatch(membersRequest())
     try {
-      const { data, error } = await api<{ data: Member[]; error: {} }>(
+      const { data, error } = await api<MemberAPIResponse>(
         `${BASE_URL}/members`
       )
       if (error) throw error
