@@ -1,10 +1,12 @@
-import React, { FC, useEffect, useState } from 'react'
-import fetch from 'isomorphic-fetch'
+import React, { FC, useEffect } from 'react'
+import { connect, ConnectedProps } from 'react-redux'
+import { fetchMembers } from 'store/Members/actions'
+import { getIsFetchingMembers, getMembers } from 'store/Members/selectors'
+import { AppState } from 'store/types'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
-import { Member } from 'store/types'
+import { Member } from 'store/Members/types'
 import { Page, Type } from 'components'
-import { BASE_URL } from 'api/urls'
 import membersCache from 'constants/cache/members.json'
 import {
   MEMBERSHIP_BENEFITS_1,
@@ -24,12 +26,14 @@ import {
   MREP_STMT_2,
 } from 'constants/strings'
 
-interface Props {}
+type Props = RouteComponentProps & ReduxProps & {}
 
-export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
+const Membership: FC<Props> = ({
+  isFetchingMembers,
+  fetchMembers,
+  members,
+}) => {
   useDocumentTitle('Membership')
-
-  const [members, setMembers] = useState<Member[]>([])
 
   const dictionarySort = (
     { name: nameA }: Member,
@@ -60,31 +64,19 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
     m.name.length > 0 &&
     new Date(new Date().toDateString()) <= new Date(m.expDate)
 
-  const membersExist: boolean = members && members.length > 0
-
   useEffect(() => {
-    fetch(`${BASE_URL}/members`)
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.error) throw res.error
+    fetchMembers()
+  }, [fetchMembers])
 
-        const filteredMembers: Member[] = (res.data as Member[])
-          .filter(isValidActiveMember)
-          .sort(dictionarySort)
+  const getMembersOrFallback = (): Member[] => {
+    return members && members.length
+      ? members
+      : ((membersCache.data as unknown) as Member[])
+  }
 
-        setMembers(filteredMembers)
-      })
-      .catch((e) => {
-        console.error(e)
-
-        // TODO temporary cache fallback
-        const filteredMembers: Member[] = ((membersCache.data as unknown) as Member[])
-          .filter(isValidActiveMember)
-          .sort(dictionarySort)
-
-        setMembers(filteredMembers)
-      })
-  }, [])
+  const filteredMembers: Member[] = getMembersOrFallback()
+    .filter(isValidActiveMember)
+    .sort(dictionarySort)
 
   return (
     <div className="container">
@@ -104,8 +96,8 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
 
       <h4 className="tc pt5">Members</h4>
       <ul>
-        {membersExist ? (
-          members.map((member, index) => (
+        {!isFetchingMembers ? (
+          filteredMembers.map((member, index) => (
             <li key={index}>
               {member.orgUrl ? (
                 <a href={member.orgUrl}>{member.name}</a>
@@ -189,3 +181,17 @@ export const MembershipContainer: FC<RouteComponentProps & Props> = () => {
     </div>
   )
 }
+
+const mapStateToProps = (state: AppState) => ({
+  isFetchingMembers: getIsFetchingMembers(state),
+  members: getMembers(state),
+})
+
+const mapDispatchToProps = {
+  fetchMembers,
+}
+
+const connector = connect(mapStateToProps, mapDispatchToProps)
+type ReduxProps = ConnectedProps<typeof connector>
+
+export const MembershipContainer = connector(Membership)
