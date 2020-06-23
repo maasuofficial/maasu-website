@@ -39,38 +39,16 @@ const Membership: FC<Props> = ({
 }) => {
   useDocumentTitle('Membership')
 
-  const dictionarySort = (
-    { name: nameA }: Member,
-    { name: nameB }: Member
-  ): number => {
-    const articles = ['a', 'an', 'the']
-
-    let nameAArr = nameA.toLocaleLowerCase().split(' ')
-    let nameBArr = nameB.toLocaleLowerCase().split(' ')
-
-    if (articles.indexOf(nameAArr[0]) >= 0) {
-      nameAArr = nameAArr.slice(1)
-    }
-
-    if (articles.indexOf(nameBArr[0]) >= 0) {
-      nameBArr = nameBArr.slice(1)
-    }
-
-    return nameAArr[0].localeCompare(nameBArr[0])
-  }
-
-  const isValidActiveMember = (m: Member): boolean =>
-    m.id != null &&
-    m.id.length > 0 &&
-    m.name != null &&
-    m.name.length > 0 &&
-    m.expDate != null &&
-    m.name.length > 0 &&
-    new Date(new Date().toDateString()) <= new Date(m.expDate)
-
-  const filteredMembers: Member[] = members
-    .filter(isValidActiveMember)
-    .sort(dictionarySort)
+  const filteredMembers: Member[] = members.filter(
+    (m: Member) =>
+      m.id != null &&
+      m.id.length > 0 &&
+      m.name != null &&
+      m.name.length > 0 &&
+      m.expDate != null &&
+      m.expDate.length > 0 &&
+      new Date(new Date().toDateString()) <= new Date(m.expDate)
+  )
 
   useEffect(() => {
     if (!members.length && !membersError.length) {

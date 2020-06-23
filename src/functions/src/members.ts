@@ -1,7 +1,29 @@
 import fetch from 'isomorphic-fetch'
 import { CSVtoObject, MEMBERS_ID, ResBody, ResData, ResError } from './utils'
 
-export async function handler(event: any, context: any) {
+type MemberType = { id: string; name: string }
+
+const dictionarySort = (
+  { name: nameA }: MemberType,
+  { name: nameB }: MemberType
+): number => {
+  const articles = ['a', 'an', 'the']
+
+  let nameAArr = nameA.toLocaleLowerCase().split(' ')
+  let nameBArr = nameB.toLocaleLowerCase().split(' ')
+
+  if (articles.indexOf(nameAArr[0]) >= 0) {
+    nameAArr = nameAArr.slice(1)
+  }
+
+  if (articles.indexOf(nameBArr[0]) >= 0) {
+    nameBArr = nameBArr.slice(1)
+  }
+
+  return nameAArr[0].localeCompare(nameBArr[0])
+}
+
+export const handler = async (event: any, context: any) => {
   let data: ResData = null
   let error: ResError = null
 
@@ -19,7 +41,11 @@ export async function handler(event: any, context: any) {
   }
 
   if (res) {
-    data = CSVtoObject(res as string)
+    let members: MemberType[] = CSVtoObject<MemberType>(res as string)
+    members = members.filter((m: MemberType) => m.id != null && m.name != null)
+    members = members.sort(dictionarySort)
+
+    data = members
   }
 
   const body: ResBody = { data, error }
