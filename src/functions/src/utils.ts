@@ -1,13 +1,28 @@
+import fetch from 'isomorphic-fetch'
+
 // -----------------------------------------------------
 // Constants
 // -----------------------------------------------------
 
-export const MEMBERS_ID =
-  '2PACX-1vTi1LU778yHT3zp77SNk7wi8s2NmIxj-eM8RC1oB2hRuseiXFacb28Hb1wrvStakENnnS40HR9ulkBi'
+export const DB_MASTER =
+  '2PACX-1vRyNMns3pIM4ODIZZT0BZRQbjBLgM4RK6LHW-lpj7vHe43h-v_VoibacQyE12xqIh5BP1ecCzRAJyei'
+
+export const MEMBERS_ID = '0'
+
+export const CONFERENCES_ID = '1511181098'
 
 // -----------------------------------------------------
 // Functions
 // -----------------------------------------------------
+
+export const getHeaders = () => ({
+  headers: {
+    'content-type': 'application/json',
+    // enable CORS
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT',
+  },
+})
 
 // converts "regular csv" to an array.
 // prevents funky cases like strings with commas in them,
@@ -18,10 +33,10 @@ export const CSVtoStrArr = (text: string): string[] | null => {
   const reValue = /(?!\s*$)\s*(?:'([^'\\]*(?:\\[\S\s][^'\\]*)*)'|"([^"\\]*(?:\\[\S\s][^"\\]*)*)"|([^,'"\s\\]*(?:\s+[^,'"\s\\]+)*))\s*(?:,|$)/g
   // Return NULL if input string is not well formed CSV string.
   if (!reValid.test(text)) return null
-  var a = [] // Initialize array to receive values.
+  const a = [] // Initialize array to receive values.
   text.replace(
     reValue, // "Walk" the string using replace with callback.
-    (m0, m1, m2, m3) => {
+    (_, m1, m2, m3) => {
       // Remove backslash from \' in single quoted values.
       if (m1 !== undefined) a.push(m1.replace(/\\'/g, "'"))
       // Remove backslash from \" in double quoted values.
@@ -35,7 +50,7 @@ export const CSVtoStrArr = (text: string): string[] | null => {
   return a
 }
 
-export const CSVtoObject = (csv: string): object[] => {
+export const CSVtoObject = <T>(csv: string): T[] => {
   const rows: string[][] = csv.split(/\r\n/).map((r) => {
     let strArr: string[] | null = CSVtoStrArr(r)
     if (!strArr) strArr = []
@@ -43,7 +58,7 @@ export const CSVtoObject = (csv: string): object[] => {
   })
   const props = rows.splice(0, 1)[0]
 
-  const data: object[] = []
+  const data: T[] = []
   for (const r of rows) {
     const item: any = {}
     for (let i = 0; i < props.length; i++) {
@@ -54,6 +69,63 @@ export const CSVtoObject = (csv: string): object[] => {
   }
 
   return data
+}
+
+export const fetchCSVObject = async <T>(
+  id: string
+): Promise<{
+  data: T[]
+  error: ResError
+}> => {
+  let res = null
+  let error: ResError = null
+
+  try {
+    res = await fetch(
+      `https://docs.google.com/spreadsheets/d/e/${DB_MASTER}/pub?gid=${id}&output=csv`
+    )
+    res = await res.text()
+  } catch (e) {
+    error = {
+      code: 404,
+      message: 'unable to fetch data',
+    }
+  }
+
+  const data: T[] = CSVtoObject<T>(res as string)
+
+  return { data, error }
+}
+
+export const dictionarySort = (a: string, b: string): number => {
+  const articles = ['a', 'an', 'the']
+
+  let nameAArr = a.toLocaleLowerCase().split(' ')
+  let nameBArr = b.toLocaleLowerCase().split(' ')
+
+  if (articles.indexOf(nameAArr[0]) >= 0) {
+    nameAArr = nameAArr.slice(1)
+  }
+
+  if (articles.indexOf(nameBArr[0]) >= 0) {
+    nameBArr = nameBArr.slice(1)
+  }
+
+  return nameAArr[0].localeCompare(nameBArr[0])
+}
+
+export const descDateSort = (a: string, b: string): number => {
+  const dateA = new Date(a)
+  const dateB = new Date(b)
+
+  let comp = 0
+  if (dateB < dateA) {
+    comp = -1
+  } else if (dateA < dateB) {
+    comp = 1
+  }
+
+  return comp
 }
 
 // -----------------------------------------------------

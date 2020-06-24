@@ -1,3 +1,4 @@
+import { Member, MemberState } from './Members/types'
 import {
   LEADERSHIP_SUMMIT,
   SPRING_CONFERENCE,
@@ -6,25 +7,6 @@ import {
   SEASON_SPRING,
   SEASON_FALL,
 } from 'constants/strings'
-
-// -----------------------------------------------------
-// Member
-// -----------------------------------------------------
-
-export type Member = {
-  // nameAbv or main name identifier
-  id: string
-  name: string
-  nameAbv?: string
-  orgName?: string
-  orgNameAbv?: string
-  orgUrl?: string
-  city: string
-  state: string
-  expDate: string
-  mrepName: string
-  mrepEmail: string
-}
 
 // -----------------------------------------------------
 // BoardMember
@@ -129,4 +111,8 @@ export type Alumni = {
   undergradInstitution: Member
   gradYear: number
   conferences: Conference[]
+}
+
+export type AppState = {
+  members: MemberState
 }

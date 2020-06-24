@@ -25,6 +25,7 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 + [Module Organization](#module-organization)
 + [Styling and CSS](#styling-and-css)
 + [Branding](#branding)
++ [State Management](#state-management)
 + [Testing](#testing)
 + [Responsive Web Design](#responsive-web-design)
 + [Notes](#notes)
@@ -92,8 +93,14 @@ Utilizing `git` and `github`:
 git checkout master && git pull
 git branch -D staging
 git checkout -b staging
+git push origin +staging
 ```
 > This deletes the local staging branch and syncs it with master.
+
+> The last command will force push the commits in master to the staging branch. Be cautious 
+> when doing so, as it may overwrite any changes you originally had in staging.
+> Make sure you have no changes in staging you may not want to overwrite.
+
 2. Make your changes to the `staging` branch, whether through a feature branch or manually.
 3. Commit those changes.
 ```
@@ -105,10 +112,6 @@ git commit -m "commit title"
 git pull --rebase origin master
 git push origin +staging
 ```
-> The last command will force push to the staging branch. Be cautious when doing so,
-> as it may overwrite any changes you originally had in staging.
-> Make sure you have no changes in staging you may not want to overwrite.
-
 > Note: To avoid conflicts, try not to drastically change too many files at once.
 > It's a better strategy to create short and quick fixes and merge those commits
 > together.
@@ -379,6 +382,56 @@ convoluted class names or large css files because **once you code a css class, y
 ## Branding <a name="branding"></a>
 
 Branding for MAASU is still being determined!
+
+## State Management <a name="state-management"></a>
+
+State managment is a key factor in organization of React applications, especially as they grow.
+While React has built-in state management, this application uses a combination of 
+[redux](https://redux.js.org/), [react-redux](https://react-redux.js.org/),
+[redux-thunk](https://github.com/reduxjs/redux-thunk), and 
+[redux-devtools-extension](https://github.com/zalmoxisus/redux-devtools-extension).
+While the former three are necessary for this application to function, the latter simply exists to make development and
+state debugging much easier.
+
+### Motivation
+
+Why is a popular library like Redux needed for a React application? Doesn't React come with a built-in state? I found
+myself asking those questions a year ago, and for the longest time, I refused to use Redux because I found no purpose to
+it other than application bloat and unnecessary debugging stress. So here's the things I learned to change my mind.
+
+1. UI state is different from data state, and the two should be separated.
+
+    In the same way frontend is separated from backend, data should not mix with UI, nor should either be interdependent. 
+    With Redux, UI state is completely managed by React state, while data is managed completely by Redux. This reduces 
+    overlap and UI state bugs tearing apart data state. It also keeps the application more organized overall.
+
+2. Redux prevents unpredictable changes to state.
+
+    The most annoying thing about React (and one of its strongest components) is its state management. When state is updated,
+    it's complicated enough to understand how state changes affect rendering, when and how a component's children are updated,
+    and so on. As an application grows new components, data sources, data structures, theis becomes a complicated mess of 
+    components updating its siblings, parents, children, and it becomes nearly impossible to keep track of what components update
+    which slices of state.
+
+    Redux is different. Redux makes state management predictable by separating state from the components so that a component cannot
+    directly update the state. Instead, actions must be manually dispatched to update the state (known as the store), and each
+    action is accounted for and recorded. Redux-thunk makes logging these actions much simpler.
+
+3. Project organization.
+
+    As mentioned before, Redux separates data state from UI state. However, it also manages store separately from components,
+    meaning it becomes much easier to group connected slices of state, regardless of which components use it.
+
+4. Global state
+
+    This was the main selling point of Redux for most people before React hooks, but it provides a simple wrapper for providing
+    a global state across components.
+
+    > With the introduction of React hooks, it could technically be replicated in pure React using context, but at that point,
+    > you'd essentially be coding Redux from scratch.
+
+It goes without saying that the core concepts of Redux are complicated to wrap your head around at first. But 
+investing the time to learn the basics of Redux will be worth it.
 
 ## Testing <a name="testing"></a>
 
