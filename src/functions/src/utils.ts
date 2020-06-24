@@ -1,13 +1,28 @@
+import fetch from 'isomorphic-fetch'
+
 // -----------------------------------------------------
 // Constants
 // -----------------------------------------------------
 
-export const MEMBERS_ID =
-  '2PACX-1vTi1LU778yHT3zp77SNk7wi8s2NmIxj-eM8RC1oB2hRuseiXFacb28Hb1wrvStakENnnS40HR9ulkBi'
+export const DB_MASTER =
+  '2PACX-1vRyNMns3pIM4ODIZZT0BZRQbjBLgM4RK6LHW-lpj7vHe43h-v_VoibacQyE12xqIh5BP1ecCzRAJyei'
+
+export const MEMBERS_ID = '0'
+
+export const CONFERENCES_ID = '1511181098'
 
 // -----------------------------------------------------
 // Functions
 // -----------------------------------------------------
+
+export const getHeaders = () => ({
+  headers: {
+    'content-type': 'application/json',
+    // enable CORS
+    'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Methods': 'GET, POST, PUT',
+  },
+})
 
 // converts "regular csv" to an array.
 // prevents funky cases like strings with commas in them,
@@ -54,6 +69,49 @@ export const CSVtoObject = <T>(csv: string): T[] => {
   }
 
   return data
+}
+
+export const fetchCSVObject = async <T>(
+  id: string
+): Promise<{
+  data: T[]
+  error: ResError
+}> => {
+  let res = null
+  let error: ResError = null
+
+  try {
+    res = await fetch(
+      `https://docs.google.com/spreadsheets/d/e/${DB_MASTER}/pub?gid=${id}&output=csv`
+    )
+    res = await res.text()
+  } catch (e) {
+    error = {
+      code: 404,
+      message: 'unable to fetch data',
+    }
+  }
+
+  const data: T[] = CSVtoObject<T>(res as string)
+
+  return { data, error }
+}
+
+export const dictionarySort = (a: string, b: string): number => {
+  const articles = ['a', 'an', 'the']
+
+  let nameAArr = a.toLocaleLowerCase().split(' ')
+  let nameBArr = b.toLocaleLowerCase().split(' ')
+
+  if (articles.indexOf(nameAArr[0]) >= 0) {
+    nameAArr = nameAArr.slice(1)
+  }
+
+  if (articles.indexOf(nameBArr[0]) >= 0) {
+    nameBArr = nameBArr.slice(1)
+  }
+
+  return nameAArr[0].localeCompare(nameBArr[0])
 }
 
 // -----------------------------------------------------
