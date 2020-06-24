@@ -26,6 +26,14 @@ communication among Asian American student organizations across the
 Midwest.
 `
 
+export const PURPOSE_IMG_ALT = `
+The first MAASU meeting
+`
+
+export const PURPOSE_IMG_CAPTION = `
+The first MAASU meeting. Front row (from left to right): Tom Lo (Purdue), Charles Chang (Ohio State), Nancy Kim (Michigan State), name unknown (Miami University), Yeeleng Hang (Michigan State), Jessica Kimura (Michigan State). Second Row: name unknown (Miami Univ.), name unknown (Miami Univ.), John Kim (Miami Univ.), unknown, Wen Hsu (Michigan State), Emily (Oberlin College). Third Row: Allan Lo (Ohio State), Mary Kim (Ohio State), Nimesh Nimesh M. Patel (Michigan State), Mr. Tong (Univ. of Michigan), Joanna Su (Univ of Michigan), Linus Huang (Oberlin College), name unknown (Univ. of Michigan). Photographer was Erika Seo (Ohio State).
+`
+
 // -----------------------------------------------------
 // Mission
 // -----------------------------------------------------

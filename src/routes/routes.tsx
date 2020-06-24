@@ -20,6 +20,7 @@ import {
   // Upcoming,
   WhereAreYouFrom,
 } from '../containers'
+import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
@@ -58,6 +59,7 @@ export const Routes = () => {
             component={MAAContainer}
           />
 
+          <AnnualReportContainer path="/annual" />
           <NewsLetter path="/newsletter" />
           <PastAwards path="/pastawards" />
           <PastConf path="/pastconferences" />

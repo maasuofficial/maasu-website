@@ -13,6 +13,8 @@ import {
   MISSION_STMT_5,
   PURPOSE_STMT_1,
   PURPOSE_STMT_2,
+  PURPOSE_IMG_ALT,
+  PURPOSE_IMG_CAPTION,
   SERVE_STMT_1,
   SERVE_STMT_2,
   STRATEGIC_PLAN,
@@ -31,12 +33,13 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
         </div>
         <p>{PURPOSE_STMT_1}</p>
+        <p>{PURPOSE_STMT_2}</p>
         <BImg
           className="w-100 mxa"
           src={findAsset('img/old-ecc.png')}
-          alt="The first Executive Coordinating Committee"
+          alt={PURPOSE_IMG_ALT}
         />
-        <p>{PURPOSE_STMT_2}</p>
+        <div className="fsi w-100 w-80-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
       </Page>
       <Page>
         <h3 className="mt0 tc fs2 ffhind fw700">Our Mission</h3>
