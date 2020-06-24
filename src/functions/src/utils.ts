@@ -114,6 +114,20 @@ export const dictionarySort = (a: string, b: string): number => {
   return nameAArr[0].localeCompare(nameBArr[0])
 }
 
+export const descDateSort = (a: string, b: string): number => {
+  const dateA = new Date(a)
+  const dateB = new Date(b)
+
+  let comp = 0
+  if (dateB < dateA) {
+    comp = -1
+  } else if (dateA < dateB) {
+    comp = 1
+  }
+
+  return comp
+}
+
 // -----------------------------------------------------
 // Types
 // -----------------------------------------------------
