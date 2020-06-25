@@ -1,11 +1,11 @@
 import React, { FC, useEffect } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
-import { fetchMembers } from 'store/Members/actions'
+import { fetchMembers } from 'store/actions'
 import {
   getIsFetchingMembers,
   getMembers,
   getMembersError,
-} from 'store/Members/selectors'
+} from 'store/selectors'
 import { AppState } from 'store/types'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
@@ -31,7 +31,7 @@ import {
 
 type Props = RouteComponentProps & ReduxProps & {}
 
-const Membership: FC<Props> = ({
+export const Membership: FC<Props> = ({
   fetchMembers,
   isFetchingMembers,
   members,

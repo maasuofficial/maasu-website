@@ -12,7 +12,6 @@ import MaasuX from './MaasuX'
 import WrapperMenu from './WrapperMenu'
 import NewsLetter from './NewsLetter'
 import PastAwards from './PastAwards'
-import PastConf from './PastConf'
 import Report from './Report'
 import Upcoming from './Upcoming'
 import WhereAreYouFrom from './WhereAreYouFrom'
@@ -33,7 +32,6 @@ export {
   WrapperMenu,
   NewsLetter,
   PastAwards,
-  PastConf,
   Report,
   Upcoming,
   WhereAreYouFrom,

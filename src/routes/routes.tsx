@@ -16,11 +16,11 @@ import {
   MaasuX,
   NewsLetter,
   PastAwards,
-  PastConf,
   // Upcoming,
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { ConferencesContainer } from 'containers/ConferencesContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
@@ -62,7 +62,7 @@ export const Routes = () => {
           <AnnualReportContainer path="/annual" />
           <NewsLetter path="/newsletter" />
           <PastAwards path="/pastawards" />
-          <PastConf path="/pastconferences" />
+          <ConferencesContainer path="/conferences" />
 
           <Donate path="/donate" />
           <DonateComp path="/donate-complete" test={true} />

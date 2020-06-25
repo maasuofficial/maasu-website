@@ -19,7 +19,7 @@ export type Member = {
 }
 
 export type MemberState = {
-  loading: boolean
+  isFetching: boolean
   members: Member[]
   error: string
 }

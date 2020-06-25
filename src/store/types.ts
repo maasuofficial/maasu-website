@@ -1,12 +1,5 @@
 import { Member, MemberState } from './Members/types'
-import {
-  LEADERSHIP_SUMMIT,
-  SPRING_CONFERENCE,
-  FALL_CONFERENCE,
-  MAASUX,
-  SEASON_SPRING,
-  SEASON_FALL,
-} from 'constants/strings'
+import { Conference, ConferenceState } from './Conferences/types'
 
 // -----------------------------------------------------
 // BoardMember
@@ -38,36 +31,6 @@ export type BoardMember = {
   position: Position
   bio: string
   school: Member
-}
-
-// -----------------------------------------------------
-// Conference
-// -----------------------------------------------------
-
-export type SeasonType = typeof SEASON_SPRING | typeof SEASON_FALL
-
-export type ConferenceType =
-  | typeof LEADERSHIP_SUMMIT
-  | typeof SPRING_CONFERENCE
-  | typeof FALL_CONFERENCE
-  | typeof MAASUX
-
-export type Conference = {
-  // season, year abbreviation
-  id: string
-  title: string
-  desc: string
-  season: SeasonType
-  type: ConferenceType
-  date: string
-  // date: Date
-  bid?: string
-  logo?: string
-  banner?: string
-  city: string
-  state: string
-  // host: Member
-  host: string
 }
 
 // -----------------------------------------------------
@@ -115,4 +78,5 @@ export type Alumni = {
 
 export type AppState = {
   members: MemberState
+  conferences: ConferenceState
 }
