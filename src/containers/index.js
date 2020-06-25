@@ -8,7 +8,6 @@ import DC from './DC'
 import History from './History'
 import Home from './Home'
 import Host from './Host'
-import MaasuX from './MaasuX'
 import WrapperMenu from './WrapperMenu'
 import NewsLetter from './NewsLetter'
 import PastAwards from './PastAwards'
@@ -28,7 +27,6 @@ export {
   History,
   Home,
   Host,
-  MaasuX,
   WrapperMenu,
   NewsLetter,
   PastAwards,

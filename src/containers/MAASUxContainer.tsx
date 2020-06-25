@@ -9,17 +9,17 @@ import {
   getConferences,
   getConferencesError,
 } from 'store/selectors'
-import { MONTHS } from 'constants/strings'
+import { MAASUX, MAASUX_STMT, MONTHS } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
 
-export const Conferences: FC<Props> = ({
+export const MAASUx: FC<Props> = ({
   isFetchingConferences,
   fetchConferences,
   conferences,
   conferencesError,
 }) => {
-  useDocumentTitle('Conferences')
+  useDocumentTitle('MAASUx')
 
   useEffect(() => {
     if (!conferences.length && !conferencesError.length) {
@@ -29,11 +29,15 @@ export const Conferences: FC<Props> = ({
 
   return (
     <div className="container">
-      <h3 className="tc pt5">Conferences</h3>
-      <p className="tc">
-        Below is a summary of all conferences that MAASU has aided in hosting or
-        organizing.
+      <h3 className="tc pt5">MAASUx</h3>
+      <p>{MAASUX_STMT}</p>
+      <p>
+        If your school is interested in hosting a MAASUx, please contact our
+        programming chair for more information at{' '}
+        <a href="mailto:programming@maasu.org">programming@maasu.org</a>.
       </p>
+
+      <h4 className="tc pt5">Previous MAASUx Hosts</h4>
 
       {isFetchingConferences || conferencesError ? (
         <span>loading...</span>
@@ -48,26 +52,28 @@ export const Conferences: FC<Props> = ({
             </tr>
           </thead>
           <tbody>
-            {conferences.map((c, index) => {
-              const d = new Date(c.date)
-              const ye = d.getFullYear()
-              const mo = MONTHS[d.getMonth()]
+            {conferences
+              .filter((c) => c.type === MAASUX.value)
+              .map((c, index) => {
+                const d = new Date(c.date)
+                const ye = d.getFullYear()
+                const mo = MONTHS[d.getMonth()]
 
-              const date = c.isApproxDate
-                ? `${mo}, ${ye}`
-                : `${mo} ${d.getDate()}, ${ye}`
+                const date = c.isApproxDate
+                  ? `${mo}, ${ye}`
+                  : `${mo} ${d.getDate()}, ${ye}`
 
-              return (
-                c.id && (
-                  <tr key={index}>
-                    <td>{date}</td>
-                    <td>{c.type}</td>
-                    <td>{c.title}</td>
-                    <td>{`${c.host}, ${c.state}`}</td>
-                  </tr>
+                return (
+                  c.id && (
+                    <tr key={index}>
+                      <td>{date}</td>
+                      <td>{c.type}</td>
+                      <td>{c.title}</td>
+                      <td>{`${c.host}, ${c.state}`}</td>
+                    </tr>
+                  )
                 )
-              )
-            })}
+              })}
           </tbody>
         </table>
       )}
@@ -88,4 +94,4 @@ const mapDispatchToProps = {
 const connector = connect(mapStateToProps, mapDispatchToProps)
 type ReduxProps = ConnectedProps<typeof connector>
 
-export const ConferencesContainer = connector(Conferences)
+export const MAASUxContainer = connector(MAASUx)

@@ -277,3 +277,23 @@ one organization or school.
 export const AWARDS_BOA_STATUS = `
 The application is now closed.
 `
+
+// -----------------------------------------------------
+// Awards
+// -----------------------------------------------------
+
+export const MAASUX_STMT = `
+MAASUx is a locally-hosted conference event designed to create 
+additional opportunities to engage in community building. MAASUx 
+promotes accessibility to educational resources by bringing the 
+MAASU experience to you. MAASUx is coordinated with a hosting 
+organization on campus, creating leadership opportunities to 
+engage students on the campus to create an interactive curriculum. 
+It is a free event for participants, designed to attract college 
+students from surrounding campuses to participate in a series of 
+short, carefully tailored workshops and social activities. Through 
+the more intimate setting of MAASUx events, students can engage in 
+creating high-quality connections with their peers and have the 
+opportunity to reflect on their intersecting identities and 
+experiences.
+`

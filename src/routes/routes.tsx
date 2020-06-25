@@ -13,7 +13,6 @@ import {
   DC,
   History,
   Host,
-  MaasuX,
   NewsLetter,
   PastAwards,
   // Upcoming,
@@ -24,6 +23,7 @@ import { ConferencesContainer } from 'containers/ConferencesContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
+import { MAASUxContainer } from 'containers/MAASUxContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { PrivateRoute } from 'routes/PrivateRoute'
@@ -45,7 +45,7 @@ export const Routes = () => {
           {/* <Upcoming path="/upcoming" /> */}
           <Host path="/host" />
 
-          <MaasuX path="/maasux" />
+          <MAASUxContainer path="/maasux" />
           <WhereAreYouFrom path="/whereareyoufrom" />
 
           <Awards path="/awards" />
