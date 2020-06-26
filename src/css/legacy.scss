@@ -56,11 +56,7 @@ $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
   background: linear-gradient(270deg, $bg, $fg, $bg);
   background-size: 400% 400%;
 
-  -webkit-animation: Placeholder 2s ease infinite;
-  -moz-animation: Placeholder 2s ease infinite;
-  -ms-animation: Placeholder 2s ease infinite;
-  -o-animation: Placeholder 2s ease infinite;
-  animation: Placeholder 2s ease infinite;
+  @include vendor(animation, Placeholder 2s ease infinite);
 }
 
 @-webkit-keyframes Placeholder {
@@ -171,7 +167,7 @@ $map: (
   }
 }
 
-$stringWidth: calc(4rem / 8);
+$stringWidth: calc(0.5rem);
 $stringColor: var(--palette-primary-main);
 
 .timeContainer {
