@@ -1,4 +1,5 @@
 import React from 'react'
+import { EA } from 'components/EmailAnchor'
 import { Page, Type } from '../../components'
 import { SOCIAL_FACEBOOK } from 'constants/strings'
 
@@ -34,7 +35,7 @@ class WhereAreYouFrom extends React.Component {
         </p>
         <p>
           For more information on this project, contact our advocacy chair at{' '}
-          <a href="mailto:advocacy@maasu.org">advocacy@maasu.org</a>.
+          <EA>advocacy@maasu.org</EA>.
         </p>
       </Page>
     )

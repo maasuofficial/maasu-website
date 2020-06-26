@@ -49,11 +49,16 @@
   .tdn#{$media} {
     text-decoration: none !important;
   }
+
+  .hov-tdn#{$media}:hover {
+    @extend .tdn#{$media};
+  }
+
   .tdu#{$media} {
     text-decoration: underline !important;
   }
 
-  .hover-tdu#{$media}:hover {
+  .hov-tdu#{$media}:hover {
     @extend .tdu#{$media};
   }
 
@@ -286,3 +291,19 @@
   }
 }
 @include placement();
+
+/**
+ * -----------------------------------------------------
+ * Colors
+ * -----------------------------------------------------
+ */
+
+@mixin colors($media: '') {
+  .c-inh#{$media} {
+    color: inherit !important;
+  }
+  .c-ini#{$media} {
+    color: initial !important;
+  }
+}
+@include colors();

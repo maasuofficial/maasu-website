@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
+import { EA } from 'components/EmailAnchor'
 import { AppState } from 'store/types'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
@@ -33,8 +34,8 @@ export const MAASUx: FC<Props> = ({
       <p>{MAASUX_STMT}</p>
       <p>
         If your school is interested in hosting a MAASUx, please contact our
-        programming chair for more information at{' '}
-        <a href="mailto:programming@maasu.org">programming@maasu.org</a>.
+        programming chair for more information at <EA>programming@maasu.org</EA>
+        .
       </p>
 
       <h4 className="title4 tc pt5">Previous MAASUx Hosts</h4>

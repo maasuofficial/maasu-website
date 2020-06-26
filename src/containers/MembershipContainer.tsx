@@ -1,5 +1,6 @@
 import React, { FC, useEffect } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
+import { EA } from 'components/EmailAnchor'
 import { fetchMembers } from 'store/actions'
 import {
   getIsFetchingMembers,
@@ -69,7 +70,7 @@ export const Membership: FC<Props> = ({
       </ul>
       <p>
         For more information on eligibility and benefits, contact{' '}
-        <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
+        <EA>ecc@maasu.org</EA>.
       </p>
 
       <h4 className="title4 tc pt5">Members</h4>
@@ -103,7 +104,7 @@ export const Membership: FC<Props> = ({
           <p>{MREP_STMT_2}</p>
           <p>
             For additional questions regarding membership please contact{' '}
-            <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
+            <EA>ecc@maasu.org</EA>.
           </p>
         </Page>
         <Page>

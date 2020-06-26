@@ -1,4 +1,5 @@
 import React from 'react'
+import { EA } from 'components/EmailAnchor'
 import { Page, Type } from '../../components'
 import { DONATE_MAASU_URL } from 'constants/strings'
 
@@ -33,10 +34,7 @@ class Donate extends React.Component {
 
         <p>
           If you have any questions, please reach out to the{' '}
-          <a href="mailto:directorscouncil@maasu.org">
-            Directorscouncil@maasu.org
-          </a>
-          .
+          <EA>directorscouncil@maasu.org</EA>.
         </p>
 
         <p className={'donateButtonWrapper-donate'}>

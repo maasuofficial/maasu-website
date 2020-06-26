@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`applies the correct link subject 1`] = `
+<a
+  className="c-inh tdu hov-tdn "
+  href="mailto:test@test.test"
+>
+  test@test.test
+</a>
+`;
