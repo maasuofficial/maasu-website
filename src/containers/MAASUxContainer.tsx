@@ -29,7 +29,7 @@ export const MAASUx: FC<Props> = ({
 
   return (
     <div className="container">
-      <h3 className="tc pt5">MAASUx</h3>
+      <h3 className="title3 tc pt5">MAASUx</h3>
       <p>{MAASUX_STMT}</p>
       <p>
         If your school is interested in hosting a MAASUx, please contact our
@@ -37,7 +37,7 @@ export const MAASUx: FC<Props> = ({
         <a href="mailto:programming@maasu.org">programming@maasu.org</a>.
       </p>
 
-      <h4 className="tc pt5">Previous MAASUx Hosts</h4>
+      <h4 className="title4 tc pt5">Previous MAASUx Hosts</h4>
 
       {isFetchingConferences || conferencesError ? (
         <span>loading...</span>

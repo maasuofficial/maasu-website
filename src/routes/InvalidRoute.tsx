@@ -8,7 +8,7 @@ interface Props {
 export const InvalidRoute: FC<RouteComponentProps & Props> = ({ code }) => {
   return (
     <div className="container">
-      <h1 className="tc">{code}</h1>
+      <h2 className="title2 tc">{code}</h2>
       <p className="tc">
         Oops, we can't seem to find the page you're looking for.
       </p>

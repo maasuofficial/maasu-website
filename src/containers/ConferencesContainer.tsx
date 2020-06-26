@@ -29,7 +29,7 @@ export const Conferences: FC<Props> = ({
 
   return (
     <div className="container">
-      <h3 className="tc pt5">Conferences</h3>
+      <h3 className="title3 tc pt5">Conferences</h3>
       <p className="tc">
         Below is a summary of all conferences that MAASU has aided in hosting or
         organizing.

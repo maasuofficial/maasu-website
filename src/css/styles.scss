@@ -4,7 +4,6 @@
 *,
 *::before,
 *::after {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -12,30 +11,19 @@ body {
   font-size: 16px;
   font-family: 'Hind', sans-serif;
   line-height: 1.2; // no units for multiplier
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
   color: var(--palette-text-main);
   background-color: var(--palette-background-main);
 }
 
-h1 {
-  @extend .fs5;
-}
-h2 {
-  @extend .fs4;
-}
-h3 {
-  @extend .fs3;
-}
-h4 {
-  @extend .fs2;
-}
-h5 {
-  @extend .fs1;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
 h6 {
-  @extend .fs0;
+  margin: 0;
+  font-size: 1rem;
 }
 
 table,

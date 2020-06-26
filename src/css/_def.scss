@@ -28,6 +28,24 @@ $queryMap: (
 
 /**
  * -----------------------------------------------------
+ * Browser Support
+ * 
+ * Vendor prefixes and browser-specific code creates
+ * "technical debt" and obfuscates the code base. This
+ * section aims to minimize these intricate code cases.
+ * -----------------------------------------------------
+ */
+
+$vendorPrefixList: ('-webkit-', '-moz-', '-ms-', '-o-', '');
+
+@mixin vendor($prop, $value) {
+  @each $v in $vendorPrefixList {
+    #{$v}#{$prop}: #{$value};
+  }
+}
+
+/**
+ * -----------------------------------------------------
  * Typography
  * 
  * Scale created with https://type-scale.com, using

@@ -58,10 +58,10 @@ export const Membership: FC<Props> = ({
 
   return (
     <div className="container">
-      <h3 className="tc pt5">Membership</h3>
+      <h3 className="title3 tc pt5">Membership</h3>
       <p>{MEMBERSHIP_PRELUDE}</p>
 
-      <h4 className="tc pt5">Benefits</h4>
+      <h4 className="title4 tc pt5">Benefits</h4>
       <ul>
         <li>{MEMBERSHIP_BENEFITS_1}</li>
         <li>{MEMBERSHIP_BENEFITS_2}</li>
@@ -72,7 +72,7 @@ export const Membership: FC<Props> = ({
         <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
       </p>
 
-      <h4 className="tc pt5">Members</h4>
+      <h4 className="title4 tc pt5">Members</h4>
       <ul>
         {!isFetchingMembers && !membersError ? (
           filteredMembers.map((member, index) => (

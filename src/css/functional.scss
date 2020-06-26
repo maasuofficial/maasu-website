@@ -60,6 +60,25 @@
   .ttu {
     text-transform: uppercase;
   }
+
+  .title1#{$media} {
+    @extend .fs5#{$media};
+  }
+  .title2#{$media} {
+    @extend .fs4#{$media};
+  }
+  .title3#{$media} {
+    @extend .fs3#{$media};
+  }
+  .title4#{$media} {
+    @extend .fs2#{$media};
+  }
+  .title5#{$media} {
+    @extend .fs1#{$media};
+  }
+  .title6#{$media} {
+    @extend .fs0#{$media};
+  }
 }
 @include typography();
 
