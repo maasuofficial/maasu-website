@@ -3,15 +3,12 @@ import ApiaOrgs from './ApiaOrgs'
 import Awards from './Awards'
 import Board from './Board'
 import Contact from './Contact'
-import { Donate, DonateComp } from './Donate'
 import DC from './DC'
 import History from './History'
 import Home from './Home'
 import WrapperMenu from './WrapperMenu'
 import NewsLetter from './NewsLetter'
 import PastAwards from './PastAwards'
-import Report from './Report'
-import Upcoming from './Upcoming'
 import WhereAreYouFrom from './WhereAreYouFrom'
 
 export {
@@ -20,15 +17,11 @@ export {
   Awards,
   Board,
   Contact,
-  Donate,
-  DonateComp,
   DC,
   History,
   Home,
   WrapperMenu,
   NewsLetter,
   PastAwards,
-  Report,
-  Upcoming,
   WhereAreYouFrom,
 }

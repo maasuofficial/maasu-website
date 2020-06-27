@@ -8,17 +8,18 @@ import {
   Awards,
   Board,
   Contact,
-  Donate,
-  DonateComp,
   DC,
   History,
   NewsLetter,
   PastAwards,
-  // Upcoming,
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
+import {
+  DonateContainer,
+  DonateCompleteContainer,
+} from 'containers/DonateContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { HostContainer } from 'containers/HostContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
@@ -42,7 +43,6 @@ export const Routes = () => {
           <DC path="/directorscouncil" />
           <History path="/history" />
 
-          {/* <Upcoming path="/upcoming" /> */}
           <HostContainer path="/host" />
 
           <MAASUxContainer path="/maasux" />
@@ -64,8 +64,8 @@ export const Routes = () => {
           <PastAwards path="/pastawards" />
           <ConferencesContainer path="/conferences" />
 
-          <Donate path="/donate" />
-          <DonateComp path="/donate-complete" test={true} />
+          <DonateContainer path="/donate" />
+          <DonateCompleteContainer path="/donate-complete" />
           <Contact path="/contact" />
 
           <InvalidRoute code={404} default />

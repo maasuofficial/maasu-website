@@ -10,7 +10,7 @@ export const AnnualReportContainer: FC<RouteComponentProps & Props> = () => {
 
   return (
     <div className="container">
-      <h3 className="title3 tc pt5">Annual Report</h3>
+      <h3 className="title3 tc pt6">Annual Report</h3>
       <p className="tc">
         The annual report is a compilation of all of MAASU's achievements,
         distinctions, and news for the given year. Below are the previous
