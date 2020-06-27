@@ -8,7 +8,6 @@ import History from './History'
 import Home from './Home'
 import WrapperMenu from './WrapperMenu'
 import NewsLetter from './NewsLetter'
-import PastAwards from './PastAwards'
 import WhereAreYouFrom from './WhereAreYouFrom'
 
 export {
@@ -22,6 +21,5 @@ export {
   Home,
   WrapperMenu,
   NewsLetter,
-  PastAwards,
   WhereAreYouFrom,
 }

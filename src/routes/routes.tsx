@@ -11,7 +11,6 @@ import {
   DC,
   History,
   NewsLetter,
-  PastAwards,
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
@@ -61,7 +60,6 @@ export const Routes = () => {
 
           <AnnualReportContainer path="/annual" />
           <NewsLetter path="/newsletter" />
-          <PastAwards path="/pastawards" />
           <ConferencesContainer path="/conferences" />
 
           <DonateContainer path="/donate" />

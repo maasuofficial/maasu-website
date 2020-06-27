@@ -19,7 +19,7 @@ class History extends React.Component {
     return (
       <Page>
         <Type variant="sub2">
-          <span className="tc dispb fw700">Our History</span>
+          <span className="tc db fw700">Our History</span>
         </Type>
 
         <Timeline>
@@ -37,8 +37,7 @@ class History extends React.Component {
                         <TSub>{item.sub}</TSub>
                         <TDesc>{item.desc}</TDesc>
                         <span>
-                          Learn more about MAA{' '}
-                          <a href="https://maasu.org/alumni">here</a>.
+                          <a href="https://maasu.org/alumni">Learn More</a>
                         </span>
                       </React.Fragment>
                     ) : (

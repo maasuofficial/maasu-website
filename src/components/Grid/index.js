@@ -8,7 +8,7 @@ class Grid extends Component {
     const { children, className, x, y, ...props } = this.props
 
     const classes = typeof className === 'string' ? className.split(' ') : []
-    classes.push('dispf')
+    classes.push('df')
 
     if (y) {
       classes.push('gridY')

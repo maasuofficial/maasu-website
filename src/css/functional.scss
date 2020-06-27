@@ -176,16 +176,16 @@
  */
 
 @mixin display($media: '') {
-  .dispb#{$media} {
+  .db#{$media} {
     display: block !important;
   }
-  .dispn#{$media} {
+  .dn#{$media} {
     display: none !important;
   }
-  .dispi#{$media} {
+  .di#{$media} {
     display: inline !important;
   }
-  .dispf#{$media} {
+  .df#{$media} {
     display: flex !important;
   }
 }

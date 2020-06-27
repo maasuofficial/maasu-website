@@ -25,7 +25,7 @@ export const DonateContainer: FC<DonateProps> = () => {
         <EA>directorscouncil@maasu.org</EA>.
       </p>
 
-      <p>
+      <p className="fw700">
         donate <a href={DONATE_MAASU_URL}>here</a>.
       </p>
     </div>

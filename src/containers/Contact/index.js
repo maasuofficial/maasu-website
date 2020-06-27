@@ -60,7 +60,7 @@ class Contact extends React.Component {
     return (
       <Page>
         <Type variant="h2">
-          <span className="tc dispb">Contact Us</span>
+          <span className="tc db">Contact Us</span>
         </Type>
 
         <div>
