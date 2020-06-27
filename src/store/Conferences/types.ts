@@ -35,7 +35,7 @@ export interface Conference extends ConferenceRaw {
   state: string
   isApproxDate: boolean
   desc?: string
-  bid?: string
+  bid: string
   logo?: string
   banner?: string
 }

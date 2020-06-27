@@ -7,7 +7,6 @@ import { Donate, DonateComp } from './Donate'
 import DC from './DC'
 import History from './History'
 import Home from './Home'
-import Host from './Host'
 import WrapperMenu from './WrapperMenu'
 import NewsLetter from './NewsLetter'
 import PastAwards from './PastAwards'
@@ -26,7 +25,6 @@ export {
   DC,
   History,
   Home,
-  Host,
   WrapperMenu,
   NewsLetter,
   PastAwards,

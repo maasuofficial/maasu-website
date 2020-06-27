@@ -297,3 +297,140 @@ creating high-quality connections with their peers and have the
 opportunity to reflect on their intersecting identities and 
 experiences.
 `
+
+// -----------------------------------------------------
+// Host
+// -----------------------------------------------------
+
+export const HOST_PRELUDE_1 = `
+Interested in bringing a MAASU conference to your school? Here are
+some guidelines on the bid process to host the next MAASU Leadership
+Summit or Spring Conference.
+`
+export const HOST_1 = `
+Bid Packet
+`
+
+export const HOST_1_STMT = `
+All interested schools are required to create a bid packet. The
+purpose of this bid packet is to showcase why the school should
+host the conference and provide an overview of the planning
+logistics. Bid packets on average are around 20 pages long and
+need to include the following sections below:
+`
+
+export const HOST_1_1 = `
+Title Page
+`
+export const HOST_1_1_A = `
+School Name, Theme, Logo, and Type of Conference (e.g. Leadership Summit)
+`
+export const HOST_1_2 = `
+Table of Contents
+`
+export const HOST_1_3 = `
+School Information
+`
+export const HOST_1_3_A = `
+Background and Location
+`
+export const HOST_1_3_B = `
+APIDA Presence in the Community
+`
+export const HOST_1_3_C = `
+Land Acknowledgement
+`
+export const HOST_1_4 = `
+Conference Theme
+`
+export const HOST_1_4_A = `
+Proposed Theme with Thorough Explanation
+`
+export const HOST_1_5 = `
+Proposed Conference Dates (At Least 3)
+`
+export const HOST_1_6 = `
+Planning Committee Breakdown
+`
+export const HOST_1_6_A = `
+Advisor(s) (Staff or Faculty)
+`
+export const HOST_1_6_B = `
+Chair/Liaison (Co-chairs are not permitted)
+`
+export const HOST_1_6_C = `
+Committee Breakdown
+`
+export const HOST_1_7 = `
+Conference Venues and Fees
+`
+export const HOST_1_7_A = `
+Friday Evening Programming, Registration, 
+Opening Ceremony, Workshops, Banquet
+`
+export const HOST_1_7_B = `
+Include capacity/rental fees
+`
+export const HOST_1_8 = `
+Conference Schedule Overview
+`
+export const HOST_1_9 = `
+Keynote Speaker and Entertainment
+`
+export const HOST_1_9_A = `
+At least 3 potential for each, along with quotes for honorarium/cost
+`
+export const HOST_1_10 = `
+  Workshop Ideas, Tracks, and Topics
+`
+export const HOST_1_11 = `
+Proposed Budget
+`
+export const HOST_1_11_A = `
+Example budget
+`
+export const HOST_1_11_B = `
+Estimated revenue needed to break even, max capacity, and expected attendance
+`
+export const HOST_1_11_C = `
+Potential funding source (e.g. school(s), local organizations, corporate sponsors)
+`
+export const HOST_1_12 = `
+Lodging Options
+`
+export const HOST_1_12_A = `
+Include at least three options and list how far away these are from the conference site and banquet venue
+`
+export const HOST_1_13 = `
+Nearby Restaurants
+`
+export const HOST_1_14 = `
+Letters of Support
+`
+export const HOST_1_14_A = `
+Two letters of support on university letterhead with a handwritten or digital signature
+`
+export const HOST_1_14_A_1 = `
+One letter of support from a student affairs department/office
+`
+export const HOST_1_14_A_2 = `
+One letter of support from the planning committee advisor (staff or faculty)
+`
+export const HOST_2 = `
+Bid Presentation
+`
+export const HOST_2_STMT = `
+Bid presentations for all Leadership Summits, Spring and Fall Conferences
+will occur during the next MAASU Spring Conference in front of the MAASU 
+General Assembly. Up to two representatives can present on behalf of 
+each school. Representatives need to prepare a 15 minute PowerPoint 
+presentation and provide at least two physical copies of the bid packet. 
+After all presentations, the MAASU General Assembly will vote and the 
+winning schools will be announced later that evening during the Spring 
+Conference banquet.
+`
+export const HOST_2_CLOSING = `
+In order to be considered, the application form must be filled out at 
+least a week in advance before the Spring Conference when bid 
+presentations will take place.
+`

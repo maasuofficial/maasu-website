@@ -12,7 +12,6 @@ import {
   DonateComp,
   DC,
   History,
-  Host,
   NewsLetter,
   PastAwards,
   // Upcoming,
@@ -21,6 +20,7 @@ import {
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
+import { HostContainer } from 'containers/HostContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
 import { MAASUxContainer } from 'containers/MAASUxContainer'
@@ -43,7 +43,7 @@ export const Routes = () => {
           <History path="/history" />
 
           {/* <Upcoming path="/upcoming" /> */}
-          <Host path="/host" />
+          <HostContainer path="/host" />
 
           <MAASUxContainer path="/maasux" />
           <WhereAreYouFrom path="/whereareyoufrom" />
