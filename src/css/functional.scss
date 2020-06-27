@@ -185,8 +185,14 @@
   .di#{$media} {
     display: inline !important;
   }
+  .dib#{$media} {
+    display: inline-block !important;
+  }
   .df#{$media} {
     display: flex !important;
+  }
+  .dif#{$media} {
+    display: inline-flex !important;
   }
 }
 @include display();
@@ -231,6 +237,7 @@
 @mixin boxShadow($media: '') {
   @each $scale, $value in $boxShadowMap {
     .bs#{$scale}#{$media} {
+      // TODO color?
       box-shadow: 0 0 $value #555 !important;
     }
   }
@@ -307,3 +314,66 @@
   }
 }
 @include colors();
+
+/**
+ * -----------------------------------------------------
+ * Flex
+ * -----------------------------------------------------
+ */
+
+@mixin flex($media: '') {
+  .fd-r#{$media} {
+    flex-direction: row !important;
+  }
+  .fd-rr#{$media} {
+    flex-direction: row-reverse !important;
+  }
+  .fd-c#{$media} {
+    flex-direction: column !important;
+  }
+  .fd-cr#{$media} {
+    flex-direction: column-reverse !important;
+  }
+
+  .fw-w#{$media} {
+    flex-wrap: wrap !important;
+  }
+  .fw-nw#{$media} {
+    flex-wrap: nowrap !important;
+  }
+  .fw-wr#{$media} {
+    flex-wrap: wrap-reverse !important;
+  }
+
+  .jc-fs#{$media} {
+    justify-content: flex-start !important;
+  }
+  .jc-fe#{$media} {
+    justify-content: flex-end !important;
+  }
+  .jc#{$media} {
+    justify-content: center !important;
+  }
+  // no space-between, space-around, or space-evenly
+  // for relatively consistent browser support
+
+  .ai-s#{$media} {
+    align-items: stretch !important;
+  }
+  .ai-fs#{$media} {
+    align-items: flex-start !important;
+  }
+  .ai-fe#{$media} {
+    align-items: flex-end !important;
+  }
+  .ai#{$media} {
+    align-items: center !important;
+  }
+  .ai-c#{$media} {
+    align-items: center !important;
+  }
+  .ai-b#{$media} {
+    align-items: baseline !important;
+  }
+}
+@include flex();
