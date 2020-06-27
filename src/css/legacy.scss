@@ -56,11 +56,7 @@ $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
   background: linear-gradient(270deg, $bg, $fg, $bg);
   background-size: 400% 400%;
 
-  -webkit-animation: Placeholder 2s ease infinite;
-  -moz-animation: Placeholder 2s ease infinite;
-  -ms-animation: Placeholder 2s ease infinite;
-  -o-animation: Placeholder 2s ease infinite;
-  animation: Placeholder 2s ease infinite;
+  @include vendor(animation, Placeholder 2s ease infinite);
 }
 
 @-webkit-keyframes Placeholder {
@@ -171,7 +167,7 @@ $map: (
   }
 }
 
-$stringWidth: calc(4rem / 8);
+$stringWidth: calc(0.5rem);
 $stringColor: var(--palette-primary-main);
 
 .timeContainer {
@@ -319,34 +315,6 @@ em.typography,
   -webkit-text-fill-color: transparent;
 }
 
-.complete-donate {
-  text-align: center;
-}
-
-.logo-donate {
-  height: 20rem;
-}
-
-.donateButtonWrapper-donate {
-  margin: calc(4rem) 0;
-}
-
-.donateButton-donate {
-  text-decoration: none;
-  background-color: var(--palette-background-main);
-  color: var(--palette-primary-main);
-  @extend .ffhind;
-  font-size: calc(1rem * 1.5);
-  padding: calc(4rem / 4);
-  border: calc(4rem / 16) solid var(--palette-primary-main);
-  transition: all 0.2s;
-
-  &:hover {
-    background-color: var(--palette-primary-main);
-    color: var(--palette-background-main);
-  }
-}
-
 $transition: 0.3s;
 
 .pageContainer-board {
@@ -424,10 +392,6 @@ $transition: 0.3s;
 
 .c-text-main {
   color: var(--palette-text-main);
-}
-
-.c-inherit {
-  color: inherit;
 }
 
 .bgblue {

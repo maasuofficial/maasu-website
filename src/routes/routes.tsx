@@ -8,21 +8,22 @@ import {
   Awards,
   Board,
   Contact,
-  Donate,
-  DonateComp,
   DC,
   History,
-  Host,
-  MaasuX,
   NewsLetter,
-  PastAwards,
-  PastConf,
-  // Upcoming,
   WhereAreYouFrom,
 } from '../containers'
+import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { ConferencesContainer } from 'containers/ConferencesContainer'
+import {
+  DonateContainer,
+  DonateCompleteContainer,
+} from 'containers/DonateContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
+import { HostContainer } from 'containers/HostContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
+import { MAASUxContainer } from 'containers/MAASUxContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { PrivateRoute } from 'routes/PrivateRoute'
@@ -41,10 +42,9 @@ export const Routes = () => {
           <DC path="/directorscouncil" />
           <History path="/history" />
 
-          {/* <Upcoming path="/upcoming" /> */}
-          <Host path="/host" />
+          <HostContainer path="/host" />
 
-          <MaasuX path="/maasux" />
+          <MAASUxContainer path="/maasux" />
           <WhereAreYouFrom path="/whereareyoufrom" />
 
           <Awards path="/awards" />
@@ -58,12 +58,12 @@ export const Routes = () => {
             component={MAAContainer}
           />
 
+          <AnnualReportContainer path="/annual" />
           <NewsLetter path="/newsletter" />
-          <PastAwards path="/pastawards" />
-          <PastConf path="/pastconferences" />
+          <ConferencesContainer path="/conferences" />
 
-          <Donate path="/donate" />
-          <DonateComp path="/donate-complete" test={true} />
+          <DonateContainer path="/donate" />
+          <DonateCompleteContainer path="/donate-complete" />
           <Contact path="/contact" />
 
           <InvalidRoute code={404} default />

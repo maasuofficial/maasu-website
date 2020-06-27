@@ -1,4 +1,5 @@
 import React from 'react'
+import { EA } from 'components/EmailAnchor'
 import { Page, Type } from '../../components'
 
 class DC extends React.Component {
@@ -35,10 +36,7 @@ class DC extends React.Component {
           Thank you for your interest in being a volunteer for the MAASU
           Directors Council Committee! If you have any questions, comments, or
           concerns, please contact the Directors Council at{' '}
-          <a href="mailto:directorscouncil@maasu.org">
-            directorscouncil@maasu.org
-          </a>
-          .
+          <EA>directorscouncil@maasu.org</EA>.
         </p>
       </Page>
     )

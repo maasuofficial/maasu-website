@@ -11,5 +11,6 @@
     @include z($id);
     @include text($id);
     @include placement($id);
+    @include colors($id);
   }
 }

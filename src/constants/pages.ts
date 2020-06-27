@@ -26,6 +26,14 @@ communication among Asian American student organizations across the
 Midwest.
 `
 
+export const PURPOSE_IMG_ALT = `
+The first MAASU meeting
+`
+
+export const PURPOSE_IMG_CAPTION = `
+The first MAASU meeting. Front row (from left to right): Tom Lo (Purdue), Charles Chang (Ohio State), Nancy Kim (Michigan State), name unknown (Miami University), Yeeleng Hang (Michigan State), Jessica Kimura (Michigan State). Second Row: name unknown (Miami Univ.), name unknown (Miami Univ.), John Kim (Miami Univ.), unknown, Wen Hsu (Michigan State), Emily (Oberlin College). Third Row: Allan Lo (Ohio State), Mary Kim (Ohio State), Nimesh Nimesh M. Patel (Michigan State), Mr. Tong (Univ. of Michigan), Joanna Su (Univ of Michigan), Linus Huang (Oberlin College), name unknown (Univ. of Michigan). Photographer was Erika Seo (Ohio State).
+`
+
 // -----------------------------------------------------
 // Mission
 // -----------------------------------------------------
@@ -268,4 +276,185 @@ one organization or school.
 
 export const AWARDS_BOA_STATUS = `
 The application is now closed.
+`
+
+// -----------------------------------------------------
+// Awards
+// -----------------------------------------------------
+
+export const MAASUX_STMT = `
+MAASUx is a locally-hosted conference event designed to create 
+additional opportunities to engage in community building. MAASUx 
+promotes accessibility to educational resources by bringing the 
+MAASU experience to you. MAASUx is coordinated with a hosting 
+organization on campus, creating leadership opportunities to 
+engage students on the campus to create an interactive curriculum. 
+It is a free event for participants, designed to attract college 
+students from surrounding campuses to participate in a series of 
+short, carefully tailored workshops and social activities. Through 
+the more intimate setting of MAASUx events, students can engage in 
+creating high-quality connections with their peers and have the 
+opportunity to reflect on their intersecting identities and 
+experiences.
+`
+
+// -----------------------------------------------------
+// Host
+// -----------------------------------------------------
+
+export const HOST_PRELUDE_1 = `
+Interested in bringing a MAASU conference to your school? Here are
+some guidelines on the bid process to host the next MAASU Leadership
+Summit or Spring Conference.
+`
+export const HOST_1 = `
+Bid Packet
+`
+
+export const HOST_1_STMT = `
+All interested schools are required to create a bid packet. The
+purpose of this bid packet is to showcase why the school should
+host the conference and provide an overview of the planning
+logistics. Bid packets on average are around 20 pages long and
+need to include the following sections below:
+`
+
+export const HOST_1_1 = `
+Title Page
+`
+export const HOST_1_1_A = `
+School Name, Theme, Logo, and Type of Conference (e.g. Leadership Summit)
+`
+export const HOST_1_2 = `
+Table of Contents
+`
+export const HOST_1_3 = `
+School Information
+`
+export const HOST_1_3_A = `
+Background and Location
+`
+export const HOST_1_3_B = `
+APIDA Presence in the Community
+`
+export const HOST_1_3_C = `
+Land Acknowledgement
+`
+export const HOST_1_4 = `
+Conference Theme
+`
+export const HOST_1_4_A = `
+Proposed Theme with Thorough Explanation
+`
+export const HOST_1_5 = `
+Proposed Conference Dates (At Least 3)
+`
+export const HOST_1_6 = `
+Planning Committee Breakdown
+`
+export const HOST_1_6_A = `
+Advisor(s) (Staff or Faculty)
+`
+export const HOST_1_6_B = `
+Chair/Liaison (Co-chairs are not permitted)
+`
+export const HOST_1_6_C = `
+Committee Breakdown
+`
+export const HOST_1_7 = `
+Conference Venues and Fees
+`
+export const HOST_1_7_A = `
+Friday Evening Programming, Registration, 
+Opening Ceremony, Workshops, Banquet
+`
+export const HOST_1_7_B = `
+Include capacity/rental fees
+`
+export const HOST_1_8 = `
+Conference Schedule Overview
+`
+export const HOST_1_9 = `
+Keynote Speaker and Entertainment
+`
+export const HOST_1_9_A = `
+At least 3 potential for each, along with quotes for honorarium/cost
+`
+export const HOST_1_10 = `
+  Workshop Ideas, Tracks, and Topics
+`
+export const HOST_1_11 = `
+Proposed Budget
+`
+export const HOST_1_11_A = `
+Example budget
+`
+export const HOST_1_11_B = `
+Estimated revenue needed to break even, max capacity, and expected attendance
+`
+export const HOST_1_11_C = `
+Potential funding source (e.g. school(s), local organizations, corporate sponsors)
+`
+export const HOST_1_12 = `
+Lodging Options
+`
+export const HOST_1_12_A = `
+Include at least three options and list how far away these are from the conference site and banquet venue
+`
+export const HOST_1_13 = `
+Nearby Restaurants
+`
+export const HOST_1_14 = `
+Letters of Support
+`
+export const HOST_1_14_A = `
+Two letters of support on university letterhead with a handwritten or digital signature
+`
+export const HOST_1_14_A_1 = `
+One letter of support from a student affairs department/office
+`
+export const HOST_1_14_A_2 = `
+One letter of support from the planning committee advisor (staff or faculty)
+`
+export const HOST_2 = `
+Bid Presentation
+`
+export const HOST_2_STMT = `
+Bid presentations for all Leadership Summits, Spring and Fall Conferences
+will occur during the next MAASU Spring Conference in front of the MAASU 
+General Assembly. Up to two representatives can present on behalf of 
+each school. Representatives need to prepare a 15 minute PowerPoint 
+presentation and provide at least two physical copies of the bid packet. 
+After all presentations, the MAASU General Assembly will vote and the 
+winning schools will be announced later that evening during the Spring 
+Conference banquet.
+`
+export const HOST_2_CLOSING = `
+In order to be considered, the application form must be filled out at 
+least a week in advance before the Spring Conference when bid 
+presentations will take place.
+`
+
+// -----------------------------------------------------
+// Donate
+// -----------------------------------------------------
+
+export const DONATE_STMT_1 = `
+MAASU is a 501(c)(3) nonprofit student run organization. We rely on
+community support to continue to aide, educate and connect students
+across midwest campuses in leadership development and Asian American
+advocacy. It is with your financial support that we are able to
+provide students with resources and events that connect our shared
+identity.
+`
+
+export const DONATE_STMT_2 = `
+MAASU believes in empowering students and cultivating strong leaders
+within our local communities. Your donation would ensure the
+continuation of these programs, such as the Leadership Summit and
+Spring/Fall Conferences, and other programs. Please join us in 
+supporting young Asian American student leaders by making a tax 
+deductible deduction today. Engagement of the younger generation
+is more important than ever, and we hope you join us
+in cultivating the next generation of leaders.
 `

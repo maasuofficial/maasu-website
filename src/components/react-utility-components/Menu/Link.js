@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import modules from './Menu.module.scss'
 
 class Link extends React.Component {
   render() {

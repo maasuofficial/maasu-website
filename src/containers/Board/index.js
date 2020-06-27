@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components'
 import { FaArrowLeft } from 'react-icons/fa'
+import { EA } from 'components/EmailAnchor'
 import data from 'constants/board.json'
 import {
   BOA_APP_LINK,
@@ -87,15 +88,7 @@ export const Board = (props) => {
               </Type>
               <br />
 
-              {p.email && (
-                <a
-                  className="c-inherit"
-                  tabIndex={expTabIndex}
-                  href={`mailto:${p.email}`}
-                >
-                  {p.email}
-                </a>
-              )}
+              {p.email && <EA tabIndex={expTabIndex}>{p.email}</EA>}
 
               {p.positionRole && <p className="tl">{p.positionRole}</p>}
             </Page>

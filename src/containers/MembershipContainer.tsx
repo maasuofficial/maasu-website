@@ -1,11 +1,12 @@
 import React, { FC, useEffect } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
-import { fetchMembers } from 'store/Members/actions'
+import { EA } from 'components/EmailAnchor'
+import { fetchMembers } from 'store/actions'
 import {
   getIsFetchingMembers,
   getMembers,
   getMembersError,
-} from 'store/Members/selectors'
+} from 'store/selectors'
 import { AppState } from 'store/types'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
@@ -31,7 +32,7 @@ import {
 
 type Props = RouteComponentProps & ReduxProps & {}
 
-const Membership: FC<Props> = ({
+export const Membership: FC<Props> = ({
   fetchMembers,
   isFetchingMembers,
   members,
@@ -58,10 +59,10 @@ const Membership: FC<Props> = ({
 
   return (
     <div className="container">
-      <h3 className="tc pt5">Membership</h3>
+      <h3 className="title3 tc pt5">Membership</h3>
       <p>{MEMBERSHIP_PRELUDE}</p>
 
-      <h4 className="tc pt5">Benefits</h4>
+      <h4 className="title4 tc pt5">Benefits</h4>
       <ul>
         <li>{MEMBERSHIP_BENEFITS_1}</li>
         <li>{MEMBERSHIP_BENEFITS_2}</li>
@@ -69,10 +70,10 @@ const Membership: FC<Props> = ({
       </ul>
       <p>
         For more information on eligibility and benefits, contact{' '}
-        <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
+        <EA>ecc@maasu.org</EA>.
       </p>
 
-      <h4 className="tc pt5">Members</h4>
+      <h4 className="title4 tc pt5">Members</h4>
       <ul>
         {!isFetchingMembers && !membersError ? (
           filteredMembers.map((member, index) => (
@@ -103,7 +104,7 @@ const Membership: FC<Props> = ({
           <p>{MREP_STMT_2}</p>
           <p>
             For additional questions regarding membership please contact{' '}
-            <a href="mailto:ecc@maasu.org">ecc@maasu.org</a>.
+            <EA>ecc@maasu.org</EA>.
           </p>
         </Page>
         <Page>

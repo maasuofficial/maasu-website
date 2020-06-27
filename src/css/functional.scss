@@ -49,16 +49,40 @@
   .tdn#{$media} {
     text-decoration: none !important;
   }
+
+  .hov-tdn#{$media}:hover {
+    @extend .tdn#{$media};
+  }
+
   .tdu#{$media} {
     text-decoration: underline !important;
   }
 
-  .hover-tdu#{$media}:hover {
+  .hov-tdu#{$media}:hover {
     @extend .tdu#{$media};
   }
 
   .ttu {
     text-transform: uppercase;
+  }
+
+  .title1#{$media} {
+    @extend .fs5#{$media};
+  }
+  .title2#{$media} {
+    @extend .fs4#{$media};
+  }
+  .title3#{$media} {
+    @extend .fs3#{$media};
+  }
+  .title4#{$media} {
+    @extend .fs2#{$media};
+  }
+  .title5#{$media} {
+    @extend .fs1#{$media};
+  }
+  .title6#{$media} {
+    @extend .fs0#{$media};
   }
 }
 @include typography();
@@ -152,16 +176,16 @@
  */
 
 @mixin display($media: '') {
-  .dispb#{$media} {
+  .db#{$media} {
     display: block !important;
   }
-  .dispn#{$media} {
+  .dn#{$media} {
     display: none !important;
   }
-  .dispi#{$media} {
+  .di#{$media} {
     display: inline !important;
   }
-  .dispf#{$media} {
+  .df#{$media} {
     display: flex !important;
   }
 }
@@ -267,3 +291,19 @@
   }
 }
 @include placement();
+
+/**
+ * -----------------------------------------------------
+ * Colors
+ * -----------------------------------------------------
+ */
+
+@mixin colors($media: '') {
+  .c-inh#{$media} {
+    color: inherit !important;
+  }
+  .c-ini#{$media} {
+    color: initial !important;
+  }
+}
+@include colors();

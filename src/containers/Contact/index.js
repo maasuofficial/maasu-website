@@ -2,12 +2,8 @@ import React from 'react'
 import { Cell, Grid, Page, Type } from '../../components'
 import querystring from 'querystring'
 import { FaFacebookF, FaInstagram } from 'react-icons/fa'
-import {
-  APP_NAME_LONG,
-  SOCIAL_FACEBOOK,
-  SOCIAL_INSTAGRAM,
-  YEAR,
-} from 'constants/strings'
+import { SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM } from 'constants/strings'
+import { FooterContainer } from 'containers/FooterContainer'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -64,7 +60,7 @@ class Contact extends React.Component {
     return (
       <Page>
         <Type variant="h2">
-          <span className="tc dispb">Contact Us</span>
+          <span className="tc db">Contact Us</span>
         </Type>
 
         <div>
@@ -130,23 +126,7 @@ class Contact extends React.Component {
             )}
           </form>
 
-          <footer className="tc">
-            <br />
-            <span>
-              &copy; {YEAR} MAASU. For additional information or questions
-              regarding the website please contact{' '}
-              <a className="mail" href="MAILTO:technet@maasu.org">
-                technet@maasu.org
-              </a>
-              .
-            </span>
-            <br />
-            <img
-              className="w-20-ns w-70 mt7"
-              src={`${process.env.PUBLIC_URL}/assets/branding/light/logo-text.svg`}
-              alt={APP_NAME_LONG}
-            />
-          </footer>
+          <FooterContainer />
         </div>
       </Page>
     )

@@ -6,7 +6,7 @@ import {
 import { MemberActionTypes, MemberState } from './types'
 
 const initialState = {
-  loading: false,
+  isFetching: false,
   members: [],
   error: '',
 }
@@ -19,17 +19,17 @@ export const membersReducer = (
     case MEMBERS_FETCH:
       return {
         ...state,
-        loading: true,
+        isFetching: true,
       }
     case MEMBERS_SUCCESS:
       return {
-        loading: false,
+        isFetching: false,
         members: action.payload,
         error: '',
       }
     case MEMBERS_ERROR:
       return {
-        loading: false,
+        isFetching: false,
         members: [],
         error: action.payload,
       }
