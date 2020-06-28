@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components'
 import { Icon } from 'components/Icon'
 import { EA } from 'components/EmailAnchor'
-import data from 'constants/board.json'
+import data from 'constants/cache/board.json'
 import {
   BOA_APP_LINK,
   BOA_APP_ISOPEN,
@@ -39,6 +39,8 @@ export const Board = (props) => {
       const expTabIndex = isExpProfile ? 0 : -1
       const expClasses = isExpProfile ? 'priority-board expanded-board' : ''
 
+      const name = p.alias || `${p.fname} ${p.mname} ${p.lname}`
+
       return (
         <Cell key={index} auto sm={6} md={4} lg={3}>
           <ARBox className={'profileContainer-board'} resizeable>
@@ -53,12 +55,12 @@ export const Board = (props) => {
               <div className={'profile-board'}>
                 <BImg
                   src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`}
-                  alt={p.name}
+                  alt={name}
                 />
                 <Type variant="sub5">
-                  <span className="fw700">{p.name}</span>
+                  <span className="fw700">{name}</span>
                 </Type>
-                <span>{p.position}</span>
+                <span>{p.positionTitle}</span>
               </div>
             </a>
 
@@ -66,7 +68,7 @@ export const Board = (props) => {
               className={`posf h-100 w-100 tc z1 profileInfo-board ${expClasses}`}
               name={p.nameConcatenated}
             >
-              <Type variant="h2">{p.name}</Type>
+              <Type variant="h2">{name}</Type>
 
               <a
                 href="/"
@@ -84,13 +86,17 @@ export const Board = (props) => {
               />
               <br />
               <Type variant="text3">
-                <span className="fw700">{p.position}</span>
+                <span className="fw700">{p.positionTitle}</span>
               </Type>
               <br />
 
-              {p.email && <EA tabIndex={expTabIndex}>{p.email}</EA>}
+              {p.positionEmail ? (
+                <EA tabIndex={expTabIndex}>{p.positionEmail}</EA>
+              ) : (
+                <EA tabIndex={expTabIndex}>{p.emailFallback}</EA>
+              )}
 
-              {p.positionRole && <p className="tl">{p.positionRole}</p>}
+              <p className="tl">{p.positionDesc}</p>
             </Page>
           </ARBox>
         </Cell>
@@ -126,14 +132,16 @@ export const Board = (props) => {
     setExpanded(false)
   }
 
-  const groups = data.reduce((acc, val) => {
-    const key = val.type
+  const groups = data
+    .filter((i) => i.id && i.id.length > 0)
+    .reduce((acc, val) => {
+      const key = val.positionType
 
-    if (!acc[key]) acc[key] = []
+      if (!acc[key]) acc[key] = []
 
-    acc[key].push(val)
-    return acc
-  }, {})
+      acc[key].push(val)
+      return acc
+    }, {})
 
   return (
     <div

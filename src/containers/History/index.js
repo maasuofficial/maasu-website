@@ -8,7 +8,7 @@ import {
   TTitle,
   Type,
 } from '../../components'
-import HISTORY from 'constants/history.json'
+import HISTORY from 'constants/cache/history.json'
 
 class History extends React.Component {
   componentDidMount() {

@@ -14,6 +14,7 @@ import {
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
 import {
   DonateContainer,
@@ -36,8 +37,14 @@ export const Routes = () => {
           <Home path="/" />
 
           <MissionContainer path="/mission" />
-          <Board path="/board/:name" />
+
+          <PrivateRoute
+            isAuthorized={false}
+            path="/board/:name"
+            component={BoardMemberContainer}
+          />
           <Board path="/board" />
+
           <MembershipContainer path="/membership" />
           <DC path="/directorscouncil" />
           <History path="/history" />

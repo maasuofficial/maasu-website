@@ -1,0 +1,184 @@
+[
+  {
+    "id": "echen",
+    "positionType": "ECC",
+    "fname": "Elaine",
+    "mname": "",
+    "lname": "Chen",
+    "school": "University of Missouri",
+    "city": "Colombia",
+    "state": "MO",
+    "nameConcatenated": "ElaineChen",
+    "positionTitle": "Chair",
+    "positionEmail": "chair@maasu.org",
+    "positionDesc": "The role of the chair is to provide vision to each member of the ECC by supporting the established vision of MAASU. They maintain regular communication with the Executive Director and Directors Council, and review and create future plans in order to provide and maintain ongoing goals for MAASU."
+  },
+  {
+    "id": "jpeyton",
+    "positionType": "ECC",
+    "fname": "Jordan",
+    "mname": "",
+    "lname": "Peyton",
+    "nameConcatenated": "JordanPeyton",
+    "positionTitle": "Secretary",
+    "positionEmail": "ecc@maasu.org",
+    "positionDesc": "The role of the secretary is to document all MAASU meetings with the ECC and any other general assembly, assisting with the maintenance and record of files. They compile APIA-related resources for member schools and organizations to utilize, working with other chairs when applicable."
+  },
+  {
+    "id": "klam",
+    "positionType": "ECC",
+    "fname": "Kristie",
+    "mname": "",
+    "lname": "Lam",
+    "nameConcatenated": "KristieLam",
+    "positionTitle": "Advocacy",
+    "positionEmail": "advocacy@maasu.org",
+    "positionDesc": "The role of the advocacy chair is to keep abreast of issues and organize mobilization on advocacy and education. They regularly update members of current issues that may affect students across the regions, as well as search for opportunities to develop coalitions with other marginalized communities and organizations."
+  },
+  {
+    "id": "nnguyen",
+    "positionType": "ECC",
+    "fname": "Nhu",
+    "mname": "",
+    "lname": "Nguyen",
+    "nameConcatenated": "NhuNguyen",
+    "positionTitle": "Advocacy",
+    "positionEmail": "advocacy@maasu.org",
+    "positionDesc": "The role of the advocacy chair is to keep abreast of issues and organize mobilization on advocacy and education. They regularly update members of current issues that may affect students across the regions, as well as search for opportunities to develop coalitions with other marginalized communities and organizations."
+  },
+  {
+    "id": "mjobson",
+    "positionType": "ECC",
+    "fname": "Michael",
+    "mname": "Daehyun",
+    "lname": "Jobson",
+    "nameConcatenated": "MichaelJobson",
+    "positionTitle": "Communications",
+    "positionEmail": "communications@maasu.org",
+    "positionDesc": "The communications chair is the liaison between ECC and M-Reps and distribute information to M-Reps on a timely basis. They promote interaction among M-reps, including M-Rep meetings and conference calls. Additionally, they oversee member school conference stipends process by creating application forms, promoting to member schools, and coordinating the selection process."
+  },
+  {
+    "id": "ale",
+    "positionType": "ECC",
+    "fname": "Annie",
+    "mname": "",
+    "lname": "Le",
+    "nameConcatenated": "AnnieLe",
+    "positionTitle": "Membership Outreach",
+    "positionEmail": "memoutreach@maasu.org",
+    "positionDesc": "The membership outreach chair established relations with new schools, communicating MAASU’s mission and the benefits of becoming a member school. They research history of involvement of member and potential schools."
+  },
+  {
+    "id": "klee",
+    "positionType": "ECC",
+    "fname": "Katt",
+    "mname": "",
+    "lname": "Lee",
+    "nameConcatenated": "KattLee",
+    "positionTitle": "Programming",
+    "positionEmail": "programming@maasu.org",
+    "positionDesc": "The programming chair establishes programs in line with MAASU’s vision and mission to provide unity across campuses. They draft program proposals to be distributed to member schools to aid in their understanding of the program and their involvement."
+  },
+  {
+    "id": "jvu",
+    "positionType": "ECC",
+    "fname": "Jenny",
+    "mname": "",
+    "lname": "Vu",
+    "nameConcatenated": "JennyVu",
+    "positionTitle": "Programming",
+    "positionEmail": "programming@maasu.org",
+    "positionDesc": "The programming chair establishes programs in line with MAASU’s vision and mission to provide unity across campuses. They draft program proposals to be distributed to member schools to aid in their understanding of the program and their involvement."
+  },
+  {
+    "id": "ayu",
+    "positionType": "ECC",
+    "fname": "Alice",
+    "mname": "",
+    "lname": "Yu",
+    "nameConcatenated": "AliceYu",
+    "positionTitle": "Public Relations",
+    "positionEmail": "pr@maasu.org",
+    "positionDesc": "The role of the public relations chair produces press releases, press packets, and marketing packages for all MAASU-sponsored events and provide these materials to member schools. They create regular newsletters and multimedia content to be distributed on all forms of media. They design medium to highlight members in the member school community."
+  },
+  {
+    "id": "sbossley",
+    "positionType": "ECC",
+    "fname": "Sam",
+    "mname": "",
+    "lname": "Bossley",
+    "nameConcatenated": "SamBossley",
+    "positionTitle": "Technical Networking",
+    "positionEmail": "technet@maasu.org",
+    "positionDesc": "The role of the technical networking chair is to update website content regularly and maintain archives of files. They aid host schools in hosting their conference website if necessary or aid in forwarding capabilities."
+  },
+  {
+    "id": "vyu",
+    "positionType": "ED",
+    "fname": "Victoria",
+    "mname": "",
+    "lname": "Yu",
+    "nameConcatenated": "VictoriaYu",
+    "positionTitle": "Executive Director",
+    "positionEmail": "execdirector@maasu.org",
+    "positionDesc": "The executive director serves as the liaison between the ECC, Directors Council, and the Board of Advisors. They build relationships and organizational partnerships with national and regional APIA organizations, and manage the MAASU financial budgets and accounts, including filing proper fiscal paperwork necessary for nonprofit status."
+  },
+  {
+    "id": "jliu",
+    "positionType": "DC",
+    "fname": "James",
+    "mname": "",
+    "lname": "Liu",
+    "nameConcatenated": "JamesLiu",
+    "positionTitle": "Director of Alumni Relations",
+    "positionEmail": "directorscouncil@maasu.org",
+    "positionDesc": "The director of alumni relations focuses on building and connecting with alumni and manages the MAASU Alumni Association. They oversee the MAASU Alumni Association and its mission to continue building and sustaining lifelong relationships between MAASU and it alumni. They additionally provide alumni opportunities to reconnect with MAASU through programming, conferences, and other avenues for engagement."
+  },
+  {
+    "id": "jlee",
+    "positionType": "DC",
+    "fname": "Jessica",
+    "mname": "",
+    "lname": "Lee",
+    "nameConcatenated": "JessicaLee",
+    "positionTitle": "Director of Finance and Partnerships",
+    "positionEmail": "directorscouncil@maasu.org",
+    "positionDesc": "The director of finance and partnerships oversees all finances pertaining to conferences. They are in charge of helping students properly do their paperwork, review sponsorships, and assist with fundraising efforts. They develop annual financial plans and projections, and establish and manage external affairs and partnerships."
+  },
+  {
+    "id": "dlee",
+    "positionType": "DC",
+    "fname": "David",
+    "mname": "",
+    "lname": "Lee",
+    "nameConcatenated": "DavidLee",
+    "positionTitle": "Director of Programs and Assessments",
+    "positionEmail": "directorscouncil@maasu.org",
+    "positionDesc": "The director of programs and assessments focuses on developing curriculum and assessing student programs and events. They oversee workshops and programs for conferences, and create assessment and compile a report for all MAASU programs."
+  },
+  {
+    "id": "lluk",
+    "positionType": "BOA",
+    "fname": "Linda",
+    "mname": "",
+    "lname": "Luk",
+    "nameConcatenated": "LindaLuk",
+    "positionTitle": "President",
+    "positionEmail": "",
+    "emailFallback": "linda.luk@gmail.com",
+    "positionDesc": "The role of the board of advisors is to provide oversight of MAASU and advise the Executive Director and ECC Chair. They establish and maintain professional and appropriate boundaries and relationships with students."
+  },
+  {
+    "id": "cwang",
+    "positionType": "BOA",
+    "fname": "Cleda",
+    "mname": "",
+    "lname": "Wang",
+    "nameConcatenated": "CledaWang",
+    "positionTitle": "Treasurer",
+    "positionEmail": "",
+    "emailFallback": "cleda.wang@housing.wisc.edu",
+    "positionDesc": "The role of the board of advisors is to provide oversight of MAASU and advise the Executive Director and ECC Chair. They establish and maintain professional and appropriate boundaries and relationships with students."
+  }
+]
+
