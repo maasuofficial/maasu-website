@@ -7,10 +7,10 @@ export const FooterContainer: FC<{}> = () => {
   return (
     <footer className="container pt4">
       <div className="df fd-c-s jc-sb">
-        <div className="w-100 w-25-ns mb6">
+        <div className="w-100 w-30-ns mb6">
           <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
         </div>
-        <div className="w-100 w-40-ns">
+        <div className="w-100 w-30-ns">
           <div className="df jc-fs">
             {SOCIAL.map((s, i) => (
               <a key={i} className="c-inh mx2" href={s.url} aria-label={s.name}>

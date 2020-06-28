@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { ARBox, BImg, Cell, Grid, Page, Type } from '../../components'
-import { FaArrowLeft } from 'react-icons/fa'
+import { Icon } from 'components/Icon'
 import { EA } from 'components/EmailAnchor'
 import data from 'constants/board.json'
 import {
@@ -74,7 +74,7 @@ export const Board = (props) => {
                 className={'posa t-0 r-0 ma3 fs2 z5 c-text-main'}
                 onClick={toggleContraction}
               >
-                <FaArrowLeft />
+                <Icon icon="arrow-left" />
               </a>
 
               <BImg
@@ -136,7 +136,9 @@ export const Board = (props) => {
   }, {})
 
   return (
-    <div className={`pageContainer-board ${expanded ? 'expanded-board' : ''}`}>
+    <div
+      className={`pt6 pageContainer-board ${expanded ? 'expanded-board' : ''}`}
+    >
       <Page className={'groupPage-board'}>
         <Type variant="h2">Executive Coordinating Committee</Type>
         <Grid>{generateProfiles(groups.ECC)}</Grid>

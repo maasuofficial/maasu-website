@@ -1,5 +1,5 @@
 import React from 'react'
-import { Page, Type } from '../../components'
+import { Type } from '../../components'
 
 class ApiaOrgs extends React.Component {
   componentDidMount() {
@@ -9,7 +9,7 @@ class ApiaOrgs extends React.Component {
 
   render() {
     return (
-      <Page>
+      <div className="container pt6">
         <Type variant="h2">APIA Organizations and Conferences</Type>
         <p>*Denotes student organization</p>
         <ul>
@@ -246,7 +246,7 @@ class ApiaOrgs extends React.Component {
             </a>
           </li>
         </ul>
-      </Page>
+      </div>
     )
   }
 }

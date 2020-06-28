@@ -7,6 +7,13 @@ import {
   faLinkedinIn,
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faFacebookF, faHome, faInstagram, faLinkedinIn, faTwitter)
+library.add(
+  faArrowLeft,
+  faFacebookF,
+  faHome,
+  faInstagram,
+  faLinkedinIn,
+  faTwitter
+)

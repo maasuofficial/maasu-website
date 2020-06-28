@@ -46,6 +46,6 @@ button {
 
 .container {
   @extend .mxa;
-  @extend .px2-s;
+  @extend .px2-nl;
   max-width: $containerWidth;
 }
