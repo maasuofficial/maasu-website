@@ -82,7 +82,7 @@ export const Board = (props) => {
               <BImg
                 src={`${process.env.PUBLIC_URL}/assets/img/profiles/${p.nameConcatenated}.jpg`}
                 className="w-100-s w-50-ns mxa"
-                alt={p.name}
+                alt={name}
               />
               <br />
               <Type variant="text3">

@@ -1,37 +1,6 @@
 import { Member, MemberState } from './Members/types'
 import { Conference, ConferenceState } from './Conferences/types'
-
-// -----------------------------------------------------
-// BoardMember
-// -----------------------------------------------------
-
-export type Position = {
-  // title abbreviation
-  id: string
-  title: string
-  desc: string
-  email: string
-}
-
-export enum EBoardMemberType {
-  BOA = 0,
-  ECC = 1,
-  DC = 2,
-  ED = 3,
-}
-
-export type BoardMember = {
-  // first initial, last name
-  id: string
-  type: EBoardMemberType
-  fname: string
-  lname: string
-  nickname?: string
-  imgUrl: string
-  position: Position
-  bio: string
-  school: Member
-}
+import { BoardState } from './Board/types'
 
 // -----------------------------------------------------
 // Event
@@ -79,4 +48,5 @@ export type Alumni = {
 export type AppState = {
   members: MemberState
   conferences: ConferenceState
+  board: BoardState
 }

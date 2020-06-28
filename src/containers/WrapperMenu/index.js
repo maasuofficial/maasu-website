@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as RouterLink } from '@reach/router'
 import { Menu as UtilityMenu } from 'components/react-utility-components'
-import { FaAlignRight } from 'react-icons/fa'
+import { Icon } from 'components/Icon'
 
 let menuOverride = false
 
@@ -51,7 +51,7 @@ class WrapperMenu extends React.Component {
           role="button"
         >
           {/* TEMP for sc 2020 promo menu icon */}
-          <FaAlignRight className={'menuIconWM menuIconOverride'} />
+          <Icon className={'menuIconWM menuIconOverride'} icon="align-right" />
         </a>
 
         {/* menu */}
