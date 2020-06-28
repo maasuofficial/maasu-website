@@ -166,6 +166,13 @@
   .posf#{$media} {
     position: fixed !important;
   }
+
+  .fl#{$media} {
+    float: left !important;
+  }
+  .fr#{$media} {
+    float: right !important;
+  }
 }
 @include position();
 
@@ -354,7 +361,10 @@
   .jc#{$media} {
     justify-content: center !important;
   }
-  // no space-between, space-around, or space-evenly
+  .jc-sb#{$media} {
+    justify-content: space-between !important;
+  }
+  // no space-around or space-evenly
   // for relatively consistent browser support
 
   .ai-s#{$media} {

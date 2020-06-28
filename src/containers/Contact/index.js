@@ -1,8 +1,7 @@
 import React from 'react'
-import { Cell, Grid, Page, Type } from '../../components'
+import { Type } from '../../components'
 import querystring from 'querystring'
-import { FaFacebookF, FaInstagram } from 'react-icons/fa'
-import { SOCIAL_FACEBOOK, SOCIAL_INSTAGRAM } from 'constants/strings'
+import fetch from 'isomorphic-fetch'
 import { FooterContainer } from 'containers/FooterContainer'
 
 class Contact extends React.Component {
@@ -58,40 +57,18 @@ class Contact extends React.Component {
 
   render() {
     return (
-      <Page>
+      <div className="container pt6">
         <Type variant="h2">
           <span className="tc db">Contact Us</span>
         </Type>
 
         <div>
-          <div className="tc w-100">
-            <Grid className="w-50-ns fs3 mxa">
-              <Cell auto>
-                <a className="fgc-text-main" href={SOCIAL_FACEBOOK}>
-                  <FaFacebookF />
-                </a>
-              </Cell>
-              {/*
-              <Cell auto>
-                 <a href="https://twitter.com/MAASUOfficial">
-                   <FaTwitter />
-                 </a>
-               </Cell>
-              */}
-              <Cell auto>
-                <a className="fgc-text-main" href={SOCIAL_INSTAGRAM}>
-                  <FaInstagram />
-                </a>
-              </Cell>
-            </Grid>
-          </div>
-
           <p className="tc">
             Any questions? Send us a message and we'll get back to you as soon
             as possible!
           </p>
 
-          <form className="mxa w-70-ns w-100-s" onSubmit={this.handleSubmit}>
+          <form className="mxa w-100-s" onSubmit={this.handleSubmit}>
             <input
               className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
               type="text"
@@ -118,7 +95,7 @@ class Contact extends React.Component {
               </div>
             ) : (
               <button
-                className="w-100 fs0 ffhind my3 fw700 pa3 tr2 fgc-text-main hover-fgc-bg-main bgc-bg-main hover-bgc-text-main br2"
+                className="w-100 fs0 ffhind my3 fw700 pa3 tr2 hov-fgc-text-main fgc-bg-main hov-bgc-bg-main bgc-text-main br2"
                 type="submit"
               >
                 Submit
@@ -128,7 +105,7 @@ class Contact extends React.Component {
 
           <FooterContainer />
         </div>
-      </Page>
+      </div>
     )
   }
 }

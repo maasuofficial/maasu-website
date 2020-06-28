@@ -7,7 +7,7 @@ import {
   CONFERENCE_YEAR,
   CONFERENCE_TYPE,
   CONFERENCE_DATE_RANGE,
-  SOCIAL_FACEBOOK,
+  SOCIAL,
 } from 'constants/strings'
 
 export const HeroBanner: FC = () => {
@@ -18,7 +18,10 @@ export const HeroBanner: FC = () => {
           <span className="fs3-ns fs2-s dpb">
             {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
           </span>
-          <a className="tdn" href={SOCIAL_FACEBOOK}>
+          <a
+            className="tdn"
+            href={SOCIAL.filter((s) => s.name === 'facebook')[0].url}
+          >
             <em className="fsn fs4 fs2-s ls2 fflibre fggold db">
               {CONFERENCE_NAME}
             </em>

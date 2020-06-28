@@ -655,19 +655,19 @@ li.horizontal-ruc {
   transition: all 0.2s;
 }
 
-.fgc-text-main {
+.hov-fgc-text-main:hover {
   color: var(--palette-text-main) !important;
 }
 
-.hover-bgc-text-main:hover {
+.bgc-text-main {
   background-color: var(--palette-text-main) !important;
 }
 
-.bgc-bg-main {
+.hov-bgc-bg-main:hover {
   background-color: var(--palette-background-main) !important;
 }
 
-.hover-fgc-bg-main:hover {
+.fgc-bg-main {
   color: var(--palette-background-main) !important;
 }
 

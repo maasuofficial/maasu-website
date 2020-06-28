@@ -1,23 +1,26 @@
 import React, { FC } from 'react'
-import { EA } from 'components/EmailAnchor'
-import { APP_NAME, YEAR } from 'constants/strings'
+import { APP_NAME_LONG, SOCIAL, YEAR } from 'constants/strings'
+import { Icon, IconName } from 'components/Icon'
+import { findAsset } from 'utils/files'
 
-interface Props {}
-
-export const FooterContainer: FC<Props> = () => {
+export const FooterContainer: FC<{}> = () => {
   return (
-    <footer>
-      <div className="container">
-        <div className="tr">
-          <span>
-            For additional information or questions regarding the website,
-            please contact <EA>technet@maasu.org</EA>.
-          </span>
-          <br />
-          <br />
-          <span className="fs0 ffhind">
-            &copy; {YEAR} {APP_NAME}. All Rights Reserved.
-          </span>
+    <footer className="container pt4">
+      <div className="df fd-c-s jc-sb">
+        <div className="w-100 w-25-ns mb6">
+          <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
+        </div>
+        <div className="w-100 w-40-ns">
+          <div className="df jc-fs">
+            {SOCIAL.map((s, i) => (
+              <a key={i} className="c-inh mx2" href={s.url} aria-label={s.name}>
+                <Icon className="fs1" prefix="fab" icon={s.icon as IconName} />
+              </a>
+            ))}
+          </div>
+          <div className="pt4">
+            &copy; {YEAR} {APP_NAME_LONG}. All Rights Reserved.
+          </div>
         </div>
       </div>
     </footer>

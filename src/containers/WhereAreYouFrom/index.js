@@ -1,7 +1,7 @@
 import React from 'react'
 import { EA } from 'components/EmailAnchor'
 import { Page, Type } from '../../components'
-import { SOCIAL_FACEBOOK } from 'constants/strings'
+import { SOCIAL } from 'constants/strings'
 
 class WhereAreYouFrom extends React.Component {
   render() {
@@ -30,8 +30,10 @@ class WhereAreYouFrom extends React.Component {
           </a>{' '}
           where we record and house all audio stories. If you are interested in
           reading stories, you can check out our{' '}
-          <a href={SOCIAL_FACEBOOK}>facebook page</a> or view our monthly
-          newsletters and read the stories there.
+          <a href={SOCIAL.filter((s) => s.name === 'facebook')[0].url}>
+            facebook page
+          </a>{' '}
+          or view our monthly newsletters and read the stories there.
         </p>
         <p>
           For more information on this project, contact our advocacy chair at{' '}
