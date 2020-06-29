@@ -1,9 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { cleanup } from '@testing-library/react'
-import Board from './'
-
-afterEach(cleanup)
+import { Board } from '../BoardContainer'
 
 describe('render', () => {
   it('renders without crashing', () => {

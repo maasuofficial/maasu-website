@@ -1,7 +1,6 @@
 import Alumni from './Alumni'
 import ApiaOrgs from './ApiaOrgs'
 import Awards from './Awards'
-import Board from './Board'
 import Contact from './Contact'
 import DC from './DC'
 import History from './History'
@@ -14,7 +13,6 @@ export {
   Alumni,
   ApiaOrgs,
   Awards,
-  Board,
   Contact,
   DC,
   History,

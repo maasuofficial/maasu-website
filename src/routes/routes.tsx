@@ -6,7 +6,6 @@ import {
   Alumni,
   ApiaOrgs,
   Awards,
-  Board,
   Contact,
   DC,
   History,
@@ -14,6 +13,7 @@ import {
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
 import {
@@ -43,7 +43,7 @@ export const Routes = () => {
             path="/board/:name"
             component={BoardMemberContainer}
           />
-          <Board path="/board" />
+          <BoardContainer path="/board" />
 
           <MembershipContainer path="/membership" />
           <DC path="/directorscouncil" />

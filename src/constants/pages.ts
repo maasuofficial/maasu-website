@@ -103,6 +103,15 @@ ${STRATEGIC_PLAN_YEARS}
 // Board
 // -----------------------------------------------------
 
+export const BOARD_PRELUDE = `
+MAASU's executive board is divided into four subsections for a
+collectively stronger focus on each of the subsections' duties
+and roles. These subsections are the executive director, the
+executive coordinating committee, the directors council, and the 
+board of advisors. Each subsection plays an integral role in the
+management of MAASU functions.
+`
+
 type AppStatus = {
   isOpen: boolean
   status: string

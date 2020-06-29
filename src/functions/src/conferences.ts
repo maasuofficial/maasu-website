@@ -7,7 +7,7 @@ import {
   ResData,
 } from './utils'
 
-type ConferenceType = { date: string }
+type ConferenceType = { id: string; date: string; type: string }
 
 export const handler = async (event: any, context: any) => {
   let data: ResData = null
@@ -17,9 +17,13 @@ export const handler = async (event: any, context: any) => {
   )
 
   if (res) {
-    data = (res as []).sort((a: ConferenceType, b: ConferenceType): number =>
-      descDateSort(a.date, b.date)
-    )
+    data = (res as [])
+      .filter(
+        (c: ConferenceType) => c.id != null && c.date != null && c.type != null
+      )
+      .sort((a: ConferenceType, b: ConferenceType): number =>
+        descDateSort(a.date, b.date)
+      )
   }
 
   const body: ResBody = { data, error }
