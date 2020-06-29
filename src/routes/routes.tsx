@@ -8,7 +8,6 @@ import {
   Awards,
   Contact,
   DC,
-  History,
   NewsLetter,
   WhereAreYouFrom,
 } from '../containers'
@@ -22,6 +21,7 @@ import {
 } from 'containers/DonateContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { HostContainer } from 'containers/HostContainer'
+import { HxstoryContainer } from 'containers/HxstoryContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
 import { MAASUxContainer } from 'containers/MAASUxContainer'
@@ -44,10 +44,11 @@ export const Routes = () => {
             component={BoardMemberContainer}
           />
           <BoardContainer path="/board" />
-
           <MembershipContainer path="/membership" />
           <DC path="/directorscouncil" />
-          <History path="/history" />
+
+          <HxstoryContainer path="/hxstory" />
+          <HxstoryContainer path="/history" />
 
           <HostContainer path="/host" />
 

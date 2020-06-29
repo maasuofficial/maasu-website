@@ -76,18 +76,15 @@ class WrapperMenu extends React.Component {
 
               <SubMenu>
                 <Link>About Us</Link>
-                <Link href="/mission">Our Mission</Link>
+                <Link href="/mission">Mission</Link>
                 <Link href="/board">Executive Board</Link>
                 <Link href="/membership">Member Schools</Link>
                 <Link href="/directorscouncil">Directors Council</Link>
-                <Link href="/history">Our History</Link>
+                <Link href="/hxstory">Hxstory</Link>
               </SubMenu>
 
               <SubMenu>
                 <Link>Conferences</Link>
-                {/*
-                <Link href='/upcoming'>Upcoming</Link>
-                */}
                 <Link href="/host">Host a Conference</Link>
               </SubMenu>
 

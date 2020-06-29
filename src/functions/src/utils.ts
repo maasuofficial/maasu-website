@@ -11,6 +11,7 @@ export const DB_MASTER =
 export const MEMBERS_ID = '0'
 export const CONFERENCES_ID = '1511181098'
 export const BOARD_ID = '1262721235'
+export const EVENTS_ID = '1201194910'
 
 // -----------------------------------------------------
 // Functions
