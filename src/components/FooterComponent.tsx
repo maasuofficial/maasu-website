@@ -3,7 +3,7 @@ import { APP_NAME_LONG, SOCIAL, YEAR } from 'constants/strings'
 import { Icon, IconName } from 'components/Icon'
 import { findAsset } from 'utils/files'
 
-export const FooterContainer: FC<{}> = () => {
+export const FooterComponent: FC<{}> = () => {
   return (
     <footer className="container pt4">
       <div className="df fd-c-s jc-sb">

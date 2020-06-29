@@ -19,13 +19,18 @@ export type BoardMember = {
   imageUrl?: string
 }
 
-export type BoardState = {
-  isFetching: boolean
-  board: BoardMember[]
-  error: string
+export type BoardAPIResponse = {
+  data: BoardMember[]
+  error: object
 }
 
 export type BoardActionTypes =
   | { type: typeof BOARD_FETCH }
   | { type: typeof BOARD_SUCCESS; payload: BoardMember[] }
   | { type: typeof BOARD_ERROR; payload: string }
+
+export type BoardState = {
+  isFetching: boolean
+  board: BoardMember[]
+  error: string
+}

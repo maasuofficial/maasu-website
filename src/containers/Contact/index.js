@@ -2,7 +2,7 @@ import React from 'react'
 import { Type } from '../../components'
 import querystring from 'querystring'
 import fetch from 'isomorphic-fetch'
-import { FooterContainer } from 'containers/FooterContainer'
+import { FooterComponent } from 'components/FooterComponent'
 
 class Contact extends React.Component {
   constructor(props) {
@@ -103,7 +103,7 @@ class Contact extends React.Component {
             )}
           </form>
 
-          <FooterContainer />
+          <FooterComponent />
         </div>
       </div>
     )

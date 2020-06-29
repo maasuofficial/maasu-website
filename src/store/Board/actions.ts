@@ -1,3 +1,5 @@
+// import { api, BASE_URL } from 'store/api'
+// import { BoardMember, BoardAPIResponse } from './types'
 import { BoardMember } from './types'
 import { Dispatch } from 'redux'
 import { BOARD_FETCH, BOARD_SUCCESS, BOARD_ERROR } from 'constants/strings'
@@ -22,5 +24,12 @@ export const fetchBoard = () => {
     dispatch(boardRequest())
     // TODO fetch
     dispatch(boardSuccess(data))
+    // try {
+    //   const { data, error } = await api<BoardAPIResponse>(`${BASE_URL}/board`)
+    //   if (error) throw error
+    //   dispatch(boardSuccess(data))
+    // } catch (e) {
+    //   dispatch(boardError(e.message))
+    // }
   }
 }

@@ -10,7 +10,7 @@ import {
   SOCIAL,
 } from 'constants/strings'
 
-export const HeroBanner: FC = () => {
+export const HeroBannerComponent: FC = () => {
   return (
     <Fragment>
       <div className="ttu ffhind fw700">
