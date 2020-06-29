@@ -39,7 +39,7 @@ export const Routes = () => {
           <MissionContainer path="/mission" />
 
           <PrivateRoute
-            isAuthorized={false}
+            isAuthorized={true}
             path="/board/:name"
             component={BoardMemberContainer}
           />

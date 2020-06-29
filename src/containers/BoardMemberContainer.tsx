@@ -27,7 +27,8 @@ export const BoardMember: FC<Props> = ({
   const boardFiltered = board.filter(
     (boardMember) => boardMember.id === params.name
   )
-  const isValidBoardMember = boardFiltered.length === 1
+  const isValidBoardMember =
+    board && board.length && !isFetchingBoard && boardFiltered.length === 1
 
   const p = boardFiltered[0] || {}
 
@@ -36,7 +37,7 @@ export const BoardMember: FC<Props> = ({
 
   useDocumentTitle(name || 'Board Member')
 
-  return isFetchingBoard ? (
+  return isFetchingBoard || (board && !board.length && !boardError) ? (
     <span>loading...</span>
   ) : isValidBoardMember ? (
     <div className="container pt6 tc">
