@@ -315,38 +315,7 @@ em.typography,
   -webkit-text-fill-color: transparent;
 }
 
-$transition: 0.3s;
-
-.pageContainer-board {
-  position: relative;
-  background-color: var(--palette-background-main);
-  left: 0;
-  transition: all $transition;
-
-  &.expanded-board {
-    left: -100%;
-  }
-}
-
-.groupPage-board:not(:first-child) {
-  border-top: calc(4rem / 16) solid var(--palette-background-dark);
-}
-
-.profileContainer-board {
-  position: inherit;
-}
-
-.profileTrigger-board {
-  color: inherit;
-  text-decoration: none;
-}
-
 .profile-board {
-  height: 100%;
-  width: 100%;
-  padding: calc(4rem / 8);
-  text-align: center;
-
   border-style: solid;
   border-color: transparent;
   border-width: 0px;
@@ -355,39 +324,12 @@ $transition: 0.3s;
 
   img {
     width: 100%;
-    border-radius: calc(4rem / 16);
-  }
-  p {
-    margin: 0;
+    border-radius: 0.2rem;
   }
 }
 
-@media #{$md-up} {
-  .profile-board:hover {
-    border-width: calc(4rem / 4);
-  }
-}
-
-.profileInfo-board {
-  top: 0;
-  left: 100%;
-
-  background-color: var(--palette-background-main);
-  overflow-y: auto;
-  overflow-x: hidden;
-  transition: left $transition;
-
-  &.priority-board {
-    z-index: 1;
-  }
-  &:not(.priority-board) {
-    z-index: 0;
-  }
-
-  &.expanded-board {
-    left: 50%;
-    transform: translate(-50%);
-  }
+.profile-board:hover {
+  border-width: 1rem;
 }
 
 .c-text-main {
@@ -655,19 +597,19 @@ li.horizontal-ruc {
   transition: all 0.2s;
 }
 
-.fgc-text-main {
+.hov-fgc-text-main:hover {
   color: var(--palette-text-main) !important;
 }
 
-.hover-bgc-text-main:hover {
+.bgc-text-main {
   background-color: var(--palette-text-main) !important;
 }
 
-.bgc-bg-main {
+.hov-bgc-bg-main:hover {
   background-color: var(--palette-background-main) !important;
 }
 
-.hover-fgc-bg-main:hover {
+.fgc-bg-main {
   color: var(--palette-background-main) !important;
 }
 

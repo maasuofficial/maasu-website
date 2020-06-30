@@ -7,9 +7,12 @@ import fetch from 'isomorphic-fetch'
 export const DB_MASTER =
   '2PACX-1vRyNMns3pIM4ODIZZT0BZRQbjBLgM4RK6LHW-lpj7vHe43h-v_VoibacQyE12xqIh5BP1ecCzRAJyei'
 
+// formally known as gid
 export const MEMBERS_ID = '0'
-
 export const CONFERENCES_ID = '1511181098'
+export const BOARD_ID = '1262721235'
+export const EVENTS_ID = '1201194910'
+export const RESOURCES_ID = '997011760'
 
 // -----------------------------------------------------
 // Functions

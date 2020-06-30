@@ -12,5 +12,6 @@
     @include text($id);
     @include placement($id);
     @include colors($id);
+    @include flex($id);
   }
 }

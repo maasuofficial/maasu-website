@@ -13,7 +13,7 @@ class Alumni extends React.Component {
         <Page>
           <div className="tc">
             <img
-              className="w-50 w-100-s"
+              className="w-50 w-100-s px6 pt6"
               src={`${process.env.PUBLIC_URL}/assets/branding/light/text.svg`}
               alt={APP_NAME_LONG}
             />

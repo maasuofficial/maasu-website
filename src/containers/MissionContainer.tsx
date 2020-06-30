@@ -29,7 +29,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
     <Fragment>
       <Page>
         <h3 className="mt0 tc fs2 ffhind fw700">Our Purpose</h3>
-        <div className="w-70 w-30-ns mxa">
+        <div className="w-70 w-30-ns mxa tc">
           <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
         </div>
         <p>{PURPOSE_STMT_1}</p>

@@ -36,29 +36,18 @@ This document summarizes a design process of the MAASU website, what softwares a
 and any executive decisions made in regards to project structure.
 The [Table of Contents](#table-of-contents) provides a summary of all relevant categories.
 
-To view a directory of previous board members, see [board members](docs/board.md).
-
 New to MAASU, or the MAASU Technical Networking position? Read the [introduction first](docs/intro.md).
 
 ## Installation <a name="installation"></a>
 
 To install all dependencies, use the [Yarn Package Manager](https://yarnpkg.com/):
 ```
-yarn
-
-- or -
-
 yarn install
 ```
 To start a development server:
 ```
 yarn start
 ```
-To build for production:
-```
-yarn build
-```
-The production build will be generated in a `build/` folder in the root directory.
 
 ### Why Yarn?
 

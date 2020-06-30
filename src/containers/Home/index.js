@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeroBanner } from 'containers/HeroBanner'
+import { HeroBannerComponent } from 'components/HeroBannerComponent'
 
 class Home extends React.Component {
   componentDidMount() {
@@ -7,7 +7,7 @@ class Home extends React.Component {
   }
 
   render() {
-    return <HeroBanner />
+    return <HeroBannerComponent />
   }
 }
 

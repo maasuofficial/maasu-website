@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link as RouterLink } from '@reach/router'
 import { Menu as UtilityMenu } from 'components/react-utility-components'
-import { FaAlignRight } from 'react-icons/fa'
+import { Icon } from 'components/Icon'
 
 let menuOverride = false
 
@@ -51,7 +51,7 @@ class WrapperMenu extends React.Component {
           role="button"
         >
           {/* TEMP for sc 2020 promo menu icon */}
-          <FaAlignRight className={'menuIconWM menuIconOverride'} />
+          <Icon className={'menuIconWM menuIconOverride'} icon="align-right" />
         </a>
 
         {/* menu */}
@@ -76,18 +76,15 @@ class WrapperMenu extends React.Component {
 
               <SubMenu>
                 <Link>About Us</Link>
-                <Link href="/mission">Our Mission</Link>
+                <Link href="/mission">Mission</Link>
                 <Link href="/board">Executive Board</Link>
                 <Link href="/membership">Member Schools</Link>
                 <Link href="/directorscouncil">Directors Council</Link>
-                <Link href="/history">Our History</Link>
+                <Link href="/hxstory">Hxstory</Link>
               </SubMenu>
 
               <SubMenu>
                 <Link>Conferences</Link>
-                {/*
-                <Link href='/upcoming'>Upcoming</Link>
-                */}
                 <Link href="/host">Host a Conference</Link>
               </SubMenu>
 
@@ -100,7 +97,7 @@ class WrapperMenu extends React.Component {
               <SubMenu>
                 <Link>Resources</Link>
                 <Link href="/awards">Awards and Scholarships</Link>
-                <Link href="/apiaorgs">APIA Organizations</Link>
+                <Link href="/organizations">Organizations</Link>
               </SubMenu>
 
               <Link href="/alumni">Alumni</Link>

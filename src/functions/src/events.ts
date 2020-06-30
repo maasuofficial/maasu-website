@@ -1,27 +1,25 @@
 import {
   fetchCSVObject,
   descDateSort,
-  CONFERENCES_ID,
+  EVENTS_ID,
   getHeaders,
   ResBody,
   ResData,
 } from './utils'
 
-type ConferenceType = { id: string; date: string; type: string }
+type EventType = { id: string; date: string; title: string }
 
 export const handler = async (event: any, context: any) => {
   let data: ResData = null
 
-  const { data: res, error }: ResBody = await fetchCSVObject<object>(
-    CONFERENCES_ID
-  )
+  const { data: res, error }: ResBody = await fetchCSVObject<object>(EVENTS_ID)
 
   if (res) {
     data = (res as [])
       .filter(
-        (c: ConferenceType) => c.id != null && c.date != null && c.type != null
+        (c: EventType) => c.id != null && c.date != null && c.title != null
       )
-      .sort((a: ConferenceType, b: ConferenceType): number =>
+      .sort((a: EventType, b: EventType): number =>
         descDateSort(a.date, b.date)
       )
   }

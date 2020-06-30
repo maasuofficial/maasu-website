@@ -7,10 +7,10 @@ import {
   CONFERENCE_YEAR,
   CONFERENCE_TYPE,
   CONFERENCE_DATE_RANGE,
-  SOCIAL_FACEBOOK,
+  SOCIAL,
 } from 'constants/strings'
 
-export const HeroBanner: FC = () => {
+export const HeroBannerComponent: FC = () => {
   return (
     <Fragment>
       <div className="ttu ffhind fw700">
@@ -18,7 +18,10 @@ export const HeroBanner: FC = () => {
           <span className="fs3-ns fs2-s dpb">
             {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
           </span>
-          <a className="tdn" href={SOCIAL_FACEBOOK}>
+          <a
+            className="tdn"
+            href={SOCIAL.filter((s) => s.name === 'facebook')[0].url}
+          >
             <em className="fsn fs4 fs2-s ls2 fflibre fggold db">
               {CONFERENCE_NAME}
             </em>
@@ -28,7 +31,7 @@ export const HeroBanner: FC = () => {
       </div>
       <div className="tc">
         <img
-          className="w-20-ns w-30-s"
+          className="w-20-ns w-30-s pa6-l"
           src={findAsset('branding/light/text.svg')}
           alt={APP_NAME_LONG}
         />

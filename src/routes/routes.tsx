@@ -4,16 +4,15 @@ import {
   Home,
   WrapperMenu,
   Alumni,
-  ApiaOrgs,
   Awards,
-  Board,
   Contact,
   DC,
-  History,
   NewsLetter,
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { BoardContainer } from 'containers/BoardContainer'
+import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
 import {
   DonateContainer,
@@ -21,12 +20,14 @@ import {
 } from 'containers/DonateContainer'
 import { HomepageContainer } from 'containers/HomepageContainer'
 import { HostContainer } from 'containers/HostContainer'
+import { HxstoryContainer } from 'containers/HxstoryContainer'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
 import { MAASUxContainer } from 'containers/MAASUxContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { PrivateRoute } from 'routes/PrivateRoute'
+import { ResourcesContainer } from 'containers/ResourcesContainer'
 
 export const Routes = () => {
   return (
@@ -36,11 +37,18 @@ export const Routes = () => {
           <Home path="/" />
 
           <MissionContainer path="/mission" />
-          <Board path="/board/:name" />
-          <Board path="/board" />
+
+          <PrivateRoute
+            isAuthorized={true}
+            path="/board/:name"
+            component={BoardMemberContainer}
+          />
+          <BoardContainer path="/board" />
           <MembershipContainer path="/membership" />
           <DC path="/directorscouncil" />
-          <History path="/history" />
+
+          <HxstoryContainer path="/hxstory" />
+          <HxstoryContainer path="/history" />
 
           <HostContainer path="/host" />
 
@@ -48,7 +56,7 @@ export const Routes = () => {
           <WhereAreYouFrom path="/whereareyoufrom" />
 
           <Awards path="/awards" />
-          <ApiaOrgs path="/apiaorgs" />
+          <ResourcesContainer path="/organizations" />
 
           <Alumni path="/alumni" />
 

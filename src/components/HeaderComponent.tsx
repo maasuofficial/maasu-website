@@ -2,6 +2,6 @@ import React, { FC } from 'react'
 
 interface Props {}
 
-export const HeaderContainer: FC<Props> = () => {
+export const HeaderComponent: FC<Props> = () => {
   return <header>hello header</header>
 }

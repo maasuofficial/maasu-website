@@ -1,14 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { cleanup } from '@testing-library/react'
-import Board from './'
-
-afterEach(cleanup)
+import { FooterComponent } from '../FooterComponent'
+import 'constants/iconLibrary'
 
 describe('render', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<Board />, div)
+    ReactDOM.render(<FooterComponent />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 })

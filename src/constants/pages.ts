@@ -103,6 +103,15 @@ ${STRATEGIC_PLAN_YEARS}
 // Board
 // -----------------------------------------------------
 
+export const BOARD_PRELUDE = `
+MAASU's executive board is divided into four subsections for a
+collectively stronger focus on each of the subsections' duties
+and roles. These subsections are the executive director, the
+executive coordinating committee, the directors council, and the 
+board of advisors. Each subsection plays an integral role in the
+management of MAASU functions.
+`
+
 type AppStatus = {
   isOpen: boolean
   status: string
@@ -229,6 +238,17 @@ Affiliate Organization Membership: Hereinafter referred to as
 "affiliates." Membership shall also be open to any nationally
 recognized Asian American organization. Must have college student
 representative in order to have voting privileges.
+`
+
+// -----------------------------------------------------
+// Hxstory
+// -----------------------------------------------------
+
+export const HXSTORY_PRELUDE = `
+MAASU uses the spelling hxstory instead of history. Traditional history
+tends to neglect the wonderful stories and contributions of womxn and 
+those who do not gender identify. The x stands for and is inclusive to 
+many different identities struggles, and intersectionalities.
 `
 
 // -----------------------------------------------------

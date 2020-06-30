@@ -1,15 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { cleanup } from '@testing-library/react'
-import WrapperMenu from './'
+import { Icon } from '../Icon'
 import 'constants/iconLibrary'
-
-afterEach(cleanup)
 
 describe('render', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<WrapperMenu />, div)
+    ReactDOM.render(<Icon icon="home" />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 })
