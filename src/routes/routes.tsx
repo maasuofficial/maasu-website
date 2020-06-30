@@ -3,12 +3,13 @@ import { Router } from '@reach/router'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { PrivateRoute } from 'routes/PrivateRoute'
 
-import { WrapperMenu, Alumni, Contact, DC } from 'containers'
+import { WrapperMenu, Alumni, Contact } from 'containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
+import { DirectorsCouncilContainer } from 'containers/DirectorsCouncilContainer'
 import {
   DonateContainer,
   DonateCompleteContainer,
@@ -42,7 +43,7 @@ export const Routes = () => {
           />
           <BoardContainer path="/board" />
           <MembershipContainer path="/membership" />
-          <DC path="/directorscouncil" />
+          <DirectorsCouncilContainer path="/directorscouncil" />
 
           <HxstoryContainer path="/hxstory" />
           <HxstoryContainer path="/history" />

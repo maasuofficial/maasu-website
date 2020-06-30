@@ -22,3 +22,15 @@ export const DONATE_MAA_URL =
 
 export const HOST_FORM =
   'https://docs.google.com/forms/d/e/1FAIpQLSdUWscQ_czYXQVE73fxSstNAR3SnEchK3_0nDyHFVbxRFpMxQ/viewform'
+
+// -----------------------------------------------------
+// Directors Council
+// -----------------------------------------------------
+
+export const DC_PROJECT_LIST = `
+https://bit.ly/3aZ9u87
+`
+
+export const DC_PROJECT_APP_FORM = `
+https://docs.google.com/forms/d/e/1FAIpQLSfUsKp2kqs64fW6reA13IuN1ppAbmssytsKeDhyhqMB1MmIgw/viewform
+`
