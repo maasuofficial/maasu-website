@@ -3,13 +3,7 @@ import { Router } from '@reach/router'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { PrivateRoute } from 'routes/PrivateRoute'
 
-import {
-  WrapperMenu,
-  Alumni,
-  Contact,
-  DC,
-  WhereAreYouFrom,
-} from '../containers'
+import { WrapperMenu, Alumni, Contact, DC } from 'containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
@@ -28,7 +22,9 @@ import { MainContainer } from 'containers/MainContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { NewslettersContainer } from 'containers/NewslettersContainer'
+import { ProgramContainer } from 'containers/ProgramContainer'
 import { ResourcesContainer } from 'containers/ResourcesContainer'
+import { WAYFComponent } from 'components/WAYFComponent'
 
 export const Routes = () => {
   return (
@@ -54,7 +50,9 @@ export const Routes = () => {
           <HostContainer path="/host" />
 
           <MAASUxContainer path="/maasux" />
-          <WhereAreYouFrom path="/whereareyoufrom" />
+          <ProgramContainer path="/">
+            <WAYFComponent path="/whereareyoufrom" />
+          </ProgramContainer>
 
           <AwardsContainer path="/awards" />
           <ResourcesContainer path="/organizations" />
