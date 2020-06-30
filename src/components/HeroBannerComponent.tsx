@@ -31,7 +31,7 @@ export const HeroBannerComponent: FC = () => {
       </div>
       <div className="tc">
         <img
-          className="w-20-ns w-30-s pa6-l"
+          className="w-60 pa6 w-30-ns"
           src={findAsset('branding/light/text.svg')}
           alt={APP_NAME_LONG}
         />

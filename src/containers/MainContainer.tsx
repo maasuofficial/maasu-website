@@ -3,9 +3,9 @@ import { RouteComponentProps } from '@reach/router'
 /* import { HeaderContainer } from 'containers/HeaderContainer' */
 /* import { FooterContainer } from 'containers/FooterContainer' */
 
-type Props = { children: React.ReactNode } & RouteComponentProps
+type Props = RouteComponentProps & { children: React.ReactNode }
 
-export const HomepageContainer: FC<Props> = ({ children }) => {
+export const MainContainer: FC<Props> = ({ children }) => {
   return (
     <div>
       {/* <HeaderContainer /> */}

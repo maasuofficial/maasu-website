@@ -1,7 +1,9 @@
 import React from 'react'
 import { Router } from '@reach/router'
+import { InvalidRoute } from 'routes/InvalidRoute'
+import { PrivateRoute } from 'routes/PrivateRoute'
+
 import {
-  Home,
   WrapperMenu,
   Alumni,
   Contact,
@@ -17,24 +19,23 @@ import {
   DonateContainer,
   DonateCompleteContainer,
 } from 'containers/DonateContainer'
-import { HomepageContainer } from 'containers/HomepageContainer'
+import { HomeContainer } from 'containers/HomeContainer'
 import { HostContainer } from 'containers/HostContainer'
 import { HxstoryContainer } from 'containers/HxstoryContainer'
-import { InvalidRoute } from 'routes/InvalidRoute'
 import { MAAContainer } from 'containers/MAAContainer'
 import { MAASUxContainer } from 'containers/MAASUxContainer'
+import { MainContainer } from 'containers/MainContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { NewslettersContainer } from 'containers/NewslettersContainer'
-import { PrivateRoute } from 'routes/PrivateRoute'
 import { ResourcesContainer } from 'containers/ResourcesContainer'
 
 export const Routes = () => {
   return (
     <Router className="posa h-100 t-0 r-0 b-0 l-0">
       <WrapperMenu path="/">
-        <HomepageContainer path="/">
-          <Home path="/" />
+        <MainContainer path="/">
+          <HomeContainer path="/" />
 
           <MissionContainer path="/mission" />
 
@@ -75,7 +76,7 @@ export const Routes = () => {
           <Contact path="/contact" />
 
           <InvalidRoute code={404} default />
-        </HomepageContainer>
+        </MainContainer>
       </WrapperMenu>
     </Router>
   )
