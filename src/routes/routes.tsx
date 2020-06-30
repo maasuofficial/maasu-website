@@ -6,7 +6,6 @@ import {
   Alumni,
   Contact,
   DC,
-  NewsLetter,
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
@@ -26,6 +25,7 @@ import { MAAContainer } from 'containers/MAAContainer'
 import { MAASUxContainer } from 'containers/MAASUxContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
+import { NewslettersContainer } from 'containers/NewslettersContainer'
 import { PrivateRoute } from 'routes/PrivateRoute'
 import { ResourcesContainer } from 'containers/ResourcesContainer'
 
@@ -67,7 +67,7 @@ export const Routes = () => {
           />
 
           <AnnualReportContainer path="/annual" />
-          <NewsLetter path="/newsletter" />
+          <NewslettersContainer path="/newsletter" />
           <ConferencesContainer path="/conferences" />
 
           <DonateContainer path="/donate" />
