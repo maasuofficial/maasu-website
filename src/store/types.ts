@@ -2,6 +2,7 @@ import { Member, MemberState } from './Members/types'
 import { Conference, ConferenceState } from './Conferences/types'
 import { BoardState } from './Board/types'
 import { HEventState } from './Events/types'
+import { ResourceState } from './Resources/types'
 
 // -----------------------------------------------------
 // Alumni
@@ -37,4 +38,5 @@ export type AppState = {
   conferences: ConferenceState
   board: BoardState
   events: HEventState
+  resources: ResourceState
 }

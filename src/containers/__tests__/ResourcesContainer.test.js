@@ -1,11 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import ApiaOrgs from './'
+import { cleanup } from '@testing-library/react'
+import { Resources } from 'containers/ResourcesContainer'
+
+afterEach(cleanup)
 
 describe('render', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
-    ReactDOM.render(<ApiaOrgs />, div)
+    ReactDOM.render(<Resources />, div)
     ReactDOM.unmountComponentAtNode(div)
   })
 })

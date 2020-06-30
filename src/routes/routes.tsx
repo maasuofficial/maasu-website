@@ -4,7 +4,6 @@ import {
   Home,
   WrapperMenu,
   Alumni,
-  ApiaOrgs,
   Awards,
   Contact,
   DC,
@@ -28,6 +27,7 @@ import { MAASUxContainer } from 'containers/MAASUxContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { PrivateRoute } from 'routes/PrivateRoute'
+import { ResourcesContainer } from 'containers/ResourcesContainer'
 
 export const Routes = () => {
   return (
@@ -56,7 +56,7 @@ export const Routes = () => {
           <WhereAreYouFrom path="/whereareyoufrom" />
 
           <Awards path="/awards" />
-          <ApiaOrgs path="/apiaorgs" />
+          <ResourcesContainer path="/organizations" />
 
           <Alumni path="/alumni" />
 

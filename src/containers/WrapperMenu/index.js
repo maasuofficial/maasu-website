@@ -97,7 +97,7 @@ class WrapperMenu extends React.Component {
               <SubMenu>
                 <Link>Resources</Link>
                 <Link href="/awards">Awards and Scholarships</Link>
-                <Link href="/apiaorgs">APIA Organizations</Link>
+                <Link href="/organizations">Organizations</Link>
               </SubMenu>
 
               <Link href="/alumni">Alumni</Link>
