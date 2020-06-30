@@ -1,5 +1,6 @@
-export { fetchMembers } from './Members/actions'
-export { fetchConferences } from './Conferences/actions'
+export { fetchAwards } from './Awards/actions'
 export { fetchBoard } from './Board/actions'
+export { fetchConferences } from './Conferences/actions'
 export { fetchEvents } from './Events/actions'
+export { fetchMembers } from './Members/actions'
 export { fetchResources } from './Resources/actions'

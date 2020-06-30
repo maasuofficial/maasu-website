@@ -13,6 +13,7 @@ export const CONFERENCES_ID = '1511181098'
 export const BOARD_ID = '1262721235'
 export const EVENTS_ID = '1201194910'
 export const RESOURCES_ID = '997011760'
+export const AWARDS_ID = '1102744340'
 
 // -----------------------------------------------------
 // Functions

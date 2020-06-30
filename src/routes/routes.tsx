@@ -4,13 +4,13 @@ import {
   Home,
   WrapperMenu,
   Alumni,
-  Awards,
   Contact,
   DC,
   NewsLetter,
   WhereAreYouFrom,
 } from '../containers'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
@@ -55,7 +55,7 @@ export const Routes = () => {
           <MAASUxContainer path="/maasux" />
           <WhereAreYouFrom path="/whereareyoufrom" />
 
-          <Awards path="/awards" />
+          <AwardsContainer path="/awards" />
           <ResourcesContainer path="/organizations" />
 
           <Alumni path="/alumni" />
