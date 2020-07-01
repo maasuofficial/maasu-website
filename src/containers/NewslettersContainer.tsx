@@ -41,9 +41,9 @@ export const Newsletters: FC<Props> = ({
           <table className="mxa">
             <thead>
               <tr>
-                <td>volume</td>
-                <td>issue</td>
-                <td>newsletter</td>
+                <th>volume</th>
+                <th>issue</th>
+                <th>newsletter</th>
               </tr>
             </thead>
             <tbody>

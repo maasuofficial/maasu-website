@@ -33,6 +33,7 @@ td {
   border-collapse: collapse;
 }
 
+th,
 td {
   @extend .px2;
   @extend .py1;

@@ -3,7 +3,8 @@ import { Router } from '@reach/router'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { PrivateRoute } from 'routes/PrivateRoute'
 
-import { WrapperMenu, Alumni, Contact } from 'containers'
+import { WrapperMenu, Contact } from 'containers'
+import { AlumniContainer } from 'containers/AlumniContainer'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
@@ -58,7 +59,7 @@ export const Routes = () => {
           <AwardsContainer path="/awards" />
           <ResourcesContainer path="/organizations" />
 
-          <Alumni path="/alumni" />
+          <AlumniContainer path="/alumni" />
 
           <PrivateRoute
             isAuthorized={false}

@@ -45,7 +45,7 @@ export const BoardMember: FC<Props> = ({
 
       {imageUrl && (
         <Fragment>
-          <img className="w-80 w-50-ns" src={imageUrl} alt={name} />
+          <img className="w-80 w-40-ns" src={imageUrl} alt={name} />
           <br />
         </Fragment>
       )}
