@@ -1,9 +1,9 @@
 // import { api, BASE_URL } from 'store/api'
 // import { BoardMember, BoardAPIResponse } from './types'
-import { BoardMember } from './types'
 import { Dispatch } from 'redux'
 import { BOARD_FETCH, BOARD_SUCCESS, BOARD_ERROR } from 'constants/strings'
 import data from 'constants/cache/board.json'
+import { BoardMember } from './types'
 
 export const boardRequest = () => ({
   type: BOARD_FETCH,

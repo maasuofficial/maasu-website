@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router } from '@reach/router'
-import { Resources } from 'containers/ResourcesContainer'
+import { Awards } from '../AwardsContainer'
 
 describe('render', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
     ReactDOM.render(
       <Router>
-        <Resources
-          fetchResources={() => {}}
-          isFetchingResources={false}
-          resources={[]}
-          resourcesError=""
+        <Awards
+          fetchAwards={() => {}}
+          isFetchingAwards={false}
+          awards={[]}
+          awardsError=""
           default
         />
       </Router>,

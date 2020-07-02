@@ -1,18 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Router } from '@reach/router'
-import { Resources } from 'containers/ResourcesContainer'
+import { Newsletters } from 'containers/NewslettersContainer'
 
 describe('render', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
     ReactDOM.render(
       <Router>
-        <Resources
-          fetchResources={() => {}}
-          isFetchingResources={false}
-          resources={[]}
-          resourcesError=""
+        <Newsletters
+          fetchNewsletters={() => {}}
+          isFetchingNewsletters={false}
+          newsletters={[]}
+          newslettersError=""
           default
         />
       </Router>,
