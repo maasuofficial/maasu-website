@@ -601,8 +601,16 @@ li.horizontal-ruc {
   color: var(--palette-text-main) !important;
 }
 
+.fgc-text-main {
+  color: var(--palette-text-main) !important;
+}
+
 .bgc-text-main {
   background-color: var(--palette-text-main) !important;
+}
+
+.bgc-bg-main {
+  background-color: var(--palette-background-main) !important;
 }
 
 .hov-bgc-bg-main:hover {

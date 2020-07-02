@@ -3,13 +3,15 @@ import { Router } from '@reach/router'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { PrivateRoute } from 'routes/PrivateRoute'
 
-import { WrapperMenu, Contact } from 'containers'
+import WrapperMenu from 'containers/WrapperMenu'
+
 import { AlumniContainer } from 'containers/AlumniContainer'
 import { AnnualReportContainer } from 'containers/AnnualReportContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
+import { ContactContainer } from 'containers/ContactContainer'
 import { DirectorsCouncilContainer } from 'containers/DirectorsCouncilContainer'
 import {
   DonateContainer,
@@ -73,7 +75,7 @@ export const Routes = () => {
 
           <DonateContainer path="/donate" />
           <DonateCompleteContainer path="/donate-complete" />
-          <Contact path="/contact" />
+          <ContactContainer path="/contact" />
 
           <InvalidRoute code={404} default />
         </MainContainer>
