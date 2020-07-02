@@ -18,7 +18,7 @@ export const ECC_APP_LINK = 'https://forms.gle/CxV8qK2S3QKAMAN59'
 // -----------------------------------------------------
 
 export const DONATE_MAASU_URL =
-  'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7MEQUT6NUGA9E&source=url'
+  'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2GPHWP7AYXHCQ&source=url'
 export const DONATE_MAA_URL =
   'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LFY3B4ZT98TVN&source=url'
 

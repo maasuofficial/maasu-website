@@ -20,12 +20,18 @@ export const DonateContainer: FC<DonateProps> = () => {
       <p>{DONATE_STMT_1}</p>
       <p>{DONATE_STMT_2}</p>
 
+      <img
+        className="w-100"
+        src={findAsset('img/donate.jpg')}
+        alt="donate to our cause"
+      />
+
       <p>
         If you have any questions, please reach out to the{' '}
         <EA>directorscouncil@maasu.org</EA>.
       </p>
 
-      <p className="fw700">
+      <p className="fs1 fw700">
         donate <a href={DONATE_MAASU_URL}>here</a>.
       </p>
     </div>
