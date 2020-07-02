@@ -5,7 +5,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { fetchEvents } from 'store/actions'
 import { getIsFetchingEvents, getEvents, getEventsError } from 'store/selectors'
-import { Time, Timeline, TDesc, TSub, TTitle } from 'components'
+import { Cell, Grid } from 'components'
 import { HEvent } from 'store/Events/types'
 import { HXSTORY_PRELUDE } from 'constants/strings'
 
@@ -43,24 +43,29 @@ export const Hxstory: FC<Props> = ({
       {isFetchingEvents ? (
         <span>loading...</span>
       ) : (
-        <Timeline className="px6">
+        <Grid y className={'container px4-s'}>
           {Object.keys(hxstory)
             .sort((a, b) => parseInt(b) - parseInt(a))
             .map((k, i) => (
-              <Time key={i} label={k}>
-                {hxstory[k].map((e, i) => (
-                  <Fragment key={i}>
-                    <TTitle>{e.title}</TTitle>
-                    <TSub>
+              <Cell key={i} className="timeContainer">
+                <div className="labelContainer">
+                  <div>
+                    <span>{k}</span>
+                  </div>
+                </div>
+                <div className="py3-s px5-s py5 px7 contentContainer">
+                  {hxstory[k].map((e, i) => (
+                    <Fragment key={i}>
+                      <h5 className="title5 my2">{e.title}</h5>
                       <span>{e.university}</span>
-                    </TSub>
-                    <TDesc>{e.desc}</TDesc>
-                    {e.cta && <a href={e.cta}>Learn More</a>}
-                  </Fragment>
-                ))}
-              </Time>
+                      <p>{e.desc}</p>
+                      {e.cta && <a href={e.cta}>Learn More</a>}
+                    </Fragment>
+                  ))}
+                </div>
+              </Cell>
             ))}
-        </Timeline>
+        </Grid>
       )}
     </div>
   )

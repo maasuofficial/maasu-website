@@ -1,6 +1,6 @@
-import React, { FC, Fragment } from 'react'
+import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { BImg, Page } from 'components'
+import { BImg } from 'components'
 import { useDocumentTitle } from 'hooks/meta'
 import { findAsset } from 'utils/files'
 import {
@@ -26,8 +26,8 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('Our Mission')
 
   return (
-    <Fragment>
-      <Page>
+    <div className="container py6">
+      <section>
         <h3 className="mt0 tc fs2 ffhind fw700">Our Purpose</h3>
         <div className="w-70 w-30-ns mxa tc">
           <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
@@ -40,8 +40,8 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           alt={PURPOSE_IMG_ALT}
         />
         <div className="fsi w-100 w-80-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
-      </Page>
-      <Page>
+      </section>
+      <section>
         <h3 className="mt0 tc fs2 ffhind fw700">Our Mission</h3>
         <p>{MISSION_PRELUDE}</p>
         <ul>
@@ -51,13 +51,13 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           <li>{MISSION_STMT_4}</li>
           <li>{MISSION_STMT_5}</li>
         </ul>
-      </Page>
-      <Page>
+      </section>
+      <section>
         <h3 className="mt0 tc fs2 ffhind fw700">Who We Serve</h3>
         <p>{SERVE_STMT_1}</p>
         <p>{SERVE_STMT_2}</p>
-      </Page>
-      <Page>
+      </section>
+      <section>
         <h3 className="mt0 tc fs2 ffhind fw700">Strategic Plan</h3>
         <p>
           {STRATEGIC_PLAN}
@@ -70,7 +70,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           </a>
           .
         </p>
-      </Page>
-    </Fragment>
+      </section>
+    </div>
   )
 }
