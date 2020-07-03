@@ -4,7 +4,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { BoardMember } from 'store/Board/types'
 import { useDocumentTitle } from 'hooks/meta'
-import { ARBox, BImg, Cell, Grid } from 'components'
+import { ARBox, Cell, Grid } from 'components'
 import { getIsFetchingBoard, getBoard, getBoardError } from 'store/selectors'
 import { fetchBoard } from 'store/actions'
 import {

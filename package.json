@@ -8,7 +8,8 @@
     "build": "react-scripts build && yarn build:functions",
     "test:function": "yarn build:functions && node src/functions/testHandler.js",
     "test": "react-scripts test",
-    "test:ci": "yarn test --coverage --watchAll=false"
+    "test:ci": "yarn test --coverage --watchAll=false",
+    "lintcheck": "eslint src/**/**.ts* --max-warnings 0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
@@ -53,6 +54,7 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-react-hooks": "^4.0.2",
     "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.2.5",
     "jest-dom": "^3.5.0",
     "prettier": "2.0.5",
     "react-test-renderer": "^16.13.1"
@@ -71,5 +73,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lintcheck && CI=true yarn test"
+    }
   }
 }
