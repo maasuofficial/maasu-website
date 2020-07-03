@@ -22,6 +22,7 @@ import {
   ED_APP_ISOPEN,
   ED_APP_STATUS,
 } from 'constants/strings'
+import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 
 type Props = RouteComponentProps & ReduxProps & {}
 
@@ -48,7 +49,7 @@ export const Board: FC<Props> = ({
           <ARBox resizeable>
             <Link to={`/board/${p.id}`} className="c-inh tdn">
               <div className="w-100 h-100 pa2 tc profile-board">
-                <BImg src={p.imageUrl} alt={name} />
+                <img src={p.imageUrl} alt={name} />
                 <p className="ma0 fw700">{name}</p>
                 <span>{p.positionTitle}</span>
               </div>
@@ -74,70 +75,70 @@ export const Board: FC<Props> = ({
   }
 
   return (
-    <div className="container pt6">
-      <section className="mb4">
-        <h4 className="title4">Executive Board</h4>
-        <span>{BOARD_PRELUDE}</span>
-      </section>
+    <SkeletonProvider isLoading={isFetchingBoard}>
+      <div className="container pt6">
+        <section className="mb4">
+          <h4 className="title4">Executive Board</h4>
+          <span>{BOARD_PRELUDE}</span>
+        </section>
 
-      <section>
-        <h5 className="title5">Executive Director</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.ED)}</Grid>
-        )}
-        <p className="my4">
-          {ED_APP_STATUS}
-          {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
+        <section>
+          <h5 className="title5">Executive Director</h5>
+          <SkeletonConsumer width={256} height={256}>
+            <Grid>{generateProfiles(groups.ED)}</Grid>
+          </SkeletonConsumer>
+          <p className="my4">
+            {ED_APP_STATUS}
+            {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
 
-      <hr className="w-100 my4" />
+        <hr className="w-100 my4" />
 
-      <section>
-        <h5 className="title5">Executive Coordinating Committee</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.ECC)}</Grid>
-        )}
-        <p className="my4">
-          {ECC_APP_STATUS}
-          {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
+        <section>
+          <h5 className="title5">Executive Coordinating Committee</h5>
+          {isFetchingBoard ? (
+            <span>loading...</span>
+          ) : (
+            <Grid>{generateProfiles(groups.ECC)}</Grid>
+          )}
+          <p className="my4">
+            {ECC_APP_STATUS}
+            {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
 
-      <hr className="w-100 my4" />
+        <hr className="w-100 my4" />
 
-      <section>
-        <h5 className="title5">Directors Council</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.DC)}</Grid>
-        )}
-        <p className="my4">
-          {DC_APP_STATUS}
-          {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
+        <section>
+          <h5 className="title5">Directors Council</h5>
+          {isFetchingBoard ? (
+            <span>loading...</span>
+          ) : (
+            <Grid>{generateProfiles(groups.DC)}</Grid>
+          )}
+          <p className="my4">
+            {DC_APP_STATUS}
+            {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
 
-      <hr className="w-100 my4" />
+        <hr className="w-100 my4" />
 
-      <section>
-        <h5 className="title5">Board Of Advisors</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.BOA)}</Grid>
-        )}
-        <p className="my4">
-          {BOA_APP_STATUS}
-          {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
-    </div>
+        <section>
+          <h5 className="title5">Board Of Advisors</h5>
+          {isFetchingBoard ? (
+            <span>loading...</span>
+          ) : (
+            <Grid>{generateProfiles(groups.BOA)}</Grid>
+          )}
+          <p className="my4">
+            {BOA_APP_STATUS}
+            {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
+      </div>
+    </SkeletonProvider>
   )
 }
 

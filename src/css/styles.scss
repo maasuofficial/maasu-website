@@ -1,5 +1,6 @@
 @import './legacy';
 @import './media';
+@import './elements';
 
 *,
 *::before,
@@ -48,10 +49,4 @@ textarea {
 
 button {
   cursor: pointer;
-}
-
-.container {
-  @extend .mxa;
-  @extend .px2-nl;
-  max-width: $containerWidth;
 }
