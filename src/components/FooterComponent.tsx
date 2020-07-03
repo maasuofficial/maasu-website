@@ -5,7 +5,7 @@ import { findAsset } from 'utils/files'
 
 export const FooterComponent: FC<{}> = () => {
   return (
-    <footer className="container pt4">
+    <footer className="container mt6">
       <div className="df fd-c-s jc-sb">
         <div className="w-100 w-30-ns mb6">
           <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
