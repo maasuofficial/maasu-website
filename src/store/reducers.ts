@@ -6,6 +6,7 @@ import { conferencesReducer } from './Conferences/reducers'
 import { eventsReducer } from './Events/reducers'
 import { membersReducer } from './Members/reducers'
 import { newslettersReducer } from './Newsletters/reducers'
+import { reportsReducer } from './Reports/reducers'
 import { resourcesReducer } from './Resources/reducers'
 
 export const rootReducer = combineReducers({
@@ -15,5 +16,6 @@ export const rootReducer = combineReducers({
   events: eventsReducer,
   members: membersReducer,
   newsletters: newslettersReducer,
+  reports: reportsReducer,
   resources: resourcesReducer,
 })

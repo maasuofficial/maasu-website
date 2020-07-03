@@ -6,7 +6,7 @@ import { PrivateRoute } from 'routes/PrivateRoute'
 import WrapperMenu from 'containers/WrapperMenu'
 
 import { AlumniContainer } from 'containers/AlumniContainer'
-import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { AnnualReportsContainer } from 'containers/AnnualReportsContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
@@ -69,7 +69,7 @@ export const Routes = () => {
             component={MAAContainer}
           />
 
-          <AnnualReportContainer path="/annual" />
+          <AnnualReportsContainer path="/annual" />
           <NewslettersContainer path="/newsletter" />
           <ConferencesContainer path="/conferences" />
 
