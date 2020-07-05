@@ -90,8 +90,8 @@ class WrapperMenu extends React.Component {
 
               <SubMenu>
                 <Link>Programs</Link>
-                <Link href="/maasux">MAASUx</Link>
-                <Link href="/whereareyoufrom">#whereareyoufrom</Link>
+                <Link href="/programs/maasux">MAASUx</Link>
+                <Link href="/programs/whereareyoufrom">#whereareyoufrom</Link>
               </SubMenu>
 
               <SubMenu>

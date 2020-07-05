@@ -53,8 +53,8 @@ export const Routes = () => {
 
           <HostContainer path="/host" />
 
-          <MAASUxContainer path="/maasux" />
-          <ProgramContainer path="/">
+          <ProgramContainer path="/programs">
+            <MAASUxContainer path="/maasux" />
             <WAYFComponent path="/whereareyoufrom" />
           </ProgramContainer>
 
