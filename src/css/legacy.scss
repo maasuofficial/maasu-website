@@ -613,6 +613,10 @@ li.horizontal-ruc {
   background-color: var(--palette-background-main) !important;
 }
 
+.bgc-bg-dark {
+  background-color: var(--palette-background-dark) !important;
+}
+
 .hov-bgc-bg-main:hover {
   background-color: var(--palette-background-main) !important;
 }
@@ -623,4 +627,9 @@ li.horizontal-ruc {
 
 .br2 {
   border: 2px solid var(--palette-text-main);
+}
+
+// for testing purposes
+.bgc-red {
+  background-color: red !important;
 }

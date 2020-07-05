@@ -13,5 +13,6 @@
     @include placement($id);
     @include colors($id);
     @include flex($id);
+    @include opacity($id);
   }
 }

@@ -387,3 +387,19 @@
   }
 }
 @include flex();
+
+/**
+ * -----------------------------------------------------
+ * Opacity
+ * -----------------------------------------------------
+ */
+
+@mixin opacity($media: '') {
+  @for $i from 0 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .op-#{$val}#{$media} {
+      opacity: #{$val / 100} !important;
+    }
+  }
+}
+@include opacity();
