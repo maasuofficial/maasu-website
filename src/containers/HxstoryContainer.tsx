@@ -5,7 +5,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { fetchEvents } from 'store/actions'
 import { getIsFetchingEvents, getEvents, getEventsError } from 'store/selectors'
-import { Cell, Grid } from 'components'
+import { Cell } from 'components'
 import { HEvent } from 'store/Events/types'
 import { HXSTORY_PRELUDE } from 'constants/strings'
 
@@ -43,7 +43,7 @@ export const Hxstory: FC<Props> = ({
       {isFetchingEvents ? (
         <span>loading...</span>
       ) : (
-        <Grid y className={'container px4-s'}>
+        <div className={'df fd-c fw-w gridY container px4-s'}>
           {Object.keys(hxstory)
             .sort((a, b) => parseInt(b) - parseInt(a))
             .map((k, i) => (
@@ -65,7 +65,7 @@ export const Hxstory: FC<Props> = ({
                 </div>
               </Cell>
             ))}
-        </Grid>
+        </div>
       )}
     </div>
   )

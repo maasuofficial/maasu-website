@@ -1,6 +1,6 @@
 import ARBox from './AspectRatioBox'
 import BImg from './BufferedImage'
-import { Cell, Grid } from './Grid'
+import Cell from './Grid/Cell'
 import ThemeProvider from './ThemeProvider'
 
-export { ARBox, BImg, Cell, Grid, ThemeProvider }
+export { ARBox, BImg, Cell, ThemeProvider }

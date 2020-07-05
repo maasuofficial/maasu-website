@@ -98,9 +98,6 @@ $numGridCells: 12;
 // grid component
 
 .gridX {
-  flex-flow: row wrap;
-  flex-direction: row;
-
   & > .auto,
   & > .shrink {
     width: auto;
@@ -108,9 +105,6 @@ $numGridCells: 12;
 }
 
 .gridY {
-  flex-flow: column wrap;
-  flex-direction: column;
-
   & > .auto,
   & > .shrink {
     height: auto;
