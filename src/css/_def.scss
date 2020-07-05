@@ -147,6 +147,18 @@ $boxShadowMap: (
 
 /**
  * -----------------------------------------------------
+ * Border Radius
+ * 
+ * Border radius was chosen as a single value rather than
+ * a range of values to maintain consistency of radius
+ * throughout the application.
+ * -----------------------------------------------------
+ */
+
+$borderRadius: 3px;
+
+/**
+ * -----------------------------------------------------
  * Z Index
  * 
  * Z-index increments are chosen in increments of 1 since

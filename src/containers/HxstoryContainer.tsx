@@ -5,7 +5,6 @@ import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { fetchEvents } from 'store/actions'
 import { getIsFetchingEvents, getEvents, getEventsError } from 'store/selectors'
-import { Cell } from 'components'
 import { HEvent } from 'store/Events/types'
 import { HXSTORY_PRELUDE } from 'constants/strings'
 
@@ -43,29 +42,27 @@ export const Hxstory: FC<Props> = ({
       {isFetchingEvents ? (
         <span>loading...</span>
       ) : (
-        <div className={'df fd-c fw-w gridY container px4-s'}>
-          {Object.keys(hxstory)
-            .sort((a, b) => parseInt(b) - parseInt(a))
-            .map((k, i) => (
-              <Cell key={i} className="timeContainer">
-                <div className="labelContainer">
-                  <div>
-                    <span>{k}</span>
-                  </div>
+        Object.keys(hxstory)
+          .sort((a, b) => parseInt(b) - parseInt(a))
+          .map((k, i) => (
+            <div key={i} className="posr df">
+              <div className="posr px1 bgc-primary-main">
+                <div className="posa pa2 b-0 br l-5 tf-y-50 bgc-primary-main fgc-bg-main">
+                  {k}
                 </div>
-                <div className="py3-s px5-s py5 px7 contentContainer">
-                  {hxstory[k].map((e, i) => (
-                    <Fragment key={i}>
-                      <h5 className="title5 my2">{e.title}</h5>
-                      <span>{e.university}</span>
-                      <p>{e.desc}</p>
-                      {e.cta && <a href={e.cta}>Learn More</a>}
-                    </Fragment>
-                  ))}
-                </div>
-              </Cell>
-            ))}
-        </div>
+              </div>
+              <div className="pa5">
+                {hxstory[k].map((e, i) => (
+                  <Fragment key={i}>
+                    <h5 className="title5 my2">{e.title}</h5>
+                    <span>{e.university}</span>
+                    <p className="ma0">{e.desc}</p>
+                    {e.cta && <a href={e.cta}>Learn More</a>}
+                  </Fragment>
+                ))}
+              </div>
+            </div>
+          ))
       )}
     </div>
   )
