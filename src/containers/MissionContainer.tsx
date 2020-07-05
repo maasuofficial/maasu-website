@@ -1,6 +1,5 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { BImg } from 'components'
 import { useDocumentTitle } from 'hooks/meta'
 import {
   MISSION_PRELUDE,
@@ -32,7 +31,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         <h3 className="mt0 tc fs2 ffhind fw700">Our Purpose</h3>
         <p>{PURPOSE_STMT_1}</p>
         <p>{PURPOSE_STMT_2}</p>
-        <BImg
+        <img
           className="w-100 mxa"
           src={MISSION_FIRST_MEETING}
           alt={PURPOSE_IMG_ALT}
