@@ -41,58 +41,6 @@ $lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
   }
 }
 
-.buffering::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-
-  $bg: var(--palette-background-main);
-  $fg: var(--palette-background-dark);
-
-  background: linear-gradient(270deg, $bg, $fg, $bg);
-  background-size: 400% 400%;
-
-  @include vendor(animation, Placeholder 2s ease infinite);
-}
-
-@-webkit-keyframes Placeholder {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@-moz-keyframes Placeholder {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-@keyframes Placeholder {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 $numGridCells: 12;
 
 // grid component
@@ -161,7 +109,7 @@ $map: (
   }
 }
 
-// TODO
+// TODO outline typography
 
 em.typography,
 .styled-typography {

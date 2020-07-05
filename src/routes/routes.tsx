@@ -46,7 +46,7 @@ export const Routes = () => {
           />
           <BoardContainer path="/board" />
           <MembershipContainer path="/membership" />
-          <DirectorsCouncilContainer path="/directorscouncil" />
+          <DirectorsCouncilContainer path="/dc" />
 
           <HxstoryContainer path="/hxstory" />
           <HxstoryContainer path="/history" />
