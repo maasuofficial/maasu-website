@@ -9,7 +9,7 @@ export const MainContainer: FC<Props> = ({ children }) => {
   return (
     <div>
       {/* <HeaderComponent /> */}
-      <div>{children}</div>
+      {children}
       <FooterComponent />
     </div>
   )

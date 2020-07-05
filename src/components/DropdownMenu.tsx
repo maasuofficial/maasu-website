@@ -4,8 +4,8 @@ import { Link } from '@reach/router'
 // this menu assumes only one nested level
 // max since it prevents over-complexity
 
-// this menu also assumes all relative
-// links
+// this menu also assumes all links are
+// relative and internal
 
 type Menu = {
   [key: string]: string | Menu

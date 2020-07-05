@@ -32,7 +32,7 @@ import { WAYFComponent } from 'components/WAYFComponent'
 
 export const Routes = () => {
   return (
-    <Router className="posa h-100 t-0 r-0 b-0 l-0">
+    <Router primary={false} className="posa h-100 t-0 r-0 b-0 l-0">
       <WrapperMenu path="/">
         <MainContainer path="/">
           <HomeContainer path="/" />
