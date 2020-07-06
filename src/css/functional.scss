@@ -448,3 +448,21 @@
   }
 }
 @include transform();
+
+/**
+ * -----------------------------------------------------
+ * Various
+ * 
+ * Styles that don't belong in any specific category.
+ * -----------------------------------------------------
+ */
+
+@mixin various($media: '') {
+  .lstn#{$media} {
+    list-style-type: none !important;
+  }
+  .pointer#{$media} {
+    cursor: pointer !important;
+  }
+}
+@include various();

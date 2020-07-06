@@ -15,5 +15,6 @@
     @include flex($id);
     @include opacity($id);
     @include transform($id);
+    @include various($id);
   }
 }

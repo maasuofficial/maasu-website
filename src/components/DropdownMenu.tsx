@@ -18,24 +18,31 @@ type Props = {
 export const DropdownMenu: FC<Props> = ({ menu }) => {
   const keys = Object.keys(menu)
 
+  const classNameListOuter = 'dib pointer'
+
   return (
-    <nav>
-      {keys.map((k, i) => {
-        const item = menu[k]
-        return typeof item === 'string' ? (
-          <Link to={item as string} key={i}>
-            {k}
-          </Link>
-        ) : (
-          <div key={i}>
-            {Object.keys(item).map((sk, j) => (
-              <Link to={item[sk] as string} key={j}>
-                {sk}
-              </Link>
-            ))}
-          </div>
-        )
-      })}
+    <nav aria-label="menu">
+      <ul className="lstn pa0 ma0">
+        {keys.map((k, i) => {
+          const item = menu[k]
+          return typeof item === 'string' ? (
+            <li key={i} className={classNameListOuter}>
+              <Link to={item as string}>{k}</Link>
+            </li>
+          ) : (
+            <li key={i} className={classNameListOuter}>
+              <button className="clearall pa0 ma0">{k}</button>
+              <ul className="">
+                {Object.keys(item).map((sk, j) => (
+                  <li key={j}>
+                    <Link to={item[sk] as string}>{sk}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          )
+        })}
+      </ul>
     </nav>
   )
 }
