@@ -23,11 +23,11 @@ export const FooterComponent: FC<{}> = () => {
 
           <div className="df mb2">
             <Link to="/donate" className="tdn c-inh hov-tdu mr1">
-              Donate to Our Cause
+              Donate to our cause
             </Link>
             <span aria-hidden="true">|</span>
             <Link to="/contact" className="tdn c-inh hov-tdu mx1">
-              Contact Us
+              Contact us
             </Link>
           </div>
 
