@@ -21,6 +21,6 @@ export const MENU = {
     newsletter: '/newsletter',
     conferences: '/conferences',
   },
-  donate: '/donate',
   'contact us': '/contact',
+  donate: '/donate',
 }

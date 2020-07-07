@@ -1,5 +1,6 @@
 import React, { FC, ReactNode, useRef, useState } from 'react'
 import { Link } from '@reach/router'
+import classNames from 'classnames'
 
 // There is no rule that says all content has to be 100% accessible to all people —
 // you just need to do what you can, and make your apps as accessible as possible.
@@ -12,7 +13,11 @@ import { Link } from '@reach/router'
 // it also assumes all links are relative and internal
 
 const ulClassNames = 'lstn pa0 ma0'
-const liClassNames = 'dib pointer'
+const liClassNames = 'pointer px2'
+
+const itemClassNames = 'hov-c-primary-main'
+
+const mouseOutTimeout = 100
 
 type Menu = { [key: string]: string | Menu }
 type MenuProps = { menu: Menu }
@@ -26,11 +31,21 @@ export const DropdownMenu: FC<MenuProps> = ({ menu }) => {
         {keys.map((k, i) => {
           const item = menu[k]
           return typeof item === 'string' ? (
-            <DropdownItem key={i} name={k} url={item as string} />
+            <DropdownItem
+              key={i}
+              name={k}
+              url={item as string}
+              className="dib"
+            />
           ) : (
             <DropdownSubmenu key={i} title={k}>
               {Object.keys(item).map((sk, j) => (
-                <DropdownItem key={j} name={sk} url={item[sk] as string} />
+                <DropdownItem
+                  key={j}
+                  name={sk}
+                  url={item[sk] as string}
+                  className="db"
+                />
               ))}
             </DropdownSubmenu>
           )
@@ -46,7 +61,6 @@ type SubmenuProps = {
 }
 
 export const DropdownSubmenu: FC<SubmenuProps> = ({ title, children }) => {
-  const mouseOutTimeout = 500
   const [isOpen, setIsOpen] = useState(false)
   let timer = -1
   const el = useRef<HTMLLIElement>(null)
@@ -74,17 +88,23 @@ export const DropdownSubmenu: FC<SubmenuProps> = ({ title, children }) => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onBlur={handleBlur}
-      className={liClassNames}
+      className={classNames(liClassNames, 'posr dib')}
     >
       <button
-        className={`clearall ${liClassNames}`}
+        className={classNames('clearall', itemClassNames)}
         onClick={handleClick}
         aria-haspopup="true"
         aria-expanded={isOpen}
       >
         {title}
       </button>
-      <ul className={`${isOpen ? '' : 'dn'} ${ulClassNames}`}>{children}</ul>
+      <ul
+        className={classNames(ulClassNames, 'posa pa1 bs2 bg-bg-main', {
+          dn: !isOpen,
+        })}
+      >
+        {children}
+      </ul>
     </li>
   )
 }
@@ -92,12 +112,15 @@ export const DropdownSubmenu: FC<SubmenuProps> = ({ title, children }) => {
 type ItemProps = {
   name: string
   url: string
+  className?: string
 }
 
-const DropdownItem: FC<ItemProps> = ({ name, url }) => {
+const DropdownItem: FC<ItemProps> = ({ name, url, className }) => {
   return (
-    <li className={liClassNames}>
-      <Link to={url}>{name}</Link>
+    <li className={classNames(liClassNames, itemClassNames, className)}>
+      <Link to={url} className="tdn c-inh">
+        {name}
+      </Link>
     </li>
   )
 }
