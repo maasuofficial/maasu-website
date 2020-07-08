@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import { Menu as UtilityMenu } from 'components/react-utility-components'
 import { Icon } from 'components/Icon'
 
 const menu = {
@@ -12,7 +11,7 @@ const menu = {
     'Directors Council': '/dc',
     'Our Hxstory': '/hxstory',
   },
-  Conferences: { 'host a conference': '/host' },
+  Conferences: { 'Host a Conference': '/host' },
   Programs: {
     MAASUx: '/programs/maasux',
     'Where Are You From?': '/programs/whereareyoufrom',
@@ -32,8 +31,6 @@ const menu = {
 }
 
 let menuOverride = false
-
-const { Link: MenuLink, SubMenu } = UtilityMenu
 
 class WrapperMenu extends React.Component {
   constructor(props) {
@@ -88,38 +85,41 @@ class WrapperMenu extends React.Component {
 
         <div className={'posa wrapperMenuWM'}>
           <div className={'h-100 w-100 menuContainerWM'}>
-            <UtilityMenu
-              className={'utilityMenuWM'}
-              linkWrapper={(href, children) => {
-                return (
-                  <Link
-                    to={href}
-                    onClick={this.handleMenuClose}
-                    tabIndex={this.state.open ? 0 : -1}
-                  >
-                    {children}
-                  </Link>
-                )
-              }}
-            >
-              {keys.map((k, i) => {
-                const item = menu[k]
-                return typeof item === 'string' ? (
-                  <MenuLink key={i} href={item}>
-                    {k}
-                  </MenuLink>
-                ) : (
-                  <SubMenu key={i}>
-                    <MenuLink>{k}</MenuLink>
-                    {Object.keys(item).map((sk, j) => (
-                      <MenuLink key={j} href={item[sk]}>
-                        {sk}
-                      </MenuLink>
-                    ))}
-                  </SubMenu>
-                )
-              })}
-            </UtilityMenu>
+            <nav className={'utilityMenuWM'} aria-label="menu">
+              <ul>
+                {keys.map((k, i) => {
+                  const item = menu[k]
+                  return typeof item === 'string' ? (
+                    <li key={i}>
+                      <Link
+                        to={item}
+                        onClick={this.handleMenuClose}
+                        tabIndex={this.state.open ? 0 : -1}
+                      >
+                        {k}
+                      </Link>
+                    </li>
+                  ) : (
+                    <li key={i}>
+                      <span>{k}</span>
+                      <ul>
+                        {Object.keys(item).map((sk, j) => (
+                          <li key={j}>
+                            <Link
+                              to={item[sk]}
+                              onClick={this.handleMenuClose}
+                              tabIndex={this.state.open ? 0 : -1}
+                            >
+                              {sk}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  )
+                })}
+              </ul>
+            </nav>
           </div>
         </div>
 
