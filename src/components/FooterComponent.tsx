@@ -9,7 +9,12 @@ export const FooterComponent: FC<{}> = () => {
     <footer className="w-100 py5 mt6">
       <div className="container df fd-c-s jc-sb">
         <div className="w-100 w-30-ns pb5-s">
-          <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
+          <Link to="/">
+            <img
+              src={findAsset('branding/light/text.svg')}
+              alt={APP_NAME_LONG}
+            />
+          </Link>
         </div>
 
         <div className="w-100 w-30-ns">
