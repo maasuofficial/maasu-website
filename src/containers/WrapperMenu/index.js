@@ -1,11 +1,39 @@
 import React from 'react'
-import { Link as RouterLink } from '@reach/router'
+import { Link } from '@reach/router'
 import { Menu as UtilityMenu } from 'components/react-utility-components'
 import { Icon } from 'components/Icon'
 
+const menu = {
+  Home: '/',
+  'About Us': {
+    'Our Mission': '/mission',
+    'Executive Board': '/board',
+    Membership: '/membership',
+    'Directors Council': '/dc',
+    'Our Hxstory': '/hxstory',
+  },
+  Conferences: { 'host a conference': '/host' },
+  Programs: {
+    MAASUx: '/programs/maasux',
+    'Where Are You From?': '/programs/whereareyoufrom',
+  },
+  Resources: {
+    'Awards and Scholarships': '/awards',
+    Organizations: '/organizations',
+  },
+  Alumni: '/alumni',
+  Archives: {
+    'Annual Report': '/annual',
+    Newsletter: '/newsletter',
+    Conferences: '/conferences',
+  },
+  Donate: '/donate',
+  'Contact Us': '/contact',
+}
+
 let menuOverride = false
 
-const { Link, SubMenu } = UtilityMenu
+const { Link: MenuLink, SubMenu } = UtilityMenu
 
 class WrapperMenu extends React.Component {
   constructor(props) {
@@ -33,6 +61,8 @@ class WrapperMenu extends React.Component {
   render() {
     // TEMP menuOverride for sc 2020 promo bg color
     menuOverride = window.location.pathname === '/'
+
+    const keys = Object.keys(menu)
 
     return (
       <div
@@ -62,55 +92,33 @@ class WrapperMenu extends React.Component {
               className={'utilityMenuWM'}
               linkWrapper={(href, children) => {
                 return (
-                  <RouterLink
+                  <Link
                     to={href}
                     onClick={this.handleMenuClose}
                     tabIndex={this.state.open ? 0 : -1}
                   >
                     {children}
-                  </RouterLink>
+                  </Link>
                 )
               }}
             >
-              <Link href="/">Home</Link>
-
-              <SubMenu>
-                <Link>About Us</Link>
-                <Link href="/mission">Mission</Link>
-                <Link href="/board">Executive Board</Link>
-                <Link href="/membership">Member Schools</Link>
-                <Link href="/dc">Directors Council</Link>
-                <Link href="/hxstory">Hxstory</Link>
-              </SubMenu>
-
-              <SubMenu>
-                <Link>Conferences</Link>
-                <Link href="/host">Host a Conference</Link>
-              </SubMenu>
-
-              <SubMenu>
-                <Link>Programs</Link>
-                <Link href="/programs/maasux">MAASUx</Link>
-                <Link href="/programs/whereareyoufrom">#whereareyoufrom</Link>
-              </SubMenu>
-
-              <SubMenu>
-                <Link>Resources</Link>
-                <Link href="/awards">Awards and Scholarships</Link>
-                <Link href="/organizations">Organizations</Link>
-              </SubMenu>
-
-              <Link href="/alumni">Alumni</Link>
-
-              <SubMenu>
-                <Link>Archives</Link>
-                <Link href="/annual">Annual Report</Link>
-                <Link href="/newsletter">Newsletter</Link>
-                <Link href="/conferences">Conferences</Link>
-              </SubMenu>
-
-              <Link href="/donate">Donate</Link>
-              <Link href="/contact">Contact Us</Link>
+              {keys.map((k, i) => {
+                const item = menu[k]
+                return typeof item === 'string' ? (
+                  <MenuLink key={i} href={item}>
+                    {k}
+                  </MenuLink>
+                ) : (
+                  <SubMenu key={i}>
+                    <MenuLink>{k}</MenuLink>
+                    {Object.keys(item).map((sk, j) => (
+                      <MenuLink key={j} href={item[sk]}>
+                        {sk}
+                      </MenuLink>
+                    ))}
+                  </SubMenu>
+                )
+              })}
             </UtilityMenu>
           </div>
         </div>
