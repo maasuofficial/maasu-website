@@ -5,12 +5,12 @@ export type BoardMember = {
   fname: string
   lname: string
   alias?: string
-  school: string
-  city: string
-  state: string
+  school?: string
+  city?: string
+  state?: string
   positionType: string
   positionPriority: number
-  positionTitle: string
+  positionTitle?: string
   positionEmail?: string
   positionDesc?: string
   emailFallback?: string

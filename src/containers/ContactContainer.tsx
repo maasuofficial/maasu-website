@@ -3,7 +3,6 @@ import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import querystring from 'querystring'
 import fetch from 'isomorphic-fetch'
-import { FooterComponent } from 'components/FooterComponent'
 
 type Props = RouteComponentProps & {}
 
@@ -82,8 +81,6 @@ export const ContactContainer: FC<Props> = () => {
           </button>
         )}
       </form>
-
-      <FooterComponent />
     </div>
   )
 }

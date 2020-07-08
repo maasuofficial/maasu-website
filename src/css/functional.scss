@@ -237,19 +237,22 @@
 
 /**
  * -----------------------------------------------------
- * Box Shadow
+ * Box Styling
  * -----------------------------------------------------
  */
 
-@mixin boxShadow($media: '') {
+@mixin boxStyling($media: '') {
   @each $scale, $value in $boxShadowMap {
     .bs#{$scale}#{$media} {
       // TODO color?
       box-shadow: 0 0 $value #555 !important;
     }
+    .br#{$media} {
+      border-radius: $borderRadius !important;
+    }
   }
 }
-@include boxShadow();
+@include boxStyling();
 
 /**
  * -----------------------------------------------------
@@ -293,14 +296,26 @@
     .t-#{$val}#{$media} {
       top: #{$val * 1%} !important;
     }
+    .t-s#{$val}#{$media} {
+      top: #{$val * -1%} !important;
+    }
     .r-#{$val}#{$media} {
       right: #{$val * 1%} !important;
+    }
+    .r-s#{$val}#{$media} {
+      right: #{$val * -1%} !important;
     }
     .b-#{$val}#{$media} {
       bottom: #{$val * 1%} !important;
     }
+    .b-s#{$val}#{$media} {
+      bottom: #{$val * -1%} !important;
+    }
     .l-#{$val}#{$media} {
       left: #{$val * 1%} !important;
+    }
+    .l-s#{$val}#{$media} {
+      left: #{$val * -1%} !important;
     }
   }
 }
@@ -387,3 +402,67 @@
   }
 }
 @include flex();
+
+/**
+ * -----------------------------------------------------
+ * Opacity
+ * -----------------------------------------------------
+ */
+
+@mixin opacity($media: '') {
+  @for $i from 0 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .op-#{$val}#{$media} {
+      opacity: #{$val / 100} !important;
+    }
+  }
+}
+@include opacity();
+
+/**
+ * -----------------------------------------------------
+ * Transform
+ * 
+ * Values are kept separate (e.g. translateX vs 
+ * translateY) to reduce the amount of complexity in 
+ * transform styles being used. This method ensures only 
+ * one transform is used per element.
+ * -----------------------------------------------------
+ */
+
+@mixin transform($media: '') {
+  @for $i from 0 through 100 / $step-inc {
+    $val: $i * $step-inc;
+    .tf-x-#{$val}#{$media} {
+      @include vendor(transform, translateX(#{$val * 1%}) !important);
+    }
+    .tf-sx-#{$val}#{$media} {
+      @include vendor(transform, translateX(#{$val * -1%}) !important);
+    }
+    .tf-y-#{$val}#{$media} {
+      @include vendor(transform, translateY(#{$val * 1%}) !important);
+    }
+    .tf-sy-#{$val}#{$media} {
+      @include vendor(transform, translateY(#{$val * -1%}) !important);
+    }
+  }
+}
+@include transform();
+
+/**
+ * -----------------------------------------------------
+ * Various
+ * 
+ * Styles that don't belong in any specific category.
+ * -----------------------------------------------------
+ */
+
+@mixin various($media: '') {
+  .lstn#{$media} {
+    list-style-type: none !important;
+  }
+  .pointer#{$media} {
+    cursor: pointer !important;
+  }
+}
+@include various();

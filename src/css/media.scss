@@ -7,11 +7,14 @@
     @include position($id);
     @include display($id);
     @include sizing($id);
-    @include boxShadow($id);
+    @include boxStyling($id);
     @include z($id);
     @include text($id);
     @include placement($id);
     @include colors($id);
     @include flex($id);
+    @include opacity($id);
+    @include transform($id);
+    @include various($id);
   }
 }

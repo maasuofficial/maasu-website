@@ -1,10 +1,7 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { BImg } from 'components'
 import { useDocumentTitle } from 'hooks/meta'
-import { findAsset } from 'utils/files'
 import {
-  APP_NAME_LONG,
   MISSION_PRELUDE,
   MISSION_STMT_1,
   MISSION_STMT_2,
@@ -18,6 +15,9 @@ import {
   SERVE_STMT_1,
   SERVE_STMT_2,
   STRATEGIC_PLAN,
+  MISSION_FIRST_MEETING,
+  STRAT_PLAN_URL,
+  NEW_TAB_PROPS,
 } from 'constants/strings'
 
 interface Props {}
@@ -29,20 +29,17 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
     <div className="container py6">
       <section>
         <h3 className="mt0 tc fs2 ffhind fw700">Our Purpose</h3>
-        <div className="w-70 w-30-ns mxa tc">
-          <img src={findAsset('branding/light/text.svg')} alt={APP_NAME_LONG} />
-        </div>
         <p>{PURPOSE_STMT_1}</p>
         <p>{PURPOSE_STMT_2}</p>
-        <BImg
+        <img
           className="w-100 mxa"
-          src={findAsset('img/old-ecc.png')}
+          src={MISSION_FIRST_MEETING}
           alt={PURPOSE_IMG_ALT}
         />
         <div className="fsi w-100 w-80-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
       </section>
       <section>
-        <h3 className="mt0 tc fs2 ffhind fw700">Our Mission</h3>
+        <h3 className="mt4 tc fs2 ffhind fw700">Our Mission</h3>
         <p>{MISSION_PRELUDE}</p>
         <ul>
           <li>{MISSION_STMT_1}</li>
@@ -53,19 +50,15 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         </ul>
       </section>
       <section>
-        <h3 className="mt0 tc fs2 ffhind fw700">Who We Serve</h3>
+        <h3 className="mt4 tc fs2 ffhind fw700">Who We Serve</h3>
         <p>{SERVE_STMT_1}</p>
         <p>{SERVE_STMT_2}</p>
       </section>
       <section>
-        <h3 className="mt0 tc fs2 ffhind fw700">Strategic Plan</h3>
+        <h3 className="mt4 tc fs2 ffhind fw700">Strategic Plan</h3>
         <p>
           {STRATEGIC_PLAN}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href={findAsset('files/MAASU_Strategic_Plan_2020-2024.pdf')}
-          >
+          <a {...NEW_TAB_PROPS} href={STRAT_PLAN_URL} download="hello.pdf">
             here
           </a>
           .

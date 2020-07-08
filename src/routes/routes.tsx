@@ -6,7 +6,7 @@ import { PrivateRoute } from 'routes/PrivateRoute'
 import WrapperMenu from 'containers/WrapperMenu'
 
 import { AlumniContainer } from 'containers/AlumniContainer'
-import { AnnualReportContainer } from 'containers/AnnualReportContainer'
+import { AnnualReportsContainer } from 'containers/AnnualReportsContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
@@ -32,7 +32,7 @@ import { WAYFComponent } from 'components/WAYFComponent'
 
 export const Routes = () => {
   return (
-    <Router className="posa h-100 t-0 r-0 b-0 l-0">
+    <Router primary={false} className="posa h-100 t-0 r-0 b-0 l-0">
       <WrapperMenu path="/">
         <MainContainer path="/">
           <HomeContainer path="/" />
@@ -46,15 +46,15 @@ export const Routes = () => {
           />
           <BoardContainer path="/board" />
           <MembershipContainer path="/membership" />
-          <DirectorsCouncilContainer path="/directorscouncil" />
+          <DirectorsCouncilContainer path="/dc" />
 
           <HxstoryContainer path="/hxstory" />
           <HxstoryContainer path="/history" />
 
           <HostContainer path="/host" />
 
-          <MAASUxContainer path="/maasux" />
-          <ProgramContainer path="/">
+          <ProgramContainer path="/programs">
+            <MAASUxContainer path="/maasux" />
             <WAYFComponent path="/whereareyoufrom" />
           </ProgramContainer>
 
@@ -69,7 +69,7 @@ export const Routes = () => {
             component={MAAContainer}
           />
 
-          <AnnualReportContainer path="/annual" />
+          <AnnualReportsContainer path="/annual" />
           <NewslettersContainer path="/newsletter" />
           <ConferencesContainer path="/conferences" />
 

@@ -1,16 +1,16 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-/* import { HeaderContainer } from 'containers/HeaderContainer' */
-/* import { FooterContainer } from 'containers/FooterContainer' */
+// import { HeaderComponent } from 'components/HeaderComponent'
+import { FooterComponent } from 'components/FooterComponent'
 
 type Props = RouteComponentProps & { children: React.ReactNode }
 
 export const MainContainer: FC<Props> = ({ children }) => {
   return (
     <div>
-      {/* <HeaderContainer /> */}
-      <div>{children}</div>
-      {/* <FooterContainer /> */}
+      {/* <HeaderComponent /> */}
+      {children}
+      <FooterComponent />
     </div>
   )
 }

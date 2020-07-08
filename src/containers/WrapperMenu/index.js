@@ -1,11 +1,36 @@
 import React from 'react'
-import { Link as RouterLink } from '@reach/router'
-import { Menu as UtilityMenu } from 'components/react-utility-components'
+import { Link } from '@reach/router'
 import { Icon } from 'components/Icon'
 
-let menuOverride = false
+const menu = {
+  Home: '/',
+  'About Us': {
+    'Our Mission': '/mission',
+    'Executive Board': '/board',
+    Membership: '/membership',
+    'Directors Council': '/dc',
+    'Our Hxstory': '/hxstory',
+  },
+  Conferences: { 'Host a Conference': '/host' },
+  Programs: {
+    MAASUx: '/programs/maasux',
+    'Where Are You From?': '/programs/whereareyoufrom',
+  },
+  Resources: {
+    'Awards and Scholarships': '/awards',
+    Organizations: '/organizations',
+  },
+  Alumni: '/alumni',
+  Archives: {
+    'Annual Report': '/annual',
+    Newsletter: '/newsletter',
+    Conferences: '/conferences',
+  },
+  Donate: '/donate',
+  'Contact Us': '/contact',
+}
 
-const { Link, SubMenu } = UtilityMenu
+let menuOverride = false
 
 class WrapperMenu extends React.Component {
   constructor(props) {
@@ -34,6 +59,8 @@ class WrapperMenu extends React.Component {
     // TEMP menuOverride for sc 2020 promo bg color
     menuOverride = window.location.pathname === '/'
 
+    const keys = Object.keys(menu)
+
     return (
       <div
         className={`posr h-100 w-100 ofh wrapperWM ${
@@ -58,60 +85,41 @@ class WrapperMenu extends React.Component {
 
         <div className={'posa wrapperMenuWM'}>
           <div className={'h-100 w-100 menuContainerWM'}>
-            <UtilityMenu
-              className={'utilityMenuWM'}
-              linkWrapper={(href, children) => {
-                return (
-                  <RouterLink
-                    to={href}
-                    onClick={this.handleMenuClose}
-                    tabIndex={this.state.open ? 0 : -1}
-                  >
-                    {children}
-                  </RouterLink>
-                )
-              }}
-            >
-              <Link href="/">Home</Link>
-
-              <SubMenu>
-                <Link>About Us</Link>
-                <Link href="/mission">Mission</Link>
-                <Link href="/board">Executive Board</Link>
-                <Link href="/membership">Member Schools</Link>
-                <Link href="/directorscouncil">Directors Council</Link>
-                <Link href="/hxstory">Hxstory</Link>
-              </SubMenu>
-
-              <SubMenu>
-                <Link>Conferences</Link>
-                <Link href="/host">Host a Conference</Link>
-              </SubMenu>
-
-              <SubMenu>
-                <Link>Programs</Link>
-                <Link href="/maasux">MAASUx</Link>
-                <Link href="/whereareyoufrom">#whereareyoufrom</Link>
-              </SubMenu>
-
-              <SubMenu>
-                <Link>Resources</Link>
-                <Link href="/awards">Awards and Scholarships</Link>
-                <Link href="/organizations">Organizations</Link>
-              </SubMenu>
-
-              <Link href="/alumni">Alumni</Link>
-
-              <SubMenu>
-                <Link>Archives</Link>
-                <Link href="/annual">Annual Report</Link>
-                <Link href="/newsletter">Newsletter</Link>
-                <Link href="/conferences">Conferences</Link>
-              </SubMenu>
-
-              <Link href="/donate">Donate</Link>
-              <Link href="/contact">Contact Us</Link>
-            </UtilityMenu>
+            <nav className={'utilityMenuWM'} aria-label="menu">
+              <ul>
+                {keys.map((k, i) => {
+                  const item = menu[k]
+                  return typeof item === 'string' ? (
+                    <li key={i}>
+                      <Link
+                        to={item}
+                        onClick={this.handleMenuClose}
+                        tabIndex={this.state.open ? 0 : -1}
+                      >
+                        {k}
+                      </Link>
+                    </li>
+                  ) : (
+                    <li key={i}>
+                      <span>{k}</span>
+                      <ul>
+                        {Object.keys(item).map((sk, j) => (
+                          <li key={j}>
+                            <Link
+                              to={item[sk]}
+                              onClick={this.handleMenuClose}
+                              tabIndex={this.state.open ? 0 : -1}
+                            >
+                              {sk}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  )
+                })}
+              </ul>
+            </nav>
           </div>
         </div>
 

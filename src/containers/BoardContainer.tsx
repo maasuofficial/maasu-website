@@ -1,10 +1,9 @@
 import React, { FC, useEffect } from 'react'
-import { RouteComponentProps, Link } from '@reach/router'
+import { RouteComponentProps } from '@reach/router'
 import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { BoardMember } from 'store/Board/types'
 import { useDocumentTitle } from 'hooks/meta'
-import { ARBox, BImg, Cell, Grid } from 'components'
 import { getIsFetchingBoard, getBoard, getBoardError } from 'store/selectors'
 import { fetchBoard } from 'store/actions'
 import {
@@ -22,6 +21,8 @@ import {
   ED_APP_ISOPEN,
   ED_APP_STATUS,
 } from 'constants/strings'
+import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
+import { BoardMemberProfile } from 'components/BoardMemberProfile'
 
 type Props = RouteComponentProps & ReduxProps & {}
 
@@ -39,105 +40,106 @@ export const Board: FC<Props> = ({
     }
   }, [board, fetchBoard, boardError])
 
-  const generateProfiles = (arr: BoardMember[]) => {
-    return arr.map((p, index) => {
-      const name = p.alias || `${p.fname} ${p.mname} ${p.lname}`
-
-      return (
-        <Cell key={index} auto sm={6} md={4} lg={3}>
-          <ARBox resizeable>
-            <Link to={`/board/${p.id}`} className="c-inh tdn">
-              <div className="w-100 h-100 pa2 tc profile-board">
-                <BImg src={p.imageUrl} alt={name} />
-                <p className="ma0 fw700">{name}</p>
-                <span>{p.positionTitle}</span>
-              </div>
-            </Link>
-          </ARBox>
-        </Cell>
-      )
-    })
-  }
-
   type GroupsType = {
+    [key: string]: BoardMember[]
     ED: BoardMember[]
     ECC: BoardMember[]
     DC: BoardMember[]
     BOA: BoardMember[]
   }
 
-  const groups: GroupsType = {
-    ED: board.filter((i) => i.positionType === 'ED'),
-    ECC: board.filter((i) => i.positionType === 'ECC'),
-    DC: board.filter((i) => i.positionType === 'DC'),
-    BOA: board.filter((i) => i.positionType === 'BOA'),
+  const initialGroups: GroupsType = {
+    ED: [],
+    ECC: [],
+    DC: [],
+    BOA: [],
   }
+  const groups = board.reduce((acc, val) => {
+    acc[val.positionType].push(val)
+    return acc
+  }, initialGroups)
 
   return (
-    <div className="container pt6">
-      <section className="mb4">
-        <h4 className="title4">Executive Board</h4>
-        <span>{BOARD_PRELUDE}</span>
-      </section>
+    <SkeletonProvider isLoading={isFetchingBoard}>
+      <div className="container pt6">
+        <section className="mb4">
+          <h4 className="title4">Executive Board</h4>
+          <span>{BOARD_PRELUDE}</span>
+        </section>
 
-      <section>
-        <h5 className="title5">Executive Director</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.ED)}</Grid>
-        )}
-        <p className="my4">
-          {ED_APP_STATUS}
-          {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
+        <section>
+          <h5 className="title5">Executive Director</h5>
+          <SkeletonConsumer width={256} height={256}>
+            <div className="df fw-w gridX">
+              {groups.ED.map((m, i) => (
+                <BoardMemberProfile key={i} member={m} />
+              ))}
+            </div>
+          </SkeletonConsumer>
+          <p className="my4">
+            {ED_APP_STATUS}
+            {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
 
-      <hr className="w-100 my4" />
+        <hr className="w-100 my4" />
 
-      <section>
-        <h5 className="title5">Executive Coordinating Committee</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.ECC)}</Grid>
-        )}
-        <p className="my4">
-          {ECC_APP_STATUS}
-          {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
+        <section>
+          <h5 className="title5">Executive Coordinating Committee</h5>
+          {isFetchingBoard ? (
+            <span>loading...</span>
+          ) : (
+            <div className="df fw-w gridX">
+              {groups.ECC.map((m, i) => (
+                <BoardMemberProfile key={i} member={m} />
+              ))}
+            </div>
+          )}
+          <p className="my4">
+            {ECC_APP_STATUS}
+            {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
 
-      <hr className="w-100 my4" />
+        <hr className="w-100 my4" />
 
-      <section>
-        <h5 className="title5">Directors Council</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.DC)}</Grid>
-        )}
-        <p className="my4">
-          {DC_APP_STATUS}
-          {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
+        <section>
+          <h5 className="title5">Directors Council</h5>
+          {isFetchingBoard ? (
+            <span>loading...</span>
+          ) : (
+            <div className="df fw-w gridX">
+              {groups.DC.map((m, i) => (
+                <BoardMemberProfile key={i} member={m} />
+              ))}
+            </div>
+          )}
+          <p className="my4">
+            {DC_APP_STATUS}
+            {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
 
-      <hr className="w-100 my4" />
+        <hr className="w-100 my4" />
 
-      <section>
-        <h5 className="title5">Board Of Advisors</h5>
-        {isFetchingBoard ? (
-          <span>loading...</span>
-        ) : (
-          <Grid>{generateProfiles(groups.BOA)}</Grid>
-        )}
-        <p className="my4">
-          {BOA_APP_STATUS}
-          {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
-        </p>
-      </section>
-    </div>
+        <section>
+          <h5 className="title5">Board Of Advisors</h5>
+          {isFetchingBoard ? (
+            <span>loading...</span>
+          ) : (
+            <div className="df fw-w gridX">
+              {groups.BOA.map((m, i) => (
+                <BoardMemberProfile key={i} member={m} />
+              ))}
+            </div>
+          )}
+          <p className="my4">
+            {BOA_APP_STATUS}
+            {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
+          </p>
+        </section>
+      </div>
+    </SkeletonProvider>
   )
 }
 

@@ -7,15 +7,15 @@ interface Props {}
 export const MAAContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('MAASU Alumni Association')
 
-  const [user, setUser] = useState()
+  const [user, setUser] = useState<boolean>(false)
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
 
-    setUser(1)
+    setUser(true)
   }
 
-  const isAuthenticated = Boolean(user)
+  const isAuthenticated = user
   return isAuthenticated ? (
     <div>MAA Portal!</div>
   ) : (

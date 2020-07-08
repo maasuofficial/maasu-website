@@ -4,6 +4,7 @@ import { Conference, ConferenceState } from './Conferences/types'
 import { HEventState } from './Events/types'
 import { Member, MemberState } from './Members/types'
 import { NewsletterState } from './Newsletters/types'
+import { ReportState } from './Reports/types'
 import { ResourceState } from './Resources/types'
 
 // -----------------------------------------------------
@@ -42,5 +43,6 @@ export type AppState = {
   events: HEventState
   members: MemberState
   newsletters: NewsletterState
+  reports: ReportState
   resources: ResourceState
 }

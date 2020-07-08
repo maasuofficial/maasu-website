@@ -5,6 +5,18 @@
 export const NEW_TAB_PROPS = { target: '_blank', rel: 'noreferrer noopener' }
 
 // -----------------------------------------------------
+// Mission
+// -----------------------------------------------------
+
+export const STRAT_PLAN_URL = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Plans%2F20-24.pdf?alt=media&token=0cc19265-ce1d-41ed-a6e5-1d03b9271563
+`
+
+export const MISSION_FIRST_MEETING = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FMission%2FfirstMeeting.jpg?alt=media&token=ef300262-d49b-41d9-a608-8eb473623585
+`
+
+// -----------------------------------------------------
 // Board
 // -----------------------------------------------------
 
@@ -21,6 +33,10 @@ export const DONATE_MAASU_URL =
   'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2GPHWP7AYXHCQ&source=url'
 export const DONATE_MAA_URL =
   'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LFY3B4ZT98TVN&source=url'
+
+export const DONATE_HERO_IMG = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FDonate%2FdonateHero.jpg?alt=media&token=12fa83b1-0385-47cf-ad34-f7e967389b52
+`
 
 // -----------------------------------------------------
 // Hosting a Conference
