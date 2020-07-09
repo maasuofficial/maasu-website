@@ -7,7 +7,7 @@ describe('render', () => {
     const div = document.createElement('div')
     ReactDOM.render(
       <AnnualReports
-        fetchReports={() => {}}
+        fetchReports={() => new Promise(() => {})}
         isFetchingReports={false}
         reports={[]}
         reportsError=""
