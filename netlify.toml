@@ -1,4 +1,13 @@
 [build]
   command = "yarn build"
   functions = "./functions/build"
-  publish = "build"
+  publish = "build/"
+
+[build.processing]
+  bundle = true
+  minify = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

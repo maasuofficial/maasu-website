@@ -521,3 +521,10 @@ to React, add a `_redirects` file to the `public` folder containing the followin
 ```
 /* /index.html 200
 ```
+This can also be done by adding the following configuration to a `netlify.toml` file:
+```
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+```
