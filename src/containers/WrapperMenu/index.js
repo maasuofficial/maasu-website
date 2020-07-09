@@ -63,7 +63,7 @@ class WrapperMenu extends React.Component {
 
     return (
       <div
-        className={`posr h-100 w-100 ofh wrapperWM ${
+        className={`posr h-100 w-100 ofh bg-text-dark ${
           this.state.open ? 'menuOpenWM' : ''
         }`}
       >
@@ -71,44 +71,46 @@ class WrapperMenu extends React.Component {
 
         <a
           href="/"
-          className={'triggerWM'}
+          className="posa ma3 fs2 z5 triggerWM"
           onClick={this.handleClick}
           aria-expanded={this.state.open}
           aria-label="menu toggle button"
           role="button"
         >
           {/* TEMP for sc 2020 promo menu icon */}
-          <Icon className={'menuIconWM menuIconOverride'} icon="align-right" />
+          <Icon icon="align-right" className="menuIconWM menuIconOverride" />
         </a>
 
         {/* menu */}
 
-        <div className={'posa wrapperMenuWM'}>
-          <div className={'h-100 w-100 menuContainerWM'}>
-            <nav className={'utilityMenuWM'} aria-label="menu">
-              <ul>
+        <div className="posa t-0 l-0 mt4 pt4 w-100">
+          <div className="h-100 w-100 of-ya">
+            <nav className="py4" aria-label="menu">
+              <ul className="lstn ma0 pl4">
                 {keys.map((k, i) => {
                   const item = menu[k]
                   return typeof item === 'string' ? (
-                    <li key={i}>
+                    <li key={i} className="py1">
                       <Link
                         to={item}
                         onClick={this.handleMenuClose}
                         tabIndex={this.state.open ? 0 : -1}
+                        className="fs1 tdn hov-tdu c-bg-main"
                       >
                         {k}
                       </Link>
                     </li>
                   ) : (
                     <li key={i}>
-                      <span>{k}</span>
-                      <ul>
+                      <span className="fs1 fw700 c-bg-dark">{k}</span>
+                      <ul className="lstn ma0 pl4">
                         {Object.keys(item).map((sk, j) => (
-                          <li key={j}>
+                          <li key={j} className="py1">
                             <Link
                               to={item[sk]}
                               onClick={this.handleMenuClose}
                               tabIndex={this.state.open ? 0 : -1}
+                              className="fs1 tdn hov-tdu c-bg-main"
                             >
                               {sk}
                             </Link>

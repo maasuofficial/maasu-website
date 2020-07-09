@@ -70,13 +70,13 @@ export const Board: FC<Props> = ({
         <section>
           <h5 className="title5">Executive Director</h5>
           <SkeletonConsumer width={256} height={256}>
-            <div className="df fw-w gridX">
+            <div className="df fw-w jc-c">
               {groups.ED.map((m, i) => (
                 <BoardMemberProfile key={i} member={m} />
               ))}
             </div>
           </SkeletonConsumer>
-          <p className="my4">
+          <p className="my4 tc">
             {ED_APP_STATUS}
             {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
           </p>
@@ -89,13 +89,13 @@ export const Board: FC<Props> = ({
           {isFetchingBoard ? (
             <span>loading...</span>
           ) : (
-            <div className="df fw-w gridX">
+            <div className="df fw-w jc-c">
               {groups.ECC.map((m, i) => (
                 <BoardMemberProfile key={i} member={m} />
               ))}
             </div>
           )}
-          <p className="my4">
+          <p className="my4 tc">
             {ECC_APP_STATUS}
             {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
           </p>
@@ -108,13 +108,13 @@ export const Board: FC<Props> = ({
           {isFetchingBoard ? (
             <span>loading...</span>
           ) : (
-            <div className="df fw-w gridX">
+            <div className="df fw-w jc-c">
               {groups.DC.map((m, i) => (
                 <BoardMemberProfile key={i} member={m} />
               ))}
             </div>
           )}
-          <p className="my4">
+          <p className="my4 tc">
             {DC_APP_STATUS}
             {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
           </p>
@@ -127,13 +127,13 @@ export const Board: FC<Props> = ({
           {isFetchingBoard ? (
             <span>loading...</span>
           ) : (
-            <div className="df fw-w gridX">
+            <div className="df fw-w jc-c">
               {groups.BOA.map((m, i) => (
                 <BoardMemberProfile key={i} member={m} />
               ))}
             </div>
           )}
-          <p className="my4">
+          <p className="my4 tc">
             {BOA_APP_STATUS}
             {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
           </p>

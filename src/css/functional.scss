@@ -376,6 +376,9 @@
   .jc#{$media} {
     justify-content: center !important;
   }
+  .jc-c#{$media} {
+    justify-content: center !important;
+  }
   .jc-sb#{$media} {
     justify-content: space-between !important;
   }
@@ -458,6 +461,12 @@
  */
 
 @mixin various($media: '') {
+  .ofh#{$media} {
+    overflow: hidden !important;
+  }
+  .of-ya#{$media} {
+    overflow-y: auto !important;
+  }
   .lstn#{$media} {
     list-style-type: none !important;
   }
