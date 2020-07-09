@@ -1,11 +1,4 @@
 import { CSVtoStrArr } from '../utils'
-import fetch from 'isomorphic-fetch'
-
-jest.mock('isomorphic-fetch')
-
-beforeEach(() => {
-  fetch.mockClear()
-})
 
 describe('CSVtoStrArr', () => {
   // routine
