@@ -9,34 +9,6 @@
  * -----------------------------------------------------
  */
 
-$breakpoint-sm: 600;
-$breakpoint-md: 960;
-$breakpoint-lg: 1280;
-
-$screen: 'only screen';
-$sm-down: '#{$screen} and (max-width: #{$breakpoint-sm}px)';
-$md-only: '#{screen} and (min-width: #{$breakpoint-sm + 1}px) and (max-width: #{$breakpoint-md}px)';
-$lg-up: '#{screen} and (min-width: #{$breakpoint-md + 1}px)';
-
-// TODO outline typography
-
-em.typography,
-.styled-typography {
-  font-weight: bold;
-  font-style: normal;
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: currentColor;
-  -webkit-text-fill-color: transparent;
-}
-
-.c-text-main {
-  color: var(--palette-text-main);
-}
-
-.bgblue {
-  background-color: #222632;
-}
-
 .fggold {
   color: #beb481;
 }
@@ -45,83 +17,17 @@ em.typography,
   background-color: #c2604d !important;
 }
 
-.fgorange {
-  color: #c2604d;
-}
-
-$menu-y-sm: 4rem;
-$menu-x-sm: 75%;
-$transition: all 0.3s;
-
-$menu-y-md: 4rem;
-$menu-x-md: 40%;
-
-$menu-y-lg: 4rem;
-$menu-x-lg: 25%;
-
-.triggerWM {
-  color: var(--palette-text-main);
-
-  .menuIconWM {
-    transform: rotate(180deg);
-  }
-}
-
-.wrapperContentWM {
-  top: 0;
-  left: 0;
-
-  background-color: var(--palette-text-main);
-
-  transition: $transition;
-
-  .contentWM {
-    background-color: var(--palette-background-main);
-
-    overflow-y: auto;
-    transition: $transition;
-  }
-}
-
-.menuOpenWM {
-  .triggerWM {
-    color: var(--palette-background-main);
-  }
-  .contentWM {
-    opacity: 0.5;
-  }
-}
-
-.menuOpenWM .wrapperContentWM {
-  transform: translate3d($menu-x-sm, $menu-y-sm, 0);
-}
-
-@media #{$md-only} {
-  .menuOpenWM .wrapperContentWM {
-    transform: translate3d($menu-x-md, $menu-y-md, 0);
-  }
-}
-
-@media #{$lg-up} {
-  .menuOpenWM .wrapperContentWM {
-    transform: translate3d($menu-x-lg, $menu-y-lg, 0);
-  }
-}
-
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
 .fflibre {
   font-family: 'Libre Baskerville', serif !important;
-}
-
-.tr2 {
-  transition: all 0.2s;
 }
 
 .hov-fgc-text-main:hover {
   color: var(--palette-text-main) !important;
 }
 
-.fgc-text-main {
+.fgc-text-main,
+.c-text-main {
   color: var(--palette-text-main) !important;
 }
 
@@ -129,7 +35,8 @@ $menu-x-lg: 25%;
   background-color: var(--palette-text-main) !important;
 }
 
-.bgc-bg-main {
+.bgc-bg-main,
+.bg-bg-main {
   background-color: var(--palette-background-main) !important;
 }
 
@@ -171,10 +78,6 @@ $menu-x-lg: 25%;
 
 .bg-bg-main {
   background-color: var(--palette-background-main) !important;
-}
-
-.br2 {
-  border: 2px solid var(--palette-text-main);
 }
 
 // for testing purposes

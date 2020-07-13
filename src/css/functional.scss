@@ -434,6 +434,11 @@
  */
 
 @mixin transform($media: '') {
+  @for $i from 0 through 10 {
+    .tr-#{$i}#{$media} {
+      transition: all #{$i/10}s !important;
+    }
+  }
   @for $i from 0 through 100 / $step-inc {
     $val: $i * $step-inc;
     .tf-x-#{$val}#{$media} {
@@ -447,6 +452,13 @@
     }
     .tf-sy-#{$val}#{$media} {
       @include vendor(transform, translateY(#{$val * -1%}) !important);
+    }
+  }
+
+  @for $i from 0 through 360 / $step-inc {
+    $val: $i * $step-inc;
+    .tf-r-#{$val}#{$media} {
+      @include vendor(transform, rotate(#{$val}deg) !important);
     }
   }
 }

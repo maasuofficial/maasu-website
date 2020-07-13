@@ -39,6 +39,10 @@ export const ContactContainer: FC<Props> = () => {
     }
   }
 
+  const styles = {
+    border: '2px solid var(--palette-text-main)',
+  }
+
   return (
     <div className="container py6">
       <h4 className="title4">Contact MAASU</h4>
@@ -49,32 +53,39 @@ export const ContactContainer: FC<Props> = () => {
 
       <form className="mxa w-100" onSubmit={handleFormSubmit}>
         <input
-          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
+          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main"
+          style={styles}
           type="text"
           required
           name="name"
           placeholder="First and last name"
         />
         <input
-          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
+          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main"
+          style={styles}
           type="email"
           required
           name="email"
           placeholder="Email"
         />
         <textarea
-          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main br2"
+          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main"
+          style={styles}
           required
           name="message"
           placeholder="Message"
         ></textarea>
         {submissionMsg ? (
-          <div className="w-100 tc fs0 ffhind my3 fw700 pa3 bgc-bg-main fgc-text-main br2">
+          <div
+            className="w-100 tc fs0 ffhind my3 fw700 pa3 bgc-bg-main fgc-text-main"
+            style={styles}
+          >
             {submissionMsg}
           </div>
         ) : (
           <button
-            className="w-100 fs0 ffhind my3 fw700 pa3 tr2 hov-fgc-text-main fgc-bg-main hov-bgc-bg-main bgc-text-main br2"
+            className="w-100 fs0 ffhind my3 fw700 pa3 tr-2 hov-fgc-text-main fgc-bg-main hov-bgc-bg-main bgc-text-main"
+            style={styles}
             type="submit"
           >
             Submit

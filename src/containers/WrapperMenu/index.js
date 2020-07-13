@@ -58,27 +58,23 @@ class WrapperMenu extends React.Component {
   render() {
     // TEMP menuOverride for sc 2020 promo bg color
     menuOverride = window.location.pathname === '/'
-
     const keys = Object.keys(menu)
 
+    const isOpen = this.state.open
+
     return (
-      <div
-        className={`posr h-100 w-100 ofh bg-text-dark ${
-          this.state.open ? 'menuOpenWM' : ''
-        }`}
-      >
+      <div className="posr h-100 w-100 ofh bg-text-dark">
         {/* trigger menu */}
 
         <a
           href="/"
-          className="posa ma3 fs2 z5 triggerWM"
+          className={`posa ma3 fs2 z5 c-${isOpen ? 'bg' : 'text'}-main`}
           onClick={this.handleClick}
-          aria-expanded={this.state.open}
+          aria-expanded={isOpen}
           aria-label="menu toggle button"
           role="button"
         >
-          {/* TEMP for sc 2020 promo menu icon */}
-          <Icon icon="align-right" className="menuIconWM menuIconOverride" />
+          <Icon icon="align-right" className="tf-r-180" />
         </a>
 
         {/* menu */}
@@ -94,7 +90,7 @@ class WrapperMenu extends React.Component {
                       <Link
                         to={item}
                         onClick={this.handleMenuClose}
-                        tabIndex={this.state.open ? 0 : -1}
+                        tabIndex={isOpen ? 0 : -1}
                         className="fs1 tdn hov-tdu c-bg-main"
                       >
                         {k}
@@ -109,7 +105,7 @@ class WrapperMenu extends React.Component {
                             <Link
                               to={item[sk]}
                               onClick={this.handleMenuClose}
-                              tabIndex={this.state.open ? 0 : -1}
+                              tabIndex={isOpen ? 0 : -1}
                               className="fs1 tdn hov-tdu c-bg-main"
                             >
                               {sk}
@@ -128,13 +124,18 @@ class WrapperMenu extends React.Component {
         {/* content */}
 
         <div
-          className={'posa h-100 w-100 wrapperContentWM'}
+          className={`posa h-100 w-100 l-0 tr-3 ${
+            isOpen ? 'tf-x-70 tf-x-40-ns' : ''
+          }`}
+          style={{
+            top: isOpen ? '4rem' : 0,
+          }}
           onClick={this.handleMenuClose}
         >
           <div
-            className={`posr h-100 w-100 contentWM ${
-              menuOverride ? 'bgorange' : ''
-            }`}
+            className={`posr h-100 w-100 of-ya tr-3  ${
+              menuOverride ? 'bgorange' : 'bg-bg-main'
+            } ${isOpen ? 'op-50' : ''}`}
           >
             {this.props.children}
           </div>
