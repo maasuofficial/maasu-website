@@ -1,4 +1,3 @@
-@import './legacy';
 @import './media';
 @import './elements';
 
@@ -10,11 +9,11 @@
 
 body {
   font-size: 16px;
-  font-family: 'Hind', sans-serif;
+  @extend .ff-hind;
   line-height: 1.2; // no units for multiplier
 
-  color: var(--palette-text-main);
-  background-color: var(--palette-background-main);
+  @extend .c-text-main;
+  @extend .bg-bg-main;
 }
 
 h1,

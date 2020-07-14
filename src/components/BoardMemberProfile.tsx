@@ -9,10 +9,10 @@ type Props = {
 export const BoardMemberProfile: FC<Props> = ({ member }) => {
   const name = member.alias || `${member.fname} ${member.mname} ${member.lname}`
   return (
-    <div className="cell auto sm-6 md-4 lg-3">
+    <div className="w-50 w-30-ns">
       <Link to={`/board/${member.id}`} className="c-inh tdn">
-        <div className="w-100 h-100 pa2 tc profile-board">
-          <img src={member.imageUrl} alt={name} />
+        <div className="w-100 h-100 pa2 tc">
+          <img src={member.imageUrl} alt={name} className="w-100" />
           <p className="ma0 fw700">{name}</p>
           <span>{member.positionTitle}</span>
         </div>

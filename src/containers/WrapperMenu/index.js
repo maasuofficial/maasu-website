@@ -58,57 +58,55 @@ class WrapperMenu extends React.Component {
   render() {
     // TEMP menuOverride for sc 2020 promo bg color
     menuOverride = window.location.pathname === '/'
-
     const keys = Object.keys(menu)
 
+    const isOpen = this.state.open
+
     return (
-      <div
-        className={`posr h-100 w-100 ofh wrapperWM ${
-          this.state.open ? 'menuOpenWM' : ''
-        }`}
-      >
+      <div className="posr h-100 w-100 ofh bg-text-dark">
         {/* trigger menu */}
 
         <a
           href="/"
-          className={'triggerWM'}
+          className={`posa ma3 fs2 z5 c-${isOpen ? 'bg' : 'text'}-main`}
           onClick={this.handleClick}
-          aria-expanded={this.state.open}
+          aria-expanded={isOpen}
           aria-label="menu toggle button"
           role="button"
         >
-          {/* TEMP for sc 2020 promo menu icon */}
-          <Icon className={'menuIconWM menuIconOverride'} icon="align-right" />
+          <Icon icon="align-right" className="tf-r-180" />
         </a>
 
         {/* menu */}
 
-        <div className={'posa wrapperMenuWM'}>
-          <div className={'h-100 w-100 menuContainerWM'}>
-            <nav className={'utilityMenuWM'} aria-label="menu">
-              <ul>
+        <div className="posa t-0 l-0 mt4 pt4 w-100">
+          <div className="h-100 w-100 of-ya">
+            <nav className="py4" aria-label="menu">
+              <ul className="lstn ma0 pl4">
                 {keys.map((k, i) => {
                   const item = menu[k]
                   return typeof item === 'string' ? (
-                    <li key={i}>
+                    <li key={i} className="py1">
                       <Link
                         to={item}
                         onClick={this.handleMenuClose}
-                        tabIndex={this.state.open ? 0 : -1}
+                        tabIndex={isOpen ? 0 : -1}
+                        className="fs1 tdn hov-tdu c-bg-main"
                       >
                         {k}
                       </Link>
                     </li>
                   ) : (
                     <li key={i}>
-                      <span>{k}</span>
-                      <ul>
+                      <span className="fs1 fw700 c-bg-dark">{k}</span>
+                      <ul className="lstn ma0 pl4">
                         {Object.keys(item).map((sk, j) => (
-                          <li key={j}>
+                          <li key={j} className="py1">
                             <Link
                               to={item[sk]}
                               onClick={this.handleMenuClose}
-                              tabIndex={this.state.open ? 0 : -1}
+                              tabIndex={isOpen ? 0 : -1}
+                              className="fs1 tdn hov-tdu c-bg-main"
                             >
                               {sk}
                             </Link>
@@ -126,13 +124,18 @@ class WrapperMenu extends React.Component {
         {/* content */}
 
         <div
-          className={'posa h-100 w-100 wrapperContentWM'}
+          className={`posa h-100 w-100 l-0 tr-3 ${
+            isOpen ? 'tf-x-70 tf-x-40-ns' : ''
+          }`}
+          style={{
+            top: isOpen ? '4rem' : 0,
+          }}
           onClick={this.handleMenuClose}
         >
           <div
-            className={`posr h-100 w-100 contentWM ${
-              menuOverride ? 'bgorange' : ''
-            }`}
+            className={`posr h-100 w-100 of-ya tr-3  ${
+              menuOverride ? 'bg-orange1' : 'bg-bg-main'
+            } ${isOpen ? 'op-50' : ''}`}
           >
             {this.props.children}
           </div>

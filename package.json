@@ -4,12 +4,13 @@
   "private": false,
   "scripts": {
     "start": "react-scripts start",
-    "build:functions": "tsc -p src/functions",
+    "build:functions": "tsc -p functions",
     "build": "react-scripts build && yarn build:functions",
-    "test:function": "yarn build:functions && node src/functions/testHandler.js",
+    "test:function": "yarn build:functions && node functions/testHandler.js",
+    "test:functions": "yarn build:functions && yarn jest -c functions/jest.config.js",
     "test": "react-scripts test",
     "test:ci": "yarn test --coverage --watchAll=false",
-    "lintcheck": "eslint src/**/**.ts* --max-warnings 0"
+    "lintcheck": "eslint src/**/**.ts* functions/src/**/**.ts* --max-warnings 0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.29",
@@ -38,7 +39,7 @@
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
-    "typescript": "~3.7.2"
+    "typescript": "^3.9.6"
   },
   "devDependencies": {
     "@testing-library/react": "^10.2.1",
@@ -57,9 +58,11 @@
     "eslint-plugin-react-hooks": "^4.0.2",
     "eslint-plugin-standard": "^4.0.1",
     "husky": "^4.2.5",
+    "jest": "^26.1.0",
     "jest-dom": "^3.5.0",
     "prettier": "2.0.5",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "ts-jest": "^26.1.1"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -78,7 +81,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lintcheck && CI=true yarn test"
+      "pre-commit": "yarn lintcheck && CI=true yarn test:functions && CI=true yarn test"
     }
   }
 }

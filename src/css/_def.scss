@@ -46,6 +46,21 @@ $vendorPrefixList: ('-webkit-', '-moz-', '-ms-', '-o-', '');
 
 /**
  * -----------------------------------------------------
+ * Positioning
+ * 
+ * Position is determined using the four directions.
+ * -----------------------------------------------------
+ */
+
+$directions: (
+  't': 'top',
+  'r': 'right',
+  'b': 'bottom',
+  'l': 'left',
+);
+
+/**
+ * -----------------------------------------------------
  * Typography
  * 
  * Scale created with https://type-scale.com, using
@@ -53,24 +68,6 @@ $vendorPrefixList: ('-webkit-', '-moz-', '-ms-', '-o-', '');
  * 700.
  * -----------------------------------------------------
  */
-
-@font-face {
-  font-family: 'Hind';
-  src: url('/fonts/Hind/Hind-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Hind';
-  src: url('/fonts/Hind/Hind-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-.ffhind {
-  font-family: 'Hind', sans-serif !important;
-}
 
 $typographyMap: (
   's3': 0.296rem,
@@ -147,15 +144,18 @@ $boxShadowMap: (
 
 /**
  * -----------------------------------------------------
- * Border Radius
+ * Border
  * 
- * Border radius was chosen as a single value rather than
- * a range of values to maintain consistency of radius
- * throughout the application.
+ * Border width and border radius were chosen as single 
+ * values rather than a range of values to maintain 
+ * consistency throughout the application.
  * -----------------------------------------------------
  */
 
+$borderWidth: 2px;
 $borderRadius: 3px;
+
+$borderStyleList: 'solid', 'dashed', 'dotted';
 
 /**
  * -----------------------------------------------------
@@ -213,3 +213,18 @@ $textMap: (
  */
 
 $step-inc: 5;
+
+/**
+ * -----------------------------------------------------
+ * Colors
+ * 
+ * Colors are organized according to identifiers, which
+ * map to property names.
+ * -----------------------------------------------------
+ */
+
+$colorMap: (
+  'c': color,
+  'bg': background-color,
+  'bc': border-color,
+);
