@@ -39,10 +39,6 @@ export const ContactContainer: FC<Props> = () => {
     }
   }
 
-  const styles = {
-    border: '2px solid var(--palette-text-main)',
-  }
-
   const inputClassNames =
     'clearall w-100 fs0 my3 pa3 ff-hind bg-bg-main border bs-solid bc-text-main'
 
@@ -81,7 +77,6 @@ export const ContactContainer: FC<Props> = () => {
         ) : (
           <button
             className={`${inputClassNames} fw700 tr-2 c-bg-main bg-text-main hov-c-text-main hov-bg-bg-main`}
-            style={styles}
             type="submit"
           >
             Submit

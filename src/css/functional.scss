@@ -106,17 +106,10 @@
     .pa#{$scale}#{$media} {
       padding: $value !important;
     }
-    .pt#{$scale}#{$media} {
-      padding-top: $value !important;
-    }
-    .pr#{$scale}#{$media} {
-      padding-right: $value !important;
-    }
-    .pb#{$scale}#{$media} {
-      padding-bottom: $value !important;
-    }
-    .pl#{$scale}#{$media} {
-      padding-left: $value !important;
+    @each $id, $dir in $directions {
+      .p#{$id}#{$scale}#{$media} {
+        padding-#{$dir}: $value !important;
+      }
     }
     .px#{$scale}#{$media} {
       padding-right: $value !important;
@@ -130,17 +123,10 @@
     .ma#{$scale}#{$media} {
       margin: $value !important;
     }
-    .mt#{$scale}#{$media} {
-      margin-top: $value !important;
-    }
-    .mr#{$scale}#{$media} {
-      margin-right: $value !important;
-    }
-    .mb#{$scale}#{$media} {
-      margin-bottom: $value !important;
-    }
-    .ml#{$scale}#{$media} {
-      margin-left: $value !important;
+    @each $id, $dir in $directions {
+      .m#{$id}#{$scale}#{$media} {
+        margin-#{$dir}: $value !important;
+      }
     }
     .mx#{$scale}#{$media} {
       margin-right: $value !important;
@@ -320,29 +306,13 @@
 @mixin placement($media: '') {
   @for $i from 0 through 100 / $step-inc {
     $val: $i * $step-inc;
-    .t-#{$val}#{$media} {
-      top: #{$val * 1%} !important;
-    }
-    .t-s#{$val}#{$media} {
-      top: #{$val * -1%} !important;
-    }
-    .r-#{$val}#{$media} {
-      right: #{$val * 1%} !important;
-    }
-    .r-s#{$val}#{$media} {
-      right: #{$val * -1%} !important;
-    }
-    .b-#{$val}#{$media} {
-      bottom: #{$val * 1%} !important;
-    }
-    .b-s#{$val}#{$media} {
-      bottom: #{$val * -1%} !important;
-    }
-    .l-#{$val}#{$media} {
-      left: #{$val * 1%} !important;
-    }
-    .l-s#{$val}#{$media} {
-      left: #{$val * -1%} !important;
+    @each $id, $dir in $directions {
+      .#{$id}-#{$val}#{$media} {
+        #{$dir}: #{$val * 1%} !important;
+      }
+      .#{$id}-s#{$val}#{$media} {
+        #{$dir}: #{$val * -1%} !important;
+      }
     }
   }
 }
