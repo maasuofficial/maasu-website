@@ -1,4 +1,6 @@
 @import './def';
+@import './colors';
+@import './typography';
 
 /**
  * Functional CSS
@@ -17,6 +19,12 @@
  */
 
 @mixin typography($media: '') {
+  @each $name, $value in $typefaceMap {
+    .ff-#{$name}#{$media} {
+      font-family: unquote($value) !important;
+    }
+  }
+
   @each $scale, $value in $typographyMap {
     .fs#{$scale}#{$media} {
       font-size: $value !important;
@@ -237,18 +245,37 @@
 
 /**
  * -----------------------------------------------------
- * Box Styling
+ * Box and Border Styling
  * -----------------------------------------------------
  */
 
 @mixin boxStyling($media: '') {
   @each $scale, $value in $boxShadowMap {
     .bs#{$scale}#{$media} {
-      // TODO color?
-      box-shadow: 0 0 $value #555 !important;
+      box-shadow: 0 0 $value map-get($colors, 'grey4') !important;
     }
-    .br#{$media} {
-      border-radius: $borderRadius !important;
+  }
+  .br#{$media} {
+    border-radius: $borderRadius !important;
+  }
+  .border#{$media} {
+    border-width: $borderWidth !important;
+    // defaults
+    border-style: solid;
+    border-color: map-get($colors, 'grey4');
+  }
+  @each $id, $dir in $directions {
+    .border-#{$id}#{$media} {
+      border: 0px !important;
+      #{unquote(border-#{$dir}-width)}: $borderWidth !important;
+      // defaults
+      #{unquote(border-#{$dir}-style)}: solid;
+      border-color: map-get($colors, 'grey4');
+    }
+  }
+  @each $style in $borderStyleList {
+    .bs-#{$style}#{$media} {
+      border-style: #{$style} !important;
     }
   }
 }
@@ -328,11 +355,31 @@
  */
 
 @mixin colors($media: '') {
-  .c-inh#{$media} {
-    color: inherit !important;
-  }
-  .c-ini#{$media} {
-    color: initial !important;
+  @each $id, $prop in $colorMap {
+    .#{$id}-inh#{$media} {
+      #{$prop}: inherit !important;
+    }
+    .#{$id}-ini#{$media} {
+      #{$prop}: initial !important;
+    }
+
+    @each $name, $value in $colors {
+      .#{$id}-#{$name}#{$media} {
+        #{$prop}: $value !important;
+      }
+      .hov-#{$id}-#{$name}#{$media}:hover {
+        #{$prop}: $value !important;
+      }
+    }
+
+    @each $name, $value in $theme {
+      .#{$id}-#{$name}#{$media} {
+        #{$prop}: $value !important;
+      }
+      .hov-#{$id}-#{$name}#{$media}:hover {
+        #{$prop}: $value !important;
+      }
+    }
   }
 }
 @include colors();

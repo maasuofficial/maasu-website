@@ -46,8 +46,8 @@ export const Hxstory: FC<Props> = ({
           .sort((a, b) => parseInt(b) - parseInt(a))
           .map((k, i) => (
             <div key={i} className="posr df">
-              <div className="posr px1 bgc-primary-main">
-                <div className="posa pa2 b-0 br l-5 tf-y-50 bgc-primary-main fgc-bg-main">
+              <div className="posr px1 bg-primary-main">
+                <div className="posa pa2 b-0 br l-5 tf-y-50 bg-primary-main c-bg-main">
                   {k}
                 </div>
               </div>

@@ -134,7 +134,7 @@ class WrapperMenu extends React.Component {
         >
           <div
             className={`posr h-100 w-100 of-ya tr-3  ${
-              menuOverride ? 'bgorange' : 'bg-bg-main'
+              menuOverride ? 'bg-orange1' : 'bg-bg-main'
             } ${isOpen ? 'op-50' : ''}`}
           >
             {this.props.children}

@@ -28,7 +28,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
   return (
     <div className="container py6">
       <section>
-        <h3 className="mt0 tc fs2 ffhind fw700">Our Purpose</h3>
+        <h3 className="mt0 tc fs2 fw700">Our Purpose</h3>
         <p>{PURPOSE_STMT_1}</p>
         <p>{PURPOSE_STMT_2}</p>
         <img
@@ -39,7 +39,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         <div className="fsi w-100 w-80-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
       </section>
       <section>
-        <h3 className="mt4 tc fs2 ffhind fw700">Our Mission</h3>
+        <h3 className="mt4 tc fs2 fw700">Our Mission</h3>
         <p>{MISSION_PRELUDE}</p>
         <ul>
           <li>{MISSION_STMT_1}</li>
@@ -50,12 +50,12 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         </ul>
       </section>
       <section>
-        <h3 className="mt4 tc fs2 ffhind fw700">Who We Serve</h3>
+        <h3 className="mt4 tc fs2 fw700">Who We Serve</h3>
         <p>{SERVE_STMT_1}</p>
         <p>{SERVE_STMT_2}</p>
       </section>
       <section>
-        <h3 className="mt4 tc fs2 ffhind fw700">Strategic Plan</h3>
+        <h3 className="mt4 tc fs2 fw700">Strategic Plan</h3>
         <p>
           {STRATEGIC_PLAN}
           <a {...NEW_TAB_PROPS} href={STRAT_PLAN_URL} download="hello.pdf">

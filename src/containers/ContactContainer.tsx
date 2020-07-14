@@ -43,6 +43,9 @@ export const ContactContainer: FC<Props> = () => {
     border: '2px solid var(--palette-text-main)',
   }
 
+  const inputClassNames =
+    'clearall w-100 fs0 my3 pa3 ff-hind bg-bg-main border bs-solid bc-text-main'
+
   return (
     <div className="container py6">
       <h4 className="title4">Contact MAASU</h4>
@@ -53,38 +56,31 @@ export const ContactContainer: FC<Props> = () => {
 
       <form className="mxa w-100" onSubmit={handleFormSubmit}>
         <input
-          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main"
-          style={styles}
+          className={inputClassNames}
           type="text"
           required
           name="name"
           placeholder="First and last name"
         />
         <input
-          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main"
-          style={styles}
+          className={inputClassNames}
           type="email"
           required
           name="email"
           placeholder="Email"
         />
         <textarea
-          className="w-100 fs0 my3 pa3 ffhind bgc-bg-main"
-          style={styles}
+          className={inputClassNames}
           required
           name="message"
           placeholder="Message"
-        ></textarea>
+          style={{ minHeight: '300px' }}
+        />
         {submissionMsg ? (
-          <div
-            className="w-100 tc fs0 ffhind my3 fw700 pa3 bgc-bg-main fgc-text-main"
-            style={styles}
-          >
-            {submissionMsg}
-          </div>
+          <div className={inputClassNames}>{submissionMsg}</div>
         ) : (
           <button
-            className="w-100 fs0 ffhind my3 fw700 pa3 tr-2 hov-fgc-text-main fgc-bg-main hov-bgc-bg-main bgc-text-main"
+            className={`${inputClassNames} fw700 tr-2 c-bg-main bg-text-main hov-c-text-main hov-bg-bg-main`}
             style={styles}
             type="submit"
           >

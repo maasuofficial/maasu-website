@@ -1,0 +1,32 @@
+/**
+ * -----------------------------------------------------
+ * Typefaces
+ * 
+ * Typefaces are imported in a single location and
+ * exported in a unified group for ease of access and 
+ * single point of control over change.
+ * -----------------------------------------------------
+ */
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Hind';
+  src: url('/fonts/Hind/Hind-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// TODO remove
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
+
+$typefaceMap: (
+  'hind': 'Hind, sans-serif',
+  // TODO remove
+    'libre': 'Libre Baskerville, serif',
+);

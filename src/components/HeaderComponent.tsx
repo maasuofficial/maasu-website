@@ -9,7 +9,7 @@ interface Props {}
 
 export const HeaderComponent: FC<Props> = () => {
   return (
-    <header className="w-100 bgc-bg-main">
+    <header className="w-100 bg-bg-main">
       <div className="container df ai-c jc-sb">
         <Link to="/">
           <img
