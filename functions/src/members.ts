@@ -7,7 +7,7 @@ import {
   ResData,
 } from './utils'
 
-type MemberType = { id: string; name: string }
+type MemberType = { id: string; name: string; expDate: string }
 
 export const handler = async (event: any, context: any) => {
   let data: ResData = null
@@ -15,7 +15,9 @@ export const handler = async (event: any, context: any) => {
   const { data: res, error } = await fetchCSVObject<MemberType>(MEMBERS_ID)
 
   if (res) {
-    let members = res.filter((m: MemberType) => m.id != null && m.name != null)
+    let members = res.filter(
+      (m: MemberType) => m.id != null && m.name != null && m.expDate != null
+    )
     members = members.sort((a: MemberType, b: MemberType): number =>
       dictionarySort(a.name, b.name)
     )
