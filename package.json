@@ -4,6 +4,7 @@
   "private": false,
   "scripts": {
     "start": "react-scripts start",
+    "dev": "next dev src",
     "build:functions": "tsc -p functions",
     "build": "react-scripts build && yarn build:functions",
     "test:function": "yarn build:functions && node functions/testHandler.js",
@@ -30,6 +31,7 @@
     "@types/react-redux": "^7.1.9",
     "classnames": "^2.2.6",
     "isomorphic-fetch": "^2.2.1",
+    "next": "^9.4.4",
     "node-sass": "^4.13.1",
     "querystring": "^0.2.0",
     "react": "^16.13.1",
