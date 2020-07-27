@@ -79,7 +79,7 @@ class WrapperMenu extends React.Component {
 
         {/* menu */}
 
-        <div className="posa t-0 l-0 mt4 pt4 w-100">
+        <div className="posa t-0 l-0 b-0 mt4 pt4 w-70 w-40-ns">
           <div className="h-100 w-100 of-ya">
             <nav className="py4" aria-label="menu">
               <ul className="lstn ma0 pl4">

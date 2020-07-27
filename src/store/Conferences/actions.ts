@@ -1,5 +1,6 @@
 import { api, BASE_URL } from 'store/api'
 import {
+  LEADERSHIP_RETREAT,
   LEADERSHIP_SUMMIT,
   SPRING_CONFERENCE,
   FALL_CONFERENCE,
@@ -40,6 +41,8 @@ export const fetchConferences = () => {
         c.isApproxDate = c.isApproxDate && (c.isApproxDate as string).length > 0
 
         switch (c.type) {
+          case LEADERSHIP_RETREAT.key:
+            return { ...c, type: LEADERSHIP_RETREAT.value } as Conference
           case LEADERSHIP_SUMMIT.key:
             return { ...c, type: LEADERSHIP_SUMMIT.value } as Conference
           case FALL_CONFERENCE.key:

@@ -5,6 +5,7 @@ type BoardType = {
   lname: string
   positionType: string
   positionPriority: number
+  imageUrl: string
 }
 
 export const handler = async (event: any, context: any) => {
@@ -19,7 +20,8 @@ export const handler = async (event: any, context: any) => {
           b.id != null &&
           b.lname != null &&
           b.positionType != null &&
-          b.positionPriority != null
+          b.positionPriority != null &&
+          b.imageUrl != null
       )
       .sort(
         (a: BoardType, b: BoardType): number =>
