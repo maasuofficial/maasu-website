@@ -7,6 +7,7 @@ import { getIsFetchingBoard, getBoard, getBoardError } from 'store/selectors'
 import { fetchBoard } from 'store/actions'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { EA } from 'components/EmailAnchor'
+import { BoardMember as BoardMemberType } from 'store/Board/types'
 
 type Props = ReduxProps & {}
 
@@ -30,10 +31,23 @@ export const BoardMember: FC<Props> = ({
   const isValidBoardMember =
     board && board.length && !isFetchingBoard && boardFiltered.length === 1
 
-  const p = boardFiltered[0] || {}
+  const p = boardFiltered[0] || ({} as BoardMemberType)
 
-  const name = p ? p.alias || `${p.fname} ${p.mname} ${p.lname}` : ''
-  const { school, city, state, imageUrl, positionEmail, bio, positionDesc } = p
+  const {
+    alias,
+    fname,
+    mname,
+    lname,
+    school,
+    city,
+    state,
+    imageUrl,
+    positionEmail,
+    bio,
+    positionDesc,
+  } = p
+
+  const name = alias || `${fname} ${mname} ${lname}` || ''
 
   useDocumentTitle(name || 'Board Member')
 

@@ -1,5 +1,6 @@
 import {
   LEADERSHIP_SUMMIT,
+  LEADERSHIP_RETREAT,
   SPRING_CONFERENCE,
   FALL_CONFERENCE,
   MAASUX,
@@ -9,6 +10,7 @@ import {
 } from 'constants/strings'
 
 export type ConferenceTypeRaw =
+  | typeof LEADERSHIP_RETREAT.key
   | typeof LEADERSHIP_SUMMIT.key
   | typeof SPRING_CONFERENCE.key
   | typeof FALL_CONFERENCE.key
