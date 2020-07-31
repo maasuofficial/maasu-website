@@ -1,3 +1,4 @@
+export { closeModal, openModal } from './Modals/actions'
 export { fetchAwards } from './Awards/actions'
 export { fetchBoard } from './Board/actions'
 export { fetchConferences } from './Conferences/actions'
