@@ -1,11 +1,11 @@
 import React, { FC, Fragment } from 'react'
 import { Link } from '@reach/router'
 import { findAsset } from 'utils/files'
-/* import { DropdownMenu } from 'components/menu/DropdownMenu' */
-/* import { ModalMenu } from 'components/menu/ModalMenu' */
+import { DropdownMenu } from 'components/menu/DropdownMenu'
+import { ModalMenu } from 'components/menu/ModalMenu'
 import { APP_NAME_LONG } from 'constants/strings'
 import { HEADER_HEIGHT } from 'constants/numeric'
-/* import { MENU } from 'constants/menu' */
+import { MENU } from 'constants/menu'
 
 interface Props {}
 
@@ -25,12 +25,12 @@ export const HeaderComponent: FC<Props> = () => {
                 className="pa2"
               />
             </Link>
-            {/* <DropdownMenu menu={MENU} className="dn db-l" /> */}
-            {/* <ModalMenu */}
-            {/*   menu={MENU} */}
-            {/*   triggerClassNames="db dn-l" */}
-            {/*   menuClassNames="db dn-l bg-bg-main" */}
-            {/* /> */}
+            <DropdownMenu menu={MENU} className="dn db-l" />
+            <ModalMenu
+              menu={MENU}
+              triggerClassNames="db dn-l"
+              menuClassNames="db dn-l bg-bg-main"
+            />
           </div>
         </div>
       </header>

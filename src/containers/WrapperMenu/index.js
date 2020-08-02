@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from '@reach/router'
-import { Icon } from 'components/Icon'
+// import { Icon } from 'components/Icon'
 
 const menu = {
   Home: '/',
@@ -30,7 +30,7 @@ const menu = {
   'Contact Us': '/contact',
 }
 
-let menuOverride = false
+// let menuOverride = false
 
 class WrapperMenu extends React.Component {
   constructor(props) {
@@ -57,15 +57,16 @@ class WrapperMenu extends React.Component {
 
   render() {
     // TEMP menuOverride for sc 2020 promo bg color
-    menuOverride = window.location.pathname === '/'
+    // menuOverride = window.location.pathname === '/'
     const keys = Object.keys(menu)
 
     const isOpen = this.state.open
 
     return (
-      <div className="posr h-100 w-100 ofh bg-text-dark">
+      <div className="posr h-100 w-100 bg-text-dark">
         {/* trigger menu */}
 
+        {/*
         <a
           href="/"
           className={`posa ma3 fs2 z5 c-${isOpen ? 'bg' : 'text'}-main`}
@@ -76,6 +77,7 @@ class WrapperMenu extends React.Component {
         >
           <Icon icon="align-right" className="tf-r-180" />
         </a>
+        */}
 
         {/* menu */}
 
@@ -133,8 +135,9 @@ class WrapperMenu extends React.Component {
           onClick={this.handleMenuClose}
         >
           <div
-            className={`posr h-100 w-100 of-ya tr-3  ${
-              menuOverride ? 'bg-orange1' : 'bg-bg-main'
+            className={`posr h-100 w-100  tr-3  ${
+              // menuOverride ? 'bg-orange1' : 'bg-bg-main'
+              'bg-bg-main'
             } ${isOpen ? 'op-50' : ''}`}
           >
             {this.props.children}

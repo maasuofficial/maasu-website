@@ -6,7 +6,7 @@ import { findAsset } from 'utils/files'
 
 export const FooterComponent: FC<{}> = () => {
   return (
-    <footer className="w-100 py5 mt6">
+    <footer className="w-100 py5 mt6 bg-bg-main">
       <div className="container df fd-c-s jc-sb">
         <div className="w-100 w-30-ns pb5-s">
           <Link to="/">
