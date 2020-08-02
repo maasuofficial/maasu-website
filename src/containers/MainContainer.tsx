@@ -1,11 +1,12 @@
-import React, { FC, ReactNode, useEffect } from 'react'
+import React, { FC, Fragment, ReactNode, useEffect } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { connect, ConnectedProps } from 'react-redux'
 import { fetchAllSheets } from 'store/aggregated'
-// import { HeaderComponent } from 'components/HeaderComponent'
+import { HeaderComponent } from 'components/HeaderComponent'
 import { FooterComponent } from 'components/FooterComponent'
+import { ModalComponent } from 'components/ModalComponent'
 
-type Props = RouteComponentProps & ReduxProps & { children: ReactNode }
+type Props = RouteComponentProps & ReduxProps & { children?: ReactNode }
 
 export const Main: FC<Props> = ({ fetchAllSheets, children }) => {
   useEffect(() => {
@@ -13,11 +14,12 @@ export const Main: FC<Props> = ({ fetchAllSheets, children }) => {
   }, [fetchAllSheets])
 
   return (
-    <div>
-      {/* <HeaderComponent /> */}
+    <Fragment>
+      <HeaderComponent />
       {children}
       <FooterComponent />
-    </div>
+      <ModalComponent />
+    </Fragment>
   )
 }
 

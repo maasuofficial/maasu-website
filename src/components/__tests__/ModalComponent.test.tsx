@@ -1,16 +1,17 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { HeaderComponent } from '../HeaderComponent'
 import { store } from 'store/store'
-import 'constants/iconLibrary'
+import { ModalComponent } from '../ModalComponent'
 
-describe('render', () => {
+describe('ModalComponent', () => {
   it('renders without crashing', () => {
     const div = document.createElement('div')
     ReactDOM.render(
       <Provider store={store}>
-        <HeaderComponent />
+        <ModalComponent>
+          <span></span>
+        </ModalComponent>
       </Provider>,
       div
     )

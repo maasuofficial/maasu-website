@@ -47,7 +47,6 @@ export const MAASUx: FC<Props> = ({
           <thead>
             <tr>
               <th>Date</th>
-              <th>Type</th>
               <th>Conference Title</th>
               <th>Location</th>
             </tr>
@@ -68,7 +67,6 @@ export const MAASUx: FC<Props> = ({
                   c.id && (
                     <tr key={index}>
                       <td>{date}</td>
-                      <td>{c.type}</td>
                       <td>{c.title}</td>
                       <td>{`${c.host}, ${c.state}`}</td>
                     </tr>

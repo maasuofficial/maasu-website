@@ -8,17 +8,21 @@ import {
   faTwitter,
 } from '@fortawesome/free-brands-svg-icons'
 import {
-  faHome,
   faAlignRight,
   faArrowLeft,
+  faBars,
+  faHome,
+  faTimes,
 } from '@fortawesome/free-solid-svg-icons'
 
 library.add(
   faAlignRight,
   faArrowLeft,
+  faBars,
   faFacebookF,
   faHome,
   faInstagram,
   faLinkedinIn,
+  faTimes,
   faTwitter
 )

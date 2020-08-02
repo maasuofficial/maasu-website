@@ -3,8 +3,6 @@ import { Router } from '@reach/router'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { PrivateRoute } from 'routes/PrivateRoute'
 
-import WrapperMenu from 'containers/WrapperMenu'
-
 import { AlumniContainer } from 'containers/AlumniContainer'
 import { AnnualReportsContainer } from 'containers/AnnualReportsContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
@@ -33,53 +31,51 @@ import { WAYFComponent } from 'components/WAYFComponent'
 export const Routes = () => {
   return (
     <Router primary={false} className="posa h-100 t-0 r-0 b-0 l-0">
-      <WrapperMenu path="/">
-        <MainContainer path="/">
-          <HomeContainer path="/" />
+      <MainContainer path="/">
+        <HomeContainer path="/" />
 
-          <MissionContainer path="/mission" />
+        <MissionContainer path="/mission" />
 
-          <PrivateRoute
-            isAuthorized={true}
-            path="/board/:name"
-            component={BoardMemberContainer}
-          />
-          <BoardContainer path="/board" />
-          <MembershipContainer path="/membership" />
-          <DirectorsCouncilContainer path="/dc" />
+        <PrivateRoute
+          isAuthorized={true}
+          path="/board/:name"
+          component={BoardMemberContainer}
+        />
+        <BoardContainer path="/board" />
+        <MembershipContainer path="/membership" />
+        <DirectorsCouncilContainer path="/dc" />
 
-          <HxstoryContainer path="/hxstory" />
-          <HxstoryContainer path="/history" />
+        <HxstoryContainer path="/hxstory" />
+        <HxstoryContainer path="/history" />
 
-          <HostContainer path="/host" />
+        <HostContainer path="/host" />
 
-          <ProgramContainer path="/programs">
-            <MAASUxContainer path="/maasux" />
-            <WAYFComponent path="/whereareyoufrom" />
-          </ProgramContainer>
+        <ProgramContainer path="/programs">
+          <MAASUxContainer path="/maasux" />
+          <WAYFComponent path="/whereareyoufrom" />
+        </ProgramContainer>
 
-          <AwardsContainer path="/awards" />
-          <ResourcesContainer path="/organizations" />
+        <AwardsContainer path="/awards" />
+        <ResourcesContainer path="/organizations" />
 
-          <AlumniContainer path="/alumni" />
+        <AlumniContainer path="/alumni" />
 
-          <PrivateRoute
-            isAuthorized={false}
-            path="/maa"
-            component={MAAContainer}
-          />
+        <PrivateRoute
+          isAuthorized={false}
+          path="/maa"
+          component={MAAContainer}
+        />
 
-          <AnnualReportsContainer path="/annual" />
-          <NewslettersContainer path="/newsletter" />
-          <ConferencesContainer path="/conferences" />
+        <AnnualReportsContainer path="/annual" />
+        <NewslettersContainer path="/newsletter" />
+        <ConferencesContainer path="/conferences" />
 
-          <DonateContainer path="/donate" />
-          <DonateCompleteContainer path="/donate-complete" />
-          <ContactContainer path="/contact" />
+        <DonateContainer path="/donate" />
+        <DonateCompleteContainer path="/donate-complete" />
+        <ContactContainer path="/contact" />
 
-          <InvalidRoute code={404} default />
-        </MainContainer>
-      </WrapperMenu>
+        <InvalidRoute code={404} default />
+      </MainContainer>
     </Router>
   )
 }

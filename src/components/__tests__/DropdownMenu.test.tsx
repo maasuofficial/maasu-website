@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { DropdownMenu } from '../DropdownMenu'
+import { DropdownMenu } from '../menu/DropdownMenu'
 
 const menu = {
   test: 'link',

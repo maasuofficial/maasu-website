@@ -9,6 +9,20 @@
  */
 
 @font-face {
+  font-family: 'Averta';
+  src: url('/fonts/Averta/Averta-Regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url('/fonts/Averta/Averta-Semibold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Hind';
   src: url('/fonts/Hind/Hind-Regular.woff') format('woff');
   font-weight: normal;
@@ -26,6 +40,7 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700&display=swap');
 
 $typefaceMap: (
+  'averta': 'Averta, sans-serif',
   'hind': 'Hind, sans-serif',
   // TODO remove
     'libre': 'Libre Baskerville, serif',

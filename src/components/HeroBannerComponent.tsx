@@ -10,8 +10,8 @@ import {
 
 export const HeroBannerComponent: FC = () => {
   return (
-    <div className="ttu fw700 mb9 pb6">
-      <h2 className="mt9 tc">
+    <div className="ttu fw700 py7 mt8 bg-orange1">
+      <h2 className="tc">
         <span className="fs3-ns fs2-s dpb">
           {CONFERENCE_YEAR} {APP_NAME} {CONFERENCE_TYPE}
         </span>

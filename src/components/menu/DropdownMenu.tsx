@@ -1,6 +1,7 @@
 import React, { FC, ReactNode, useRef, useState } from 'react'
 import { Link } from '@reach/router'
-import classNames from 'classnames'
+import classnames from 'classnames'
+import { Menu } from './types'
 
 // There is no rule that says all content has to be 100% accessible to all people —
 // you just need to do what you can, and make your apps as accessible as possible.
@@ -15,18 +16,17 @@ import classNames from 'classnames'
 const ulClassNames = 'lstn pa0 ma0'
 const liClassNames = 'pointer px2'
 
-const itemClassNames = 'hov-c-primary-main'
+const itemClassNames = 'ff-averta c-text-light hov-c-primary-main fw700 pa2'
 
 const mouseOutTimeout = 100
 
-type Menu = { [key: string]: string | Menu }
-type MenuProps = { menu: Menu }
+type MenuProps = { menu: Menu; className?: string }
 
-export const DropdownMenu: FC<MenuProps> = ({ menu }) => {
+export const DropdownMenu: FC<MenuProps> = ({ menu, className = '' }) => {
   const keys = Object.keys(menu)
 
   return (
-    <nav aria-label="menu">
+    <nav aria-label="menu" className={className}>
       <ul className={ulClassNames}>
         {keys.map((k, i) => {
           const item = menu[k]
@@ -88,10 +88,10 @@ export const DropdownSubmenu: FC<SubmenuProps> = ({ title, children }) => {
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
       onBlur={handleBlur}
-      className={classNames(liClassNames, 'posr dib')}
+      className={classnames(liClassNames, 'posr dib')}
     >
       <button
-        className={classNames('clearall', itemClassNames)}
+        className={classnames('clearall', itemClassNames)}
         onClick={handleClick}
         aria-haspopup="true"
         aria-expanded={isOpen}
@@ -99,7 +99,7 @@ export const DropdownSubmenu: FC<SubmenuProps> = ({ title, children }) => {
         {title}
       </button>
       <ul
-        className={classNames(ulClassNames, 'posa pa1 bs2 bg-bg-main', {
+        className={classnames(ulClassNames, 'posa pa1 bs2 bg-bg-main', {
           dn: !isOpen,
         })}
       >
@@ -117,8 +117,8 @@ type ItemProps = {
 
 const DropdownItem: FC<ItemProps> = ({ name, url, className }) => {
   return (
-    <li className={classNames(liClassNames, itemClassNames, className)}>
-      <Link to={url} className="tdn c-inh">
+    <li className={classnames(liClassNames, itemClassNames, className)}>
+      <Link to={url} className="db tdn c-inh" style={{ width: 'max-content' }}>
         {name}
       </Link>
     </li>
