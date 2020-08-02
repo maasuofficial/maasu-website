@@ -16,7 +16,7 @@ import { Menu } from './types'
 const ulClassNames = 'lstn pa0 ma0'
 const liClassNames = 'pointer px2'
 
-const itemClassNames = 'ff-averta c-text-light hov-c-primary-main fw700'
+const itemClassNames = 'ff-averta c-text-light hov-c-primary-main fw700 pa2'
 
 const mouseOutTimeout = 100
 
