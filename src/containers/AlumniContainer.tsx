@@ -1,10 +1,8 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
-import { findAsset } from 'utils/files'
 import {
   NEW_TAB_PROPS,
-  APP_NAME_LONG,
   MAA_PURPOSE_PRELUDE,
   MAA_PURPOSE_STMT_1,
   MAA_PURPOSE_STMT_2,
@@ -27,16 +25,8 @@ export const AlumniContainer: FC<Props> = () => {
 
   return (
     <div className="container py6">
-      <section className="tc mb4">
-        <img
-          className="w-40 w-80-s pt4"
-          src={findAsset('branding/light/text.svg')}
-          alt={APP_NAME_LONG}
-        />
-        <h4 className="title4 ttu">Alumni Association</h4>
-      </section>
       <section>
-        <h4 className="title4">Purpose</h4>
+        <h4 className="title4">The MAASU Alumni Association</h4>
         <p>{MAA_PURPOSE_PRELUDE}</p>
         <ul>
           <li>{MAA_PURPOSE_STMT_1}</li>
@@ -51,12 +41,20 @@ export const AlumniContainer: FC<Props> = () => {
         <p>{MAA_MEMBERSHIP_PRELUDE}</p>
         <ol>
           <li>
-            <a {...NEW_TAB_PROPS} href={MAA_ALUMNI_DIR_FORM}>
+            <a
+              {...NEW_TAB_PROPS}
+              href={MAA_ALUMNI_DIR_FORM}
+              className="c-inh tdu hov-c-primary-main"
+            >
               {MAA_MEMBERSHIP_STMT_1}
             </a>
           </li>
           <li>
-            <a {...NEW_TAB_PROPS} href={MAA_MEMBERSHIP_FEE_URL}>
+            <a
+              {...NEW_TAB_PROPS}
+              href={MAA_MEMBERSHIP_FEE_URL}
+              className="c-inh tdu hov-c-primary-main"
+            >
               {MAA_MEMBERSHIP_STMT_2}
             </a>
           </li>

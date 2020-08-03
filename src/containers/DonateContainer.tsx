@@ -29,7 +29,11 @@ export const DonateContainer: FC<DonateProps> = () => {
       </p>
 
       <p className="fs1 fw700">
-        donate <a href={DONATE_MAASU_URL}>here</a>.
+        donate{' '}
+        <a href={DONATE_MAASU_URL} className="tdu c-inh hov-c-primary-main">
+          here
+        </a>
+        .
       </p>
     </div>
   )
