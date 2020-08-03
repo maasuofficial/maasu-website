@@ -12,7 +12,7 @@ export const BoardMemberProfile: FC<Props> = ({ member }) => {
     <div className="w-50 w-25-ns">
       <Link to={`/board/${member.id}`} className="c-inh tdn">
         <div className="w-100 h-100 pa2 tc">
-          <img src={member.imageUrl} alt={name} className="w-100" />
+          <img src={member.imageUrl} alt={name} className="w-100 br" />
           <p className="ma0 fw700">{name}</p>
           <span>{member.positionTitle}</span>
         </div>

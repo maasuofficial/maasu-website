@@ -16,7 +16,7 @@ import { Menu } from './types'
 const ulClassNames = 'lstn pa0 ma0'
 const liClassNames = 'pointer px2'
 
-const itemClassNames = 'ff-averta c-text-light hov-c-primary-main fw700 pa2'
+const itemClassNames = 'ff-averta c-text-light hov-c-primary-main fw700'
 
 const mouseOutTimeout = 100
 
@@ -118,8 +118,8 @@ type ItemProps = {
 const DropdownItem: FC<ItemProps> = ({ name, url, className }) => {
   return (
     <li className={classnames(liClassNames, itemClassNames, className)}>
-      <Link to={url} className="db tdn c-inh" style={{ width: 'max-content' }}>
-        {name}
+      <Link to={url} className="db tdn c-inh">
+        <div className="pa2">{name}</div>
       </Link>
     </li>
   )

@@ -28,6 +28,7 @@ $colors: (
   'red1': #980000,
   'red2': #d12329,
   'red3': #ff5e53,
+  'redb': #b23030,
   'orange1': #c2604d,
   'orange2': #b25200,
   'orange3': #ea801f,
@@ -36,6 +37,7 @@ $colors: (
   'green1': #007e4c,
   'green2': #20af78,
   'green6': #61e2a7,
+  'yellowe': #efc31a,
 );
 
 $theme: (
@@ -46,10 +48,10 @@ $theme: (
   'text-main': map-get($colors, 'grey3'),
   'text-dark': map-get($colors, 'grey2'),
   'primary-light': map-get($colors, 'red3'),
-  'primary-main': map-get($colors, 'red2'),
+  'primary-main': map-get($colors, 'redb'),
   'primary-dark': map-get($colors, 'red1'),
   'secondary-light': map-get($colors, 'red3'),
-  'secondary-main': map-get($colors, 'red2'),
+  'secondary-main': map-get($colors, 'yellowe'),
   'secondary-dark': map-get($colors, 'red1'),
   'tertiary-light': map-get($colors, 'green6'),
   'tertiary-main': map-get($colors, 'green2'),
