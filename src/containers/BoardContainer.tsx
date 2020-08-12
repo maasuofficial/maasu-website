@@ -20,6 +20,7 @@ import {
   ED_APP_LINK,
   ED_APP_ISOPEN,
   ED_APP_STATUS,
+  NEW_TAB_PROPS,
 } from 'constants/strings'
 import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 import { BoardMemberProfile } from 'components/BoardMemberProfile'
@@ -135,7 +136,11 @@ export const Board: FC<Props> = ({
           )}
           <p className="my4 tc">
             {BOA_APP_STATUS}
-            {BOA_APP_ISOPEN ? <a href={BOA_APP_LINK}>Apply here.</a> : null}
+            {BOA_APP_ISOPEN ? (
+              <a {...NEW_TAB_PROPS} href={BOA_APP_LINK}>
+                Apply here.
+              </a>
+            ) : null}
           </p>
         </section>
       </div>
