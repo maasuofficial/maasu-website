@@ -1,10 +1,4 @@
 // -----------------------------------------------------
-// General
-// -----------------------------------------------------
-
-export const NEW_TAB_PROPS = { target: '_blank', rel: 'noreferrer noopener' }
-
-// -----------------------------------------------------
 // Mission
 // -----------------------------------------------------
 
@@ -22,7 +16,8 @@ https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FM
 
 export const ED_APP_LINK = ''
 export const DC_APP_LINK = `${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022-new.docx`
-export const BOA_APP_LINK = `${process.env.PUBLIC_URL}/assets/files/BOA-Application.docx`
+export const BOA_APP_LINK =
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=e4b80cb5-6ffd-41b5-97fd-aa7073704a09'
 export const ECC_APP_LINK = 'https://forms.gle/CxV8qK2S3QKAMAN59'
 
 // -----------------------------------------------------

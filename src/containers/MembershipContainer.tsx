@@ -11,6 +11,7 @@ import { AppState } from 'store/types'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { Member } from 'store/Members/types'
+import { A } from 'components/Link'
 import {
   MEMBERSHIP_BENEFITS_1,
   MEMBERSHIP_BENEFITS_2,
@@ -78,7 +79,7 @@ export const Membership: FC<Props> = ({
             filteredMembers.map((member, index) => (
               <li key={index}>
                 {member.orgUrl ? (
-                  <a href={member.orgUrl}>{member.name}</a>
+                  <A href={member.orgUrl}>{member.name}</A>
                 ) : (
                   <span>{member.name}</span>
                 )}

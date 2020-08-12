@@ -1,4 +1,5 @@
 import React, { FC } from 'react'
+import { A } from 'components/Link'
 
 interface Props {
   children: string
@@ -12,13 +13,9 @@ export const EmailAnchor: FC<Props> = ({
   ...props
 }) => {
   return (
-    <a
-      className={`c-inh tdu hov-tdn ${className}`}
-      href={`mailto:${children}`}
-      {...props}
-    >
+    <A className={className} href={`mailto:${children}`} {...props}>
       {children}
-    </a>
+    </A>
   )
 }
 

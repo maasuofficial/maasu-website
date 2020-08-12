@@ -32,11 +32,9 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 
 ## Overview <a name="overview"></a>
 
-This document summarizes a design process of the MAASU website, what softwares and tools were used, 
-and any executive decisions made in regards to project structure.
-The [Table of Contents](#table-of-contents) provides a summary of all relevant categories.
-
-New to MAASU, or the MAASU Technical Networking position? Read the [introduction first](docs/intro.md).
+This document summarizes a design process of the MAASU website, what softwares and tools were 
+used, and any executive decisions made in regards to project structure. The 
+[Table of Contents](#table-of-contents) provides a summary of all relevant categories.
 
 ## Installation <a name="installation"></a>
 

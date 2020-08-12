@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
+import { A } from 'components/Link'
 import {
-  NEW_TAB_PROPS,
   MAA_PURPOSE_PRELUDE,
   MAA_PURPOSE_STMT_1,
   MAA_PURPOSE_STMT_2,
@@ -41,22 +41,10 @@ export const AlumniContainer: FC<Props> = () => {
         <p>{MAA_MEMBERSHIP_PRELUDE}</p>
         <ol>
           <li>
-            <a
-              {...NEW_TAB_PROPS}
-              href={MAA_ALUMNI_DIR_FORM}
-              className="c-inh tdu hov-c-primary-main"
-            >
-              {MAA_MEMBERSHIP_STMT_1}
-            </a>
+            <A href={MAA_ALUMNI_DIR_FORM}>{MAA_MEMBERSHIP_STMT_1}</A>
           </li>
           <li>
-            <a
-              {...NEW_TAB_PROPS}
-              href={MAA_MEMBERSHIP_FEE_URL}
-              className="c-inh tdu hov-c-primary-main"
-            >
-              {MAA_MEMBERSHIP_STMT_2}
-            </a>
+            <A href={MAA_MEMBERSHIP_FEE_URL}>{MAA_MEMBERSHIP_STMT_2}</A>
           </li>
         </ol>
         <p>{MAA_MEMBERSHIP_POST}</p>
@@ -65,7 +53,7 @@ export const AlumniContainer: FC<Props> = () => {
         <h4 className="title4">Donation</h4>
         <p>
           If you would like to support the MAASU Alumni Association, consider
-          donating <a href={DONATE_MAA_URL}>here</a>.
+          donating <A href={DONATE_MAA_URL}>here</A>.
         </p>
       </section>
     </div>

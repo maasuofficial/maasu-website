@@ -8,7 +8,7 @@ import {
   getReports,
   getReportsError,
 } from 'store/selectors'
-import { NEW_TAB_PROPS } from 'constants/strings'
+import { A } from 'components/Link'
 import { useDocumentTitle } from 'hooks/meta'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -46,9 +46,9 @@ export const AnnualReports: FC<Props> = ({
             const ey = new Date(r.endDate).getFullYear()
             return (
               <li key={i}>
-                <a {...NEW_TAB_PROPS} href={r.url}>
+                <A href={r.url}>
                   {sy}-{ey}
-                </a>
+                </A>
               </li>
             )
           })}

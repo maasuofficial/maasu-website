@@ -2,8 +2,10 @@
 
 exports[`applies the correct link subject 1`] = `
 <a
-  className="c-inh tdu hov-tdn "
+  className="c-text-main tdu hov-c-primary-main "
   href="mailto:test@test.test"
+  rel="noreferrer noopener"
+  target="_blank"
 >
   test@test.test
 </a>

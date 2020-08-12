@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { EA } from 'components/EmailAnchor'
 import { useDocumentTitle } from 'hooks/meta'
-import { findAsset } from 'utils/files'
+import { A } from 'components/Link'
 import {
   DONATE_STMT_1,
   DONATE_STMT_2,
@@ -29,11 +29,7 @@ export const DonateContainer: FC<DonateProps> = () => {
       </p>
 
       <p className="fs1 fw700">
-        donate{' '}
-        <a href={DONATE_MAASU_URL} className="tdu c-inh hov-c-primary-main">
-          here
-        </a>
-        .
+        donate <A href={DONATE_MAASU_URL}>here</A>.
       </p>
     </div>
   )
@@ -45,13 +41,8 @@ export const DonateCompleteContainer: FC<DonateCompleteProps> = () => {
   useDocumentTitle('Thank You')
 
   return (
-    <div className="container pt6">
-      <div className="mxa tc">
-        <img
-          className="w-30 w-30-ns"
-          src={findAsset('branding/light/logo.svg')}
-          alt="thank you for donating"
-        />
+    <div className="container py6">
+      <div className="mxa my9 tc">
         <h3 className="title3 mt6">Thank you for donating.</h3>
         <h4 className="title4">Your donation means the world to us.</h4>
       </div>
