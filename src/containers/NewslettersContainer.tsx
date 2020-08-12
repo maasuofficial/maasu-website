@@ -9,6 +9,7 @@ import {
   getNewsletters,
   getNewslettersError,
 } from 'store/selectors'
+import { A } from 'components/Link'
 import { MONTHS } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -55,17 +56,12 @@ export const Newsletters: FC<Props> = ({
                     <td>{n.vol}</td>
                     <td>{n.issue}</td>
                     <td className="tr">
-                      <a
-                        href={n.url}
-                        target="_blank"
-                        rel="noreferrer noopener"
-                        className="tdu hov-tdn c-inh"
-                      >
+                      <A href={n.url}>
                         {n.title && <span>{n.title} -</span>}
                         <span>
                           {MONTHS[d.getMonth()]} {d.getFullYear()}
                         </span>
-                      </a>
+                      </A>
                     </td>
                   </tr>
                 )

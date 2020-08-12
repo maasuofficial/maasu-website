@@ -4,6 +4,7 @@ import { connect, ConnectedProps } from 'react-redux'
 import { useDocumentTitle } from 'hooks/meta'
 import { AppState } from 'store/types'
 import { fetchConferences } from 'store/Conferences/actions'
+import { A } from 'components/Link'
 import {
   getConferences,
   getIsFetchingConferences,
@@ -184,9 +185,9 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
               <ul>
                 {exLSList.map((c, i) => (
                   <li key={i}>
-                    <a href={c.bid} target="_blank" rel="noopener noreferrer">
+                    <A href={c.bid}>
                       {new Date(c.date).getFullYear()} - {c.title}
-                    </a>
+                    </A>
                   </li>
                 ))}
               </ul>
@@ -198,9 +199,9 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
               <ul>
                 {exSCList.map((c, i) => (
                   <li key={i}>
-                    <a href={c.bid} target="_blank" rel="noopener noreferrer">
+                    <A href={c.bid}>
                       {new Date(c.date).getFullYear()} - {c.title}
-                    </a>
+                    </A>
                   </li>
                 ))}
               </ul>
@@ -213,7 +214,7 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
           <p>{HOST_2_CLOSING}</p>
           <span>
             To apply for the bidding process, please fill out the{' '}
-            <a href={HOST_FORM}>following form</a>.
+            <A href={HOST_FORM}>following form</A>.
           </span>
         </li>
       </ol>

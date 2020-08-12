@@ -1,6 +1,7 @@
 import React, { FC, Fragment } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
+import { A } from 'components/Link'
 import { EA } from 'components/EmailAnchor'
 import { SOCIAL } from 'constants/strings'
 
@@ -29,12 +30,12 @@ export const WAYFComponent: FC<Props> = () => {
       </p>
       <p>
         You can listen to some of the stories on the MAASU{' '}
-        <a href="https://archive.storycorps.org/user/maasu">Storycorps page</a>{' '}
+        <A href="https://archive.storycorps.org/user/maasu">Storycorps page</A>{' '}
         where we record and house all audio stories. If you are interested in
         reading stories, you can check out our{' '}
-        <a href={SOCIAL.filter((s) => s.name === 'facebook')[0].url}>
+        <A href={SOCIAL.filter((s) => s.name === 'facebook')[0].url}>
           facebook page
-        </a>{' '}
+        </A>{' '}
         or view our monthly newsletters and read the stories there.
       </p>
       <p>

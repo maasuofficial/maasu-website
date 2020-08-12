@@ -4,6 +4,7 @@ import { useDocumentTitle } from 'hooks/meta'
 import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { fetchResources } from 'store/actions'
+import { A } from 'components/Link'
 import {
   getIsFetchingResources,
   getResources,
@@ -40,10 +41,10 @@ export const Resources: FC<Props> = ({
           <ul className="my0 mxa dib tl">
             {resources.map((r, i) => (
               <li key={i}>
-                <a href={r.url}>
+                <A href={r.url}>
                   <span>{r.title}</span>
                   {r.titleAbv && <span> ({r.titleAbv})</span>}
-                </a>
+                </A>
               </li>
             ))}
           </ul>

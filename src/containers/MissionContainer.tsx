@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
+import { A } from 'components/Link'
 import {
   MISSION_PRELUDE,
   MISSION_STMT_1,
@@ -17,7 +18,6 @@ import {
   STRATEGIC_PLAN,
   MISSION_FIRST_MEETING,
   STRAT_PLAN_URL,
-  NEW_TAB_PROPS,
 } from 'constants/strings'
 
 interface Props {}
@@ -58,10 +58,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         <h3 className="mt4 tc fs2 fw700">Strategic Plan</h3>
         <p>
           {STRATEGIC_PLAN}
-          <a {...NEW_TAB_PROPS} href={STRAT_PLAN_URL} download="hello.pdf">
-            here
-          </a>
-          .
+          <A href={STRAT_PLAN_URL}>here</A>.
         </p>
       </section>
     </div>

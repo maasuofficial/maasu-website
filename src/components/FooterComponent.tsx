@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { Link } from '@reach/router'
+import { Link } from 'components/Link'
 import { APP_NAME_LONG, SOCIAL, YEAR } from 'constants/strings'
 import { LOGO_HEIGHT } from 'constants/numeric'
 import { Icon, IconName } from 'components/Icon'

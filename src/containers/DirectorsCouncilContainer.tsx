@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { EA } from 'components/EmailAnchor'
+import { A } from 'components/Link'
 import { DC_PROJECT_LIST, DC_PROJECT_APP_FORM } from 'constants/strings'
 
 type Props = RouteComponentProps & {}
@@ -20,12 +21,12 @@ export const DirectorsCouncilContainer: FC<Props> = () => {
 
       <p>
         Commitment is project based and a list of open and potential projects
-        can be found <a href={DC_PROJECT_LIST}>here</a>.
+        can be found <A href={DC_PROJECT_LIST}>here</A>.
       </p>
 
       <p>
         For more information please view our{' '}
-        <a href={DC_PROJECT_APP_FORM}>application form</a>.
+        <A href={DC_PROJECT_APP_FORM}>application form</A>.
       </p>
 
       <p>

@@ -6,6 +6,7 @@ import { AppState } from 'store/types'
 import { fetchEvents } from 'store/actions'
 import { getIsFetchingEvents, getEvents, getEventsError } from 'store/selectors'
 import { HEvent } from 'store/Events/types'
+import { A } from 'components/Link'
 import { HXSTORY_PRELUDE } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -57,7 +58,7 @@ export const Hxstory: FC<Props> = ({
                     <h5 className="title5 my2">{e.title}</h5>
                     <span>{e.university}</span>
                     <p className="ma0">{e.desc}</p>
-                    {e.cta && <a href={e.cta}>Learn More</a>}
+                    {e.cta && <A href={e.cta}>Learn More</A>}
                   </Fragment>
                 ))}
               </div>

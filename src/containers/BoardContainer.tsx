@@ -20,8 +20,8 @@ import {
   ED_APP_LINK,
   ED_APP_ISOPEN,
   ED_APP_STATUS,
-  NEW_TAB_PROPS,
 } from 'constants/strings'
+import { A } from 'components/Link'
 import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 import { BoardMemberProfile } from 'components/BoardMemberProfile'
 
@@ -79,7 +79,7 @@ export const Board: FC<Props> = ({
           </SkeletonConsumer>
           <p className="my4 tc">
             {ED_APP_STATUS}
-            {ED_APP_ISOPEN ? <a href={ED_APP_LINK}>Apply here.</a> : null}
+            {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
 
@@ -98,7 +98,7 @@ export const Board: FC<Props> = ({
           )}
           <p className="my4 tc">
             {ECC_APP_STATUS}
-            {ECC_APP_ISOPEN ? <a href={ECC_APP_LINK}>Apply here.</a> : null}
+            {ECC_APP_ISOPEN ? <A href={ECC_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
 
@@ -117,7 +117,7 @@ export const Board: FC<Props> = ({
           )}
           <p className="my4 tc">
             {DC_APP_STATUS}
-            {DC_APP_ISOPEN ? <a href={DC_APP_LINK}>Apply here.</a> : null}
+            {DC_APP_ISOPEN ? <A href={DC_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
 
@@ -136,11 +136,7 @@ export const Board: FC<Props> = ({
           )}
           <p className="my4 tc">
             {BOA_APP_STATUS}
-            {BOA_APP_ISOPEN ? (
-              <a {...NEW_TAB_PROPS} href={BOA_APP_LINK}>
-                Apply here.
-              </a>
-            ) : null}
+            {BOA_APP_ISOPEN ? <A href={BOA_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
       </div>

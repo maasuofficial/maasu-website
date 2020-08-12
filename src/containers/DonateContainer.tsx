@@ -3,6 +3,7 @@ import { RouteComponentProps } from '@reach/router'
 import { EA } from 'components/EmailAnchor'
 import { useDocumentTitle } from 'hooks/meta'
 import { findAsset } from 'utils/files'
+import { A } from 'components/Link'
 import {
   DONATE_STMT_1,
   DONATE_STMT_2,
@@ -29,11 +30,7 @@ export const DonateContainer: FC<DonateProps> = () => {
       </p>
 
       <p className="fs1 fw700">
-        donate{' '}
-        <a href={DONATE_MAASU_URL} className="tdu c-inh hov-c-primary-main">
-          here
-        </a>
-        .
+        donate <A href={DONATE_MAASU_URL}>here</A>.
       </p>
     </div>
   )
