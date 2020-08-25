@@ -36,7 +36,7 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           src={MISSION_FIRST_MEETING}
           alt={PURPOSE_IMG_ALT}
         />
-        <div className="fsi w-100 w-80-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
+        <div className="fsi w-100 w-90-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
       </section>
       <section>
         <h3 className="mt4 tc fs2 fw700">Our Mission</h3>

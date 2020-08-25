@@ -47,20 +47,19 @@ export const Hxstory: FC<Props> = ({
           .sort((a, b) => parseInt(b) - parseInt(a))
           .map((k, i) => (
             <div key={i} className="posr df">
-              <div className="posr px1 bg-primary-main">
-                <div className="posa pa2 b-0 br l-5 tf-y-50 bg-primary-main c-bg-main">
-                  {k}
+              <div className="posr px1 bg-primary-main"></div>
+              <div>
+                <div className="pl5 fw700 fs1 c-primary-main">{k}</div>
+                <div className="pa5">
+                  {hxstory[k].map((e, i) => (
+                    <Fragment key={i}>
+                      <h5 className="title5 my2">{e.title}</h5>
+                      <span>{e.university}</span>
+                      <p className="ma0">{e.desc}</p>
+                      {e.cta && <A href={e.cta}>Learn More</A>}
+                    </Fragment>
+                  ))}
                 </div>
-              </div>
-              <div className="pa5">
-                {hxstory[k].map((e, i) => (
-                  <Fragment key={i}>
-                    <h5 className="title5 my2">{e.title}</h5>
-                    <span>{e.university}</span>
-                    <p className="ma0">{e.desc}</p>
-                    {e.cta && <A href={e.cta}>Learn More</A>}
-                  </Fragment>
-                ))}
               </div>
             </div>
           ))
