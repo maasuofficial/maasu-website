@@ -51,8 +51,8 @@ export const Hxstory: FC<Props> = ({
               <div key={i} className="posr df">
                 <div className="posr px1 bg-primary-main"></div>
                 <div>
-                  <div className="pl5 fw900 fs1 c-primary-main">{k}</div>
-                  <div className="pa5">
+                  <div className="px5 fw900 fs1 c-primary-main">{k}</div>
+                  <div className="px5 pb5">
                     {hxstory[k].map((e, i) => (
                       <Fragment key={i}>
                         <h5 className="title5 my2">{e.title}</h5>
