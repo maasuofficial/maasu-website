@@ -22,6 +22,8 @@ import {
   ED_APP_STATUS,
 } from 'constants/strings'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 import { BoardMemberProfile } from 'components/BoardMemberProfile'
 
@@ -62,21 +64,20 @@ export const Board: FC<Props> = ({
 
   return (
     <SkeletonProvider isLoading={isFetchingBoard}>
-      <div className="container pt6">
-        <section className="mb4">
-          <h4 className="title4">Executive Board</h4>
+      <Container>
+        <TextBlock title="Executive Board">
           <span>{BOARD_PRELUDE}</span>
-        </section>
+        </TextBlock>
 
         <section>
-          <h5 className="title5">Executive Director</h5>
-          <SkeletonConsumer width={256} height={256}>
-            <div className="df fw-w jc-c">
+          <h5 className="title5 tc my2">Executive Director</h5>
+          <div className="df fw-w jc-c">
+            <SkeletonConsumer width={256} height={256}>
               {groups.ED.map((m, i) => (
                 <BoardMemberProfile key={i} member={m} />
               ))}
-            </div>
-          </SkeletonConsumer>
+            </SkeletonConsumer>
+          </div>
           <p className="my4 tc">
             {ED_APP_STATUS}
             {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
@@ -86,7 +87,7 @@ export const Board: FC<Props> = ({
         <hr className="w-100 my4" />
 
         <section>
-          <h5 className="title5">Executive Coordinating Committee</h5>
+          <h5 className="title5 tc my2">Executive Coordinating Committee</h5>
           {isFetchingBoard ? (
             <span>loading...</span>
           ) : (
@@ -105,7 +106,7 @@ export const Board: FC<Props> = ({
         <hr className="w-100 my4" />
 
         <section>
-          <h5 className="title5">Directors Council</h5>
+          <h5 className="title5 tc my2">Directors Council</h5>
           {isFetchingBoard ? (
             <span>loading...</span>
           ) : (
@@ -124,7 +125,7 @@ export const Board: FC<Props> = ({
         <hr className="w-100 my4" />
 
         <section>
-          <h5 className="title5">Board Of Advisors</h5>
+          <h5 className="title5 tc my4">Board Of Advisors</h5>
           {isFetchingBoard ? (
             <span>loading...</span>
           ) : (
@@ -139,7 +140,7 @@ export const Board: FC<Props> = ({
             {BOA_APP_ISOPEN ? <A href={BOA_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
-      </div>
+      </Container>
     </SkeletonProvider>
   )
 }

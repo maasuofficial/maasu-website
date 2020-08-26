@@ -9,6 +9,8 @@ import {
   getReportsError,
 } from 'store/selectors'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { useDocumentTitle } from 'hooks/meta'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -28,33 +30,34 @@ export const AnnualReports: FC<Props> = ({
   }, [fetchReports, reports, reportsError])
 
   return (
-    <div className="container">
-      <h3 className="title3 tc pt6">Annual Report</h3>
-      <p className="tc">
-        The annual report is a compilation of all of MAASU's achievements,
-        distinctions, and news for the given year. Below are the previous
-        reports.
-      </p>
-      <br />
-      <br />
-      {isFetchingReports ? (
-        <span>loading...</span>
-      ) : (
-        <ul>
-          {reports.map((r, i) => {
-            const sy = new Date(r.startDate).getFullYear()
-            const ey = new Date(r.endDate).getFullYear()
-            return (
-              <li key={i}>
-                <A href={r.url}>
-                  {sy}-{ey}
-                </A>
-              </li>
-            )
-          })}
-        </ul>
-      )}
-    </div>
+    <Container className="tc">
+      <TextBlock title="Annual Report">
+        <p>
+          The annual report is a compilation of all of MAASU's achievements,
+          distinctions, and news for the given year. Below are the previous
+          reports.
+        </p>
+        <div>
+          {isFetchingReports ? (
+            <span>loading...</span>
+          ) : (
+            <ul className="lstn pl0">
+              {reports.map((r, i) => {
+                const sy = new Date(r.startDate).getFullYear()
+                const ey = new Date(r.endDate).getFullYear()
+                return (
+                  <li key={i}>
+                    <A href={r.url}>
+                      {sy}-{ey}
+                    </A>
+                  </li>
+                )
+              })}
+            </ul>
+          )}
+        </div>
+      </TextBlock>
+    </Container>
   )
 }
 

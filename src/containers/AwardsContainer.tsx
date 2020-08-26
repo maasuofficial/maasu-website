@@ -6,6 +6,9 @@ import { useDocumentTitle } from 'hooks/meta'
 import { getIsFetchingAwards, getAwards, getAwardsError } from 'store/selectors'
 import { fetchAwards } from 'store/actions'
 /* import { A } from 'components/Link' */
+import { Block } from 'components/Block'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { Award } from 'store/Awards/types'
 import {
   AWARDS_BOA_STATUS,
@@ -35,7 +38,7 @@ export const Awards: FC<Props> = ({
 
   const renderAwardsTable = (awardName: string, awards: Award[]) =>
     awards.length ? (
-      <div className="my4">
+      <Block>
         <h5 className="title5 mb2">Previous {awardName} awards</h5>
         <table>
           <thead>
@@ -57,7 +60,7 @@ export const Awards: FC<Props> = ({
               ))}
           </tbody>
         </table>
-      </div>
+      </Block>
     ) : null
 
   const ccAwards = awards.filter((a) => a.type === 'CC')
@@ -65,45 +68,46 @@ export const Awards: FC<Props> = ({
   const boaAwards = awards.filter((a) => a.type === 'BOA')
 
   return (
-    <div className="container py6">
-      <h4 className="title4">Awards</h4>
-      <p>{AWARDS_STMT}</p>
-      <ul>
-        <li className="my2">
-          <h5 className="title5">Charles Chang Leadership Award</h5>
-          <p>{AWARDS_CC_STMT}</p>
-          <p>{AWARDS_CC_STATUS}</p>
+    <Container>
+      <TextBlock title="Awards">
+        <p>{AWARDS_STMT}</p>
+        <ul>
+          <li className="my2">
+            <h5 className="title5">Charles Chang Leadership Award</h5>
+            <p>{AWARDS_CC_STMT}</p>
+            <p>{AWARDS_CC_STATUS}</p>
 
-          {isFetchingAwards ? (
-            <span>loading...</span>
-          ) : (
-            renderAwardsTable('Charles Chang Leadership', ccAwards)
-          )}
-        </li>
-        <li className="my2">
-          <h5 className="title5">Midwestern Star Award</h5>
-          <p>{AWARDS_MS_STMT}</p>
-          <p>{AWARDS_MS_STATUS}</p>
+            {isFetchingAwards ? (
+              <span>loading...</span>
+            ) : (
+              renderAwardsTable('Charles Chang Leadership', ccAwards)
+            )}
+          </li>
+          <li className="my2">
+            <h5 className="title5">Midwestern Star Award</h5>
+            <p>{AWARDS_MS_STMT}</p>
+            <p>{AWARDS_MS_STATUS}</p>
 
-          {isFetchingAwards ? (
-            <span>loading...</span>
-          ) : (
-            renderAwardsTable('Midwestern Star', msAwards)
-          )}
-        </li>
-        <li className="my2">
-          <h5 className="title5">Board of Advisors Award</h5>
-          <p>{AWARDS_BOA_STMT}</p>
-          <p>{AWARDS_BOA_STATUS}</p>
+            {isFetchingAwards ? (
+              <span>loading...</span>
+            ) : (
+              renderAwardsTable('Midwestern Star', msAwards)
+            )}
+          </li>
+          <li className="my2">
+            <h5 className="title5">Board of Advisors Award</h5>
+            <p>{AWARDS_BOA_STMT}</p>
+            <p>{AWARDS_BOA_STATUS}</p>
 
-          {isFetchingAwards ? (
-            <span>loading...</span>
-          ) : (
-            renderAwardsTable('Board of Advisors (BOA)', boaAwards)
-          )}
-        </li>
-      </ul>
-    </div>
+            {isFetchingAwards ? (
+              <span>loading...</span>
+            ) : (
+              renderAwardsTable('Board of Advisors (BOA)', boaAwards)
+            )}
+          </li>
+        </ul>
+      </TextBlock>
+    </Container>
   )
 }
 

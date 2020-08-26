@@ -5,6 +5,8 @@ import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
 import { fetchResources } from 'store/actions'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import {
   getIsFetchingResources,
   getResources,
@@ -28,29 +30,30 @@ export const Resources: FC<Props> = ({
   }, [fetchResources, resources, resourcesError])
 
   return (
-    <div className="container py6">
-      <h4 className="title4 tc">APIDA Organization Resources</h4>
-      <p className="tc">
-        Here is a list of resources to get involved in other organizations and
-        communities near you.
-      </p>
-      <div className="tc">
-        {isFetchingResources ? (
-          <span>loading...</span>
-        ) : (
-          <ul className="my0 mxa dib tl">
-            {resources.map((r, i) => (
-              <li key={i}>
-                <A href={r.url}>
-                  <span>{r.title}</span>
-                  {r.titleAbv && <span> ({r.titleAbv})</span>}
-                </A>
-              </li>
-            ))}
-          </ul>
-        )}
-      </div>
-    </div>
+    <Container className="tc">
+      <TextBlock title="APIDA Organization Resources">
+        <p>
+          Here is a list of resources to get involved in other organizations and
+          communities near you.
+        </p>
+        <div>
+          {isFetchingResources ? (
+            <span>loading...</span>
+          ) : (
+            <ul className="my0 mxa dib tl">
+              {resources.map((r, i) => (
+                <li key={i}>
+                  <A href={r.url}>
+                    <span>{r.title}</span>
+                    {r.titleAbv && <span> ({r.titleAbv})</span>}
+                  </A>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </TextBlock>
+    </Container>
   )
 }
 

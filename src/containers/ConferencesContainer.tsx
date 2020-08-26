@@ -9,6 +9,8 @@ import {
   getConferences,
   getConferencesError,
 } from 'store/selectors'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { MONTHS } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -28,50 +30,53 @@ export const Conferences: FC<Props> = ({
   }, [conferences, fetchConferences, conferencesError])
 
   return (
-    <div className="container">
-      <h3 className="title3 tc pt5">Conferences</h3>
-      <p className="tc">
-        Below is a summary of all conferences that MAASU has aided in hosting or
-        organizing.
-      </p>
+    <Container>
+      <TextBlock title="Conferences">
+        <p className="tc">
+          Below is a summary of all conferences that MAASU has aided in hosting
+          or organizing.
+        </p>
 
-      {isFetchingConferences || conferencesError ? (
-        <span>loading...</span>
-      ) : (
-        <table className="w-100 mb4">
-          <thead>
-            <tr>
-              <th>Date</th>
-              <th>Type</th>
-              <th>Conference Title</th>
-              <th>Location</th>
-            </tr>
-          </thead>
-          <tbody>
-            {conferences.map((c, index) => {
-              const d = new Date(c.date)
-              const ye = d.getFullYear()
-              const mo = MONTHS[d.getMonth()]
+        {isFetchingConferences || conferencesError ? (
+          <span>loading...</span>
+        ) : (
+          <div>
+            <table className="mxa mb4">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Type</th>
+                  <th>Conference Title</th>
+                  <th>Location</th>
+                </tr>
+              </thead>
+              <tbody>
+                {conferences.map((c, index) => {
+                  const d = new Date(c.date)
+                  const ye = d.getFullYear()
+                  const mo = MONTHS[d.getMonth()]
 
-              const date = c.isApproxDate
-                ? `${mo}, ${ye}`
-                : `${mo} ${d.getDate()}, ${ye}`
+                  const date = c.isApproxDate
+                    ? `${mo}, ${ye}`
+                    : `${mo} ${d.getDate()}, ${ye}`
 
-              return (
-                c.id && (
-                  <tr key={index}>
-                    <td>{date}</td>
-                    <td>{c.type}</td>
-                    <td>{c.title}</td>
-                    <td>{`${c.host}, ${c.state}`}</td>
-                  </tr>
-                )
-              )
-            })}
-          </tbody>
-        </table>
-      )}
-    </div>
+                  return (
+                    c.id && (
+                      <tr key={index}>
+                        <td>{date}</td>
+                        <td>{c.type}</td>
+                        <td>{c.title}</td>
+                        <td>{`${c.host}, ${c.state}`}</td>
+                      </tr>
+                    )
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </TextBlock>
+    </Container>
   )
 }
 

@@ -7,6 +7,8 @@ import { fetchEvents } from 'store/actions'
 import { getIsFetchingEvents, getEvents, getEventsError } from 'store/selectors'
 import { HEvent } from 'store/Events/types'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { HXSTORY_PRELUDE } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -36,35 +38,36 @@ export const Hxstory: FC<Props> = ({
   }, {} as HxstoryType)
 
   return (
-    <div className="container pt6">
-      <h4 className="title4">Our Hxstory</h4>
-      <p>{HXSTORY_PRELUDE}</p>
+    <Container>
+      <TextBlock title="Our Hxstory">
+        <p>{HXSTORY_PRELUDE}</p>
 
-      {isFetchingEvents ? (
-        <span>loading...</span>
-      ) : (
-        Object.keys(hxstory)
-          .sort((a, b) => parseInt(b) - parseInt(a))
-          .map((k, i) => (
-            <div key={i} className="posr df">
-              <div className="posr px1 bg-primary-main"></div>
-              <div>
-                <div className="pl5 fw700 fs1 c-primary-main">{k}</div>
-                <div className="pa5">
-                  {hxstory[k].map((e, i) => (
-                    <Fragment key={i}>
-                      <h5 className="title5 my2">{e.title}</h5>
-                      <span>{e.university}</span>
-                      <p className="ma0">{e.desc}</p>
-                      {e.cta && <A href={e.cta}>Learn More</A>}
-                    </Fragment>
-                  ))}
+        {isFetchingEvents ? (
+          <span>loading...</span>
+        ) : (
+          Object.keys(hxstory)
+            .sort((a, b) => parseInt(b) - parseInt(a))
+            .map((k, i) => (
+              <div key={i} className="posr df">
+                <div className="posr px1 bg-primary-main"></div>
+                <div>
+                  <div className="pl5 fw900 fs1 c-primary-main">{k}</div>
+                  <div className="pa5">
+                    {hxstory[k].map((e, i) => (
+                      <Fragment key={i}>
+                        <h5 className="title5 my2">{e.title}</h5>
+                        <span>{e.university}</span>
+                        <p className="ma0">{e.desc}</p>
+                        {e.cta && <A href={e.cta}>Learn More</A>}
+                      </Fragment>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))
-      )}
-    </div>
+            ))
+        )}
+      </TextBlock>
+    </Container>
   )
 }
 

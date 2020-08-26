@@ -12,6 +12,8 @@ import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { Member } from 'store/Members/types'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import {
   MEMBERSHIP_BENEFITS_1,
   MEMBERSHIP_BENEFITS_2,
@@ -58,11 +60,10 @@ export const Membership: FC<Props> = ({
   }, [fetchMembers, members, membersError])
 
   return (
-    <div className="container py6">
-      <section>
-        <h3 className="title3 pt5">Membership</h3>
+    <Container>
+      <TextBlock title="Membership">
         <p>{MEMBERSHIP_PRELUDE}</p>
-        <h4 className="title4 pt5">Benefits</h4>
+        <p>Benefits include:</p>
         <ul>
           <li>{MEMBERSHIP_BENEFITS_1}</li>
           <li>{MEMBERSHIP_BENEFITS_2}</li>
@@ -71,10 +72,9 @@ export const Membership: FC<Props> = ({
         <p>
           For more information, contact <EA>ecc@maasu.org</EA>.
         </p>
-      </section>
-      <section>
-        <h4 className="title4 pt5">Members</h4>
-        <ul>
+      </TextBlock>
+      <TextBlock title="Our Members">
+        <ul className="mxa w-30 w-100-s">
           {!isFetchingMembers && !membersError ? (
             filteredMembers.map((member, index) => (
               <li key={index}>
@@ -89,9 +89,8 @@ export const Membership: FC<Props> = ({
             <span>loading...</span>
           )}
         </ul>
-      </section>
-      <section>
-        <h4 className="title4 pt5">Representatives</h4>
+      </TextBlock>
+      <TextBlock title="Representatives">
         <p>{MREP_PRELUDE}</p>
         <ul>
           <li>{MREP_DUTIES_1}</li>
@@ -102,18 +101,15 @@ export const Membership: FC<Props> = ({
         </ul>
         <p>{MREP_STMT_1}</p>
         <p>{MREP_STMT_2}</p>
-      </section>
-      <section>
-        <h4 className="title4 pt5">Eligibility</h4>
+      </TextBlock>
+      <TextBlock title="Eligibility">
         <p>{MEMBERSHIP_ELIGIBILITY_PRELUDE}</p>
         <ul>
           <li>{MEMBERSHIP_ELIGIBILITY_STMT_1}</li>
           <li>{MEMBERSHIP_ELIGIBILITY_STMT_2}</li>
         </ul>
-      </section>
-      <section>
-        <h4 className="title4 pt5">Join</h4>
-
+      </TextBlock>
+      <TextBlock title="Join">
         <form
           className="payment-members"
           action="https://www.paypal.com/cgi-bin/webscr"
@@ -122,7 +118,7 @@ export const Membership: FC<Props> = ({
         >
           <input name="cmd" type="hidden" value="_s-xclick" />
           <input name="hosted_button_id" type="hidden" value="PAC57KL3CTH2A" />
-          <p>MAASU offers three plans for membership:</p>
+          <p>MAASU offers three payment plans for membership:</p>
           <select name="os0">
             <option value="1 Year">1 Year $75.00 USD</option>
             <option value="2 Years">2 Years $140.00 USD</option>
@@ -132,11 +128,11 @@ export const Membership: FC<Props> = ({
           <br />
           <br />
           <button className="ma0" type="submit">
-            checkout with paypal
+            Checkout with Paypal
           </button>
         </form>
-      </section>
-    </div>
+      </TextBlock>
+    </Container>
   )
 }
 

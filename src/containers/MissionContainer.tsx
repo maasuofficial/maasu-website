@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { A } from 'components/Link'
 import {
   MISSION_PRELUDE,
@@ -26,9 +28,8 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('Our Mission')
 
   return (
-    <div className="container py6">
-      <section>
-        <h3 className="mt0 tc fs2 fw700">Our Purpose</h3>
+    <Container>
+      <TextBlock title="Our Purpose">
         <p>{PURPOSE_STMT_1}</p>
         <p>{PURPOSE_STMT_2}</p>
         <img
@@ -37,9 +38,8 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           alt={PURPOSE_IMG_ALT}
         />
         <div className="fsi w-100 w-90-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
-      </section>
-      <section>
-        <h3 className="mt4 tc fs2 fw700">Our Mission</h3>
+      </TextBlock>
+      <TextBlock title="Our Mission">
         <p>{MISSION_PRELUDE}</p>
         <ul>
           <li>{MISSION_STMT_1}</li>
@@ -48,19 +48,17 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
           <li>{MISSION_STMT_4}</li>
           <li>{MISSION_STMT_5}</li>
         </ul>
-      </section>
-      <section>
-        <h3 className="mt4 tc fs2 fw700">Who We Serve</h3>
+      </TextBlock>
+      <TextBlock title="Who We Serve">
         <p>{SERVE_STMT_1}</p>
         <p>{SERVE_STMT_2}</p>
-      </section>
-      <section>
-        <h3 className="mt4 tc fs2 fw700">Strategic Plan</h3>
+      </TextBlock>
+      <TextBlock title="Strategic Plan">
         <p>
-          {STRATEGIC_PLAN}
+          <span>{STRATEGIC_PLAN}</span>
           <A href={STRAT_PLAN_URL}>here</A>.
         </p>
-      </section>
-    </div>
+      </TextBlock>
+    </Container>
   )
 }

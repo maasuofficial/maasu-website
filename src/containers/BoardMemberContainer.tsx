@@ -7,6 +7,8 @@ import { getIsFetchingBoard, getBoard, getBoardError } from 'store/selectors'
 import { fetchBoard } from 'store/actions'
 import { InvalidRoute } from 'routes/InvalidRoute'
 import { EA } from 'components/EmailAnchor'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { BoardMember as BoardMemberType } from 'store/Board/types'
 
 type Props = ReduxProps & {}
@@ -54,24 +56,24 @@ export const BoardMember: FC<Props> = ({
   return isFetchingBoard || (board && !board.length && !boardError) ? (
     <span>loading...</span>
   ) : isValidBoardMember ? (
-    <div className="container pt6 tc">
-      <h4 className="title4">{name}</h4>
+    <Container className="tc">
+      <TextBlock title={name}>
+        {imageUrl && (
+          <Fragment>
+            <img className="w-80 w-40-ns br" src={imageUrl} alt={name} />
+            <br />
+          </Fragment>
+        )}
 
-      {imageUrl && (
-        <Fragment>
-          <img className="w-80 w-40-ns br" src={imageUrl} alt={name} />
-          <br />
-        </Fragment>
-      )}
-
-      <span>{school}</span>
-      <br />
-      <span>{city && state && `${city}, ${state}`}</span>
-      <br />
-      <span>{positionEmail && <EA>{positionEmail}</EA>}</span>
-      <p>{bio}</p>
-      <p className="tl">{positionDesc}</p>
-    </div>
+        <span>{school}</span>
+        <br />
+        <span>{city && state && `${city}, ${state}`}</span>
+        <br />
+        <span>{positionEmail && <EA>{positionEmail}</EA>}</span>
+        <p>{bio}</p>
+        <p className="tl">{positionDesc}</p>
+      </TextBlock>
+    </Container>
   ) : (
     <InvalidRoute code={404} />
   )
