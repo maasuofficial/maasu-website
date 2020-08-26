@@ -4,6 +4,10 @@ import { BoardMemberProfile } from '../BoardMemberProfile'
 
 const member = {
   id: 'test',
+  fname: 'hello',
+  lname: 'world',
+  positionType: 'ECC',
+  positionPriority: 1,
 }
 
 describe('render', () => {

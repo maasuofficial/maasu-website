@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a matching snapshot 1`] = `
+<div
+  className="my4 "
+>
+  <section
+    className=""
+  >
+    <h4
+      className="title4 tc my2"
+    >
+      header
+    </h4>
+    hello
+  </section>
+</div>
+`;
