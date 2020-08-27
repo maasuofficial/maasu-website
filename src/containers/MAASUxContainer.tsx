@@ -1,4 +1,4 @@
-import React, { FC, Fragment, useEffect } from 'react'
+import React, { FC, useEffect } from 'react'
 import { connect, ConnectedProps } from 'react-redux'
 import { EA } from 'components/EmailAnchor'
 import { TextBlock } from 'components/TextBlock'
@@ -12,6 +12,7 @@ import {
   getConferencesError,
 } from 'store/selectors'
 import { MAASUX, MAASUX_STMT, MONTHS } from 'constants/strings'
+import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 
 type Props = RouteComponentProps & ReduxProps & {}
 
@@ -23,6 +24,8 @@ export const MAASUx: FC<Props> = ({
 }) => {
   useDocumentTitle('MAASUx')
 
+  const numConferenceSkeletons = 17
+
   useEffect(() => {
     if (!conferences.length && !conferencesError.length) {
       fetchConferences()
@@ -30,7 +33,7 @@ export const MAASUx: FC<Props> = ({
   }, [conferences, fetchConferences, conferencesError])
 
   return (
-    <Fragment>
+    <SkeletonProvider isLoading={true}>
       <TextBlock title="MAASUx">
         <p>{MAASUX_STMT}</p>
         <p>
@@ -40,9 +43,7 @@ export const MAASUx: FC<Props> = ({
         </p>
       </TextBlock>
       <TextBlock title="Previous MAASUx Hosts">
-        {isFetchingConferences || conferencesError ? (
-          <span>loading...</span>
-        ) : (
+        {!conferencesError && (
           <table className="w-100 mb4">
             <thead>
               <tr>
@@ -52,6 +53,31 @@ export const MAASUx: FC<Props> = ({
               </tr>
             </thead>
             <tbody>
+              {isFetchingConferences &&
+                [...Array(numConferenceSkeletons)].map((_, i) => (
+                  <tr key={i}>
+                    <td>
+                      <SkeletonConsumer
+                        width={120 + Math.random() * 20}
+                        height={20}
+                      />
+                    </td>
+                    <td>
+                      <SkeletonConsumer
+                        width={40 + Math.random() * 300}
+                        height={20}
+                      />
+                    </td>
+                    <td>
+                      <SkeletonConsumer
+                        width={140 + Math.random() * 200}
+                        height={20}
+                        className=""
+                      />
+                    </td>
+                  </tr>
+                ))}
+
               {conferences
                 .filter((c) => c.type === MAASUX.value)
                 .map((c, index) => {
@@ -77,7 +103,7 @@ export const MAASUx: FC<Props> = ({
           </table>
         )}
       </TextBlock>
-    </Fragment>
+    </SkeletonProvider>
   )
 }
 

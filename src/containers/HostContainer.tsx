@@ -12,6 +12,7 @@ import {
   getIsFetchingConferences,
   getConferencesError,
 } from 'store/selectors'
+import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 import {
   HOST_INFO_1,
   HOST_PRELUDE_1,
@@ -91,104 +92,106 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
     .slice(0, NUM_SC_BIDS)
 
   return (
-    <Container>
-      <TextBlock title="MAASU Conferences">
-        <p>{HOST_INFO_1}</p>
-      </TextBlock>
-      <TextBlock title="Hosting a MAASU Conference">
-        <p>{HOST_PRELUDE_1}</p>
-        <ol>
-          <li>
-            <h5 className="title5">{HOST_1}</h5>
-            <p>{HOST_1_STMT}</p>
-            <ol>
-              <li>
-                <span>{HOST_1_1}</span>
-                <ol type="a">
-                  <li>{HOST_1_1_A}</li>
-                </ol>
-              </li>
-              <li>{HOST_1_2}</li>
-              <li>
-                <span>{HOST_1_3}</span>
-                <ol type="a">
-                  <li>{HOST_1_3_A}</li>
-                  <li>{HOST_1_3_B}</li>
-                  <li>{HOST_1_3_C}</li>
-                </ol>
-              </li>
-              <li>
-                <span>{HOST_1_4}</span>
-                <ol type="a">
-                  <li>{HOST_1_4_A}</li>
-                </ol>
-              </li>
-              <li>{HOST_1_5}</li>
-              <li>
-                <span>{HOST_1_6}</span>
-                <ol type="a">
-                  <li>{HOST_1_6_A}</li>
-                  <li>{HOST_1_6_B}</li>
-                  <li>{HOST_1_6_C}</li>
-                </ol>
-              </li>
-              <li>
-                <span>{HOST_1_7}</span>
-                <ol type="a">
-                  <li>{HOST_1_7_A}</li>
-                  <li>{HOST_1_7_B}</li>
-                </ol>
-              </li>
-              <li>{HOST_1_8}</li>
-              <li>
-                <span>{HOST_1_9}</span>
-                <ol type="a">
-                  <li>{HOST_1_9_A}</li>
-                </ol>
-              </li>
-              <li>{HOST_1_10}</li>
-              <li>
-                <span>{HOST_1_11}</span>
-                <ol type="a">
-                  <li>{HOST_1_11_A}</li>
-                  <li>{HOST_1_11_B}</li>
-                  <li>{HOST_1_11_C}</li>
-                </ol>
-              </li>
-              <li>
-                <span>{HOST_1_12}</span>
-                <ol type="a">
-                  <li>{HOST_1_12_A}</li>
-                </ol>
-              </li>
-              <li>{HOST_1_13}</li>
-              <li>
-                <span>{HOST_1_14}</span>
-                <ol type="a">
-                  <li>
-                    <span>{HOST_1_14_A}</span>
-                    <ol>
-                      <li>{HOST_1_14_A_1}</li>
-                      <li>{HOST_1_14_A_2}</li>
-                    </ol>
-                  </li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-          <p>
-            Below are some example bid packets from schools that have hosted
-            conferences in previous years.
-          </p>
-          {isFetchingConferences ? (
-            <span>loading...</span>
-          ) : (
+    <SkeletonProvider isLoading={isFetchingConferences}>
+      <Container>
+        <TextBlock title="MAASU Conferences">
+          <p>{HOST_INFO_1}</p>
+        </TextBlock>
+        <TextBlock title="Hosting a MAASU Conference">
+          <p>{HOST_PRELUDE_1}</p>
+          <ol>
+            <li>
+              <h5 className="title5">{HOST_1}</h5>
+              <p>{HOST_1_STMT}</p>
+              <ol>
+                <li>
+                  <span>{HOST_1_1}</span>
+                  <ol type="a">
+                    <li>{HOST_1_1_A}</li>
+                  </ol>
+                </li>
+                <li>{HOST_1_2}</li>
+                <li>
+                  <span>{HOST_1_3}</span>
+                  <ol type="a">
+                    <li>{HOST_1_3_A}</li>
+                    <li>{HOST_1_3_B}</li>
+                    <li>{HOST_1_3_C}</li>
+                  </ol>
+                </li>
+                <li>
+                  <span>{HOST_1_4}</span>
+                  <ol type="a">
+                    <li>{HOST_1_4_A}</li>
+                  </ol>
+                </li>
+                <li>{HOST_1_5}</li>
+                <li>
+                  <span>{HOST_1_6}</span>
+                  <ol type="a">
+                    <li>{HOST_1_6_A}</li>
+                    <li>{HOST_1_6_B}</li>
+                    <li>{HOST_1_6_C}</li>
+                  </ol>
+                </li>
+                <li>
+                  <span>{HOST_1_7}</span>
+                  <ol type="a">
+                    <li>{HOST_1_7_A}</li>
+                    <li>{HOST_1_7_B}</li>
+                  </ol>
+                </li>
+                <li>{HOST_1_8}</li>
+                <li>
+                  <span>{HOST_1_9}</span>
+                  <ol type="a">
+                    <li>{HOST_1_9_A}</li>
+                  </ol>
+                </li>
+                <li>{HOST_1_10}</li>
+                <li>
+                  <span>{HOST_1_11}</span>
+                  <ol type="a">
+                    <li>{HOST_1_11_A}</li>
+                    <li>{HOST_1_11_B}</li>
+                    <li>{HOST_1_11_C}</li>
+                  </ol>
+                </li>
+                <li>
+                  <span>{HOST_1_12}</span>
+                  <ol type="a">
+                    <li>{HOST_1_12_A}</li>
+                  </ol>
+                </li>
+                <li>{HOST_1_13}</li>
+                <li>
+                  <span>{HOST_1_14}</span>
+                  <ol type="a">
+                    <li>
+                      <span>{HOST_1_14_A}</span>
+                      <ol>
+                        <li>{HOST_1_14_A_1}</li>
+                        <li>{HOST_1_14_A_2}</li>
+                      </ol>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </li>
+            <p>
+              Below are some example bid packets from schools that have hosted
+              conferences in previous years.
+            </p>
             <Fragment>
               <div>
                 <h3 className="title6">
                   Example Bid Packets for a Leadership Summit
                 </h3>
                 <ul>
+                  {[...Array(4)].map((_, i) => (
+                    <SkeletonConsumer width={150} height={18} className="mb1" />
+                  ))}
+                  <SkeletonConsumer width={150} height={18} />
                   {exLSList.map((c, i) => (
                     <li key={i}>
                       <A href={c.bid}>
@@ -203,6 +206,10 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
                   Example Bid Packets for a Spring or Fall Conference
                 </h3>
                 <ul>
+                  {[...Array(4)].map((_, i) => (
+                    <SkeletonConsumer width={150} height={18} className="mb1" />
+                  ))}
+                  <SkeletonConsumer width={150} height={18} />
                   {exSCList.map((c, i) => (
                     <li key={i}>
                       <A href={c.bid}>
@@ -213,19 +220,19 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
                 </ul>
               </div>
             </Fragment>
-          )}
-          <li>
-            <h5 className="title5 mt3">{HOST_2}</h5>
-            <p>{HOST_2_STMT}</p>
-            <p>{HOST_2_CLOSING}</p>
-            <span>
-              To apply for the bidding process, please fill out the{' '}
-              <A href={HOST_FORM}>following form</A>.
-            </span>
-          </li>
-        </ol>
-      </TextBlock>
-    </Container>
+            <li>
+              <h5 className="title5 mt3">{HOST_2}</h5>
+              <p>{HOST_2_STMT}</p>
+              <p>{HOST_2_CLOSING}</p>
+              <span>
+                To apply for the bidding process, please fill out the{' '}
+                <A href={HOST_FORM}>following form</A>.
+              </span>
+            </li>
+          </ol>
+        </TextBlock>
+      </Container>
+    </SkeletonProvider>
   )
 }
 
