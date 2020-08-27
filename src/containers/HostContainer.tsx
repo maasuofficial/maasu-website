@@ -13,6 +13,7 @@ import {
   getConferencesError,
 } from 'store/selectors'
 import {
+  HOST_INFO_1,
   HOST_PRELUDE_1,
   HOST_1,
   HOST_1_STMT,
@@ -91,7 +92,10 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
 
   return (
     <Container>
-      <TextBlock title="Hosting a MAASU conference">
+      <TextBlock title="MAASU Conferences">
+        <p>{HOST_INFO_1}</p>
+      </TextBlock>
+      <TextBlock title="Hosting a MAASU Conference">
         <p>{HOST_PRELUDE_1}</p>
         <ol>
           <li>
