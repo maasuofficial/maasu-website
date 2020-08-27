@@ -135,7 +135,6 @@ const createBoardAppStatus = (endDate?: string): AppStatus => {
 
 const edAppStatus = createBoardAppStatus()
 const dcAppStatus = createBoardAppStatus()
-const eccAppStatus = createBoardAppStatus()
 
 export const ED_APP_ISOPEN = edAppStatus.isOpen
 export const ED_APP_STATUS = `Executive Director ${edAppStatus.status}`
@@ -145,12 +144,14 @@ export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
 
 export const BOA_APP_ISOPEN = true
 export const BOA_APP_STATUS = `
-  Board of Advisors applications are currently open! 
-  Deadline is on a rolling basis.
+Board of Advisors applications are currently open. 
+Deadline is on a rolling basis.
 `
 
-export const ECC_APP_ISOPEN = eccAppStatus.isOpen
-export const ECC_APP_STATUS = `Executive Coordinating Committee ${eccAppStatus.status}`
+export const ECC_APP_ISOPEN = true
+export const ECC_APP_STATUS = `
+Selected positions for the Executive Coordinating Committee are open to application.
+`
 
 // -----------------------------------------------------
 // Members
