@@ -189,7 +189,12 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
                 </h3>
                 <ul>
                   {[...Array(4)].map((_, i) => (
-                    <SkeletonConsumer width={150} height={18} className="mb1" />
+                    <SkeletonConsumer
+                      key={i}
+                      width={150}
+                      height={18}
+                      className="mb1"
+                    />
                   ))}
                   <SkeletonConsumer width={150} height={18} />
                   {exLSList.map((c, i) => (
@@ -207,7 +212,12 @@ export const Host: FC<RouteComponentProps & ReduxProps & Props> = ({
                 </h3>
                 <ul>
                   {[...Array(4)].map((_, i) => (
-                    <SkeletonConsumer width={150} height={18} className="mb1" />
+                    <SkeletonConsumer
+                      key={i}
+                      width={150}
+                      height={18}
+                      className="mb1"
+                    />
                   ))}
                   <SkeletonConsumer width={150} height={18} />
                   {exSCList.map((c, i) => (

@@ -47,6 +47,7 @@ export const Membership: FC<Props> = ({
   const renderSkeletonListItems = () =>
     [...Array(numSkeletonListItems)].map((_, i) => (
       <SkeletonConsumer
+        key={i}
         width={140 + Math.random() * 130}
         height={16}
         className="mb1"
