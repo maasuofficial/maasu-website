@@ -2,6 +2,8 @@ import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import {
   MAA_PURPOSE_PRELUDE,
   MAA_PURPOSE_STMT_1,
@@ -24,9 +26,8 @@ export const AlumniContainer: FC<Props> = () => {
   useDocumentTitle('Alumni')
 
   return (
-    <div className="container py6">
-      <section>
-        <h4 className="title4">The MAASU Alumni Association</h4>
+    <Container>
+      <TextBlock title="The MAASU Alumni Association">
         <p>{MAA_PURPOSE_PRELUDE}</p>
         <ul>
           <li>{MAA_PURPOSE_STMT_1}</li>
@@ -35,9 +36,8 @@ export const AlumniContainer: FC<Props> = () => {
           <li>{MAA_PURPOSE_STMT_4}</li>
           <li>{MAA_PURPOSE_STMT_5}</li>
         </ul>
-      </section>
-      <section>
-        <h4 className="title4">MAA Membership</h4>
+      </TextBlock>
+      <TextBlock title="MAA Membership">
         <p>{MAA_MEMBERSHIP_PRELUDE}</p>
         <ol>
           <li>
@@ -48,14 +48,13 @@ export const AlumniContainer: FC<Props> = () => {
           </li>
         </ol>
         <p>{MAA_MEMBERSHIP_POST}</p>
-      </section>
-      <section>
-        <h4 className="title4">Donation</h4>
+      </TextBlock>
+      <TextBlock title="Donation" className="tc">
         <p>
           If you would like to support the MAASU Alumni Association, consider
           donating <A href={DONATE_MAA_URL}>here</A>.
         </p>
-      </section>
-    </div>
+      </TextBlock>
+    </Container>
   )
 }

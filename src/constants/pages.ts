@@ -135,7 +135,6 @@ const createBoardAppStatus = (endDate?: string): AppStatus => {
 
 const edAppStatus = createBoardAppStatus()
 const dcAppStatus = createBoardAppStatus()
-const eccAppStatus = createBoardAppStatus()
 
 export const ED_APP_ISOPEN = edAppStatus.isOpen
 export const ED_APP_STATUS = `Executive Director ${edAppStatus.status}`
@@ -145,12 +144,14 @@ export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
 
 export const BOA_APP_ISOPEN = true
 export const BOA_APP_STATUS = `
-  Board of Advisors applications are currently open! 
-  Deadline is on a rolling basis.
+Board of Advisors applications are currently open. 
+Deadline is on a rolling basis.
 `
 
-export const ECC_APP_ISOPEN = eccAppStatus.isOpen
-export const ECC_APP_STATUS = `Executive Coordinating Committee ${eccAppStatus.status}`
+export const ECC_APP_ISOPEN = true
+export const ECC_APP_STATUS = `
+Selected positions for the Executive Coordinating Committee are open to application.
+`
 
 // -----------------------------------------------------
 // Members
@@ -323,6 +324,10 @@ experiences.
 // -----------------------------------------------------
 // Host
 // -----------------------------------------------------
+
+export const HOST_INFO_1 = `
+Every fall, MAASU hosts a Leadership Summit, catered to 150-200 students, and every spring, MAASU hosts a Spring Conference, accommodating over 700 attendees. Each conference brings to light the history, challenges, and initiatives that the Asian Pacific Islander Desi American community faces. Each year, these conferences are hosted at different schools, allowing for the students around the Midwest to travel, explore, and gain a further understanding of the resources that their peers have. In addition, each host school showcases the talent of its students and local community through performances, workshops, and keynotes. Each conference closes with a banquet, and the Spring Conference also recognizes particular members in the community.
+`
 
 export const HOST_PRELUDE_1 = `
 Interested in bringing a MAASU conference to your school? Here are

@@ -7,7 +7,10 @@ import { fetchEvents } from 'store/actions'
 import { getIsFetchingEvents, getEvents, getEventsError } from 'store/selectors'
 import { HEvent } from 'store/Events/types'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { HXSTORY_PRELUDE } from 'constants/strings'
+import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 
 type Props = RouteComponentProps & ReduxProps & {}
 
@@ -18,6 +21,25 @@ export const Hxstory: FC<Props> = ({
   eventsError,
 }) => {
   useDocumentTitle('Our Hxstory')
+
+  const numEvents = 9
+  const renderHxstorySkeletonItems = () =>
+    [...Array(numEvents)].map((_, i) => (
+      <div key={i} className="posr df">
+        <div className="posr px1 bg-primary-main" />
+        <div>
+          <SkeletonConsumer width={60} height={26} className="ml5" />
+          <div className="px5 pb5">
+            {[...Array(Math.floor(Math.random() * 2) + 1)].map((_, i) => (
+              <Fragment key={i}>
+                <SkeletonConsumer width={200} height={26} className="my2" />
+                <SkeletonConsumer width={600} height={20} className="my2" />
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+    ))
 
   useEffect(() => {
     if (events && !events.length && !eventsError) {
@@ -36,36 +58,40 @@ export const Hxstory: FC<Props> = ({
   }, {} as HxstoryType)
 
   return (
-    <div className="container pt6">
-      <h4 className="title4">Our Hxstory</h4>
-      <p>{HXSTORY_PRELUDE}</p>
+    <SkeletonProvider isLoading={isFetchingEvents}>
+      <Container>
+        <TextBlock title="Our Hxstory">
+          <p>{HXSTORY_PRELUDE}</p>
 
-      {isFetchingEvents ? (
-        <span>loading...</span>
-      ) : (
-        Object.keys(hxstory)
-          .sort((a, b) => parseInt(b) - parseInt(a))
-          .map((k, i) => (
-            <div key={i} className="posr df">
-              <div className="posr px1 bg-primary-main">
-                <div className="posa pa2 b-0 br l-5 tf-y-50 bg-primary-main c-bg-main">
-                  {k}
+          {isFetchingEvents && renderHxstorySkeletonItems()}
+
+          {isFetchingEvents ? (
+            <span>loading...</span>
+          ) : (
+            Object.keys(hxstory)
+              .sort((a, b) => parseInt(b) - parseInt(a))
+              .map((k, i) => (
+                <div key={i} className="posr df">
+                  <div className="posr px1 bg-primary-main" />
+                  <div>
+                    <div className="px5 fw900 fs1 c-primary-main">{k}</div>
+                    <div className="px5 pb5">
+                      {hxstory[k].map((e, i) => (
+                        <Fragment key={i}>
+                          <h5 className="title5 my2">{e.title}</h5>
+                          <span>{e.university}</span>
+                          <p className="ma0">{e.desc}</p>
+                          {e.cta && <A href={e.cta}>Learn More</A>}
+                        </Fragment>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="pa5">
-                {hxstory[k].map((e, i) => (
-                  <Fragment key={i}>
-                    <h5 className="title5 my2">{e.title}</h5>
-                    <span>{e.university}</span>
-                    <p className="ma0">{e.desc}</p>
-                    {e.cta && <A href={e.cta}>Learn More</A>}
-                  </Fragment>
-                ))}
-              </div>
-            </div>
-          ))
-      )}
-    </div>
+              ))
+          )}
+        </TextBlock>
+      </Container>
+    </SkeletonProvider>
   )
 }
 

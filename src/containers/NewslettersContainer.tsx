@@ -10,6 +10,8 @@ import {
   getNewslettersError,
 } from 'store/selectors'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { MONTHS } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -29,48 +31,49 @@ export const Newsletters: FC<Props> = ({
   }, [fetchNewsletters, newsletters, newslettersError])
 
   return (
-    <div className="container py6">
-      <h4 className="title4 tc">Newsletter</h4>
-      <p className="tc">
-        The MAASU newsletter is a quick way to stay up to date on MAASU news and
-        current issues within the community.
-      </p>
-      <div className="tc">
-        {isFetchingNewsletters ? (
-          <span>loading...</span>
-        ) : (
-          <table className="mxa">
-            <thead>
-              <tr>
-                <th>volume</th>
-                <th>issue</th>
-                <th>newsletter</th>
-              </tr>
-            </thead>
-            <tbody>
-              {newsletters.map((n, i) => {
-                const d = new Date(n.date)
+    <Container className="tc">
+      <TextBlock title="Newsletter">
+        <p>
+          The MAASU newsletter is a quick way to stay up to date on MAASU news
+          and current issues within the community.
+        </p>
+        <div>
+          {isFetchingNewsletters ? (
+            <span>loading...</span>
+          ) : (
+            <table className="mxa">
+              <thead>
+                <tr>
+                  <th>volume</th>
+                  <th>issue</th>
+                  <th>newsletter</th>
+                </tr>
+              </thead>
+              <tbody>
+                {newsletters.map((n, i) => {
+                  const d = new Date(n.date)
 
-                return (
-                  <tr key={i}>
-                    <td>{n.vol}</td>
-                    <td>{n.issue}</td>
-                    <td className="tr">
-                      <A href={n.url}>
-                        {n.title && <span>{n.title} -</span>}
-                        <span>
-                          {MONTHS[d.getMonth()]} {d.getFullYear()}
-                        </span>
-                      </A>
-                    </td>
-                  </tr>
-                )
-              })}
-            </tbody>
-          </table>
-        )}
-      </div>
-    </div>
+                  return (
+                    <tr key={i}>
+                      <td>{n.vol}</td>
+                      <td>{n.issue}</td>
+                      <td className="tr">
+                        <A href={n.url}>
+                          {n.title && <span>{n.title} -</span>}
+                          <span>
+                            {MONTHS[d.getMonth()]} {d.getFullYear()}
+                          </span>
+                        </A>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          )}
+        </div>
+      </TextBlock>
+    </Container>
   )
 }
 

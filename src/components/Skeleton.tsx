@@ -21,7 +21,7 @@ type ConsumerProps = {
 
 export const SkeletonConsumer: FC<ConsumerProps> = ({
   children,
-  className,
+  className = '',
   width,
   height,
 }) => (
@@ -43,5 +43,5 @@ type LoaderProps = {
 }
 
 const Loader: FC<LoaderProps> = ({ className, width, height }) => (
-  <div className={`skeleton ${className}`} style={{ height, width }}></div>
+  <div className={`skeleton ${className}`} style={{ height, width }} />
 )

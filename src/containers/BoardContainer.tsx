@@ -22,6 +22,8 @@ import {
   ED_APP_STATUS,
 } from 'constants/strings'
 import { A } from 'components/Link'
+import { Container } from 'components/Container'
+import { TextBlock } from 'components/TextBlock'
 import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 import { BoardMemberProfile } from 'components/BoardMemberProfile'
 
@@ -40,6 +42,20 @@ export const Board: FC<Props> = ({
       fetchBoard()
     }
   }, [board, fetchBoard, boardError])
+
+  const renderProfileSkeletons = (num: number) =>
+    [...Array(num)].map((_, i) => (
+      <div key={i} className={`${isFetchingBoard ? 'pa2' : ''} tc`}>
+        <SkeletonConsumer width={256} height={256} />
+        <SkeletonConsumer width={120} height={19} className="my1 mxa" />
+        <SkeletonConsumer width={150} height={19} className="my1 mxa" />
+      </div>
+    ))
+
+  const numSkeletonED = 1
+  const numSkeletonECC = 7
+  const numSkeletonDC = 3
+  const numSkeletonBOA = 2
 
   type GroupsType = {
     [key: string]: BoardMember[]
@@ -62,21 +78,19 @@ export const Board: FC<Props> = ({
 
   return (
     <SkeletonProvider isLoading={isFetchingBoard}>
-      <div className="container pt6">
-        <section className="mb4">
-          <h4 className="title4">Executive Board</h4>
+      <Container>
+        <TextBlock title="Executive Board">
           <span>{BOARD_PRELUDE}</span>
-        </section>
+        </TextBlock>
 
         <section>
-          <h5 className="title5">Executive Director</h5>
-          <SkeletonConsumer width={256} height={256}>
-            <div className="df fw-w jc-c">
-              {groups.ED.map((m, i) => (
-                <BoardMemberProfile key={i} member={m} />
-              ))}
-            </div>
-          </SkeletonConsumer>
+          <h5 className="title5 tc my2">Executive Director</h5>
+          <div className="df fw-w jc-c">
+            {groups.ED.map((m, i) => (
+              <BoardMemberProfile key={i} member={m} />
+            ))}
+            {renderProfileSkeletons(numSkeletonED)}
+          </div>
           <p className="my4 tc">
             {ED_APP_STATUS}
             {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
@@ -86,16 +100,13 @@ export const Board: FC<Props> = ({
         <hr className="w-100 my4" />
 
         <section>
-          <h5 className="title5">Executive Coordinating Committee</h5>
-          {isFetchingBoard ? (
-            <span>loading...</span>
-          ) : (
-            <div className="df fw-w jc-c">
-              {groups.ECC.map((m, i) => (
-                <BoardMemberProfile key={i} member={m} />
-              ))}
-            </div>
-          )}
+          <h5 className="title5 tc my2">Executive Coordinating Committee</h5>
+          <div className="df fw-w jc-c">
+            {groups.ECC.map((m, i) => (
+              <BoardMemberProfile key={i} member={m} />
+            ))}
+            {renderProfileSkeletons(numSkeletonECC)}
+          </div>
           <p className="my4 tc">
             {ECC_APP_STATUS}
             {ECC_APP_ISOPEN ? <A href={ECC_APP_LINK}>Apply here.</A> : null}
@@ -105,16 +116,13 @@ export const Board: FC<Props> = ({
         <hr className="w-100 my4" />
 
         <section>
-          <h5 className="title5">Directors Council</h5>
-          {isFetchingBoard ? (
-            <span>loading...</span>
-          ) : (
-            <div className="df fw-w jc-c">
-              {groups.DC.map((m, i) => (
-                <BoardMemberProfile key={i} member={m} />
-              ))}
-            </div>
-          )}
+          <h5 className="title5 tc my2">Directors Council</h5>
+          <div className="df fw-w jc-c">
+            {renderProfileSkeletons(numSkeletonDC)}
+            {groups.DC.map((m, i) => (
+              <BoardMemberProfile key={i} member={m} />
+            ))}
+          </div>
           <p className="my4 tc">
             {DC_APP_STATUS}
             {DC_APP_ISOPEN ? <A href={DC_APP_LINK}>Apply here.</A> : null}
@@ -124,22 +132,19 @@ export const Board: FC<Props> = ({
         <hr className="w-100 my4" />
 
         <section>
-          <h5 className="title5">Board Of Advisors</h5>
-          {isFetchingBoard ? (
-            <span>loading...</span>
-          ) : (
-            <div className="df fw-w jc-c">
-              {groups.BOA.map((m, i) => (
-                <BoardMemberProfile key={i} member={m} />
-              ))}
-            </div>
-          )}
+          <h5 className="title5 tc my4">Board Of Advisors</h5>
+          <div className="df fw-w jc-c">
+            {renderProfileSkeletons(numSkeletonBOA)}
+            {groups.BOA.map((m, i) => (
+              <BoardMemberProfile key={i} member={m} />
+            ))}
+          </div>
           <p className="my4 tc">
             {BOA_APP_STATUS}
             {BOA_APP_ISOPEN ? <A href={BOA_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
-      </div>
+      </Container>
     </SkeletonProvider>
   )
 }
