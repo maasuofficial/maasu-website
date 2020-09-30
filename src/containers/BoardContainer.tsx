@@ -84,22 +84,6 @@ export const Board: FC<Props> = ({
         </TextBlock>
 
         <section>
-          <h5 className="title5 tc my2">Executive Director</h5>
-          <div className="df fw-w jc-c">
-            {groups.ED.map((m, i) => (
-              <BoardMemberProfile key={i} member={m} />
-            ))}
-            {renderProfileSkeletons(numSkeletonED)}
-          </div>
-          <p className="my4 tc">
-            {ED_APP_STATUS}
-            {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
-          </p>
-        </section>
-
-        <hr className="w-100 my4" />
-
-        <section>
           <h5 className="title5 tc my2">Executive Coordinating Committee</h5>
           <div className="df fw-w jc-c">
             {groups.ECC.map((m, i) => (
@@ -126,6 +110,22 @@ export const Board: FC<Props> = ({
           <p className="my4 tc">
             {DC_APP_STATUS}
             {DC_APP_ISOPEN ? <A href={DC_APP_LINK}>Apply here.</A> : null}
+          </p>
+        </section>
+
+        <hr className="w-100 my4" />
+
+        <section>
+          <h5 className="title5 tc my2">Executive Director</h5>
+          <div className="df fw-w jc-c">
+            {groups.ED.map((m, i) => (
+              <BoardMemberProfile key={i} member={m} />
+            ))}
+            {renderProfileSkeletons(numSkeletonED)}
+          </div>
+          <p className="my4 tc">
+            {ED_APP_STATUS}
+            {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
 
