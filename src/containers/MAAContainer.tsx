@@ -1,8 +1,15 @@
 import React, { FC, useState } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
+import { MAADirectoryComponent } from 'components/MAADirectoryComponent'
+import { MAALoginComponent } from 'components/MAALoginComponent'
 
 interface Props {}
+
+export type MAAComponentProps = {
+  // TODO
+  auth: string
+}
 
 export const MAAContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('MAASU Alumni Association')
@@ -11,20 +18,22 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
 
   const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-
     setUser(true)
   }
 
+  const componentProps = {
+    auth: 'TODO future props',
+  }
+
   const isAuthenticated = user
-  return isAuthenticated ? (
-    <div>MAA Portal!</div>
-  ) : (
+
+  return (
     <div className="container">
-      <form method="POST" onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button>Log In</button>
-      </form>
+      {!isAuthenticated ? (
+        <MAALoginComponent {...componentProps} handleLogin={handleLogin} />
+      ) : (
+        <MAADirectoryComponent {...componentProps} />
+      )}
     </div>
   )
 }
