@@ -5,13 +5,9 @@ import { MAAComponentProps } from 'containers/MAAContainer'
 
 type Props = RouteComponentProps & MAAComponentProps & {}
 
-export const MAADirectoryComponent: FC<Props> = ({ auth }) => {
+export const MAAProfileComponent: FC<Props> = () => {
+  // TODO name
   useDocumentTitle('MAASU Alumni Association')
 
-  return (
-    <div>
-      <h2>{auth}</h2>
-      <span>insert directory here</span>
-    </div>
-  )
+  return <div>profile</div>
 }
