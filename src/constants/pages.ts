@@ -148,9 +148,9 @@ Board of Advisors applications are currently open.
 Deadline is on a rolling basis.
 `
 
-export const ECC_APP_ISOPEN = true
+export const ECC_APP_ISOPEN = false
 export const ECC_APP_STATUS = `
-Selected positions for the Executive Coordinating Committee are open to application.
+Executive Coordinating Committee applications are currently closed.
 `
 
 // -----------------------------------------------------

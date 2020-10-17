@@ -1,46 +1,64 @@
-import React, { FC } from 'react'
-/* import React, { FC, useState } from 'react' */
+import React, { FC, useState } from 'react'
 import { Router, RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { MAADirectoryComponent } from 'components/MAADirectoryComponent'
-import { MAAProfileComponent } from 'components/MAAProfileComponent'
 import { MAALoginComponent } from 'components/MAALoginComponent'
+import { Container } from 'components/Container'
+import firebase from 'store/firebase'
 
-interface Props {}
+const auth = firebase.auth()
+
+export type LoginAuth = {
+  email: string
+  password: string
+}
+
+export type User = {
+  id: string | null
+}
+
+type Props = {}
 
 export type MAAComponentProps = {
-  // TODO
-  auth?: string
+  user: User
+  rootUrl: string
 }
 
 export const MAAContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('MAASU Alumni Association')
 
-  /* const [user, setUser] = useState<boolean>(false) */
+  const [user] = useState<User>({ id: null })
 
-  /* const handleLogin = (e: React.FormEvent<HTMLFormElement>) => { */
-  /*   e.preventDefault() */
-  /*   setUser(true) */
-  /* } */
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      // user signed in
+    } else {
+      // user not signed in
+    }
+  })
 
-  const componentProps = {
-    auth: 'TODO future props',
+  const attemptLogin = (loginAuth: LoginAuth) => {
+    /* const { email, password } = loginAuth */
   }
 
-  /* const isAuthenticated = user */
+  const componentProps = {
+    user,
+    rootUrl: '/maa',
+  }
 
   return (
-    <div className="container">
+    <Container>
       <Router>
+        {/* login */}
         <MAALoginComponent
           path="/login"
           {...componentProps}
-          // handleLogin={handleLogin}
-          handleLogin={() => {}}
+          attemptLogin={attemptLogin}
         />
+
+        {/* directory */}
         <MAADirectoryComponent default {...componentProps} />
-        <MAAProfileComponent path="/profile" {...componentProps} />
       </Router>
-    </div>
+    </Container>
   )
 }
