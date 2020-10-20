@@ -44,6 +44,10 @@ input,
 textarea {
   @extend .db;
   @extend .mxa;
+
+  @extend .bg-bg-main;
+  @extend .c-text-main;
+  @extend .border;
 }
 
 button {

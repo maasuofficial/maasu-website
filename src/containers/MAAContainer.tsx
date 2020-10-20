@@ -1,30 +1,64 @@
 import React, { FC, useState } from 'react'
-import { RouteComponentProps } from '@reach/router'
+import { Router, RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
+import { MAADirectoryComponent } from 'components/MAADirectoryComponent'
+import { MAALoginComponent } from 'components/MAALoginComponent'
+import { Container } from 'components/Container'
+import firebase from 'store/firebase'
 
-interface Props {}
+const auth = firebase.auth()
+
+export type LoginAuth = {
+  email: string
+  password: string
+}
+
+export type User = {
+  id: string | null
+}
+
+type Props = {}
+
+export type MAAComponentProps = {
+  user: User
+  rootUrl: string
+}
 
 export const MAAContainer: FC<RouteComponentProps & Props> = () => {
   useDocumentTitle('MAASU Alumni Association')
 
-  const [user, setUser] = useState<boolean>(false)
+  const [user] = useState<User>({ id: null })
 
-  const handleLogin = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      // user signed in
+    } else {
+      // user not signed in
+    }
+  })
 
-    setUser(true)
+  const attemptLogin = (loginAuth: LoginAuth) => {
+    /* const { email, password } = loginAuth */
   }
 
-  const isAuthenticated = user
-  return isAuthenticated ? (
-    <div>MAA Portal!</div>
-  ) : (
-    <div className="container">
-      <form method="POST" onSubmit={handleLogin}>
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <button>Log In</button>
-      </form>
-    </div>
+  const componentProps = {
+    user,
+    rootUrl: '/maa',
+  }
+
+  return (
+    <Container>
+      <Router>
+        {/* login */}
+        <MAALoginComponent
+          path="/login"
+          {...componentProps}
+          attemptLogin={attemptLogin}
+        />
+
+        {/* directory */}
+        <MAADirectoryComponent default {...componentProps} />
+      </Router>
+    </Container>
   )
 }

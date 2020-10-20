@@ -62,7 +62,7 @@ export const Routes = () => {
 
         <PrivateRoute
           isAuthorized={false}
-          path="/maa"
+          path="/maa/*"
           component={MAAContainer}
         />
 
