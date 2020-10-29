@@ -121,7 +121,7 @@ const createBoardAppStatus = (endDate?: string): AppStatus => {
   const isOpen = Boolean(endDate)
   return {
     isOpen,
-    status: `Applications ${
+    status: `applications ${
       isOpen
         ? `for the ${UPCOMING_ACADEMIC_YEAR} 
         academic year are open! Applications 
@@ -142,10 +142,9 @@ export const ED_APP_STATUS = `Executive Director ${edAppStatus.status}`
 export const DC_APP_ISOPEN = dcAppStatus.isOpen
 export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
 
-export const BOA_APP_ISOPEN = true
+export const BOA_APP_ISOPEN = false
 export const BOA_APP_STATUS = `
-Board of Advisors applications are currently open. 
-Deadline is on a rolling basis.
+Board of Advisors applications are currently closed.
 `
 
 export const ECC_APP_ISOPEN = false
