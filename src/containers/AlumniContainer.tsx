@@ -5,6 +5,8 @@ import { A } from 'components/Link'
 import { Container } from 'components/Container'
 import { TextBlock } from 'components/TextBlock'
 import {
+  MAA_LOGO_IMG,
+  MAA_LOGO_IMG_ALT,
   MAA_PURPOSE_PRELUDE,
   MAA_PURPOSE_STMT_1,
   MAA_PURPOSE_STMT_2,
@@ -28,6 +30,11 @@ export const AlumniContainer: FC<Props> = () => {
   return (
     <Container>
       <TextBlock title="The MAASU Alumni Association">
+        <img
+          className="db w-100 w-80-ns mxa"
+          src={MAA_LOGO_IMG}
+          alt={MAA_LOGO_IMG_ALT}
+        />
         <p>{MAA_PURPOSE_PRELUDE}</p>
         <ul>
           <li>{MAA_PURPOSE_STMT_1}</li>

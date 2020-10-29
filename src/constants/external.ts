@@ -60,10 +60,22 @@ https://docs.google.com/forms/d/e/1FAIpQLSfUsKp2kqs64fW6reA13IuN1ppAbmssytsKeDhy
 // Alumni
 // -----------------------------------------------------
 
+export const MAA_LOGO_IMG = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAlumni%2Fmaa.png?alt=media&token=4a95987b-0377-46d6-8740-12d8f58aee8b
+`
+
 export const MAA_ALUMNI_DIR_FORM = `
 https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1
 `
 
 export const MAA_MEMBERSHIP_FEE_URL = `
 https://www.paypal.com/cgi-bin/webscr&cmd=_s-xclick&hosted_button_id=NXTRNY49H77YQ
+`
+
+// -----------------------------------------------------
+// Annual
+// -----------------------------------------------------
+
+export const ANNUAL_REPORT_IMG = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAnnual%2FannualReport.jpg?alt=media&token=56006814-21b4-4497-ad94-be2a35008dbe
 `

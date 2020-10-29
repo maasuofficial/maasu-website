@@ -56,15 +56,17 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         <p>{SERVE_STMT_2}</p>
       </TextBlock>
       <TextBlock title="Strategic Plan">
-        <img
-          className="db w-80 mxa"
-          src={STRATEGIC_PLAN_IMG}
-          alt={STRATEGIC_PLAN_IMG_ALT}
-        />
         <p>
           <span>{STRATEGIC_PLAN}</span>
           <A href={STRATEGIC_PLAN_URL}>here</A>.
         </p>
+        <A href={STRATEGIC_PLAN_URL}>
+          <img
+            className="db w-80 mxa"
+            src={STRATEGIC_PLAN_IMG}
+            alt={STRATEGIC_PLAN_IMG_ALT}
+          />
+        </A>
       </TextBlock>
     </Container>
   )
