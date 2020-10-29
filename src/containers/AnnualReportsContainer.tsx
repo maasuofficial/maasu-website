@@ -12,6 +12,7 @@ import { A } from 'components/Link'
 import { Container } from 'components/Container'
 import { TextBlock } from 'components/TextBlock'
 import { useDocumentTitle } from 'hooks/meta'
+import { ANNUAL_REPORT_IMG, ANNUAL_REPORT_IMG_ALT } from 'constants/strings'
 
 type Props = RouteComponentProps & ReduxProps & {}
 
@@ -37,6 +38,11 @@ export const AnnualReports: FC<Props> = ({
           distinctions, and news for the given year. Below are the previous
           reports.
         </p>
+        {!isFetchingReports && (
+          <a href={reports && reports[0] && reports[0].url}>
+            <img src={ANNUAL_REPORT_IMG} alt={ANNUAL_REPORT_IMG_ALT} />
+          </a>
+        )}
         <div>
           {isFetchingReports ? (
             <span>loading...</span>

@@ -49,15 +49,13 @@ export const Awards: FC<Props> = ({
             </tr>
           </thead>
           <tbody>
-            {awards
-              .filter((a) => a.type === 'BOA')
-              .map((a, i) => (
-                <tr key={i}>
-                  <td>{a.recipient}</td>
-                  <td>{a.school}</td>
-                  <td>{new Date(a.date).getFullYear()}</td>
-                </tr>
-              ))}
+            {awards.map((a, i) => (
+              <tr key={i}>
+                <td>{a.recipient}</td>
+                <td>{a.school}</td>
+                <td>{new Date(a.date).getFullYear()}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </Block>

@@ -96,7 +96,11 @@ export const STRATEGIC_PLAN_YEARS = '2020-2024'
 export const STRATEGIC_PLAN = `
 MAASU strives to recognize the needs of its community by developing
 a strategic plan for the next few years. See our strategic plan for
-${STRATEGIC_PLAN_YEARS}            
+${STRATEGIC_PLAN_YEARS}
+`
+
+export const STRATEGIC_PLAN_IMG_ALT = `
+A preview of the strategic plan.
 `
 
 // -----------------------------------------------------
@@ -121,7 +125,7 @@ const createBoardAppStatus = (endDate?: string): AppStatus => {
   const isOpen = Boolean(endDate)
   return {
     isOpen,
-    status: `Applications ${
+    status: `applications ${
       isOpen
         ? `for the ${UPCOMING_ACADEMIC_YEAR} 
         academic year are open! Applications 
@@ -142,10 +146,9 @@ export const ED_APP_STATUS = `Executive Director ${edAppStatus.status}`
 export const DC_APP_ISOPEN = dcAppStatus.isOpen
 export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
 
-export const BOA_APP_ISOPEN = true
+export const BOA_APP_ISOPEN = false
 export const BOA_APP_STATUS = `
-Board of Advisors applications are currently open. 
-Deadline is on a rolling basis.
+Board of Advisors applications are currently closed.
 `
 
 export const ECC_APP_ISOPEN = false
@@ -490,6 +493,10 @@ in cultivating the next generation of leaders.
 // Alumni
 // -----------------------------------------------------
 
+export const MAA_LOGO_IMG_ALT = `
+The MAASU Alumni Association
+`
+
 export const MAA_PURPOSE_PRELUDE = `
 The MAASU Alumni Association (MAA) is a group for all MAASU alumni.
 MAA’s purpose is to continue building and sustaining lifelong
@@ -511,7 +518,7 @@ export const MAA_PURPOSE_STMT_4 = `
 Recognize alumni for various accomplishments and service
 `
 export const MAA_PURPOSE_STMT_5 = `
-Potential student travel scholarships to attend MAASU Conferences
+Providing student travel stipends to attend MAASU Conferences
 `
 
 export const MAA_MEMBERSHIP_FEE = 30
@@ -534,4 +541,12 @@ $${MAA_MEMBERSHIP_FEE} USD
 export const MAA_MEMBERSHIP_POST = `
 After completing these steps, access to the Alumni Directory
 will be granted and a MAA wine glass will be mailed to you.
+`
+
+// -----------------------------------------------------
+// Annual
+// -----------------------------------------------------
+
+export const ANNUAL_REPORT_IMG_ALT = `
+A preview of the latest annual report.
 `
