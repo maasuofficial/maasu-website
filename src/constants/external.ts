@@ -2,7 +2,11 @@
 // Mission
 // -----------------------------------------------------
 
-export const STRAT_PLAN_URL = `
+export const STRATEGIC_PLAN_IMG = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FMission%2FstrategicPlan.jpg?alt=media&token=df8227b7-492e-41b1-ac0f-06f9d8e668bd
+`
+
+export const STRATEGIC_PLAN_URL = `
 https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Plans%2F20-24.pdf?alt=media&token=0cc19265-ce1d-41ed-a6e5-1d03b9271563
 `
 

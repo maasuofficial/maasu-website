@@ -96,7 +96,11 @@ export const STRATEGIC_PLAN_YEARS = '2020-2024'
 export const STRATEGIC_PLAN = `
 MAASU strives to recognize the needs of its community by developing
 a strategic plan for the next few years. See our strategic plan for
-${STRATEGIC_PLAN_YEARS}            
+${STRATEGIC_PLAN_YEARS}
+`
+
+export const STRATEGIC_PLAN_IMG_ALT = `
+A preview of the strategic plan.
 `
 
 // -----------------------------------------------------

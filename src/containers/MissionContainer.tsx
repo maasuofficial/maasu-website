@@ -17,9 +17,11 @@ import {
   PURPOSE_IMG_CAPTION,
   SERVE_STMT_1,
   SERVE_STMT_2,
-  STRATEGIC_PLAN,
   MISSION_FIRST_MEETING,
-  STRAT_PLAN_URL,
+  STRATEGIC_PLAN,
+  STRATEGIC_PLAN_IMG,
+  STRATEGIC_PLAN_IMG_ALT,
+  STRATEGIC_PLAN_URL,
 } from 'constants/strings'
 
 interface Props {}
@@ -54,9 +56,14 @@ export const MissionContainer: FC<RouteComponentProps & Props> = () => {
         <p>{SERVE_STMT_2}</p>
       </TextBlock>
       <TextBlock title="Strategic Plan">
+        <img
+          className="db w-80 mxa"
+          src={STRATEGIC_PLAN_IMG}
+          alt={STRATEGIC_PLAN_IMG_ALT}
+        />
         <p>
           <span>{STRATEGIC_PLAN}</span>
-          <A href={STRAT_PLAN_URL}>here</A>.
+          <A href={STRATEGIC_PLAN_URL}>here</A>.
         </p>
       </TextBlock>
     </Container>
