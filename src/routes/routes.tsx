@@ -49,6 +49,7 @@ export const Routes = () => {
         <HxstoryContainer path="/history" />
 
         <HostContainer path="/host" />
+        <ConferencesContainer path="/conferences" />
 
         <ProgramContainer path="/programs">
           <MAASUxContainer path="/maasux" />
@@ -68,7 +69,6 @@ export const Routes = () => {
 
         <AnnualReportsContainer path="/annual" />
         <NewslettersContainer path="/newsletter" />
-        <ConferencesContainer path="/conferences" />
 
         <DonateContainer path="/donate" />
         <DonateCompleteContainer path="/donate-complete" />

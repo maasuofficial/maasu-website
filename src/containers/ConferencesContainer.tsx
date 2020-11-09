@@ -31,7 +31,7 @@ export const Conferences: FC<Props> = ({
 
   return (
     <Container>
-      <TextBlock title="Conferences">
+      <TextBlock title="Past Conferences">
         <p className="tc">
           Below is a summary of all conferences that MAASU has aided in hosting
           or organizing.
@@ -46,7 +46,7 @@ export const Conferences: FC<Props> = ({
                 <tr>
                   <th>Date</th>
                   <th>Type</th>
-                  <th>Conference Title</th>
+                  <th>Theme</th>
                   <th>Location</th>
                 </tr>
               </thead>
