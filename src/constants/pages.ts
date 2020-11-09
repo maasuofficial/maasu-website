@@ -308,20 +308,12 @@ The application is now closed.
 // Awards
 // -----------------------------------------------------
 
-export const MAASUX_STMT = `
-MAASUx is a locally-hosted conference event designed to create 
-additional opportunities to engage in community building. MAASUx 
-promotes accessibility to educational resources by bringing the 
-MAASU experience to you. MAASUx is coordinated with a hosting 
-organization on campus, creating leadership opportunities to 
-engage students on the campus to create an interactive curriculum. 
-It is a free event for participants, designed to attract college 
-students from surrounding campuses to participate in a series of 
-short, carefully tailored workshops and social activities. Through 
-the more intimate setting of MAASUx events, students can engage in 
-creating high-quality connections with their peers and have the 
-opportunity to reflect on their intersecting identities and 
-experiences.
+export const MAASUX_STMT_1 = `
+MAASUx is a regional event, coordinated in collaboration with a campus host organization, designed to create additional opportunities to engage the midwest APIDA student community. MAASUx is a free event designed to attract college students from surrounding campuses to participate in educational workshops and fun activities. Through the more intimate setting of MAASUx programs, students can engage in creating high-quality connections with their peers and have the opportunity to reflect on their intersecting identities and experiences. These events are normally attended by 50-100 students.
+`
+
+export const MAASUX_STMT_2 = `
+MAASUx was initially launched in 2010 as MAASU Mixers before changing its name in summer 2016. Each MAASUx event began having a programming theme in 2017.
 `
 
 // -----------------------------------------------------
