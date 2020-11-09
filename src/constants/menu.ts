@@ -6,7 +6,10 @@ export const MENU = {
     'directors council': '/dc',
     'our hxstory': '/hxstory',
   },
-  conferences: { 'host a conference': '/host' },
+  conferences: {
+    'host a conference': '/host',
+    'past conferences': '/conferences',
+  },
   programs: {
     maasux: '/programs/maasux',
     'where are you from?': '/programs/whereareyoufrom',
@@ -19,7 +22,6 @@ export const MENU = {
   archives: {
     'annual report': '/annual',
     newsletter: '/newsletter',
-    conferences: '/conferences',
   },
   'contact us': '/contact',
   donate: '/donate',

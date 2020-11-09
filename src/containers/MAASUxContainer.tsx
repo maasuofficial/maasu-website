@@ -11,7 +11,7 @@ import {
   getConferences,
   getConferencesError,
 } from 'store/selectors'
-import { MAASUX, MAASUX_STMT, MONTHS } from 'constants/strings'
+import { MAASUX, MAASUX_STMT_1, MAASUX_STMT_2, MONTHS } from 'constants/strings'
 import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
 
 type Props = RouteComponentProps & ReduxProps & {}
@@ -35,11 +35,11 @@ export const MAASUx: FC<Props> = ({
   return (
     <SkeletonProvider isLoading={true}>
       <TextBlock title="MAASUx">
-        <p>{MAASUX_STMT}</p>
+        <p>{MAASUX_STMT_1}</p>
+        <p>{MAASUX_STMT_2}</p>
         <p>
           If your school is interested in hosting a MAASUx, please contact our
-          programming chair for more information at{' '}
-          <EA>programming@maasu.org</EA>.
+          MAASU Programming Chairs at <EA>programming@maasu.org</EA>.
         </p>
       </TextBlock>
       <TextBlock title="Previous MAASUx Hosts">
@@ -48,7 +48,7 @@ export const MAASUx: FC<Props> = ({
             <thead>
               <tr>
                 <th>Date</th>
-                <th>Conference Title</th>
+                <th>Theme</th>
                 <th>Location</th>
               </tr>
             </thead>
