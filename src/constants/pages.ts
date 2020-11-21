@@ -137,18 +137,20 @@ const createBoardAppStatus = (endDate?: string): AppStatus => {
 
 // insert dates as needed
 
-const edAppStatus = createBoardAppStatus()
 const dcAppStatus = createBoardAppStatus()
 
-export const ED_APP_ISOPEN = edAppStatus.isOpen
-export const ED_APP_STATUS = `Executive Director ${edAppStatus.status}`
+export const ED_APP_ISOPEN = true
+export const ED_APP_STATUS = `
+Executive Director applications are currently open! Applications close Sunday, December 6th.
+`
 
 export const DC_APP_ISOPEN = dcAppStatus.isOpen
 export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
 
-export const BOA_APP_ISOPEN = false
+export const BOA_APP_ISOPEN = true
 export const BOA_APP_STATUS = `
-Board of Advisors applications are currently closed.
+Board of Advisors applications are currently open.
+Deadline is on a rolling basis.
 `
 
 export const ECC_APP_ISOPEN = false
