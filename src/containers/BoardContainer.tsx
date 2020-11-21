@@ -124,7 +124,7 @@ export const Board: FC<Props> = ({
             {renderProfileSkeletons(numSkeletonED)}
           </div>
           <p className="my4 tc">
-            {ED_APP_STATUS}
+            {ED_APP_STATUS}{' '}
             {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
@@ -140,7 +140,7 @@ export const Board: FC<Props> = ({
             ))}
           </div>
           <p className="my4 tc">
-            {BOA_APP_STATUS}
+            {BOA_APP_STATUS}{' '}
             {BOA_APP_ISOPEN ? <A href={BOA_APP_LINK}>Apply here.</A> : null}
           </p>
         </section>
