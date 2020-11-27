@@ -1,4 +1,12 @@
 // -----------------------------------------------------
+// Home
+// -----------------------------------------------------
+
+export const HERO_BANNER_IMG = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FHome%2FheroBanner.png?alt=media&token=cd4a3aee-4b6c-467e-8d41-3f3473c13309
+`
+
+// -----------------------------------------------------
 // Mission
 // -----------------------------------------------------
 
