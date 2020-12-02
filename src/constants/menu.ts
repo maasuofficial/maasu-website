@@ -7,6 +7,7 @@ export const MENU = {
     'our hxstory': '/hxstory',
   },
   conferences: {
+    'our conferences': '/conference-info',
     'host a conference': '/host',
     'past conferences': '/conferences',
   },

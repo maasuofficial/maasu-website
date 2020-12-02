@@ -9,6 +9,7 @@ import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
+import { ConferenceInfoComponent } from 'components/ConferenceInfoComponent'
 import { ContactContainer } from 'containers/ContactContainer'
 import { DirectorsCouncilContainer } from 'containers/DirectorsCouncilContainer'
 import {
@@ -48,6 +49,7 @@ export const Routes = () => {
         <HxstoryContainer path="/hxstory" />
         <HxstoryContainer path="/history" />
 
+        <ConferenceInfoComponent path="/conference-info" />
         <HostContainer path="/host" />
         <ConferencesContainer path="/conferences" />
 
