@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react'
-import { RouteComponentProps } from '@reach/router'
+import { Redirect, RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from 'hooks/meta'
 import { LoginAuth, MAAComponentProps } from 'containers/MAAContainer'
 
@@ -8,7 +8,11 @@ type Props = RouteComponentProps &
     attemptLogin: (loginAuth: LoginAuth) => void
   }
 
-export const MAALoginComponent: FC<Props> = ({ attemptLogin }) => {
+export const MAALoginComponent: FC<Props> = ({
+  attemptLogin,
+  user,
+  rootUrl,
+}) => {
   useDocumentTitle('MAASU Alumni Association')
 
   const [loginAuth, setLoginAuth] = useState<LoginAuth>({
@@ -21,12 +25,16 @@ export const MAALoginComponent: FC<Props> = ({ attemptLogin }) => {
     setLoginAuth({ ...loginAuth, [name]: value })
   }
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     attemptLogin(loginAuth)
   }
 
-  return (
+  const isLoginDisabled = !loginAuth.email || !loginAuth.password
+
+  return user ? (
+    <Redirect noThrow to={rootUrl} />
+  ) : (
     <form method="POST" onSubmit={handleSubmit}>
       <input
         name="email"
@@ -42,7 +50,9 @@ export const MAALoginComponent: FC<Props> = ({ attemptLogin }) => {
         value={loginAuth.password}
         onChange={handleLoginAuthChange}
       />
-      <button>Log In</button>
+      {/* TODO disable on login attempt */}
+      <button disabled={isLoginDisabled}>Log In</button>
+      {/* TODO display error on invalid login */}
     </form>
   )
 }

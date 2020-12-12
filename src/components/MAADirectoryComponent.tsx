@@ -5,15 +5,20 @@ import { MAAComponentProps } from 'containers/MAAContainer'
 
 type Props = RouteComponentProps & MAAComponentProps & {}
 
-export const MAADirectoryComponent: FC<Props> = ({ user, rootUrl }) => {
+export const MAADirectoryComponent: FC<Props> = ({ auth, user, rootUrl }) => {
   useDocumentTitle('MAASU Alumni Association')
 
-  return !user.id ? (
+  const handleSignOut = () => {
+    auth.signOut()
+  }
+
+  return !user ? (
     <Redirect noThrow to={`${rootUrl}/login`} />
   ) : (
     <div>
-      <h2>user is {JSON.stringify(user)}</h2>
+      <h2>user id={user.uid}</h2>
       <span>insert directory here</span>
+      <button onClick={handleSignOut}>(temporary) sign out</button>
     </div>
   )
 }
