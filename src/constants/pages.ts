@@ -139,9 +139,12 @@ const createBoardAppStatus = (endDate?: string): AppStatus => {
 
 const dcAppStatus = createBoardAppStatus()
 
-export const ED_APP_ISOPEN = true
-export const ED_APP_STATUS = `
+export const ED_APP_ISOPEN = false
+export const ED_APP_STATUS_OPEN = `
 Executive Director applications are currently open! Applications close Sunday, December 6th.
+`
+export const ED_APP_STATUS_CLOSED = `
+Executive Director applications are currently closed.
 `
 
 export const DC_APP_ISOPEN = dcAppStatus.isOpen
