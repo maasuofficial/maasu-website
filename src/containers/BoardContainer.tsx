@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from 'react'
+import React, { FC, Fragment, useEffect } from 'react'
 import { RouteComponentProps } from '@reach/router'
 import { connect, ConnectedProps } from 'react-redux'
 import { AppState } from 'store/types'
@@ -19,7 +19,8 @@ import {
   ECC_APP_STATUS,
   ED_APP_LINK,
   ED_APP_ISOPEN,
-  ED_APP_STATUS,
+  ED_APP_STATUS_OPEN,
+  ED_APP_STATUS_CLOSED,
 } from 'constants/strings'
 import { A } from 'components/Link'
 import { Container } from 'components/Container'
@@ -124,8 +125,14 @@ export const Board: FC<Props> = ({
             {renderProfileSkeletons(numSkeletonED)}
           </div>
           <p className="my4 tc">
-            {ED_APP_STATUS}{' '}
-            {ED_APP_ISOPEN ? <A href={ED_APP_LINK}>Apply here.</A> : null}
+            {ED_APP_ISOPEN ? (
+              <Fragment>
+                {ED_APP_STATUS_OPEN}
+                <A href={ED_APP_LINK}>Apply here.</A>
+              </Fragment>
+            ) : (
+              ED_APP_STATUS_CLOSED
+            )}
           </p>
         </section>
 
