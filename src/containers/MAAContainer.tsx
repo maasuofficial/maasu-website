@@ -5,8 +5,10 @@ import { MAADirectoryComponent } from 'components/MAADirectoryComponent'
 import { MAALoginComponent } from 'components/MAALoginComponent'
 import { Container } from 'components/Container'
 import firebase from 'store/firebase'
+import { Alumni } from 'store/types'
 
 const auth = firebase.auth()
+const db = firebase.firestore()
 
 export type LoginAuth = {
   email: string
@@ -26,6 +28,7 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
 
   const [user, setUser] = useState(() => auth.currentUser)
   const [isLoading, setIsLoading] = useState(true)
+  const [alumni, setAlumni] = useState<Alumni[]>([])
 
   const componentProps = {
     auth,
@@ -54,6 +57,19 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
     auth.signInWithEmailAndPassword(email, password)
   }
 
+  const handleGetData = () => {
+    db.collection('alumni')
+      .get()
+      .then((snapshot) => {
+        const alumniArr: Alumni[] = []
+        snapshot.forEach((doc) => {
+          alumniArr.push(doc.data() as Alumni)
+        })
+        setAlumni(alumniArr)
+      })
+      .catch((e) => console.log(e))
+  }
+
   return (
     <Container>
       {isLoading ? (
@@ -71,6 +87,18 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
           <MAADirectoryComponent default {...componentProps} />
         </Router>
       )}
+      <button onClick={handleGetData}>get data</button>
+      <p>alumni:</p>
+      <div>
+        {alumni.map((alumnus: Alumni, index) => {
+          const { fname, lname } = alumnus
+          return (
+            <p key={index}>
+              {fname} {lname}
+            </p>
+          )
+        })}
+      </div>
     </Container>
   )
 }
