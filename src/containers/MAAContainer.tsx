@@ -1,10 +1,15 @@
 import React, { FC, useEffect, useState } from 'react'
 import { Router, RouteComponentProps } from '@reach/router'
+import { connect, ConnectedProps } from 'react-redux'
 import { useDocumentTitle } from 'hooks/meta'
 import { MAADirectoryComponent } from 'components/MAADirectoryComponent'
 import { MAALoginComponent } from 'components/MAALoginComponent'
+import { fetchAlumni, clearAlumni } from 'store/actions'
+import { getAlumni, getIsFetchingAlumni, getAlumniError } from 'store/selectors'
 import { Container } from 'components/Container'
+import { AppState } from 'store/types'
 import firebase from 'store/firebase'
+import { Alumni } from 'store/Alumni/types'
 
 const auth = firebase.auth()
 
@@ -21,7 +26,13 @@ export type MAAComponentProps = {
   rootUrl: string
 }
 
-export const MAAContainer: FC<RouteComponentProps & Props> = () => {
+export const MAA: FC<RouteComponentProps & ReduxProps & Props> = ({
+  fetchAlumni,
+  clearAlumni,
+  isFetchingAlumni,
+  alumni,
+  alumniError,
+}) => {
   useDocumentTitle('MAASU Alumni Association')
 
   const [user, setUser] = useState(() => auth.currentUser)
@@ -38,16 +49,16 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
       if (user) {
         // user signed in
         setUser(user)
-        /* console.log('signed in') */
+        fetchAlumni()
       } else {
         // user not signed in
         setUser(null)
-        /* console.log('signed out') */
+        clearAlumni()
       }
 
       if (isLoading) setIsLoading(false)
     })
-  }, [isLoading])
+  }, [fetchAlumni, clearAlumni, isLoading])
 
   const attemptLogin = (loginAuth: LoginAuth) => {
     const { email, password } = loginAuth
@@ -56,7 +67,7 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
 
   return (
     <Container>
-      {isLoading ? (
+      {isLoading || isFetchingAlumni ? (
         <span>LOADING...</span>
       ) : (
         <Router>
@@ -71,6 +82,34 @@ export const MAAContainer: FC<RouteComponentProps & Props> = () => {
           <MAADirectoryComponent default {...componentProps} />
         </Router>
       )}
+      <p>alumni:</p>
+      <div>
+        {alumni.map((alumnus: Alumni, index) => {
+          const { fname, lname } = alumnus
+          return (
+            <p key={index}>
+              {fname} {lname}
+            </p>
+          )
+        })}
+        {alumniError}
+      </div>
     </Container>
   )
 }
+
+const mapStateToProps = (state: AppState) => ({
+  isFetchingAlumni: getIsFetchingAlumni(state),
+  alumni: getAlumni(state),
+  alumniError: getAlumniError(state),
+})
+
+const mapDispatchToProps = {
+  fetchAlumni,
+  clearAlumni,
+}
+
+const connector = connect(mapStateToProps, mapDispatchToProps)
+type ReduxProps = ConnectedProps<typeof connector>
+
+export const MAAContainer = connector(MAA)
