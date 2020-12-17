@@ -11,11 +11,11 @@ https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FH
 // -----------------------------------------------------
 
 export const STRATEGIC_PLAN_IMG = `
-https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FMission%2FstrategicPlan.jpg?alt=media&token=df8227b7-492e-41b1-ac0f-06f9d8e668bd
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FMission%2FstrategicPlan.jpg?alt=media&token=caf1a130-bf56-4c56-bc34-13f048b2ff30
 `
 
 export const STRATEGIC_PLAN_URL = `
-https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Plans%2F20-24.pdf?alt=media&token=0cc19265-ce1d-41ed-a6e5-1d03b9271563
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Plans%2F20-24.pdf?alt=media&token=6e86c645-0c70-4cb1-8b1f-18a95edc6118
 `
 
 export const MISSION_FIRST_MEETING = `
