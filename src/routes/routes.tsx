@@ -63,11 +63,7 @@ export const Routes = () => {
 
         <AlumniContainer path="/alumni" />
 
-        <PrivateRoute
-          isAuthorized={false}
-          path="/maa/*"
-          component={MAAContainer}
-        />
+        <MAAContainer path="/maa/*" />
 
         <AnnualReportsContainer path="/annual" />
         <NewslettersContainer path="/newsletter" />

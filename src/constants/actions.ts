@@ -1,3 +1,8 @@
+export const ALUMNI_FETCH = 'ALUMNI_FETCH'
+export const ALUMNI_SUCCESS = 'ALUMNI_SUCCESS'
+export const ALUMNI_ERROR = 'ALUMNI_ERROR'
+export const ALUMNI_CLEAR = 'ALUMNI_CLEAR'
+
 export const AWARDS_FETCH = 'AWARDS_FETCH'
 export const AWARDS_SUCCESS = 'AWARDS_SUCCESS'
 export const AWARDS_ERROR = 'AWARDS_ERROR'
