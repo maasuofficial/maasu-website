@@ -73,7 +73,7 @@ export const Routes = () => {
         <DonateCompleteContainer path="/donate-complete" />
         <ContactContainer path="/contact" />
 
-        <PostRequestComponent path="/post-request" />
+        <PostRequestComponent path="/pr" />
 
         <InvalidRoute code={404} default />
       </MainContainer>

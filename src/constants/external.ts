@@ -94,5 +94,5 @@ https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FA
 // -----------------------------------------------------
 
 export const POST_REQUEST_FORM_URL = `
-https://docs.google.com/forms/d/e/1FAIpQLSeJnmacey3mk8yOc81YQ5jYTcdhF7O_BCP6061F25745n_tMA/viewform
+https://forms.gle/LQsRC8UkjRemLuqj9
 `
