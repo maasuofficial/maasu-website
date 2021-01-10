@@ -88,3 +88,11 @@ https://www.paypal.com/cgi-bin/webscr&cmd=_s-xclick&hosted_button_id=NXTRNY49H77
 export const ANNUAL_REPORT_IMG = `
 https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAnnual%2FannualReport.jpg?alt=media&token=56006814-21b4-4497-ad94-be2a35008dbe
 `
+
+// -----------------------------------------------------
+// Post Requests
+// -----------------------------------------------------
+
+export const POST_REQUEST_FORM_URL = `
+https://docs.google.com/forms/d/e/1FAIpQLSeJnmacey3mk8yOc81YQ5jYTcdhF7O_BCP6061F25745n_tMA/viewform
+`
