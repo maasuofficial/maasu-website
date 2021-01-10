@@ -25,6 +25,7 @@ import { MainContainer } from 'containers/MainContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { NewslettersContainer } from 'containers/NewslettersContainer'
+import { PostRequestComponent } from 'components/PostRequestComponent'
 import { ProgramContainer } from 'containers/ProgramContainer'
 import { ResourcesContainer } from 'containers/ResourcesContainer'
 import { WAYFComponent } from 'components/WAYFComponent'
@@ -71,6 +72,8 @@ export const Routes = () => {
         <DonateContainer path="/donate" />
         <DonateCompleteContainer path="/donate-complete" />
         <ContactContainer path="/contact" />
+
+        <PostRequestComponent path="/pr" />
 
         <InvalidRoute code={404} default />
       </MainContainer>
