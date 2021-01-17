@@ -29,8 +29,10 @@ https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FM
 export const ED_APP_LINK =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-ed.pdf?alt=media&token=7ae31959-8f0b-42f8-8a28-69e836288fb4'
 export const DC_APP_LINK = `${process.env.PUBLIC_URL}/assets/files/MAASU-ED-Application-2020-2022-new.docx`
-export const BOA_APP_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=e4b80cb5-6ffd-41b5-97fd-aa7073704a09'
+export const BOA_APP_LINK = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=a2d3751c-cab6-4bb3-8e73-0dbae5c0c782
+`
+
 export const ECC_APP_LINK = 'https://forms.gle/4Wr79zJiaiChJyL49'
 
 // -----------------------------------------------------

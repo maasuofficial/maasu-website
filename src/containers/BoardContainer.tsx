@@ -142,7 +142,9 @@ export const Board: FC<Props> = ({
           <h5 className="title5 tc my4">Board Of Advisors</h5>
           <div className="df fw-w jc-c">
             {renderProfileSkeletons(numSkeletonBOA)}
-            {groups.BOA.map((m, i) => (
+            {groups.BOA.sort((x: BoardMember, y: BoardMember) =>
+              x.lname.localeCompare(y.lname)
+            ).map((m: BoardMember, i: number) => (
               <BoardMemberProfile key={i} member={m} />
             ))}
           </div>

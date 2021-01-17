@@ -45,6 +45,7 @@ export const BoardMember: FC<Props> = ({
     state,
     imageUrl,
     positionEmail,
+    emailFallback,
     bio,
     positionDesc,
   } = p
@@ -66,10 +67,15 @@ export const BoardMember: FC<Props> = ({
         )}
 
         <span>{school}</span>
-        <br />
-        <span>{city && state && `${city}, ${state}`}</span>
-        <br />
+        {city && state && (
+          <Fragment>
+            <br />
+            <span>{`${city}, ${state}`}</span>
+            <br />
+          </Fragment>
+        )}
         <span>{positionEmail && <EA>{positionEmail}</EA>}</span>
+        <span>{emailFallback && <EA>{emailFallback}</EA>}</span>
         <p>{bio}</p>
         <p className="tl">{positionDesc}</p>
       </TextBlock>
