@@ -33,7 +33,9 @@ export const BOA_APP_LINK = `
 https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=a2d3751c-cab6-4bb3-8e73-0dbae5c0c782
 `
 
-export const ECC_APP_LINK = 'https://forms.gle/4Wr79zJiaiChJyL49'
+export const ECC_APP_LINK = `
+https://docs.google.com/forms/d/e/1FAIpQLSf6xqAaFKkqAKEzzAmP9QkYaSQ2dR0OUx8-h8TsndVjYBVtaw/viewform
+`
 
 // -----------------------------------------------------
 // Donate
@@ -52,8 +54,13 @@ https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FD
 // Hosting a Conference
 // -----------------------------------------------------
 
-export const HOST_FORM =
-  'https://docs.google.com/forms/d/e/1FAIpQLSdUWscQ_czYXQVE73fxSstNAR3SnEchK3_0nDyHFVbxRFpMxQ/viewform'
+export const HOST_FORM = `
+https://docs.google.com/forms/d/e/1FAIpQLSfv5mgoV5_e327bdfgA3JAdW5n8LxU0E0jw1N2Bfb4l-QSo9g/viewform
+`
+
+export const HOST_BID_REQUIREMENTS = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FHost%2FbidRequirements.pdf?alt=media&token=58dd172b-a132-4e2c-9705-5767acf358df
+`
 
 // -----------------------------------------------------
 // Directors Council
@@ -81,6 +88,18 @@ https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK
 
 export const MAA_MEMBERSHIP_FEE_URL = `
 https://www.paypal.com/cgi-bin/webscr&cmd=_s-xclick&hosted_button_id=NXTRNY49H77YQ
+`
+
+// -----------------------------------------------------
+// Awards
+// -----------------------------------------------------
+
+export const AWARDS_CC_LINK = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2FccAward.pdf?alt=media&token=748f43dd-e44b-47ff-8dc0-7d6ab85126f7
+`
+
+export const AWARDS_MS_LINK = `
+https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2FmsAward.pdf?alt=media&token=bb7c18b9-da25-458d-bc46-1de0a23e6c80
 `
 
 // -----------------------------------------------------

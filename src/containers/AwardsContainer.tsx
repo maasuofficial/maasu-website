@@ -5,7 +5,7 @@ import { AppState } from 'store/types'
 import { useDocumentTitle } from 'hooks/meta'
 import { getIsFetchingAwards, getAwards, getAwardsError } from 'store/selectors'
 import { fetchAwards } from 'store/actions'
-/* import { A } from 'components/Link' */
+import { A } from 'components/Link'
 import { Block } from 'components/Block'
 import { Container } from 'components/Container'
 import { TextBlock } from 'components/TextBlock'
@@ -15,8 +15,12 @@ import {
   AWARDS_BOA_STMT,
   AWARDS_CC_STATUS,
   AWARDS_CC_STMT,
+  AWARDS_CC_ISOPEN,
+  AWARDS_CC_LINK,
   AWARDS_MS_STATUS,
   AWARDS_MS_STMT,
+  AWARDS_MS_ISOPEN,
+  AWARDS_MS_LINK,
   AWARDS_STMT,
 } from 'constants/strings'
 
@@ -73,7 +77,12 @@ export const Awards: FC<Props> = ({
           <li className="my2">
             <h5 className="title5">Charles Chang Leadership Award</h5>
             <p>{AWARDS_CC_STMT}</p>
-            <p>{AWARDS_CC_STATUS}</p>
+            <p>
+              {AWARDS_CC_STATUS}
+              {AWARDS_CC_ISOPEN ? (
+                <A href={AWARDS_CC_LINK}>Apply here.</A>
+              ) : null}
+            </p>
 
             {isFetchingAwards ? (
               <span>loading...</span>
@@ -84,7 +93,12 @@ export const Awards: FC<Props> = ({
           <li className="my2">
             <h5 className="title5">Midwestern Star Award</h5>
             <p>{AWARDS_MS_STMT}</p>
-            <p>{AWARDS_MS_STATUS}</p>
+            <p>
+              {AWARDS_MS_STATUS}
+              {AWARDS_MS_ISOPEN ? (
+                <A href={AWARDS_MS_LINK}>Apply here.</A>
+              ) : null}
+            </p>
 
             {isFetchingAwards ? (
               <span>loading...</span>
