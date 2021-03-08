@@ -4,6 +4,7 @@ export const MENU = {
     'executive board': '/board',
     membership: '/membership',
     'directors council': '/dc',
+    'board of advisors': '/boa',
     'our hxstory': '/hxstory',
   },
   conferences: {
