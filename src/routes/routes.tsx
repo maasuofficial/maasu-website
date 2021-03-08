@@ -7,6 +7,7 @@ import { AlumniContainer } from 'containers/AlumniContainer'
 import { AnnualReportsContainer } from 'containers/AnnualReportsContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
+import { BoardOfAdvisorsComponent } from 'components/BoardOfAdvisorsComponent'
 import { BoardMemberContainer } from 'containers/BoardMemberContainer'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
 import { ConferenceInfoComponent } from 'components/ConferenceInfoComponent'
@@ -46,6 +47,7 @@ export const Routes = () => {
         <BoardContainer path="/board" />
         <MembershipContainer path="/membership" />
         <DirectorsCouncilContainer path="/dc" />
+        <BoardOfAdvisorsComponent path="/boa" />
 
         <HxstoryContainer path="/hxstory" />
         <HxstoryContainer path="/history" />
