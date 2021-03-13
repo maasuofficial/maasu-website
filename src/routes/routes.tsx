@@ -17,7 +17,7 @@ import {
   DonateContainer,
   DonateCompleteContainer,
 } from 'containers/DonateContainer'
-import { HomeContainer } from 'containers/HomeContainer'
+/* import { HomeContainer } from 'containers/HomeContainer' */
 import { HostContainer } from 'containers/HostContainer'
 import { HxstoryContainer } from 'containers/HxstoryContainer'
 import { MAAContainer } from 'containers/MAAContainer'
@@ -35,7 +35,8 @@ export const Routes = () => {
   return (
     <Router primary={false} className="posa h-100 t-0 r-0 b-0 l-0">
       <MainContainer path="/">
-        <HomeContainer path="/" />
+        {/* <HomeContainer path="/" /> */}
+        <MissionContainer path="/" />
 
         <MissionContainer path="/mission" />
 
