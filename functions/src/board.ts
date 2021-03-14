@@ -18,7 +18,9 @@ export const handler = async (event: any, context: any) => {
       .filter(
         (b: BoardType) =>
           b.id != null &&
+          b.id.length != 0 &&
           b.lname != null &&
+          b.lname.length != 0 &&
           b.positionType != null &&
           b.positionPriority != null &&
           b.imageUrl != null
