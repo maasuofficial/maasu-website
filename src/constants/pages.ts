@@ -152,7 +152,7 @@ export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
 
 export const BOA_APP_ISOPEN = true
 export const BOA_APP_STATUS = `
-We currently have have an opening on the Board of Advisors and are looking for qualified candidates who reside in the Midwest with a professional background and expertise in finance, fundraising, accounting or a licensed CPA.
+We currently have an opening on the Board of Advisors and are looking for qualified candidates who reside in the Midwest with a professional background and expertise in finance, fundraising, accounting or a licensed CPA.
 Deadline is on a rolling basis.
 `
 
