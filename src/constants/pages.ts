@@ -1,5 +1,3 @@
-import { UPCOMING_ACADEMIC_YEAR } from 'constants/upcoming'
-
 // -----------------------------------------------------
 // Purpose
 // -----------------------------------------------------
@@ -116,29 +114,6 @@ board of advisors. Each subsection plays an integral role in the
 management of MAASU functions.
 `
 
-type AppStatus = {
-  isOpen: boolean
-  status: string
-}
-
-const createBoardAppStatus = (endDate?: string): AppStatus => {
-  const isOpen = Boolean(endDate)
-  return {
-    isOpen,
-    status: `applications ${
-      isOpen
-        ? `for the ${UPCOMING_ACADEMIC_YEAR} 
-        academic year are open! Applications 
-        close ${endDate}.`
-        : 'are currently closed.'
-    }`,
-  }
-}
-
-// insert dates as needed
-
-const dcAppStatus = createBoardAppStatus()
-
 export const ED_APP_ISOPEN = false
 export const ED_APP_STATUS_OPEN = `
 Executive Director applications are currently open! Applications close Sunday, December 6th.
@@ -147,8 +122,10 @@ export const ED_APP_STATUS_CLOSED = `
 Executive Director applications are currently closed.
 `
 
-export const DC_APP_ISOPEN = dcAppStatus.isOpen
-export const DC_APP_STATUS = `Directors Council ${dcAppStatus.status}`
+export const DC_APP_ISOPEN = true
+export const DC_APP_STATUS = `
+Directors Council applications are currently open! Applications close Friday, June 4th at 11:59 PM EDT.
+`
 
 export const BOA_APP_ISOPEN = true
 export const BOA_APP_STATUS = `
@@ -156,9 +133,9 @@ We currently have an opening on the Board of Advisors and are looking for qualif
 Deadline is on a rolling basis.
 `
 
-export const ECC_APP_ISOPEN = true
+export const ECC_APP_ISOPEN = false
 export const ECC_APP_STATUS = `
-Executive Coordinating Committee applications are currently open. The submission deadline is Sunday, March 7th at 11:59 PM ET.
+Executive Coordinating Committee applications are currently closed.
 `
 
 // -----------------------------------------------------
