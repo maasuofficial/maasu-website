@@ -124,7 +124,7 @@ Executive Director applications are currently closed.
 
 export const DC_APP_ISOPEN = true
 export const DC_APP_STATUS = `
-Directors Council applications are currently open! Applications close Friday, June 4th at 11:59 PM EDT.
+Directors Council applications for the Summer 2021 - Summer 2023 term are currently open. Applications close Friday, June 4th at 11:59 PM EDT.
 `
 
 export const BOA_APP_ISOPEN = true
