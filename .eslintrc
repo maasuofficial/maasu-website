@@ -1,8 +1,9 @@
 {
   "extends": [ "standard", "react-app" ],
   "rules": {
+    "comma-dangle": "off",
+    "multiline-ternary": "off",
     "react/no-unused-prop-types": "error",
-    "space-before-function-paren": "off",
-    "comma-dangle": "off"
+    "space-before-function-paren": "off"
   }
 }
