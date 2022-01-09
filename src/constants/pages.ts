@@ -122,15 +122,14 @@ export const ED_APP_STATUS_CLOSED = `
 Executive Director applications are currently closed.
 `
 
-export const DC_APP_ISOPEN = true
+export const DC_APP_ISOPEN = false
 export const DC_APP_STATUS = `
-Directors Council applications for the Summer 2021 - Summer 2023 term are currently open. Applications close Friday, June 4th at 11:59 PM EDT.
+Directors Council applications are currently closed.
 `
 
-export const BOA_APP_ISOPEN = true
+export const BOA_APP_ISOPEN = false
 export const BOA_APP_STATUS = `
-We currently have an opening on the Board of Advisors and are looking for qualified candidates who reside in the Midwest with a professional background and expertise in finance, fundraising, accounting or a licensed CPA.
-Deadline is on a rolling basis.
+Board of Advisors application are currently closed.
 `
 
 export const ECC_APP_ISOPEN = false
