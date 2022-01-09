@@ -11,6 +11,8 @@ import { Container } from 'components/Container'
 import { TextBlock } from 'components/TextBlock'
 import { Award } from 'store/Awards/types'
 import {
+  AWARDS_BOA_ISOPEN,
+  AWARDS_BOA_LINK,
   AWARDS_BOA_STATUS,
   AWARDS_BOA_STMT,
   AWARDS_CC_STATUS,
@@ -109,7 +111,11 @@ export const Awards: FC<Props> = ({
           <li className="my2">
             <h5 className="title5">Board of Advisors Award</h5>
             <p>{AWARDS_BOA_STMT}</p>
-            <p>{AWARDS_BOA_STATUS}</p>
+            <p>{AWARDS_BOA_STATUS}
+            {AWARDS_BOA_ISOPEN ? (
+                <A href={AWARDS_BOA_LINK}>Apply here.</A>
+              ) : null}
+            </p>
 
             {isFetchingAwards ? (
               <span>loading...</span>

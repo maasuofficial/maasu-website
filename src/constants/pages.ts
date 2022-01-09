@@ -286,7 +286,7 @@ one organization or school.
 
 export const AWARDS_BOA_ISOPEN = true
 export const AWARDS_BOA_STATUS = `
-The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM EST.
+The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM ET.
 `
 
 // -----------------------------------------------------
