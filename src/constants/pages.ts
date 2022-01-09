@@ -260,7 +260,7 @@ and plaque.
 
 export const AWARDS_CC_ISOPEN = true
 export const AWARDS_CC_STATUS = `
-The application is now open! The submission deadline is Sunday, March 6th at 11:59 PM ET.
+The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
 `
 
 export const AWARDS_MS_STMT = `
@@ -273,7 +273,7 @@ done previously.
 
 export const AWARDS_MS_ISOPEN = true
 export const AWARDS_MS_STATUS = `
-The application is now open! The submission deadline is Sunday, March 6th at 11:59 PM ET.
+The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
 `
 
 export const AWARDS_BOA_STMT = `
@@ -284,8 +284,9 @@ presented annually at the MAASU Spring Conference banquet to
 one organization or school.
 `
 
+export const AWARDS_BOA_ISOPEN = true
 export const AWARDS_BOA_STATUS = `
-The application is now closed.
+The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM EST.
 `
 
 // -----------------------------------------------------
