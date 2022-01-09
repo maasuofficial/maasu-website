@@ -111,8 +111,9 @@ export const Awards: FC<Props> = ({
           <li className="my2">
             <h5 className="title5">Board of Advisors Award</h5>
             <p>{AWARDS_BOA_STMT}</p>
-            <p>{AWARDS_BOA_STATUS}
-            {AWARDS_BOA_ISOPEN ? (
+            <p>
+              {AWARDS_BOA_STATUS}
+              {AWARDS_BOA_ISOPEN ? (
                 <A href={AWARDS_BOA_LINK}>Apply here.</A>
               ) : null}
             </p>
