@@ -81,10 +81,13 @@ export const MAA_MEMBERSHIP_FEE_URL =
 // -----------------------------------------------------
 
 export const AWARDS_CC_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2FccAward.pdf?alt=media&token=748f43dd-e44b-47ff-8dc0-7d6ab85126f7'
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2022%2FccAward.pdf?alt=media&token=578a788d-9661-46fc-b5cb-618d78c9a026'
 
 export const AWARDS_MS_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2FmsAward.pdf?alt=media&token=bb7c18b9-da25-458d-bc46-1de0a23e6c80'
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2022%2FmsAward.pdf?alt=media&token=df6ae981-ad60-4431-a8b0-70318ae0110c'
+
+export const AWARDS_BOA_LINK =
+'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2022%2FboaAward.pdf?alt=media&token=ae7703d3-6193-4b51-8066-bcf25482dc37'
 
 // -----------------------------------------------------
 // Annual
