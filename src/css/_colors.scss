@@ -38,11 +38,14 @@ $colors: (
   'green2': #20af78,
   'green6': #61e2a7,
   'yellowe': #efc31a,
+  'blue1' : #8DACE1,
+  'blue2' : #dff1ff,
+  'blue3' : #657899,
 );
 
 $theme: (
   'bg-light': map-get($colors, 'white'),
-  'bg-main': map-get($colors, 'greyf'),
+  'bg-main': map-get($colors, 'blue2'),
   'bg-dark': map-get($colors, 'greyd'),
   'text-light': map-get($colors, 'grey7'),
   'text-main': map-get($colors, 'grey3'),
