@@ -12,7 +12,7 @@ interface Props {}
 export const HeaderComponent: FC<Props> = () => {
   return (
     <Fragment>
-      <header className="w-100 bg-bg-main posf z1">
+      <header className="w-100 bg-head-foot-bg posf z1">
         <div className="container">
           <div
             className="df ai-c jc-sb px4-nl"

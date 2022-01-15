@@ -9,7 +9,7 @@ const textLinkClassNames = 'tdn c-inh hov-tdu mx1 hov-c-primary-main'
 
 export const FooterComponent: FC = () => {
   return (
-    <footer className="w-100 py5 mt6 bg-bg-main">
+    <footer className="w-100 py5 mt6 bg-head-foot-bg">
       <div className="container df fd-c-s jc-sb">
         <div className="w-100 w-30-ns pb5-s">
           <Link to="/">
