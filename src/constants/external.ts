@@ -30,7 +30,7 @@ export const BOA_APP_LINK =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=a2d3751c-cab6-4bb3-8e73-0dbae5c0c782'
 
 export const ECC_APP_LINK =
-  'https://docs.google.com/forms/d/e/1FAIpQLSf6xqAaFKkqAKEzzAmP9QkYaSQ2dR0OUx8-h8TsndVjYBVtaw/viewform'
+  'https://docs.google.com/forms/d/e/1FAIpQLSdq142K3fFNsEDQj1t-PZa-fhhdyp-FKluvpV5m92C0OqnZ9g/viewform'
 
 // -----------------------------------------------------
 // Donate
@@ -49,7 +49,7 @@ export const DONATE_HERO_IMG =
 // -----------------------------------------------------
 
 export const HOST_FORM =
-  'https://docs.google.com/forms/d/e/1FAIpQLSfv5mgoV5_e327bdfgA3JAdW5n8LxU0E0jw1N2Bfb4l-QSo9g/viewform'
+  'https://docs.google.com/forms/d/e/1FAIpQLSdq142K3fFNsEDQj1t-PZa-fhhdyp-FKluvpV5m92C0OqnZ9g/viewform'
 
 export const HOST_BID_REQUIREMENTS =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FHost%2FbidRequirements.pdf?alt=media&token=58dd172b-a132-4e2c-9705-5767acf358df'
