@@ -134,7 +134,7 @@ Board of Advisors application are currently closed.
 
 export const ECC_APP_ISOPEN = true
 export const ECC_APP_STATUS = `
-Executive Director applications are currently open! Applications close Sunday, March 6th.
+Executive Coordinating Committees applications are currently open! Applications close Sunday, March 6th.
 `
 
 // -----------------------------------------------------
