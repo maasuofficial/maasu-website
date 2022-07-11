@@ -258,9 +258,10 @@ and plaque.
 `
 
 export const AWARDS_CC_ISOPEN = false
-export const AWARDS_CC_STATUS = `
-The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
-`
+export const AWARDS_CC_STATUS =`
+The application is now closed. Check back soon for new opportunities!
+` 
+//'The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.'
 
 export const AWARDS_MS_STMT = `
 Students nominated for the Midwestern Stars can be anyone who has
@@ -272,8 +273,9 @@ done previously.
 
 export const AWARDS_MS_ISOPEN = false
 export const AWARDS_MS_STATUS = `
-The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
+The application is now closed. Check back soon for new opportunities!
 `
+//'The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.'
 
 export const AWARDS_BOA_STMT = `
 The BOA Award is an award that recognizes Asian American student 
@@ -285,8 +287,10 @@ one organization or school.
 
 export const AWARDS_BOA_ISOPEN = false
 export const AWARDS_BOA_STATUS = `
-The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM ET.
+The application is now closed. Check back soon for new opportunities!
 `
+//'The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM ET.'
+
 
 // -----------------------------------------------------
 // Awards
