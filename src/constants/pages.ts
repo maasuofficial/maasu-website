@@ -257,7 +257,7 @@ dedication to the APIDA community, along with a $250 scholarship
 and plaque.
 `
 
-export const AWARDS_CC_ISOPEN = true
+export const AWARDS_CC_ISOPEN = false
 export const AWARDS_CC_STATUS = `
 The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
 `
@@ -270,7 +270,7 @@ means that have uplifted a community higher than what has been
 done previously.
 `
 
-export const AWARDS_MS_ISOPEN = true
+export const AWARDS_MS_ISOPEN = false
 export const AWARDS_MS_STATUS = `
 The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
 `
@@ -283,7 +283,7 @@ presented annually at the MAASU Spring Conference banquet to
 one organization or school.
 `
 
-export const AWARDS_BOA_ISOPEN = true
+export const AWARDS_BOA_ISOPEN = false
 export const AWARDS_BOA_STATUS = `
 The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM ET.
 `
