@@ -129,12 +129,12 @@ Directors Council applications are currently closed.
 
 export const BOA_APP_ISOPEN = false
 export const BOA_APP_STATUS = `
-Board of Advisors application are currently closed.
+Board of Advisors applications are currently closed.
 `
 
-export const ECC_APP_ISOPEN = true
+export const ECC_APP_ISOPEN = false
 export const ECC_APP_STATUS = `
-Executive Coordinating Committee applications are currently open! Applications close Sunday, March 6th.
+Executive Coordinating Committee applications are currently closed.
 `
 
 // -----------------------------------------------------
