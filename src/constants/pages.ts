@@ -291,7 +291,6 @@ The application is now closed. Check back soon for new opportunities!
 `
 //'The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM ET.'
 
-
 // -----------------------------------------------------
 // Awards
 // -----------------------------------------------------
