@@ -5,7 +5,7 @@
 export const PURPOSE_STMT_1 = `
 The Midwest Asian Pacific Islander Desi American Students Union
 (MAASU) is a 501(c)(3) nonprofit organization that began in response
-to a need for political unity among Asian American students in the
+to a need for political unity among Asian Pacific Islander American students in the
 Midwest. By 1990, there were more than 20 universities in the
 Midwest that had formed Asian Pacific Islander American (APIA)
 organizations. Some had been around for years, while others were
@@ -14,13 +14,13 @@ still in their infancy.
 
 export const PURPOSE_STMT_2 = `
 Students felt a need for an organization that would support the
-growth of their groups and organize Midwestern Asian American
+growth of their groups and organize Midwestern Asian Pacific Islander American
 students for political activism. MAASU works to recognize the needs
-of the Asian American community by assisting schools with the
-establishment of Asian American student organizations, promoting
+of the Asian Pacific Islander American community by assisting schools with the
+establishment of Asian Pacific Islander American student organizations, promoting
 leadership among students, addressing educational needs and rights
-of the Asian American community, and developing a channel of
-communication among Asian American student organizations across the
+of the Asian Pacific Islander American community, and developing a channel of
+communication among Asian Pacific Islander American student organizations across the
 Midwest.
 `
 
@@ -49,7 +49,7 @@ Conference, and other various programming
 
 export const MISSION_STMT_2 = `
 Assisting schools with the establishment of APIDA student
-organizations, an APIDA cultural center and an Asian American
+organizations, an APIDA cultural center and an Asian Pacific Islander American
 Studies program
 `
 
@@ -215,7 +215,7 @@ MAASU recognizes the forms of membership as outlined:
 
 export const MEMBERSHIP_ELIGIBILITY_STMT_1 = `
 Campus Organizations: Hereinafter referred to as "member schools."
-Membership shall be open to any formally recognized Asian American
+Membership shall be open to any formally recognized Asian Pacific Islander American
 student organization at an institution of Higher Education. Has
 voting privileges.
 `
@@ -223,7 +223,7 @@ voting privileges.
 export const MEMBERSHIP_ELIGIBILITY_STMT_2 = `
 Affiliate Organization Membership: Hereinafter referred to as
 "affiliates." Membership shall also be open to any nationally
-recognized Asian American organization. Must have college student
+recognized Asian Pacific Islander American organization. Must have college student
 representative in order to have voting privileges.
 `
 
@@ -279,7 +279,7 @@ The application is now closed. Check back soon for new opportunities!
 // The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
 
 export const AWARDS_BOA_STMT = `
-The BOA Award is an award that recognizes Asian American student 
+The BOA Award is an award that recognizes Asian Pacific Islander American student 
 organizations that have accomplished greatness on their campus 
 and in the Midwest community. The BOA Award and $100 prize is 
 presented annually at the MAASU Spring Conference banquet to 
@@ -355,7 +355,7 @@ presentations will take place.
 export const DONATE_STMT_1 = `
 MAASU is a 501(c)(3) nonprofit student run organization. We rely on
 community support to continue to aide, educate and connect students
-across midwest campuses in leadership development and Asian American
+across midwest campuses in leadership development and Asian Pacific Islander American
 advocacy. It is with your financial support that we are able to
 provide students with resources and events that connect our shared
 identity.
@@ -366,7 +366,7 @@ MAASU believes in empowering students and cultivating strong leaders
 within our local communities. Your donation would ensure the
 continuation of these programs, such as the Leadership Summit and
 Spring/Fall Conferences, and other programs. Please join us in 
-supporting young Asian American student leaders by making a tax 
+supporting young Asian Pacific Islander American student leaders by making a tax 
 deductible deduction today. Engagement of the younger generation
 is more important than ever, and we hope you join us
 in cultivating the next generation of leaders.
