@@ -263,8 +263,7 @@ The application is now open! The submission deadline is April 2nd, 2023 at 11:59
 `
 
 // The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
-//The application is now closed. Check back soon for new opportunities!
-
+// The application is now closed. Check back soon for new opportunities!
 
 export const AWARDS_MS_STMT = `
 Students nominated for the Midwestern Stars can be anyone who has
@@ -279,8 +278,7 @@ export const AWARDS_MS_STATUS = `
 The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 `
 // The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
-//The application is now closed. Check back soon for new opportunities!
-
+// The application is now closed. Check back soon for new opportunities!
 
 export const AWARDS_BOA_STMT = `
 The BOA Award is an award that recognizes Asian Pacific Islander American student 
@@ -295,8 +293,7 @@ export const AWARDS_BOA_STATUS = `
 The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 `
 // The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
-//The application is now closed. Check back soon for new opportunities!
-
+// The application is now closed. Check back soon for new opportunities!
 
 // -----------------------------------------------------
 // Awards
