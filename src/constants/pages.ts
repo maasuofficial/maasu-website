@@ -257,12 +257,14 @@ dedication to the APIDA community, along with a $250 scholarship
 and plaque.
 `
 
-export const AWARDS_CC_ISOPEN = false
+export const AWARDS_CC_ISOPEN = true
 export const AWARDS_CC_STATUS = `
-The application is now closed. Check back soon for new opportunities!
+The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 `
 
-// The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
+// The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
+//The application is now closed. Check back soon for new opportunities!
+
 
 export const AWARDS_MS_STMT = `
 Students nominated for the Midwestern Stars can be anyone who has
@@ -272,11 +274,13 @@ means that have uplifted a community higher than what has been
 done previously.
 `
 
-export const AWARDS_MS_ISOPEN = false
+export const AWARDS_MS_ISOPEN = true
 export const AWARDS_MS_STATUS = `
-The application is now closed. Check back soon for new opportunities!
+The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 `
-// The application is now open! The submission deadline is Saturday, March 6th at 11:59 PM ET.
+// The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
+//The application is now closed. Check back soon for new opportunities!
+
 
 export const AWARDS_BOA_STMT = `
 The BOA Award is an award that recognizes Asian Pacific Islander American student 
@@ -286,11 +290,13 @@ presented annually at the MAASU Spring Conference banquet to
 one organization or school.
 `
 
-export const AWARDS_BOA_ISOPEN = false
+export const AWARDS_BOA_ISOPEN = true
 export const AWARDS_BOA_STATUS = `
-The application is now closed. Check back soon for new opportunities!
+The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 `
-// The application is now open! The submission deadline is Friday, April 22nd at 1:59 AM ET.
+// The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
+//The application is now closed. Check back soon for new opportunities!
+
 
 // -----------------------------------------------------
 // Awards
