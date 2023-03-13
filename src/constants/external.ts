@@ -49,7 +49,7 @@ export const DONATE_HERO_IMG =
 // -----------------------------------------------------
 
 export const HOST_FORM =
-  'https://docs.google.com/forms/d/e/1FAIpQLSdq142K3fFNsEDQj1t-PZa-fhhdyp-FKluvpV5m92C0OqnZ9g/viewform'
+  'https://forms.gle/F6dKzQ8Vo1YgPLQU8'
 
 export const HOST_BID_REQUIREMENTS =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FHost%2FbidRequirements.pdf?alt=media&token=58dd172b-a132-4e2c-9705-5767acf358df'
