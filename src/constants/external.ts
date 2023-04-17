@@ -30,7 +30,7 @@ export const BOA_APP_LINK =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=a2d3751c-cab6-4bb3-8e73-0dbae5c0c782'
 
 export const ECC_APP_LINK =
-  'https://docs.google.com/forms/d/e/1FAIpQLSdq142K3fFNsEDQj1t-PZa-fhhdyp-FKluvpV5m92C0OqnZ9g/viewform'
+  'https://bit.ly/MAASUecc2324'
 
 // -----------------------------------------------------
 // Donate
