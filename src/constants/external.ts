@@ -30,7 +30,7 @@ export const BOA_APP_LINK =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=a2d3751c-cab6-4bb3-8e73-0dbae5c0c782'
 
 export const ECC_APP_LINK =
-  'https://bit.ly/MAASUecc2324'
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Applications%2F2023-2024%20Executive%20Coordinating%20Committee%20Application%20Descriptions%20-%20Google%20Docs%20-%20Google%20Docs.pdf?alt=media&token=22e82de5-56fe-4fa1-ad7e-8b29ba626aa2'
 
 // -----------------------------------------------------
 // Donate

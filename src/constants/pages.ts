@@ -134,7 +134,7 @@ Board of Advisors applications are currently closed.
 
 export const ECC_APP_ISOPEN = true
 export const ECC_APP_STATUS = `
-Executive Coordinating Committee applications are currently open! Applications close Sunday, April 23rd.
+Executive Coordinating Committee applications are currently open! Applications close Saturday, May 27th.
 `
 
 // -----------------------------------------------------
@@ -257,9 +257,9 @@ dedication to the APIDA community, along with a $250 scholarship
 and plaque.
 `
 
-export const AWARDS_CC_ISOPEN = true
+export const AWARDS_CC_ISOPEN = false
 export const AWARDS_CC_STATUS = `
-The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
+The application is now closed. Check back soon for new opportunities!
 `
 
 // The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
@@ -273,10 +273,11 @@ means that have uplifted a community higher than what has been
 done previously.
 `
 
-export const AWARDS_MS_ISOPEN = true
+export const AWARDS_MS_ISOPEN = false
 export const AWARDS_MS_STATUS = `
-The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
+The application is now closed. Check back soon for new opportunities!
 `
+
 // The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 // The application is now closed. Check back soon for new opportunities!
 
@@ -288,10 +289,11 @@ presented annually at the MAASU Spring Conference banquet to
 one organization or school.
 `
 
-export const AWARDS_BOA_ISOPEN = true
+export const AWARDS_BOA_ISOPEN = false
 export const AWARDS_BOA_STATUS = `
-The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
+The application is now closed. Check back soon for new opportunities!
 `
+
 // The application is now open! The submission deadline is April 2nd, 2023 at 11:59 PM ET (10:59 PM CT, 9:59 PM MT).
 // The application is now closed. Check back soon for new opportunities!
 
