@@ -132,9 +132,9 @@ export const BOA_APP_STATUS = `
 Board of Advisors applications are currently closed.
 `
 
-export const ECC_APP_ISOPEN = true
+export const ECC_APP_ISOPEN = false
 export const ECC_APP_STATUS = `
-Executive Coordinating Committee applications are currently open! Applications close Saturday, May 27th.
+Executive Coordinating Committee applications are currently closed.
 `
 
 // -----------------------------------------------------
