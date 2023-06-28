@@ -23,11 +23,11 @@ export const MISSION_FIRST_MEETING =
 // -----------------------------------------------------
 
 export const ED_APP_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-ed.pdf?alt=media&token=7ae31959-8f0b-42f8-8a28-69e836288fb4'
+  'https://bit.ly/MAASUED2023'
 export const DC_APP_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-dc.pdf?alt=media&token=40971f87-73fb-41c1-b2e4-5c5763f73d0f'
+  'https://bit.ly/MAASUDC2023'
 export const BOA_APP_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/BoardMembers%2F20-21%2Fapp-boa.pdf?alt=media&token=a2d3751c-cab6-4bb3-8e73-0dbae5c0c782'
+  'https://bit.ly/MAASUBOA2023'
 
 export const ECC_APP_LINK =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Applications%2F2023-2024%20Executive%20Coordinating%20Committee%20Application%20Descriptions%20-%20Google%20Docs%20-%20Google%20Docs.pdf?alt=media&token=22e82de5-56fe-4fa1-ad7e-8b29ba626aa2'
