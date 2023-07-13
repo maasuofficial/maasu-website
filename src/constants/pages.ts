@@ -114,7 +114,11 @@ board of advisors. Each subsection plays an integral role in the
 management of MAASU functions.
 `
 
-export const ED_APP_ISOPEN = true
+export const ED_APP_ISOPEN = false
+export const ED_APP_STATUS = `
+Executive Director applications are currently closed.
+`
+
 export const ED_APP_STATUS_OPEN = `
 Executive Director applications are currently open! Applications close Monday, July 3rd.
 `
@@ -123,8 +127,12 @@ export const ED_APP_STATUS_CLOSED = `
 Executive Director applications are currently closed.
 `
 
-export const DC_APP_ISOPEN = true
+export const DC_APP_ISOPEN = false
 export const DC_APP_STATUS = `
+Directors Council applications are currently closed.
+`
+
+export const DC_APP_STATUS_OPEN =`
 Directors Council applications are currently open! Applications close Monday, July 3rd.
 `
 
@@ -132,8 +140,12 @@ export const DC_APP_STATUS_CLOSED = `
 Directors Council applications are currently closed.
 `
 
-export const BOA_APP_ISOPEN = true
-export const BOA_APP_STATUS = `
+export const BOA_APP_ISOPEN = false
+export const BOA_APP_STATUS =`
+Board of Advisors applications are currently closed.
+`
+
+export const BOA_APP_STATUS_OPEN = `
 Board of Advisors applications are currently open! Applications close Monday, July 3rd.
 `
 
