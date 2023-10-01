@@ -19,7 +19,7 @@ export const ContactContainer: FC<Props> = () => {
 
     const response = {
       'entry.761143299': name.value,
-      'entry.390586168': 'ecc@maasu.org',
+      'entry.390586168': 'board@maasu.org',
       'entry.1997635310': email.value,
       'entry.596068453': message.value,
     }
