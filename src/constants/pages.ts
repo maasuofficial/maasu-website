@@ -125,7 +125,7 @@ export const ED_APP_STATUS_CLOSED = `
 Executive Director applications are currently closed.
 `
 
-export const ED_APP_STATUS = ED_APP_STATUS_OPEN
+export const ED_APP_STATUS = ED_APP_STATUS_CLOSED
 
 // DC
 export const DC_APP_ISOPEN = false
@@ -138,7 +138,7 @@ export const DC_APP_STATUS_CLOSED = `
 Directors Council applications are currently closed.
 `
 
-export const DC_APP_STATUS = DC_APP_STATUS_OPEN
+export const DC_APP_STATUS = DC_APP_STATUS_CLOSED
 
 // BOA
 export const BOA_APP_ISOPEN = false
@@ -151,7 +151,7 @@ export const BOA_APP_STATUS_CLOSED = `
 Board of Advisors applications are currently closed.
 `
 
-export const BOA_APP_STATUS = BOA_APP_STATUS_OPEN
+export const BOA_APP_STATUS = BOA_APP_STATUS_CLOSED
 
 // ECC
 export const ECC_APP_ISOPEN = false
