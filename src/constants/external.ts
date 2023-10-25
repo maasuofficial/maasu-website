@@ -63,9 +63,6 @@ export const DC_PROJECT_APP_FORM =
 // Alumni
 // -----------------------------------------------------
 
-export const MAA_LOGO_IMG =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAlumni%2Fmaa.png?alt=media&token=4a95987b-0377-46d6-8740-12d8f58aee8b'
-
 export const MAA_ALUMNI_DIR_FORM =
   'https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1'
 

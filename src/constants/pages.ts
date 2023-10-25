@@ -410,10 +410,6 @@ in cultivating the next generation of leaders.
 // Alumni
 // -----------------------------------------------------
 
-export const MAA_LOGO_IMG_ALT = `
-The MAASU Alumni Association
-`
-
 export const MAA_PURPOSE_PRELUDE = `
 The MAASU Alumni Association (MAA) is a group for all MAASU alumni.
 MAA’s purpose is to continue building and sustaining lifelong
