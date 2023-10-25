@@ -115,7 +115,7 @@ management of MAASU functions.
 `
 
 // ED
-export const ED_APP_ISOPEN = true
+export const ED_APP_ISOPEN = false
 
 export const ED_APP_STATUS_OPEN = `
 Executive Director applications are currently open!
@@ -128,7 +128,7 @@ Executive Director applications are currently closed.
 export const ED_APP_STATUS = ED_APP_STATUS_OPEN
 
 // DC
-export const DC_APP_ISOPEN = true
+export const DC_APP_ISOPEN = false
 
 export const DC_APP_STATUS_OPEN = `
 Directors Council applications are currently open!
@@ -141,7 +141,7 @@ Directors Council applications are currently closed.
 export const DC_APP_STATUS = DC_APP_STATUS_OPEN
 
 // BOA
-export const BOA_APP_ISOPEN = true
+export const BOA_APP_ISOPEN = false
 
 export const BOA_APP_STATUS_OPEN = `
 Board of Advisors applications are currently open!
