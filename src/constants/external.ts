@@ -41,15 +41,11 @@ export const DONATE_MAASU_URL =
 export const DONATE_MAA_URL =
   'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LFY3B4ZT98TVN&source=url'
 
-export const DONATE_HERO_IMG =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FDonate%2FdonateHero.jpg?alt=media&token=12fa83b1-0385-47cf-ad34-f7e967389b52'
-
 // -----------------------------------------------------
 // Hosting a Conference
 // -----------------------------------------------------
 
-export const HOST_FORM =
-  'https://forms.gle/F6dKzQ8Vo1YgPLQU8'
+export const HOST_FORM = 'https://forms.gle/F6dKzQ8Vo1YgPLQU8'
 
 export const HOST_BID_REQUIREMENTS =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FHost%2FbidRequirements.pdf?alt=media&token=58dd172b-a132-4e2c-9705-5767acf358df'
@@ -67,9 +63,6 @@ export const DC_PROJECT_APP_FORM =
 // Alumni
 // -----------------------------------------------------
 
-export const MAA_LOGO_IMG =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAlumni%2Fmaa.png?alt=media&token=4a95987b-0377-46d6-8740-12d8f58aee8b'
-
 export const MAA_ALUMNI_DIR_FORM =
   'https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1'
 
@@ -81,13 +74,13 @@ export const MAA_MEMBERSHIP_FEE_URL =
 // -----------------------------------------------------
 
 export const AWARDS_CC_LINK =
-'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Charles%20Chang%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=25f7a2da-ed8f-4b92-ad8d-58d72bea1e83'
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Charles%20Chang%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=25f7a2da-ed8f-4b92-ad8d-58d72bea1e83'
 
 export const AWARDS_MS_LINK =
-'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Midwestern%20Star%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=1eafccec-89dd-4caf-948e-93f24ab4dec3'
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Midwestern%20Star%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=1eafccec-89dd-4caf-948e-93f24ab4dec3'
 
 export const AWARDS_BOA_LINK =
-'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20MAASU%20Board%20of%20Advisors%20Award%20-%20Google%20Docs.pdf?alt=media&token=0b78ed75-6db8-46ef-82ef-9e408e5f6076'
+  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20MAASU%20Board%20of%20Advisors%20Award%20-%20Google%20Docs.pdf?alt=media&token=0b78ed75-6db8-46ef-82ef-9e408e5f6076'
 
 // -----------------------------------------------------
 // Annual
