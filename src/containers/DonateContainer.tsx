@@ -9,7 +9,6 @@ import {
   DONATE_STMT_1,
   DONATE_STMT_2,
   DONATE_MAASU_URL,
-  DONATE_HERO_IMG,
 } from 'constants/strings'
 
 type DonateProps = RouteComponentProps & {}
@@ -22,12 +21,6 @@ export const DonateContainer: FC<DonateProps> = () => {
       <TextBlock title="Donate">
         <p>{DONATE_STMT_1}</p>
         <p>{DONATE_STMT_2}</p>
-
-        <img
-          className="w-100"
-          src={DONATE_HERO_IMG}
-          alt="donate to our cause"
-        />
 
         <p>
           If you have any questions, please reach out to the{' '}
