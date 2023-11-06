@@ -141,30 +141,30 @@ Directors Council applications are currently closed.
 export const DC_APP_STATUS = DC_APP_STATUS_CLOSED
 
 // BOA
-export const BOA_APP_ISOPEN = false
+export const BOA_APP_ISOPEN = true
 
 export const BOA_APP_STATUS_OPEN = `
-Board of Advisors applications are currently open!
+Board of Advisors applications are currently open! Applications close on November 28th at 11:59 CST.
 `
 
 export const BOA_APP_STATUS_CLOSED = `
 Board of Advisors applications are currently closed.
 `
 
-export const BOA_APP_STATUS = BOA_APP_STATUS_CLOSED
+export const BOA_APP_STATUS = BOA_APP_STATUS_OPEN
 
 // ECC
-export const ECC_APP_ISOPEN = false
+export const ECC_APP_ISOPEN = true
 
 export const ECC_APP_STATUS_OPEN = `
-Executive Coordinating Committee applications are currently open!
+Executive Coordinating Committee applications are currently open! Applications close on November 28th at 11:59 CST.
 `
 
 export const ECC_APP_STATUS_CLOSED = `
 Executive Coordinating Committee applications are currently closed.
 `
 
-export const ECC_APP_STATUS = ECC_APP_STATUS_CLOSED
+export const ECC_APP_STATUS = ECC_APP_STATUS_OPEN
 
 // -----------------------------------------------------
 // Members

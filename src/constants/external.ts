@@ -27,10 +27,10 @@ export const ED_APP_LINK =
 export const DC_APP_LINK =
   'https://drive.google.com/file/d/1jIdKeR302mdhik5IXZQzZiZIdCokWU6X/view'
 export const BOA_APP_LINK =
-  'https://drive.google.com/file/d/1wB78uCwHvlT8625-AMysVsJiFx1AAsLC/view'
+  'https://docs.google.com/document/d/13n_my0_yWnj5aw1JBQV59s7Lm2kI5gT3'
 
 export const ECC_APP_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Applications%2F2023-2024%20Executive%20Coordinating%20Committee%20Application%20Descriptions%20-%20Google%20Docs%20-%20Google%20Docs.pdf?alt=media&token=22e82de5-56fe-4fa1-ad7e-8b29ba626aa2'
+  'https://docs.google.com/document/d/1Q505E72o6IlE59YreIs1Wl1sSXCWosYD3Yht8oDwuUw'
 
 // -----------------------------------------------------
 // Donate
