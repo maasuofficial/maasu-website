@@ -15,8 +15,9 @@
     in
     {
       devShells.default = pkgs.mkShell {
-        buildInputs = [
+        buildInputs = with pkgs; [
           node_nixpkgs.legacyPackages.${system}.nodejs
+          prettierd
         ];
         shellHook = ''
           set -o vi
