@@ -9,7 +9,6 @@ The website for the Midwest Asian Pacific Islander Desi American Students Union
 **Staging** 
 
 [![Netlify Staging Status](https://api.netlify.com/api/v1/badges/04501a98-4092-4e51-8024-6181df043a0b/deploy-status)](https://staging.maasu.org)
-[![Build Status](https://travis-ci.com/maasu-org/maasu.svg?branch=staging)](https://travis-ci.com/maasu-org/maasu)
 
 ## Table of Contents <a name="table-of-contents"></a>
 
