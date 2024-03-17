@@ -5,7 +5,7 @@
     flake-utils.url = "github:numtide/flake-utils";
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
 
-    node_nixpkgs.url = "github:nixos/nixpkgs/46688f8eb5cd6f1298d873d4d2b9cf245e09e88e"; # v18.17.1
+    node_nixpkgs.url = "github:nixos/nixpkgs/a343533bccc62400e8a9560423486a3b6c11a23b"; # v20.11.1
   };
 
   outputs =
