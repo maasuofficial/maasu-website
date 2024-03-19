@@ -73,9 +73,6 @@ export const MAA_MEMBERSHIP_FEE_URL =
 // Awards
 // -----------------------------------------------------
 
-export const AWARDS_CC_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Charles%20Chang%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=25f7a2da-ed8f-4b92-ad8d-58d72bea1e83'
-
 export const AWARDS_MS_LINK =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Midwestern%20Star%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=1eafccec-89dd-4caf-948e-93f24ab4dec3'
 
