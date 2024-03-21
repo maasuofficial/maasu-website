@@ -5,7 +5,6 @@ import { awardsReducer } from './Awards/reducers'
 import { boardReducer } from './Board/reducers'
 import { conferencesReducer } from './Conferences/reducers'
 import { eventsReducer } from './Events/reducers'
-import { membersReducer } from './Members/reducers'
 import { modalsReducer } from './Modals/reducers'
 import { newslettersReducer } from './Newsletters/reducers'
 import { reportsReducer } from './Reports/reducers'
@@ -17,7 +16,6 @@ export const rootReducer = combineReducers({
   board: boardReducer,
   conferences: conferencesReducer,
   events: eventsReducer,
-  members: membersReducer,
   modals: modalsReducer,
   newsletters: newslettersReducer,
   reports: reportsReducer,
