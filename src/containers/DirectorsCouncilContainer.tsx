@@ -5,13 +5,7 @@ import { A } from 'components/Link'
 import { Container } from 'components/Container'
 import { EA } from 'components/EmailAnchor'
 import { TextBlock } from 'components/TextBlock'
-import {
-  DC_APP_LINK,
-  DC_APP_ISOPEN,
-  DC_APP_STATUS,
-  DC_PROJECT_LIST,
-  DC_PROJECT_APP_FORM,
-} from 'constants/strings'
+import { DC_PROJECT_LIST, DC_PROJECT_APP_FORM } from 'constants/strings'
 
 type Props = RouteComponentProps & {}
 
@@ -30,11 +24,6 @@ export const DirectorsCouncilContainer: FC<Props> = () => {
           Director of Finance & Partnerships, and the Director of Programs &
           Assessment. Council members serve two-year terms.
         </p>
-        {DC_APP_ISOPEN && (
-          <p>
-            {DC_APP_STATUS} <A href={DC_APP_LINK}>Apply here.</A>
-          </p>
-        )}
       </TextBlock>
       <TextBlock title="Directors Council Committee">
         <p>

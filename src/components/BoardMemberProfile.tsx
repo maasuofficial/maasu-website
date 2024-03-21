@@ -1,15 +1,12 @@
-import React, { FC, useState } from 'react'
-import { BoardMember } from 'store/Board/types'
-import { Link } from '@reach/router'
+import React, { useState } from 'react'
 import classnames from 'classnames'
+import { BoardMember } from '../data/board'
 
 type Props = {
   member: BoardMember
 }
 
-export const BoardMemberProfile: FC<Props> = ({ member }) => {
-  const name = member.alias || `${member.fname} ${member.mname} ${member.lname}`
-
+export function BoardMemberProfile({ member }: Props) {
   const [isHovered, setIsHovered] = useState(false)
 
   const handleMouseOver = () => setIsHovered(true)
@@ -21,15 +18,15 @@ export const BoardMemberProfile: FC<Props> = ({ member }) => {
       onMouseLeave={handleMouseLeave}
       className="w-50 w-25-ns"
     >
-      <Link to={`/board/${member.id}`} className="c-inh tdn">
+      <a href={`mailto:${member.email}`} className="c-inh tdn">
         <div className="w-100 h-100 pa2 tc">
-          <img src={member.imageUrl} alt={name} className="w-100 br" />
-          <p className={classnames('ma0 fw700', { tdu: isHovered })}>{name}</p>
-          <span className={classnames({ tdu: isHovered })}>
-            {member.positionTitle}
-          </span>
+          <img src={member.image} alt={member.name} className="w-100 br" />
+          <p className={classnames('ma0 fw700', { tdu: isHovered })}>
+            {member.name} ({member.pronouns})
+          </p>
+          <span className={classnames({ tdu: isHovered })}>{member.title}</span>
         </div>
-      </Link>
+      </a>
     </div>
   )
 }

@@ -1,6 +1,5 @@
 import { AlumniState } from './Alumni/types'
 import { AwardState } from './Awards/types'
-import { BoardState } from './Board/types'
 import { ConferenceState } from './Conferences/types'
 import { HEventState } from './Events/types'
 import { ModalState } from './Modals/types'
@@ -11,7 +10,6 @@ import { ResourceState } from './Resources/types'
 export type AppState = {
   alumni: AlumniState
   awards: AwardState
-  board: BoardState
   conferences: ConferenceState
   events: HEventState
   modals: ModalState

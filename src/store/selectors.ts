@@ -1,6 +1,5 @@
 export * from './Alumni/selectors'
 export * from './Awards/selectors'
-export * from './Board/selectors'
 export * from './Conferences/selectors'
 export * from './Events/selectors'
 export * from './Modals/selectors'

@@ -7,6 +7,7 @@
     "dev": "next dev src",
     "build:functions": "tsc -p functions",
     "build": "react-scripts build && yarn build:functions",
+    "build:local": "NODE_OPTIONS=--openssl-legacy-provider yarn build",
     "test:function": "yarn build:functions && node functions/testHandler.js",
     "test:functions": "yarn build:functions && yarn jest -c functions/jest.config.js",
     "test": "react-scripts test",
