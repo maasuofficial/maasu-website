@@ -3,7 +3,7 @@
   "version": "0.3.0",
   "private": false,
   "scripts": {
-    "start": "BROWSER=none react-scripts start",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider BROWSER=none react-scripts start",
     "dev": "next dev src",
     "build:functions": "tsc -p functions",
     "build": "react-scripts build && yarn build:functions",

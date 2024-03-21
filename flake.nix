@@ -17,6 +17,7 @@
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; [
           node_nixpkgs.legacyPackages.${system}.nodejs
+          node_nixpkgs.legacyPackages.${system}.nodePackages.yarn
           prettierd
         ];
         shellHook = ''
