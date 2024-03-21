@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Link } from 'components/Link'
-import { APP_NAME_LONG, SOCIAL, YEAR } from 'constants/strings'
+import { APP_NAME_LONG, SOCIAL } from 'constants/strings'
 import { LOGO_HEIGHT } from 'constants/numeric'
 import { Icon, IconName } from 'components/Icon'
 import { getLogo } from 'utils/files'
@@ -46,7 +46,8 @@ export const FooterComponent: FC = () => {
           </div>
 
           <div>
-            &copy; {YEAR} {APP_NAME_LONG}. All Rights Reserved.
+            &copy; {new Date().getUTCFullYear()} {APP_NAME_LONG}. All Rights
+            Reserved.
           </div>
         </div>
       </div>
