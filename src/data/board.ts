@@ -1,7 +1,7 @@
 export type BoardMember = {
   id: string
   name: string
-  pronouns: 'she/her' | 'he/him' | 'she/they'
+  pronouns: 'she/her' | 'she/him' | 'he/him' | 'she/they' | 'they/them'
   type: 'ED' | 'ECC' | 'DC' | 'BOA'
   title?: string
   email: string
@@ -21,6 +21,17 @@ export const board: BoardMember[] = [
     email: 'execdirector@maasu.org',
     image: '/assets/photos/board/jlee.jpg',
     desc: 'The executive director serves as the liaison between the ECC, Directors Council, and the Board of Advisors. They build relationships and organizational partnerships with national and regional APIA organizations, and manage the MAASU financial budgets and accounts, including filing proper fiscal paperwork necessary for nonprofit status.',
+  },
+  {
+    id: 'szhong',
+    name: 'Sherrye Zhong',
+    pronouns: 'she/her',
+    school: 'Michigan State University',
+    cityState: 'East Lansing, MI',
+    type: 'ECC',
+    title: 'Public Relations',
+    email: 'pr@maasu.org',
+    image: '/assets/photos/board/szhong.jpg',
   },
   {
     id: 'aandersen',
@@ -57,6 +68,15 @@ export const board: BoardMember[] = [
     email: 'memoutreach@maasu.org',
     desc: 'The membership outreach chair established relations with new schools, communicating MAASU’s mission and the benefits of becoming a member school. They research history of involvement of member and potential schools.',
     image: '/assets/photos/board/nly.jpg',
+  },
+  {
+    id: 'sshr',
+    name: 'Sam Shr',
+    pronouns: 'they/them',
+    type: 'ECC',
+    title: 'Programming',
+    email: 'programming@maasu.org',
+    image: '/assets/photos/board/sshr.jpg',
   },
   {
     id: 'ssrinatha',
@@ -99,6 +119,15 @@ export const board: BoardMember[] = [
     title: 'Director of Technical Networking',
     email: 'tech.director@maasu.org',
     image: '/assets/photos/board/sbossley.jpg',
+  },
+  {
+    id: 'bhill',
+    name: 'Elizabeth M Hill',
+    pronouns: 'she/him',
+    type: 'DC',
+    title: 'Director of Programming',
+    email: 'programming.director@maasu.org',
+    image: '/assets/photos/board/bhill.jpg',
   },
   {
     id: 'rmiao',

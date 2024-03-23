@@ -13,6 +13,10 @@ export const memberList: Member[] = [
     orgUrl: 'https://www.instagram.com/aaa.iu/',
   },
   {
+    institution: 'Michigan State University',
+    orgUrl: 'https://www.facebook.com/msu.apaso',
+  },
+  {
     institution: 'Minnesota State University, Mankato',
     orgUrl: 'https://www.facebook.com/AAAMNSU/',
   },
