@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { Block } from './Block'
 
 type Props = {
@@ -7,7 +7,7 @@ type Props = {
   className?: string
 }
 
-export const TextBlock: FC<Props> = ({ children, title, className = '' }) => {
+export function TextBlock({ children, title, className = '' }: Props) {
   return (
     <Block>
       <section className={className}>

@@ -1,70 +1,111 @@
-import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { useDocumentTitle } from 'hooks/meta'
-import { Container } from 'components/Container'
-import { TextBlock } from 'components/TextBlock'
-import { A } from 'components/Link'
-import {
-  MISSION_PRELUDE,
-  MISSION_STMT_1,
-  MISSION_STMT_2,
-  MISSION_STMT_3,
-  MISSION_STMT_4,
-  MISSION_STMT_5,
-  PURPOSE_STMT_1,
-  PURPOSE_STMT_2,
-  PURPOSE_IMG_ALT,
-  PURPOSE_IMG_CAPTION,
-  SERVE_STMT_1,
-  SERVE_STMT_2,
-  MISSION_FIRST_MEETING,
-  STRATEGIC_PLAN,
-  STRATEGIC_PLAN_IMG,
-  STRATEGIC_PLAN_IMG_ALT,
-  STRATEGIC_PLAN_URL,
-} from 'constants/strings'
+import { useDocumentTitle } from '../hooks/meta'
+import { Container } from '../components/Container'
+import { TextBlock } from '../components/TextBlock'
+import { A } from '../components/Link'
 
-interface Props {}
-
-export const MissionContainer: FC<RouteComponentProps & Props> = () => {
+export function MissionContainer(_: RouteComponentProps) {
   useDocumentTitle('Our Mission')
 
   return (
     <Container>
       <TextBlock title="Our Purpose">
-        <p>{PURPOSE_STMT_1}</p>
-        <p>{PURPOSE_STMT_2}</p>
+        <p>
+          The Midwest Asian Pacific Islander Desi American Students Union
+          (MAASU) is a 501(c)(3) nonprofit organization that began in response
+          to a need for political unity among Asian Pacific Islander American
+          students in the Midwest. By 1990, there were more than 20 universities
+          in the Midwest that had formed Asian Pacific Islander American (APIA)
+          organizations. Some had been around for years, while others were still
+          in their infancy.
+        </p>
+        <p>
+          Students felt a need for an organization that would support the growth
+          of their groups and organize Midwestern Asian Pacific Islander
+          American students for political activism. MAASU works to recognize the
+          needs of the Asian Pacific Islander American community by assisting
+          schools with the establishment of Asian Pacific Islander American
+          student organizations, promoting leadership among students, addressing
+          educational needs and rights of the Asian Pacific Islander American
+          community, and developing a channel of communication among Asian
+          Pacific Islander American student organizations across the Midwest.
+        </p>
         <img
           className="w-100 mxa"
-          src={MISSION_FIRST_MEETING}
-          alt={PURPOSE_IMG_ALT}
+          src="/assets/photos/first-meeting.jpg"
+          alt="The first MAASU meeting"
         />
-        <div className="fsi w-100 w-90-ns mxa tc">{PURPOSE_IMG_CAPTION}</div>
+        <div className="fsi w-100 w-90-ns mxa tc">
+          The first MAASU meeting. Front row (from left to right): Tom Lo
+          (Purdue), Charles Chang (Ohio State), Nancy Kim (Michigan State), name
+          unknown (Miami University), Yeeleng Hang (Michigan State), Jessica
+          Kimura (Michigan State). Second Row: name unknown (Miami Univ.), name
+          unknown (Miami Univ.), John Kim (Miami Univ.), unknown, Wen Hsu
+          (Michigan State), Emily (Oberlin College). Third Row: Allan Lo (Ohio
+          State), Mary Kim (Ohio State), Nimesh M. Patel (Michigan State), Mr.
+          Tong (Univ. of Michigan), Joanna Su (Univ of Michigan), Linus Huang
+          (Oberlin College), name unknown (Univ. of Michigan). Photographer was
+          Erika Seo (Ohio State).
+        </div>
       </TextBlock>
       <TextBlock title="Our Mission">
-        <p>{MISSION_PRELUDE}</p>
+        <p>
+          MAASU strives to recognize the needs of the Asian Pacific Islander
+          Desi American (APIDA) community by
+        </p>
         <ul>
-          <li>{MISSION_STMT_1}</li>
-          <li>{MISSION_STMT_2}</li>
-          <li>{MISSION_STMT_3}</li>
-          <li>{MISSION_STMT_4}</li>
-          <li>{MISSION_STMT_5}</li>
+          <li>
+            Promoting leadership among APIDA students through programs
+            including, but not limited to, the Leadership Retreat, Spring
+            Conference, and other various programming
+          </li>
+          <li>
+            Assisting schools with the establishment of APIDA student
+            organizations, an APIDA cultural center and an Asian Pacific
+            Islander American Studies program
+          </li>
+          <li>
+            Supporting and encouraging all APIDA students to work toward social
+            change by providing a forum for social consciousness
+          </li>
+          <li>
+            Developing and maintaining a channel of communication for APIDA
+            student organizations in the Midwest through emails, newsletters and
+            networking
+          </li>
+          <li>
+            Uniting and strengthening the APIDA community stance against all
+            forms of oppression
+          </li>
         </ul>
       </TextBlock>
       <TextBlock title="Who We Serve">
-        <p>{SERVE_STMT_1}</p>
-        <p>{SERVE_STMT_2}</p>
+        <p>
+          Our primary outreach is to undergraduate college students located in
+          the Midwest region. We are broadening our scope to include high school
+          students and graduate students.
+        </p>
+        <p>
+          On average, around 20 colleges and universities are engaged with MAASU
+          annually spanning the following states: Colorado, Illinois, Indiana,
+          Iowa, Kansas, Michigan, Minnesota, Missouri, Nebraska, Tennessee,
+          Oklahoma, Ohio, and Wisconsin.
+        </p>
       </TextBlock>
       <TextBlock title="Strategic Plan">
         <p>
-          <span>{STRATEGIC_PLAN}</span>
-          <A href={STRATEGIC_PLAN_URL}>here</A>.
+          <span>
+            MAASU strives to recognize the needs of its community by developing
+            a strategic plan for the next few years. See our strategic plan for
+            2020-2024
+          </span>{' '}
+          <A href="/assets/2020-2024-strategic-plan.pdf">here</A>.
         </p>
-        <A href={STRATEGIC_PLAN_URL}>
+        <A href="/assets/2020-2024-strategic-plan.pdf">
           <img
             className="db w-80 mxa"
-            src={STRATEGIC_PLAN_IMG}
-            alt={STRATEGIC_PLAN_IMG_ALT}
+            src="/assets/photos/2020-strategic-plan.jpg"
+            alt="A preview of the strategic plan."
           />
         </A>
       </TextBlock>

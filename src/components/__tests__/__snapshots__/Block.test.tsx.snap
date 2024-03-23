@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`renders a matching snapshot 1`] = `
-<div
-  className="my4 "
->
-  hello
-</div>
-`;

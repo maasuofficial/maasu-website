@@ -12,12 +12,6 @@ export const HERO_BANNER_IMG =
 export const STRATEGIC_PLAN_IMG =
   'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FMission%2FstrategicPlan.jpg?alt=media&token=caf1a130-bf56-4c56-bc34-13f048b2ff30'
 
-export const STRATEGIC_PLAN_URL =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Plans%2F20-24.pdf?alt=media&token=6e86c645-0c70-4cb1-8b1f-18a95edc6118'
-
-export const MISSION_FIRST_MEETING =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FMission%2FfirstMeeting.jpg?alt=media&token=ef300262-d49b-41d9-a608-8eb473623585'
-
 // -----------------------------------------------------
 // Board
 // -----------------------------------------------------

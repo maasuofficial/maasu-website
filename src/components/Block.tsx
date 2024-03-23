@@ -1,10 +1,10 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 
 type Props = {
   children: ReactNode
   className?: string
 }
 
-export const Block: FC<Props> = ({ children, className = '' }) => {
+export function Block({ children, className = '' }: Props) {
   return <div className={`my4 ${className}`}>{children}</div>
 }
