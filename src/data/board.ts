@@ -23,6 +23,17 @@ export const board: BoardMember[] = [
     desc: 'The executive director serves as the liaison between the ECC, Directors Council, and the Board of Advisors. They build relationships and organizational partnerships with national and regional APIA organizations, and manage the MAASU financial budgets and accounts, including filing proper fiscal paperwork necessary for nonprofit status.',
   },
   {
+    id: 'dlee',
+    name: 'Deborah Lee',
+    pronouns: 'she/her',
+    school: 'The Ohio State University',
+    cityState: 'Columbus, OH',
+    type: 'ECC',
+    title: 'Executive Chair',
+    email: 'chair@maasu.org',
+    image: '/assets/photos/board/dlee.jpg',
+  },
+  {
     id: 'szhong',
     name: 'Sherrye Zhong',
     pronouns: 'she/her',
