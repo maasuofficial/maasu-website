@@ -2,6 +2,7 @@ import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from '../hooks/meta'
 import { Container } from '../components/Container'
 import { TextBlock } from '../components/TextBlock'
+import { A } from '../components/Link'
 import { BoardMemberProfile } from '../components/BoardMemberProfile'
 import { board } from '../data/board'
 
@@ -31,7 +32,10 @@ export function BoardContainer(_: RouteComponentProps) {
             ))}
         </div>
         <p className="my4 tc">
-          Executive Coordinating Committee applications are current closed.
+          Executive Coordinating Committee applications are currently open!{' '}
+          <A href="https://docs.google.com/forms/d/e/1FAIpQLSe03CO3UJuoHte4isx7JJRT9ZWnTt2CnqEce8FnFDlMm-H3Qw/viewform">
+            Apply here.
+          </A>
         </p>
       </section>
 
