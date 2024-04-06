@@ -90,56 +90,6 @@ in cultivating the next generation of leaders.
 `
 
 // -----------------------------------------------------
-// Alumni
-// -----------------------------------------------------
-
-export const MAA_PURPOSE_PRELUDE = `
-The MAASU Alumni Association (MAA) is a group for all MAASU alumni.
-MAA’s purpose is to continue building and sustaining lifelong
-relationships between MAASU and its alumni through the following
-ways:
-`
-
-export const MAA_PURPOSE_STMT_1 = `
-Providing social and career networking for alumni through a MAASU
-Alumni Directory
-`
-export const MAA_PURPOSE_STMT_2 = `
-Engaging students as future alumni
-`
-export const MAA_PURPOSE_STMT_3 = `
-Providing alumni opportunities to reconnect with MAASU
-`
-export const MAA_PURPOSE_STMT_4 = `
-Recognize alumni for various accomplishments and service
-`
-export const MAA_PURPOSE_STMT_5 = `
-Providing student travel stipends to attend MAASU Conferences
-`
-
-export const MAA_MEMBERSHIP_FEE = 30
-
-export const MAA_MEMBERSHIP_PRELUDE = `
-To become a MAA member, there is a one-time membership fee 
-of $${MAA_MEMBERSHIP_FEE} USD. MAA members will then be mailed 
-a complementary MAASU Alumni Association wine glass. If you 
-are interested in becoming a member of the MAASU Alumni 
-Association, please follow these steps:
-`
-
-export const MAA_MEMBERSHIP_STMT_1 = `
-Fill out the MAASU Alumni Directory Form
-`
-export const MAA_MEMBERSHIP_STMT_2 = `
-Provide a one-time membership payment of 
-$${MAA_MEMBERSHIP_FEE} USD
-`
-export const MAA_MEMBERSHIP_POST = `
-After completing these steps, access to the Alumni Directory
-will be granted and a MAA wine glass will be mailed to you.
-`
-
-// -----------------------------------------------------
 // Annual
 // -----------------------------------------------------
 

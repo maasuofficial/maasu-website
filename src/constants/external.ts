@@ -54,26 +54,6 @@ export const DC_PROJECT_APP_FORM =
   'https://docs.google.com/forms/d/e/1FAIpQLSfUsKp2kqs64fW6reA13IuN1ppAbmssytsKeDhyhqMB1MmIgw/viewform'
 
 // -----------------------------------------------------
-// Alumni
-// -----------------------------------------------------
-
-export const MAA_ALUMNI_DIR_FORM =
-  'https://docs.google.com/forms/d/e/1FAIpQLScepfU3sMqFNlCWTBBnV9ig2vTk6Z_E9Ar9MxmK8DnHKU30Gw/viewform?c=0&w=1'
-
-export const MAA_MEMBERSHIP_FEE_URL =
-  'https://www.paypal.com/cgi-bin/webscr&cmd=_s-xclick&hosted_button_id=NXTRNY49H77YQ'
-
-// -----------------------------------------------------
-// Awards
-// -----------------------------------------------------
-
-export const AWARDS_MS_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20Midwestern%20Star%20Award%20Application%20-%20Google%20Docs.pdf?alt=media&token=1eafccec-89dd-4caf-948e-93f24ab4dec3'
-
-export const AWARDS_BOA_LINK =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAwards%2F2023%2F2023%20MAASU%20Board%20of%20Advisors%20Award%20-%20Google%20Docs.pdf?alt=media&token=0b78ed75-6db8-46ef-82ef-9e408e5f6076'
-
-// -----------------------------------------------------
 // Annual
 // -----------------------------------------------------
 
