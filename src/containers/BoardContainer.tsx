@@ -3,12 +3,26 @@ import { useDocumentTitle } from '../hooks/meta'
 import { Container } from '../components/Container'
 import { TextBlock } from '../components/TextBlock'
 import { A } from '../components/Link'
-import { BoardMemberProfile } from '../components/BoardMemberProfile'
-import { board } from '../data/board'
+import { board, BoardMember } from '../data/board'
+
+function BoardMemberProfile({ member }: { member: BoardMember }) {
+  return (
+    <div className="w-50 w-25-ns hov-tdu">
+      <a href={`mailto:${member.email}`} className="c-inh tdn">
+        <div className="w-100 h-100 pa2 tc">
+          <img src={member.image} alt={member.name} className="w-100 br" />
+          <p className="ma0 fw700">
+            {member.name} ({member.pronouns})
+          </p>
+          <span>{member.title}</span>
+        </div>
+      </a>
+    </div>
+  )
+}
 
 export function BoardContainer(_: RouteComponentProps) {
   useDocumentTitle('Executive Board')
-
   return (
     <Container>
       <TextBlock title="Executive Board">

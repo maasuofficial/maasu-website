@@ -1,14 +1,10 @@
-import React, { FC } from 'react'
-import { Container } from 'components/Container'
-import { TextBlock } from 'components/TextBlock'
-import { useDocumentTitle } from 'hooks/meta'
+import { Container } from '../components/Container'
+import { TextBlock } from '../components/TextBlock'
+import { useDocumentTitle } from '../hooks/meta'
 import { RouteComponentProps } from '@reach/router'
 
-type Props = RouteComponentProps & {}
-
-export const ConferenceInfoComponent: FC<Props> = () => {
+function ConferenceInfoContainer(_: RouteComponentProps) {
   useDocumentTitle('Our Conferences')
-
   return (
     <Container>
       <TextBlock title="Our Conferences">
@@ -69,3 +65,5 @@ export const ConferenceInfoComponent: FC<Props> = () => {
     </Container>
   )
 }
+
+export default ConferenceInfoContainer

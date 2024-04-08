@@ -20,9 +20,6 @@ export const ED_APP_LINK =
   'https://drive.google.com/file/d/1roJRWi5RcZZhcq8wTgSR1Rw6lNqMd-A3/view'
 export const DC_APP_LINK =
   'https://drive.google.com/file/d/1jIdKeR302mdhik5IXZQzZiZIdCokWU6X/view'
-export const BOA_APP_LINK =
-  'https://docs.google.com/document/d/13n_my0_yWnj5aw1JBQV59s7Lm2kI5gT3'
-
 export const ECC_APP_LINK =
   'https://docs.google.com/document/d/1Q505E72o6IlE59YreIs1Wl1sSXCWosYD3Yht8oDwuUw'
 

@@ -1,16 +1,13 @@
-import React, { FC, Fragment } from 'react'
+import { Fragment } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { useDocumentTitle } from 'hooks/meta'
-import { A } from 'components/Link'
-import { EA } from 'components/EmailAnchor'
-import { TextBlock } from 'components/TextBlock'
-import { SOCIAL } from 'constants/strings'
+import { useDocumentTitle } from '../../hooks/meta'
+import { A } from '../../components/Link'
+import { EA } from '../../components/EmailAnchor'
+import { TextBlock } from '../../components/TextBlock'
+import { SOCIAL } from '../../constants/strings'
 
-type Props = RouteComponentProps & {}
-
-export const WAYFComponent: FC<Props> = () => {
+function WAYFContainer(_: RouteComponentProps) {
   useDocumentTitle('Where Are You From')
-
   return (
     <Fragment>
       <TextBlock title="The Where Are You From Project">
@@ -32,7 +29,7 @@ export const WAYFComponent: FC<Props> = () => {
         <p>
           If you are interested in reading stories, you can check out our{' '}
           <A href={SOCIAL.filter((s) => s.name === 'facebook')[0].url}>
-            facebook page
+            Facebook page
           </A>{' '}
           or view our monthly newsletters and read the stories there.
         </p>
@@ -44,3 +41,5 @@ export const WAYFComponent: FC<Props> = () => {
     </Fragment>
   )
 }
+
+export default WAYFContainer

@@ -5,9 +5,9 @@ import { AlumniContainer } from 'containers/AlumniContainer'
 import { AnnualReportsContainer } from 'containers/AnnualReportsContainer'
 import { AwardsContainer } from 'containers/AwardsContainer'
 import { BoardContainer } from 'containers/BoardContainer'
-import { BoardOfAdvisorsComponent } from 'components/BoardOfAdvisorsComponent'
+import BoardOfAdvisorsContainer from '../pages/boa'
 import { ConferencesContainer } from 'containers/ConferencesContainer'
-import { ConferenceInfoComponent } from 'components/ConferenceInfoComponent'
+import ConferenceInfoContainer from '../pages/conference-info'
 import { ContactContainer } from 'containers/ContactContainer'
 import { DirectorsCouncilContainer } from 'containers/DirectorsCouncilContainer'
 import {
@@ -21,10 +21,9 @@ import { MainContainer } from 'containers/MainContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
 import { MissionContainer } from 'containers/MissionContainer'
 import { NewslettersContainer } from 'containers/NewslettersContainer'
-import { PostRequestComponent } from 'components/PostRequestComponent'
 import { ProgramContainer } from 'containers/ProgramContainer'
 import { ResourcesContainer } from 'containers/ResourcesContainer'
-import { WAYFComponent } from 'components/WAYFComponent'
+import WAYFContainer from '../pages/programs/whereareyoufrom'
 
 export const Routes = () => {
   return (
@@ -37,18 +36,18 @@ export const Routes = () => {
         <BoardContainer path="/board" />
         <MembershipContainer path="/membership" />
         <DirectorsCouncilContainer path="/dc" />
-        <BoardOfAdvisorsComponent path="/boa" />
+        <BoardOfAdvisorsContainer path="/boa" />
 
         <HxstoryContainer path="/hxstory" />
         <HxstoryContainer path="/history" />
 
-        <ConferenceInfoComponent path="/conference-info" />
+        <ConferenceInfoContainer path="/conference-info" />
         <HostContainer path="/host" />
         <ConferencesContainer path="/conferences" />
 
         <ProgramContainer path="/programs">
           <MAASUxContainer path="/maasux" />
-          <WAYFComponent path="/whereareyoufrom" />
+          <WAYFContainer path="/whereareyoufrom" />
         </ProgramContainer>
 
         <AwardsContainer path="/awards" />
@@ -62,8 +61,6 @@ export const Routes = () => {
         <DonateContainer path="/donate" />
         <DonateCompleteContainer path="/donate-complete" />
         <ContactContainer path="/contact" />
-
-        <PostRequestComponent path="/pr" />
 
         <InvalidRoute code={404} default />
       </MainContainer>

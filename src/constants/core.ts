@@ -23,7 +23,7 @@ export const SOCIAL = [
     url: 'https://www.linkedin.com/company/maasu/',
     icon: 'linkedin-in',
   },
-]
+] as const
 
 export const IS_DEV_ENV =
   !process.env.NODE_ENV || process.env.NODE_ENV === 'development'

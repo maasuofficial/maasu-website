@@ -1,17 +1,12 @@
-import React, { FC } from 'react'
-import { Container } from 'components/Container'
-import { TextBlock } from 'components/TextBlock'
-import { EA } from 'components/EmailAnchor'
-import { A } from 'components/Link'
-import { useDocumentTitle } from 'hooks/meta'
+import { Container } from '../components/Container'
+import { TextBlock } from '../components/TextBlock'
+import { EA } from '../components/EmailAnchor'
+import { A } from '../components/Link'
+import { useDocumentTitle } from '../hooks/meta'
 import { RouteComponentProps } from '@reach/router'
-import { BOA_APP_LINK } from 'constants/strings'
 
-type Props = RouteComponentProps & {}
-
-export const BoardOfAdvisorsComponent: FC<Props> = () => {
+function BoardOfAdvisorsComponent(_: RouteComponentProps) {
   useDocumentTitle('Board of Advisors')
-
   return (
     <Container>
       <TextBlock title="Board of Advisors">
@@ -25,7 +20,9 @@ export const BoardOfAdvisorsComponent: FC<Props> = () => {
         </p>
         <p>
           For more information, please view our{' '}
-          <A href={BOA_APP_LINK}>application form.</A>
+          <A href="https://docs.google.com/document/d/13n_my0_yWnj5aw1JBQV59s7Lm2kI5gT3">
+            application form.
+          </A>
         </p>
         <p>
           Thank you for your interest in being a volunteer for the MAASU Board
@@ -36,3 +33,5 @@ export const BoardOfAdvisorsComponent: FC<Props> = () => {
     </Container>
   )
 }
+
+export default BoardOfAdvisorsComponent
