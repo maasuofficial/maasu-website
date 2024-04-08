@@ -1,34 +1,12 @@
-import React, { FC, useEffect } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { useDocumentTitle } from 'hooks/meta'
-import { connect, ConnectedProps } from 'react-redux'
-import { AppState } from 'store/types'
-import { fetchResources } from 'store/actions'
-import { A } from 'components/Link'
-import { Container } from 'components/Container'
-import { TextBlock } from 'components/TextBlock'
-import {
-  getIsFetchingResources,
-  getResources,
-  getResourcesError,
-} from 'store/selectors'
+import { useDocumentTitle } from '../hooks/meta'
+import { A } from '../components/Link'
+import { Container } from '../components/Container'
+import { TextBlock } from '../components/TextBlock'
+import { organizations } from '../data/resources'
 
-type Props = RouteComponentProps & ReduxProps & {}
-
-export const Resources: FC<Props> = ({
-  fetchResources,
-  isFetchingResources,
-  resources,
-  resourcesError,
-}) => {
+export function ResourcesContainer(_: RouteComponentProps) {
   useDocumentTitle('Organizations')
-
-  useEffect(() => {
-    if (resources && !resources.length && !resourcesError) {
-      fetchResources()
-    }
-  }, [fetchResources, resources, resourcesError])
-
   return (
     <Container className="tc">
       <TextBlock title="APIDA Organization Resources">
@@ -37,11 +15,10 @@ export const Resources: FC<Props> = ({
           communities near you.
         </p>
         <div>
-          {isFetchingResources ? (
-            <span>loading...</span>
-          ) : (
-            <ul className="my0 mxa dib tl">
-              {resources.map((r, i) => (
+          <ul className="my0 mxa dib tl">
+            {organizations
+              .sort((a, b) => a.title.localeCompare(b.title))
+              .map((r, i) => (
                 <li key={i}>
                   <A href={r.url}>
                     <span>{r.title}</span>
@@ -49,25 +26,9 @@ export const Resources: FC<Props> = ({
                   </A>
                 </li>
               ))}
-            </ul>
-          )}
+          </ul>
         </div>
       </TextBlock>
     </Container>
   )
 }
-
-const mapStateToProps = (state: AppState) => ({
-  isFetchingResources: getIsFetchingResources(state),
-  resources: getResources(state),
-  resourcesError: getResourcesError(state),
-})
-
-const mapDispatchToProps = {
-  fetchResources,
-}
-
-const connector = connect(mapStateToProps, mapDispatchToProps)
-type ReduxProps = ConnectedProps<typeof connector>
-
-export const ResourcesContainer = connector(Resources)
