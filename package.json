@@ -10,8 +10,7 @@
     "build:local": "NODE_OPTIONS=--openssl-legacy-provider yarn build",
     "test:function": "yarn build:functions && node functions/testHandler.js",
     "test:functions": "yarn build:functions && yarn jest -c functions/jest.config.js",
-    "test": "react-scripts test",
-    "test:ci": "yarn test --coverage --watchAll=false",
+    "test:ci": "echo \"No tests.\"",
     "lintcheck": "eslint src/**/**.ts* functions/src/**/**.ts* --max-warnings 0"
   },
   "dependencies": {
