@@ -1,17 +1,12 @@
-import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { useDocumentTitle } from 'hooks/meta'
-import { A } from 'components/Link'
-import { Container } from 'components/Container'
-import { EA } from 'components/EmailAnchor'
-import { TextBlock } from 'components/TextBlock'
-import { DC_PROJECT_LIST, DC_PROJECT_APP_FORM } from 'constants/strings'
+import { useDocumentTitle } from '../hooks/meta'
+import { A } from '../components/Link'
+import { Container } from '../components/Container'
+import { EA } from '../components/EmailAnchor'
+import { TextBlock } from '../components/TextBlock'
 
-type Props = RouteComponentProps & {}
-
-export const DirectorsCouncilContainer: FC<Props> = () => {
+export function DirectorsCouncilContainer(_: RouteComponentProps) {
   useDocumentTitle('Directors Council')
-
   return (
     <Container>
       <TextBlock title="Directors Council">
@@ -34,11 +29,14 @@ export const DirectorsCouncilContainer: FC<Props> = () => {
         </p>
         <p>
           Commitment is project based and a list of open and potential projects
-          can be found <A href={DC_PROJECT_LIST}>here</A>.
+          can be found <A href="https://bit.ly/3aZ9u87">here</A>.
         </p>
         <p>
           For more information please view our{' '}
-          <A href={DC_PROJECT_APP_FORM}>application form</A>.
+          <A href="https://docs.google.com/forms/d/e/1FAIpQLSfUsKp2kqs64fW6reA13IuN1ppAbmssytsKeDhyhqMB1MmIgw/viewform">
+            application form
+          </A>
+          .
         </p>
         <p>
           Thank you for your interest in being a volunteer for the MAASU

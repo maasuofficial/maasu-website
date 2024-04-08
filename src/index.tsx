@@ -5,7 +5,7 @@ import { store } from 'store/store'
 import { Routes } from 'routes/routes'
 import 'css/styles.scss'
 import * as serviceWorker from './serviceWorker'
-import 'constants/iconLibrary'
+import './iconLibrary'
 
 ReactDOM.render(
   <Provider store={store}>

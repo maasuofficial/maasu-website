@@ -2,7 +2,7 @@ import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from '../hooks/meta'
 import { Container } from '../components/Container'
 import { TextBlock } from '../components/TextBlock'
-import { MONTHS } from '../constants/strings'
+import { MONTHS } from '../constants'
 import { conferences } from '../data/conferences'
 import { getConferenceTypeName } from '../utils'
 

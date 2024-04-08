@@ -2,7 +2,7 @@ import { EA } from '../components/EmailAnchor'
 import { TextBlock } from '../components/TextBlock'
 import { RouteComponentProps } from '@reach/router'
 import { useDocumentTitle } from '../hooks/meta'
-import { MONTHS } from '../constants/strings'
+import { MONTHS } from '../constants'
 import { conferences } from '../data/conferences'
 
 export function MAASUxContainer(_: RouteComponentProps) {

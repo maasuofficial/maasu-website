@@ -4,7 +4,7 @@ import { useDocumentTitle } from '../../hooks/meta'
 import { A } from '../../components/Link'
 import { EA } from '../../components/EmailAnchor'
 import { TextBlock } from '../../components/TextBlock'
-import { SOCIAL } from '../../constants/strings'
+import { SOCIAL } from '../../constants'
 
 function WAYFContainer(_: RouteComponentProps) {
   useDocumentTitle('Where Are You From')

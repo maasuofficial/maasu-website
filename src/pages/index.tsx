@@ -1,6 +1,3 @@
-import React, { FC } from 'react'
-import { HomeContainer } from 'containers/HomeContainer'
+import { MissionContainer } from '../containers/MissionContainer'
 
-const Home: FC = () => <HomeContainer />
-
-export default Home
+export default MissionContainer

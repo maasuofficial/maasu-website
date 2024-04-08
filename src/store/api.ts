@@ -1,5 +1,7 @@
 import fetch from 'isomorphic-fetch'
-import { IS_DEV_ENV } from 'constants/strings'
+
+const IS_DEV_ENV =
+  !process.env.NODE_ENV || process.env.NODE_ENV === 'development'
 
 // constant REST url(s)
 

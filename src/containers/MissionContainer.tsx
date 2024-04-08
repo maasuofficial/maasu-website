@@ -6,7 +6,6 @@ import { A } from '../components/Link'
 
 export function MissionContainer(_: RouteComponentProps) {
   useDocumentTitle('Our Mission')
-
   return (
     <Container>
       <TextBlock title="Our Purpose">

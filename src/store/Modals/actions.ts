@@ -1,4 +1,4 @@
-import { OPEN_MODAL, CLOSE_MODAL } from 'constants/actions'
+import { OPEN_MODAL, CLOSE_MODAL } from '../../constants'
 import { ModalMeta } from './types'
 
 export const openModal = ({ classNames = '', children }: ModalMeta) => {

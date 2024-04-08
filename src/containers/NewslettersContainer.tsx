@@ -3,7 +3,7 @@ import { useDocumentTitle } from '../hooks/meta'
 import { A } from '../components/Link'
 import { Container } from '../components/Container'
 import { TextBlock } from '../components/TextBlock'
-import { MONTHS } from '../constants/strings'
+import { MONTHS } from '../constants'
 import { newsletters } from '../data/newsletters'
 
 export function NewslettersContainer(_: RouteComponentProps) {

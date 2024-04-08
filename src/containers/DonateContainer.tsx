@@ -1,45 +1,51 @@
-import React, { FC } from 'react'
 import { RouteComponentProps } from '@reach/router'
-import { EA } from 'components/EmailAnchor'
-import { useDocumentTitle } from 'hooks/meta'
-import { A } from 'components/Link'
-import { Container } from 'components/Container'
-import { TextBlock } from 'components/TextBlock'
-import {
-  DONATE_STMT_1,
-  DONATE_STMT_2,
-  DONATE_MAASU_URL,
-} from 'constants/strings'
+import { EA } from '../components/EmailAnchor'
+import { useDocumentTitle } from '../hooks/meta'
+import { A } from '../components/Link'
+import { Container } from '../components/Container'
+import { TextBlock } from '../components/TextBlock'
 
-type DonateProps = RouteComponentProps & {}
-
-export const DonateContainer: FC<DonateProps> = () => {
+export function DonateContainer(_: RouteComponentProps) {
   useDocumentTitle('Donate')
-
   return (
     <Container>
       <TextBlock title="Donate">
-        <p>{DONATE_STMT_1}</p>
-        <p>{DONATE_STMT_2}</p>
-
+        <p>
+          MAASU is a 501(c)(3) nonprofit student run organization. We rely on
+          community support to continue to aide, educate and connect students
+          across midwest campuses in leadership development and Asian Pacific
+          Islander American advocacy. It is with your financial support that we
+          are able to provide students with resources and events that connect
+          our shared identity.
+        </p>
+        <p>
+          MAASU believes in empowering students and cultivating strong leaders
+          within our local communities. Your donation would ensure the
+          continuation of these programs, such as the Leadership Summit and
+          Spring/Fall Conferences, and other programs. Please join us in
+          supporting young Asian Pacific Islander American student leaders by
+          making a tax deductible deduction today. Engagement of the younger
+          generation is more important than ever, and we hope you join us in
+          cultivating the next generation of leaders.
+        </p>
         <p>
           If you have any questions, please reach out to the{' '}
           <EA>directorscouncil@maasu.org</EA>.
         </p>
-
         <p className="fs1 fw700">
-          donate <A href={DONATE_MAASU_URL}>here</A>.
+          donate{' '}
+          <A href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2GPHWP7AYXHCQ&source=url">
+            here
+          </A>
+          .
         </p>
       </TextBlock>
     </Container>
   )
 }
 
-type DonateCompleteProps = RouteComponentProps & {}
-
-export const DonateCompleteContainer: FC<DonateCompleteProps> = () => {
+export function DonateCompleteContainer(_: RouteComponentProps) {
   useDocumentTitle('Thank You')
-
   return (
     <Container>
       <div className="mxa my9 tc">

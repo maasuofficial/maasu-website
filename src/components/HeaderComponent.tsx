@@ -1,15 +1,10 @@
-import React, { FC, Fragment } from 'react'
+import { Fragment } from 'react'
 import { Link } from '@reach/router'
-import { getLogo } from 'utils/files'
-import { DropdownMenu } from 'components/menu/DropdownMenu'
-import { ModalMenu } from 'components/menu/ModalMenu'
-import { APP_NAME_LONG } from 'constants/strings'
-import { HEADER_HEIGHT, LOGO_HEIGHT } from 'constants/numeric'
-import { MENU } from 'constants/menu'
+import { DropdownMenu } from './menu/DropdownMenu'
+import { ModalMenu } from './menu/ModalMenu'
+import { APP_NAME_LONG, HEADER_HEIGHT, LOGO_HEIGHT, MENU } from '../constants'
 
-interface Props {}
-
-export const HeaderComponent: FC<Props> = () => {
+export function HeaderComponent() {
   return (
     <Fragment>
       <header className="w-100 bg-bg-main posf z1">
@@ -20,7 +15,7 @@ export const HeaderComponent: FC<Props> = () => {
           >
             <Link to="/" className="df ai-c">
               <img
-                src={getLogo()}
+                src="/assets/branding/logo.svg"
                 alt={APP_NAME_LONG}
                 style={{ height: LOGO_HEIGHT }}
               />

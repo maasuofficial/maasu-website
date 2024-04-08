@@ -4,7 +4,6 @@ import { getIsModalOpen, getModalMeta } from 'store/selectors'
 import { closeModal } from 'store/Modals/actions'
 import styled from 'styled-components'
 import classnames from 'classnames'
-import { getKey, keys } from 'constants/keys'
 
 const modalId = 'modal-container-master'
 
@@ -21,11 +20,11 @@ export const ModalComponent: FC = () => {
     const handleFocus = (e: KeyboardEvent) => {
       const target = e.target as Node
 
-      switch (getKey(e)) {
-        case keys.ESCAPE:
+      switch (e.key) {
+        case 'Escape':
           dispatch(closeModal())
           break
-        case keys.TAB:
+        case 'Tab':
           if (!modal.contains(target)) {
             if (e.shiftKey) {
               focusElems[focusElems.length - 1].focus()

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react'
-import { OPEN_MODAL, CLOSE_MODAL } from 'constants/actions'
+import { OPEN_MODAL, CLOSE_MODAL } from '../../constants'
 
 export type ModalMeta = {
   classNames?: string
