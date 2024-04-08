@@ -1,5 +1,6 @@
 [build]
   command = "yarn build"
+  functions = "./functions/build"
   publish = "build/"
 
 [build.processing]
