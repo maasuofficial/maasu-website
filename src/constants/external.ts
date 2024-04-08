@@ -45,13 +45,6 @@ export const DC_PROJECT_APP_FORM =
   'https://docs.google.com/forms/d/e/1FAIpQLSfUsKp2kqs64fW6reA13IuN1ppAbmssytsKeDhyhqMB1MmIgw/viewform'
 
 // -----------------------------------------------------
-// Annual
-// -----------------------------------------------------
-
-export const ANNUAL_REPORT_IMG =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FAnnual%2FannualReport.jpg?alt=media&token=56006814-21b4-4497-ad94-be2a35008dbe'
-
-// -----------------------------------------------------
 // Post Requests
 // -----------------------------------------------------
 

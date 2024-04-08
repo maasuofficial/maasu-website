@@ -16,7 +16,6 @@ import {
 } from 'containers/DonateContainer'
 import { HostContainer } from 'containers/HostContainer'
 import { HxstoryContainer } from 'containers/HxstoryContainer'
-import { MAAContainer } from 'containers/MAAContainer'
 import { MAASUxContainer } from 'containers/MAASUxContainer'
 import { MainContainer } from 'containers/MainContainer'
 import { MembershipContainer } from 'containers/MembershipContainer'
@@ -56,8 +55,6 @@ export const Routes = () => {
         <ResourcesContainer path="/organizations" />
 
         <AlumniContainer path="/alumni" />
-
-        <MAAContainer path="/maa/*" />
 
         <AnnualReportsContainer path="/annual" />
         <NewslettersContainer path="/newsletter" />

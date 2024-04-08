@@ -21,11 +21,3 @@ deductible deduction today. Engagement of the younger generation
 is more important than ever, and we hope you join us
 in cultivating the next generation of leaders.
 `
-
-// -----------------------------------------------------
-// Annual
-// -----------------------------------------------------
-
-export const ANNUAL_REPORT_IMG_ALT = `
-A preview of the latest annual report.
-`
