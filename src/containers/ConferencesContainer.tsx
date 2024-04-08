@@ -4,6 +4,7 @@ import { Container } from '../components/Container'
 import { TextBlock } from '../components/TextBlock'
 import { MONTHS } from '../constants/strings'
 import { conferences } from '../data/conferences'
+import { getConferenceTypeName } from '../utils'
 
 export function ConferencesContainer(_: RouteComponentProps) {
   useDocumentTitle('Conferences')
@@ -40,7 +41,7 @@ export function ConferencesContainer(_: RouteComponentProps) {
                   c.id && (
                     <tr key={index}>
                       <td>{date}</td>
-                      <td>{c.type}</td>
+                      <td>{getConferenceTypeName(c.type)}</td>
                       <td>{c.title}</td>
                       <td>{`${c.host}, ${c.state}`}</td>
                     </tr>
