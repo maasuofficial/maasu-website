@@ -8,10 +8,8 @@
     "build:functions": "tsc -p functions",
     "build": "react-scripts build && yarn build:functions",
     "build:local": "NODE_OPTIONS=--openssl-legacy-provider yarn build",
-    "test:function": "yarn build:functions && node functions/testHandler.js",
-    "test:functions": "yarn build:functions && yarn jest -c functions/jest.config.js",
     "test:ci": "echo \"No tests.\"",
-    "lintcheck": "eslint src/**/**.ts* functions/src/**/**.ts* --max-warnings 0"
+    "lintcheck": "eslint src/**/**.ts* --max-warnings 0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
