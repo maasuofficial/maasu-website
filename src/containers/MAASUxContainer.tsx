@@ -1,123 +1,70 @@
-import React, { FC, useEffect } from 'react'
-import { connect, ConnectedProps } from 'react-redux'
-import { EA } from 'components/EmailAnchor'
-import { TextBlock } from 'components/TextBlock'
-import { AppState } from 'store/types'
+import { EA } from '../components/EmailAnchor'
+import { TextBlock } from '../components/TextBlock'
 import { RouteComponentProps } from '@reach/router'
-import { useDocumentTitle } from 'hooks/meta'
-import { fetchConferences } from 'store/actions'
-import {
-  getIsFetchingConferences,
-  getConferences,
-  getConferencesError,
-} from 'store/selectors'
-import { MAASUX, MAASUX_STMT_1, MAASUX_STMT_2, MONTHS } from 'constants/strings'
-import { SkeletonProvider, SkeletonConsumer } from 'components/Skeleton'
+import { useDocumentTitle } from '../hooks/meta'
+import { MONTHS } from '../constants/strings'
+import { conferences } from '../data/conferences'
 
-type Props = RouteComponentProps & ReduxProps & {}
-
-export const MAASUx: FC<Props> = ({
-  isFetchingConferences,
-  fetchConferences,
-  conferences,
-  conferencesError,
-}) => {
+export function MAASUxContainer(_: RouteComponentProps) {
   useDocumentTitle('MAASUx')
-
-  const numConferenceSkeletons = 17
-
-  useEffect(() => {
-    if (!conferences.length && !conferencesError.length) {
-      fetchConferences()
-    }
-  }, [conferences, fetchConferences, conferencesError])
-
   return (
-    <SkeletonProvider isLoading={true}>
+    <div>
       <TextBlock title="MAASUx">
-        <p>{MAASUX_STMT_1}</p>
-        <p>{MAASUX_STMT_2}</p>
+        <p>
+          MAASUx is a regional event, coordinated in collaboration with a campus
+          host organization, designed to create additional opportunities to
+          engage the midwest APIDA student community. MAASUx is a free event
+          designed to attract college students from surrounding campuses to
+          participate in educational workshops and fun activities. Through the
+          more intimate setting of MAASUx programs, students can engage in
+          creating high-quality connections with their peers and have the
+          opportunity to reflect on their intersecting identities and
+          experiences. These events are normally attended by 50-100 students.
+        </p>
+        <p>
+          MAASUx was initially launched in 2010 as MAASU Mixers before changing
+          its name in summer 2016. Each MAASUx event began having a programming
+          theme in 2017.
+        </p>
         <p>
           If your school is interested in hosting a MAASUx, please contact our
           MAASU Programming Chairs at <EA>programming@maasu.org</EA>.
         </p>
       </TextBlock>
       <TextBlock title="Previous MAASUx Hosts">
-        {!conferencesError && (
-          <table className="w-100 mb4">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Theme</th>
-                <th>Location</th>
-              </tr>
-            </thead>
-            <tbody>
-              {isFetchingConferences &&
-                [...Array(numConferenceSkeletons)].map((_, i) => (
-                  <tr key={i}>
-                    <td>
-                      <SkeletonConsumer
-                        width={120 + Math.random() * 20}
-                        height={20}
-                      />
-                    </td>
-                    <td>
-                      <SkeletonConsumer
-                        width={40 + Math.random() * 300}
-                        height={20}
-                      />
-                    </td>
-                    <td>
-                      <SkeletonConsumer
-                        width={140 + Math.random() * 200}
-                        height={20}
-                        className=""
-                      />
-                    </td>
-                  </tr>
-                ))}
+        <table className="w-100 mb4">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Theme</th>
+              <th>Location</th>
+            </tr>
+          </thead>
+          <tbody>
+            {conferences
+              .filter((c) => c.type === 'MX')
+              .map((c, index) => {
+                const d = new Date(c.date)
+                const ye = d.getFullYear()
+                const mo = MONTHS[d.getMonth()]
 
-              {conferences
-                .filter((c) => c.type === MAASUX.value)
-                .map((c, index) => {
-                  const d = new Date(c.date)
-                  const ye = d.getFullYear()
-                  const mo = MONTHS[d.getMonth()]
+                const date = c.isApproxDate
+                  ? `${mo}, ${ye}`
+                  : `${mo} ${d.getDate()}, ${ye}`
 
-                  const date = c.isApproxDate
-                    ? `${mo}, ${ye}`
-                    : `${mo} ${d.getDate()}, ${ye}`
-
-                  return (
-                    c.id && (
-                      <tr key={index}>
-                        <td>{date}</td>
-                        <td>{c.title}</td>
-                        <td>{`${c.host}, ${c.state}`}</td>
-                      </tr>
-                    )
+                return (
+                  c.id && (
+                    <tr key={index}>
+                      <td>{date}</td>
+                      <td>{c.title}</td>
+                      <td>{`${c.host}, ${c.state}`}</td>
+                    </tr>
                   )
-                })}
-            </tbody>
-          </table>
-        )}
+                )
+              })}
+          </tbody>
+        </table>
       </TextBlock>
-    </SkeletonProvider>
+    </div>
   )
 }
-
-const mapStateToProps = (state: AppState) => ({
-  isFetchingConferences: getIsFetchingConferences(state),
-  conferences: getConferences(state),
-  conferencesError: getConferencesError(state),
-})
-
-const mapDispatchToProps = {
-  fetchConferences,
-}
-
-const connector = connect(mapStateToProps, mapDispatchToProps)
-type ReduxProps = ConnectedProps<typeof connector>
-
-export const MAASUxContainer = connector(MAASUx)

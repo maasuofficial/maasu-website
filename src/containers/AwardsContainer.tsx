@@ -9,7 +9,7 @@ import {
   midwesternStarAwardees,
   boaAwardees,
 } from '../data/awards'
-import { sortByDate } from '../utils/sorting'
+import { sortByDate } from '../utils'
 
 export function AwardsContainer(_: RouteComponentProps) {
   useDocumentTitle('Awards')

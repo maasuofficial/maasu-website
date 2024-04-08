@@ -36,15 +36,6 @@ export const DONATE_MAA_URL =
   'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LFY3B4ZT98TVN&source=url'
 
 // -----------------------------------------------------
-// Hosting a Conference
-// -----------------------------------------------------
-
-export const HOST_FORM = 'https://forms.gle/F6dKzQ8Vo1YgPLQU8'
-
-export const HOST_BID_REQUIREMENTS =
-  'https://firebasestorage.googleapis.com/v0/b/maasu-master.appspot.com/o/Pages%2FHost%2FbidRequirements.pdf?alt=media&token=58dd172b-a132-4e2c-9705-5767acf358df'
-
-// -----------------------------------------------------
 // Directors Council
 // -----------------------------------------------------
 
