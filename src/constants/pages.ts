@@ -1,4 +1,15 @@
 // -----------------------------------------------------
+// Hxstory
+// -----------------------------------------------------
+
+export const HXSTORY_PRELUDE = `
+MAASU uses the spelling hxstory instead of history. Traditional history
+tends to neglect the wonderful stories and contributions of womxn and 
+those who do not gender identify. The x stands for and is inclusive to 
+many different identities struggles, and intersectionalities.
+`
+
+// -----------------------------------------------------
 // Awards
 // -----------------------------------------------------
 
