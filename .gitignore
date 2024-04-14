@@ -4,9 +4,6 @@ node_modules/
 .pnp.js
 .nvim/
 
-# testing
-coverage/
-
 # production
 build/
 

@@ -424,20 +424,6 @@ investing the time to learn the basics of Redux will be worth it.
 Testing is one of the most important aspects of software development. It ensures confidence that the software you run
 will not produce any issues or errors in production. This project focuses on a few different types of testing strategies:
 
-### Unit/Integration Tests: [Jest](https://jestjs.io/en/)
-
-Jest is a fantastic Javascript/Typescript/Babel testing library that can be extended to perform a number of different
-tasks such as test watching, coverage, and DOM environment testing. It is easy to write tests and mocks, and even simpler
-to structure tests or run certain subsets of tests.
-
-These tests become especially important with the introduction of components in React's framework, and it becomes extremely
-important to test each component used in coordination with other components.
-
-### End-to-End (e2e) Tests: [Cypress](https://www.cypress.io/)
-
-Cypress is an end-to-end testing framework which comes built with assertion libraries, mocks, stubs, and more. It is very
-user-friendly and can be used to test browser-specific features. The syntax is very clean and easy to use and get started.
-
 ### Static Tests: Typescript/Eslint
 
 Typescript automatically tests data and variables types at compile time, preventing bugs. Eslint also contributes by 
