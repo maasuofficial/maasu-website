@@ -4,7 +4,7 @@ import { Container } from '../components/Container'
 import { TextBlock } from '../components/TextBlock'
 import { A } from '../components/Link'
 
-export function MissionContainer(_: RouteComponentProps) {
+function Mission(_: RouteComponentProps) {
   useDocumentTitle('Our Mission')
   return (
     <Container>
@@ -111,3 +111,5 @@ export function MissionContainer(_: RouteComponentProps) {
     </Container>
   )
 }
+
+export default Mission

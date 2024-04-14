@@ -1,3 +1,3 @@
-import { MissionContainer } from '../containers/MissionContainer'
+import Mission from './mission'
 
-export default MissionContainer
+export default Mission
